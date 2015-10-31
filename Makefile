@@ -1,4 +1,5 @@
 all:	
+	cd Verano/ConcursoTrasladosResueltoMayo2015/ && ./dodo.py
 	cd Verano/EEMM/concursillo/ && ./dodo.py
 	cd Verano/EEMM/practicos/ && ./dodo.py
 	cd Verano/maestros/concursillo && ./dodo.py
