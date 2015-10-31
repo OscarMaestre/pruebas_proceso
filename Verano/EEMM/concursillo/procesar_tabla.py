@@ -4,12 +4,16 @@
 import re
 import sys, os
 import string
+import os
 
 
-DIRECTORIO="/home/usuario/Documentos/ANPE/Verano/resultados/nombramientos/db_nombramientos"
-#DIRECTORIO="Windows"
+NUM_SUBDIRECTORIOS_ANTERIORES=2
+SEPARADOR=os.sep
 
-nombre_directorio=DIRECTORIO
+RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
+DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
+
+
 #aqui = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DIRECTORIO)
 import GestorDB

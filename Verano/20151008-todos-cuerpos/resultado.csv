@@ -1,0 +1,120 @@
+La plataforma es Linux
+update gaseosa set cod_centro='13004900' where dni='03893812G';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='03893812G';
+
+update gaseosa set cod_centro='13000906' where dni='05683647W';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='05683647W';
+
+update gaseosa set cod_centro='9888' where dni='18451492H';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 15/12/2015' where dni='18451492H';
+
+update gaseosa set cod_centro='13000451' where dni='05668949R';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 20/11/2015' where dni='05668949R';
+
+update gaseosa set cod_centro='9888' where dni='47057965B';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/10/2015' where dni='47057965B';
+
+update gaseosa set cod_centro='9888' where dni='05675889H';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 04/04/2016' where dni='05675889H';
+
+update gaseosa set cod_centro='9888' where dni='05672378A';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 23/11/2015' where dni='05672378A';
+
+update gaseosa set cod_centro='9888' where dni='51409536M';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='51409536M';
+
+update gaseosa set cod_centro='9888' where dni='06257242T';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 30/11/2015' where dni='06257242T';
+
+update gaseosa set cod_centro='9888' where dni='47053898S';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 06/11/2015' where dni='47053898S';
+
+update gaseosa set cod_centro='13004456' where dni='05676802B';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 02/11/2015' where dni='05676802B';
+
+update gaseosa set cod_centro='9888' where dni='04605983A';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 01/11/2015' where dni='04605983A';
+
+update gaseosa set cod_centro='9888' where dni='03893648R';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='03893648R';
+
+update gaseosa set cod_centro='13004559' where dni='05680352L';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 01/11/2015' where dni='05680352L';
+
+update gaseosa set cod_centro='9888' where dni='48289697R';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 13/11/2015' where dni='48289697R';
+
+update gaseosa set cod_centro='9888' where dni='09339946Z';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='09339946Z';
+
+La plataforma es Linux
+update gaseosa set cod_centro='9888' where dni='04194417E';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 04/12/2015' where dni='04194417E';
+
+La plataforma es Linux
+update gaseosa set cod_centro='13001170' where dni='71224443K';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='71224443K';
+
+update gaseosa set cod_centro='13010912' where dni='47088127C';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='47088127C';
+
+update gaseosa set cod_centro='9888' where dni='06275310J';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 08/11/2015' where dni='06275310J';
+
+update gaseosa set cod_centro='9888' where dni='03859230Z';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 30/10/2015' where dni='03859230Z';
+
+update gaseosa set cod_centro='13001753' where dni='71225689W';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='71225689W';
+
+update gaseosa set cod_centro='9888' where dni='04223005K';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 23/11/2015' where dni='04223005K';
+
+update gaseosa set cod_centro='9888' where dni='03904179K';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 08/12/2015' where dni='03904179K';
+
+update gaseosa set cod_centro='9888' where dni='07545492C';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/10/2015' where dni='07545492C';
+
+update gaseosa set cod_centro='13002095' where dni='05655324S';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 01/11/2015' where dni='05655324S';
+
+update gaseosa set cod_centro='9888' where dni='47067389M';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 15/11/2015' where dni='47067389M';
+
+update gaseosa set cod_centro='13001819' where dni='70576986Z';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 06/11/2015' where dni='70576986Z';
+
+update gaseosa set cod_centro='9888' where dni='03141391M';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 05/02/2016' where dni='03141391M';
+
+update gaseosa set cod_centro='9888' where dni='44382122B';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 23/12/2015' where dni='44382122B';
+
+update gaseosa set cod_centro='9888' where dni='44398949W';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/05/2016' where dni='44398949W';
+
+update gaseosa set cod_centro='9888' where dni='03840836C';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 30/10/2015' where dni='03840836C';
+
+update gaseosa set cod_centro='9888' where dni='47067955L';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/10/2015' where dni='47067955L';
+
+update gaseosa set cod_centro='13003221' where dni='05690725L';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 30/10/2015' where dni='05690725L';
+
+update gaseosa set cod_centro='9888' where dni='05348648K';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 30/10/2015' where dni='05348648K';
+
+update gaseosa set cod_centro='9888' where dni='02276210S';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 08/02/2016' where dni='02276210S';
+
+update gaseosa set cod_centro='9888' where dni='03891169Y';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 30/10/2015' where dni='03891169Y';
+
+update gaseosa set cod_centro='9888' where dni='05930752H';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 30/10/2015' where dni='05930752H';
+
+update gaseosa set cod_centro='9888' where dni='04550389T';
+update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 15/11/2015' where dni='04550389T';
+
