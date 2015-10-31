@@ -2,11 +2,17 @@
 
 
 from subprocess import call
+import platform
 
 
 CONVERTIR="pdftotext -layout -nopgbrk "
-PROCESAR="./procesar_tabla.py "
-BORRAR="rm "
+
+if (platform.system()=="Linux"):
+    PROCESAR="./procesar_tabla.py "
+    BORRAR="rm "
+if (platform.system()=="Windows"):
+    PROCESAR="procesar_tabla.py "
+    BORRAR="del "
 FICH_RESULTADO="resultado.sql"
 CONCAT="cat "
 def aplicar_comando (comando, fichero, *args):
