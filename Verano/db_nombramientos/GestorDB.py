@@ -24,7 +24,7 @@ if (platform.system()=="Linux"):
 if (platform.system()=="Windows"):
     ARCHIVO_RESULTADOS="C:\\nombramientos.db"
 
-print ("La plataforma es "+platform.system())
+
 
 
 
