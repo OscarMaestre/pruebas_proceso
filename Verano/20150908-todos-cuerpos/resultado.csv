@@ -1,4 +1,3 @@
-La plataforma es Linux
 update gaseosa set cod_centro='9888' where dni='47061549F';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 05/10/2015' where dni='47061549F';
 

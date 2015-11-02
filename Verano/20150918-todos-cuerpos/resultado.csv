@@ -1,4 +1,3 @@
-La plataforma es Linux
 update gaseosa set cod_centro='13004730' where dni='30948421N';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='30948421N';
 
@@ -1511,7 +1510,6 @@ update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/01/2016' where dni='0
 update gaseosa set cod_centro='9888' where dni='71633532D';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='71633532D';
 
-La plataforma es Linux
 update gaseosa set cod_centro='9888' where dni='23037896S';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='23037896S';
 
@@ -1683,7 +1681,6 @@ update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/01/2016' where dni='4
 update gaseosa set cod_centro='9888' where dni='44388816N';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/10/2015' where dni='44388816N';
 
-La plataforma es Linux
 update gaseosa set cod_centro='9888' where dni='71500084F';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='71500084F';
 
@@ -1723,7 +1720,6 @@ update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='4
 update gaseosa set cod_centro='9888' where dni='05672257C';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='05672257C';
 
-La plataforma es Linux
 update gaseosa set cod_centro='9888' where dni='04588991P';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='04588991P';
 
@@ -1814,7 +1810,6 @@ update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='4
 update gaseosa set cod_centro='13004717' where dni='36171811X';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='36171811X';
 
-La plataforma es Linux
 update gaseosa set cod_centro='9888' where dni='23797685E';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='23797685E';
 
@@ -1836,8 +1831,6 @@ update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='7
 update gaseosa set cod_centro='9888' where dni='44275876W';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 24/06/2016' where dni='44275876W';
 
-La plataforma es Linux
-La plataforma es Linux
 update gaseosa set cod_centro='9888' where dni='74517684F';
 update gaseosa set auxiliar='HACIENDO SUSTITUCION HASTA 31/12/2015' where dni='74517684F';
 

@@ -1,4 +1,3 @@
-La plataforma es Linux
 update gaseosa set cod_centro='13004122' where dni='27531508W';
 update gaseosa set auxiliar='VACANTE TODO CURSO 15/16' where dni='27531508W';
 

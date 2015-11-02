@@ -1,4 +1,3 @@
-La plataforma es Linux
 
 Public Function ActualizarConcursilloEEMM2015()
 On Error Resume Next

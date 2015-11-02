@@ -1,4 +1,3 @@
-La plataforma es Linux
 
 Public Function ActualizarConcursilloEEMM2015()
 On Error Resume Next
@@ -2690,7 +2689,6 @@ Proc_Err:
   Resume Proc_Exit
 End Sub
 
-La plataforma es Linux
 
 Public Function ActualizarConcursilloEEMM2015()
 On Error Resume Next
@@ -3000,7 +2998,6 @@ Proc_Err:
   Resume Proc_Exit
 End Sub
 
-La plataforma es Linux
 
 Public Function ActualizarConcursilloEEMM2015()
 On Error Resume Next
@@ -3062,7 +3059,6 @@ Proc_Err:
   Resume Proc_Exit
 End Sub
 
-La plataforma es Linux
 
 Public Function ActualizarConcursilloEEMM2015()
 On Error Resume Next
@@ -3152,7 +3148,6 @@ Proc_Err:
   Resume Proc_Exit
 End Sub
 
-La plataforma es Linux
 
 Public Function ActualizarConcursilloEEMM2015()
 On Error Resume Next
@@ -3212,7 +3207,6 @@ Proc_Err:
   Resume Proc_Exit
 End Sub
 
-La plataforma es Linux
 
 Public Function ActualizarConcursilloEEMM2015()
 On Error Resume Next
@@ -3250,7 +3244,6 @@ Proc_Err:
   Resume Proc_Exit
 End Sub
 
-La plataforma es Linux
 
 Public Function ActualizarConcursilloEEMM2015()
 On Error Resume Next
