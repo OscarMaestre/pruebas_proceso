@@ -113,9 +113,7 @@ for i in range(0, total_lineas):
         lista_campos.append(dni)
         lista_campos_para_insertar.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
         
-        #nombre=linea[:31].strip()
-        nombre=extraer_patron(re_nombre_persona, linea)
-        nombre=nombre.strip()
+        nombre=linea[:31].strip()
         lista_campos.append(nombre)
         lista_campos_para_insertar.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
         codigo_centro=extraer_codigo_centro(linea[:50])
