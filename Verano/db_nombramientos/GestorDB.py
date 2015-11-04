@@ -47,8 +47,8 @@ On Error GoTo Proc_Err
 	return preludio_sql
 
 def crear_sentencia_update(sentencia):
-	sql="\t"+sentencia+"\n"
-	sql+="\tdb.Execute strSQL, dbFailOnError\n"
+	sql="\tsql=\""+sentencia+"\"\n"
+	sql+="\tdb.Execute sql, dbFailOnError\n"
 	return sql
 	
 	
