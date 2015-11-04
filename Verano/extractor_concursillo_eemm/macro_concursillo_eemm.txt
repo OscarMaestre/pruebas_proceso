@@ -1,0 +1,1228 @@
+Public Function concursillo_eemm_f1()
+
+On Error Resume Next
+
+  Dim ws As Workspace
+  Dim db As Database
+  Dim strSQL As String
+
+  Set ws = DBEngine.Workspaces(0)
+  Set db = ws.Databases(0)
+
+On Error GoTo Proc_Err
+  'start a transaction to ensure all updates are run or rolled back
+  ws.BeginTrans
+	sql="update gaseosa set codcentrocursoactual='19008113' where dni='09024935B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='09024935B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003279' where dni='04179741C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04179741C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004446' where dni='53144349C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='53144349C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003120' where dni='47057777F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47057777F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008782' where dni='03123216T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03123216T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16000978' where dni='04548230A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04548230A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000556' where dni='04592864V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04592864V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45012128' where dni='03871240H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03871240H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001327' where dni='05916440N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05916440N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003116' where dni='04572241W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04572241W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003930' where dni='03099703Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03099703Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005189' where dni='47083976D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47083976D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003875' where dni='03841541N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03841541N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003255' where dni='04181308T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04181308T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005471' where dni='04162133F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04162133F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002597' where dni='03098314F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03098314F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000799' where dni='07539951E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07539951E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000220' where dni='06232127R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06232127R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005355' where dni='00826744D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='00826744D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004729' where dni='05654342E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05654342E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003255' where dni='04193838H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04193838H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16000991' where dni='04588579X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04588579X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004604' where dni='07567654X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07567654X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006062' where dni='29081589K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='29081589K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02007794' where dni='05193187V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05193187V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004406' where dni='70516192D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70516192D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003981' where dni='07539987N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07539987N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001340' where dni='27458376X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='27458376X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13010924' where dni='52131413G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52131413G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005189' where dni='47081657J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47081657J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003130' where dni='06240378H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06240378H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19001076' where dni='03088432S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03088432S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001340' where dni='75227460A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='75227460A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02002784' where dni='07541514K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07541514K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003892' where dni='07567429S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07567429S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003863' where dni='03806230Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03806230Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02008919' where dni='07537986N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07537986N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003120' where dni='44398992E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44398992E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004331' where dni='07549275P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07549275P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006301' where dni='03863761Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03863761Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='No concordancia' where dni='07232077A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07232077A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002597' where dni='06254906X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06254906X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004468' where dni='05658936Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05658936Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000726' where dni='36961250C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='36961250C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003255' where dni='04181921S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04181921S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004740' where dni='70862101K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70862101K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000601' where dni='77504144D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='77504144D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005001' where dni='52758121P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52758121P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16000966' where dni='04588896M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04588896M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004509' where dni='04592272T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04592272T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004379' where dni='47058883D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47058883D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004379' where dni='47064789G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47064789G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000220' where dni='44394292Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44394292Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004418' where dni='09031355Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='09031355Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000906' where dni='30535538W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='30535538W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002597' where dni='03099771S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03099771S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006189' where dni='03876589P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03876589P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45000734' where dni='52388958H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52388958H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004821' where dni='05672301H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05672301H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002743' where dni='19093214V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='19093214V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000799' where dni='07541338Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07541338Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003336' where dni='05663374S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05663374S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002976' where dni='05634192C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05634192C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16002823' where dni='44382781A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44382781A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003796' where dni='32670366Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='32670366Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003450' where dni='72050981P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='72050981P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004082' where dni='26211097K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='26211097K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004946' where dni='45650405M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='45650405M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003120' where dni='07541189H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07541189H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003673' where dni='21487417N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='21487417N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004641' where dni='05662449X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05662449X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004480' where dni='04586418B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04586418B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003464' where dni='44381958P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44381958P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008782' where dni='03109750N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03109750N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004909' where dni='70339976L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70339976L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003875' where dni='03901958P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03901958P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003863' where dni='15952444N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='15952444N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002603' where dni='07852619M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07852619M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005001' where dni='53141326X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='53141326X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02008919' where dni='07547406W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07547406W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002976' where dni='05660847H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05660847H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003139' where dni='03446316L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03446316L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002708' where dni='05649264G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05649264G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000219' where dni='05644301D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05644301D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003863' where dni='05621416D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05621416D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000714' where dni='52760451S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52760451S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004909' where dni='45684330M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='45684330M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003920' where dni='48867510P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='48867510P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004867' where dni='06243775B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06243775B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000220' where dni='28919565D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='28919565D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003116' where dni='11424647H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='11424647H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003796' where dni='09749905K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='09749905K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45010338' where dni='06226334G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06226334G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004900' where dni='70643035F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70643035F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004272' where dni='52383923C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52383923C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004011' where dni='74515700R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='74515700R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003796' where dni='44399162P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44399162P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13005345' where dni='24273874L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='24273874L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005321' where dni='01927745T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='01927745T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001340' where dni='23785604Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='23785604Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004740' where dni='34799261P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='34799261P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005926' where dni='04194847S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04194847S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005653' where dni='00804958G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='00804958G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003673' where dni='44384119F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44384119F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001340' where dni='05652697X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05652697X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003697' where dni='47059476G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47059476G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000556' where dni='52755537T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52755537T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008782' where dni='03107162T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03107162T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004367' where dni='53141471V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='53141471V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004941' where dni='05161923X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05161923X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004604' where dni='04605256N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04605256N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004958' where dni='16800045V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='16800045V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005131' where dni='44392918C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44392918C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008782' where dni='44909646F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44909646F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002743' where dni='03104078K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03104078K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000556' where dni='44393576B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44393576B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005057' where dni='07879826A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07879826A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001327' where dni='52383481S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52383481S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004410' where dni='47052849R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47052849R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004909' where dni='10583662M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='10583662M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003139' where dni='03114980K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03114980K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19001091' where dni='03818256A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03818256A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003450' where dni='16786915C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='16786915C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006301' where dni='03813716V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03813716V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005165' where dni='14306355X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='14306355X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000556' where dni='05165123J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05165123J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001340' where dni='04576136X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04576136X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000738' where dni='05196209A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05196209A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005165' where dni='47057984F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47057984F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16000991' where dni='22985539Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='22985539Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000799' where dni='05171670M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05171670M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45001337' where dni='06249479B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06249479B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19001076' where dni='03092851H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03092851H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004081' where dni='85086670X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='85086670X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008204' where dni='08988200F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='08988200F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13005308' where dni='05896614N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05896614N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006301' where dni='71127341W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='71127341W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13005345' where dni='05683638Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05683638Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003875' where dni='24299235B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='24299235B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13005345' where dni='70642537S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70642537S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004534' where dni='26201075G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='26201075G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02002760' where dni='50830201V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='50830201V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003553' where dni='03104580V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03104580V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004456' where dni='35553248D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='35553248D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000726' where dni='44376487B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44376487B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003450' where dni='03098184S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03098184S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003863' where dni='09321344L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='09321344L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002743' where dni='03076219S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03076219S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004900' where dni='05690649N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05690649N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004066' where dni='70518903Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70518903Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006220' where dni='03856512X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03856512X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000799' where dni='05162607G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05162607G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13005278' where dni='06234981A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06234981A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000372' where dni='70644859Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70644859Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003255' where dni='04184001W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04184001W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02001202' where dni='53145912L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='53145912L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003464' where dni='26010121L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='26010121L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002681' where dni='05680377K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05680377K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003116' where dni='04589442E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04589442E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004011' where dni='22693049F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='22693049F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003267' where dni='04191339A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04191339A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004752' where dni='07952885Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07952885Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002640' where dni='08982969C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='08982969C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004379' where dni='44375481V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44375481V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008113' where dni='03098081G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03098081G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13005199' where dni='05680997C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05680997C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003863' where dni='03879899Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03879899Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003697' where dni='53141924X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='53141924X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000220' where dni='47052832F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47052832F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16002173' where dni='24234329B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='24234329B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003880' where dni='44765778G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44765778G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16001004' where dni='04573888Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04573888Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000219' where dni='06259160D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06259160D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004418' where dni='05167512X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05167512X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13005199' where dni='52513158H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52513158H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004468' where dni='70645959X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70645959X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16002173' where dni='02601468F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='02601468F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003324' where dni='05655376K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05655376K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000714' where dni='44380807F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44380807F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004675' where dni='05635553R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05635553R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19001076' where dni='72966433Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='72966433Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02008865' where dni='07555440D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07555440D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000220' where dni='04576714J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04576714J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004331' where dni='44398814M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44398814M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003116' where dni='16810240T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='16810240T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002950' where dni='50298362F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='50298362F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004379' where dni='07539579H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07539579H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005104' where dni='05195192K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05195192K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003796' where dni='74822174T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='74822174T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001984' where dni='05912493K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05912493K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002708' where dni='05909162W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05909162W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003685' where dni='48389202P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='48389202P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005562' where dni='70514717Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70514717Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19001076' where dni='72880699R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='72880699R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45000734' where dni='06256427J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06256427J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002597' where dni='05652593K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05652593K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004379' where dni='47053289G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47053289G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000799' where dni='07555729E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07555729E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004331' where dni='05169780R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05169780R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001327' where dni='05660982S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05660982S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003491' where dni='07550089V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07550089V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002976' where dni='05647980P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05647980P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002681' where dni='05669808D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05669808D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002681' where dni='05889809S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05889809S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000219' where dni='03881825T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03881825T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005165' where dni='76143485F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='76143485F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001984' where dni='76236012M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='76236012M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004729' where dni='05669531P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05669531P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000741' where dni='1083125D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='1083125D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006153' where dni='46844391S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='46844391S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16008667' where dni='70052256Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70052256Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16000966' where dni='44381731B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44381731B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002708' where dni='05905083V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05905083V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002976' where dni='52139721D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52139721D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004740' where dni='27460457K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='27460457K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16001004' where dni='04595772G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04595772G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005914' where dni='11826571V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='11826571V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003798' where dni='05657168L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05657168L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19001091' where dni='03093435G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03093435G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003863' where dni='03821725E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03821725E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003892' where dni='04606961S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04606961S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005665' where dni='04154108D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04154108D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003324' where dni='44295792T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44295792T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004379' where dni='07554193G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07554193G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003931' where dni='04592539Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04592539Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005471' where dni='04174148Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04174148Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008204' where dni='29179516Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='29179516Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02008919' where dni='74502381E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='74502381E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006116' where dni='44385278Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44385278Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003139' where dni='17728140Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='17728140Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02001974' where dni='52755880K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52755880K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002743' where dni='09320312E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='09320312E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004225' where dni='52130325C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52130325C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004781' where dni='06235133V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06235133V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45001337' where dni='70977041F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70977041F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02001974' where dni='05144317E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05144317E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002681' where dni='05917495D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05917495D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004811' where dni='52544141C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='52544141C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002597' where dni='03090874L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03090874L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003120' where dni='47077266S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47077266S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006116' where dni='06261199R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06261199R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003481' where dni='07563309N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07563309N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003796' where dni='03839708L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03839708L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000714' where dni='07558322Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07558322Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45011859' where dni='05686618Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05686618Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003875' where dni='12763035J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='12763035J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003255' where dni='04158676T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04158676T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003553' where dni='03101905X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03101905X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003737' where dni='05654107V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05654107V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003796' where dni='03847571Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03847571Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005689' where dni='03858101N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03858101N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004122' where dni='44397216V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44397216V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005276' where dni='03883964T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03883964T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19001076' where dni='03100984D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03100984D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004791' where dni='28621445S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='28621445S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001005' where dni='06260014N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06260014N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02008919' where dni='07547365F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07547365F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003481' where dni='07558276Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07558276Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02005189' where dni='74507444W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='74507444W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004410' where dni='04585066Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04585066Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003255' where dni='07795623A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='07795623A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003491' where dni='34824796J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='34824796J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004030' where dni='47064355F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47064355F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004604' where dni='44392987C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44392987C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000738' where dni='05273665H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05273665H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004821' where dni='06268005E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='06268005E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004446' where dni='72520199A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='72520199A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005355' where dni='70569911T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70569911T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000741' where dni='44396730Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44396730Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008204' where dni='44394131Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44394131Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16004418' where dni='44385100E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44385100E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000451' where dni='05649681F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05649681F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004821' where dni='70352338F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70352338F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45011872' where dni='44381944V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='44381944V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002708' where dni='05922890E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05922890E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003838' where dni='50034075J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='50034075J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004867' where dni='70985746H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='70985746H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008137' where dni='04212107W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04212107W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004331' where dni='05195647Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05195647Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004410' where dni='74505255K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='74505255K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45006062' where dni='04168346X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04168346X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003796' where dni='03851574V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03851574V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004011' where dni='11931926D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='11931926D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008101' where dni='03093160M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03093160M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005562' where dni='30452337S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='30452337S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003464' where dni='24260122K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='24260122K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003978' where dni='03098668Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03098668Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004821' where dni='05655022N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05655022N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002691' where dni='05899220L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05899220L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005471' where dni='04196377G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04196377G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02000714' where dni='47053666J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='47053666J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008137' where dni='03099274R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03099274R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002681' where dni='05902432B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05902432B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000219' where dni='05651278V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05651278V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13005311' where dni='05673441P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05673441P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16000991' where dni='04583403D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='04583403D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002681' where dni='05665129E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='05665129E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02002784' where dni='74512072F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='74512072F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003930' where dni='03094714H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en concursillo de Mayo 2015' where dni='03094714H'"
+	db.Execute sql, dbFailOnError
+
+		 'commit all changes 
+  ws.CommitTrans
+
+Proc_Exit:
+  Set ws = Nothing
+  Set db = Nothing
+  Exit Function
+
+Proc_Err:
+  ws.Rollback
+  MsgBox "Error updating: " & Err.Description
+  Resume Proc_Exit
+End Function
+	
+Public Function concursillo_eemm_f3()
+	concursillo_eemm_f1
+End Function
