@@ -2,5 +2,5 @@
 
 from GestorDB import GestorDB
 from ListaCampos import ListaCampos
-print("__Init__")
+
 

@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
 
 import re
 import sys
@@ -24,13 +23,13 @@ import ListaCampos
 
 
 gestor=GestorDB.GestorDB("../../nombramientos.db")
-concurso_traslados=sys.argv[1]
+concurso_traslados="Adjudicacion "+sys.argv[1]
 sql="""
 Select nif, nombre_completo, codigo_centro, procedimiento, fecha_inicio, fecha_fin, especialidad, auxiliar from nombramientos
 """
 i=1
 max_filas=300
-prefijo_funcion="concursillo_maestros_f"
+prefijo_funcion=sys.argv[1]
 num_funcion=1
 nombre_funcion=prefijo_funcion+str(num_funcion)
 sql+="where procedimiento='"+concurso_traslados+"'"
@@ -55,7 +54,7 @@ for fila in filas:
 	#sql_intermedio+= (GestorDB.crear_sentencia_update(temp))
 	temp="update gaseosa set codcentrocursoactual='"+fila[2]+"' where dni='"+fila[0]+"'"
 	sql_intermedio+= (GestorDB.crear_sentencia_update(temp))
-	descripcion_fechas="Desde "+fila[4]+" hasta "+fila[5]+"(" + fila[3] + ")"
+	descripcion_fechas="Desde "+fila[4]+" hasta "+fila[5]+" (" + fila[3] + ")"
 	temp="update gaseosa set auxiliar='"+descripcion_fechas+"' where dni='"+fila[0]+"'"
 	sql_intermedio+= (GestorDB.crear_sentencia_update(temp))
 	i=i+1
