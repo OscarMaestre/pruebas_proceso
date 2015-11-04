@@ -57,6 +57,10 @@ for fila in filas:
 	temp="update gaseosa set auxiliar='"+fila[7]+" en CGT de Mayo 2015' where dni='"+fila[0]+"'"
 	sql_intermedio+= (GestorDB.crear_sentencia_update(temp))
 	i=i+1
+nombre_funcion=prefijo_funcion+str(num_funcion)
+imprimir=GestorDB.get_procedimiento(nombre_funcion, sql_intermedio)
+print(imprimir)
+num_funcion=num_funcion+1
 	
 llamadas="Public Function "+prefijo_funcion+str(num_funcion+1) +"()\n"
 for num in range(1,num_funcion ):

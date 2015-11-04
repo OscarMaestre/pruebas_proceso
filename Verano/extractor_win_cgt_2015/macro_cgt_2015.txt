@@ -18282,7 +18282,474 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function cgt15_f12()
+Public Function cgt15_f11()
+
+On Error Resume Next
+
+  Dim ws As Workspace
+  Dim db As Database
+  Dim strSQL As String
+
+  Set ws = DBEngine.Workspaces(0)
+  Set db = ws.Databases(0)
+
+On Error GoTo Proc_Err
+  'start a transaction to ensure all updates are run or rolled back
+  ws.BeginTrans
+	sql="update gaseosa set codcentrodefinitivo='13004717' where dni='44393478M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004717' where dni='44393478M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='44393478M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004717' where dni='53104797M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004717' where dni='53104797M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='53104797M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='16003301' where dni='04596878Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003301' where dni='04596878Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='04596878Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='28042361' where dni='05422879P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='28042361' where dni='05422879P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='05422879P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004341' where dni='44759441S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004341' where dni='44759441S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='44759441S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004717' where dni='05639777Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004717' where dni='05639777Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='05639777Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004341' where dni='20830167X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004341' where dni='20830167X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='20830167X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004252' where dni='22140867D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004252' where dni='22140867D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='22140867D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004616' where dni='44391549P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004616' where dni='44391549P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='44391549P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13009545' where dni='07489027C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13009545' where dni='07489027C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='07489027C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='19003140' where dni='04613135W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003140' where dni='04613135W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='04613135W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004252' where dni='52670150N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004252' where dni='52670150N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='52670150N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004252' where dni='73556993A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004252' where dni='73556993A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='73556993A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004341' where dni='20411315B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004341' where dni='20411315B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='20411315B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004717' where dni='20006562N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004717' where dni='20006562N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='20006562N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='03014678' where dni='79104697S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='03014678' where dni='79104697S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='79104697S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004616' where dni='79160361L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004616' where dni='79160361L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='79160361L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004341' where dni='01177499Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004341' where dni='01177499Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='01177499Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004341' where dni='04606127D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004341' where dni='04606127D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='04606127D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='46020388' where dni='53227924J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='46020388' where dni='53227924J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='53227924J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004616' where dni='85088572A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004616' where dni='85088572A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='85088572A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004252' where dni='20805050D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004252' where dni='20805050D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='20805050D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='19003140' where dni='17740607V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003140' where dni='17740607V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='17740607V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='41700804' where dni='04579632X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='41700804' where dni='04579632X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='04579632X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='08986946H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='08986946H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='08986946H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004353' where dni='05919438C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004353' where dni='05919438C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='05919438C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004252' where dni='22135367Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004252' where dni='22135367Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='22135367Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004717' where dni='73557287K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004717' where dni='73557287K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='73557287K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='19003140' where dni='00802853S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003140' where dni='00802853S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='00802853S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='45005011' where dni='20827025L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005011' where dni='20827025L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='20827025L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004717' where dni='20019206Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004717' where dni='20019206Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='20019206Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004353' where dni='05690336K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004353' where dni='05690336K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='05690336K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='03012153' where dni='52763707M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='03012153' where dni='52763707M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='52763707M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004341' where dni='05674832L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004341' where dni='05674832L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='05674832L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02004616' where dni='73764156M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004616' where dni='73764156M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='73764156M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='05923395K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='05923395K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='05923395K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004122' where dni='70647741K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004122' where dni='70647741K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='70647741K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='16008667' where dni='47051215T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16008667' where dni='47051215T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='47051215T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='19008101' where dni='12763176Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008101' where dni='12763176Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='12763176Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='14003198' where dni='05686639G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='14003198' where dni='05686639G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='05686639G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='45005057' where dni='25716180H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005057' where dni='25716180H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='25716180H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='28072508' where dni='00389358Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='28072508' where dni='00389358Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='00389358Z'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='33027515' where dni='09430972Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='33027515' where dni='09430972Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='09430972Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='45005057' where dni='52756416M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005057' where dni='52756416M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='52756416M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='45005057' where dni='04183896N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005057' where dni='04183896N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='04183896N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='06267095D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='06267095D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='06267095D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='19008101' where dni='33305294Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008101' where dni='33305294Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='33305294Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='74641971W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='74641971W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='74641971W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004122' where dni='04583252L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004122' where dni='04583252L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='04583252L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='19008101' where dni='70641596V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008101' where dni='70641596V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='70641596V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='45003930' where dni='77596625F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003930' where dni='77596625F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='77596625F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='45003930' where dni='05649036Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003930' where dni='05649036Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='05649036Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004122' where dni='52380593W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004122' where dni='52380593W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='52380593W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='16008667' where dni='70577340T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16008667' where dni='70577340T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='70577340T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13001406' where dni='31217274H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001406' where dni='31217274H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='31217274H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02007794' where dni='71215056H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02007794' where dni='71215056H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='71215056H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='28037855' where dni='03427248H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='28037855' where dni='03427248H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='OBTIENE en CGT de Mayo 2015' where dni='03427248H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13001406' where dni='10087174H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001406' where dni='10087174H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='10087174H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='19008101' where dni='07866434C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008101' where dni='07866434C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='07866434C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='47051291F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='47051291F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='47051291F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='19008101' where dni='05690045Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008101' where dni='05690045Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='05690045Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='16008667' where dni='03105124D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16008667' where dni='03105124D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='03105124D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='02007794' where dni='11792721T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02007794' where dni='11792721T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='11792721T'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004122' where dni='04590050D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004122' where dni='04590050D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='04590050D'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='16008667' where dni='30662518E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16008667' where dni='30662518E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='30662518E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='71215575P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='71215575P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='71215575P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004122' where dni='05645549S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004122' where dni='05645549S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='05645549S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='04153226R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='04153226R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='04153226R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='13004122' where dni='33482906N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004122' where dni='33482906N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='33482906N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='03901846B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='03901846B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='03901846B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='04195638R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='04195638R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='04195638R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='NO TENIA DEST. ANTERIOR' where dni='45432358K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='NO TENIA DEST. ANTERIOR' where dni='45432358K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='PEND. DESTINO en CGT de Mayo 2015' where dni='45432358K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrodefinitivo='16008667' where dni='18029748W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16008667' where dni='18029748W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='DENEGADO en CGT de Mayo 2015' where dni='18029748W'"
+	db.Execute sql, dbFailOnError
+
+		 'commit all changes 
+  ws.CommitTrans
+
+Proc_Exit:
+  Set ws = Nothing
+  Set db = Nothing
+  Exit Function
+
+Proc_Err:
+  ws.Rollback
+  MsgBox "Error updating: " & Err.Description
+  Resume Proc_Exit
+End Function
+	
+Public Function cgt15_f13()
 	cgt15_f1
 	cgt15_f2
 	cgt15_f3
@@ -18293,4 +18760,5 @@ Public Function cgt15_f12()
 	cgt15_f8
 	cgt15_f9
 	cgt15_f10
+	cgt15_f11
 End Function
