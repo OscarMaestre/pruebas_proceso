@@ -1,0 +1,140 @@
+Public Function fun_1()
+
+On Error Resume Next
+
+  Dim ws As Workspace
+  Dim db As Database
+  Dim strSQL As String
+
+  Set ws = DBEngine.Workspaces(0)
+  Set db = ws.Databases(0)
+
+On Error GoTo Proc_Err
+  'start a transaction to ensure all updates are run or rolled back
+  ws.BeginTrans
+	sql="update gaseosa set codcentrocursoactual='16000991' where dni='06259453A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 30/11/2015 (Adjudicacion 28-10-2015)' where dni='06259453A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004740' where dni='53147027F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 30/11/2015 (Adjudicacion 28-10-2015)' where dni='53147027F'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004353' where dni='01932027G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 30/11/2015 (Adjudicacion 28-10-2015)' where dni='01932027G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003301' where dni='47087000C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 30/11/2015 (Adjudicacion 28-10-2015)' where dni='47087000C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45005057' where dni='05924392Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 30/11/2015 (Adjudicacion 28-10-2015)' where dni='05924392Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02010112' where dni='07544502L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 20/11/2015 (Adjudicacion 28-10-2015)' where dni='07544502L'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02007851' where dni='52761725R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 30/11/2015 (Adjudicacion 28-10-2015)' where dni='52761725R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000803' where dni='05917507K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 15/11/2015 (Adjudicacion 28-10-2015)' where dni='05917507K'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004390' where dni='70580959P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 15/11/2015 (Adjudicacion 28-10-2015)' where dni='70580959P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13002162' where dni='05928143P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 31/12/2015 (Adjudicacion 28-10-2015)' where dni='05928143P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45001040' where dni='05633945A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 10/11/2015 (Adjudicacion 28-10-2015)' where dni='05633945A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004689' where dni='44512653V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 15/12/2015 (Adjudicacion 28-10-2015)' where dni='44512653V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02001688' where dni='47065472C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 30/11/2015 (Adjudicacion 28-10-2015)' where dni='47065472C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19008186' where dni='05664197X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 28/02/2016 (Adjudicacion 28-10-2015)' where dni='05664197X'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003590' where dni='47073897G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 15/12/2015 (Adjudicacion 28-10-2015)' where dni='47073897G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45000047' where dni='04186945W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 22/12/2015 (Adjudicacion 28-10-2015)' where dni='04186945W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13000773' where dni='70986584M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 17/11/2015 (Adjudicacion 28-10-2015)' where dni='70986584M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45011999' where dni='05664973G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 14/02/2016 (Adjudicacion 28-10-2015)' where dni='05664973G'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45011999' where dni='77340139V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 14/02/2016 (Adjudicacion 28-10-2015)' where dni='77340139V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004124' where dni='07955693Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 24/06/2016 (Adjudicacion 28-10-2015)' where dni='07955693Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45003164' where dni='04609412M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 20/04/2016 (Adjudicacion 28-10-2015)' where dni='04609412M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004055' where dni='47089384N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 15/11/2015 (Adjudicacion 28-10-2015)' where dni='47089384N'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13004274' where dni='47078223Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 31/12/2015 (Adjudicacion 28-10-2015)' where dni='47078223Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19000357' where dni='50840499B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 29/11/2015 (Adjudicacion 28-10-2015)' where dni='50840499B'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19000461' where dni='50315332A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 14/11/2015 (Adjudicacion 28-10-2015)' where dni='50315332A'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45013984' where dni='03876943V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 22/12/2015 (Adjudicacion 28-10-2015)' where dni='03876943V'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004331' where dni='05144163Y'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 29/10/2015 hasta 15/12/2015 (Adjudicacion 28-10-2015)' where dni='05144163Y'"
+	db.Execute sql, dbFailOnError
+
+		 'commit all changes 
+  ws.CommitTrans
+
+Proc_Exit:
+  Set ws = Nothing
+  Set db = Nothing
+  Exit Function
+
+Proc_Err:
+  ws.Rollback
+  MsgBox "Error updating: " & Err.Description
+  Resume Proc_Exit
+End Function
+	
+Public Function fun_3()
+	fun_1
+End Function
