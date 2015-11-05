@@ -14,32 +14,35 @@ adjudicaciones=["28-08-2015","08-09-2015","18-09-2015",
 EXTRACTOR="extractor.py "
 
 if (platform.system()=="Linux"):
-    PROCESAR="./procesar_tabla.py "
-    EXTRACTOR="./extractor.py "
-    BORRAR="rm "
+	PROCESAR="./procesar_tabla.py "
+	EXTRACTOR="./extractor.py "
+	BORRAR="rm "
 if (platform.system()=="Windows"):
-    PROCESAR="procesar_tabla.py "
-    BORRAR="del "
-    EXTRACTOR="extractor.py "
+	PROCESAR="procesar_tabla.py "
+	BORRAR="del "
+	EXTRACTOR="extractor.py "
 
 
 def aplicar_comando (comando, fichero, *args):
-    cmd=comando + fichero
-    for a in args:
-        cmd+=" " + a
-    print("Ejecutando "+cmd)
-    call(cmd, shell=True)
-    
-    
+	cmd=comando + fichero
+	for a in args:
+		cmd+=" " + a
+	print("Ejecutando "+cmd)
+	call(cmd, shell=True)
+	
+	
 
 
 
 
 
+i=0
 for f in adjudicaciones:
-    if (platform.system()=="Linux"):
-        aplicar_comando("python3 ", EXTRACTOR, f, " > "+"macros_"+f)
-    if (platform.system()=="Windows"):
-        aplicar_comando(EXTRACTOR, f, " > "+"macros_"+f)
+	i=i+1
+	sufijo="{:0>2d}".format(i)
+	if (platform.system()=="Linux"):
+		aplicar_comando("python3 ", EXTRACTOR, f, " > "+"macros_0"+sufijo)
+	if (platform.system()=="Windows"):
+		aplicar_comando(EXTRACTOR, f, " > "+"macros_0"+sufijo)
 
-    
+	
