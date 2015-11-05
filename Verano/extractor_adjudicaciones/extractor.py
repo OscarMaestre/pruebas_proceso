@@ -29,9 +29,9 @@ Select nif, nombre_completo, codigo_centro, procedimiento, fecha_inicio, fecha_f
 """
 i=1
 max_filas=300
-prefijo_funcion=sys.argv[1]
+prefijo_funcion="fun_"
 num_funcion=1
-nombre_funcion=prefijo_funcion+str(num_funcion)
+
 sql+="where procedimiento='"+concurso_traslados+"'"
 
 filas=gestor.get_filas(sql)

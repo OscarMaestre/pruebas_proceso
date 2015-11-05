@@ -39,10 +39,11 @@ def aplicar_comando (comando, fichero, *args):
 i=0
 for f in adjudicaciones:
 	i=i+1
-	sufijo="{:0>2d}".format(i)
+	sufijo="{:0>3d}".format(i)
+	nombre_macro="macros_"+sufijo+"_"+f
 	if (platform.system()=="Linux"):
-		aplicar_comando("python3 ", EXTRACTOR, f, " > "+"macros_0"+sufijo)
+		aplicar_comando("python3 ", EXTRACTOR, f, " > "+nombre_macro)
 	if (platform.system()=="Windows"):
-		aplicar_comando(EXTRACTOR, f, " > "+"macros_0"+sufijo)
+		aplicar_comando(EXTRACTOR, f, " > "+ nombre_macro)
 
 	
