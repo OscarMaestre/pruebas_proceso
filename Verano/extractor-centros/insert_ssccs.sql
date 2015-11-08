@@ -1,0 +1,10 @@
+insert or ignore into centros values ('02003569C', 'CEE Eloy Camino', '020030002', 'SSCC');
+insert or ignore into centros values ('02003739C', 'CEE Cruz de Mayo', '020370005', 'SSCC');
+insert or ignore into centros values ('13001224C', 'CEE Puerta de Santa María', '130340002', 'SSCC');
+insert or ignore into centros values ('13004080C', 'CEE Ponce de León', '130820002', 'SSCC');
+insert or ignore into centros values ('13010948C', 'CEE María Luisa Navarro Margati', '130870001', 'SSCC');
+insert or ignore into centros values ('16003281C', 'CEE Infanta Elena', '160780003', 'SSCC');
+insert or ignore into centros values ('19002603C', 'CEE Virgen del Amparo', '191300001', 'SSCC');
+insert or ignore into centros values ('45012062C', 'CEE Mingoliva', '450870001', 'SSCC');
+insert or ignore into centros values ('45005811C', 'CEE Bios', '451650006', 'SSCC');
+insert or ignore into centros values ('45005574C', 'CEE Ciudad de Toledo', '451680001', 'SSCC');
