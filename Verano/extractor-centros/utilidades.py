@@ -3,7 +3,7 @@ import re
 expr_regular_cod_centro="[0-9]{8}C"
 re_codigo_centro=re.compile(expr_regular_cod_centro)
 
-expr_regular_localidad="[0-9]{8}"
+expr_regular_localidad="[0-9]{9}"
 re_codigo_localidad=re.compile(expr_regular_localidad)
 
 expr_regular_ensenanza="- [ABCDEFGHIJKLMNOPQRSTUVWXYZ]"
@@ -19,7 +19,17 @@ def linea_contiene_patron(patron, linea):
         return True
     return False
 
+def quitar_poblacion_parentesis(nombre_centro):
+    pos_primer_parentesis=get_pos_comienzo_cadena(nombre_centro,"(")
+    return nombre_centro[:pos_primer_parentesis]
 
+
+def get_tipo_centro(linea):
+    tipo_centro="Desconocido"
+    if linea.find("CEPA")!=-1:
+        return "CEPA"
+    if linea.find("AEPA")!=-1:
+        return "AEPA"
 def extraer_patron(patron, linea):
     concordancia=patron.search(linea)
     if concordancia:

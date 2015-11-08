@@ -1,0 +1,15 @@
+insert or ignore into centros values ('02004094C', 'EOI Albacete', '020030002', 'EOI');
+insert or ignore into centros values ('02004343C', 'EOI María Moliner', '020090001', 'EOI');
+insert or ignore into centros values ('02004355C', 'EOI Conde de Floridablanca', '020370005', 'EOI');
+insert or ignore into centros values ('02004471C', 'EOI Menéndez Pelayo', '020810003', 'EOI');
+insert or ignore into centros values ('13004705C', 'EOI la Equidad', '130050002', 'EOI');
+insert or ignore into centros values ('13004134C', 'EOI Prado de Alarcos', '130340002', 'EOI');
+insert or ignore into centros values ('13004596C', 'EOI Pozo Norte', '130710004', 'EOI');
+insert or ignore into centros values ('13004742C', 'EOI Mar de Viñas', '130820002', 'EOI');
+insert or ignore into centros values ('13004845C', 'EOI Ciudad de Valdepeñas', '130870001', 'EOI');
+insert or ignore into centros values ('16003682C', 'EOI Sebastián de Covarrubias', '160780003', 'EOI');
+insert or ignore into centros values ('16009994C', 'EOI de Motilla del Palancar', '161340001', 'EOI');
+insert or ignore into centros values ('19003191C', 'EOI Guadalajara', '191300001', 'EOI');
+insert or ignore into centros values ('19009609C', 'EOI de Siguenza', '192570025', 'EOI');
+insert or ignore into centros values ('45005537C', 'EOI Talavera de la Reina', '451650006', 'EOI');
+insert or ignore into centros values ('45005483C', 'EOI Raimundo de Toledo', '451680001', 'EOI');

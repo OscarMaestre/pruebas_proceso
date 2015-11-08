@@ -41,7 +41,7 @@ for linea in lineas:
         provincia=utilidades.get_provincia(codigo_localidad)
         
         nombre_centro=linea[26:pos_comienzo_codigo_localidad].strip()
-        nombre_centro= quitar_poblacion_parentesis(nombre_centro)
+        nombre_centro= utilidades.quitar_poblacion_parentesis(nombre_centro)
         nombre_centro=corregir_nombre_centro(nombre_centro)
         
         nombre_localidad=linea[pos_comienzo_codigo_localidad+9:].strip()

@@ -19,22 +19,24 @@ def aplicar_comando (comando, fichero, *args):
     cmd=comando + fichero
     for a in args:
         cmd+=" " + a
-    print("Convirtiendo "+fichero)
+    print("Ejecutando "+cmd)
     call(cmd, shell=True)
     
     
 
 #ficheros=["CP", "CEPA","Centros", "CPM", "EA", "EOI", "SSCC", "UO"]
-ficheros=["CEIP", "Centros"]
-utilidades=["extraer_cp.py ", "extraer_centros.py "]
+ficheros=["CEIP", "Centros", "CEPA", "CPM", "EA", "EOI"]
+utilidades=["extraer_cp.py ", "extraer_centros.py ", "extraer_cepas.py ", "extraer_cpms.py ", "extraer_eas.py ",
+            "extraer_eois.py "]
 
 for f in ficheros:
     aplicar_comando(CONVERTIR, f+".pdf")
     
 for pos in range(0, len(ficheros)):
     utilidad=utilidades[pos]
+    f=ficheros[pos]
     if (platform.system()=="Windows"):
-        aplicar_comando(utilidad, f+".txt", ">"+f+".datos")
+        aplicar_comando(utilidad, f+".txt")
     if (platform.system()=="Linux"):
         utilidad="./"+utilidad
-        aplicar_comando(utilidad, f+".txt", ">"+f+".datos")
+        aplicar_comando(utilidad, f+".txt")
