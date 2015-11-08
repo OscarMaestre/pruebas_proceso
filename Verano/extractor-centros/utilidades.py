@@ -6,6 +6,11 @@ re_codigo_centro=re.compile(expr_regular_cod_centro)
 expr_regular_localidad="[0-9]{8}"
 re_codigo_localidad=re.compile(expr_regular_localidad)
 
+expr_regular_ensenanza="- [ABCDEFGHIJKLMNOPQRSTUVWXYZ]"
+re_ensenanza=re.compile(expr_regular_ensenanza)
+
+expr_regular_observaciones="Diurno|Vespertino|Nocturno|Distancia"
+re_observaciones=re.compile(expr_regular_observaciones)
 NO_CONCORDANCIA="No concordancia"
 
 def linea_contiene_patron(patron, linea):
@@ -39,8 +44,14 @@ def get_provincia(codigo_localidad):
     if prefijo=="13":
         return "Ciudad Real"
     if prefijo=="16":
-        return "Ciudad Real"
+        return "Cuenca"
     if prefijo=="19":
         return "Guadalajara"
     if prefijo=="45":
-        return "Albacete"
+        return "Toledo"
+    
+    
+def escribir_texto_en_fichero(nombre_fichero, texto):
+    archivo=open(nombre_fichero, "w")
+    archivo.write(texto)
+    archivo.close()

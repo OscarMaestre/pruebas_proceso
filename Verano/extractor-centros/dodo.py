@@ -25,8 +25,8 @@ def aplicar_comando (comando, fichero, *args):
     
 
 #ficheros=["CP", "CEPA","Centros", "CPM", "EA", "EOI", "SSCC", "UO"]
-ficheros=["CEIP"]
-utilidades=["extraer_cp.py "]
+ficheros=["CEIP", "Centros"]
+utilidades=["extraer_cp.py ", "extraer_centros.py "]
 
 for f in ficheros:
     aplicar_comando(CONVERTIR, f+".pdf")
