@@ -3,16 +3,18 @@
 
 from subprocess import call
 import platform
-
+import os
 
 CONVERTIR="pdftotext -layout -nopgbrk "
-
+COPIAR="cp "
+CONCATENAR="cat "
 if (platform.system()=="Linux"):
     PROCESAR="./procesar_tabla.py "
     BORRAR="rm "
 if (platform.system()=="Windows"):
     PROCESAR="procesar_tabla.py "
     BORRAR="del "
+    COPIAR="copy "
 FICH_RESULTADO="resultado.csv"
 CONCAT="cat "
 def aplicar_comando (comando, fichero, *args):
@@ -40,3 +42,16 @@ for pos in range(0, len(ficheros)):
     if (platform.system()=="Linux"):
         utilidad="./"+utilidad
         aplicar_comando(utilidad, f+".txt")
+        
+aplicar_comando(COPIAR, "bd.sql", "resultado.sql")
+aplicar_comando(CONCATENAR, "insert_localidades.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_cps.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_cepas.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_cpms.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_ies.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_eois.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_uos.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_eas.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_infantil_primaria.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, "insert_ies.sql", ">> resultado.sql")
+aplicar_comando(CONCATENAR, ".."+os.path.sep+"gps"+os.path.sep+"update_gps.sql", ">> resultado.sql")

@@ -12,6 +12,8 @@ create table localidades (
     codigo_localidad char(10) primary key,
     nombre_localidad char(100),
     nombre_provincia char(20),
+    latitud real,
+    longitud real,
     foreign key (nombre_provincia) references provincias(nombre_provincia)
 );
 
@@ -29,3 +31,4 @@ create table ensenanzas (
     observaciones char(100),
     foreign key (codigo_centro) references centros(codigo_centro)
 );
+

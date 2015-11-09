@@ -1,9 +1,31 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import utilidades
 import sys
+import requests
+import time
+from urllib.parse import quote_plus
 
 lineas=utilidades.get_lineas( sys.argv[1] )
+
+
+def get_latitud_longitud(localidad):
+    localidad=quote_plus(localidad)
+    if (localidad.find("orio de Illescas")!=-1):
+        return (40.122994, -3.845876);
+    print(localidad)
+    prefijo="AIzaSyAxXzHSYNb1--uogBtoAgU3-yGnPG45qAA "
+    url="https://maps.googleapis.com/maps/api/geocode/json?key={0}&address={1}+castilla+la+mancha".format(prefijo, localidad)
+    
+    peticion=requests.get(url)
+    
+    
+    respuesta=peticion.json()
+    print(respuesta)
+    lat=respuesta['results'][0]['geometry']['location']['lat']
+    longitud=respuesta['results'][0]['geometry']['location']['lng']
+    return (lat, longitud)
+
 
 def quitar_poblacion_parentesis(nombre_centro):
     pos_primer_parentesis=utilidades.get_pos_comienzo_cadena(nombre_centro,"(")
@@ -20,12 +42,15 @@ def corregir_nombre_localidad(nombre_localidad):
     temp=temp.replace("VI", "Vi")
     return temp
 
-def generar_insert_localidades (codigo_localidad, nombre_localidad, provincia):
-    sql="insert or ignore into localidades values ('{0}', '{1}', '{2}');\n".format(codigo_localidad, nombre_localidad, provincia)
+def generar_insert_localidades (codigo_localidad, nombre_localidad, provincia, latitud, longitud):
+    sql="insert or ignore into localidades values ('{0}', '{1}', '{2}', {3}, {4});\n".format(codigo_localidad, nombre_localidad, provincia,
+                                                                                             latitud, longitud)
+    print(sql)
     return sql
 
 def generar_insert_cp(codigo_centro, nombre_centro, codigo_localidad, tipo_centro):
     sql="insert or ignore into centros values ('{0}', '{1}', '{2}', '{3}');\n".format(codigo_centro, nombre_centro, codigo_localidad, tipo_centro)
+    
     return sql
 def generar_insert_ensenanza (codigo_centro, nombre_ensenanza, observaciones):
     sql="insert or ignore into ensenanzas values ('{0}', '{1}', '{2}');\n".format(codigo_centro, nombre_ensenanza, observaciones)
@@ -47,9 +72,11 @@ for linea in lineas:
         nombre_localidad=linea[pos_comienzo_codigo_localidad+9:].strip()
         nombre_localidad=corregir_nombre_localidad(nombre_localidad)
         
+        (latitud, longitud)=get_latitud_longitud(nombre_localidad)
+        
         tipo_centro="CEIP" if nombre_centro.find("CEIP")!=-1 else "CRA"
         
-        sql_insert_localidades+=generar_insert_localidades (codigo_localidad, nombre_localidad, provincia)
+        sql_insert_localidades+=generar_insert_localidades (codigo_localidad, nombre_localidad, provincia, latitud, longitud)
         
         sql_insert_cp+=generar_insert_cp(codigo_centro, nombre_centro, codigo_localidad, tipo_centro)
         

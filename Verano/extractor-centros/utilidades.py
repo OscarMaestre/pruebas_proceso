@@ -23,9 +23,21 @@ def quitar_poblacion_parentesis(nombre_centro):
     pos_primer_parentesis=get_pos_comienzo_cadena(nombre_centro,"(")
     return nombre_centro[:pos_primer_parentesis]
 
+def corregir_nombre_centro(nombre_centro):
+    temp=nombre_centro
+    temp=temp.replace("VI", "Vi")
+    temp=temp.replace("Ceip", "CEIP")
+    temp=temp.replace("'", "-")
+    return temp
 
 def get_tipo_centro(linea):
     tipo_centro="Desconocido"
+    if linea.find("IESO")!=-1:
+        return "IESO"
+    if linea.find("IES")!=-1:
+        return "IES"
+    if linea.find("SES")!=-1:
+        return "SES"
     if linea.find("CEPA")!=-1:
         return "CEPA"
     if linea.find("AEPA")!=-1:
