@@ -59,6 +59,8 @@ sql_insert_localidades=""
 sql_insert_cp=""
 sql_insert_infantil_primaria=""
 for linea in lineas:
+    latitud=0.0
+    longitud=0.0
     codigo_centro=utilidades.extraer_patron( utilidades.re_codigo_centro , linea)
     if (codigo_centro != utilidades.NO_CONCORDANCIA ):
         codigo_localidad= utilidades.extraer_patron ( utilidades.re_codigo_localidad, linea[10:])
@@ -72,12 +74,13 @@ for linea in lineas:
         nombre_localidad=linea[pos_comienzo_codigo_localidad+9:].strip()
         nombre_localidad=corregir_nombre_localidad(nombre_localidad)
         
-        (latitud, longitud)=get_latitud_longitud(nombre_localidad)
+        #(latitud, longitud)=get_latitud_longitud(nombre_localidad)
         
         tipo_centro="CEIP" if nombre_centro.find("CEIP")!=-1 else "CRA"
         
-        sql_insert_localidades+=generar_insert_localidades (codigo_localidad, nombre_localidad, provincia, latitud, longitud)
-        
+        temp_localidades=generar_insert_localidades (codigo_localidad, nombre_localidad, provincia, latitud, longitud)
+        print (temp_localidades)
+        sql_insert_localidades+=temp_localidades
         sql_insert_cp+=generar_insert_cp(codigo_centro, nombre_centro, codigo_localidad, tipo_centro)
         
         sql_insert_infantil_primaria+=generar_insert_ensenanza(codigo_centro, "Infantil", "")
