@@ -1,93 +1,93 @@
-Ciudad Real-Abenojar-49,4 km-36 min
-Ciudad Real-Agudo-104 km-1h 22 min
-Ciudad Real-Alamillo-112 km-1h 19 min
-Ciudad Real-Albaladejo-126 km-1h 25 min
-Ciudad Real-Alcazar de San Juan-95,4 km-1h 7 min
-Ciudad Real-Alcoba-63,4 km-57 min
-Ciudad Real-Alcolea de Calatrava-19,9 km-21 min
-Ciudad Real-Alcubillas-88,2 km-1h 5 min
-Ciudad Real-Aldea del Rey-31,7 km-27 min
-Ciudad Real-Alhambra-89,9 km-57 min
-Ciudad Real-Almaden-106 km-1h 15 min
-Ciudad Real-Almadenejos-105 km-1h 16 min
-Ciudad Real-Almagro-30,8 km-26 min
-Ciudad Real-Almodovar del Campo-47,2 km-37 min
-Ciudad Real-Almuradiel-74,5 km-58 min
-Ciudad Real-Arenas de San Juan-54,6 km-35 min
-Ciudad Real-Argamasilla de Alba-82,6 km-50 min
-Ciudad Real-Argamasilla de Calatrava-42,2 km-30 min
-Ciudad Real-Arroba de los Montes-63,4 km-1h 0 min
-Ciudad Real-Ballesteros de Calatrava-20,6 km-22 min
-Ciudad Real-Bolaños de Calatrava-33,8 km-32 min
-Ciudad Real-Brazatortas-61,4 km-47 min
-Ciudad Real-Cabezarados-43,1 km-32 min
-Ciudad Real-Calzada de Calatrava-38,7 km-35 min
-Ciudad Real-Campo de Criptana-107 km-1h 12 min
-Ciudad Real-Carrion de Calatrava-10,8 km-15 min
-Ciudad Real-Carrizosa-99,0 km-1h 1 min
-Ciudad Real-Castellar de Santiago-91,5 km-1h 11 min
-Ciudad Real-Chillon-109 km-1h 17 min
-Ciudad Real-Cinco Casas-83,0 km-54 min
-Ciudad Real-Ciudad Real-1 m-1 min
-Ciudad Real-Consolacion-69,2 km-43 min
-Ciudad Real-Corral de Calatrava-23,8 km-20 min
-Ciudad Real-Cortijos de Arriba-1 m-1 min
-Ciudad Real-Cozar-96,5 km-1h 12 min
-Ciudad Real-Daimiel-33,9 km-30 min
-Ciudad Real-El Robledo-45,6 km-45 min
-Ciudad Real-El Torno-47,1 km-46 min
-Ciudad Real-Fernan Caballero-16,8 km-19 min
-Ciudad Real-Fuencaliente-98,3 km-1h 11 min
-Ciudad Real-Fuente el Fresno-33,5 km-29 min
-Ciudad Real-Granatula de Calatrava-36,9 km-28 min
-Ciudad Real-Guadalmez-131 km-1h 33 min
-Ciudad Real-Herencia-81,7 km-54 min
-Ciudad Real-Hinojosas de Calatrava-55,9 km-45 min
-Ciudad Real-Horcajo de los Montes-82,3 km-1h 11 min
-Ciudad Real-Las Casas-9,1 km-14 min
-Ciudad Real-Las Labores-62,0 km-43 min
-Ciudad Real-La Solana-70,7 km-47 min
-Ciudad Real-Llanos del Caudillo-66,2 km-40 min
-Ciudad Real-Los Pozuelos de Calatrava-33,2 km-29 min
-Ciudad Real-Luciana-38,5 km-35 min
-Ciudad Real-Malagon-24,0 km-24 min
-Ciudad Real-Manzanares-56,5 km-38 min
-Ciudad Real-Membrilla-65,8 km-43 min
-Ciudad Real-Miguelturra-5,0 km-11 min
-Ciudad Real-Montiel-115 km-1h 15 min
-Ciudad Real-Moral de Calatrava-44,4 km-33 min
-Ciudad Real-Pedro Muñoz-127 km-1h 15 min
-Ciudad Real-Picon-16,0 km-21 min
-Ciudad Real-Piedrabuena-26,5 km-25 min
-Ciudad Real-Poblete-7,7 km-12 min
-Ciudad Real-Porzuna-31,2 km-32 min
-Ciudad Real-Pozo de la Serna-89,1 km-58 min
-Ciudad Real-Pozuelo de Calatrava-16,2 km-18 min
-Ciudad Real-Puebla de Don Rodrigo-74,9 km-1h 1 min
-Ciudad Real-Puebla del Principe-122 km-1h 24 min
-Ciudad Real-Puerto Lapice-67,4 km-44 min
-Ciudad Real-Puertollano-42,2 km-31 min
-Ciudad Real-Retuerta del Bullaque-91,0 km-1h 14 min
-Ciudad Real-Ruidera-108 km-1h 7 min
-Ciudad Real-Saceruela-74,6 km-53 min
-Ciudad Real-San Benito-128 km-1h 36 min
-Ciudad Real-San Carlos del Valle-81,3 km-50 min
-Ciudad Real-San Lorenzo de Calatrava-97,0 km-1h 20 min
-Ciudad Real-Santa Cruz de Mudela-70,1 km-56 min
-Ciudad Real-Socuellamos-123 km-1h 13 min
-Ciudad Real-Terrinches-129 km-1h 27 min
-Ciudad Real-Tomelloso-90,9 km-55 min
-Ciudad Real-Torralba de Calatrava-16,8 km-21 min
-Ciudad Real-Torre de Juan Abad-104 km-1h 17 min
-Ciudad Real-Torrenueva-78,4 km-1h 1 min
-Ciudad Real-Valdepeñas-64,2 km-50 min
-Ciudad Real-Valenzuela de Calatrava-24,8 km-23 min
-Ciudad Real-Valverde-11,2 km-14 min
-Ciudad Real-Villahermosa-115 km-1h 13 min
-Ciudad Real-Villamanrique-111 km-1h 23 min
-Ciudad Real-Villamayor de Calatrava-33,4 km-28 min
-Ciudad Real-Villanueva de la Fuente-133 km-1h 28 min
-Ciudad Real-Villanueva de los Infantes-101 km-1h 4 min
-Ciudad Real-Villarrubia de los Ojos-49,6 km-43 min
-Ciudad Real-Villarta de San Juan-62,4 km-44 min
-Ciudad Real-Viso del Marques-69,1 km-54 min
+Ciudad Real|Abenojar|49,4 km|36|CM-4112
+Ciudad Real|Agudo|104 km|82|CM-4110
+Ciudad Real|Alamillo|112 km|79|A-41 y CM-4202
+Ciudad Real|Albaladejo|126 km|85|A-43 y CM-3127
+Ciudad Real|Alcazar de San Juan|95,4 km|67|A-43 y CM-420
+Ciudad Real|Alcoba|63,4 km|57|CM-412 y CM-4106
+Ciudad Real|Alcolea de Calatrava|19,9 km|21|N-430
+Ciudad Real|Alcubillas|88,2 km|65|Autovía del IV Centenario/CM-45, Cd Real-Valdepeñas/CM-412 y CM-412
+Ciudad Real|Aldea del Rey|31,7 km|27|CM-4111
+Ciudad Real|Alhambra|89,9 km|57|A-43 y N-430
+Ciudad Real|Almaden|106 km|75|CM-4110 y CM-415
+Ciudad Real|Almadenejos|105 km|76|CM-4110
+Ciudad Real|Almagro|30,8 km|26|CM-45
+Ciudad Real|Almodovar del Campo|47,2 km|37|A-41
+Ciudad Real|Almuradiel|74,5 km|58|CM-4111
+Ciudad Real|Arenas de San Juan|54,6 km|35|A-43 y CM-420
+Ciudad Real|Argamasilla de Alba|82,6 km|50|A-43
+Ciudad Real|Argamasilla de Calatrava|42,2 km|30|A-41
+Ciudad Real|Arroba de los Montes|63,4 km|60|N-430 y CR-721
+Ciudad Real|Ballesteros de Calatrava|20,6 km|22|CM-4111
+Ciudad Real|Bolaños de Calatrava|33,8 km|32|A-43 y CR-P-5111
+Ciudad Real|Brazatortas|61,4 km|47|A-41 y N-420
+Ciudad Real|Cabezarados|43,1 km|32|CM-4112
+Ciudad Real|Calzada de Calatrava|38,7 km|35|CM-4111
+Ciudad Real|Campo de Criptana|107 km|72|A-43 y CM-420
+Ciudad Real|Carrion de Calatrava|10,8 km|15|N-420/N-430
+Ciudad Real|Carrizosa|99,0 km|61|A-43 y N-430
+Ciudad Real|Castellar de Santiago|91,5 km|71|Autovía del IV Centenario/CM-45 y Cd Real-Valdepeñas/CM-412
+Ciudad Real|Chillon|109 km|77|CM-4110 y CM-415
+Ciudad Real|Cinco Casas|83,0 km|54|A-43
+Ciudad Real|Ciudad Real|1 m|0|Calle Ruiz Morote
+Ciudad Real|Consolacion|69,2 km|43|A-43
+Ciudad Real|Corral de Calatrava|23,8 km|20|A-41 y N-420
+Ciudad Real|Cortijo de Arriba|58,1 km|58|N-401
+Ciudad Real|Cozar|96,5 km|72|Autovía del IV Centenario/CM-45, Cd Real-Valdepeñas/CM-412 y CR-624
+Ciudad Real|Daimiel|33,9 km|30|A-43
+Ciudad Real|El Robledo|45,6 km|45|CM-412
+Ciudad Real|El Torno|47,1 km|46|CM-412 y CM-403
+Ciudad Real|Fernan Caballero|16,8 km|19|N-401
+Ciudad Real|Fuencaliente|98,3 km|71|A-41 y N-420
+Ciudad Real|Fuente el Fresno|33,5 km|29|N-401
+Ciudad Real|Granatula de Calatrava|36,9 km|28|CM-45
+Ciudad Real|Guadalmez|131 km|93|A-41 y CM-4202
+Ciudad Real|Herencia|81,7 km|54|A-43 y CM-420
+Ciudad Real|Hinojosas de Calatrava|55,9 km|45|A-41
+Ciudad Real|Horcajo de los Montes|82,3 km|71|CM-412 y CM-4106
+Ciudad Real|Las Casas|9,1 km|14|CM-412
+Ciudad Real|Las Labores|62,0 km|43|A-43 y CM-420
+Ciudad Real|La Solana|70,7 km|47|A-43
+Ciudad Real|Llanos del Caudillo|66,2 km|40|A-43
+Ciudad Real|Los Pozuelos de Calatrava|33,2 km|29|A-41 y CR-P-4123
+Ciudad Real|Luciana|38,5 km|35|N-430
+Ciudad Real|Malagon|24,0 km|24|N-401
+Ciudad Real|Manzanares|56,5 km|38|A-43
+Ciudad Real|Membrilla|65,8 km|43|A-43
+Ciudad Real|Miguelturra|5,0 km|11|Cd Real-Valdepeñas
+Ciudad Real|Montiel|115 km|75|A-43 y CM-3127
+Ciudad Real|Moral de Calatrava|44,4 km|33|Autovía del IV Centenario/CM-45
+Ciudad Real|Pedro Muñoz|127 km|75|A-43
+Ciudad Real|Picon|16,0 km|20|CM-412
+Ciudad Real|Piedrabuena|26,5 km|25|N-430
+Ciudad Real|Poblete|7,7 km|12|N-420
+Ciudad Real|Porzuna|31,2 km|32|CM-412
+Ciudad Real|Pozo de la Serna|89,1 km|58|A-43
+Ciudad Real|Pozuelo de Calatrava|16,2 km|18|CM-45
+Ciudad Real|Puebla de Don Rodrigo|74,9 km|61|N-430
+Ciudad Real|Puebla del Principe|122 km|84|A-43
+Ciudad Real|Puerto Lapice|67,4 km|44|A-43 y CM-420
+Ciudad Real|Puertollano|42,2 km|31|A-41
+Ciudad Real|Retuerta del Bullaque|91,0 km|74|CM-412 y CM-403
+Ciudad Real|Ruidera|108 km|67|A-43 y N-430
+Ciudad Real|Saceruela|74,6 km|53|CM-4112 y CM-4110
+Ciudad Real|San Benito|128 km|96|A-41 y CM-4202
+Ciudad Real|San Carlos del Valle|81,3 km|50|A-43
+Ciudad Real|San Lorenzo de Calatrava|97,0 km|80|CM-4111
+Ciudad Real|Santa Cruz de Mudela|70,1 km|56|Autovía del IV Centenario/CM-45 y CR-P-5222
+Ciudad Real|Socuellamos|123 km|73|A-43
+Ciudad Real|Terrinches|129 km|87|A-43 y CM-3127
+Ciudad Real|Tomelloso|90,9 km|55|A-43
+Ciudad Real|Torralba de Calatrava|16,8 km|21|N-420/N-430
+Ciudad Real|Torre de Juan Abad|104 km|77|Autovía del IV Centenario/CM-45 y CR-624
+Ciudad Real|Torrenueva|78,4 km|61|Autovía del IV Centenario/CM-45 y Cd Real-Valdepeñas/CM-412
+Ciudad Real|Valdepeñas|64,2 km|50|Autovía del IV Centenario/CM-45 y Cd Real-Valdepeñas/CM-412
+Ciudad Real|Valenzuela de Calatrava|24,8 km|23|CM-45 y CRP-5122
+Ciudad Real|Valverde|11,2 km|14|N-430
+Ciudad Real|Villahermosa|115 km|73|A-43
+Ciudad Real|Villamanrique|111 km|83|Autovía del IV Centenario/CM-45 y CR-624
+Ciudad Real|Villamayor de Calatrava|33,4 km|28|A-41 y N-420
+Ciudad Real|Villanueva de la Fuente|133 km|88|A-43
+Ciudad Real|Villanueva de los Infantes|101 km|64|A-43 y CM-3127
+Ciudad Real|Villarrubia de los Ojos|49,6 km|43|N-401 y CM-4120
+Ciudad Real|Villarta de San Juan|62,4 km|44|A-43 y CM-420
+Ciudad Real|Viso del Marques|69,1 km|54|CM-4111

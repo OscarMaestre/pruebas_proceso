@@ -2,7 +2,7 @@
 
 import requests
 from urllib.parse import quote_plus
-
+import json
 
 
 
@@ -42,6 +42,11 @@ fichero_pueblos.close()
 for p in pueblos:
     pueblo=corregir_articulo(p)
     peticion=calcular_distancia("Ciudad Real", pueblo)
+    #print(json.dumps(peticion, indent=4))
+    #break
     distancia=peticion['routes'][0]['legs'][0]['distance']['text']
-    tiempo=peticion['routes'][0]['legs'][0]['duration']['text']
-    print ("Ciudad Real-{0}-{1}-{2}".format(pueblo.strip(), distancia, tiempo))
+    tiempo=peticion['routes'][0]['legs'][0]['duration']['value']
+    minutos=tiempo/60
+    minutos="{0:.0f}".format(minutos)
+    sumario=peticion['routes'][0]['summary']
+    print ("Ciudad Real|{0}|{1}|{2}|{3}".format(pueblo.strip(), distancia, minutos, sumario))
