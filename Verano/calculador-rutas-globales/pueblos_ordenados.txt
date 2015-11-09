@@ -1,0 +1,413 @@
+Ciudad Real|Ciudad Real
+Alcazar de San Juan|Ciudad Real
+Manzanares|Ciudad Real
+Valdepeñas|Ciudad Real
+Puertollano|Ciudad Real
+Almaden|Ciudad Real
+Alcoba|Ciudad Real
+Villanueva de los Infantes|Ciudad Real
+Abenojar|Ciudad Real
+Agramon|Albacete
+Aguas Nuevas|Albacete
+Agudo|Ciudad Real
+Ajofrin|Toledo
+Alameda de la Sagra|Toledo
+Alamillo|Ciudad Real
+Albacete|Albacete
+Albaladejo|Ciudad Real
+Albalate de Zorita|Guadalajara
+Albarreal de Tajo|Toledo
+Albatana|Albacete
+Alberca de Zancara (La)|Cuenca
+Alberche del Caudillo|Toledo
+Alborea|Albacete
+Alcabon|Toledo
+Alcala del Jucar|Albacete
+Alcaraz|Albacete
+Alcaudete de la Jara|Toledo
+Alcolea de Calatrava|Ciudad Real
+Alcolea de Tajo|Toledo
+Alcolea del Pinar|Guadalajara
+Alcubillas|Ciudad Real
+Aldea del Rey|Ciudad Real
+Alhambra|Ciudad Real
+Almadenejos|Ciudad Real
+Almagro|Ciudad Real
+Almansa|Albacete
+Almodovar del Campo|Ciudad Real
+Almoguera|Guadalajara
+Almonacid de Toledo|Toledo
+Almorox|Toledo
+Almuradiel|Ciudad Real
+Alovera|Guadalajara
+Alpera|Albacete
+Arboleda (La)|Guadalajara
+Arcicollar|Toledo
+Arenales (Los)|Guadalajara
+Arenas de San Juan|Ciudad Real
+Argamasilla de Alba|Ciudad Real
+Argamasilla de Calatrava|Ciudad Real
+Arges|Toledo
+Arroba de los Montes|Ciudad Real
+Atienza|Guadalajara
+Azuqueca de Henares|Guadalajara
+Añover de Tajo|Toledo
+Balazote|Albacete
+Ballesteros de Calatrava|Ciudad Real
+Barajas de Melo|Cuenca
+Barcience|Toledo
+Bargas|Toledo
+Barrax|Albacete
+Belmonte|Cuenca
+Belvis de la Jara|Toledo
+Beteta|Cuenca
+Bogarra|Albacete
+Bolaños de Calatrava|Ciudad Real
+Bonete|Albacete
+Bonillo (El)|Albacete
+Borox|Toledo
+Brazatortas|Ciudad Real
+Brihuega|Guadalajara
+Budia|Guadalajara
+Burguillos de Toledo|Toledo
+Burujon|Toledo
+Cabanillas del Campo|Guadalajara
+Cabañas de la Sagra|Toledo
+Cabezamesada|Toledo
+Cabezarados|Ciudad Real
+Calalberche|Toledo
+Calera y Chozas|Toledo
+Calypo Fado|Toledo
+Calzada de Calatrava|Ciudad Real
+Calzada de Oropesa (La)|Toledo
+Camarena|Toledo
+Camarenilla|Toledo
+Campillo de Altobuey|Cuenca
+Campillo de la Jara (El)|Toledo
+Campo de Criptana|Ciudad Real
+Camuñas|Toledo
+Carboneras de Guadazaon|Cuenca
+Carmena|Toledo
+Carpio de Tajo (El)|Toledo
+Carranque|Toledo
+Carriches|Toledo
+Carrion de Calatrava|Ciudad Real
+Carrizosa|Ciudad Real
+Casar (El)|Guadalajara
+Casar de Escalona (El)|Toledo
+Casarrubios del Monte|Toledo
+Casas (Las)|Ciudad Real
+Casas de Benitez|Cuenca
+Casas de Fernando Alonso|Cuenca
+Casas de Juan Nuñez|Albacete
+Casas-Ibañez|Albacete
+Casasimarro|Cuenca
+Castellar de Santiago|Ciudad Real
+Caudete|Albacete
+Cazalegas|Toledo
+Cañamares|Cuenca
+Cañaveras|Cuenca
+Cañete|Cuenca
+Cebolla|Toledo
+Cedillo del Condado|Toledo
+Cenizate|Albacete
+Cerralbos (Los)|Toledo
+Checa|Guadalajara
+Chillon|Ciudad Real
+Chiloeches|Guadalajara
+Chinchilla de Monte-|Albacete
+Chozas de Canales|Toledo
+Cifuentes|Guadalajara
+Cinco Casas|Ciudad Real
+Ciruelos|Toledo
+Cobeja|Toledo
+Cobisa|Toledo
+Cogolludo|Guadalajara
+Consolacion|Ciudad Real
+Consuegra|Toledo
+Corral de Almaguer|Toledo
+Corral de Calatrava|Ciudad Real
+Cortijo de Arriba|Ciudad Real
+Coto (El)|Guadalajara
+Cozar|Ciudad Real
+Cuenca|Cuenca
+Cuerva|Toledo
+Daimiel|Ciudad Real
+Domingo Perez|Toledo
+Dosbarrios|Toledo
+Elche de la Sierra|Albacete
+Escalona|Toledo
+Escalonilla|Toledo
+Esquivias|Toledo
+Ferez|Albacete
+Fernan Caballero|Ciudad Real
+Fontanar|Guadalajara
+Fuencaliente|Ciudad Real
+Fuensalida|Toledo
+Fuente de Pedro Naharro|Cuenca
+Fuente el Fresno|Ciudad Real
+Fuente-Alamo|Albacete
+Fuentealbilla|Albacete
+Galapagos|Guadalajara
+Galvez|Toledo
+Gamonal|Toledo
+Gerindote|Toledo
+Gineta (La)|Albacete
+Graja de Iniesta|Cuenca
+Granatula de Calatrava|Ciudad Real
+Guadalajara|Guadalajara
+Guadalmez|Ciudad Real
+Guadamur|Toledo
+Guardia (La)|Toledo
+Hellin|Albacete
+Herencia|Ciudad Real
+Herencias (Las)|Toledo
+Higueruela|Albacete
+Hinojosas de Calatrava|Ciudad Real
+Hinojosos (Los)|Cuenca
+Honrubia|Cuenca
+Horcajo de Santiago|Cuenca
+Horcajo de los Montes|Ciudad Real
+Horche|Guadalajara
+Hormigos|Toledo
+Huecas|Toledo
+Huerta de Valdecarabanos|Toledo
+Huete|Cuenca
+Humanes|Guadalajara
+Illescas|Toledo
+Iniesta|Cuenca
+Iriepal|Guadalajara
+Isso|Albacete
+Jadraque|Guadalajara
+Labores (Las)|Ciudad Real
+Lagartera|Toledo
+Landete|Cuenca
+Layos|Toledo
+Ledaña|Cuenca
+Letur|Albacete
+Lezuza|Albacete
+Lietor|Albacete
+Lillo|Toledo
+Llanos del Caudillo|Ciudad Real
+Lominchar|Toledo
+Luciana|Ciudad Real
+Lupiana|Guadalajara
+Madridejos|Toledo
+Madrigueras|Albacete
+Magan|Toledo
+Mahora|Albacete
+Malagon|Ciudad Real
+Malpica de Tajo|Toledo
+Mandayona|Guadalajara
+Manzaneque|Toledo
+Maqueda|Toledo
+Marchamalo|Guadalajara
+Marjaliza|Toledo
+Mascaraque|Toledo
+Mata (La)|Toledo
+Mazarambroz|Toledo
+Mejorada|Toledo
+Membrilla|Ciudad Real
+Membrillo (El)|Toledo
+Menasalbas|Toledo
+Mentrida|Toledo
+Mesas (Las)|Cuenca
+Miguel Esteban|Toledo
+Miguelturra|Ciudad Real
+Minaya|Albacete
+Minglanilla|Cuenca
+Mira|Cuenca
+Mocejon|Toledo
+Molina|Guadalajara
+Molinicos|Albacete
+Mondejar|Guadalajara
+Montealegre del Castillo|Albacete
+Montiel|Ciudad Real
+Mora|Toledo
+Moral de Calatrava|Ciudad Real
+Mota del Cuervo|Cuenca
+Motilla del Palancar|Cuenca
+Munera|Albacete
+Nambroca|Toledo
+Nava de Ricomalillo (La)|Toledo
+Navahermosa|Toledo
+Navalcan|Toledo
+Navalmorales (Los)|Toledo
+Navalucillos (Los)|Toledo
+Navamorcuende|Toledo
+Nerpio|Albacete
+Noblejas|Toledo
+Noez|Toledo
+Nombela|Toledo
+Noves|Toledo
+Numancia de la Sagra|Toledo
+Ocaña|Toledo
+Olias del Rey|Toledo
+Ontigola|Toledo
+Ontur|Albacete
+Orgaz|Toledo
+Oropesa|Toledo
+Ossa de Montiel|Albacete
+Palomares del Campo|Cuenca
+Palomeque|Toledo
+Pantoja|Toledo
+Parque de las Castillas|Guadalajara
+Parrillas|Toledo
+Pastrana|Guadalajara
+Pedernoso (El)|Cuenca
+Pedro Muñoz|Ciudad Real
+Pedroñeras (Las)|Cuenca
+Perdices (Las)|Toledo
+Petrola|Albacete
+Peñas de San Pedro|Albacete
+Picon|Ciudad Real
+Piedrabuena|Ciudad Real
+Pioz|Guadalajara
+Poblete|Ciudad Real
+Polan|Toledo
+Portillo de Toledo|Toledo
+Porzuna|Ciudad Real
+Poveda de la Sierra|Guadalajara
+Pozo Cañada|Albacete
+Pozo de Guadalajara|Guadalajara
+Pozo de la Serna|Ciudad Real
+Pozo-Lorente|Albacete
+Pozohondo|Albacete
+Pozuelo|Albacete
+Pozuelo de Calatrava|Ciudad Real
+Pozuelos de Calatrava (Los)|Ciudad Real
+Priego|Cuenca
+Provencio (El)|Cuenca
+Puebla de Almoradiel (La)|Toledo
+Puebla de Don Rodrigo|Ciudad Real
+Puebla de Montalban (La)|Toledo
+Puebla del Principe|Ciudad Real
+Pueblanueva (La)|Toledo
+Puente del Arzobispo (El)|Toledo
+Puerto Lapice|Ciudad Real
+Pulgar|Toledo
+Quer|Guadalajara
+Quero|Toledo
+Quintanar de la Orden|Toledo
+Quintanar del Rey|Cuenca
+Quismondo|Toledo
+Real de San Vicente (El)|Toledo
+Recas|Toledo
+Retuerta del Bullaque|Ciudad Real
+Rielves|Toledo
+Riopar|Albacete
+Robledo|Albacete
+Robledo (El)|Ciudad Real
+Roda (La)|Albacete
+Romeral (El)|Toledo
+Ruidera|Ciudad Real
+Sacedon|Guadalajara
+Saceruela|Ciudad Real
+Saelices|Cuenca
+Salobral (El)|Albacete
+San Benito|Ciudad Real
+San Carlos del Valle|Ciudad Real
+San Clemente|Cuenca
+San Lorenzo de Calatrava|Ciudad Real
+San Lorenzo de la Parrilla|Cuenca
+San Martin de Montalban|Toledo
+San Martin de Pusa|Toledo
+San Pablo de los Montes|Toledo
+San Pedro|Albacete
+San Roman de los Montes|Toledo
+Santa Ana|Albacete
+Santa Cruz de Mudela|Ciudad Real
+Santa Cruz de la Zarza|Toledo
+Santa Cruz del Retamar|Toledo
+Santa Olalla|Toledo
+Santo Domingo-Caudilla|Toledo
+Seseña|Toledo
+Seseña Nuevo|Toledo
+Señorio de Illescas (El)|Toledo
+Señorio de Muriel|Guadalajara
+Siguenza|Guadalajara
+Sisante|Cuenca
+Socovos|Albacete
+Socuellamos|Ciudad Real
+Solana (La)|Ciudad Real
+Sonseca|Toledo
+Talavera de la Reina|Toledo
+Talavera la Nueva|Toledo
+Tarancon|Cuenca
+Tarazona de la Mancha|Albacete
+Tazona|Albacete
+Tembleque|Toledo
+Tendilla|Guadalajara
+Terrinches|Ciudad Real
+Tobarra|Albacete
+Toboso (El)|Toledo
+Toledo|Toledo
+Tomelloso|Ciudad Real
+Torija|Guadalajara
+Torno (El)|Ciudad Real
+Torralba de Calatrava|Ciudad Real
+Torre de Esteban Hambran|Toledo
+Torre de Juan Abad|Ciudad Real
+Torrejon del Rey|Guadalajara
+Torrenueva|Ciudad Real
+Torrijos|Toledo
+Tortola de Henares|Guadalajara
+Totanes|Toledo
+Trijueque|Guadalajara
+Trillo|Guadalajara
+Turleque|Toledo
+Uceda|Guadalajara
+Ugena|Toledo
+Urda|Toledo
+Valdeganga|Albacete
+Valenzuela de Calatrava|Ciudad Real
+Valera de Abajo|Cuenca
+Valmojado|Toledo
+Valverde|Ciudad Real
+Valverde de Jucar|Cuenca
+Velada|Toledo
+Ventas Con Peña Aguilera|Toledo
+Ventas de Retamosa (Las)|Toledo
+Villa de Don Fadrique (La)|Toledo
+Villacañas|Toledo
+Villaescusa de Haro|Cuenca
+Villafranca de los|Toledo
+Villagarcia del Llano|Cuenca
+Villahermosa|Ciudad Real
+Villalba de la Sierra|Cuenca
+Villalgordo del Júcar|Albacete
+Villalpardo|Cuenca
+Villaluenga de la Sagra|Toledo
+Villamalea|Albacete
+Villamanrique|Ciudad Real
+Villamayor de Calatrava|Ciudad Real
+Villamayor de Santiago|Cuenca
+Villamiel de Toledo|Toledo
+Villaminaya|Toledo
+Villamuelas|Toledo
+Villanueva de Alcardete|Toledo
+Villanueva de Bogas|Toledo
+Villanueva de la Fuente|Ciudad Real
+Villanueva de la Jara|Cuenca
+Villanueva de la Torre|Guadalajara
+Villapalacios|Albacete
+Villar de Olalla|Cuenca
+Villares del Saz|Cuenca
+Villarrobledo|Albacete
+Villarrubia de Santiago|Toledo
+Villarrubia de los Ojos|Ciudad Real
+Villarta de San Juan|Ciudad Real
+Villaseca de la Sagra|Toledo
+Villasequilla|Toledo
+Villatobas|Toledo
+Villel de Mesa|Guadalajara
+Viso de San Juan (El)|Toledo
+Viso del Marques|Ciudad Real
+Yebenes (Los)|Toledo
+Yeles|Toledo
+Yepes|Toledo
+Yeste|Albacete
+Yuncler|Toledo
+Yunclillos|Toledo
+Yuncos|Toledo
+Yunquera de Henares|Guadalajara
