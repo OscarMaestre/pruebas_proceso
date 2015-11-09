@@ -23,12 +23,24 @@ def calcular_distancia(localidad1, localidad2):
     peticion=requests.get(url+parametros)
     return peticion.json()
 
-fichero_pueblos=open("pueblos.txt")
+def corregir_articulo(pueblo):
+    pueblo=pueblo.strip()
+    articulos=["(El)", "(La)", "(Los)", "(Las)"]
+    corregido=["El", "La", "Los", "Las"]
+    
+    for pos in range(0, len(articulos)):
+        if pueblo.find(articulos[pos])!=-1:
+            pueblo=pueblo.replace(articulos[pos], "")
+            pueblo=corregido[pos]+" " + pueblo
+            return pueblo
+    return pueblo    
+fichero_pueblos=open("pueblos_ordenados.txt")
 pueblos=fichero_pueblos.readlines()
 
 fichero_pueblos.close()
 
-for pueblo in pueblos:
+for p in pueblos:
+    pueblo=corregir_articulo(p)
     peticion=calcular_distancia("Ciudad Real", pueblo)
     distancia=peticion['routes'][0]['legs'][0]['distance']['text']
     tiempo=peticion['routes'][0]['legs'][0]['duration']['text']

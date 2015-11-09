@@ -25,7 +25,6 @@ Ciudad Real-Calzada de Calatrava-38,7 km-35 min
 Ciudad Real-Campo de Criptana-107 km-1h 12 min
 Ciudad Real-Carrion de Calatrava-10,8 km-15 min
 Ciudad Real-Carrizosa-99,0 km-1h 1 min
-Ciudad Real-Casas (Las)-1 m-1 min
 Ciudad Real-Castellar de Santiago-91,5 km-1h 11 min
 Ciudad Real-Chillon-109 km-1h 17 min
 Ciudad Real-Cinco Casas-83,0 km-54 min
@@ -35,6 +34,8 @@ Ciudad Real-Corral de Calatrava-23,8 km-20 min
 Ciudad Real-Cortijos de Arriba-1 m-1 min
 Ciudad Real-Cozar-96,5 km-1h 12 min
 Ciudad Real-Daimiel-33,9 km-30 min
+Ciudad Real-El Robledo-45,6 km-45 min
+Ciudad Real-El Torno-47,1 km-46 min
 Ciudad Real-Fernan Caballero-16,8 km-19 min
 Ciudad Real-Fuencaliente-98,3 km-1h 11 min
 Ciudad Real-Fuente el Fresno-33,5 km-29 min
@@ -43,8 +44,11 @@ Ciudad Real-Guadalmez-131 km-1h 33 min
 Ciudad Real-Herencia-81,7 km-54 min
 Ciudad Real-Hinojosas de Calatrava-55,9 km-45 min
 Ciudad Real-Horcajo de los Montes-82,3 km-1h 11 min
-Ciudad Real-Labores (Las)-66,3 km-44 min
+Ciudad Real-Las Casas-9,1 km-14 min
+Ciudad Real-Las Labores-62,0 km-43 min
+Ciudad Real-La Solana-70,7 km-47 min
 Ciudad Real-Llanos del Caudillo-66,2 km-40 min
+Ciudad Real-Los Pozuelos de Calatrava-33,2 km-29 min
 Ciudad Real-Luciana-38,5 km-35 min
 Ciudad Real-Malagon-24,0 km-24 min
 Ciudad Real-Manzanares-56,5 km-38 min
@@ -59,13 +63,11 @@ Ciudad Real-Poblete-7,7 km-12 min
 Ciudad Real-Porzuna-31,2 km-32 min
 Ciudad Real-Pozo de la Serna-89,1 km-58 min
 Ciudad Real-Pozuelo de Calatrava-16,2 km-18 min
-Ciudad Real-Pozuelos de Calatrava (Los)-15,9 km-17 min
 Ciudad Real-Puebla de Don Rodrigo-74,9 km-1h 1 min
 Ciudad Real-Puebla del Principe-122 km-1h 24 min
 Ciudad Real-Puerto Lapice-67,4 km-44 min
 Ciudad Real-Puertollano-42,2 km-31 min
 Ciudad Real-Retuerta del Bullaque-91,0 km-1h 14 min
-Ciudad Real-Robledo (El)-1 m-1 min
 Ciudad Real-Ruidera-108 km-1h 7 min
 Ciudad Real-Saceruela-74,6 km-53 min
 Ciudad Real-San Benito-128 km-1h 36 min
@@ -73,10 +75,8 @@ Ciudad Real-San Carlos del Valle-81,3 km-50 min
 Ciudad Real-San Lorenzo de Calatrava-97,0 km-1h 20 min
 Ciudad Real-Santa Cruz de Mudela-70,1 km-56 min
 Ciudad Real-Socuellamos-123 km-1h 13 min
-Ciudad Real-Solana (La)-73,3 km-47 min
 Ciudad Real-Terrinches-129 km-1h 27 min
 Ciudad Real-Tomelloso-90,9 km-55 min
-Ciudad Real-Torno (El)-1 m-1 min
 Ciudad Real-Torralba de Calatrava-16,8 km-21 min
 Ciudad Real-Torre de Juan Abad-104 km-1h 17 min
 Ciudad Real-Torrenueva-78,4 km-1h 1 min
