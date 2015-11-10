@@ -32,3 +32,7 @@ create table ensenanzas (
     foreign key (codigo_centro) references centros(codigo_centro)
 );
 
+create table dificil_desempeno(
+    codigo_centro char(10) primary key,
+    foreign key (codigo_centro) references centros(codigo_centro)
+);
