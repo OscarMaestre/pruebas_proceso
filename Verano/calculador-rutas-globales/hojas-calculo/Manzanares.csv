@@ -1,0 +1,410 @@
+Origen,Destino,Distancia,Minutos,Rutas
+Manzanares,Membrilla,5,12,N-430a
+Manzanares,Llanos del Caudillo,16,14,A-4
+Manzanares,Consolacion,17,15,A-4
+Manzanares,La Solana ,18,20,N-430
+Manzanares,Daimiel,25,23,A-43
+Manzanares,Villarta de San Juan,28,22,A-4
+Manzanares,Cinco Casas,28,24,CM-3107
+Manzanares,San Carlos del Valle,28,24,N-430 y CR-644
+Manzanares,Arenas de San Juan,28,27,CRP-2032 y CR-2032
+Manzanares,Argamasilla de Alba,30,25,A-43
+Manzanares,Bolaños de Calatrava,30,29,CM-4124
+Manzanares,Pozo de la Serna,36,31,N-430 y CR-644
+Manzanares,Alhambra,37,30,N-430
+Manzanares,Villarrubia de los Ojos,37,37,CR-2031
+Manzanares,Torralba de Calatrava,38,29,A-43 y N-420/N-430
+Manzanares,Tomelloso,38,30,A-43
+Manzanares,Almagro,39,36,CM-4124
+Manzanares,Puerto Lapice,40,26,A-4
+Manzanares,Las Labores ,46,30,A-4
+Manzanares,Carrion de Calatrava,46,31,A-43
+Manzanares,Carrizosa,46,35,N-430
+Manzanares,Valenzuela de Calatrava,46,39,CM-4124
+Manzanares,Moral de Calatrava,48,33,A-4 y Cd Real-Valdepeñas/CM-412
+Manzanares,Villanueva de los Infantes,48,38,N-430 y CM-3127
+Manzanares,Granatula de Calatrava,48,40,CM-4124
+Manzanares,Torrenueva,49,37,A-4
+Manzanares,Fuente el Fresno,49,44,CR-2031 y CM-4120
+Manzanares,Santa Cruz de Mudela,50,32,A-4
+Manzanares,Pozuelo de Calatrava,52,39,A-43 y CRP-5112
+Manzanares,Herencia,53,35,A-4
+Manzanares,Malagon,53,38,A-43 y CM-4114
+Manzanares,Miguelturra,55,38,A-43
+Manzanares,Ruidera,55,41,N-430
+Manzanares,Alcubillas,56,42,CM-3127
+Manzanares,Campo de Criptana,56,45,CM-3107
+Manzanares,Villafranca de los,57,39,A-4
+Manzanares,Cozar,58,47,CM-3127
+Manzanares,Madridejos,59,37,A-4
+Manzanares,Fernan Caballero,59,43,A-43 y CM-4114
+Manzanares,Calzada de Calatrava,60,52,CM-4124
+Manzanares,Poblete,61,38,A-43
+Manzanares,Aldea del Rey,61,50,CM-4124 y CM-413
+Manzanares,Camuñas,62,40,A-4
+Manzanares,Consuegra,62,41,A-4
+Manzanares,Villahermosa,62,47,CM-3127
+Manzanares,Castellar de Santiago,62,48,A-4
+Manzanares,Montiel,62,48,CM-3127
+Manzanares,Almuradiel,63,37,A-4
+Manzanares,Las Casas ,63,47,A-43
+Manzanares,Quero,64,53,CM-3107
+Manzanares,Valverde,66,45,A-43
+Manzanares,Torre de Juan Abad,67,53,CM-3127 y CM-3129
+Manzanares,Viso del Marques,69,44,A-4
+Manzanares,Miguel Esteban,69,57,CM-3107 y CM-310
+Manzanares,Puebla del Principe,69,58,CM-3127 y CR-632
+Manzanares,Ossa de Montiel,70,52,N-430
+Manzanares,Picon,70,53,A-43
+Manzanares,Socuellamos,71,48,A-43
+Manzanares,Ballesteros de Calatrava,72,49,A-43
+Manzanares,Albaladejo,73,58,CM-3127
+Manzanares,Corral de Calatrava,74,46,A-43
+Manzanares,Pedro Muñoz,74,50,A-43 y CM-3103
+Manzanares,Villamanrique,74,59,CM-3127 y CM-3129
+Manzanares,Alcolea de Calatrava,75,52,A-43
+Manzanares,Urda,76,49,A-4
+Manzanares,Terrinches,76,60,CM-3127
+Manzanares,El Toboso ,76,60,CM-3107
+Manzanares,Turleque,77,51,A-4
+Manzanares,Quintanar de la Orden,77,66,CM-3107 y CM-310
+Manzanares,La Puebla de Almoradiel ,78,65,CM-3107
+Manzanares,Villacañas,80,52,A-4 y CM-3128
+Manzanares,Las Mesas ,80,54,A-43 y CM-3102
+Manzanares,Villanueva de la Fuente,80,61,CM-3127 y CM-412
+Manzanares,Villarrobledo,81,52,A-43
+Manzanares,Tembleque,82,49,A-4
+Manzanares,Piedrabuena,82,56,A-43 y N-430
+Manzanares,Porzuna,82,63,A-43 y CM-4114
+Manzanares,Villamayor de Calatrava,84,54,A-43
+Manzanares,Los Pozuelos de Calatrava ,84,55,A-43
+Manzanares,Cortijo de Arriba,86,73,CM-4114
+Manzanares,El Romeral ,88,53,A-4
+Manzanares,Mota del Cuervo,88,62,A-43 y CM-3103
+Manzanares,Villanueva de Alcardete,88,72,CM-3107 y CM-310
+Manzanares,La Villa de Don Fadrique ,90,57,A-4
+Manzanares,Los Yebenes ,90,59,A-4 y CM-4025/CM-4054
+Manzanares,Munera,91,61,A-43 y CM-400
+Manzanares,El Pedernoso ,91,64,A-43 y CM-3102
+Manzanares,Las Pedroñeras ,91,64,A-43 y CM-3102
+Manzanares,Manzaneque,92,54,A-4 y CM-42
+Manzanares,La Guardia ,93,53,A-4
+Manzanares,Argamasilla de Calatrava,93,56,A-43 y A-41
+Manzanares,Puertollano,93,57,A-43 y A-41
+Manzanares,Lillo,93,59,A-4
+Manzanares,Mora,94,56,A-4 y CM-42
+Manzanares,Cabezarados,94,58,A-43
+Manzanares,Luciana,94,66,A-43 y N-430
+Manzanares,Marjaliza,96,63,A-4
+Manzanares,El Robledo ,97,76,CM-4114
+Manzanares,Almodovar del Campo,98,63,A-43 y A-41
+Manzanares,El Torno ,98,77,CM-4114
+Manzanares,Orgaz,99,59,A-4 y CM-42
+Manzanares,San Lorenzo de Calatrava,99,72,A-4
+Manzanares,Mascaraque,100,58,A-4 y CM-42
+Manzanares,Villaminaya,100,58,A-4 y CM-42
+Manzanares,El Provencio ,100,61,A-43
+Manzanares,Abenojar,100,62,A-43
+Manzanares,El Bonillo ,100,66,A-43 y CM-400
+Manzanares,Belmonte,100,71,A-43 y CM-3102
+Manzanares,Los Hinojosos ,100,73,A-43
+Manzanares,Villamayor de Santiago,100,79,CM-3107 y CM-310
+Manzanares,Villanueva de Bogas,102,64,A-4
+Manzanares,Alcaraz,102,77,CM-3127 y CM-412
+Manzanares,San Clemente,103,61,A-43
+Manzanares,Almonacid de Toledo,104,60,A-4 y CM-42
+Manzanares,Dosbarrios,104,60,A-4
+Manzanares,Villapalacios,104,80,CM-3127 y CM-412
+Manzanares,Lezuza,105,70,A-43 y CM-400
+Manzanares,Corral de Almaguer,106,67,A-4
+Manzanares,Hinojosas de Calatrava,106,71,A-43 y A-41
+Manzanares,Villaescusa de Haro,106,76,A-43 y CM-3102
+Manzanares,Robledo,106,79,CM-3127 y CM-412
+Manzanares,Minaya,107,64,A-43
+Manzanares,Huerta de Valdecarabanos,108,64,A-4
+Manzanares,Nambroca,111,63,A-4 y CM-42
+Manzanares,Sonseca,111,66,A-4 y CM-42
+Manzanares,Brazatortas,112,73,A-43 y A-41
+Manzanares,Ocaña,113,65,A-4
+Manzanares,Ajofrin,113,69,A-4 y CM-42
+Manzanares,Villamuelas,113,69,A-4 y CM-42
+Manzanares,Yepes,114,69,A-4
+Manzanares,Cabezamesada,114,77,A-4
+Manzanares,Casas de Fernando Alonso,115,66,A-43
+Manzanares,Mazarambroz,115,71,A-4 y CM-42
+Manzanares,Barrax,115,73,"A-43, CM-400 y N-430"
+Manzanares,Alcoba,115,87,CM-4114 y CM-4106
+Manzanares,Noblejas,116,68,A-4
+Manzanares,Burguillos de Toledo,118,66,A-4 y CM-42
+Manzanares,Ciruelos,118,71,A-4
+Manzanares,Villasequilla,118,72,A-4
+Manzanares,Arroba de los Montes,119,91,A-43 y CR-721
+Manzanares,Cobisa,120,68,A-4 y CM-42
+Manzanares,Sisante,121,70,A-43
+Manzanares,Villatobas,121,70,A-4
+Manzanares,La Alberca de Zancara ,121,72,A-43
+Manzanares,Villarrubia de Santiago,123,71,A-4
+Manzanares,Riopar,123,101,CM-412
+Manzanares,Arges,124,71,A-4 y CM-42
+Manzanares,Ontigola,124,73,A-4
+Manzanares,Horcajo de Santiago,124,85,A-4
+Manzanares,Toledo,125,72,A-4 y CM-42
+Manzanares,Torre de Esteban Hambran,125,72,A-4 y CM-42
+Manzanares,Saceruela,125,79,A-43
+Manzanares,San Pedro,127,85,"A-43, CM-400 y CM-313"
+Manzanares,Balazote,127,86,A-43 y CM-400
+Manzanares,Saelices,127,98,CM-3107 y CM-310
+Manzanares,La Roda ,128,74,A-43
+Manzanares,Layos,128,76,A-4 y CM-42
+Manzanares,Las Perdices ,129,75,A-4 y CM-42
+Manzanares,Pulgar,129,82,A-4 y CM-42
+Manzanares,Puebla de Don Rodrigo,130,92,A-43 y N-430
+Manzanares,Olias del Rey,132,75,A-4 y CM-42
+Manzanares,Guadamur,132,76,A-4 y CM-42
+Manzanares,Cuerva,132,83,A-4 y CM-42
+Manzanares,Polan,133,78,A-4 y CM-42
+Manzanares,Casas de Benitez,133,79,A-43
+Manzanares,Fuente de Pedro Naharro,133,91,A-4
+Manzanares,Horcajo de los Montes,133,101,CM-4114 y CM-4106
+Manzanares,Bargas,135,79,A-4 y CM-42
+Manzanares,Mocejon,135,79,A-4 y CM-42
+Manzanares,Pozuelo,135,88,"A-43, CM-400 y CM-313"
+Manzanares,Honrubia,136,76,A-43
+Manzanares,Totanes,137,88,A-4 y CM-42
+Manzanares,Ventas Con Peña Aguilera,138,88,A-4 y CM-42
+Manzanares,Galvez,138,89,A-4 y CM-42
+Manzanares,Bogarra,138,118,CM-412
+Manzanares,Menasalbas,139,89,A-4 y CM-42
+Manzanares,Magan,140,79,A-4 y CM-42
+Manzanares,Cabañas de la Sagra,140,80,A-4 y CM-42
+Manzanares,Santa Cruz de la Zarza,140,80,A-4
+Manzanares,Seseña Nuevo,140,80,A-4
+Manzanares,Villalgordo del Júcar,140,81,A-43
+Manzanares,Añover de Tajo,140,82,A-4
+Manzanares,Villaseca de la Sagra,141,80,A-4 y CM-42
+Manzanares,Noez,141,84,A-4 y CM-42
+Manzanares,Borox,141,85,A-4
+Manzanares,Retuerta del Bullaque,141,99,A-4 y CM-4017
+Manzanares,Yunclillos,142,81,A-4 y CM-42
+Manzanares,Villamiel de Toledo,142,84,A-4 y CM-42
+Manzanares,Santa Ana,142,95,CM-400 y N-430
+Manzanares,Seseña,143,83,A-4
+Manzanares,Casasimarro,143,85,A-43
+Manzanares,Villanueva de la Jara,143,86,A-43 y N-310
+Manzanares,Albarreal de Tajo,144,83,A-4 y CM-42
+Manzanares,Camarenilla,144,83,A-4 y CM-42
+Manzanares,La Gineta ,145,80,A-43
+Manzanares,Alameda de la Sagra,145,87,A-4
+Manzanares,Yuncler,146,83,A-4 y CM-42
+Manzanares,Rielves,146,84,A-4 y CM-42
+Manzanares,Villaluenga de la Sagra,146,84,A-4 y CM-42
+Manzanares,Recas,146,85,A-4 y CM-42
+Manzanares,Albacete,146,99,CM-400 y N-430
+Manzanares,Casas de Juan Nuñez,146,99,CM-400 y N-430
+Manzanares,Molinicos,147,127,CM-412
+Manzanares,Huecas,148,88,A-4 y CM-42
+Manzanares,Barcience,149,86,A-4 y CM-42
+Manzanares,Cobeja,149,87,A-4 y CM-42
+Manzanares,Fuencaliente,149,97,A-43 y N-420
+Manzanares,Aguas Nuevas,149,102,CM-400
+Manzanares,Arcicollar,150,88,A-4 y CM-42
+Manzanares,Peñas de San Pedro,150,99,CM-400 y CM-313
+Manzanares,San Pablo de los Montes,150,100,A-4 y CM-42
+Manzanares,El Salobral ,150,107,CM-400
+Manzanares,Yuncos,151,86,A-4 y CM-42
+Manzanares,Esquivias,151,89,A-4
+Manzanares,Lominchar,152,87,A-4 y CM-42
+Manzanares,Burujon,152,89,A-4 y CM-42
+Manzanares,Numancia de la Sagra,153,86,A-4 y CM-42
+Manzanares,Torrijos,153,87,A-4 y CM-42
+Manzanares,Tarazona de la Mancha,153,90,A-43
+Manzanares,Camarena,153,92,A-4 y CM-42
+Manzanares,Fuensalida,154,95,A-4 y CM-42
+Manzanares,Portillo de Toledo,154,96,A-4 y CM-42
+Manzanares,Agudo,154,108,A-43
+Manzanares,Tarancon,155,90,A-4
+Manzanares,La Puebla de Montalban ,155,93,A-4 y CM-42
+Manzanares,Almadenejos,155,102,A-43
+Manzanares,Gerindote,156,91,A-4 y CM-42
+Manzanares,Motilla del Palancar,157,89,A-43
+Manzanares,Palomeque,157,92,A-4 y CM-42
+Manzanares,Cedillo del Condado,157,93,A-4 y CM-42
+Manzanares,Almaden,157,101,A-43
+Manzanares,Pozohondo,157,104,CM-313
+Manzanares,Santo Domingo-Caudilla,158,90,A-4 y CM-42
+Manzanares,Pantoja,158,91,A-4 y CM-42
+Manzanares,Noves,158,92,A-4 y CM-42
+Manzanares,Chozas de Canales,158,94,A-4 y CM-42
+Manzanares,Quintanar del Rey,158,97,A-43 y N-310
+Manzanares,Illescas,159,90,A-4 y CM-42
+Manzanares,El Señorio de Illescas ,159,90,A-4 y CM-42
+Manzanares,El Viso de San Juan ,159,96,A-4 y CM-42
+Manzanares,Chillon,159,103,A-43
+Manzanares,Yeles,160,90,A-4 y CM-42
+Manzanares,Elche de la Sierra,160,135,CM-412
+Manzanares,Alcabon,161,94,A-4 y CM-42
+Manzanares,San Martin de Montalban,161,97,A-4 y CM-42
+Manzanares,Iniesta,161,99,A-43
+Manzanares,Escalonilla,162,94,A-4 y CM-42
+Manzanares,Las Ventas de Retamosa ,162,100,A-4 y CM-42
+Manzanares,Alamillo,162,105,A-43 y CM-4202
+Manzanares,Ugena,163,96,A-4 y CM-42
+Manzanares,Villagarcia del Llano,163,97,A-43
+Manzanares,Carmena,163,98,A-4 y CM-42
+Manzanares,Madrigueras,163,99,A-43
+Manzanares,Maqueda,164,94,A-4 y CM-42
+Manzanares,El Carpio de Tajo ,164,99,A-4 y CM-42
+Manzanares,Santa Cruz del Retamar,167,98,A-4 y CM-42
+Manzanares,Navahermosa,167,102,A-4 y CM-42
+Manzanares,La Mata ,168,102,A-4 y CM-42
+Manzanares,Carranque,169,96,A-4 y CM-42
+Manzanares,San Lorenzo de la Parrilla,169,97,A-43
+Manzanares,Santa Olalla,169,97,A-4 y CM-42
+Manzanares,Mahora,169,105,A-43
+Manzanares,Villares del Saz,170,94,A-43 y A-3
+Manzanares,Casarrubios del Monte,170,100,A-4 y CM-42
+Manzanares,Carriches,170,107,A-4 y CM-42
+Manzanares,Quismondo,171,97,A-4 y CM-42
+Manzanares,Campillo de Altobuey,171,99,A-43
+Manzanares,Yeste,171,158,CM-412
+Manzanares,Valmojado,173,102,A-4 y CM-42
+Manzanares,Malpica de Tajo,173,104,A-4 y CM-42
+Manzanares,Barajas de Melo,175,99,A-4 y A-40
+Manzanares,Valverde de Jucar,175,101,A-43
+Manzanares,Hormigos,175,102,A-4 y CM-42
+Manzanares,Ledaña,175,104,A-43
+Manzanares,Cebolla,176,106,"A-4, CM-42 y CM-4000"
+Manzanares,Lietor,176,123,CM-313
+Manzanares,Escalona,177,105,A-4 y CM-42
+Manzanares,Cenizate,177,110,A-43
+Manzanares,Chinchilla de Monte-,178,97,A-43 y A-31
+Manzanares,Graja de Iniesta,178,97,A-43 y A-3
+Manzanares,Ferez,178,156,CM-412
+Manzanares,El Casar de Escalona ,179,102,A-4 y CM-42
+Manzanares,San Benito,179,122,A-43
+Manzanares,Domingo Perez,180,103,A-4 y CM-42
+Manzanares,Guadalmez,182,119,A-43 y CM-4202
+Manzanares,Tobarra,182,122,CM-313
+Manzanares,Socovos,182,161,CM-412
+Manzanares,Calypo Fado,183,108,A-4 y CM-42
+Manzanares,Mondejar,183,131,A-4
+Manzanares,Valera de Abajo,184,107,A-43
+Manzanares,Almorox,184,108,A-4 y CM-42
+Manzanares,Minglanilla,185,101,A-43 y A-3
+Manzanares,Mentrida,185,110,A-4 y CM-42
+Manzanares,Los Cerralbos ,186,108,A-4 y CM-42
+Manzanares,Nombela,186,114,A-4 y CM-42
+Manzanares,Villalpardo,187,101,A-43 y A-3
+Manzanares,Fuentealbilla,187,117,A-43
+Manzanares,Valdeganga,188,107,A-43
+Manzanares,San Martin de Pusa,188,114,A-4 y CM-42
+Manzanares,Los Navalmorales ,188,121,"A-4, CM-42 y CM-401"
+Manzanares,Letur,188,165,CM-412
+Manzanares,La Pueblanueva ,189,116,"A-4, CM-42 y CM-4000"
+Manzanares,Hellin,189,129,CM-313
+Manzanares,Calalberche,190,118,A-4 y CM-42
+Manzanares,Tazona,190,167,CM-412
+Manzanares,Cazalegas,191,108,A-4 y CM-42
+Manzanares,Pozo Cañada,192,103,A-43
+Manzanares,Los Navalucillos ,192,124,"A-4, CM-42 y CM-401"
+Manzanares,Isso,192,129,CM-313
+Manzanares,Palomares del Campo,195,108,A-43 y A-3
+Manzanares,Huete,195,111,A-4 y A-40
+Manzanares,Pozo-Lorente,198,114,A-43
+Manzanares,Petrola,199,110,A-43 y A-31
+Manzanares,Albalate de Zorita,200,118,A-4
+Manzanares,Villar de Olalla,201,118,A-43 y N-420
+Manzanares,Alborea,201,126,A-43
+Manzanares,Casas-Ibañez,201,126,A-43
+Manzanares,El Real de San Vicente ,202,121,CM-42
+Manzanares,Villamalea,203,113,A-43 y A-3
+Manzanares,Carboneras de Guadazaon,204,120,A-43
+Manzanares,Talavera de la Reina,204,120,CM-42
+Manzanares,Almoguera,204,127,A-4
+Manzanares,Alcala del Jucar,206,131,A-43
+Manzanares,San Roman de los Montes,208,117,CM-42
+Manzanares,Cuenca,209,130,A-43 y N-420
+Manzanares,Higueruela,210,116,A-43 y A-31
+Manzanares,Bonete,214,116,A-43 y A-31
+Manzanares,Mejorada,214,122,CM-42
+Manzanares,Azuqueca de Henares,214,123,A-4
+Manzanares,Pastrana,215,131,A-4
+Manzanares,Nerpio,215,216,CM-412
+Manzanares,Alcaudete de la Jara,217,138,CM-42
+Manzanares,Torrejon del Rey,218,129,A-4
+Manzanares,Las Herencias ,218,132,CM-42
+Manzanares,Parque de las Castillas,218,134,A-4
+Manzanares,Gamonal,219,123,CM-42
+Manzanares,Talavera la Nueva,219,123,CM-42
+Manzanares,Fuente-Alamo,220,125,A-43 y A-31
+Manzanares,Alovera,220,126,A-4
+Manzanares,Velada,221,123,CM-42
+Manzanares,Villanueva de la Torre,221,128,A-4
+Manzanares,Quer,222,128,A-4
+Manzanares,Chiloeches,222,129,A-4
+Manzanares,Pozo de Guadalajara,222,131,A-4
+Manzanares,El Membrillo ,222,137,CM-42
+Manzanares,Montealegre del Castillo,223,123,A-43 y A-31
+Manzanares,Alberche del Caudillo,223,126,CM-42
+Manzanares,Galapagos,223,135,A-4
+Manzanares,Cabanillas del Campo,224,128,A-4
+Manzanares,Belvis de la Jara,224,142,CM-42
+Manzanares,Mira,225,131,A-43 y A-3
+Manzanares,Navamorcuende,225,133,CM-42
+Manzanares,El Coto ,225,134,A-4
+Manzanares,Pioz,225,134,A-4
+Manzanares,El Casar ,226,134,A-4
+Manzanares,La Arboleda ,227,131,A-4
+Manzanares,Los Arenales ,227,131,A-4
+Manzanares,Guadalajara,227,131,A-4
+Manzanares,Calera y Chozas,228,126,CM-42 y A-5
+Manzanares,Marchamalo,228,133,A-4
+Manzanares,Iriepal,231,131,A-4
+Manzanares,Villalba de la Sierra,232,146,A-43
+Manzanares,Ontur,233,132,A-43
+Manzanares,Cañete,233,142,A-43
+Manzanares,Alpera,234,128,A-43 y A-31
+Manzanares,Almansa,237,130,A-43 y A-31
+Manzanares,Albatana,237,132,A-43
+Manzanares,Parrillas,237,135,CM-42
+Manzanares,Fontanar,237,136,A-4
+Manzanares,Horche,237,136,A-4
+Manzanares,Cañaveras,237,138,A-4 y A-40
+Manzanares,Lupiana,237,139,A-4
+Manzanares,Navalcan,239,140,CM-42
+Manzanares,La Nava de Ricomalillo ,239,153,CM-42
+Manzanares,Yunquera de Henares,240,137,A-4
+Manzanares,Tortola de Henares,241,135,A-4
+Manzanares,Oropesa,242,133,CM-42 y A-5
+Manzanares,Agramon,242,134,A-43
+Manzanares,Sacedon,242,147,A-4 y A-40
+Manzanares,Lagartera,243,135,CM-42 y A-5
+Manzanares,Alcolea de Tajo,244,138,CM-42
+Manzanares,Uceda,244,150,A-4
+Manzanares,Torija,245,138,A-4
+Manzanares,El Puente del Arzobispo ,247,141,CM-42
+Manzanares,Trijueque,249,141,A-4
+Manzanares,Humanes,249,145,A-4
+Manzanares,Budia,249,161,A-4 y CM-200
+Manzanares,La Calzada de Oropesa ,250,138,CM-42 y A-5
+Manzanares,Tendilla,250,144,A-4
+Manzanares,El Campillo de la Jara ,250,162,CM-42
+Manzanares,Priego,254,153,"A-4, A-40 y CM-310"
+Manzanares,Brihuega,258,147,A-4
+Manzanares,Cañamares,261,161,A-4
+Manzanares,Caudete,265,145,A-43 y A-31
+Manzanares,Cogolludo,267,157,A-4
+Manzanares,Landete,272,154,A-43 y A-3
+Manzanares,Jadraque,273,164,A-4
+Manzanares,Señorio de Muriel,280,172,A-4
+Manzanares,Mandayona,282,159,A-4 y A-2
+Manzanares,Beteta,290,187,A-4
+Manzanares,Cifuentes,293,167,A-4 y A-2
+Manzanares,Siguenza,298,171,A-4 y A-2
+Manzanares,Poveda de la Sierra,302,199,A-4
+Manzanares,Alcolea del Pinar,303,168,A-4 y A-2
+Manzanares,Trillo,305,177,A-4 y A-2
+Manzanares,Atienza,310,195,A-4
+Manzanares,Checa,341,234,A-4
+Manzanares,Villel de Mesa,351,208,A-4 y A-2
+Manzanares,Molina,364,207,A-4 y A-2

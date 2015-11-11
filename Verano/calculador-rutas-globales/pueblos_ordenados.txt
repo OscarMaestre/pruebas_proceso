@@ -1,3 +1,4 @@
+Tomelloso|Ciudad Real
 Ciudad Real|Ciudad Real
 Alcazar de San Juan|Ciudad Real
 Manzanares|Ciudad Real
@@ -342,7 +343,6 @@ Terrinches|Ciudad Real
 Tobarra|Albacete
 Toboso (El)|Toledo
 Toledo|Toledo
-Tomelloso|Ciudad Real
 Torija|Guadalajara
 Torno (El)|Ciudad Real
 Torralba de Calatrava|Ciudad Real
