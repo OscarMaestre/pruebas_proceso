@@ -73,9 +73,9 @@ for i in range(0, total_lineas):
             lista_inserts_sql3.append(sql);
             centros.append(codigo_centro)
 
-centros_oficio=[]
+centros_oficio=["45011811C", "45002202C", ]
 for centro in centros_oficio:
-    sql="insert into dificil_desempeno values('{0}')".format(centro)
+    sql="insert or ignore into dificil_desempeno values('{0}')".format(centro)
     lista_inserts_sql3.append(sql);
     
 gestorDB.ejecutar_sentencias(lista_inserts_sql3)
