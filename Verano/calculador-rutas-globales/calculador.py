@@ -74,7 +74,7 @@ def calcular_distancia_entre_localidades(origen, destino, gestor_db):
     if ya_calculada(loc_origen,loc_destino, gestor_db):
         return
     peticion=calcular_distancia(origen, destino)
-    #print(json.dumps(peticion, indent=4))
+    print(json.dumps(peticion, indent=4))
     #break
     distancia=peticion['routes'][0]['legs'][0]['distance']['text']
     tiempo=peticion['routes'][0]['legs'][0]['duration']['value']
@@ -82,10 +82,12 @@ def calcular_distancia_entre_localidades(origen, destino, gestor_db):
     minutos="{0:.0f}".format(minutos)
     sumario=peticion['routes'][0]['summary']
     distancia=distancia.replace(" km", "")
+    distancia=distancia.replace(" m", "")
     distancia=distancia.replace(",", ".")
     distancia="{0:.0f}".format(float(distancia))
     sql_insert="insert into rutas values ('{0}', '{1}', {2}, {3}, '{4}')".format(loc_origen, loc_destino, distancia, minutos, sumario)
     print(sql_insert)
+    
     gestor_db.ejecutar_sentencias([sql_insert])
 
 fichero_pueblos=open("pueblos_ordenados.txt")
