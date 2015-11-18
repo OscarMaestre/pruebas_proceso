@@ -12,7 +12,7 @@ SEPARADOR=os.sep
 
 RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
 DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
-
+FECHA_NO_ENCONTRADA="Fecha no encontrada"
 
 #aqui = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DIRECTORIO)
@@ -97,14 +97,28 @@ def generar_linea_sql2(lista_campos):
     valores=":".join(lista_campos)
     return valores
 
+
+def obtener_fecha_adjudicacion(linea):
+    if (linea.find("CON COMIENZO ENTRE")==-1):
+        return FECHA_NO_ENCONTRADA
+    fecha=extraer_patron(re_fecha, linea[114:])
+    trozos=fecha.split("/")
+    dia=trozos[0]
+    mes=trozos[1]
+    anio=trozos[2]
+    fecha="-".join([dia, mes, anio])
+    return fecha
 archivo=open(archivo,"r")
 lineas=archivo.readlines()
 total_lineas=len(lineas)
 codigo_especialidad=""
 lista_inserts_sql3=[]
+fecha_adjudicacion=FECHA_NO_ENCONTRADA
 for i in range(0, total_lineas):
     lista_campos_para_insertar=ListaCampos.ListaCampos()
     linea=lineas[i]
+    if fecha_adjudicacion==FECHA_NO_ENCONTRADA:
+        fecha_adjudicacion=obtener_fecha_adjudicacion(linea)
     if i+2==total_lineas:
         break
     linea_siguiente=lineas[i+1]
@@ -136,6 +150,7 @@ for i in range(0, total_lineas):
         lista_campos.append(nombre_localidad)
         lista_campos.append(fecha_inicio)
         lista_campos.append(fecha_fin)
+        lista_campos.append(fecha_adjudicacion)
         sql=generar_linea_sql2(lista_campos)
         print(sql)
         
@@ -144,7 +159,7 @@ for i in range(0, total_lineas):
         lista_campos_para_insertar.anadir("nombre_completo", nombre_persona, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("fecha_inicio", fecha_inicio, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("fecha_fin", fecha_fin, ListaCampos.ListaCampos.CADENA)
-        lista_campos_para_insertar.anadir("procedimiento", "Adjudicacion 16-11-2015", ListaCampos.ListaCampos.CADENA)
+        lista_campos_para_insertar.anadir("procedimiento", "Adjudicacion "+fecha_adjudicacion, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("especialidad", codigo_especialidad, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("codigo_centro", codigo_centro, ListaCampos.ListaCampos.CADENA)
         lista_inserts_sql3.append(lista_campos_para_insertar.generar_insert("nombramientos"))

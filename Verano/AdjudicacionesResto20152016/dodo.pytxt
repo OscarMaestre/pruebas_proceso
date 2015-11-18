@@ -3,6 +3,7 @@
 
 from subprocess import call
 import platform
+import glob
 
 
 CONVERTIR="pdftotext -layout -nopgbrk "
@@ -22,23 +23,31 @@ def aplicar_comando (comando, fichero, *args):
         cmd+=" " + a
     print("Convirtiendo "+fichero)
     call(cmd, shell=True)
+
+def escapar_fichero(nombre_fichero):
+    nombre_fichero="\""+nombre_fichero+"\""
+    return nombre_fichero
+    
+
+ficheros_pdf=glob.glob("*.pdf")
+
+
+
+for f in ficheros_pdf:
+    nombre_escapado=escapar_fichero(f)
+    aplicar_comando(CONVERTIR, nombre_escapado)
     
     
-
-ficheros=["0590", "0597", "0591"]
-
-
-
-for f in ficheros:
-    aplicar_comando(CONVERTIR, f+".pdf")
-    
-for f in ficheros:
-    aplicar_comando(PROCESAR, f+".txt", "> "+f+".res")
+ficheros_txt=glob.glob("*.txt")
+for f in ficheros_txt:
+    nombre_escapado=escapar_fichero(f)
+    aplicar_comando(PROCESAR, nombre_escapado, "> "+nombre_escapado+".res")
     
 aplicar_comando("rm ", FICH_RESULTADO)
 
-for f in ficheros:
-    aplicar_comando(CONCAT, f+".res", ">> " + FICH_RESULTADO)
+for f in ficheros_txt:
+    nombre_escapado=escapar_fichero(f)
+    aplicar_comando(CONCAT, nombre_escapado+".res", ">> " + FICH_RESULTADO)
 
 
 aplicar_comando("cp ", PROCESAR, " procesar_tabla.pytxt")

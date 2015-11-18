@@ -18,8 +18,8 @@ all:
 	cd Verano/20151104-todos-cuerpos && ./dodo.py
 	cd Verano/20151109-todos-cuerpos && ./dodo.py
 	cd Verano/20151111-todos-cuerpos && ./dodo.py
-	cd Verano/20151116-todos-cuerpos && ./dodo.py
 	cd Verano/extractor_adjudicaciones && ./dodo.py
+	cd Verano/AdjudicacionesResto20152016 && ./dodo.py
 	sqlite3 nombramientos.db -init fichero.sql
 clean:
 	rm nombramientos.db
