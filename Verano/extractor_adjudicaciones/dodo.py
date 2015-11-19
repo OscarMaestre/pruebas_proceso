@@ -4,12 +4,13 @@
 from subprocess import call
 import platform
 
-
+MODULO_GLOBAL="modulo.bas"
+MODULO_LLAMADAS_PARCIALES="llamadas_generales"
 adjudicaciones=["28-08-2015","08-09-2015","18-09-2015",
 "02-10-2015","05-10-2015","07-10-2015",
 "08-10-2015","13-10-2015","19-10-2015",
 "26-10-2015","28-10-2015","02-11-2015",
-"04-11-2015", "09-11-2015", "11-11-2015"]
+"04-11-2015", "09-11-2015", "11-11-2015", "16-11-2015", "18-11-2015"]
 
 EXTRACTOR="extractor.py "
 
@@ -34,16 +35,22 @@ def aplicar_comando (comando, fichero, *args):
 
 
 
-
+aplicar_comando(BORRAR, MODULO_LLAMADAS_PARCIALES)
+aplicar_comando(BORRAR, MODULO_GLOBAL)
 
 i=0
 for f in adjudicaciones:
-	i=i+1
-	sufijo="{:0>3d}".format(i)
-	nombre_macro="macros_"+sufijo+"_"+f
-	if (platform.system()=="Linux"):
-		aplicar_comando("python3 ", EXTRACTOR, f, " > "+nombre_macro)
-	if (platform.system()=="Windows"):
-		aplicar_comando(EXTRACTOR, f, " > "+ nombre_macro)
+    i=i+1
+    sufijo="{:0>3d}".format(i)
+    nombre_macro="macros_"+sufijo+"_"+f
+    if (platform.system()=="Linux"):
+        aplicar_comando("python3 ", EXTRACTOR, f, " > "+nombre_macro)
+    if (platform.system()=="Windows"):
+        aplicar_comando(EXTRACTOR, f, " > "+ nombre_macro)
+    aplicar_comando("cat ", nombre_macro+" >> " + MODULO_GLOBAL)
 
-	
+inicio="Public Function EjecutarGlobal()\n"  
+aplicar_comando("echo ", "\""+inicio+"\"" + ">>" + MODULO_GLOBAL)
+aplicar_comando("cat ", MODULO_LLAMADAS_PARCIALES+" >> " + MODULO_GLOBAL)
+fin="End Function"	
+aplicar_comando("echo ", "\""+fin+"\"" + ">>" + MODULO_GLOBAL)

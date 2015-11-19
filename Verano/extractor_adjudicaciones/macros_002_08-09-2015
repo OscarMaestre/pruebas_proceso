@@ -1,4 +1,4 @@
-Public Function fun_1()
+Public Function fun_08092015_1()
 
 On Error Resume Next
 
@@ -1223,7 +1223,7 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_2()
+Public Function fun_08092015_2()
 
 On Error Resume Next
 
@@ -2452,7 +2452,7 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_3()
+Public Function fun_08092015_3()
 
 On Error Resume Next
 
@@ -2653,8 +2653,8 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_5()
-	fun_1
-	fun_2
-	fun_3
+Public Function fun_08092015_5()
+	fun_08092015_1
+	fun_08092015_2
+	fun_08092015_3
 End Function

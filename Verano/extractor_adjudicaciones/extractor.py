@@ -29,7 +29,9 @@ Select nif, nombre_completo, codigo_centro, procedimiento, fecha_inicio, fecha_f
 """
 i=1
 max_filas=300
-prefijo_funcion="fun_"
+sufijo_fecha=sys.argv[1]
+sufijo_fecha=sufijo_fecha.replace("-", "")
+prefijo_funcion="fun_"+sufijo_fecha+"_"
 num_funcion=1
 
 sql+="where procedimiento='"+concurso_traslados+"'"
@@ -62,10 +64,12 @@ nombre_funcion=prefijo_funcion+str(num_funcion)
 imprimir=GestorDB.get_procedimiento(nombre_funcion, sql_intermedio)
 print(imprimir)
 num_funcion=num_funcion+1
-
-llamadas="Public Function "+prefijo_funcion+str(num_funcion+1) +"()\n"
+nombre_funcion=prefijo_funcion+str(num_funcion+1)
+llamadas="Public Function "+ nombre_funcion +"()\n"
 for num in range(1,num_funcion ):
 	llamadas+="\t"+prefijo_funcion+str(num)+"\n"
 llamadas+="End Function"
 print (llamadas)
 	
+with open("llamadas_generales", "a") as fichero:
+	fichero.write(nombre_funcion+"\r\n")

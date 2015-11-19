@@ -1,4 +1,4 @@
-Public Function fun_1()
+Public Function fun_11112015_1()
 
 On Error Resume Next
 
@@ -167,6 +167,6 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_3()
-	fun_1
+Public Function fun_11112015_3()
+	fun_11112015_1
 End Function
