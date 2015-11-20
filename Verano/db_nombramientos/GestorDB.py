@@ -96,7 +96,7 @@ class GestorDB(object):
     
     def ejecutar_sentencias(self, lista_sentencias):
         for sql in lista_sentencias:
-            print (sql)
+            #print (sql)
             self.cursor.execute(sql)
         self.conexion.commit()
         
