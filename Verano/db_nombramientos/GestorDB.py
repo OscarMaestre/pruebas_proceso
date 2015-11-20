@@ -41,7 +41,7 @@ On Error Resume Next
   Set db = ws.Databases(0)
 
 On Error GoTo Proc_Err
-  'start a transaction to ensure all updates are run or rolled back
+  'Todas las actualizaciones se meten en una transaccion
   ws.BeginTrans
 """
 	return preludio_sql
@@ -58,7 +58,7 @@ def get_procedimiento(nombre, sql_intermedio):
 	return inicio+sql_intermedio+fin
 def get_fin_sql():
 	sql="""
-		 'commit all changes 
+		 'se hace el commit
   ws.CommitTrans
 
 Proc_Exit:
@@ -68,7 +68,7 @@ Proc_Exit:
 
 Proc_Err:
   ws.Rollback
-  MsgBox "Error updating: " & Err.Description
+  MsgBox "Error actualizando: " & Err.Description
   Resume Proc_Exit
 End Function
 	"""
