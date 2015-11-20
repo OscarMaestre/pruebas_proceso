@@ -23,7 +23,7 @@ import ListaCampos
 archivo=sys.argv[1]
 re_dni="[0-9]{7,8}[A-Z]"
 #especialidad="[PWB0]59[0-9][0-9]{3}"
-re_especialidad="[PWB0]59([0-9]{4})"
+re_especialidad="\- [PWB0]59([0-9]{4})"
 re_codigo_centro="[0-9]{8}"
 re_codigo_centro_ciudad_real="^13[0-9]{6}$"
 re_fecha="[0-9]{2}/[0-9]{2}/[0-9]{4}"
@@ -112,6 +112,7 @@ for i in range(0, total_lineas):
     lista_campos=[]
     if (linea_contiene_patron(re_especialidad, linea)):
         codigo_especialidad=extraer_patron(re_especialidad, linea)
+        codigo_especialidad=codigo_especialidad[2:]
     if (linea_contiene_patron(re_dni, linea)):
         dni=extraer_patron(re_dni, linea)
         

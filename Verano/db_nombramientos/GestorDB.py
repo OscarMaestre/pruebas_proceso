@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# coding=utf-8
 
 import sqlite3
 import os
@@ -14,8 +15,20 @@ CREATE TABLE if not exists nombramientos (
     fecha_inicio character(20),
     fecha_fin character(20),
     especialidad character(150),
-    auxiliar character(2048)
+    auxiliar character(2048),
+    foreign key (especialidad) references especialidades(especialidad)
 );
+"""
+
+SQL_CREACION_ESPECIALIDADES="""
+
+create table if not exists especialidades(
+    especialidad character(150) primary key,
+    descripcion character(250),
+    idioma character(30),
+    tiempo_parcial character(20)
+);
+
 
 """
 
@@ -83,6 +96,7 @@ class GestorDB(object):
     
     def ejecutar_sentencias(self, lista_sentencias):
         for sql in lista_sentencias:
+            print (sql)
             self.cursor.execute(sql)
         self.conexion.commit()
         
@@ -94,6 +108,55 @@ class GestorDB(object):
         return len(filas)
     def __del__(self):
         self.cursor.close()
+        
+        
+    def extraer_tuplas_especialidades_de_fichero(self, nombre_fichero):
+        fichero=open(nombre_fichero)
+        lineas=fichero.readlines()
+        tuplas=[]
+        for l in lineas:
+            codigo=l[0:3]
+            descripcion=l[4:].strip()
+            tuplas.append( ( codigo, descripcion ) )
+        fichero.close()
+        return tuplas
+    
+    def get_sql_especialidades(self):
+        sql=[]
+        insert_primaria="insert or ignore into especialidades values ('PRIMARIA', 'DESCONOCIDA', 'ESPAÑOL', 'NO')"
+        sql.append(insert_primaria)
+        insert_secundaria="insert or ignore into especialidades values ('SECUNDARIA', 'DESCONOCIDA', 'ESPAÑOL', 'NO')"
+        sql.append(insert_secundaria)
+        ficheros=["590", "591", "592", "594", "595", "596", "597"]
+        for f in ficheros:
+            dir_actual=os.path.dirname(os.path.realpath(__file__))
+            ruta_fichero=dir_actual+os.path.sep+"Especialidades0{0}.txt".format(f)
+            especialidades=self.extraer_tuplas_especialidades_de_fichero( ruta_fichero )
+            for tupla in especialidades:
+                codigo=tupla[0]
+                nombre=tupla[1]
+                #                                                  Codigo    Nombre Idioma   ¿tiempo parcial?
+                insert="insert or ignore into especialidades values ('0{2}{0}', '{1}', 'ESPAÑOL', 'NO')".format(codigo, nombre, f)
+                sql.append(insert)
+                #                                                  Codigo    Nombre Idioma   ¿tiempo parcial?
+                insert="insert or ignore into especialidades values ('P{2}{0}', '{1}', 'ESPAÑOL', 'SI')".format(codigo, nombre, f)
+                sql.append(insert)
+                #                                                  Codigo    Nombre Idioma   ¿tiempo parcial?
+                insert="insert or ignore into especialidades values ('B{2}{0}', '{1}', 'INGLÉS', 'NO')".format(codigo, nombre, f)
+                sql.append(insert)
+                #                                                  Codigo    Nombre Idioma   ¿tiempo parcial?
+                insert="insert or ignore into especialidades values ('W{2}{0}', '{1}', 'INGLÉS', 'SI')".format(codigo, nombre, f)
+                sql.append(insert)
+                #                                                  Codigo    Nombre Idioma   ¿tiempo parcial?
+                insert="insert or ignore into especialidades values ('R{2}{0}', '{1}', 'FRANCÉS', 'SI')".format(codigo, nombre, f)
+                sql.append(insert)
+                #                                                  Codigo    Nombre Idioma   ¿tiempo parcial?
+                insert="insert or ignore into especialidades values ('F{2}{0}', '{1}', 'FRANCÉS', 'NO')".format(codigo, nombre, f)
+                sql.append(insert)
+        return sql
+    
 
 BD_RESULTADOS=GestorDB(ARCHIVO_RESULTADOS)
-BD_RESULTADOS.ejecutar_sentencias([SQL_CREACION_NOMBRAMIENTOS])
+BD_RESULTADOS.ejecutar_sentencias(["PRAGMA foreign_keys=ON"])
+BD_RESULTADOS.ejecutar_sentencias([SQL_CREACION_ESPECIALIDADES, SQL_CREACION_NOMBRAMIENTOS])
+BD_RESULTADOS.ejecutar_sentencias ( BD_RESULTADOS.get_sql_especialidades() )

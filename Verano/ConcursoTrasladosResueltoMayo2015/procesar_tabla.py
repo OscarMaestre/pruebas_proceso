@@ -148,11 +148,11 @@ lineas=archivo.readlines()
 total_lineas=len(lineas)
 codigo_especialidad=""
 lista_inserts_sql3=[]
-print (preludio_sql)
+#print (preludio_sql)
 for i in range(0, total_lineas):
     linea=lineas[i]
     lista_campos=[]
-    
+    #print(linea)
     campos_sql=ListaCampos.ListaCampos()
     if (linea_contiene_patron(re_dni, linea)):
         dni=extraer_patron(re_dni, linea)
@@ -182,6 +182,8 @@ for i in range(0, total_lineas):
                 especialidad="PRIMARIA"
             else:
                 especialidad="SECUNDARIA"
+        else:
+            especialidad="PRIMARIA"
         codigo_destino_anterior=extraer_codigo_centro(lineas[i+3])
         if (codigo_destino_anterior=="No concordancia"):
             codigo_destino_anterior="NO TENIA DEST. ANTERIOR"
@@ -221,13 +223,14 @@ for i in range(0, total_lineas):
         campos_sql.anadir('procedimiento', "Concurso traslados resuelto Mayo 2015", ListaCampos.ListaCampos.CADENA)
         campos_sql.anadir('fecha_inicio', "01-09-2015", ListaCampos.ListaCampos.CADENA)
         campos_sql.anadir('fecha_fin', "30-06-2100", ListaCampos.ListaCampos.CADENA)
+        #print ("Especialidad:"+especialidad)
         campos_sql.anadir('especialidad', especialidad, ListaCampos.ListaCampos.CADENA)
         lista_inserts_sql3.append(campos_sql.generar_insert("nombramientos"))
         sql=generar_linea_sql2(lista_campos)
         print(sql)
         continue
     
-print(final_sql)
+#print(final_sql)
 archivo.close()
 
 

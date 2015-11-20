@@ -19,7 +19,7 @@ def aplicar_comando (comando, fichero, *args):
     cmd=comando + fichero
     for a in args:
         cmd+=" " + a
-    print("Convirtiendo "+fichero)
+    print("Ejecutando "+cmd)
     call(cmd, shell=True)
     
     
