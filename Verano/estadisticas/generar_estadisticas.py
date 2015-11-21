@@ -173,6 +173,7 @@ for fila in filas:
         descripcion+=" " + fila[1]
     if fila[2]=="SI":
         descripcion+=" T.PARCIAL"
+    porcentaje=int(fila[4])*100/total_plazas
     #descripcion="{0} {1} {2}".format(fila[3], idioma, tiempo_parcial)
-    #print ("\tEspecialidad:{0}, cantidad de adjudicaciones:{1}".format(descripcion, fila[4]))
+    print ("\tEspecialidad:{0}, plazas:{1} ({2:.3g}% del total)".format(descripcion, fila[4], porcentaje))
 print(DIVISION_SECCIONES)
