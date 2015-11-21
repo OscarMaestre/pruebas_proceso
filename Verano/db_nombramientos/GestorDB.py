@@ -111,7 +111,7 @@ class GestorDB(object):
         
         
     def extraer_tuplas_especialidades_de_fichero(self, nombre_fichero):
-        fichero=open(nombre_fichero)
+        fichero=open(nombre_fichero, encoding="utf-8")
         lineas=fichero.readlines()
         tuplas=[]
         for l in lineas:
