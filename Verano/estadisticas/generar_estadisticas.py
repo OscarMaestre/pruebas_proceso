@@ -11,6 +11,7 @@ DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
 #aqui = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
+
 import datetime
 
 
@@ -47,6 +48,11 @@ def ordenar_filas_procedimientos(filas):
                 filas[j]=aux
     return filas
             
+
+def get_valor_unico(sql):
+    filas=gestordb.get_filas(sql)
+    return filas[0][0]
+
 def imprimir_valor_unico(sql, cadena, total):
     filas=gestordb.get_filas(sql)
     porcentaje=int(filas[0][0])/total*100
@@ -93,8 +99,49 @@ for tupla in cuerpos:
     #print (sql)
     filas=gestordb.get_filas(sql)
     porcentaje=int(filas[0][0])/total_plazas*100
-    print("\t Cuerpo:{0}, {1} plazas ({2:.3g}% del total)".format(tupla[1], filas[0][0], porcentaje) )
+    print("\t Cuerpo:{0} {1} plazas ({2: >5.2f}% del total)".format(tupla[1].ljust(35), str(filas[0][0]).rjust(5), porcentaje) )
 print(DIVISION_SECCIONES)
+
+print("Desglose por provincias")
+
+sql_suma_por_provincia="""
+    select count(*) from nombramientos
+    where
+        procedimiento like 'Adjudicacion%'
+    and codigo_centro like '{0}%'
+"""
+for (codigo_provincia, nombre_provincia) in GestorDB.CODIGOS_PROVINCIAS:
+    sql=sql_suma_por_provincia.format(codigo_provincia)
+    #print (sql)
+    imprimir_valor_unico(sql, "\tPlazas en "+nombre_provincia.ljust(15)+":{0: >5} ({1: >5.2f}% del total)" , total_plazas)
+print(DIVISION_SECCIONES)
+
+
+print ("Desglose por provincias y cuerpos")
+sql_suma_por_provincia_primaria="""
+    select count(*) from nombramientos
+    where
+        procedimiento like 'Adjudicacion%'
+    and codigo_centro like '{0}%' and especialidad like '_597%'
+"""
+sql_suma_por_provincia_eemm="""
+    select count(*) from nombramientos
+    where
+        procedimiento like 'Adjudicacion%'
+    and codigo_centro like '{0}%' and especialidad not like '_597%'
+"""
+for (codigo_provincia, nombre_provincia) in GestorDB.CODIGOS_PROVINCIAS:
+    sql=sql_suma_por_provincia_primaria.format(codigo_provincia)
+    #print (sql)
+    descr=nombre_provincia+" por PRIMARIA"
+    descr=descr.ljust(30)
+    imprimir_valor_unico(sql, "\t"+descr+":{0: >5d} ({1: >5.2f}% del total)" , total_plazas)
+    sql=sql_suma_por_provincia_eemm.format(codigo_provincia)
+    descr=nombre_provincia+" por EEMM"
+    descr=descr.ljust(30)
+    imprimir_valor_unico(sql, "\t"+descr+":{0: >5d} ({1: >5.2f}% del total)" , total_plazas)
+print(DIVISION_SECCIONES)
+
 
 print("Bilingüismo")
 sql_plazas_castellano="""
@@ -106,7 +153,7 @@ sql_plazas_castellano="""
                 nombramientos.especialidad=especialidades.especialidad
                 and especialidades.idioma='ESPAÑOL'
 """
-imprimir_valor_unico(sql_plazas_castellano, "\tPlazas sin perfil bilingüe:{0}, ({1:.3g}% del total)", total_plazas)
+imprimir_valor_unico(sql_plazas_castellano, "\tPlazas sin perfil bilingüe: {0} ({1:.2f}% del total)", total_plazas)
 
 sql_plazas_ingles="""
     select count(*) as total
@@ -117,7 +164,7 @@ sql_plazas_ingles="""
                 nombramientos.especialidad=especialidades.especialidad
                 and especialidades.idioma='INGLÉS'
 """
-imprimir_valor_unico(sql_plazas_ingles, "\tPlazas con perfil ingles:{0} ({1:.3g}% del total)", total_plazas)
+imprimir_valor_unico(sql_plazas_ingles, "\tPlazas con perfil ingles:    {0} ({1:.2f}% del total)", total_plazas)
 
 sql_plazas_frances="""
     select count(*) as total
@@ -128,7 +175,7 @@ sql_plazas_frances="""
                 nombramientos.especialidad=especialidades.especialidad
                 and especialidades.idioma='FRANCÉS'
 """
-imprimir_valor_unico(sql_plazas_frances, "\tPlazas con perfil francés:{0} ({1:.3g}% del total)", total_plazas)
+imprimir_valor_unico(sql_plazas_frances, "\tPlazas con perfil francés:    {0} ({1:.2f}% del total)", total_plazas)
 print(DIVISION_SECCIONES)
 
 print("Desglose por tipo de jornada")
@@ -142,7 +189,7 @@ sql_plazas_completas="""
                 and especialidades.tiempo_parcial='NO'
 """
 
-imprimir_valor_unico(sql_plazas_completas, "\tPlazas a tiempo completo:{0} ({1:.3g}% del total)",  total_plazas)
+imprimir_valor_unico(sql_plazas_completas, "\tPlazas a tiempo completo:{0} ({1:.2f}% del total)",  total_plazas)
 sql_plazas_parciales="""
     select count(*) as total
         from nombramientos, especialidades
@@ -153,7 +200,7 @@ sql_plazas_parciales="""
                 and especialidades.tiempo_parcial='SI'
 """
 
-imprimir_valor_unico(sql_plazas_parciales, "\tPlazas a tiempo parcial:{0} ({1:.3g}% del total)", total_plazas)
+imprimir_valor_unico(sql_plazas_parciales, "\tPlazas a tiempo parcial :{0} ({1:.2f}% del total)", total_plazas)
 print(DIVISION_SECCIONES)
 sql_adjudicaciones_por_especialidad="""
     select especialidades.especialidad, especialidades.idioma, especialidades.tiempo_parcial, descripcion, count(*) as total
@@ -163,17 +210,20 @@ sql_adjudicaciones_por_especialidad="""
                 and
                 nombramientos.especialidad=especialidades.especialidad
             
-            group by especialidades.especialidad order by total desc
+            group by especialidades.especialidad order by total desc limit 30
 """
 filas=gestordb.get_filas(sql_adjudicaciones_por_especialidad)
-print("Desglose por especialidades")
+print("Desglose por especialidades (solo las 30 mas significativas)")
 for fila in filas:
     descripcion=fila[3]
     if fila[1]!="ESPAÑOL":
-        descripcion+=" " + fila[1]
+        descripcion+="(CON " + fila[1]+")"
     if fila[2]=="SI":
         descripcion+=" T.PARCIAL"
     porcentaje=int(fila[4])*100/total_plazas
+    descripcion_fmt=descripcion.ljust(55, ' ')
+    plazas_cantidad='plazas:{0}'.format(fila[4]).ljust(12,' ')
     #descripcion="{0} {1} {2}".format(fila[3], idioma, tiempo_parcial)
-    print ("\tEspecialidad:{0}, plazas:{1} ({2:.3g}% del total)".format(descripcion, fila[4], porcentaje))
+    print ("\t{0} {1} ({2:.2f}% del total)".format(descripcion_fmt, plazas_cantidad, porcentaje))
 print(DIVISION_SECCIONES)
+

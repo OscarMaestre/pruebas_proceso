@@ -111,7 +111,7 @@ for i in range(0, total_lineas):
         
         nombre_persona=linea[:32].strip()
         
-        codigo_centro=extraer_codigo_centro(linea[31:64])
+        codigo_centro=extraer_codigo_centro(linea[27:64])
         
         codigo_especialidad=extraer_patron(re_especialidad, linea[49:86])
         

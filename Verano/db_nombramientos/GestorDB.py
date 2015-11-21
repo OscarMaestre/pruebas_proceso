@@ -5,6 +5,11 @@ import sqlite3
 import os
 import platform
 
+
+CODIGOS_PROVINCIAS=[    ("02", "ALBACETE"),     ("13", "CIUDAD REAL"),
+                        ("16", "CUENCA"),       ("19", "GUADALAJARA"),
+                        ("45", "TOLEDO")]
+
 SQL_CREACION_NOMBRAMIENTOS="""
 CREATE TABLE if not exists nombramientos (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
