@@ -7,11 +7,10 @@ SEPARADOR=os.sep
 
 RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
 DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
-
 #aqui = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
-
+import utilidades
 import datetime
 
 
@@ -73,7 +72,7 @@ filas=ordenar_filas_procedimientos(filas)
 for fila in filas:
     #print(fila[1], total_plazas)
     #
-    print ("\tProcedimiento:{0}, plazas:{1}".format(fila[0], fila[1]))
+    print ("\tProcedimiento:{0}, plazas:{1: >5d}".format(fila[0], fila[1]))
 
 print(DIVISION_SECCIONES)
 sql_total="select count(*) from nombramientos where procedimiento like 'Adjudicacion%'"
@@ -217,7 +216,7 @@ print("Desglose por especialidades (solo las 30 mas significativas)")
 for fila in filas:
     descripcion=fila[3]
     if fila[1]!="ESPAÑOL":
-        descripcion+="(CON " + fila[1]+")"
+        descripcion+="(CON BIL." + fila[1]+")"
     if fila[2]=="SI":
         descripcion+=" T.PARCIAL"
     porcentaje=int(fila[4])*100/total_plazas
