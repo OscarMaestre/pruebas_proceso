@@ -49,7 +49,7 @@ message = """
 
 Estimados compañeros:
 
-Se remiten adjuntas las estadisticas sobre adjudicaciones de este curso hasta hoy {0}. Por favor, disculpad si recibís este mensaje más de una vez.
+Se remiten adjuntas las estadisticas sobre adjudicaciones de este curso hasta hoy {0}. En los ficheros adjuntos podréis encontrar estadísticas sobre la última adjudicación así como las estadísticas globales en lo que va de curso. Por favor, disculpad si recibís este mensaje más de una vez.
 
 Un saludo.
 
@@ -92,20 +92,27 @@ def enviar(recipient, ficheros):
 
 
 
-fichero="Estadisticas_hasta_"+la_fecha
+fichero_global="Estadisticas_hasta_"+la_fecha
+fichero_del_dia="Estadisticas_de_la_adjudicacion_de_"+la_fecha
 if platform.system()=="Linux":
-    utilidades.aplicar_comando("./generar_estadisticas.py ", " > "+fichero)
+    utilidades.aplicar_comando("./generar_estadisticas.py ", " > "+fichero_global)
+    ultima_fecha=utilidades.leer_linea_fichero(0, "ultima_fecha.txt")
+    utilidades.aplicar_comando("./generar_estadisticas.py ", ultima_fecha," > "+fichero_del_dia)
 else:
-    utilidades.aplicar_comando("generar_estadisticas.py ", " > "+fichero)
+    utilidades.aplicar_comando("generar_estadisticas.py ", " > "+fichero_global)
+    ultima_fecha=utilidades.leer_linea_fichero(0, "ultima_fecha.txt")
+    utilidades.aplicar_comando("generar_estadisticas.py ", ultima_fecha," > "+fichero_del_dia)
 
 fichero_destinatarios=open("destinatarios.txt")
 lineas=fichero_destinatarios.readlines()
 fichero_destinatarios.close()
 for l in lineas:
     destinatario=l.strip()
-    enviar(destinatario, [fichero])
+    enviar(destinatario, [fichero_global, fichero_del_dia])
 
 if platform.system()=="Linux":
-    utilidades.aplicar_comando("rm  ", fichero)
+    utilidades.aplicar_comando("rm  ", fichero_global)
+    utilidades.aplicar_comando("rm  ", fichero_del_dia)
 else:
     utilidades.aplicar_comando("del  ", fichero)
+    utilidades.aplicar_comando("rm  ", fichero_del_dia)

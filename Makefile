@@ -21,6 +21,9 @@ all:
 	cd Verano/AdjudicacionesResto20152016 && ./dodo.py
 	cd Verano/extractor_adjudicaciones && ./dodo.py
 	echo "Recuerda incluir las fechas de las adjudicaciones en extractor_adjudicaciones"
+mostrar:
 	sqlite3 nombramientos.db -init fichero.sql
+enviar:
+	cd Verano/estadisticas/ && ./dodo.py
 clean:
 	rm nombramientos.db
