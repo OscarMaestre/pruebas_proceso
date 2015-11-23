@@ -290,7 +290,7 @@ for fila in filas:
     descripcion_fmt=descripcion.ljust(55, ' ')
     plazas_cantidad='plazas:{0: >4d}'.format(fila[4]).ljust(12,' ')
     #descripcion="{0} {1} {2}".format(fila[3], idioma, tiempo_parcial)
-    print ("\t{0} {1} ({2:.2f}% del total)".format(descripcion_fmt, plazas_cantidad, porcentaje))
+    print ("\t{0} {1} ({2: >5.2f}% del total )".format(descripcion_fmt, plazas_cantidad, porcentaje))
 print(DIVISION_SECCIONES)
 
 print("Duración de las adjudicaciones")
