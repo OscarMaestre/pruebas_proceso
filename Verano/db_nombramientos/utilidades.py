@@ -54,6 +54,10 @@ def escribir_en_fichero(texto, nombre_fichero):
     with open (nombre_fichero, "w") as f:
         f.write(texto)
 
+def anadir_a_fichero(texto, nombre_fichero):
+    with open (nombre_fichero, "a") as f:
+        f.write(texto)
+        
 def leer_linea_fichero(num_linea, nombre_fichero):
     with open (nombre_fichero, "r") as f:
         lineas=f.readlines()
@@ -61,7 +65,7 @@ def leer_linea_fichero(num_linea, nombre_fichero):
     
 def aplicar_comando (comando, fichero, *args):
     
-    cmd=comando + fichero
+    cmd=comando + " "+fichero
     for a in args:
         cmd+=" " + a
     print("Ejecutando "+cmd)

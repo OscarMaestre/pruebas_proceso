@@ -4,7 +4,7 @@
 from subprocess import call
 import platform
 import os,sys
-
+ 
 NUM_SUBDIRECTORIOS_ANTERIORES=1
 SEPARADOR=os.sep
 
@@ -26,12 +26,7 @@ if (platform.system()=="Windows"):
     BORRAR="del "
 FICH_RESULTADO="resultado.sql"
 CONCAT="cat "
-def aplicar_comando (comando, fichero, *args):
-    cmd=comando + fichero
-    for a in args:
-        cmd+=" " + a
-    print("Ejecutando "+cmd)
-    call(cmd, shell=True)
+
     
     
 
@@ -40,18 +35,19 @@ ficheros=["0590", "0591", "0592", "0594", "0595", "0596", "0597"]
 
 
 for f in ficheros:
-    aplicar_comando(CONVERTIR, f+".pdf")
+    if not utilidades.existe_fichero(f+".txt"):
+        utilidades.aplicar_comando(CONVERTIR, f+".pdf")
     
 for f in ficheros:
-    aplicar_comando(PROCESAR, f+".txt", "> "+f+".res")
+    utilidades.aplicar_comando(PROCESAR, f+".txt", "> "+f+".res")
     
-aplicar_comando("rm ", FICH_RESULTADO)
+utilidades.aplicar_comando("rm ", FICH_RESULTADO)
 
 for f in ficheros:
-    aplicar_comando(CONCAT, f+".res", ">> " + FICH_RESULTADO)
+    utilidades.aplicar_comando(CONCAT, f+".res", ">> " + FICH_RESULTADO)
 
 
-aplicar_comando("cp ", PROCESAR, " procesar_tabla.pytxt")
-aplicar_comando("cp ", "dodo.py", " dodo.pytxt")
+utilidades.aplicar_comando("cp ", PROCESAR, " procesar_tabla.pytxt")
+utilidades.aplicar_comando("cp ", "dodo.py", " dodo.pytxt")
     
     
