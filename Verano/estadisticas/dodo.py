@@ -29,7 +29,7 @@ import utilidades
 fecha=datetime.date.today()
 la_fecha=fecha.strftime("%d-%m-%Y")
 
-(usuario, clave, servidor, puerto)=utilidades.get_parametros("configuracion_envio_email.txt")
+(usuario, clave, servidor, puerto)=utilidades.get_parametros(utilidades.FICHERO_CONFIGURACION_EMAIL)
 
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
@@ -103,7 +103,7 @@ else:
     ultima_fecha=utilidades.leer_linea_fichero(0, "ultima_fecha.txt")
     utilidades.aplicar_comando("generar_estadisticas.py ", ultima_fecha," > "+fichero_del_dia)
 
-fichero_destinatarios=open("destinatarios.txt")
+fichero_destinatarios=open(utilidades.FICHERO_DESTINATARIOS_EMAIL)
 lineas=fichero_destinatarios.readlines()
 fichero_destinatarios.close()
 for l in lineas:

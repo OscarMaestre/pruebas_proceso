@@ -23,11 +23,15 @@ if platform.system()=="Linux":
     COPIAR="cp "
     CONCAT="cat "
     MOVER="mv "
+    FICHERO_CONFIGURACION_EMAIL="/home/usuario/repos/configuracion_envio_email.txt"
+    FICHERO_DESTINATARIOS_EMAIL="/home/usuario/repos/destinatarios.txt"
 else:
     BORRAR="del "
     COPIAR="copy "
     CONCAT="cat "
     MOVER="move "
+    FICHERO_CONFIGURACION_EMAIL="C:\\repos\\configuracion_envio_email.txt"
+    FICHERO_DESTINATARIOS_EMAIL="C:\\repos\\destinatarios.txt"
 
 
 DNI_NO_ENCONTRADO=-1
