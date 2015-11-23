@@ -18,8 +18,7 @@ if (len(sys.argv)>1):
 else:
     procedimiento="Adjudicacion%"
 
-print (procedimiento)
-DIVISION_SECCIONES="\n========================================================\n"
+
 
 def obtener_totales_por_provincia(codigo_provincia):
     global procedimiento
@@ -64,7 +63,61 @@ def imprimir_valor_unico(sql, cadena, total):
     filas=gestordb.get_filas(sql)
     porcentaje=int(filas[0][0])/total*100
     print (cadena.format(filas[0][0], porcentaje))
+
+def get_duraciones(sql):
+    #print(sql)
+    filas=gestordb.get_filas(sql)
+    duraciones=[]
+    for fila in filas:
+        dia_inicio=fila[0][0:2]
+        mes_inicio=fila[0][3:5]
+        anio_inicio=fila[0][6:10]
+        
+        dia_fin=fila[1][0:2]
+        mes_fin=fila[1][3:5]
+        anio_fin=fila[1][6:10]
+        #print(dia_inicio, mes_inicio, anio_inicio, dia_fin, mes_fin, anio_fin)
+        fecha_inicio=datetime.date(int(anio_inicio), int(mes_inicio), int(dia_inicio))
+        fecha_fin=datetime.date(int(anio_fin), int(mes_fin), int (dia_fin))
+        duracion=fecha_fin-fecha_inicio
+        duraciones.append(duracion)
+    return duraciones
+
+def get_duracion_mayor(timedeltas):
+    mayor=timedeltas[0]
+    for t in timedeltas:
+        if t>mayor:
+            mayor=t
+    return mayor
+
+def get_duracion_menor(timedeltas):
+    menor=timedeltas[0]
+    for t in timedeltas:
+        if t<menor:
+            menor=t
+    return menor
+
+def formatear_duracion(tdelta):
+    dias=tdelta.days
+    if dias>31:
+        meses=int(dias/30)
+        resto_dias=dias-(meses*30)
+    else:
+        meses=0
+        resto_dias=dias
+    duracion_formateada="{0: >2d} meses y {1: >2d} dias ({2: >3d} dias en total)".format(meses, resto_dias, dias)
+    return duracion_formateada
+
+def get_duracion_media(tdelta):
+    suma=datetime.timedelta(0)
+    for t in tdelta:
+        suma=suma+t
+    dias_media= suma.days/len(tdelta)
+    #print (dias_media)
+    return datetime.timedelta(days=dias_media)
     
+print (procedimiento)
+DIVISION_SECCIONES="\n========================================================\n"    
 gestordb=gestor=GestorDB.GestorDB(GestorDB.ARCHIVO_RESULTADOS)
 
 sql_cantidad_adjudicaciones="select count( distinct procedimiento) from nombramientos where procedimiento like '{0}'".format(procedimiento)
@@ -240,3 +293,20 @@ for fila in filas:
     print ("\t{0} {1} ({2:.2f}% del total)".format(descripcion_fmt, plazas_cantidad, porcentaje))
 print(DIVISION_SECCIONES)
 
+print("Duración de las adjudicaciones")
+sql_duraciones="select fecha_inicio, fecha_fin from nombramientos where procedimiento like '{0}'".format(procedimiento)
+duraciones=get_duraciones(sql_duraciones)
+print(duraciones)
+duracion_mayor=get_duracion_mayor(duraciones)
+duracion_mayor_fmt=formatear_duracion(duracion_mayor)
+print ("\t{0: <20s}: {1}".format("Mayor duración",duracion_mayor_fmt))
+
+duracion_menor=get_duracion_menor(duraciones)
+duracion_menor_fmt=formatear_duracion(duracion_menor)
+print ("\t{0: <20s}: {1}".format("Menor duración",duracion_menor_fmt))
+
+duracion_media=get_duracion_media(duraciones)
+duracion_media_fmt=formatear_duracion(duracion_media)
+print ("\t{0: <20s}: {1}".format("Media de duración",duracion_media_fmt))
+
+print(DIVISION_SECCIONES)
