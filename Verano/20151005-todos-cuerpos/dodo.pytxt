@@ -3,6 +3,17 @@
 
 from subprocess import call
 import platform
+import os, sys
+
+NUM_SUBDIRECTORIOS_ANTERIORES=1
+SEPARADOR=os.sep
+
+RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
+DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
+#aqui = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, DIRECTORIO)
+import GestorDB
+import utilidades
 
 
 CONVERTIR="pdftotext -layout -nopgbrk "
@@ -19,7 +30,7 @@ def aplicar_comando (comando, fichero, *args):
     cmd=comando + fichero
     for a in args:
         cmd+=" " + a
-    print("Convirtiendo "+fichero)
+    print("Ejecutando "+cmd)
     call(cmd, shell=True)
     
     
@@ -29,7 +40,8 @@ ficheros=["0590", "0591", "0594",  "0597"]
 
 
 for f in ficheros:
-    aplicar_comando(CONVERTIR, f+".pdf")
+    if not utilidades.existe_fichero(f+".txt"):
+        aplicar_comando(CONVERTIR, f+".pdf")
     
 for f in ficheros:
     aplicar_comando(PROCESAR, f+".txt", "> "+f+".res")
