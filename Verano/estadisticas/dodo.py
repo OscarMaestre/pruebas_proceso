@@ -108,6 +108,7 @@ lineas=fichero_destinatarios.readlines()
 fichero_destinatarios.close()
 for l in lineas:
     destinatario=l.strip()
+    print("Enviando a:"+destinatario)
     enviar(destinatario, [fichero_global, fichero_del_dia])
 
 utilidades.borrar_fichero(fichero_del_dia)
