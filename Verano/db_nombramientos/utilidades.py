@@ -28,7 +28,7 @@ if platform.system()=="Linux":
 else:
     BORRAR="del "
     COPIAR="copy "
-    CONCAT="cat "
+    CONCAT="type "
     MOVER="move "
     FICHERO_CONFIGURACION_EMAIL="C:\\repos\\configuracion_envio_email.txt"
     FICHERO_DESTINATARIOS_EMAIL="C:\\repos\\destinatarios.txt"
