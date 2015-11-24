@@ -16104,7 +16104,8 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_28082015_16()
+Public Function fun_28082015_16
+()
 	fun_28082015_1
 	fun_28082015_2
 	fun_28082015_3
@@ -16120,6 +16121,7 @@ Public Function fun_28082015_16()
 	fun_28082015_13
 	fun_28082015_14
 End Function
+
 Public Function fun_08092015_1()
 
 On Error Resume Next
@@ -18775,11 +18777,13 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_08092015_5()
+Public Function fun_08092015_5
+()
 	fun_08092015_1
 	fun_08092015_2
 	fun_08092015_3
 End Function
+
 Public Function fun_18092015_1()
 
 On Error Resume Next
@@ -21955,11 +21959,13 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_18092015_5()
+Public Function fun_18092015_5
+()
 	fun_18092015_1
 	fun_18092015_2
 	fun_18092015_3
 End Function
+
 Public Function fun_02102015_1()
 
 On Error Resume Next
@@ -22173,9 +22179,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_02102015_3()
+Public Function fun_02102015_3
+()
 	fun_02102015_1
 End Function
+
 Public Function fun_05102015_1()
 
 On Error Resume Next
@@ -22505,9 +22513,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_05102015_3()
+Public Function fun_05102015_3
+()
 	fun_05102015_1
 End Function
+
 Public Function fun_07102015_1()
 
 On Error Resume Next
@@ -22849,9 +22859,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_07102015_3()
+Public Function fun_07102015_3
+()
 	fun_07102015_1
 End Function
+
 Public Function fun_08102015_1()
 
 On Error Resume Next
@@ -22881,9 +22893,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_08102015_3()
+Public Function fun_08102015_3
+()
 	fun_08102015_1
 End Function
+
 Public Function fun_13102015_1()
 
 On Error Resume Next
@@ -23249,9 +23263,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_13102015_3()
+Public Function fun_13102015_3
+()
 	fun_13102015_1
 End Function
+
 Public Function fun_19102015_1()
 
 On Error Resume Next
@@ -23493,9 +23509,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_19102015_3()
+Public Function fun_19102015_3
+()
 	fun_19102015_1
 End Function
+
 Public Function fun_26102015_1()
 
 On Error Resume Next
@@ -23725,9 +23743,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_26102015_3()
+Public Function fun_26102015_3
+()
 	fun_26102015_1
 End Function
+
 Public Function fun_28102015_1()
 
 On Error Resume Next
@@ -23865,9 +23885,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_28102015_3()
+Public Function fun_28102015_3
+()
 	fun_28102015_1
 End Function
+
 Public Function fun_02112015_1()
 
 On Error Resume Next
@@ -24085,9 +24107,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_02112015_3()
+Public Function fun_02112015_3
+()
 	fun_02112015_1
 End Function
+
 Public Function fun_04112015_1()
 
 On Error Resume Next
@@ -24269,9 +24293,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_04112015_3()
+Public Function fun_04112015_3
+()
 	fun_04112015_1
 End Function
+
 Public Function fun_09112015_1()
 
 On Error Resume Next
@@ -24361,9 +24387,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_09112015_3()
+Public Function fun_09112015_3
+()
 	fun_09112015_1
 End Function
+
 Public Function fun_11112015_1()
 
 On Error Resume Next
@@ -24533,9 +24561,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_11112015_3()
+Public Function fun_11112015_3
+()
 	fun_11112015_1
 End Function
+
 Public Function fun_16112015_1()
 
 On Error Resume Next
@@ -24781,9 +24811,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_16112015_3()
+Public Function fun_16112015_3
+()
 	fun_16112015_1
 End Function
+
 Public Function fun_18112015_1()
 
 On Error Resume Next
@@ -24921,9 +24953,11 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_18112015_3()
+Public Function fun_18112015_3
+()
 	fun_18112015_1
 End Function
+
 Public Function fun_23112015_1()
 
 On Error Resume Next
@@ -25177,11 +25211,12 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_23112015_3()
+Public Function fun_23112015_3
+()
 	fun_23112015_1
 End Function
-Public Function EjecutarGlobal()
 
+Public Function EjecutarGlobal()
 fun_28082015_16
 fun_08092015_5
 fun_18092015_5

@@ -3,6 +3,19 @@
 
 from subprocess import call
 import platform
+import os, sys
+
+
+NUM_SUBDIRECTORIOS_ANTERIORES=1
+SEPARADOR=os.sep
+
+RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
+DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
+
+#aqui = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, DIRECTORIO)
+import GestorDB
+import utilidades
 
 MODULO_GLOBAL="modulo.bas"
 MODULO_LLAMADAS_PARCIALES="llamadas_generales"
@@ -24,19 +37,11 @@ if (platform.system()=="Windows"):
 	EXTRACTOR="extractor.py "
 
 
-def aplicar_comando (comando, fichero, *args):
-	cmd=comando + fichero
-	for a in args:
-		cmd+=" " + a
-	print("Ejecutando "+cmd)
-	call(cmd, shell=True)
-	
-	
+utilidades.borrar_fichero(MODULO_LLAMADAS_PARCIALES)
+utilidades.borrar_fichero(MODULO_GLOBAL)
 
 
 
-aplicar_comando(BORRAR, MODULO_LLAMADAS_PARCIALES)
-aplicar_comando(BORRAR, MODULO_GLOBAL)
 
 i=0
 for f in adjudicaciones:
@@ -44,13 +49,15 @@ for f in adjudicaciones:
     sufijo="{:0>3d}".format(i)
     nombre_macro="macros_"+sufijo+"_"+f
     if (platform.system()=="Linux"):
-        aplicar_comando("python3 ", EXTRACTOR, f, " > "+nombre_macro)
+        utilidades.aplicar_comando(EXTRACTOR, f, " > "+nombre_macro)
     if (platform.system()=="Windows"):
-        aplicar_comando(EXTRACTOR, f, " > "+ nombre_macro)
-    aplicar_comando("cat ", nombre_macro+" >> " + MODULO_GLOBAL)
+        utilidades.aplicar_comando(EXTRACTOR, f, " > "+ nombre_macro)
+    utilidades.concatenar_fichero(nombre_macro, MODULO_GLOBAL)
+    
 
-inicio="Public Function EjecutarGlobal()\n"  
-aplicar_comando("echo ", "\""+inicio+"\"" + ">>" + MODULO_GLOBAL)
-aplicar_comando("cat ", MODULO_LLAMADAS_PARCIALES+" >> " + MODULO_GLOBAL)
-fin="End Function"	
-aplicar_comando("echo ", "\""+fin+"\"" + ">>" + MODULO_GLOBAL)
+inicio="Public Function EjecutarGlobal()\n"
+utilidades.anadir_a_fichero(inicio, MODULO_GLOBAL)
+
+utilidades.concatenar_fichero(MODULO_LLAMADAS_PARCIALES, MODULO_GLOBAL)
+fin="End Function\n"
+utilidades.anadir_a_fichero(fin, MODULO_GLOBAL)

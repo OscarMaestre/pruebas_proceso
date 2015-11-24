@@ -179,6 +179,8 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_04112015_3()
+Public Function fun_04112015_3
+()
 	fun_04112015_1
 End Function
+

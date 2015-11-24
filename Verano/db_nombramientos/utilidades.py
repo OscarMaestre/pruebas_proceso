@@ -86,7 +86,7 @@ def borrar_fichero(nombre_fichero):
     aplicar_comando(BORRAR, nombre_fichero)
     
 def concatenar_fichero(fichero1, fichero2):
-    aplicar_comando(CONCAT, fichero1, " > ", fichero2)
+    aplicar_comando(CONCAT, fichero1, " >> ", fichero2)
     
 def obtener_ficheros(patron):
     return glob.glob(patron)
