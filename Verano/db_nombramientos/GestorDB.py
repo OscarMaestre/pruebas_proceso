@@ -40,7 +40,7 @@ create table if not exists especialidades(
 if (platform.system()=="Linux"):
     ARCHIVO_RESULTADOS="/home/usuario/repos/varios/pruebas_proceso/nombramientos.db"
 if (platform.system()=="Windows"):
-    ARCHIVO_RESULTADOS="C:\\nombramientos.db"
+    ARCHIVO_RESULTADOS="C:\\repos\\pruebas_proceso\\nombramientos.db"
 
 
 
