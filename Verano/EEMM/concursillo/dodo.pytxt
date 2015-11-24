@@ -40,13 +40,13 @@ for f in ficheros:
 for f in ficheros:
     utilidades.aplicar_comando(PROCESAR, f+".txt", "> "+f+".res")
     
-utilidades.aplicar_comando("rm ", FICH_RESULTADO)
+utilidades.borrar_fichero(FICH_RESULTADO)
 
 for f in ficheros:
-    utilidades.aplicar_comando(CONCAT, f+".res", ">> " + FICH_RESULTADO)
+    utilidades.concatenar_fichero(f+".res",  FICH_RESULTADO)
 
 
-utilidades.aplicar_comando("cp ", PROCESAR, " procesar_tabla.pytxt")
-utilidades.aplicar_comando("cp ", "dodo.py", " dodo.pytxt")
+utilidades.copiar_fichero(PROCESAR, " procesar_tabla.pytxt")
+utilidades.copiar_fichero("dodo.py", " dodo.pytxt")
     
     

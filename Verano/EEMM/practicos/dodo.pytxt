@@ -43,7 +43,7 @@ for f in ficheros:
 utilidades.borrar_fichero(FICH_RESULTADO)
 
 for f in ficheros:
-    utilidades.aplicar_comando(CONCAT, f+".res", ">> " + FICH_RESULTADO)
+    utilidades.concatenar_fichero( f+".res",  FICH_RESULTADO)
 
 
 utilidades.copiar_fichero(PROCESAR, PROCESAR+"txt")

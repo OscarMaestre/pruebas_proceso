@@ -98,7 +98,7 @@ def generar_linea_dos_puntos(lista_campos):
     valores=":".join(lista_campos)
     return valores
 
-archivo=open(archivo,"r")
+archivo=open(archivo,"r", encoding="utf-8")
 lineas=archivo.readlines()
 total_lineas=len(lineas)
 codigo_especialidad=""

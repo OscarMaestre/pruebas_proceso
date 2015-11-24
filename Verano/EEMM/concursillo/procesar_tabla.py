@@ -142,7 +142,7 @@ def generar_linea_sql2(lista_campos):
 
 
 
-archivo=open(archivo,"r")
+archivo=open(archivo,"r", encoding="utf-8")
 lineas=archivo.readlines()
 total_lineas=len(lineas)
 codigo_especialidad=""

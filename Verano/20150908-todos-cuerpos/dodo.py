@@ -42,17 +42,17 @@ ficheros=["597" ]
 
 for f in ficheros:
     if not utilidades.existe_fichero(f+".txt"):
-        aplicar_comando(CONVERTIR, f+".pdf")
+        utilidades.aplicar_comando(CONVERTIR, f+".pdf")
     
 for f in ficheros:
-    aplicar_comando(PROCESAR, f+".txt", "> "+f+".res")
+    utilidades.aplicar_comando(PROCESAR, f+".txt", "> "+f+".res")
     
-aplicar_comando(BORRAR, FICH_RESULTADO)
+utilidades.borrar_fichero(FICH_RESULTADO)
 
 for f in ficheros:
-    aplicar_comando(CONCAT, f+".res", ">> " + FICH_RESULTADO)
+    utilidades.concatenar_fichero(f+".res",  FICH_RESULTADO)
 
 
-aplicar_comando("cp ", PROCESAR, " procesar_tabla.pytxt")
+utilidades.copiar_fichero(PROCESAR, " procesar_tabla.pytxt")
     
     

@@ -108,7 +108,7 @@ def obtener_fecha_adjudicacion(linea):
     anio=trozos[2]
     fecha="-".join([dia, mes, anio])
     return fecha
-archivo=open(archivo,"r")
+archivo=open(archivo,"r", encoding="utf-8")
 lineas=archivo.readlines()
 total_lineas=len(lineas)
 codigo_especialidad=""

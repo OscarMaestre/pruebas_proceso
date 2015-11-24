@@ -110,9 +110,5 @@ for l in lineas:
     destinatario=l.strip()
     enviar(destinatario, [fichero_global, fichero_del_dia])
 
-if platform.system()=="Linux":
-    utilidades.aplicar_comando("rm  ", fichero_global)
-    utilidades.aplicar_comando("rm  ", fichero_del_dia)
-else:
-    utilidades.aplicar_comando("del  ", fichero)
-    utilidades.aplicar_comando("rm  ", fichero_del_dia)
+utilidades.borrar_fichero(fichero_del_dia)
+utilidades.borrar_fichero(fichero_global)
