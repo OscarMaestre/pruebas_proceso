@@ -92,8 +92,8 @@ def enviar(recipient, ficheros):
 
 
 
-fichero_global="Estadisticas_hasta_"+la_fecha
-fichero_del_dia="Estadisticas_de_la_adjudicacion_de_"+la_fecha
+fichero_global="Estadisticas_hasta_"+la_fecha+".txt"
+fichero_del_dia="Estadisticas_de_la_ultima_adjudicacion"+".txt"
 if platform.system()=="Linux":
     utilidades.aplicar_comando("./generar_estadisticas.py ", " > "+fichero_global)
     ultima_fecha=utilidades.leer_linea_fichero(0, "ultima_fecha.txt")
