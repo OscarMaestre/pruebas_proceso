@@ -14,6 +14,9 @@ import os
 re_dni="[0-9]{7,8}[A-Z]"
 expr_regular_dni=re.compile(re_dni)
 
+re_decimales_baremo="[0-9]{1,3}\,[0-9]{4}"
+expr_regular_decimales=re.compile(re_decimales_baremo)
+
 BORRAR=""
 COPIAR=""
 CONCAT=""
@@ -36,6 +39,11 @@ else:
 
 DNI_NO_ENCONTRADO=-1
 DNI_NO_CONCORDANTE="DNI no concordante"
+
+DECIMAL_NO_ENCONTRADO=-2
+DECIMAL_NO_CONCORDANTE="Decimal no concordante"
+
+
 #La configuración del remitente debe estar en un fichero
 #La primera línea es la dirección del servidor de correo como por ejemplo pepito@gmail.com
 #La segunda contiene la clave
@@ -108,6 +116,20 @@ def extraer_dni(linea):
         return (inicio, final, dni)
     return (DNI_NO_ENCONTRADO, DNI_NO_ENCONTRADO, DNI_NO_CONCORDANTE)
 
+def extraer_decimal(linea):
+    concordancia=expr_regular_decimales.search(linea)
+    if concordancia:
+        inicio=concordancia.start()
+        final=concordancia.end()
+        num_decimal=concordancia.string[inicio:final]
+        return (inicio, final, num_decimal)
+    return (DECIMAL_NO_ENCONTRADO, DECIMAL_NO_ENCONTRADO, DECIMAL_NO_CONCORDANTE)
+
+def extraer_todos_decimales(linea):
+    concordancia=expr_regular_decimales.search(linea)
+    if concordancia:
+        return expr_regular_decimales.findall(linea)
+    return (DECIMAL_NO_ENCONTRADO, DECIMAL_NO_ENCONTRADO, DECIMAL_NO_CONCORDANTE)
 def existe_fichero(nombre_fichero):
     if os.path.isfile(nombre_fichero):
         return True
