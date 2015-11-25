@@ -136,7 +136,11 @@ def existe_fichero(nombre_fichero):
     return False
 
 def reemplazar_espacios(nombre):
-    return nombre.replace(" ", "_")
+    temp=nombre.replace(" ", "_")
+    temp=temp.replace("(", "_")
+    temp=temp.replace(")", "_")
+    #print ("Nombre viejo {0}, nombre nuevo {1}".format(nombre, temp))
+    return temp
 
 def renombrar_fichero(nombre_viejo, nombre_nuevo):
     aplicar_comando(MOVER, nombre_viejo, nombre_nuevo)
