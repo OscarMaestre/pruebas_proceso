@@ -17,6 +17,8 @@ expr_regular_dni=re.compile(re_dni)
 re_decimales_baremo="[0-9]{1,3}\,[0-9]{4}"
 expr_regular_decimales=re.compile(re_decimales_baremo)
 
+
+
 BORRAR=""
 COPIAR=""
 CONCAT=""
@@ -143,5 +145,8 @@ def reemplazar_espacios(nombre):
     return temp
 
 def renombrar_fichero(nombre_viejo, nombre_nuevo):
+    if nombre_nuevo==nombre_viejo:
+        #print("No hace falta renombrar:"+nombre_viejo)
+        return 
     aplicar_comando(MOVER, nombre_viejo, nombre_nuevo)
     

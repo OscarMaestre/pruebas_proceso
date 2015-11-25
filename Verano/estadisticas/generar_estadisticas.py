@@ -116,7 +116,6 @@ def get_duracion_media(tdelta):
     #print (dias_media)
     return datetime.timedelta(days=dias_media)
     
-print (procedimiento)
 DIVISION_SECCIONES="\n========================================================\n"    
 gestordb=gestor=GestorDB.GestorDB(GestorDB.ARCHIVO_RESULTADOS)
 

@@ -33,14 +33,13 @@ ficheros_pdf=glob.glob("*.pdf")
 
 for f in ficheros_pdf:
     nuevo_nombre=utilidades.reemplazar_espacios(f)
-    nombre_con_espacios=utilidades.escapar_fichero_con_espacios(f)
-    utilidades.renombrar_fichero(nombre_con_espacios, nuevo_nombre)
+    utilidades.renombrar_fichero(f, nuevo_nombre)
 
 ficheros_pdf=glob.glob("*.pdf")
 for f in ficheros_pdf:
     nombre_con_txt=f[:-4]+".txt"
     if not utilidades.existe_fichero(nombre_con_txt):
-        print ("No existe:"+nombre_con_txt)    
+        #print ("No existe:"+nombre_con_txt)    
         utilidades.aplicar_comando(CONVERTIR, f)
     
     

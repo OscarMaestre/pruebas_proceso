@@ -108,6 +108,23 @@ def obtener_fecha_adjudicacion(linea):
     anio=trozos[2]
     fecha="-".join([dia, mes, anio])
     return fecha
+
+def es_jornada_completa(linea):
+    if linea.find("JORNADA COMPLETA")!=-1:
+        return True
+    if linea.find("DE JORNADA")!=-1:
+        return False
+    return "TIPO DE JORNADA DESCONOCIDA"
+    
+def corregir_codigo_especialidad(codigo_especialidad, linea):
+    if not es_jornada_completa(linea):
+        nuevo_codigo="P"+codigo_especialidad[1:]
+        return nuevo_codigo
+    if es_jornada_completa(linea):
+        nuevo_codigo="0"+codigo_especialidad[1:]
+        return nuevo_codigo
+    
+    
 archivo=open(archivo,"r", encoding="utf-8")
 lineas=archivo.readlines()
 total_lineas=len(lineas)
@@ -131,6 +148,9 @@ for i in range(0, total_lineas):
         dni=extraer_patron(re_dni, linea)
         
         nombre_centro=linea_posterior[0:26].strip()
+        
+        #Si es a media jornada un 0590004 se convierte en un P590004
+        codigo_especialidad=corregir_codigo_especialidad(codigo_especialidad, linea_posterior)
         pos_dni=get_pos_comienzo_dni(linea, dni)
         fin_dni=pos_dni+10
         nombre_persona=linea[fin_dni:fin_dni+40].strip()
