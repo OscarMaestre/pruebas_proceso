@@ -17,7 +17,15 @@ expr_regular_dni=re.compile(re_dni)
 re_decimales_baremo="[0-9]{1,3}\,[0-9]{4}"
 expr_regular_decimales=re.compile(re_decimales_baremo)
 
+re_nota_oposicion="([0-9]{1,2}\.[0-9]{1,4})"
+expr_regular_nota_oposicion=re.compile(re_nota_oposicion)
 
+re_anio="(19|20)([0-9]{2})"
+#re_anio=" [0-9]{4} "
+expr_regular_anio=re.compile(re_anio)
+
+re_lista_especialidades_maestros="( [0-9]{3})+"
+expr_regular_lista_especialidades=re.compile(re_lista_especialidades_maestros)
 
 BORRAR=""
 COPIAR=""
@@ -45,6 +53,8 @@ DNI_NO_CONCORDANTE="DNI no concordante"
 DECIMAL_NO_ENCONTRADO=-2
 DECIMAL_NO_CONCORDANTE="Decimal no concordante"
 
+INICIO_NO_ENCONTRADO="-3"
+PATRON_NO_ENCONTRADO="PATRON NO ENCONTRADO"
 
 #La configuración del remitente debe estar en un fichero
 #La primera línea es la dirección del servidor de correo como por ejemplo pepito@gmail.com
@@ -108,24 +118,20 @@ def get_lineas_fichero(nombre_fichero):
         f.close()
     return lineas
 
+def extraer_patron(exp_regular_compilada, linea):
+    concordancia=exp_regular_compilada.search(linea)
+    if concordancia:
+        inicio=concordancia.start()
+        final=concordancia.end()
+        patron=concordancia.string[inicio:final]
+        return (inicio, final, patron)
+    return (INICIO_NO_ENCONTRADO, INICIO_NO_ENCONTRADO, PATRON_NO_ENCONTRADO)
 
 def extraer_dni(linea):
-    concordancia=expr_regular_dni.search(linea)
-    if concordancia:
-        inicio=concordancia.start()
-        final=concordancia.end()
-        dni=concordancia.string[inicio:final]
-        return (inicio, final, dni)
-    return (DNI_NO_ENCONTRADO, DNI_NO_ENCONTRADO, DNI_NO_CONCORDANTE)
+    return extraer_patron(expr_regular_dni, linea)
 
 def extraer_decimal(linea):
-    concordancia=expr_regular_decimales.search(linea)
-    if concordancia:
-        inicio=concordancia.start()
-        final=concordancia.end()
-        num_decimal=concordancia.string[inicio:final]
-        return (inicio, final, num_decimal)
-    return (DECIMAL_NO_ENCONTRADO, DECIMAL_NO_ENCONTRADO, DECIMAL_NO_CONCORDANTE)
+    return extraer_patron(expr_regular_decimales, linea)
 
 def extraer_todos_decimales(linea):
     concordancia=expr_regular_decimales.search(linea)
