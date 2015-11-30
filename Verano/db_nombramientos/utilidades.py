@@ -156,3 +156,12 @@ def renombrar_fichero(nombre_viejo, nombre_nuevo):
         return 
     aplicar_comando(MOVER, nombre_viejo, nombre_nuevo)
     
+def convertir_decimal_baremo_a_float(str_decimal):
+    str_con_punto=str_decimal.replace(",", ".")
+    return float(str_con_punto)
+
+
+def floats_iguales(num1, num2, delta=0.0001):
+    if abs(num1-num2)<delta:
+        return True
+    return False
