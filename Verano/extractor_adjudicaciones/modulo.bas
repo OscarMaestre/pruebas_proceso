@@ -25358,6 +25358,92 @@ Public Function fun_25112015_3
 	fun_25112015_1
 End Function
 
+Public Function fun_30112015_1()
+
+On Error Resume Next
+
+  Dim ws As Workspace
+  Dim db As Database
+  Dim strSQL As String
+
+  Set ws = DBEngine.Workspaces(0)
+  Set db = ws.Databases(0)
+
+On Error GoTo Proc_Err
+  'Todas las actualizaciones se meten en una transaccion
+  ws.BeginTrans
+	sql="update gaseosa set codcentrocursoactual='13003786' where dni='04624005Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 31/01/2016 (Adjudicacion 30-11-2015)' where dni='04624005Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003529' where dni='77358448H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 31/12/2015 (Adjudicacion 30-11-2015)' where dni='77358448H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003608' where dni='74502847M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 24/01/2016 (Adjudicacion 30-11-2015)' where dni='74502847M'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003440' where dni='71225337H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 26/02/2016 (Adjudicacion 30-11-2015)' where dni='71225337H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19002822' where dni='04220906S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 24/06/2016 (Adjudicacion 30-11-2015)' where dni='04220906S'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='45004107' where dni='05676126W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 22/12/2015 (Adjudicacion 30-11-2015)' where dni='05676126W'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='16003281' where dni='44255021P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 31/03/2016 (Adjudicacion 30-11-2015)' where dni='44255021P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003129' where dni='70573724H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 20/01/2016 (Adjudicacion 30-11-2015)' where dni='70573724H'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='19003929' where dni='74718690Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 31/12/2015 (Adjudicacion 30-11-2015)' where dni='74718690Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13001005' where dni='05917050R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 31/12/2015 (Adjudicacion 30-11-2015)' where dni='05917050R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13003737' where dni='76968427P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 31/12/2015 (Adjudicacion 30-11-2015)' where dni='76968427P'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02004434' where dni='47054321R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 17/12/2015 (Adjudicacion 30-11-2015)' where dni='47054321R'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='02003508' where dni='09300785E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 01/12/2015 hasta 30/12/2015 (Adjudicacion 30-11-2015)' where dni='09300785E'"
+	db.Execute sql, dbFailOnError
+
+		 'se hace el commit
+  ws.CommitTrans
+
+Proc_Exit:
+  Set ws = Nothing
+  Set db = Nothing
+  Exit Function
+
+Proc_Err:
+  ws.Rollback
+  MsgBox "Error actualizando: " & Err.Description
+  Resume Proc_Exit
+End Function
+	
+Public Function fun_30112015_3
+()
+	fun_30112015_1
+End Function
+
 Public Function EjecutarGlobal()
 fun_28082015_16
 fun_08092015_5
@@ -25378,4 +25464,5 @@ fun_16112015_3
 fun_18112015_3
 fun_23112015_3
 fun_25112015_3
+fun_30112015_3
 End Function
