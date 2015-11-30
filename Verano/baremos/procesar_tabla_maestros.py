@@ -14,18 +14,41 @@ DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
 import utilidades
+import ListaCampos
 
 import re
 
+NOMBRE_TABLA_ESPECIALIDADES="especialidades"
+NOMBRE_TABLA_PARTICIPANTES="participantes"
+SQL_CREACION_PARTICIPANTES="""
+create table if not exists {0} (
+    nif character(12) primary key,
+    nombre_completo character(160),
+    especialidad char(10),
+    foreign key (especialidad) references {1}(especialidad)
+)
+"""
+
+
+def get_sql_lista_especialidades(str_especialidades):
+    especialidades=str_especialidades.strip()
+    lista=especialidades.split(' ')
+    return lista
+        
 
 re_codigo_centro="[0-9]{8}"
 expr_regular_codigo_centro=re.compile(re_codigo_centro)
 
+gestor_db=GestorDB.GestorDB("baremo_2014_2015.db")
+gestor_db.crear_tabla_todas_especialidades(NOMBRE_TABLA_ESPECIALIDADES)
+gestor_db.ejecutar_sentencias([SQL_CREACION_PARTICIPANTES.format(NOMBRE_TABLA_PARTICIPANTES, NOMBRE_TABLA_ESPECIALIDADES)])
 lineas_fichero=utilidades.get_lineas_fichero(sys.argv[1])
 
+sql_participantes=[]
 total_lineas=len(lineas_fichero)
 for i in range(0, total_lineas):
     l=lineas_fichero[i]
+    
     (inicio_dni, final_dni, dni)=utilidades.extraer_dni(l)
     if dni!=utilidades.PATRON_NO_ENCONTRADO:
         nombre=l[0:inicio_dni-1].strip()
@@ -38,12 +61,23 @@ for i in range(0, total_lineas):
         if nota_oposicion==utilidades.PATRON_NO_ENCONTRADO:
             nota_oposicion="NO TIENE NOTA"
             inicio_nota=125
-            
+        
         (inicio_anio_oposicion, fin_anio_oposicion, anio_oposicion)=utilidades.extraer_patron(
             utilidades.expr_regular_anio, l[final_dni:122])
         (inicio_especialidades, fin_especialidades, especialidades)=utilidades.extraer_patron(
             utilidades.expr_regular_lista_especialidades, l[57:102]
         )
+        if especialidades==utilidades.PATRON_NO_ENCONTRADO:
+            lista_especialidades=get_sql_lista_especialidades(utilidades.ESPECIALIDAD_DESCONOCIDA)
+        else:
+            lista_especialidades=get_sql_lista_especialidades(especialidades)
+        for especialidad in lista_especialidades:
+            lista_campos_participantes=ListaCampos.ListaCampos()
+            lista_campos_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
+            lista_campos_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
+            lista_campos_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
+            sql_participantes.append(lista_campos_participantes.generar_insert("participantes"))
+        
         parte1=lineas_fichero[i+1]
         decimales_parte1=utilidades.extraer_todos_decimales(parte1)
         
@@ -120,3 +154,5 @@ for i in range(0, total_lineas):
         #print(":".join(decimales_parte2))
         #print(":".join(decimales_parte3))
 
+gestor_db.activar_depuracion()
+gestor_db.ejecutar_sentencias(sql_participantes)

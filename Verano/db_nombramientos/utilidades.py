@@ -56,6 +56,8 @@ DECIMAL_NO_CONCORDANTE="Decimal no concordante"
 INICIO_NO_ENCONTRADO="-3"
 PATRON_NO_ENCONTRADO="PATRON NO ENCONTRADO"
 
+
+ESPECIALIDAD_DESCONOCIDA="777"
 #La configuración del remitente debe estar en un fichero
 #La primera línea es la dirección del servidor de correo como por ejemplo pepito@gmail.com
 #La segunda contiene la clave
@@ -154,7 +156,7 @@ def renombrar_fichero(nombre_viejo, nombre_nuevo):
     if nombre_nuevo==nombre_viejo:
         #print("No hace falta renombrar:"+nombre_viejo)
         return 
-    aplicar_comando(MOVER, nombre_viejo, nombre_nuevo)
+    aplicar_comando(MOVER, "\""+nombre_viejo+"\"", nombre_nuevo)
     
 def convertir_decimal_baremo_a_float(str_decimal):
     str_con_punto=str_decimal.replace(",", ".")
