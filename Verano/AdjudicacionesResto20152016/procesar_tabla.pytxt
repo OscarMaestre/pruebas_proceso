@@ -117,12 +117,27 @@ def es_jornada_completa(linea):
     return "TIPO DE JORNADA DESCONOCIDA"
     
 def corregir_codigo_especialidad(codigo_especialidad, linea):
-    if not es_jornada_completa(linea):
-        nuevo_codigo="P"+codigo_especialidad[1:]
-        return nuevo_codigo
-    if es_jornada_completa(linea):
-        nuevo_codigo="0"+codigo_especialidad[1:]
-        return nuevo_codigo
+    if linea.find("INGLÉS")!=-1:
+        if not es_jornada_completa(linea):
+            nuevo_codigo="W"+codigo_especialidad[1:]
+            return nuevo_codigo
+        if es_jornada_completa(linea):
+            nuevo_codigo="B"+codigo_especialidad[1:]
+            return nuevo_codigo
+    if linea.find("FRANCÉS")!=-1:
+        if not es_jornada_completa(linea):
+            nuevo_codigo="R"+codigo_especialidad[1:]
+            return nuevo_codigo
+        if es_jornada_completa(linea):
+            nuevo_codigo="F"+codigo_especialidad[1:]
+            return nuevo_codigo
+    else:
+        if not es_jornada_completa(linea):
+            nuevo_codigo="P"+codigo_especialidad[1:]
+            return nuevo_codigo
+        if es_jornada_completa(linea):
+            nuevo_codigo="0"+codigo_especialidad[1:]
+            return nuevo_codigo
     
     
 archivo=open(archivo,"r", encoding="utf-8")
