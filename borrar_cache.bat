@@ -1,0 +1,1 @@
+del Verano\db_nombramientos\__pycache__\*.*

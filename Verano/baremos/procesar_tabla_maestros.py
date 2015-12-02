@@ -31,7 +31,15 @@ create table if not exists {0} (
 )
 """
 
+NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES="especialidades_participantes"
 
+SQL_CREACION_ESPECIALIDADES_PARTICIPANTES="""
+create table if not exists {0} (
+    nif character(12),
+    especialidad char(10),
+    primary key (nif, especialidad)
+)
+"""
 SQL_CREACION_ERRORES="""
 create table if not exists {0} (
     nif character(12),
@@ -56,6 +64,14 @@ gestor_db.crear_tabla_todas_especialidades(NOMBRE_TABLA_ESPECIALIDADES)
 gestor_db.ejecutar_sentencias([SQL_CREACION_PARTICIPANTES.format(NOMBRE_TABLA_PARTICIPANTES, NOMBRE_TABLA_ESPECIALIDADES)])
 gestor_db.ejecutar_sentencias(
     [SQL_CREACION_ERRORES.format(NOMBRE_TABLA_ERRORES, NOMBRE_TABLA_PARTICIPANTES)]
+)
+
+gestor_db.ejecutar_sentencias(
+    []
+)
+
+gestor_db.ejecutar_sentencias(
+    [SQL_]
 )
 
 lineas_fichero=utilidades.get_lineas_fichero(sys.argv[1])
