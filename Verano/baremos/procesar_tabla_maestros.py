@@ -20,12 +20,24 @@ import re
 
 NOMBRE_TABLA_ESPECIALIDADES="especialidades"
 NOMBRE_TABLA_PARTICIPANTES="participantes"
+NOMBRE_TABLA_ERRORES="errores"
 SQL_CREACION_PARTICIPANTES="""
 create table if not exists {0} (
-    nif character(12) primary key,
+    nif character(12) ,
     nombre_completo character(160),
     especialidad char(10),
+    primary key (nif, especialidad),
     foreign key (especialidad) references {1}(especialidad)
+)
+"""
+
+
+SQL_CREACION_ERRORES="""
+create table if not exists {0} (
+    nif character(12),
+    apartado char(10),
+    descripcion char(512),
+    foreign key (nif) references {1}(nif)
 )
 """
 
@@ -42,6 +54,10 @@ expr_regular_codigo_centro=re.compile(re_codigo_centro)
 gestor_db=GestorDB.GestorDB("baremo_2014_2015.db")
 gestor_db.crear_tabla_todas_especialidades(NOMBRE_TABLA_ESPECIALIDADES)
 gestor_db.ejecutar_sentencias([SQL_CREACION_PARTICIPANTES.format(NOMBRE_TABLA_PARTICIPANTES, NOMBRE_TABLA_ESPECIALIDADES)])
+gestor_db.ejecutar_sentencias(
+    [SQL_CREACION_ERRORES.format(NOMBRE_TABLA_ERRORES, NOMBRE_TABLA_PARTICIPANTES)]
+)
+
 lineas_fichero=utilidades.get_lineas_fichero(sys.argv[1])
 
 sql_participantes=[]
