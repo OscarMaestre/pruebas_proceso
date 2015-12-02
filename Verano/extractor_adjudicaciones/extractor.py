@@ -89,7 +89,7 @@ imprimir = GestorDB.get_procedimiento(nombre_funcion, sql_intermedio)
 print (imprimir)
 num_funcion = num_funcion + 1
 nombre_funcion = prefijo_funcion + str(num_funcion + 1)+"\r\n"
-llamadas = 'Public Function ' + nombre_funcion + '()\r\n'
+llamadas = 'Public Function ' + nombre_funcion.strip() + '()\r\n'
 for num in range(1, num_funcion):
     llamadas += '\t' + prefijo_funcion + str(num) + '\r\n'
 llamadas += 'End Function\r\n'
