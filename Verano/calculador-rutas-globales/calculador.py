@@ -100,5 +100,6 @@ for orgn in pueblos:
         destino=corregir_articulo(dest)
         if (origen==destino):
             continue
+        print(origen, destino)
         calcular_distancia_entre_localidades(origen, destino, gestor_db)
     
