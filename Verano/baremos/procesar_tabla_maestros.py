@@ -1,4 +1,4 @@
-#!/usr/bin/python3 -O
+#!/usr/bin/python3
 
 import os, sys
 
@@ -24,10 +24,10 @@ NOMBRE_TABLA_ERRORES="errores"
 SQL_CREACION_PARTICIPANTES="""
 create table if not exists {0} (
     nif character(12) ,
-    nombre_completo character(160),
     especialidad char(10),
-    primary key (nif, especialidad),
-    foreign key (especialidad) references {1}(especialidad)
+    anio char(4),
+    nombre_completo character(160),
+    primary key (nif, especialidad, anio)
 )
 """
 
@@ -36,6 +36,7 @@ NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES="especialidades_participantes"
 SQL_CREACION_ESPECIALIDADES_PARTICIPANTES="""
 create table if not exists {0} (
     nif character(12),
+    anio char(4), 
     especialidad char(10),
     primary key (nif, especialidad)
 )
@@ -43,11 +44,14 @@ create table if not exists {0} (
 SQL_CREACION_ERRORES="""
 create table if not exists {0} (
     nif character(12),
+    anio_baremo char(4),
     apartado char(10),
     descripcion char(512),
     foreign key (nif) references {1}(nif)
 )
 """
+
+ANO_PUBLICACION_BAREMO=sys.argv[2]
 
 
 def get_sql_lista_especialidades(str_especialidades):
@@ -67,16 +71,27 @@ gestor_db.ejecutar_sentencias(
 )
 
 gestor_db.ejecutar_sentencias(
-    []
+    [SQL_CREACION_ESPECIALIDADES_PARTICIPANTES.format(NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES)]
 )
 
-gestor_db.ejecutar_sentencias(
-    [SQL_]
-)
+def comprobar_error_suma(nif, total_a_sumar, lista_valores, apartado_equivocado, descripcion_error):
+    sql=""
+    lista_campos_error=ListaCampos.ListaCampos()
+    total=0
+    for v in lista_valores:
+        total+=v
+    if total!=total_a_sumar:
+        lista_campos_error.anadir("nif", nif)
+        lista_campos_error.anadir("anio_baremo", ANO_PUBLICACION_BAREMO)
+        lista_campos_error.anadir("apartado", apartado_equivocado)
+        lista_campos_error.anadir("descripcion", descripcion_error)
+        sql=lista_campos_error.generar_insert("errores");
+    return sql
 
 lineas_fichero=utilidades.get_lineas_fichero(sys.argv[1])
 
 sql_participantes=[]
+sql_errores=[]
 total_lineas=len(lineas_fichero)
 for i in range(0, total_lineas):
     l=lineas_fichero[i]
@@ -107,6 +122,7 @@ for i in range(0, total_lineas):
             lista_campos_participantes=ListaCampos.ListaCampos()
             lista_campos_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
             lista_campos_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
+            lista_campos_participantes.anadir("anio", ANO_PUBLICACION_BAREMO)
             lista_campos_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
             sql_participantes.append(lista_campos_participantes.generar_insert("participantes"))
         
@@ -138,8 +154,11 @@ for i in range(0, total_lineas):
         
         sumaap11=ap113+ap112+ap111
         #print(ap113, ap112, ap111, ap11, sumaap11)
-        assert utilidades.floats_iguales(sumaap11, ap11)
-        
+        #assert utilidades.floats_iguales(sumaap11, ap11)
+        sql_error=comprobar_error_suma(dni, sumaap11, [ap111, ap112, ap113],"Ap 1.1",
+                             "La suma de ap111, ap112 y ap113 no coincide con ap11")
+        if sql_error!="":
+            sql_errores.append(sql_error)
         
         ap121=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[6])
         str_ap121=str(ap121)
@@ -152,10 +171,17 @@ for i in range(0, total_lineas):
         
         sumaap12=ap123+ap122+ap121
         #print(ap113, ap112, ap111, ap11, sumaap11)
-        assert utilidades.floats_iguales(sumaap12, ap12)
-        
+        #assert utilidades.floats_iguales(sumaap12, ap12)
+        sql_error=comprobar_error_suma(dni, sumaap12, [ap121, ap122, ap123], "Ap 1.2",
+                             "La suma de ap121, ap122 y ap123 no coincide con ap12")
+        if sql_error!="":
+            sql_errores.append(sql_error)
         sumaap1=ap11+ap12
-        assert utilidades.floats_iguales(sumaap1, ap1)
+        
+        sql_error=comprobar_error_suma(dni, sumaap12, [ap11, ap12],"Ap 1",
+                             "La suma de ap11 y ap12 no coincide con ap1")
+        if sql_error!="":
+            sql_errores.append(sql_error)
         
         ap2=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[9])
         str_ap2=str(ap2)
@@ -176,15 +202,21 @@ for i in range(0, total_lineas):
         str_ap33=str(ap33)
         
         sumaap3=ap31+ap32+ap33
-        print(ap31, ap32, ap33, ap3, sumaap3)
-        assert utilidades.floats_iguales(sumaap3, ap3)
+        #print(ap31, ap32, ap33, ap3, sumaap3)
+        #assert utilidades.floats_iguales(sumaap3, ap3)
+        sql_error=comprobar_error_suma(dni, sumaap3, [ap31, ap32, ap33],"Ap 3",
+                             "La suma de ap31, ap32 y ap33 no coincide con ap3")
+        if sql_error!="":
+            sql_errores.append(sql_error)
         
-        print (":".join([dni, nombre, centro_resulta, nota_oposicion, anio_oposicion,
-                str_ap1, str_ap11, str_ap12, str_ap111 ,str_ap112, especialidades]))
+        #print (":".join([dni, nombre, centro_resulta, nota_oposicion, anio_oposicion,
+        #        str_ap1, str_ap11, str_ap12, str_ap111 ,str_ap112, especialidades]))
         
         #print(":".join(decimales_parte1))
         #print(":".join(decimales_parte2))
         #print(":".join(decimales_parte3))
 
 gestor_db.activar_depuracion()
+#print (sql_participantes)
 gestor_db.ejecutar_sentencias(sql_participantes)
+gestor_db.ejecutar_sentencias(sql_errores)

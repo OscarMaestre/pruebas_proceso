@@ -8,7 +8,7 @@ class ListaCampos(object):
         self.lista_valores_campo=[]
         
         
-    def anadir(self, nombre_campo, valor_campo, tipo_campo):
+    def anadir(self, nombre_campo, valor_campo, tipo_campo=CADENA):
         self.lista_nombres_campo.append(nombre_campo)
         
         if (tipo_campo==ListaCampos.NUMERO):

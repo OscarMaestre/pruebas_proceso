@@ -57,12 +57,50 @@ Un saludo.
 
 """
 
+
+message = """
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Estadísticas de adjudicaciones</title>
+</head>
+
+<body>
+<p>Hola a todos:</p>
+
+<p>
+Estimados compañeros:
+</p>
+
+<p>Se remiten adjuntas las estadisticas sobre adjudicaciones de este curso hasta hoy {0}.
+En los ficheros adjuntos podréis encontrar estadísticas sobre la última adjudicación así
+como las estadísticas globales en lo que va de curso. Por favor, disculpad si recibís este
+mensaje más de una vez.
+</p>
+Un saludo.
+</p>
+
+<br/><br/><br/>
+<center><b>Este es un mensaje generado automáticamente, por favor, no lo contestes</b></center>
+
+</body>
+</html>
+
+
+
+
+"""
+
 message=message.format(la_fecha)
 
 
 def enviar(recipient, ficheros):
 	msg = MIMEMultipart()
-	part = MIMEText('text', "plain", _charset="utf-8")
+	part = MIMEText('text', "html", _charset="utf-8")
 	msg['Subject'] = subject
 	msg['To'] = recipient
 	msg['From'] = sender
