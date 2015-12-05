@@ -19,12 +19,14 @@ import platform
 import glob
 
 
+NOMBRE_BD="baremos.db"
+
 CONVERTIR="pdftotext -layout -nopgbrk "
 EXTRACTOR="procesar_tabla.py "
-
+EXTRACTOR_MAESTROS="procesar_tabla_maestros.py"
 if platform.system()=="Linux":
     EXTRACTOR="."+os.sep+EXTRACTOR
-
+    EXTRACTOR_MAESTROS="."+os.sep+EXTRACTOR_MAESTROS
     
 FICH_RESULTADO="resultado.csv"
     
@@ -43,9 +45,13 @@ for f in ficheros_pdf:
         utilidades.aplicar_comando(CONVERTIR, f)
     
     
-ficheros_txt=utilidades.obtener_ficheros("*.txt")
+ficheros_txt=utilidades.obtener_ficheros("*EEMM*2015*.txt")
 for f in ficheros_txt:
-    utilidades.aplicar_comando(EXTRACTOR,f, ">", f[:-4]+".csv")
+    utilidades.aplicar_comando(EXTRACTOR,f, "2015", NOMBRE_BD)
     #utilidades.borrar_fichero(nombre_escapado)
+    
+ficheros_txt=utilidades.obtener_ficheros("*Maestros*2015*.txt")
+for f in ficheros_txt:
+    utilidades.aplicar_comando(EXTRACTOR_MAESTROS,f, "2015", NOMBRE_BD)
     
     

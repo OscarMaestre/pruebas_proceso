@@ -19,14 +19,16 @@ class ListaCampos(object):
             return
         
         
-    def generar_insert(self, nombre_tabla, terminador=";"):
+    def generar_insert(self, nombre_tabla, terminador=";", con_ignore=False):
         nombres_de_campos=",".join(self.lista_nombres_campo)
         nombres_de_campos= "("   + nombres_de_campos + ")"
         
         valores_como_cadenas=map(str, self.lista_valores_campo)
         valores=",".join(valores_como_cadenas)
         valores = "("  +valores  + ")"
-        
-        sql="insert into " + nombre_tabla + nombres_de_campos + " values " + valores + terminador
+        if con_ignore==False:
+            sql="insert into " + nombre_tabla + nombres_de_campos + " values " + valores + terminador
+        else:
+            sql="insert or ignore into " + nombre_tabla + nombres_de_campos + " values " + valores + terminador
         return sql
         

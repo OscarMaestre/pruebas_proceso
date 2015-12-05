@@ -111,7 +111,9 @@ class GestorDB(object):
     def ejecutar_sentencias(self, lista_sentencias):
         for sql in lista_sentencias:
             if self.debug:
+                print("-"*20)
                 print (sql)
+                print("-"*20)
             self.cursor.execute(sql)
         self.conexion.commit()
         

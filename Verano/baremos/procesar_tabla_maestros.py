@@ -18,38 +18,7 @@ import ListaCampos
 
 import re
 
-NOMBRE_TABLA_ESPECIALIDADES="especialidades"
-NOMBRE_TABLA_PARTICIPANTES="participantes"
-NOMBRE_TABLA_ERRORES="errores"
-SQL_CREACION_PARTICIPANTES="""
-create table if not exists {0} (
-    nif character(12) ,
-    especialidad char(10),
-    anio char(4),
-    nombre_completo character(160),
-    primary key (nif, especialidad, anio)
-)
-"""
 
-NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES="especialidades_participantes"
-
-SQL_CREACION_ESPECIALIDADES_PARTICIPANTES="""
-create table if not exists {0} (
-    nif character(12),
-    anio char(4), 
-    especialidad char(10),
-    primary key (nif, especialidad)
-)
-"""
-SQL_CREACION_ERRORES="""
-create table if not exists {0} (
-    nif character(12),
-    anio_baremo char(4),
-    apartado char(10),
-    descripcion char(512),
-    foreign key (nif) references {1}(nif)
-)
-"""
 
 ANO_PUBLICACION_BAREMO=sys.argv[2]
 
@@ -63,39 +32,42 @@ def get_sql_lista_especialidades(str_especialidades):
 re_codigo_centro="[0-9]{8}"
 expr_regular_codigo_centro=re.compile(re_codigo_centro)
 
-gestor_db=GestorDB.GestorDB("baremo_2014_2015.db")
-gestor_db.crear_tabla_todas_especialidades(NOMBRE_TABLA_ESPECIALIDADES)
-gestor_db.ejecutar_sentencias([SQL_CREACION_PARTICIPANTES.format(NOMBRE_TABLA_PARTICIPANTES, NOMBRE_TABLA_ESPECIALIDADES)])
-gestor_db.ejecutar_sentencias(
-    [SQL_CREACION_ERRORES.format(NOMBRE_TABLA_ERRORES, NOMBRE_TABLA_PARTICIPANTES)]
+gestor_db=GestorDB.GestorDB(sys.argv[3])
+gestor_db.crear_tabla_todas_especialidades(utilidades.NOMBRE_TABLA_ESPECIALIDADES)
+gestor_db.ejecutar_sentencias([utilidades.SQL_CREACION_PARTICIPANTES.format(
+    utilidades.NOMBRE_TABLA_PARTICIPANTES,
+    utilidades.NOMBRE_TABLA_ESPECIALIDADES)]
 )
 
 gestor_db.ejecutar_sentencias(
-    [SQL_CREACION_ESPECIALIDADES_PARTICIPANTES.format(NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES)]
+    [utilidades.SQL_CREACION_ERRORES.format(
+        utilidades.NOMBRE_TABLA_ERRORES, utilidades.NOMBRE_TABLA_PARTICIPANTES)]
 )
 
-def comprobar_error_suma(nif, total_a_sumar, lista_valores, apartado_equivocado, descripcion_error):
-    sql=""
-    lista_campos_error=ListaCampos.ListaCampos()
-    total=0
-    for v in lista_valores:
-        total+=v
-    if total!=total_a_sumar:
-        lista_campos_error.anadir("nif", nif)
-        lista_campos_error.anadir("anio_baremo", ANO_PUBLICACION_BAREMO)
-        lista_campos_error.anadir("apartado", apartado_equivocado)
-        lista_campos_error.anadir("descripcion", descripcion_error)
-        sql=lista_campos_error.generar_insert("errores");
-    return sql
+gestor_db.ejecutar_sentencias(
+    [utilidades.SQL_CREACION_ESPECIALIDADES_PARTICIPANTES.format(
+        utilidades.NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES, utilidades.NOMBRE_TABLA_PARTICIPANTES)]
+)
+
+gestor_db.ejecutar_sentencias(
+    [utilidades.SQL_CREACION_RESULTAS.format(
+        utilidades.NOMBRE_TABLA_RESULTAS, utilidades.NOMBRE_TABLA_PARTICIPANTES)]
+)
+
+
+
 
 lineas_fichero=utilidades.get_lineas_fichero(sys.argv[1])
 
 sql_participantes=[]
+sql_resultas=[]
+sql_participantes_especialidades=[]
 sql_errores=[]
+
 total_lineas=len(lineas_fichero)
 for i in range(0, total_lineas):
     l=lineas_fichero[i]
-    
+    lista_campos_participantes=ListaCampos.ListaCampos()
     (inicio_dni, final_dni, dni)=utilidades.extraer_dni(l)
     if dni!=utilidades.PATRON_NO_ENCONTRADO:
         nombre=l[0:inicio_dni-1].strip()
@@ -106,11 +78,32 @@ for i in range(0, total_lineas):
         (inicio_nota, fin_nota, nota_oposicion)=utilidades.extraer_patron(
             utilidades.expr_regular_nota_oposicion, l[final_dni:])
         if nota_oposicion==utilidades.PATRON_NO_ENCONTRADO:
-            nota_oposicion="NO TIENE NOTA"
+            nota_oposicion="0.0000"
             inicio_nota=125
+            fin_nota=135
+        (inicio_centro_resulta, fin_centro_resulta, centro_resulta)=utilidades.extraer_patron(
+            utilidades.expr_regular_resulta, l
+        )
         
+        if centro_resulta!=utilidades.PATRON_NO_ENCONTRADO:
+            cod_especialidad=centro_resulta[9:]
+            centro_resulta=centro_resulta[0:8]
+            #print (dni, centro_resulta, cod_especialidad)
+            especialidad_resulta="0597"+cod_especialidad
+            lista_campos_resulta=ListaCampos.ListaCampos()
+            lista_campos_resulta.anadir("nif", dni)
+            lista_campos_resulta.anadir("anio_participacion", ANO_PUBLICACION_BAREMO, ListaCampos.ListaCampos.NUMERO)
+            lista_campos_resulta.anadir("codigo_centro", centro_resulta+"C")
+            lista_campos_resulta.anadir("especialidad", especialidad_resulta)
+            sql_resultas.append(
+                lista_campos_resulta.generar_insert(
+                    utilidades.NOMBRE_TABLA_RESULTAS
+                )
+            )
         (inicio_anio_oposicion, fin_anio_oposicion, anio_oposicion)=utilidades.extraer_patron(
             utilidades.expr_regular_anio, l[final_dni:122])
+        if anio_oposicion==utilidades.PATRON_NO_ENCONTRADO:
+            anio_oposicion="0000"
         (inicio_especialidades, fin_especialidades, especialidades)=utilidades.extraer_patron(
             utilidades.expr_regular_lista_especialidades, l[57:102]
         )
@@ -119,12 +112,25 @@ for i in range(0, total_lineas):
         else:
             lista_especialidades=get_sql_lista_especialidades(especialidades)
         for especialidad in lista_especialidades:
-            lista_campos_participantes=ListaCampos.ListaCampos()
-            lista_campos_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
-            lista_campos_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
-            lista_campos_participantes.anadir("anio", ANO_PUBLICACION_BAREMO)
-            lista_campos_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
-            sql_participantes.append(lista_campos_participantes.generar_insert("participantes"))
+            lista_campos_especialidades_participantes=ListaCampos.ListaCampos()
+            lista_campos_especialidades_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
+            #lista_campos_especialidades_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
+            lista_campos_especialidades_participantes.anadir("anio_participacion", ANO_PUBLICACION_BAREMO)
+            
+            lista_campos_especialidades_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
+            sql_participantes_especialidades.append(
+                lista_campos_especialidades_participantes.generar_insert(
+                    utilidades.NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES )
+            )
+        
+        lista_campos_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
+        lista_campos_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
+        lista_campos_participantes.anadir("anio_oposicion", anio_oposicion, ListaCampos.ListaCampos.NUMERO)
+        lista_campos_participantes.anadir("nota_oposicion", nota_oposicion, ListaCampos.ListaCampos.NUMERO)
+        #lista_campos_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
+        sql_participantes.append(
+            lista_campos_participantes.generar_insert(utilidades.NOMBRE_TABLA_PARTICIPANTES)
+        )
         
         parte1=lineas_fichero[i+1]
         decimales_parte1=utilidades.extraer_todos_decimales(parte1)
@@ -134,81 +140,19 @@ for i in range(0, total_lineas):
         parte3=lineas_fichero[i+3]
         decimales_parte3=utilidades.extraer_todos_decimales(parte3)
         
-        ap1=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[0])
-        str_ap1=str(ap1)
-        
-        ap11=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[1])
-        str_ap11=str(ap11)
-        
-        ap12=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[2])
-        str_ap12=str(ap12)
-        
-        ap111=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[3])
-        str_ap111=str(ap111)
-        
-        ap112=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[4])
-        str_ap112=str(ap112)
-        
-        ap113=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[5])
-        str_ap113=str(ap113)
-        
-        sumaap11=ap113+ap112+ap111
-        #print(ap113, ap112, ap111, ap11, sumaap11)
-        #assert utilidades.floats_iguales(sumaap11, ap11)
-        sql_error=comprobar_error_suma(dni, sumaap11, [ap111, ap112, ap113],"Ap 1.1",
-                             "La suma de ap111, ap112 y ap113 no coincide con ap11")
-        if sql_error!="":
-            sql_errores.append(sql_error)
-        
-        ap121=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[6])
-        str_ap121=str(ap121)
-        
-        ap122=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[7])
-        str_ap112=str(ap122)
-        
-        ap123=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[8])
-        str_ap123=str(ap123)
-        
-        sumaap12=ap123+ap122+ap121
-        #print(ap113, ap112, ap111, ap11, sumaap11)
-        #assert utilidades.floats_iguales(sumaap12, ap12)
-        sql_error=comprobar_error_suma(dni, sumaap12, [ap121, ap122, ap123], "Ap 1.2",
-                             "La suma de ap121, ap122 y ap123 no coincide con ap12")
-        if sql_error!="":
-            sql_errores.append(sql_error)
-        sumaap1=ap11+ap12
-        
-        sql_error=comprobar_error_suma(dni, sumaap12, [ap11, ap12],"Ap 1",
-                             "La suma de ap11 y ap12 no coincide con ap1")
-        if sql_error!="":
-            sql_errores.append(sql_error)
-        
-        ap2=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[9])
-        str_ap2=str(ap2)
-        
-        ap3=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[10])
-        str_ap3=str(ap3)
-        
-        
-        
-        
-        ap31=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[11])
-        str_ap31=str(ap31)
-        
-        ap32=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[12])
-        str_ap32=str(ap32)
-        
-        ap33=utilidades.convertir_decimal_baremo_a_float(decimales_parte1[13])
-        str_ap33=str(ap33)
-        
-        sumaap3=ap31+ap32+ap33
-        #print(ap31, ap32, ap33, ap3, sumaap3)
-        #assert utilidades.floats_iguales(sumaap3, ap3)
-        sql_error=comprobar_error_suma(dni, sumaap3, [ap31, ap32, ap33],"Ap 3",
-                             "La suma de ap31, ap32 y ap33 no coincide con ap3")
-        if sql_error!="":
-            sql_errores.append(sql_error)
-        
+        decimales_baremo = decimales_parte1 + decimales_parte2 + decimales_parte3
+        if (len(decimales_baremo))!=43:
+            print ("ERROR, el baremo de {0} no tiene 43 decimales", nombre)
+            print(nombre, len(decimales_baremo))
+            print (decimales_baremo)
+            
+        #Aqui se comprueban si los totales que calculamos nosotros coinciden con los
+        #que publica la junta
+        #Por ejemplo, lo que hay en la posicion 0 del baremo de decimales debería ser la
+        #suma de las posiciones 1 y 2
+        #Si hay un error se nos devuelve SQL con un insert en la tabla de errores
+        posibles_errores=utilidades.comprobar_restricciones_baremo(dni, decimales_baremo, ANO_PUBLICACION_BAREMO)
+        sql_errores=sql_errores+posibles_errores
         #print (":".join([dni, nombre, centro_resulta, nota_oposicion, anio_oposicion,
         #        str_ap1, str_ap11, str_ap12, str_ap111 ,str_ap112, especialidades]))
         
@@ -216,7 +160,9 @@ for i in range(0, total_lineas):
         #print(":".join(decimales_parte2))
         #print(":".join(decimales_parte3))
 
-gestor_db.activar_depuracion()
+#gestor_db.activar_depuracion()
 #print (sql_participantes)
 gestor_db.ejecutar_sentencias(sql_participantes)
+gestor_db.ejecutar_sentencias(sql_participantes_especialidades)
+gestor_db.ejecutar_sentencias(sql_resultas)
 gestor_db.ejecutar_sentencias(sql_errores)

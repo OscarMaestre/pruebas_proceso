@@ -11,10 +11,12 @@ import glob
 import re
 import os
 
+from ListaCampos import ListaCampos
+
 re_dni="[0-9]{7,8}[A-Z]"
 expr_regular_dni=re.compile(re_dni)
 
-re_decimales_baremo="[0-9]{1,3}\,[0-9]{4}"
+re_decimales_baremo="[0-9]{1,3}[\,|\.][0-9]{4}"
 expr_regular_decimales=re.compile(re_decimales_baremo)
 
 re_nota_oposicion="([0-9]{1,2}\.[0-9]{1,4})"
@@ -27,6 +29,11 @@ expr_regular_anio=re.compile(re_anio)
 re_lista_especialidades_maestros="( [0-9]{3})+"
 expr_regular_lista_especialidades=re.compile(re_lista_especialidades_maestros)
 
+re_centro_baremo_traslados="[0-9]{8}"
+expr_regular_centro_baremo_traslados=re.compile(re_centro_baremo_traslados)
+
+re_resulta="[0-9]{8} [0-9]{3}"
+expr_regular_resulta=re.compile(re_resulta)
 BORRAR=""
 COPIAR=""
 CONCAT=""
@@ -138,7 +145,11 @@ def extraer_decimal(linea):
 def extraer_todos_decimales(linea):
     concordancia=expr_regular_decimales.search(linea)
     if concordancia:
-        return expr_regular_decimales.findall(linea)
+        decimales_como_cadenas=expr_regular_decimales.findall(linea)
+        lista_floats=[]
+        for d in decimales_como_cadenas:
+            lista_floats.append(convertir_decimal_baremo_a_float(d))
+        return lista_floats
     return (DECIMAL_NO_ENCONTRADO, DECIMAL_NO_ENCONTRADO, DECIMAL_NO_CONCORDANTE)
 def existe_fichero(nombre_fichero):
     if os.path.isfile(nombre_fichero):
@@ -167,3 +178,233 @@ def floats_iguales(num1, num2, delta=0.0001):
     if abs(num1-num2)<delta:
         return True
     return False
+
+
+def comprobar_error_suma(nif, decimales_baremo, pos_total, lista_posiciones, apartado_equivocado, anio_publicacion_baremo):
+    sql=""
+    lista_campos_error=ListaCampos()
+    total_calculado=0
+    total_que_deberia_sumar=decimales_baremo[pos_total]
+    for pos in lista_posiciones:
+        total_calculado+=decimales_baremo[pos]
+    if not floats_iguales(total_calculado, total_que_deberia_sumar):
+        #print ("Nif {2} Error {0} y {1} no son iguales".format(total_calculado, total_que_deberia_sumar, nif))
+        descripcion_error=""
+        for pos in lista_posiciones:
+            descripcion_error+="En el {0} la puntuacion publicada es {1} p.".format(
+                DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[pos],
+                decimales_baremo[pos])
+        descripcion_error+="La suma de estos apartados es el {0} y la suma publicada es {1} cuando debería ser {2}".format(
+            DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[pos_total], total_que_deberia_sumar, total_calculado
+        )
+        lista_campos_error.anadir("nif", nif)
+        lista_campos_error.anadir("anio_baremo", anio_publicacion_baremo)
+        lista_campos_error.anadir("apartado", apartado_equivocado)
+        lista_campos_error.anadir("descripcion", descripcion_error)
+        if (total_que_deberia_sumar<total_calculado):
+            lista_campos_error.anadir("perjudicial", "SI")
+        else:
+            lista_campos_error.anadir("perjudicial", "NO")
+        sql=lista_campos_error.generar_insert("errores");
+    return sql
+
+def comprobar_restricciones_baremo(dni, decimales_baremo, anio_publicacion_baremo):
+    sql_errores=[]
+    sql=comprobar_error_suma(dni, decimales_baremo, 0, [1,2],
+                             DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[0], anio_publicacion_baremo
+        )
+    if (sql!=""):
+        sql_errores.append(sql)
+        
+    sql=comprobar_error_suma(dni, decimales_baremo, 1, [3,4,5],
+                             DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[1], anio_publicacion_baremo
+    )
+    if (sql!=""):
+        sql_errores.append(sql)
+    sql=comprobar_error_suma(dni, decimales_baremo, 10, [11,12,13],
+           DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[10], anio_publicacion_baremo
+    )
+    if (sql!=""):
+        sql_errores.append(sql)
+            
+    sql=comprobar_error_suma(dni, decimales_baremo, 13, [21,22,23,24,25,26],
+       DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[13], anio_publicacion_baremo
+    )
+    if (sql!=""):
+        sql_errores.append(sql)
+        
+    sql=comprobar_error_suma(dni, decimales_baremo, 27, [28, 29, 30],
+          DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[27], anio_publicacion_baremo
+    )
+    if (sql!=""):
+        sql_errores.append(sql)
+            
+    sql=comprobar_error_suma(dni, decimales_baremo, 31, [32, 33, 34],
+        DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[31], anio_publicacion_baremo
+    )
+    if (sql!=""):
+        sql_errores.append(sql)
+            
+    sql=comprobar_error_suma(dni, decimales_baremo, 35, [36, 37, 38, 39, 40, 41],
+      DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[35], anio_publicacion_baremo
+    )
+    if (sql!=""):
+        sql_errores.append(sql)
+            
+    sql=comprobar_error_suma(dni, decimales_baremo, 42,[0, 9, 10, 27, 31, 35],
+      DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS[42], anio_publicacion_baremo
+    )
+    
+    if (sql!=""):
+        sql_errores.append(sql)    
+    return sql_errores
+
+
+
+
+
+#Constantes de interés
+
+#Descripciones de los apartados del baremo en concursos de traslados
+DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS=[
+    # 0                 
+    "Ap. 1) Antigüedad",
+        #1
+        "Ap. 1.1) Antigüedad en el centro",
+        #2
+        "Ap 1.2) Antigüedad en el cuerpo",             
+            #3
+            "Ap 1.1.1) Años seguidos en el centro",
+            #4
+            "Ap 1.1.2) Años en expectativa de destino",
+            #5    
+            "Ap 1.1.3) Difícil desempeño",
+            #6
+            "Ap 1.2.1) Antigüedad en el cuerpo desde el que se concursa ",
+            #7
+            "Ap 1.2.2) Antigüedad en otros cuerpos similares",
+            #8
+            "Ap 1.2.3) Antigüedad en cuerpos inferiores",
+    #9
+    "Ap 2) Pertenencia a cuerpo de catedráticos",
+    #10
+    "Ap 3) Méritos académicos",
+    #11
+    "AP 3.1) Doctorados y postgrados",
+    #12
+    "Ap 3.2) Por otras titulaciones univ.",
+    #13
+    "Ap 3.3) Titulaciones de régimen especial",
+    #14
+    "Ap 3.1.1) Por poseer titulo de Doctor",
+    #15
+    "Ap 3.1.2) Por tener Máster",
+    #16
+    "Ap 3.1.3) Por tener suficiencia inv.",
+    #17
+    "Ap 3.1.4) Por premio en Doctorado",
+    
+    
+    
+    
+    #18
+    "Ap 3.2.1) Por otro Grado",
+    
+    #19
+    "Ap 3.2.2) Titulaciones de 1er ciclo",
+    
+    #20
+    "Ap 3.2.3) Titulaciones de 2º ciclo",
+    #21
+    "Ap 3.3.a) Por titulo(s) C2",
+    #22
+    "Ap 3.3.b) Por titulo(s) C1",
+    #23
+    "Ap 3.3.c) Por titulo(s) B2",
+    #24
+    "Ap 3.3.d) Por titulo(s) B1",
+    #25
+    "Ap 3.3.e) Por titulo(s) FP",
+    #26
+    "Ap 3.3.e) Por titulo(s) Música/Danza",
+    #27
+    "Ap 4) Cargos directivos",
+    #28
+    "Ap 4.1) Por cargo director",
+    #29
+    "Ap 4.2) Por jef. estudios/secretario",
+    #30
+    "Ap 4.3) Por otras funciones",
+    #31
+    "Ap 5) Formación",
+    #32
+    "Ap 5.1) Actividades superadas",
+    #33
+    "Ap 5.2) Actividades impartidas",
+    #34
+    "Ap 5.3) Tener otras especialidades",
+    #35,
+    "Ap 6) Otros méritos",
+    #36
+    "Ap 6.1) Publicaciones",
+    #37
+    "Ap 6.2) Premios",
+    #38
+    "Ap 6.3) Méritos artísticos",
+    #39
+    "Ap 6.4) Años en admón. educativa",
+    #40
+    "Ap 6.5) Por ser miembro de tribunal",
+    #41
+    "Ap 6.6) Por cada tutorización Máster/Prácticas"    ,
+    #42
+    "Ap Final) Puntuación total."
+]
+
+NOMBRE_TABLA_ESPECIALIDADES="especialidades"
+NOMBRE_TABLA_PARTICIPANTES="participantes"
+NOMBRE_TABLA_ERRORES="errores"
+SQL_CREACION_PARTICIPANTES="""
+create table if not exists {0} (
+    nif character(12) ,
+    anio_oposicion unsigned int,
+    nota_oposicion float,
+    nombre_completo character(160),
+    primary key (nif)
+)
+"""
+
+NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES="especialidades_participantes"
+
+SQL_CREACION_ESPECIALIDADES_PARTICIPANTES="""
+create table if not exists {0} (
+    nif character(12),
+    anio_participacion unsigned int,
+    especialidad char(10),
+    primary key (nif, especialidad),
+    foreign key (nif) references {1}(nif)
+)
+"""
+SQL_CREACION_ERRORES="""
+create table if not exists {0} (
+    id integer primary key autoincrement,
+    nif character(12),
+    anio_baremo unsigned int,
+    apartado char(10),
+    descripcion char(2048),
+    perjudicial char(10),
+    foreign key (nif) references {1}(nif)
+)
+"""
+
+NOMBRE_TABLA_RESULTAS="resultas"
+SQL_CREACION_RESULTAS="""
+create table if not exists {0} (
+    nif character(12),
+    anio_participacion unsigned int,
+    codigo_centro char(10),
+    especialidad char(10),
+    primary key (nif, especialidad),
+    foreign key (nif) references {1}(nif)
+)
+"""
