@@ -6,7 +6,6 @@ import os, re
 import sys
 import smtplib
 from email import encoders
-
 from email.mime.image import MIMEImage
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart

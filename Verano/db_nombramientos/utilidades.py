@@ -10,6 +10,12 @@ import platform
 import glob
 import re
 import os
+import smtplib
+from email import encoders
+from email.mime.image import MIMEImage
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 from ListaCampos import ListaCampos
 
@@ -96,6 +102,14 @@ def leer_linea_fichero(num_linea, nombre_fichero):
         lineas=f.readlines()
         return lineas[num_linea].strip()
     
+def leer_fichero(nombre_fichero):
+    with open (nombre_fichero, "r") as f:
+        lineas=f.readlines()
+    texto=""
+    for l in lineas:
+        texto+=l
+    return texto
+
 def aplicar_comando (comando, fichero, *args):
     
     cmd=comando + " "+fichero
@@ -258,6 +272,37 @@ def comprobar_restricciones_baremo(dni, decimales_baremo, anio_publicacion_barem
     if (sql!=""):
         sql_errores.append(sql)    
     return sql_errores
+
+
+def enviar_email(remitente, destinatario, asunto, mensaje, fichero_configuracion_email, ficheros):
+    (usuario, clave, servidor_smtp, puerto_smtp)=get_parametros(fichero_configuracion_email)
+    msg = MIMEMultipart()
+    part = MIMEText('text', "html", _charset="utf-8")
+    msg['Subject'] = asunto
+    msg['To'] = destinatario
+    msg['From'] = remitente
+    print ("Enviando email desde {0} a {1}".format(usuario, destinatario))
+    files = ficheros
+    for filename in files:
+        fich=open(filename, "rb")
+
+        adjunto=MIMEBase("application", "octet-stream")
+        adjunto.set_payload(fich.read(), charset="utf-8")
+        fich.close()
+        encoders.encode_base64(adjunto)
+        adjunto.add_header('Content-Disposition', 'attachment', filename=filename)
+        msg.attach(adjunto)
+
+    part.set_payload(mensaje, charset="UTF-8")
+    msg.attach(part)
+
+    session = smtplib.SMTP(servidor_smtp, puerto_smtp)
+    session.ehlo()
+    session.starttls()
+    session.ehlo
+    session.login(usuario, clave)
+    session.sendmail(remitente, destinatario, msg.as_string())
+    session.quit()
 
 
 

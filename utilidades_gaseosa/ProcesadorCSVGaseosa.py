@@ -25,7 +25,7 @@ SQL_CREATE_GASEOSA="""
 """
 
 SQL_INDICE_GASEOSA="""
-create index idx_dni on {0}(dni);
+create index if not exists idx_dni on {0}(dni);
 """
 
 class ProcesadorCSVGaseosa(object):

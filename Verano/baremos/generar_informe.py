@@ -13,54 +13,21 @@ sys.path.insert(0, DIRECTORIO)
 
 
 import GestorDB
-
+import utilidades
 
 ANIO_ACTUAL=2016
 TABLA_GASEOSA="gaseosa"
 TABLA_ERRORES="errores"
 ARCHIVO_BD=sys.argv[1]
+DIRECTORIO_INFORMES="informes"
 
-MENSAJE_EMAIL="""
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Errores en el baremo</title>
-    <meta charset="utf-8">
-</head>
-
-<body>
-
-<p>Hola {0}:</p>
-<p>
-    Despues de haber revisado el baremo del concurso de traslados hemos detectado errores en algunos casos.
-    A continuación te señalamos lo que hemos detectado en tu caso.
-    <ul>
-    {1}
-    </ul>
-</p>
-<p>
-    Si has revisado tu baremo y realmente te parece que no hay ningún error te rogamos nos disculpes las molestias que te
-    hayamos podido causar.
-</p>
-<p>
-    Atentantemente,
-</p>
-<br/>
-<p>
-    Tus compañeros de ANPE Ciudad Real
-</p>
-</body>
-</html>
-
-"""
 
 
 SQL_ERRORES_DETECTADOS_ESTE_ANIO="""
     select nif, apartado, descripcion, perjudicial from {0} where anio_baremo={1} and nif='{2}'
 """
 
-SQL_GET_NIFS="select dni, nombre from {0}"
+SQL_GET_NIFS="select dni, nombre, apellido_1, apellido_2, direccion, codigo_postal, ciudad from {0}"
 
 gestorbd=GestorDB.GestorDB(ARCHIVO_BD)
 
@@ -70,11 +37,13 @@ filas_nif=gestorbd.get_filas(
 
 
 for f in filas_nif:
+    dni=f[0]
     filas_errores=gestorbd.get_filas(
         SQL_ERRORES_DETECTADOS_ESTE_ANIO.format(
-            TABLA_ERRORES, ANIO_ACTUAL-1, f[0]
+            TABLA_ERRORES, ANIO_ACTUAL-1, dni
         )
     )
+    TEXTO_RECURSO=utilidades.leer_fichero("plantilla_recurso.html")
     if len(filas_errores)==0:
         continue
     lista_errores=""
@@ -84,5 +53,17 @@ for f in filas_nif:
         if (fe[3])=="NO":
             lista_errores+="En realidad no te perjudica, pero pensamos que querrías saberlo."
         lista_errores+="</li>"
-    informe_usuario=MENSAJE_EMAIL.format(f[1].title(), lista_errores)
-    print (informe_usuario)
+    nombre_persona=" ".join([f[1], f[2], f[3]])
+    domicilio=",".join ( [f[4], f[5], f[6] ] )
+    informe_usuario=TEXTO_RECURSO.format(
+        "Ciudad Real", nombre_persona.title(), dni, domicilio, "Maestros",
+        lista_errores, "20-10-2015", nombre_persona               
+    )
+    NOMBRE_FICHERO=DIRECTORIO_INFORMES+os.sep+"Recurso"+dni
+    utilidades.escribir_en_fichero(informe_usuario, NOMBRE_FICHERO+".html")
+    utilidades.aplicar_comando("pandoc", "-o ", NOMBRE_FICHERO+".docx", NOMBRE_FICHERO+".html")
+    utilidades.enviar_email(
+        "Servicio afiliados", "torrente76@yahoo.es", "Errores en el baremo",
+        informe_usuario,
+        utilidades.FICHERO_CONFIGURACION_EMAIL, [NOMBRE_FICHERO+".docx"]
+    )
