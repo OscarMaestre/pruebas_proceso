@@ -3,12 +3,21 @@ $(document).ready(inicio)
 texto_escrito=""
 
 
+id_boton_copiar_ccc='copiarccc'
+html_boton_copiar_ccc="<input type='submit' id='"+id_boton_copiar_ccc+"' value='Copiar CCC al portapapeles'>"
 
 function get_entero_posicion(cadena, pos) {
     simbolo=cadena[pos]
     return parseInt(simbolo)
 }
 
+function copiar_ccc_pulsado(evento){
+    $("#iban").select()
+    exito=document.execCommand("copy")
+    if (exito==False) {
+        alert("No se pudo hacer la copia, su navegador no soporta el automatismo, copie y pegue a mano")
+    }
+}
 //Se asume que texto contiene 20 cifras
 function calcular_digito_control(texto){
     primera_cifra_codigo_banco      =       get_entero_posicion(texto, 0)
@@ -51,6 +60,7 @@ function calcular_digito_control(texto){
     return primer_digito_de_control.toString() +  segundo_digito_de_control.toString()
 }
 
+
 function validar_dc(texto) {
     digito_control_introducido=texto[8]+texto[9]
     digito_control_calculado=calcular_digito_control(texto)
@@ -66,15 +76,22 @@ function validar_dc(texto) {
     return informe
 }
 
-function validar_iban(texto) {
+function generar_informe_iban(iban_introducido){
+    iban_para_informe=iban_introducido.slice(2, 4)+"&nbsp;&nbsp;&nbsp;&nbsp;" + iban_introducido.slice(5, 24)
+    
+    boton="<input type='text' id='iban' value='"+iban_introducido.slice(4, 24)+"'>"
+    informe+="El IBAN ES"+iban_para_informe+" es correcto<br/>"+boton+html_boton_copiar_ccc
+    return informe
+}
+function es_iban_valido(texto) {
     informe=""
     seccion=texto.slice(4, 24)
     
     //El 14 es de la E el 28 de la S y el 00 lo exige el estándar
     cadena_para_calcular_iban=seccion+"14"+"28"+"00"
-    numero=parseInt(cadena_para_calcular_iban)
-    informe+="Numero:"+numero+"<br/>"
-    resto=numero % 97
+    numeroBigInt=str2bigInt(cadena_para_calcular_iban, "10", 20)
+    //informe+="Numero:"+bigInt2str(numeroBigInt, 10)+"<br/>"
+    resto=modInt(numeroBigInt, 97)
     diferencia=98 - resto
     if (diferencia<10) {
         diferencia="0"+diferencia
@@ -85,29 +102,47 @@ function validar_iban(texto) {
     iban_calculado=diferencia
     //alert(iban_calculado + "-"+ iban_introducido)
     if (iban_calculado!=iban_introducido) {
-        informe+="<br/>Error: Se introdujo el iban ES"+iban_introducido
-        informe+=" y se ha calculado ES"+iban_calculado
+        return false
     } else {
-        informe+="El IBAN ES"+iban_calculado+" es correcto"
+        return true
     }
     return informe
 }
+function limpiar_texto(texto) {
+    texto=texto.replace(/-/g, "")
+    texto=texto.replace(/ /g, "")
+    return texto
+}
 function validar_cuenta(texto) {
-    
+    texto=limpiar_texto(texto)
     informe=""
     if ((texto.length!=20) && (texto.length!=24)){
-        informe="<center>Aún no hay 20 o 24 símbolos:"+texto+"</center>"
+        informe="<center>Aún no hay 20 o 24 símbolos (puedes usar o no espacios o guiones):<br/>"+texto+"</center>"
     } else {
         if (texto.length==20) {
             informe+=validar_dc(texto)
+            boton="<input type='text' id='iban' value='"+texto+"'>"
+            informe+=boton+html_boton_copiar_ccc
+            $("#resultados").html(informe)
+            $("#"+id_boton_copiar_ccc).click(copiar_ccc_pulsado)
+            return 
         } else {
             seccion=texto.slice(4, 24)
             informe+=validar_dc(seccion)
-            informe+=validar_iban(texto)
+            if (es_iban_valido(texto)) {
+                informe+=generar_informe_iban(texto)
+                
+            }
+            else {
+                informe+="El IBAN introducido "+texto.slice(0, 4) + " no es correcto"
+            }
         }
 
     }
     $("#resultados").html(informe)
+    if (es_iban_valido(texto)) {
+        $("#"+id_boton_copiar_ccc).click(copiar_ccc_pulsado)
+    }
 }
 function teclapulsada(evento){
     texto=$("#codigo").val()
@@ -116,4 +151,6 @@ function teclapulsada(evento){
 }
 function inicio() {
     $("#codigo").keyup(teclapulsada)
+    $("#"+id_boton_copiar_ccc).click(copiar_ccc_pulsado)
 }
+

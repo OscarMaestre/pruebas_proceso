@@ -5,6 +5,7 @@
     <title>Cálculo de códigos</title>
     <meta charset="utf-8">
     <script src="js/jquery.js"></script>
+    <script src="js/BigInt.js"></script>
     <script src="js/programa.js"></script>
 </head>
 
@@ -22,6 +23,18 @@
         font-size: xx-large;
         font-family:  monospace;
     }
+    div#iban{
+        padding:30px;
+        font-size:xx-large;
+    }
+    div#ccc{
+        padding: 30px;
+        font-size: xx-large;
+    }
+    input{
+        padding:15px;
+        font-size: xx-large;
+    }
 </style>
 <div id="contenedor">
     
@@ -34,7 +47,10 @@
         Introduce una secuencia de 20 (CCC) o 24 elementos (IBAN):
         <input type="text" id="codigo" size="24">
     </div>
-    <div id="resultados"></div>
+    <div id="resultados">
+        <div id='iban'></div>
+        <div id='ccc'></div>
+    </div>
 </div>
 
 </body>
