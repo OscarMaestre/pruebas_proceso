@@ -21,16 +21,12 @@
     div#resultados{
         padding:30px;
         font-size: xx-large;
-        font-family:  monospace;
     }
-    div#iban{
+    div#iban, #ccc, #informe_dni{
         padding:30px;
         font-size:xx-large;
     }
-    div#ccc{
-        padding: 30px;
-        font-size: xx-large;
-    }
+    
     input{
         padding:15px;
         font-size: xx-large;
@@ -40,17 +36,40 @@
     
 
     <div id="cabecera">
-        <h1>Cálculo de cuentas</h1>
+        <h1>Comprobaciones de la base de datos</h1>
     </div>
     <div id="cuerpo">
-        <h3>Solo para cuentas en España (IBAN con ESxx)</h3>
-        Introduce una secuencia de 20 (CCC) o 24 elementos (IBAN):
-        <input type="text" id="codigo" size="24">
+        <h3>Introduce un DNI o una cuenta corriente (con o sin IBAN)</h3>
+        <table>
+            <tr>
+                <td align="right">
+                    Introduce un DNI:
+                </td>
+                <td>
+                    <input type="text" id="dni" size="24"><br/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Introduce una secuencia de 20 (CCC) o 24 elementos (IBAN):
+                </td>
+                <td>
+                    <input type="text" id="codigo" size="24">
+                </td>
+            </tr>
+        </table>
+        
+        
+        
     </div>
     <div id="resultados">
         <div id='iban'></div>
         <div id='ccc'></div>
     </div>
+    <div id="resultados_dni">
+        <div id="informe_dni"></div>
+    </div>
+    
 </div>
 
 </body>

@@ -4,7 +4,9 @@ texto_escrito=""
 
 
 id_boton_copiar_ccc='copiarccc'
+id_boton_copiar_dni='copiardni'
 html_boton_copiar_ccc="<input type='submit' id='"+id_boton_copiar_ccc+"' value='Copiar CCC al portapapeles'>"
+html_boton_copiar_dni="<input type='submit' id='"+id_boton_copiar_dni+"' value='Copiar DNI al portapapeles'>"
 
 function get_entero_posicion(cadena, pos) {
     simbolo=cadena[pos]
@@ -149,8 +151,39 @@ function teclapulsada(evento){
     validar_cuenta(texto)
     
 }
+
+//Rellena una cadena con cosas a la izquierda con el caracter que se indique en z
+function rellenar(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+function letraDni(dni) {
+    return "TRWAGMYFPDXBNJZSQVHLCKE".charAt(dni % 23);
+}
+
+function copiar_dni_al_portapapeles() {
+    $("#valor_dni").select()
+    exito=document.execCommand("copy")
+    if (exito==False) {
+        alert("No se pudo hacer la copia, su navegador no soporta el automatismo, copie y pegue a mano")
+    }
+}
+
+function teclapulsadadni(evento){
+    num_dni=$("#dni").val()
+    numero_dni=parseInt( num_dni )
+    numero_dni_rellenado=rellenar(numero_dni, 8)
+    dni_completo=numero_dni_rellenado+letraDni(num_dni)
+    html_input_dni="<input id='valor_dni' type='text' value='"+dni_completo+"'>"
+    
+    $("#informe_dni").html( html_input_dni + html_boton_copiar_dni)
+    $("#"+id_boton_copiar_dni).click(copiar_dni_al_portapapeles)
+}
+
 function inicio() {
     $("#codigo").keyup(teclapulsada)
+    $("#dni").keyup(teclapulsadadni)
     $("#"+id_boton_copiar_ccc).click(copiar_ccc_pulsado)
 }
 
