@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Cálculo de códigos</title>
+    <meta charset="utf-8">
+    <script src="js/jquery.js"></script>
+    <script src="js/programa.js"></script>
+</head>
+
+<body>
+<style type="text/css">
+    div#contenedor{
+        background-color: rgb(240, 240, 240);
+        padding: 20px;
+    }
+    div#cuerpo, div#codigo{
+        font-size: large;
+    }
+    div#resultados{
+        padding:30px;
+        font-size: xx-large;
+        font-family:  monospace;
+    }
+</style>
+<div id="contenedor">
+    
+
+    <div id="cabecera">
+        <h1>Cálculo de cuentas</h1>
+    </div>
+    <div id="cuerpo">
+        <h3>Solo para cuentas en España (IBAN con ESxx)</h3>
+        Introduce una secuencia de 20 (CCC) o 24 elementos (IBAN):
+        <input type="text" id="codigo" size="24">
+    </div>
+    <div id="resultados"></div>
+</div>
+
+</body>
+</html>
