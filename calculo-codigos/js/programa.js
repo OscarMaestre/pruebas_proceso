@@ -59,6 +59,9 @@ function calcular_digito_control(texto){
     if (segundo_digito_de_control==11) {
         segundo_digito_de_control=0
     }
+    if (segundo_digito_de_control==10) {
+        segundo_digito_de_control=1
+    }
     return primer_digito_de_control.toString() +  segundo_digito_de_control.toString()
 }
 
@@ -85,10 +88,24 @@ function generar_informe_iban(iban_introducido){
     informe+="El IBAN ES"+iban_para_informe+" es correcto<br/>"+boton+html_boton_copiar_ccc
     return informe
 }
+
+function calcular_iban(texto){
+    cadena_para_calcular_iban=texto+"14"+"28"+"00"
+    numeroBigInt=str2bigInt(cadena_para_calcular_iban, "10", 20)
+    //informe+="Numero:"+bigInt2str(numeroBigInt, 10)+"<br/>"
+    resto=modInt(numeroBigInt, 97)
+    diferencia=98 - resto
+    if (diferencia<10) {
+        diferencia="0"+diferencia
+    } else {
+        diferencia=diferencia.toString()
+    }
+    return "ES"+diferencia
+}
 function es_iban_valido(texto) {
     informe=""
     seccion=texto.slice(4, 24)
-    
+    iban_calculado=calcular_iban(seccion)
     //El 14 es de la E el 28 de la S y el 00 lo exige el estándar
     cadena_para_calcular_iban=seccion+"14"+"28"+"00"
     numeroBigInt=str2bigInt(cadena_para_calcular_iban, "10", 20)
@@ -123,6 +140,8 @@ function validar_cuenta(texto) {
     } else {
         if (texto.length==20) {
             informe+=validar_dc(texto)
+            codigo_iban=calcular_iban(texto)
+            informe+="El IBAN que le corresponde es:"+codigo_iban+"<br/>"
             boton="<input type='text' id='iban' value='"+texto+"'>"
             informe+=boton+html_boton_copiar_ccc
             $("#resultados").html(informe)
