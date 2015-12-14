@@ -1,32 +1,96 @@
-07546054F:Calleja Quilez, Pilar:DENEGADO:13004705:EOI LA EQUIDAD:ALCAZAR DE SAN JUAN:CIUDAD REAL:13004705:EOI LA EQUIDAD:EOI LA EQUIDAD:CIUDAD REAL
-04575359S:Calvo Luisier, Myriam:DENEGADO:19003191:EOI DE GUADALAJARA:GUADALAJARA:GUADALAJARA:19003191:EOI DE GUADALAJARA:EOI DE GUADALAJARA:GUADALAJARA
-05682364F:Camacho Alarcon, Maria Prado:DENEGADO:13004596:EOI POZO NORTE:PUERTOLLANO:CIUDAD REAL:13004596:EOI POZO NORTE:EOI POZO NORTE:CIUDAD REAL
-06270112J:Casero Martin, Luis Felipe:PEND. DESTINO:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR
-05912630C:Castellanos Segura, Jose Luis:DENEGADO:13004845:EOI CIUDAD DE VALDEPEÑAS:VALDEPEÑAS:CIUDAD REAL:13004845:EOI CIUDAD DE VALDEPEÑAS:EOI CIUDAD DE VALDEPEÑAS:CIUDAD REAL
-74507199X:Cuevas Carrasco, Aurelio:DENEGADO:02004471:EOI MENÉNDEZ PELAYO:VILLARROBLEDO:ALBACETE:02004471:EOI MENÉNDEZ PELAYO:EOI MENÉNDEZ PELAYO:ALBACETE
-21461785W:Elias Garcia, Maria Agata De:DENEGADO:13004596:EOI POZO NORTE:PUERTOLLANO:CIUDAD REAL:13004596:EOI POZO NORTE:EOI POZO NORTE:CIUDAD REAL
-05645375W:Garcia Caballero, Esmeralda:PEND. DESTINO:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR
-53573238M:Garcia Garcia, Maria Elena:DENEGADO:45005537:EOI TALAVERA DE LA REINA:TALAVERA DE LA REINA:TOLEDO:45005537:EOI TALAVERA DE LA REINA:EOI TALAVERA DE LA REINA:TOLEDO
-51365216Y:Gomez Jimeno, Clara:OBTIENE PLAZA:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:45005483:EOI RAIMUNDO DE TOLEDO:TOLEDO:TOLEDO
-47060021C:Gonzalez Lara, Encarnacion:DENEGADO:45005483:EOI RAIMUNDO DE TOLEDO:TOLEDO:TOLEDO:45005483:EOI RAIMUNDO DE TOLEDO:EOI RAIMUNDO DE TOLEDO:TOLEDO
-06561569Z:Gonzalez Rodriguez, Maria Concepc:DENEGADO:02004094:EOI DE ALBACETE:ALBACETE:ALBACETE:02004094:EOI DE ALBACETE:EOI DE ALBACETE:ALBACETE
-24219730V:Jaldo Vallejo, Manuel:DENEGADO:02004355:EOI CONDE DE FLORIDABLANCA:HELLIN:ALBACETE:02004355:EOI CONDE DE FLORIDABLANCA:EOI CONDE DE FLORIDABLANCA:ALBACETE
-74719753K:Jeronimo Fernandez, Jose Antonio:PEND. DESTINO:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR
-42811971R:Junco Ezquerra, Antonio Jesus:DENEGADO:13004596:EOI POZO NORTE:PUERTOLLANO:CIUDAD REAL:13004596:EOI POZO NORTE:EOI POZO NORTE:CIUDAD REAL
-05658728S:Llorens Martin, Francisco Javier:DENEGADO:13004596:EOI POZO NORTE:PUERTOLLANO:CIUDAD REAL:13004596:EOI POZO NORTE:EOI POZO NORTE:CIUDAD REAL
-03112097J:Lopez Martinez, Esmeralda:PEND. DESTINO:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR
-50831043P:Luengo Alonso, Alfonso:OBTIENE PLAZA:45005483:EOI RAIMUNDO DE TOLEDO:TOLEDO:TOLEDO:28034431:E.O.I. DE MADRID-JESUS MAEST:MADRID:MADRID
-50148660N:Martin Montero, M Concepcion:OBTIENE PLAZA:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:02004355:EOI CONDE DE FLORIDABLANCA:HELLIN:ALBACETE
-05199367X:Martinez Garcia, Hilario:DENEGADO:02004343:EOI MARÍA MOLINER:ALMANSA:ALBACETE:02004343:EOI MARÍA MOLINER:EOI MARÍA MOLINER:ALBACETE
-07841191P:Mateos Polo, Delfina:DENEGADO:45005483:EOI RAIMUNDO DE TOLEDO:TOLEDO:TOLEDO:45005483:EOI RAIMUNDO DE TOLEDO:EOI RAIMUNDO DE TOLEDO:TOLEDO
-04176611H:Melchor Ortiz, Concepcion:DENEGADO:13004596:EOI POZO NORTE:PUERTOLLANO:CIUDAD REAL:13004596:EOI POZO NORTE:EOI POZO NORTE:CIUDAD REAL
-0606049E:Mellon Agreda, Anne:DENEGADO:02004343:EOI MARÍA MOLINER:ALMANSA:ALBACETE:02004343:EOI MARÍA MOLINER:EOI MARÍA MOLINER:ALBACETE
-51363772B:Morato Lara, Maria Isabel:DENEGADO:13004596:EOI POZO NORTE:PUERTOLLANO:CIUDAD REAL:13004596:EOI POZO NORTE:EOI POZO NORTE:CIUDAD REAL
-50322087L:Muñoz Lobo, Miguel Angel:DENEGADO:19003191:EOI DE GUADALAJARA:GUADALAJARA:GUADALAJARA:19003191:EOI DE GUADALAJARA:EOI DE GUADALAJARA:GUADALAJARA
-07548049R:Navarro Molina, Pablo E.:DENEGADO:02004343:EOI MARÍA MOLINER:ALMANSA:ALBACETE:02004343:EOI MARÍA MOLINER:EOI MARÍA MOLINER:ALBACETE
-05644790S:Pascual Parra, Alfonsa:DENEGADO:13004596:EOI POZO NORTE:PUERTOLLANO:CIUDAD REAL:13004596:EOI POZO NORTE:EOI POZO NORTE:CIUDAD REAL
-1517425T:Pfeiffer ., Antje:DENEGADO:02004471:EOI MENÉNDEZ PELAYO:VILLARROBLEDO:ALBACETE:02004471:EOI MENÉNDEZ PELAYO:EOI MENÉNDEZ PELAYO:ALBACETE
-09296100Y:Prieto Delgado, Adolfo:DENEGADO:02004094:EOI DE ALBACETE:ALBACETE:ALBACETE:02004094:EOI DE ALBACETE:EOI DE ALBACETE:ALBACETE
-11972434Z:Prieto Seisdedos, Adela:DENEGADO:13004134:EOI PRADO DE ALARCOS:CIUDAD REAL:CIUDAD REAL:13004134:EOI PRADO DE ALARCOS:EOI PRADO DE ALARCOS:CIUDAD REAL
-52132448G:Sanchez Calamardo, M Milagros:DENEGADO:45005483:EOI RAIMUNDO DE TOLEDO:TOLEDO:TOLEDO:45005483:EOI RAIMUNDO DE TOLEDO:EOI RAIMUNDO DE TOLEDO:TOLEDO
-05904574Z:Trinidad Mora, Maria Paz:DENEGADO:19003191:EOI DE GUADALAJARA:GUADALAJARA:GUADALAJARA:19003191:EOI DE GUADALAJARA:EOI DE GUADALAJARA:GUADALAJARA
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('07546054F','Calleja Quilez, Pilar','DENEGADO','13004705','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592008');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('04575359S','Calvo Luisier, Myriam','DENEGADO','19003191','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592008');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05682364F','Camacho Alarcon, Maria Prado','DENEGADO','13004596','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('06270112J','Casero Martin, Luis Felipe','PEND. DESTINO','NO TENIA DEST. ANTERIOR','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','SECUNDARIA');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05912630C','Castellanos Segura, Jose Luis','DENEGADO','13004845','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592008');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('74507199X','Cuevas Carrasco, Aurelio','DENEGADO','02004471','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('21461785W','Elias Garcia, Maria Agata De','DENEGADO','13004596','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05645375W','Garcia Caballero, Esmeralda','PEND. DESTINO','NO TENIA DEST. ANTERIOR','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','SECUNDARIA');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('53573238M','Garcia Garcia, Maria Elena','DENEGADO','45005537','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592001');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('51365216Y','Gomez Jimeno, Clara','OBTIENE','OBTIENE PLAZA','45005483','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('47060021C','Gonzalez Lara, Encarnacion','DENEGADO','45005483','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('06561569Z','Gonzalez Rodriguez, Maria Concepc','DENEGADO','02004094','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('24219730V','Jaldo Vallejo, Manuel','DENEGADO','02004355','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('74719753K','Jeronimo Fernandez, Jose Antonio','PEND. DESTINO','NO TENIA DEST. ANTERIOR','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','SECUNDARIA');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('42811971R','Junco Ezquerra, Antonio Jesus','DENEGADO','13004596','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05658728S','Llorens Martin, Francisco Javier','DENEGADO','13004596','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592008');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('03112097J','Lopez Martinez, Esmeralda','PEND. DESTINO','NO TENIA DEST. ANTERIOR','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','SECUNDARIA');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('50831043P','Luengo Alonso, Alfonso','OBTIENE','OBTIENE PLAZA','28034431','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('50148660N','Martin Montero, M Concepcion','OBTIENE','OBTIENE PLAZA','02004355','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592008');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05199367X','Martinez Garcia, Hilario','DENEGADO','02004343','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('07841191P','Mateos Polo, Delfina','DENEGADO','45005483','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592001');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('04176611H','Melchor Ortiz, Concepcion','DENEGADO','13004596','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592001');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('0606049E','Mellon Agreda, Anne','DENEGADO','02004343','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('51363772B','Morato Lara, Maria Isabel','DENEGADO','13004596','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592012');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('50322087L','Muñoz Lobo, Miguel Angel','DENEGADO','19003191','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('07548049R','Navarro Molina, Pablo E.','DENEGADO','02004343','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05644790S','Pascual Parra, Alfonsa','DENEGADO','13004596','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('1517425T','Pfeiffer ., Antje','DENEGADO','02004471','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592001');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('09296100Y','Prieto Delgado, Adolfo','DENEGADO','02004094','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('11972434Z','Prieto Seisdedos, Adela','DENEGADO','13004134','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592008');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('52132448G','Sanchez Calamardo, M Milagros','DENEGADO','45005483','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592001');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05904574Z','Trinidad Mora, Maria Paz','DENEGADO','19003191','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0592008');
+--------------------

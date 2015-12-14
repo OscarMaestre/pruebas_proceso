@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# coding=utf-8
 
 import re
 import sys, os
@@ -17,7 +17,7 @@ DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
 import ListaCampos
-
+import utilidades
 
 
 archivo=sys.argv[1]
@@ -27,6 +27,49 @@ re_especialidad="[PWB0]59([0-9]{4})"
 re_codigo_centro="[0-9]{8}"
 re_codigo_centro_ciudad_real="^13[0-9]{6}$"
 re_fecha="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+
+re_cuerpo_plaza_no_maestros="CUE: (?P<cuerpo>059[0-9])[ ]+ PLZ:[ ]+(?P<plaza>[0-9]+)"
+expr_regular_cuerpo_no_maestros=re.compile(re_cuerpo_plaza_no_maestros)
+
+
+re_cuerpo_plaza_maestros="ESPEC\.:[ ]+(?P<especialidad>[0-9]{3})"
+expr_regular_cuerpo_maestros=re.compile(re_cuerpo_plaza_maestros)
+
+def get_cuerpo_y_plaza(linea,linea_siguiente,  cuerpo_pasado="EEMM"):
+    cuerpo=""
+    plaza=""
+    expr_regular=None
+    if cuerpo_pasado=="EEMM":
+        expr_regular=expr_regular_cuerpo_no_maestros
+        concordancia=expr_regular.search(linea)
+        if concordancia:
+            cuerpo=concordancia.group("cuerpo")
+            plaza=concordancia.group("plaza")
+            #print ("Plaza:"+plaza)
+        else:
+            return "SECUNDARIA"
+    else:
+        cuerpo="0597"
+        #print(linea)
+        expr_regular=expr_regular_cuerpo_maestros
+        concordancia=expr_regular.search(linea)
+        if concordancia:
+            plaza=concordancia.group("especialidad")
+            #print ("Plaza:"+plaza)
+        else:
+            return "PRIMARIA"
+    especialidad=cuerpo+plaza
+    #Plaza en castellano
+    if linea_siguiente.find("BIL: 0")!=-1:
+        pass
+    #Plaza bilingüe ingles
+    if linea_siguiente.find("BIL: 1")!=-1:
+        especialidad="B"+especialidad[1:]
+    #Plaza bilingüe frances
+    if linea_siguiente.find("BIL: 2")!=-1:
+        especialidad="F"+especialidad[1:]
+    return especialidad
+
 
 re_cuerpo="CUERPO: 0[0-9]{3}"
 
@@ -175,15 +218,27 @@ for i in range(0, total_lineas):
             lista_campos.append("PEND. DESTINO")
             campos_sql.anadir('auxiliar', "PEND. DESTINO", ListaCampos.ListaCampos.CADENA)
             obtiene_plaza=False
+        
         if (linea_contiene_patron(re_cuerpo, linea)):
             datos_cuerpo=extraer_patron(re_cuerpo, linea)
             especialidad=datos_cuerpo[8:]
             if especialidad=="0597":
-                especialidad="PRIMARIA"
+                if obtiene_plaza:
+                    especialidad=get_cuerpo_y_plaza(lineas[i+5], lineas[i+6], "Maestros")
+                else:
+                    especialidad=get_cuerpo_y_plaza(lineas[i+3], lineas[i+4], "Maestros")
             else:
-                especialidad="SECUNDARIA"
+                if obtiene_plaza:
+                    especialidad=get_cuerpo_y_plaza(lineas[i+5], lineas[i+6], "EEMM")
+                else:
+                    especialidad=get_cuerpo_y_plaza(lineas[i+3], lineas[i+4], "EEMM")
         else:
-            especialidad="PRIMARIA"
+                if (linea_contiene_patron(re_dni, linea)):
+                    if obtiene_plaza:
+                        especialidad=get_cuerpo_y_plaza(lineas[i+5], lineas[i+6], "Maestros")
+                    else:
+                        especialidad=get_cuerpo_y_plaza(lineas[i+3], lineas[i+4], "Maestros")
+            
         codigo_destino_anterior=extraer_codigo_centro(lineas[i+3])
         if (codigo_destino_anterior=="No concordancia"):
             codigo_destino_anterior="NO TENIA DEST. ANTERIOR"
@@ -228,7 +283,7 @@ for i in range(0, total_lineas):
         campos_sql.anadir('especialidad', especialidad, ListaCampos.ListaCampos.CADENA)
         lista_inserts_sql3.append(campos_sql.generar_insert("nombramientos"))
         sql=generar_linea_sql2(lista_campos)
-        print(sql)
+        #print(sql)
         continue
     
 #print(final_sql)
@@ -236,4 +291,5 @@ archivo.close()
 
 
 #Ahora se hacen las inserciones
+GestorDB.BD_RESULTADOS.activar_depuracion()
 GestorDB.BD_RESULTADOS.ejecutar_sentencias(lista_inserts_sql3) 

@@ -1,30 +1,90 @@
-05923395K:Arenas Galiana, Jesus Manuel:PEND. DESTINO:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR
-70647741K:Barba Ruiz, Maria Prado:DENEGADO:13004122:EA ANTONIO LÓPEZ:TOMELLOSO:CIUDAD REAL:13004122:EA ANTONIO LÓPEZ:EA ANTONIO LÓPEZ:CIUDAD REAL
-47051215T:Beamud Montero, Julia:DENEGADO:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA:CUENCA:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA
-12763176Q:Calleja Castro, Maria Jesus:DENEGADO:19008101:EA DE GUADALAJARA:GUADALAJARA:GUADALAJARA:19008101:EA DE GUADALAJARA:EA DE GUADALAJARA:GUADALAJARA
-05686639G:Cobo Segade, Antonia:OBTIENE PLAZA:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA:CUENCA:14003198:E.A. MATEO INURRIA:CORDOBA:CORDOBA
-25716180H:Cuberos Nuñez, Teresa:DENEGADO:45005057:EA TALAVERA:TALAVERA DE LA REINA:TOLEDO:45005057:EA TALAVERA:EA TALAVERA:TOLEDO
-00389358Z:Del Cerro Delgado, Margarita Del:OBTIENE PLAZA:45003930:EA TOLEDO:TOLEDO:TOLEDO:28072508:ESCUELA SUPERIOR DE DISEÑO::MADRID
-09430972Y:Garcia Otero, Emilio:OBTIENE PLAZA:13004122:EA ANTONIO LÓPEZ:TOMELLOSO:CIUDAD REAL:33027515:ESCUELA SUPERIOR DE ARTE:AVILES:ASTURIAS
-52756416M:Garcia Palacios, Maria Del Carmen:DENEGADO:45005057:EA TALAVERA:TALAVERA DE LA REINA:TOLEDO:45005057:EA TALAVERA:EA TALAVERA:TOLEDO
-04183896N:Gomez Molero, Eduardo:DENEGADO:45005057:EA TALAVERA:TALAVERA DE LA REINA:TOLEDO:45005057:EA TALAVERA:EA TALAVERA:TOLEDO
-06267095D:Gonzalez Bravo, Monica:PEND. DESTINO:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR
-33305294Y:Hernandez Dieguez, Maria Victoria:DENEGADO:19008101:EA DE GUADALAJARA:GUADALAJARA:GUADALAJARA:19008101:EA DE GUADALAJARA:EA DE GUADALAJARA:GUADALAJARA
-74641971W:Jaimez Perez, Jose Angel:PEND. DESTINO:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR
-04583252L:Jorge Blanco, Gemma Isabel:DENEGADO:13004122:EA ANTONIO LÓPEZ:TOMELLOSO:CIUDAD REAL:13004122:EA ANTONIO LÓPEZ:EA ANTONIO LÓPEZ:CIUDAD REAL
-70641596V:Lopez Ferrer, Ana:DENEGADO:19008101:EA DE GUADALAJARA:GUADALAJARA:GUADALAJARA:19008101:EA DE GUADALAJARA:EA DE GUADALAJARA:GUADALAJARA
-77596625F:Lopez-Leiton Ramos, Rocio:DENEGADO:45003930:EA TOLEDO:TOLEDO:TOLEDO:45003930:EA TOLEDO:EA TOLEDO:TOLEDO
-05649036Y:Lozano Crespo, Margarita:DENEGADO:45003930:EA TOLEDO:TOLEDO:TOLEDO:45003930:EA TOLEDO:EA TOLEDO:TOLEDO
-52380593W:Manchado Gonzalez, Luis:DENEGADO:13004122:EA ANTONIO LÓPEZ:TOMELLOSO:CIUDAD REAL:13004122:EA ANTONIO LÓPEZ:EA ANTONIO LÓPEZ:CIUDAD REAL
-70577340T:Martin De Bernardo Bellon, Jose M:DENEGADO:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA:CUENCA:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA
-31217274H:Mora Millan, Aurelia:DENEGADO:13001406:EA PEDRO ALMODÓVAR:CIUDAD REAL:CIUDAD REAL:13001406:EA PEDRO ALMODÓVAR:EA PEDRO ALMODÓVAR:CIUDAD REAL
-71215056H:Navarro Lopez, Ana:DENEGADO:02007794:EA ALBACETE:ALBACETE:ALBACETE:02007794:EA ALBACETE:EA ALBACETE:ALBACETE
-03427248H:Rodrigo Rojo, Carmen:OBTIENE PLAZA:45003930:EA TOLEDO:TOLEDO:TOLEDO:28037855:ESCUELA DE ARTE DE MADRID N.::MADRID
-10087174H:Salgado Rodriguez, Jose Manuel:DENEGADO:13001406:EA PEDRO ALMODÓVAR:CIUDAD REAL:CIUDAD REAL:13001406:EA PEDRO ALMODÓVAR:EA PEDRO ALMODÓVAR:CIUDAD REAL
-07866434C:Salinero Garcia, Emilio Jose:DENEGADO:19008101:EA DE GUADALAJARA:GUADALAJARA:GUADALAJARA:19008101:EA DE GUADALAJARA:EA DE GUADALAJARA:GUADALAJARA
-47051291F:Sanchez Izquierdo, Juan Antonio:PEND. DESTINO:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR:NO TENIA DEST. ANTERIOR
-05690045Y:Sanchez Romano, Gema Maria:DENEGADO:19008101:EA DE GUADALAJARA:GUADALAJARA:GUADALAJARA:19008101:EA DE GUADALAJARA:EA DE GUADALAJARA:GUADALAJARA
-03105124D:Sanchez Yela, Luis:DENEGADO:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA:CUENCA:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA
-11792721T:Sanz Del Cerro, Pedro Agustin:DENEGADO:02007794:EA ALBACETE:ALBACETE:ALBACETE:02007794:EA ALBACETE:EA ALBACETE:ALBACETE
-04590050D:Solera Orbis, Alberto Javier:DENEGADO:13004122:EA ANTONIO LÓPEZ:TOMELLOSO:CIUDAD REAL:13004122:EA ANTONIO LÓPEZ:EA ANTONIO LÓPEZ:CIUDAD REAL
-30662518E:Velasco Gonzalez, Amelia:DENEGADO:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA:CUENCA:16008667:EA JOSÉ MARÍA CRUZ NOVILLO:EA JOSÉ MARÍA CRUZ NOVILLO:CUENCA
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05923395K','Arenas Galiana, Jesus Manuel','PEND. DESTINO','NO TENIA DEST. ANTERIOR','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','SECUNDARIA');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('70647741K','Barba Ruiz, Maria Prado','DENEGADO','13004122','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595507');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('47051215T','Beamud Montero, Julia','DENEGADO','16008667','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595512');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('12763176Q','Calleja Castro, Maria Jesus','DENEGADO','19008101','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595512');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05686639G','Cobo Segade, Antonia','OBTIENE','OBTIENE PLAZA','14003198','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595509');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('25716180H','Cuberos Nuñez, Teresa','DENEGADO','45005057','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595507');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('00389358Z','Del Cerro Delgado, Margarita Del','OBTIENE','OBTIENE PLAZA','28072508','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595508');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('09430972Y','Garcia Otero, Emilio','OBTIENE','OBTIENE PLAZA','33027515','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595512');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('52756416M','Garcia Palacios, Maria Del Carmen','DENEGADO','45005057','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595512');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('04183896N','Gomez Molero, Eduardo','DENEGADO','45005057','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595515');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('06267095D','Gonzalez Bravo, Monica','PEND. DESTINO','NO TENIA DEST. ANTERIOR','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','SECUNDARIA');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('33305294Y','Hernandez Dieguez, Maria Victoria','DENEGADO','19008101','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595515');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('74641971W','Jaimez Perez, Jose Angel','PEND. DESTINO','NO TENIA DEST. ANTERIOR','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','SECUNDARIA');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('04583252L','Jorge Blanco, Gemma Isabel','DENEGADO','13004122','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595509');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('70641596V','Lopez Ferrer, Ana','DENEGADO','19008101','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595507');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('77596625F','Lopez-Leiton Ramos, Rocio','DENEGADO','45003930','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595522');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05649036Y','Lozano Crespo, Margarita','DENEGADO','45003930','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595507');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('52380593W','Manchado Gonzalez, Luis','DENEGADO','13004122','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595522');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('70577340T','Martin De Bernardo Bellon, Jose M','DENEGADO','16008667','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595516');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('31217274H','Mora Millan, Aurelia','DENEGADO','13001406','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595507');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('71215056H','Navarro Lopez, Ana','DENEGADO','02007794','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595522');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('03427248H','Rodrigo Rojo, Carmen','OBTIENE','OBTIENE PLAZA','28037855','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595523');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('10087174H','Salgado Rodriguez, Jose Manuel','DENEGADO','13001406','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595508');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('07866434C','Salinero Garcia, Emilio Jose','DENEGADO','19008101','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595507');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('47051291F','Sanchez Izquierdo, Juan Antonio','PEND. DESTINO','NO TENIA DEST. ANTERIOR','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','SECUNDARIA');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('05690045Y','Sanchez Romano, Gema Maria','DENEGADO','19008101','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595520');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('03105124D','Sanchez Yela, Luis','DENEGADO','16008667','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595515');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('11792721T','Sanz Del Cerro, Pedro Agustin','DENEGADO','02007794','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595515');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('04590050D','Solera Orbis, Alberto Javier','DENEGADO','13004122','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595512');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_procedimiento,fecha_inicio,fecha_fin,especialidad) values ('30662518E','Velasco Gonzalez, Amelia','DENEGADO','16008667','Concurso traslados resuelto Mayo 2015','2015-05-10','01-09-2015','30-06-2100','0595522');
+--------------------
