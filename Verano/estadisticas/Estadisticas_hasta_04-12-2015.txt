@@ -1,0 +1,117 @@
+Cantidad de adjudicaciones en esta estadistica:21
+	Procedimiento:Adjudicacion 28-08-2015, plazas: 3925
+	Procedimiento:Adjudicacion 08-09-2015, plazas:  642
+	Procedimiento:Adjudicacion 18-09-2015, plazas:  772
+	Procedimiento:Adjudicacion 02-10-2015, plazas:   46
+	Procedimiento:Adjudicacion 05-10-2015, plazas:   75
+	Procedimiento:Adjudicacion 07-10-2015, plazas:   78
+	Procedimiento:Adjudicacion 13-10-2015, plazas:   84
+	Procedimiento:Adjudicacion 19-10-2015, plazas:   53
+	Procedimiento:Adjudicacion 21-10-2015, plazas:   65
+	Procedimiento:Adjudicacion 26-10-2015, plazas:   50
+	Procedimiento:Adjudicacion 28-10-2015, plazas:   27
+	Procedimiento:Adjudicacion 02-11-2015, plazas:   47
+	Procedimiento:Adjudicacion 04-11-2015, plazas:   38
+	Procedimiento:Adjudicacion 09-11-2015, plazas:   15
+	Procedimiento:Adjudicacion 11-11-2015, plazas:   35
+	Procedimiento:Adjudicacion 16-11-2015, plazas:   54
+	Procedimiento:Adjudicacion 18-11-2015, plazas:   27
+	Procedimiento:Adjudicacion 23-11-2015, plazas:   56
+	Procedimiento:Adjudicacion 25-11-2015, plazas:   27
+	Procedimiento:Adjudicacion 30-11-2015, plazas:   13
+	Procedimiento:Adjudicacion 02-12-2015, plazas:   39
+
+========================================================
+
+Total de plazas adjudicadas: 6168
+
+========================================================
+
+Desglose por cuerpos:
+	 Cuerpo:PRIMARIA                             3229 plazas (52.35% del total)
+	 Cuerpo:SECUNDARIA                           2210 plazas (35.83% del total)
+	 Cuerpo:PROF TEC FP                           426 plazas ( 6.91% del total)
+	 Cuerpo:EOI                                    79 plazas ( 1.28% del total)
+	 Cuerpo:CONSERVATORIOS                        149 plazas ( 2.42% del total)
+	 Cuerpo:ARTES PLASTICAS                        67 plazas ( 1.09% del total)
+	 Cuerpo:MAESTROS TALLER ARTES PLASTICAS         8 plazas ( 0.13% del total)
+
+========================================================
+
+Desglose por provincias
+	Plazas en ALBACETE       :  754 (12.22% del total)
+	Plazas en CIUDAD REAL    : 1257 (20.38% del total)
+	Plazas en CUENCA         :  627 (10.17% del total)
+	Plazas en GUADALAJARA    : 1159 (18.79% del total)
+	Plazas en TOLEDO         : 2371 (38.44% del total)
+
+========================================================
+
+Desglose por provincias y cuerpos
+	ALBACETE por PRIMARIA         :  294 ( 4.77% del total)
+	ALBACETE por EEMM             :  460 ( 7.46% del total)
+	CIUDAD REAL por PRIMARIA      :  625 (10.13% del total)
+	CIUDAD REAL por EEMM          :  632 (10.25% del total)
+	CUENCA por PRIMARIA           :  268 ( 4.35% del total)
+	CUENCA por EEMM               :  359 ( 5.82% del total)
+	GUADALAJARA por PRIMARIA      :  647 (10.49% del total)
+	GUADALAJARA por EEMM          :  512 ( 8.30% del total)
+	TOLEDO por PRIMARIA           : 1395 (22.62% del total)
+	TOLEDO por EEMM               :  976 (15.82% del total)
+
+========================================================
+
+Bilingüismo
+	Plazas sin perfil bilingüe: 5207 (84.42% del total)
+	Plazas con perfil ingles:    929 (15.06% del total)
+	Plazas con perfil francés:    32 (0.52% del total)
+
+========================================================
+
+Desglose por tipo de jornada
+	Plazas a tiempo completo:4648 (75.36% del total)
+	Plazas a tiempo parcial :1520 (24.64% del total)
+
+========================================================
+
+Desglose por especialidades (solo las 30 mas significativas, si las hay)
+	IDIOMA EXTRANJERO INGLÉS (MAESTROS)                     plazas: 597  ( 9.68% del total )
+	EDUCACIÓN INFANTIL (MAESTROS)                           plazas: 420  ( 6.81% del total )
+	EDUCACIÓN PRIMARIA (MAESTROS)                           plazas: 394  ( 6.39% del total )
+	EDUCACIÓN INFANTIL (MAESTROS)(CON BIL.INGLÉS)           plazas: 290  ( 4.70% del total )
+	PEDAGOGÍA TERAPÉUTICA (MAESTROS)                        plazas: 201  ( 3.26% del total )
+	EDUCACIÓN PRIMARIA (MAESTROS)(CON BIL.INGLÉS)           plazas: 177  ( 2.87% del total )
+	INGLÉS (SECUNDARIA)                                     plazas: 176  ( 2.85% del total )
+	EDUCACIÓN FÍSICA (MAESTROS)                             plazas: 176  ( 2.85% del total )
+	LENGUA CASTELLANA Y LITERATURA (SECUNDARIA)             plazas: 146  ( 2.37% del total )
+	AUDICIÓN Y LENGUAJE (MAESTROS)                          plazas: 141  ( 2.29% del total )
+	MÚSICA (MAESTROS)                                       plazas: 122  ( 1.98% del total )
+	EDUCACIÓN INFANTIL (MAESTROS)(CON BIL.INGLÉS) T.PARCIAL plazas: 112  ( 1.82% del total )
+	INGLÉS (SECUNDARIA) T.PARCIAL                           plazas: 108  ( 1.75% del total )
+	GEOGRAFÍA E HISTORIA (SECUNDARIA)                       plazas:  99  ( 1.61% del total )
+	MATEMÁTICAS (SECUNDARIA)                                plazas:  98  ( 1.59% del total )
+	ORIENTACIÓN EDUCATIVA (SECUNDARIA)                      plazas:  93  ( 1.51% del total )
+	IDIOMA EXTRANJERO INGLÉS (MAESTROS) T.PARCIAL           plazas:  80  ( 1.30% del total )
+	BIOLOGÍA Y GEOLOGÍA (SECUNDARIA)                        plazas:  70  ( 1.13% del total )
+	AUDICIÓN Y LENGUAJE (MAESTROS) T.PARCIAL                plazas:  69  ( 1.12% del total )
+	LENGUA CASTELLANA Y LITERATURA (SECUNDARIA) T.PARCIAL   plazas:  66  ( 1.07% del total )
+	GEOGRAFÍA E HISTORIA (SECUNDARIA) T.PARCIAL             plazas:  61  ( 0.99% del total )
+	MATEMÁTICAS (SECUNDARIA) T.PARCIAL                      plazas:  60  ( 0.97% del total )
+	EDUCACIÓN FÍSICA (MAESTROS)(CON BIL.INGLÉS)             plazas:  57  ( 0.92% del total )
+	MÚSICA (MAESTROS)(CON BIL.INGLÉS)                       plazas:  57  ( 0.92% del total )
+	PEDAGOGÍA TERAPÉUTICA (MAESTROS) T.PARCIAL              plazas:  57  ( 0.92% del total )
+	FILOSOFÍA (SECUNDARIA)                                  plazas:  54  ( 0.88% del total )
+	FILOSOFÍA (SECUNDARIA) T.PARCIAL                        plazas:  54  ( 0.88% del total )
+	ORIENTACIÓN EDUCATIVA (SECUNDARIA) T.PARCIAL            plazas:  51  ( 0.83% del total )
+	FRANCÉS (SECUNDARIA) T.PARCIAL                          plazas:  47  ( 0.76% del total )
+	TECNOLOGÍA (SECUNDARIA)                                 plazas:  44  ( 0.71% del total )
+
+========================================================
+
+Duración de las adjudicaciones
+	Mayor duración      : 10 meses y  3 dias (303 dias en total)
+	Menor duración      :  0 meses y -10 dias (-10 dias en total)
+	Media de duración   :  7 meses y 28 dias (238 dias en total)
+
+========================================================
+
