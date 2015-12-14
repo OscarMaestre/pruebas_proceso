@@ -40,6 +40,9 @@ expr_regular_centro_baremo_traslados=re.compile(re_centro_baremo_traslados)
 
 re_resulta="[0-9]{8} [0-9]{3}"
 expr_regular_resulta=re.compile(re_resulta)
+
+re_cifras_en_plantillas="(\-|[0-9]+)"
+expr_regular_cifras_en_plantillas=re.compile(re_cifras_en_plantillas)
 BORRAR=""
 COPIAR=""
 CONCAT=""
@@ -155,6 +158,19 @@ def extraer_dni(linea):
 
 def extraer_decimal(linea):
     return extraer_patron(expr_regular_decimales, linea)
+
+def extraer_cifras_plantillas(linea):
+    concordancia=expr_regular_cifras_en_plantillas.search(linea)
+    if concordancia:
+        cifras=expr_regular_cifras_en_plantillas.findall(linea)
+        lista_cifras=[]
+        for c in cifras:
+            if (c=='-'):
+                lista_cifras.append(0)
+            else:
+                lista_cifras.append(int(c))
+        return lista_cifras
+    return (DECIMAL_NO_ENCONTRADO, DECIMAL_NO_ENCONTRADO, PATRON_NO_ENCONTRADO)
 
 def extraer_todos_decimales(linea):
     concordancia=expr_regular_decimales.search(linea)

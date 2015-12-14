@@ -34,8 +34,18 @@ create table if not exists {0}(
     idioma character(30),
     tiempo_parcial character(20)
 );
+"""
 
 
+NOMBRE_TABLA_PLANTILLAS="plantillas"
+SQL_CREACION_PLANTILLAS="""
+CREATE TABLE if not exists {0} (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    anio integer,
+    codigo_centro char(10),
+    codigo_especialidad char(150),
+    tipo_plaza char(20),
+    cantidad integer   );
 """
 
 if (platform.system()=="Linux"):
