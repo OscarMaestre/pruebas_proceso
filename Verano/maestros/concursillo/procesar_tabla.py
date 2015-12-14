@@ -205,6 +205,7 @@ for i in range(0, total_lineas):
         campos_sql.anadir('procedimiento', "Concursillo Maestros resuelto en Junio-15", ListaCampos.ListaCampos.CADENA)
         campos_sql.anadir('fecha_inicio', "01-09-2015", ListaCampos.ListaCampos.CADENA)
         campos_sql.anadir('fecha_fin', "30-06-2015", ListaCampos.ListaCampos.CADENA)
+        campos_sql.anadir("fecha_procedimiento", "2015-07-28")
         campos_sql.anadir('especialidad', "PRIMARIA", ListaCampos.ListaCampos.CADENA)
         lista_inserts_sql3.append(campos_sql.generar_insert("nombramientos"))
         sql=generar_linea_sql2(lista_campos)

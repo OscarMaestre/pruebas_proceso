@@ -125,6 +125,7 @@ for i in range(0, total_lineas):
         lista_campos_para_insertar.anadir("fecha_inicio", "01-09-2015", ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("fecha_fin", "30-06-2016", ListaCampos.ListaCampos.CADENA)
         lista_campos.append(codigo_centro)
+        lista_campos_para_insertar.anadir("fecha_procedimiento", "2015-08-28")
         lista_campos_para_insertar.anadir("codigo_centro", codigo_centro, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("procedimiento", "Adjudicacion 28-08-2015", ListaCampos.ListaCampos.CADENA)
         lista_campos.append(nombre_centro)

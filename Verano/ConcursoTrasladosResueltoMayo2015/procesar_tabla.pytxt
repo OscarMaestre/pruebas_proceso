@@ -221,6 +221,7 @@ for i in range(0, total_lineas):
         lista_campos.append(nombre_nueva_localidad)
         lista_campos.append(nombre_nueva_provincia)
         campos_sql.anadir('procedimiento', "Concurso traslados resuelto Mayo 2015", ListaCampos.ListaCampos.CADENA)
+        campos_sql.anadir('fecha_procedimiento', "2015-05-10" )
         campos_sql.anadir('fecha_inicio', "01-09-2015", ListaCampos.ListaCampos.CADENA)
         campos_sql.anadir('fecha_fin', "30-06-2100", ListaCampos.ListaCampos.CADENA)
         #print ("Especialidad:"+especialidad)

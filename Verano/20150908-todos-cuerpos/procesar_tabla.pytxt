@@ -130,6 +130,7 @@ for i in range(0, total_lineas):
         lista_campos_para_insertar.anadir("fecha_inicio", fecha_1, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("fecha_fin", fecha_2, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("procedimiento", "Adjudicacion 08-09-2015", ListaCampos.ListaCampos.CADENA)
+        lista_campos_para_insertar.anadir("fecha_procedimiento", "2015-09-08")
         lista_campos_para_insertar.anadir("especialidad", codigo_especialidad, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("codigo_centro", codigo_centro, ListaCampos.ListaCampos.CADENA)
         
