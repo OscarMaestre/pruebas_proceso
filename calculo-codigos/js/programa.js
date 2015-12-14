@@ -45,6 +45,9 @@ function calcular_digito_control(texto){
     if (primer_digito_de_control==11) {
         primer_digito_de_control=0
     }
+    if (primer_digito_de_control==10) {
+        primer_digito_de_control=1
+    }
     
     multiplicadores_segundo_digito=[1, 2, 4, 8, 5, 10, 9, 7, 3, 6]
     suma_segundo_digito_control=0
@@ -62,7 +65,7 @@ function calcular_digito_control(texto){
     if (segundo_digito_de_control==10) {
         segundo_digito_de_control=1
     }
-    return primer_digito_de_control.toString() +  segundo_digito_de_control.toString()
+    return primer_digito_de_control.toString() + segundo_digito_de_control.toString()
 }
 
 

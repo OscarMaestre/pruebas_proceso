@@ -17,6 +17,7 @@ CREATE TABLE if not exists nombramientos (
     nombre_completo character(160),
     codigo_centro character(14),
     procedimiento character(40),
+    fecha_procedimiento date not null, 
     fecha_inicio character(20),
     fecha_fin character(20),
     especialidad character(150),

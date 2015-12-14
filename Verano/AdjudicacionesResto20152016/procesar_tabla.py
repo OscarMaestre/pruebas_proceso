@@ -139,18 +139,27 @@ def corregir_codigo_especialidad(codigo_especialidad, linea):
             nuevo_codigo="0"+codigo_especialidad[1:]
             return nuevo_codigo
     
-    
+def convertir_fecha_a_formato_iso(fecha):
+    trozos=fecha.split("-")
+    dia=trozos[0]
+    mes=trozos[1]
+    anio=trozos[2]
+    return "{0}-{1}-{2}".format ( anio, mes, dia )
+
 archivo=open(archivo,"r", encoding="utf-8")
 lineas=archivo.readlines()
 total_lineas=len(lineas)
 codigo_especialidad=""
 lista_inserts_sql3=[]
 fecha_adjudicacion=FECHA_NO_ENCONTRADA
+fecha_adjudicacion_formato_iso=FECHA_NO_ENCONTRADA
 for i in range(0, total_lineas):
     lista_campos_para_insertar=ListaCampos.ListaCampos()
     linea=lineas[i]
     if fecha_adjudicacion==FECHA_NO_ENCONTRADA:
         fecha_adjudicacion=obtener_fecha_adjudicacion(linea)
+        if (fecha_adjudicacion!=FECHA_NO_ENCONTRADA):
+            fecha_adjudicacion_formato_iso=convertir_fecha_a_formato_iso(fecha_adjudicacion)
     if i+2==total_lineas:
         break
     linea_siguiente=lineas[i+1]
@@ -195,6 +204,7 @@ for i in range(0, total_lineas):
         lista_campos_para_insertar.anadir("fecha_inicio", fecha_inicio, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("fecha_fin", fecha_fin, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("procedimiento", "Adjudicacion "+fecha_adjudicacion, ListaCampos.ListaCampos.CADENA)
+        lista_campos_para_insertar.anadir("fecha_procedimiento", fecha_adjudicacion_formato_iso, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("especialidad", codigo_especialidad, ListaCampos.ListaCampos.CADENA)
         lista_campos_para_insertar.anadir("codigo_centro", codigo_centro, ListaCampos.ListaCampos.CADENA)
         lista_inserts_sql3.append(lista_campos_para_insertar.generar_insert("nombramientos"))
