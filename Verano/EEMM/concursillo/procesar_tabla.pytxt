@@ -18,7 +18,7 @@ DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
 import ListaCampos
-
+import utilidades
 
 
 archivo=sys.argv[1]
@@ -151,7 +151,7 @@ print (preludio_sql)
 for i in range(0, total_lineas):
     linea=lineas[i]
     lista_campos=[]
-    
+    especialidad="SECUNDARIA"
     campos_sql=ListaCampos.ListaCampos()
     if (linea_contiene_patron(re_dni, linea)):
         dni=extraer_patron(re_dni, linea)
@@ -165,10 +165,12 @@ for i in range(0, total_lineas):
         if (linea_contiene_patron("DENEGADO", linea)):
             lista_campos.append("DENEGADO")
             campos_sql.anadir('auxiliar', "DENEGADO", ListaCampos.ListaCampos.CADENA)
+            especialidad=utilidades.get_cuerpo_y_plaza(lineas[i+3], lineas[i+4])
         else:
             lista_campos.append("OBTIENE PLAZA")
             campos_sql.anadir('auxiliar', "OBTIENE", ListaCampos.ListaCampos.CADENA)
             obtiene_plaza=True
+            especialidad=utilidades.get_cuerpo_y_plaza(lineas[i+5], lineas[i+7])
         codigo_destino_anterior=extraer_codigo_centro(lineas[i+3])
         lista_campos.append(codigo_destino_anterior)
         
@@ -200,7 +202,7 @@ for i in range(0, total_lineas):
         campos_sql.anadir('fecha_inicio', "01-09-2015", ListaCampos.ListaCampos.CADENA)
         campos_sql.anadir("fecha_procedimiento", "2015-07-28")
         campos_sql.anadir('fecha_fin', "30-06-2015", ListaCampos.ListaCampos.CADENA)
-        campos_sql.anadir('especialidad', "SECUNDARIA", ListaCampos.ListaCampos.CADENA)
+        campos_sql.anadir('especialidad', especialidad, ListaCampos.ListaCampos.CADENA)
         lista_inserts_sql3.append(campos_sql.generar_insert("nombramientos"))
         sql=generar_linea_sql(lista_campos)
         print(sql)
@@ -211,4 +213,5 @@ archivo.close()
 
 
 #Ahora se hacen las inserciones
+GestorDB.BD_RESULTADOS.activar_depuracion()
 GestorDB.BD_RESULTADOS.ejecutar_sentencias(lista_inserts_sql3) 

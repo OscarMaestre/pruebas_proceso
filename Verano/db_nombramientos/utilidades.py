@@ -43,6 +43,20 @@ expr_regular_resulta=re.compile(re_resulta)
 
 re_cifras_en_plantillas="(\-|[0-9]+)"
 expr_regular_cifras_en_plantillas=re.compile(re_cifras_en_plantillas)
+
+
+re_cuerpo_plaza_no_maestros="CUE: (?P<cuerpo>059[0-9])[ ]+ PLZ:[ ]+(?P<plaza>[0-9]+)"
+expr_regular_cuerpo_no_maestros=re.compile(re_cuerpo_plaza_no_maestros)
+
+
+re_cuerpo_plaza_maestros="ESPEC\.:[ ]+(?P<especialidad>[0-9]{3})"
+expr_regular_cuerpo_maestros=re.compile(re_cuerpo_plaza_maestros)
+
+
+
+re_cuerpo_con_especialidad="[0BFR]59[0-7][0-9]{3}"
+expr_regular_cuerpo_con_especialidad=re.compile(re_cuerpo_con_especialidad)
+
 BORRAR=""
 COPIAR=""
 CONCAT=""
@@ -90,7 +104,40 @@ def get_parametros(fichero_configuracion_remitente):
     
     return (usuario, clave, servidor, puerto)
 
-
+def get_cuerpo_y_plaza(linea,linea_siguiente,  cuerpo_pasado="EEMM"):
+    cuerpo=""
+    plaza=""
+    expr_regular=None
+    if cuerpo_pasado=="EEMM":
+        expr_regular=expr_regular_cuerpo_no_maestros
+        concordancia=expr_regular.search(linea)
+        if concordancia:
+            cuerpo=concordancia.group("cuerpo")
+            plaza=concordancia.group("plaza")
+            #print ("Plaza:"+plaza)
+        else:
+            return "SECUNDARIA"
+    else:
+        cuerpo="0597"
+        #print(linea)
+        expr_regular=expr_regular_cuerpo_maestros
+        concordancia=expr_regular.search(linea)
+        if concordancia:
+            plaza=concordancia.group("especialidad")
+            #print ("Plaza:"+plaza)
+        else:
+            return "PRIMARIA"
+    especialidad=cuerpo+plaza
+    #Plaza en castellano
+    if linea_siguiente.find("BIL: 0")!=-1:
+        pass
+    #Plaza bilingüe ingles
+    if linea_siguiente.find("BIL: 1")!=-1:
+        especialidad="B"+especialidad[1:]
+    #Plaza bilingüe frances
+    if linea_siguiente.find("BIL: 2")!=-1:
+        especialidad="F"+especialidad[1:]
+    return especialidad
     
 def escribir_en_fichero(texto, nombre_fichero):
     with open (nombre_fichero, "w") as f:
@@ -143,6 +190,13 @@ def get_lineas_fichero(nombre_fichero):
         lineas=f.readlines()
         f.close()
     return lineas
+
+
+def extraer_cuerpo_con_especialidad(linea):
+    return extraer_patron ( expr_regular_cuerpo_con_especialidad, linea )
+
+def extraer_especialidad_maestros(linea):
+    return extraer_patron ( expr_regular_cuerpo_maestros, linea )
 
 def extraer_patron(exp_regular_compilada, linea):
     concordancia=exp_regular_compilada.search(linea)
