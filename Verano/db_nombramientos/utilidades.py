@@ -97,12 +97,13 @@ def get_parametros(fichero_configuracion_remitente):
     with open(fichero_configuracion_remitente) as f:
         lineas=f.readlines()
     
-    usuario =   lineas[0].strip()
-    clave   =   lineas[1].strip()
-    servidor=   lineas[2].strip()
-    puerto  =   lineas[3].strip()
-    
-    return (usuario, clave, servidor, puerto)
+    usuario         =   lineas[0].strip()
+    clave           =   lineas[1].strip()
+    servidor_smtp   =   lineas[2].strip()
+    puerto_smtp     =   lineas[3].strip()
+    servidor_pop    =   lineas[4].strip()
+    puerto_pop      =   lineas[5].strip()
+    return (usuario, clave, servidor_smtp, puerto_smtp, servidor_pop, puerto_pop)
 
 def get_cuerpo_y_plaza(linea,linea_siguiente,  cuerpo_pasado="EEMM"):
     cuerpo=""
