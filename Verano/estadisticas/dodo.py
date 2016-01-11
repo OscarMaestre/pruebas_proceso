@@ -28,7 +28,7 @@ import utilidades
 fecha=datetime.date.today()
 la_fecha=fecha.strftime("%d-%m-%Y")
 
-(usuario, clave, servidor, puerto)=utilidades.get_parametros(utilidades.FICHERO_CONFIGURACION_EMAIL)
+(usuario, clave, servidor, puerto, servidor_pop, puerto_pop)=utilidades.get_parametros(utilidades.FICHERO_CONFIGURACION_EMAIL)
 
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
