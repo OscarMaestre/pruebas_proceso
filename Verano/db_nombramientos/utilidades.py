@@ -67,6 +67,7 @@ if platform.system()=="Linux":
     CONCAT="cat "
     MOVER="mv "
     FICHERO_CONFIGURACION_EMAIL="/home/usuario/repos/configuracion_envio_email.txt"
+    FICHERO_CONFIGURACION_EMAIL_AFILIADOS="/home/usuario/repos/configuracion_envio_email_afiliados.txt"
     FICHERO_DESTINATARIOS_EMAIL="/home/usuario/repos/destinatarios.txt"
 else:
     BORRAR="del "
@@ -74,6 +75,7 @@ else:
     CONCAT="type "
     MOVER="move "
     FICHERO_CONFIGURACION_EMAIL="C:\\repos\\configuracion_envio_email.txt"
+    FICHERO_CONFIGURACION_EMAIL_AFILIADOS="C:\\repos\\configuracion_envio_email_afiliados.txt"
     FICHERO_DESTINATARIOS_EMAIL="C:\\repos\\destinatarios.txt"
 
 
@@ -346,7 +348,7 @@ def comprobar_restricciones_baremo(dni, decimales_baremo, anio_publicacion_barem
 
 
 def enviar_email(remitente, destinatario, asunto, mensaje, fichero_configuracion_email, ficheros):
-    (usuario, clave, servidor_smtp, puerto_smtp)=get_parametros(fichero_configuracion_email)
+    (usuario, clave, servidor_smtp, puerto_smtp, servidor_pop, puerto_pop)=get_parametros(fichero_configuracion_email)
     msg = MIMEMultipart()
     part = MIMEText('text', "html", _charset="utf-8")
     msg['Subject'] = asunto
@@ -375,6 +377,11 @@ def enviar_email(remitente, destinatario, asunto, mensaje, fichero_configuracion
     session.sendmail(remitente, destinatario, msg.as_string())
     session.quit()
 
+def enviar_email_servicio_automatico(asunto, mensaje, lista_destinatarios):
+    for destinatario in lista_destinatarios:
+        enviar_email("servicioemailautomatico@gmail.com",
+                     destinatario, asunto, mensaje, FICHERO_CONFIGURACION_EMAIL, [])
+    
 
 
 
