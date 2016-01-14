@@ -3,16 +3,18 @@
 import csv, sys
 import datetime
 import os, sys
-
+from time import sleep
 
 NUM_SUBDIRECTORIOS_ANTERIORES=1
 SEPARADOR=os.sep
 RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
 DIRECTORIO_UTILIDADES_GASEOSA= RUTA_PAQUETE_BD + os.sep.join (["utilidades_gaseosa"])
-DIRECTORIO_UTILIDADES_GENERALES=RUTA_PAQUETE_BD + os.sep.join(["verano", "db_nombramientos"])
+DIRECTORIO_UTILIDADES_GENERALES=RUTA_PAQUETE_BD + os.sep.join(["Verano", "db_nombramientos"])
 #aqui = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DIRECTORIO_UTILIDADES_GASEOSA)
+SEGUNDOS_DE_ESPERA_ENTRE_ENVIOS_DE_CORREO = 3
 
+sleep (SEGUNDOS_DE_ESPERA_ENTRE_ENVIOS_DE_CORREO)
 import ProcesadorCSVGaseosa
 import utilidades
 
@@ -115,6 +117,7 @@ def enviar_email_felicitacion_si_procede(posiciones_campos, fila):
     dia_cumple=trozos_fecha_nacimiento[0]
     mes_cumple=trozos_fecha_nacimiento[1]
     if dia_cumple==dia_hoy and mes_cumple==mes_hoy:
+        sleep ( SEGUNDOS_DE_ESPERA_ENTRE_ENVIOS_DE_CORREO )
         email=fila[posiciones_campos["Email"]]
         nombre=fila[posiciones_campos["NOMBRE"]].title()
         ap1=fila[posiciones_campos["APELLIDO 1"]].title()
