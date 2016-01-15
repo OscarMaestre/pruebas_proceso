@@ -11,6 +11,7 @@ import GestorDB
 SQL_CREATE_GASEOSA="""
     create table if not exists {0}(
         dni                 char( 10) primary key,
+        cuota               char(10),
         apellido_1          char(100),
         apellido_2          char(100),
         nombre              char(60),
@@ -19,14 +20,30 @@ SQL_CREATE_GASEOSA="""
         ciudad              char(100),
         provincia           char(20),
         email               char(100),
-        fecha_nacimiento    char(24)
+        fecha_nacimiento    date,
+        tlf_casa            char(18),
+        tlf_movil           char(18),
+        fecha_alta          date,
+        fecha_baja          date,
+        cuerpo              char
     )
     
 """
 
-SQL_INDICE_GASEOSA="""
+SQL_INDICE_DNI_GASEOSA="""
 create index if not exists idx_dni on {0}(dni);
 """
+SQL_INDICE_NOMBRE_GASEOSA="""
+create index if not exists idx_nombre on {0}(nombre);
+"""
+SQL_INDICE_AP1_GASEOSA="""
+create index if not exists idx_ap1 on {0}(apellido_1);
+"""
+SQL_INDICE_AP2_GASEOSA="""
+create index if not exists idx_ap1 on {0}(apellido_2);
+"""
+
+
 
 class ProcesadorCSVGaseosa(object):
     CAMPO_NO_LOCALIZADO=-1
@@ -41,6 +58,11 @@ class ProcesadorCSVGaseosa(object):
     CORRESPONDENCIA["Provincia"]="provincia"
     CORRESPONDENCIA["Email"]="email"
     CORRESPONDENCIA["F_nace"]="fecha_nacimiento"
+    CORRESPONDENCIA["Cuota"]="cuota"
+    CORRESPONDENCIA["Tfno_Casa"]="tlf_casa"
+    CORRESPONDENCIA["Tfno_Móvil"]="tlf_movil"
+    CORRESPONDENCIA["F_Alta"]="cuota"
+    CORRESPONDENCIA["F_Baja"]="cuota"
     def __init__(self):
         self.posiciones_campos=dict()
         self.posiciones_campos["DNI"]        = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
@@ -53,6 +75,12 @@ class ProcesadorCSVGaseosa(object):
         self.posiciones_campos["Provincia"]  = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["Email"]      = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["F_nace"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["Cuota"]      = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["Tfno_Casa"]  = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["Tfno_Móvil"] = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["F_Alta"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["F_Baja"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        
 
     #Si nos pasan la primera fila del CSV se rellenan las posiciones
     #de los campos
@@ -76,7 +104,14 @@ class ProcesadorCSVGaseosa(object):
     def insertar_en_bd(self, archivo_bd, nombre_tabla, fichero_datos):
         gestorbd=GestorDB.GestorDB(archivo_bd)
         gestorbd.ejecutar_sentencias ([SQL_CREATE_GASEOSA.format(nombre_tabla)])
-        gestorbd.ejecutar_sentencias ([SQL_INDICE_GASEOSA.format(nombre_tabla)])
+        gestorbd.ejecutar_sentencias (
+                [
+                    SQL_INDICE_DNI_GASEOSA.format(nombre_tabla),
+                    SQL_INDICE_AP1_GASEOSA.format(nombre_tabla),
+                    SQL_INDICE_AP2_GASEOSA.format(nombre_tabla),
+                    SQL_INDICE_NOMBRE_GASEOSA.format(nombre_tabla)
+                    ]
+        )
         sql_insercion=[]
         with open(fichero_datos, newline='') as fichero_csv:
             lector=csv.reader(fichero_csv, delimiter=";", quotechar="\"")
