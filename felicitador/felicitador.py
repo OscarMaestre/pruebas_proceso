@@ -104,8 +104,8 @@ print (dia_hoy, mes_hoy, anio_hoy)
 
 ARCHIVO_LOG="Felicitaciones_de_{0}-{1}-{2}.txt".format(dia_hoy, mes_hoy, anio_hoy)
 NUM_MENSAJE=0
-
-
+iban = utilidades.calcular_digito_control("01234567890123456789")
+print (iban)
 def enviar_email_felicitacion_si_procede(posiciones_campos, fila):
     
     #print(posiciones_campos)
