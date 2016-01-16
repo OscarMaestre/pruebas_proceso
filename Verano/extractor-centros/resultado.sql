@@ -32,6 +32,10 @@ create table ensenanzas (
     foreign key (codigo_centro) references centros(codigo_centro)
 );
 
+create table dificil_desempeno(
+    codigo_centro char(10) primary key,
+    foreign key (codigo_centro) references centros(codigo_centro)
+);begin transaction;
 insert or ignore into localidades values ('020370002', 'Agramon', 'Albacete', 0.0, 0.0);
 insert or ignore into localidades values ('020030001', 'Aguas Nuevas', 'Albacete', 0.0, 0.0);
 insert or ignore into localidades values ('020030002', 'Albacete', 'Albacete', 0.0, 0.0);
@@ -4543,3 +4547,5 @@ update localidades set latitud=40.0406152 where nombre_localidad like '%Yuncler%
 update localidades set longitud= -3.903411 where nombre_localidad like '%Yuncler%';
 update localidades set latitud=40.0841991 where nombre_localidad like '%Yuncos%';
 update localidades set longitud= -3.8757357 where nombre_localidad like '%Yuncos%';
+
+commit transaction;

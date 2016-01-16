@@ -4,7 +4,8 @@
 import sqlite3
 import os
 import platform
-
+import tempfile
+import utilidades
 
 CODIGOS_PROVINCIAS=[    ("02", "ALBACETE"),     ("13", "CIUDAD REAL"),
                         ("16", "CUENCA"),       ("19", "GUADALAJARA"),
@@ -127,7 +128,7 @@ class GestorDB(object):
                 print("-"*20)
             self.cursor.execute(sql)
         self.conexion.commit()
-        
+    
     def get_filas(self, select):
         filas=self.cursor.execute(select)
         return filas.fetchall()

@@ -11,6 +11,7 @@ import glob
 import re
 import os
 import smtplib
+import tempfile
 from email import encoders
 from email.mime.image import MIMEImage
 from email.mime.base import MIMEBase
@@ -198,6 +199,8 @@ def aplicar_comando (comando, fichero, *args):
     print("Ejecutando "+cmd)
     call(cmd, shell=True)
 
+def ejecutar_comando (comando, fichero, *args):
+    aplicar_comando(comando, fichero, *args)
 def escapar_fichero_con_espacios(nombre_fichero):
     nombre_fichero="\""+nombre_fichero+"\""
     return nombre_fichero
@@ -221,6 +224,11 @@ def get_lineas_fichero(nombre_fichero):
         f.close()
     return lineas
 
+def sacar_tabla_de_una_bd_a_otra(nombre_tabla, bd_origen, bd_destino):
+    comando="echo \".dump {0}\" | sqlite3 {1} | sqlite3 {2}".format(
+        nombre_tabla, bd_origen, bd_destino
+    )
+    ejecutar_comando(comando, "")
 
 def extraer_cuerpo_con_especialidad(linea):
     return extraer_patron ( expr_regular_cuerpo_con_especialidad, linea )
