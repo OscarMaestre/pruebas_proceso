@@ -17,7 +17,7 @@ DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
 import ListaCampos
-
+import utilidades
 
 
 archivo=sys.argv[1]
@@ -123,6 +123,8 @@ for i in range(0, total_lineas):
         fecha_1=extraer_patron(re_fecha, trozo_fecha1)
         trozo_fecha2=linea_siguiente[133:]
         fecha_2=extraer_patron(re_fecha, trozo_fecha2)
+        fecha_1=utilidades.convertir_fecha_a_formato_iso(fecha_1)
+        fecha_2=utilidades.convertir_fecha_a_formato_iso(fecha_2)
         lista_campos=[dni, nombre, codigo_especialidad, codigo_centro, nombre_centro, localidad, fecha_1, fecha_2]
         linea_sql=generar_linea_sql(lista_campos)
         

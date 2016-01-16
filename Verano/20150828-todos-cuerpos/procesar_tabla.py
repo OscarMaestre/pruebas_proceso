@@ -16,7 +16,7 @@ DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
 import ListaCampos
-
+import utilidades
 
 
 archivo=sys.argv[1]
@@ -122,8 +122,8 @@ for i in range(0, total_lineas):
         lista_campos_para_insertar.anadir("nombre_completo", nombre_persona, ListaCampos.ListaCampos.CADENA)
         lista_campos.append(codigo_especialidad)
         lista_campos_para_insertar.anadir("especialidad", codigo_especialidad, ListaCampos.ListaCampos.CADENA)
-        lista_campos_para_insertar.anadir("fecha_inicio", "01-09-2015", ListaCampos.ListaCampos.CADENA)
-        lista_campos_para_insertar.anadir("fecha_fin", "30-06-2016", ListaCampos.ListaCampos.CADENA)
+        lista_campos_para_insertar.anadir("fecha_inicio", "2015-09-01", ListaCampos.ListaCampos.CADENA)
+        lista_campos_para_insertar.anadir("fecha_fin", "2016-06-30", ListaCampos.ListaCampos.CADENA)
         lista_campos.append(codigo_centro)
         lista_campos_para_insertar.anadir("fecha_procedimiento", "2015-08-28")
         lista_campos_para_insertar.anadir("codigo_centro", codigo_centro, ListaCampos.ListaCampos.CADENA)

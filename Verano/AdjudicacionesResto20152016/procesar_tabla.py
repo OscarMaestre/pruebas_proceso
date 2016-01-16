@@ -18,7 +18,7 @@ FECHA_NO_ENCONTRADA="Fecha no encontrada"
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
 import ListaCampos
-
+import utilidades
 
 archivo=sys.argv[1]
 re_dni="[0-9]{7,8}[A-Z]"
@@ -139,12 +139,7 @@ def corregir_codigo_especialidad(codigo_especialidad, linea):
             nuevo_codigo="0"+codigo_especialidad[1:]
             return nuevo_codigo
     
-def convertir_fecha_a_formato_iso(fecha):
-    trozos=fecha.split("-")
-    dia=trozos[0]
-    mes=trozos[1]
-    anio=trozos[2]
-    return "{0}-{1}-{2}".format ( anio, mes, dia )
+
 
 archivo=open(archivo,"r", encoding="utf-8")
 lineas=archivo.readlines()
@@ -159,7 +154,7 @@ for i in range(0, total_lineas):
     if fecha_adjudicacion==FECHA_NO_ENCONTRADA:
         fecha_adjudicacion=obtener_fecha_adjudicacion(linea)
         if (fecha_adjudicacion!=FECHA_NO_ENCONTRADA):
-            fecha_adjudicacion_formato_iso=convertir_fecha_a_formato_iso(fecha_adjudicacion)
+            fecha_adjudicacion_formato_iso=utilidades.convertir_fecha_a_formato_iso(fecha_adjudicacion)
     if i+2==total_lineas:
         break
     linea_siguiente=lineas[i+1]
@@ -185,7 +180,8 @@ for i in range(0, total_lineas):
         nombre_localidad=linea[26:65].strip()
         fecha_inicio=extraer_patron(re_fecha, linea_posterior[111:141])
         fecha_fin=extraer_patron(re_fecha, linea_posterior[141:])
-        
+        fecha_inicio = utilidades.convertir_fecha_a_formato_iso ( fecha_inicio )
+        fecha_fin = utilidades.convertir_fecha_a_formato_iso ( fecha_fin )
         lista_campos.append(dni)
         lista_campos.append(nombre_persona)
         lista_campos.append(codigo_especialidad)
@@ -194,7 +190,7 @@ for i in range(0, total_lineas):
         lista_campos.append(nombre_localidad)
         lista_campos.append(fecha_inicio)
         lista_campos.append(fecha_fin)
-        lista_campos.append(fecha_adjudicacion)
+        lista_campos.append(fecha_adjudicacion_formato_iso)
         sql=generar_linea_sql2(lista_campos)
         print(sql)
         

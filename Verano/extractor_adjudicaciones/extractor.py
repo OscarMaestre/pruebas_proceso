@@ -78,7 +78,10 @@ for fila in filas:
     temp = "update gaseosa set codcentrocursoactual='" + fila[2] \
         + "' where dni='" + fila[0] + "'"
     sql_intermedio += GestorDB.crear_sentencia_update(temp)
-    descripcion_fechas = 'Desde ' + fila[4] + ' hasta ' + fila[5] \
+    
+    fecha_inicio=utilidades.convertir_fecha_de_iso_a_estandar(fila[4])
+    fecha_fin=utilidades.convertir_fecha_de_iso_a_estandar(fila[5])
+    descripcion_fechas = 'Desde ' + fecha_inicio + ' hasta ' + fecha_fin \
         + ' (' + fila[3] + ')'
     temp = "update gaseosa set auxiliar='" + descripcion_fechas \
         + "' where dni='" + fila[0] + "'"
