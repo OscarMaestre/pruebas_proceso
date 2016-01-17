@@ -15,8 +15,10 @@ import utilidades
 
 BD_RESULTADO=".." + SEPARADOR + "docencia.db"
 BD_CENTROS = "Verano" + SEPARADOR + "extractor-centros" + SEPARADOR + "centros.db"
-
+BD_RUTAS = "Verano" + SEPARADOR + "calculador-rutas-globales" + SEPARADOR + "rutas.db"
 utilidades.borrar_fichero ( BD_RESULTADO )
+utilidades.sacar_tabla_de_una_bd_a_otra (
+    "especialidades", "nombramientos.db", BD_RESULTADO)
 utilidades.sacar_tabla_de_una_bd_a_otra (
     "nombramientos", "nombramientos.db", BD_RESULTADO)
 #Ojo, el orden de extracción de estas tablas es importante
@@ -34,4 +36,7 @@ utilidades.sacar_tabla_de_una_bd_a_otra (
 )
 utilidades.sacar_tabla_de_una_bd_a_otra (
     "dificil_desempeno", BD_CENTROS, BD_RESULTADO
+)
+utilidades.sacar_tabla_de_una_bd_a_otra (
+    "rutas", BD_RUTAS, BD_RESULTADO
 )
