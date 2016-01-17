@@ -40,12 +40,18 @@ def corregir_nombre_centro(nombre_centro):
 def corregir_nombre_localidad(nombre_localidad):
     temp=nombre_localidad
     temp=temp.replace("VI", "Vi")
+    articulos=[" (El)", " (La)", " (Los)", " (Las)"]
+    corregir=["El ", "La ", "Los ", "Las "]
+    for i in range(0, len(articulos)):
+        if temp.find( articulos[i] )!=-1:
+            temp=temp.replace( articulos[i], "")
+            temp=corregir[i] + temp
     return temp
 
 def generar_insert_localidades (codigo_localidad, nombre_localidad, provincia, latitud, longitud):
     sql="insert or ignore into localidades values ('{0}', '{1}', '{2}', {3}, {4});\n".format(codigo_localidad, nombre_localidad, provincia,
                                                                                              latitud, longitud)
-    print(sql)
+    #print(sql)
     return sql
 
 def generar_insert_cp(codigo_centro, nombre_centro, codigo_localidad, tipo_centro):
@@ -79,7 +85,7 @@ for linea in lineas:
         tipo_centro="CEIP" if nombre_centro.find("CEIP")!=-1 else "CRA"
         
         temp_localidades=generar_insert_localidades (codigo_localidad, nombre_localidad, provincia, latitud, longitud)
-        print (temp_localidades)
+        #print (temp_localidades)
         sql_insert_localidades+=temp_localidades
         sql_insert_cp+=generar_insert_cp(codigo_centro, nombre_centro, codigo_localidad, tipo_centro)
         

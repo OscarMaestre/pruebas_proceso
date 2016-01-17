@@ -273,6 +273,7 @@ def extraer_todos_decimales(linea):
             lista_floats.append(convertir_decimal_baremo_a_float(d))
         return lista_floats
     return (DECIMAL_NO_ENCONTRADO, DECIMAL_NO_ENCONTRADO, DECIMAL_NO_CONCORDANTE)
+
 def existe_fichero(nombre_fichero):
     if os.path.isfile(nombre_fichero):
         return True

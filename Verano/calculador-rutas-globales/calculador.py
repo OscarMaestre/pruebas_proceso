@@ -39,7 +39,7 @@ def calcular_distancia(localidad1, localidad2):
 
 def corregir_articulo(pueblo):
     pueblo=pueblo.strip()
-    articulos=["(El)", "(La)", "(Los)", "(Las)"]
+    articulos=[" (El)", " (La)", " (Los)", " (Las)"]
     corregido=["El", "La", "Los", "Las"]
     
     for pos in range(0, len(articulos)):

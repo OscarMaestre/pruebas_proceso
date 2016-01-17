@@ -4,6 +4,7 @@
 from subprocess import call
 import platform
 import os
+import glob
 
 CONVERTIR="pdftotext -layout -nopgbrk "
 COPIAR="cp "
@@ -48,6 +49,7 @@ for pos in range(0, len(ficheros)):
         
 aplicar_comando(BORRAR, BD_CENTROS)
 aplicar_comando(COPIAR, "bd.sql", "resultado.sql")
+
 aplicar_comando(CONCATENAR, "inicio_transaccion.sql", ">> resultado.sql")
 aplicar_comando(CONCATENAR, "insert_localidades.sql", ">> resultado.sql")
 aplicar_comando(CONCATENAR, "insert_cps.sql", ">> resultado.sql")
@@ -59,6 +61,6 @@ aplicar_comando(CONCATENAR, "insert_uos.sql", ">> resultado.sql")
 aplicar_comando(CONCATENAR, "insert_eas.sql", ">> resultado.sql")
 aplicar_comando(CONCATENAR, "insert_infantil_primaria.sql", ">> resultado.sql")
 aplicar_comando(CONCATENAR, "insert_ies.sql", ">> resultado.sql")
-aplicar_comando(CONCATENAR, ".."+os.path.sep+"gps"+os.path.sep+"update_gps.sql", ">> resultado.sql")
+#aplicar_comando(CONCATENAR, ".."+os.path.sep+"gps"+os.path.sep+"update_gps.sql", ">> resultado.sql")
 aplicar_comando(CONCATENAR, "fin_transaccion.sql", ">> resultado.sql")
 aplicar_comando(CONCATENAR, " resultado.sql" , " | sqlite3 centros.db")
