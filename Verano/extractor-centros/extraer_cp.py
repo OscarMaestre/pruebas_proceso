@@ -64,6 +64,7 @@ def generar_insert_ensenanza (codigo_centro, nombre_ensenanza, observaciones):
 sql_insert_localidades=""
 sql_insert_cp=""
 sql_insert_infantil_primaria=""
+poblaciones=[]
 for linea in lineas:
     latitud=0.0
     longitud=0.0
@@ -80,7 +81,9 @@ for linea in lineas:
         nombre_localidad=linea[pos_comienzo_codigo_localidad+9:].strip()
         nombre_localidad=corregir_nombre_localidad(nombre_localidad)
         
-        #(latitud, longitud)=get_latitud_longitud(nombre_localidad)
+        if nombre_localidad not in poblaciones:
+            (latitud, longitud)=get_latitud_longitud(nombre_localidad)
+            poblaciones.append(nombre_localidad)
         
         tipo_centro="CEIP" if nombre_centro.find("CEIP")!=-1 else "CRA"
         
