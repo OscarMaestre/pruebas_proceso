@@ -34,7 +34,7 @@ SQL_CREATE_GASEOSA="""
         tlf_movil           char(18),
         fecha_alta          date,
         fecha_baja          date,
-        cuerpo              char,
+        cuerpo              char(10),
         cod_centro_def      char(12),
         cod_centro_actual   char(12),
         auxiliar            char(2048)
@@ -78,6 +78,7 @@ class ProcesadorCSVGaseosa(object):
     CORRESPONDENCIA["CodCentroDefinitivo"]="cod_centro_def"
     CORRESPONDENCIA["CodCentroCursoActual"]="cod_centro_actual"
     CORRESPONDENCIA["Auxiliar"]="auxiliar"
+    CORRESPONDENCIA["Cuerpo"]="cuerpo"
     def __init__(self):
         self.posiciones_campos=dict()
         self.posiciones_campos["DNI"]        = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
@@ -95,6 +96,7 @@ class ProcesadorCSVGaseosa(object):
         self.posiciones_campos["Tfno_Móvil"] = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["F_Alta"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["F_Baja"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["Cuerpo"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         
         self.posiciones_campos["CodCentroDefinitivo"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["CodCentroCursoActual"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
