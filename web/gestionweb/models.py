@@ -30,7 +30,7 @@ class DificilDesempeno(models.Model):
 
 
 class Ensenanzas(models.Model):
-    codigo_centro = models.CharField(max_length=10, blank=True, null=False)
+    codigo_centro = models.CharField(max_length=10, blank=True, null=True)
     nombre_ensenanza = models.CharField(max_length=150, blank=True, null=True)
     observaciones = models.CharField(max_length=100, blank=True, null=True)
 
@@ -50,6 +50,32 @@ class Especialidades(models.Model):
         db_table = 'especialidades'
 
 
+class Gaseosa(models.Model):
+    dni = models.CharField(primary_key=True, max_length=10, blank=True, null=False)
+    cuota = models.CharField(max_length=10, blank=True, null=True)
+    apellido_1 = models.CharField(max_length=100, blank=True, null=True)
+    apellido_2 = models.CharField(max_length=100, blank=True, null=True)
+    nombre = models.CharField(max_length=60, blank=True, null=True)
+    direccion = models.CharField(max_length=100, blank=True, null=True)
+    codigo_postal = models.CharField(max_length=6, blank=True, null=True)
+    ciudad = models.CharField(max_length=100, blank=True, null=True)
+    provincia = models.CharField(max_length=20, blank=True, null=True)
+    email = models.CharField(max_length=100, blank=True, null=True)
+    fecha_nacimiento = models.DateField(blank=True, null=True)
+    tlf_casa = models.CharField(max_length=18, blank=True, null=True)
+    tlf_movil = models.CharField(max_length=18, blank=True, null=True)
+    fecha_alta = models.DateField(blank=True, null=True)
+    fecha_baja = models.DateField(blank=True, null=True)
+    cuerpo = models.CharField(blank=True, null=True, max_length=5)
+    cod_centro_def = models.CharField(max_length=12, blank=True, null=True)
+    cod_centro_actual = models.CharField(max_length=12, blank=True, null=True)
+    auxiliar = models.CharField(max_length=2048, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'gaseosa'
+
+
 class Localidades(models.Model):
     codigo_localidad = models.CharField(primary_key=True, max_length=10, blank=True, null=False)
     nombre_localidad = models.CharField(max_length=100, blank=True, null=True)
@@ -57,15 +83,15 @@ class Localidades(models.Model):
     latitud = models.FloatField(blank=True, null=True)
     longitud = models.FloatField(blank=True, null=True)
     def __str__(self):
-        return "{0} ({1})".format ( self.nombre_localidad, self.nombre_provincia)
+        return self.nombre_localidad
     class Meta:
-        #managed = False
+        managed = False
         db_table = 'localidades'
 
 
 class Nombramientos(models.Model):
-    id = models.IntegerField(primary_key=True, blank=False, null=False)  # AutoField?
-    nif = models.TextField(blank=True, null=True)  # This field type is a guess.
+    id = models.IntegerField( blank=True, null=False)  # AutoField?
+    nif = models.TextField(primary_key=True,blank=True, null=False)  # This field type is a guess.
     nombre_completo = models.TextField(blank=True, null=True)  # This field type is a guess.
     codigo_centro = models.TextField(blank=True, null=True)  # This field type is a guess.
     procedimiento = models.TextField(blank=True, null=True)  # This field type is a guess.
@@ -94,8 +120,7 @@ class Rutas(models.Model):
     distancia = models.FloatField(blank=True, null=True)
     minutos = models.FloatField(blank=True, null=True)
     sumario = models.TextField(blank=True, null=True)
-    def __str__(self):
-        return "Desde {0} hacia {1}".format ( self.origen, self.destino)
+
     class Meta:
         managed = False
         db_table = 'rutas'

@@ -2,8 +2,17 @@
 # coding=utf-8
 
 import csv, sys
+import os, sys
 
-sys.path.insert(0, "/home/usuario/repos/varios/pruebas_proceso/Verano/db_nombramientos")
+SEPARADOR=os.sep
+
+RUTA_PAQUETE_BD="Verano" 
+DIRECTORIO= RUTA_PAQUETE_BD + SEPARADOR + "db_nombramientos"
+
+
+#aqui = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, DIRECTORIO)
+
 
 import ListaCampos
 import GestorDB
@@ -25,7 +34,10 @@ SQL_CREATE_GASEOSA="""
         tlf_movil           char(18),
         fecha_alta          date,
         fecha_baja          date,
-        cuerpo              char
+        cuerpo              char,
+        cod_centro_def      char(12),
+        cod_centro_actual   char(12),
+        auxiliar            char(2048)
     )
     
 """
@@ -61,8 +73,11 @@ class ProcesadorCSVGaseosa(object):
     CORRESPONDENCIA["Cuota"]="cuota"
     CORRESPONDENCIA["Tfno_Casa"]="tlf_casa"
     CORRESPONDENCIA["Tfno_Móvil"]="tlf_movil"
-    CORRESPONDENCIA["F_Alta"]="cuota"
-    CORRESPONDENCIA["F_Baja"]="cuota"
+    CORRESPONDENCIA["F_Alta"]="fecha_alta"
+    CORRESPONDENCIA["F_Baja"]="fecha_baja"
+    CORRESPONDENCIA["CodCentroDefinitivo"]="cod_centro_def"
+    CORRESPONDENCIA["CodCentroCursoActual"]="cod_centro_actual"
+    CORRESPONDENCIA["Auxiliar"]="auxiliar"
     def __init__(self):
         self.posiciones_campos=dict()
         self.posiciones_campos["DNI"]        = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
@@ -80,6 +95,10 @@ class ProcesadorCSVGaseosa(object):
         self.posiciones_campos["Tfno_Móvil"] = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["F_Alta"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["F_Baja"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        
+        self.posiciones_campos["CodCentroDefinitivo"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["CodCentroCursoActual"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["Auxiliar"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         
 
     #Si nos pasan la primera fila del CSV se rellenan las posiciones
@@ -125,7 +144,7 @@ class ProcesadorCSVGaseosa(object):
                         pos_valor_campo=self.posiciones_campos[clave]
                         valor_campo=fila[pos_valor_campo]
                         #El campo fecha tiene que reordenarse de 31-11-2015 a 2015-11-31
-                        if clave=="F_nace":
+                        if clave=="F_nace" or clave=="F_Alta" or clave=="F_Baja":
                             valor_campo=self.reformatear_fecha(valor_campo)
                         lista_campos.anadir(nombre_campo, valor_campo)
                     sql_insercion.append ( lista_campos.generar_insert( nombre_tabla ) )
