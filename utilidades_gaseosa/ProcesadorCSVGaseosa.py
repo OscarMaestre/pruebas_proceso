@@ -13,7 +13,6 @@ DIRECTORIO= RUTA_PAQUETE_BD + SEPARADOR + "db_nombramientos"
 #aqui = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DIRECTORIO)
 
-
 import ListaCampos
 import GestorDB
 
