@@ -15,7 +15,7 @@ class Centros(models.Model):
     nombre_centro = models.CharField(max_length=120, blank=True, null=True)
     codigo_localidad = models.CharField(max_length=10, blank=True, null=True)
     tipo_centro = models.CharField(max_length=20, blank=True, null=True)
-
+    
     class Meta:
         managed = False
         db_table = 'centros'
@@ -71,7 +71,7 @@ class Gaseosa(models.Model):
     auxiliar = models.CharField(max_length=2048, blank=True, null=True)
 
     class Meta:
-        #managed = False
+        managed = False
         db_table = 'gaseosa'
 
 

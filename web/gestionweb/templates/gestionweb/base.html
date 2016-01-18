@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    
+<html>
+    <head>
+        <title>ANPEWeb</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'jquery/jquerymobile/jquery.mobile-1.4.5.css' %}">
+        <script src="{% static 'jquery/jquery-2.2.0.min.js' %}"></script>
+        <script src="{% static 'jquery/jquerymobile/jquery.mobile-1.4.5.min.js'%}"></script>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header"><h1>ANPEWeb</h1></div>
+            <div role="main" class="ui-content">
+		{% block contenido %}
+                {% endblock %}
+            </div>
+        </div>
+        
+    </body>
+</html>

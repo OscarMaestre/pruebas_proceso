@@ -29,3 +29,7 @@ def moviles_interinos_eemm(peticion):
 def prueba(peticion):
     valores={'valor':2}
     return render(peticion, "gestionweb/prueba.html", valores)
+
+def mostrar_valor(peticion):
+    valores={'valor':2}
+    return render(peticion, "gestionweb/datos_centro.html", valores)
