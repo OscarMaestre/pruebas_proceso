@@ -6,7 +6,7 @@ import os, sys
 
 SEPARADOR=os.sep
 
-RUTA_PAQUETE_BD="Verano" 
+RUTA_PAQUETE_BD=".." + SEPARADOR + "Verano" 
 DIRECTORIO= RUTA_PAQUETE_BD + SEPARADOR + "db_nombramientos"
 
 
