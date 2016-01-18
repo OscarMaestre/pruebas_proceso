@@ -1,3 +1,2 @@
-{% for objeto in objetos%}
-{{objeto.tlf_movil}}:**0**
-{%endfor%}        
+{% for objeto in objetos%}{{objeto.tlf_movil}}:**0**
+{%endfor%}
