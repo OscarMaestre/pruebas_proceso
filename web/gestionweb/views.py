@@ -13,6 +13,7 @@ def moviles_interinos_maestros(peticion):
     )
     contexto={'objetos':gaseosas}
     texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
+    texto=texto.replace("\n", "\r\n")
     return enviar_plantilla_texto (texto, "moviles_interinos_maestros.txt")
 
 def moviles_interinos_eemm(peticion):
@@ -21,4 +22,5 @@ def moviles_interinos_eemm(peticion):
     )
     contexto={'objetos':gaseosas}
     texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
+    texto=texto.replace("\n", "\r\n")
     return enviar_plantilla_texto (texto, "moviles_interinos_eemm.txt")
