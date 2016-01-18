@@ -7,13 +7,15 @@ from django.db.models import Q
 # Create your views here.
 
 
+
+
+
 def moviles_interinos_maestros(peticion):
     gaseosas=Gaseosa.objects.filter(
         Q(cuerpo="19") | Q(cuerpo="1929"), ~Q(tlf_movil="")
     )
     contexto={'objetos':gaseosas}
     texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
-    texto=texto.replace("\n", "\r\n")
     return enviar_plantilla_texto (texto, "moviles_interinos_maestros.txt")
 
 def moviles_interinos_eemm(peticion):
@@ -22,5 +24,8 @@ def moviles_interinos_eemm(peticion):
     )
     contexto={'objetos':gaseosas}
     texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
-    texto=texto.replace("\n", "\r\n")
     return enviar_plantilla_texto (texto, "moviles_interinos_eemm.txt")
+
+def prueba(peticion):
+    valores={'valor':2}
+    return render(peticion, "gestionweb/prueba.html", valores)
