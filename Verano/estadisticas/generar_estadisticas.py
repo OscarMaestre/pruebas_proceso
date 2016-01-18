@@ -69,13 +69,13 @@ def get_duraciones(sql):
     filas=gestordb.get_filas(sql)
     duraciones=[]
     for fila in filas:
-        dia_inicio=fila[0][0:2]
-        mes_inicio=fila[0][3:5]
-        anio_inicio=fila[0][6:10]
+        anio_inicio=fila[0][0:4]
+        mes_inicio=fila[0][5:7]
+        dia_inicio=fila[0][8:10]
         
-        dia_fin=fila[1][0:2]
-        mes_fin=fila[1][3:5]
-        anio_fin=fila[1][6:10]
+        anio_fin=fila[1][0:4]
+        mes_fin=fila[1][5:7]
+        dia_fin=fila[1][8:10]
         #print(dia_inicio, mes_inicio, anio_inicio, dia_fin, mes_fin, anio_fin)
         fecha_inicio=datetime.date(int(anio_inicio), int(mes_inicio), int(dia_inicio))
         fecha_fin=datetime.date(int(anio_fin), int(mes_fin), int (dia_fin))
