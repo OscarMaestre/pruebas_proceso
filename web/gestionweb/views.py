@@ -33,3 +33,7 @@ def prueba(peticion):
 def mostrar_valor(peticion):
     valores={'valor':2}
     return render(peticion, "gestionweb/datos_centro.html", valores)
+
+def ver(peticion):
+    valores=Gaseosa.objects.all()
+    return render(peticion, 'gestionweb/ver_gaseosa.html', {'gaseosa':valores})

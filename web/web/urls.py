@@ -19,6 +19,6 @@ from django.conf.urls.static import static
 from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^moviles/', include ('gestionweb.urls'))
+    url(r'', include ('gestionweb.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
