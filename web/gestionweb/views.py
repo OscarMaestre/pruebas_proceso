@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from .models import Gaseosa
 from .plantillas import enviar_plantilla_texto
 from django.db.models import Q
+import django_excel as excel #sudo pip3 install django-excel
+import pyexcel.ext.xls  #sudo pip3 install pyexcel
 # Create your views here.
 
 
@@ -37,3 +39,6 @@ def mostrar_valor(peticion):
 def ver(peticion):
     valores=Gaseosa.objects.all()
     return render(peticion, 'gestionweb/ver_gaseosa.html', {'gaseosa':valores})
+
+def gaseosa_xls(peticion):
+    return excel.make_response_from_a_table(Gaseosa, 'xls', file_name="sheet")

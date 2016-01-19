@@ -7,5 +7,6 @@ urlpatterns=[
     url(r'^moviles_interinos_eemm/', views.moviles_interinos_eemm, name='mveemm'),
     url(r'^prueba/', views.prueba, name="prueba"),
     url(r'^datos_centro/',views.mostrar_valor, name="muestra_valor" ),
-    url(r'^prueba_tabla/', views.ver, name='ver_todo')
+    url(r'^prueba_tabla/', views.ver, name='ver_todo'),
+    url(r'^gaseosa_excel/', views.gaseosa_xls, name="gaseosa_excel")
 ]
