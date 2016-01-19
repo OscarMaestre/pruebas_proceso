@@ -11,6 +11,9 @@ import pyexcel.ext.xls  #sudo pip3 install pyexcel
 
 
 
+def index(peticion):
+    return render(peticion, 'gestionweb/index.html')
+
 
 def moviles_interinos_maestros(peticion):
     gaseosas=Gaseosa.objects.filter(
@@ -20,6 +23,12 @@ def moviles_interinos_maestros(peticion):
     texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
     return enviar_plantilla_texto (texto, "moviles_interinos_maestros.txt")
 
+
+def todos_moviles(peticion):
+    gaseosas=Gaseosa.objects.all()
+    contexto={'objetos':gaseosas}
+    texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
+    return enviar_plantilla_texto (texto, "moviles_interinos_maestros.txt")
 def moviles_interinos_eemm(peticion):
     gaseosas=Gaseosa.objects.filter(
         Q(cuerpo="29") | Q(cuerpo="39") | Q(cuerpo="49") | Q(cuerpo="59"), ~Q(tlf_movil="")
@@ -41,4 +50,4 @@ def ver(peticion):
     return render(peticion, 'gestionweb/ver_gaseosa.html', {'gaseosa':valores})
 
 def gaseosa_xls(peticion):
-    return excel.make_response_from_a_table(Gaseosa, 'xls', file_name="sheet")
+    return excel.make_response_from_a_table(Gaseosa, 'xls', file_name="Gaseosa")
