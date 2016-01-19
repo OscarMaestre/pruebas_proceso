@@ -15,9 +15,11 @@ class Centros(models.Model):
     nombre_centro = models.CharField(max_length=120, blank=True, null=True)
     codigo_localidad = models.CharField(max_length=10, blank=True, null=True)
     tipo_centro = models.CharField(max_length=20, blank=True, null=True)
-    
+    def __str__(self):
+        return self.nombre_centro
     class Meta:
         managed = False
+        ordering=['nombre_centro']
         db_table = 'centros'
 
 
@@ -72,6 +74,7 @@ class Gaseosa(models.Model):
 
     class Meta:
         managed = False
+        ordering=['apellido_1', 'apellido_2']
         db_table = 'gaseosa'
 
 

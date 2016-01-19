@@ -1,0 +1,10 @@
+{% extends "gestionweb/base.html" %}
+{% block contenido %}
+<h1>Elige un centro o una localidad</h1>
+
+<form action="/your-name/" method="post">
+    {% csrf_token %}
+    {{ formulario_eleccion_centro.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}

@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from django.template.loader import  render_to_string
 from django.http import HttpResponse
-from .models import Gaseosa
+from .models import Gaseosa, Centros
 from .plantillas import enviar_plantilla_texto
 from django.db.models import Q
+from .formularios import PosiblesCentrosCR
 import django_excel as excel #sudo pip3 install django-excel
-import pyexcel.ext.xls  #sudo pip3 install pyexcel
+import pyexcel.ext.xls  #sudo pip3 install pyexcel-xls
+
+
 # Create your views here.
 
 
@@ -14,6 +17,8 @@ import pyexcel.ext.xls  #sudo pip3 install pyexcel
 def index(peticion):
     return render(peticion, 'gestionweb/index.html')
 
+
+    
 
 def moviles_interinos_maestros(peticion):
     gaseosas=Gaseosa.objects.filter(
@@ -51,3 +56,8 @@ def ver(peticion):
 
 def gaseosa_xls(peticion):
     return excel.make_response_from_a_table(Gaseosa, 'xls', file_name="Gaseosa")
+
+def afiliados_por_centro(peticion):
+    formulario_eleccion_centro = PosiblesCentrosCR()
+    contexto={'formulario_eleccion_centro':formulario_eleccion_centro}
+    return render(peticion, 'gestionweb/afiliados_por_centro.html', contexto)

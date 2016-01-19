@@ -71,10 +71,6 @@ message = """
 <body>
 <p>Hola a todos:</p>
 
-<p>
-Estimados compañeros:
-</p>
-
 <p>Se remiten adjuntas las estadisticas sobre adjudicaciones de este curso hasta hoy {0}.
 En los ficheros adjuntos podréis encontrar estadísticas sobre la última adjudicación así
 como las estadísticas globales en lo que va de curso. Por favor, disculpad si recibís este

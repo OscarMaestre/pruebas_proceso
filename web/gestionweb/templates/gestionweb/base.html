@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-    
-<html>
-    <head>
-        <title>ANPEWeb</title>
-        
-	
-
-    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Bienvenido a ANPEWeb</title>
     {% load staticfiles %}
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'bs/css/bootstrap.min.css'%}" rel="stylesheet">
@@ -64,7 +56,7 @@
                     <a href="{% url 'mveemm'%}">Listado móviles interinos EEMM</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="{% url 'afiliados_por_centro'%}">Ver afiliados por centro</a>
                 </li>
                 <li>
                     <a href="#">Services</a>
@@ -92,11 +84,9 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <link href="{% static  'bs/js/bootstrap.min.js'%}" rel="stylesheet">
 
     <!-- Menu Toggle Script -->
     <script>
