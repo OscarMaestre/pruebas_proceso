@@ -4,9 +4,11 @@
 import csv, sys
 import os, sys
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 SEPARADOR=os.sep
 
-RUTA_PAQUETE_BD=".." + SEPARADOR + "Verano" 
+RUTA_PAQUETE_BD=BASE_DIR + SEPARADOR +".." + SEPARADOR + "Verano" 
 DIRECTORIO= RUTA_PAQUETE_BD + SEPARADOR + "db_nombramientos"
 
 

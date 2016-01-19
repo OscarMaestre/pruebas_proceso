@@ -5,9 +5,12 @@ import datetime
 import os, sys
 from time import sleep
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 NUM_SUBDIRECTORIOS_ANTERIORES=1
 SEPARADOR=os.sep
 RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
+RUTA_PAQUETE_BD = BASE_DIR + SEPARADOR + RUTA_PAQUETE_BD
 DIRECTORIO_UTILIDADES_GASEOSA= RUTA_PAQUETE_BD + os.sep.join (["utilidades_gaseosa"])
 DIRECTORIO_UTILIDADES_GENERALES=RUTA_PAQUETE_BD + os.sep.join(["Verano", "db_nombramientos"])
 #aqui = os.path.dirname(os.path.abspath(__file__))
