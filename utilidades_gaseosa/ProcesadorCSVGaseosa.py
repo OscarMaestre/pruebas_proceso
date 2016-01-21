@@ -135,7 +135,7 @@ class ProcesadorCSVGaseosa(object):
                     ]
         )
         sql_insercion=[]
-        with open(fichero_datos, newline='') as fichero_csv:
+        with open(fichero_datos, newline='', encoding="utf-8") as fichero_csv:
             lector=csv.reader(fichero_csv, delimiter=";", quotechar="\"")
             
             num_fila=0
