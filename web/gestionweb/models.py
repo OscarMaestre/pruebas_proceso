@@ -71,7 +71,13 @@ class Gaseosa(models.Model):
     cod_centro_def = models.CharField(max_length=12, blank=True, null=True)
     cod_centro_actual = models.CharField(max_length=12, blank=True, null=True)
     auxiliar = models.CharField(max_length=2048, blank=True, null=True)
-
+    def get_ambos_apellidos(self):
+        return self.apellido_1 + self.apellido_2
+    def get_nombre_completo(self, nombre_al_final=True):
+        if nombre_al_final:
+            return "{0} {1}, {2}".format (self.apellido_1, self.apellido_2, self.nombre)
+        else:
+            return "{0} {1}, {2}".format (self.nombre, self.apellido_1, self.apellido_2)
     class Meta:
         managed = False
         ordering=['apellido_1', 'apellido_2']
