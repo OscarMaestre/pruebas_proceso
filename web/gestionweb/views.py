@@ -28,12 +28,28 @@ def moviles_interinos_maestros(peticion):
     texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
     return enviar_plantilla_texto (texto, "moviles_interinos_maestros.txt")
 
+def moviles_funcionarios_maestros(peticion):
+    gaseosas=Gaseosa.objects.filter(
+        Q(cuerpo="10") , ~Q(tlf_movil="")
+    )
+    contexto={'objetos':gaseosas}
+    texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
+    return enviar_plantilla_texto (texto, "moviles_funcionarios_maestros.txt")
+
+def moviles_funcionarios_eemm(peticion):
+    gaseosas=Gaseosa.objects.filter(
+        Q(cuerpo="20") | Q(cuerpo="30") | Q(cuerpo="40") | Q(cuerpo="50"), ~Q(tlf_movil="")
+    )
+    contexto={'objetos':gaseosas}
+    texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
+    return enviar_plantilla_texto (texto, "moviles_funcionarios_eemm.txt")
+
 
 def todos_moviles(peticion):
     gaseosas=Gaseosa.objects.all()
     contexto={'objetos':gaseosas}
     texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
-    return enviar_plantilla_texto (texto, "moviles_interinos_maestros.txt")
+    return enviar_plantilla_texto (texto, "moviles_todos.txt")
 def moviles_interinos_eemm(peticion):
     gaseosas=Gaseosa.objects.filter(
         Q(cuerpo="29") | Q(cuerpo="39") | Q(cuerpo="49") | Q(cuerpo="59"), ~Q(tlf_movil="")

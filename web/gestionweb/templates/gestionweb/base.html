@@ -30,74 +30,70 @@
 
 <body>
 
-    <div id="wrapper">
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="{% url 'index'%}">
-                        ANPEWeb
-                    </a>
-                </li>
-		<li>
-                    <a href="{% url 'afiliados_por_centro'%}">Ver afiliados por centro</a>
-                </li>
-                <li>
-                    <a href="{% url 'ver_todo'%}">Mostrar gaseosa</a>
-                </li>
-                <li>
-                    <a href="{% url 'gaseosa_excel'%}">Descargar gaseosa (Excel)</a>
-                </li>
-		<li>
-                    <a href="{% url 'todos_moviles'%}">Listado de todos los móviles</a>
-                </li>
-                <li>
-                    <a href="{% url 'mvi'%}">Listado móviles interinos maestros</a>
-                </li>
-                <li>
-                    <a href="{% url 'mveemm'%}">Listado móviles interinos EEMM</a>
-                </li>
-		<li>
-                    <a href="{% url 'joomla_todos_afiliados'%}">
-		     Joomla (Todos afiliados)
-		    </a>
-                </li>
-                
-                
-            </ul>
-	    
-        </div>
-        <!-- /#sidebar-wrapper -->
+  <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		Listados de móviles<span class="caret"></span>
+	      </a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'todos_moviles' %}">Moviles de todos los afiliados</a></li>
+		<li role="separator" class="divider"></li>
+                <li><a href="{% url 'mvi' %}">Moviles de interinos maestros</a></li>
+		<li><a href="{% url 'mvieemm' %}">Moviles de interinos EEMM</a></li>
+                <li role="separator" class="divider"></li>
+                <!--<li class="dropdown-header">Nav header</li>-->
+                <li><a href="{% url 'movilesmaestrosfuncionarios' %}">Moviles de funcionarios maestros</a></li>
+		<li><a href="{% url 'movileseemmfuncionarios' %}">Moviles de funcionarios EEMM</a></li>
+              </ul>
+            </li>
+	    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		Listados de emails<span class="caret"></span>
+	      </a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'joomla_todos' %}">
+		    Emails de todos los afiliados (CSV)</a>
+		</li>
+		<li role="separator" class="divider"></li>
+                <li><a href="{% url 'joomla_maestros_interinos' %}">Emails de interinos maestros (CSV)</a></li>
+		<li><a href="{% url 'joomla_eemm_interinos' %}">Emails de interinos EEMM (CSV)</a></li>
+                <li role="separator" class="divider"></li>
+                <!--<li class="dropdown-header">Nav header</li>-->
+                <li><a href="{% url 'joomla_maestros_funcionarios' %}">Emails de funcionarios maestros (CSV)</a></li>
+		<li><a href="{% url 'joomla_eemm_funcionarios' %}">Emails de funcionarios EEMM (CSV)</a></li>
+              </ul>
+            </li>
+          </ul>
+	</div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        {% block contenido %}
-			{% endblock %}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
+    <div class="container">
 
-    </div>
-    <!-- /#wrapper -->
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Bienvenido a ANPEWeb</h1>
+        <p>Por favor, elige una opción del menú.</p>
+        
+      </div>
+
+    </div> <!-- /container -->
+
+
+
+
+
+
+
 
 
     <!-- Bootstrap Core JavaScript -->
-    <link href="{% static  'bs/js/bootstrap.min.js'%}" rel="stylesheet">
-
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
+    <script src="{% static  'bs/js/bootstrap.min.js'%}"></script>
 </body>
 
 </html>
