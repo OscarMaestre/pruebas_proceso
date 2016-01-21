@@ -4,6 +4,6 @@
 from distutils.core import setup
 setup(name='foo',
       version='1.0',
-      package_dir={'':'utilidades'},
-      packages=['utilidades']
+      package_dir={'':'src'},
+      packages=['utilidades', 'utilidades.email', 'utilidades.fechas']
 )
