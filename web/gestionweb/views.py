@@ -14,13 +14,12 @@ import csv
 
 
 CORREOS_ADMINISTRADORES=[
-	("Oscar ANPE", "oscar@anpecr.com"),
-	("Gema ANPE", "gema@anpecr.com"),
-	("Paloma ANPE", "paloma@anpecr.com"),
-	("Paco ANPE", "pacodiestro@anpecr.com"),
-	("Monica ANPE", "monica@anpecr.com"),
+    ("Oscar ANPE","oscar@anpecr.com"),
+    ("Gema ANPE","gema@anpecr.com"),
+    ("Paloma ANPE","paloma@anpecr.com"),
+    ("Monica ANPE","monica@anpecr.com"),
+    ("Paco ANPE","pacodiestro@anpecr.com"),
 ]
-
 def index(peticion):
     return render(peticion, 'gestionweb/index.html')
 
@@ -128,8 +127,6 @@ def generar_csv(combinacion_qs, nombre_fichero):
     writer.writerow(["name", "email"])
     for g in gaseosas:
         writer.writerow([g.get_nombre_completo(), g.email])
-	for c in CORREOS_ADMINISTRADORES:
-		writer.writerow(c[0], c[1])
     return response
 
 def get_csv_joomla_afiliados_eemm_interinos (peticion):
