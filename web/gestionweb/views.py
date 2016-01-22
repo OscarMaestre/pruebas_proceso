@@ -125,6 +125,9 @@ def generar_csv(combinacion_qs, nombre_fichero):
     gaseosas=Gaseosa.objects.filter(combinacion_qs)
     writer = csv.writer(response)
     writer.writerow(["name", "email"])
+    for c in CORREOS_ADMINISTRADORES:
+        writer.writerow([c[0], c[1]])
+    
     for g in gaseosas:
         writer.writerow([g.get_nombre_completo(), g.email])
     return response
