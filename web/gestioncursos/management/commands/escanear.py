@@ -5,19 +5,18 @@ import glob
 import datetime
 import os,sys
 
-from models import Curso
+from gestioncursos.models import Curso
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DIR_UTILIDADES= ".." + os.sep+ ".."+os.sep+"utilidades" + os.sep + "src"
+NUM_DIRECTORIOS_ANTERIORES=4
+SEPADORES=(".." + os.sep ) * NUM_DIRECTORIOS_ANTERIORES
+DIR_UTILIDADES= SEPADORES + "utilidades" + os.sep + "src"
 
-sys.path.insert( 0, DIR_UTILIDADES )
+sys.path.insert( 0, "/home/usuario/repos/varios/pruebas_proceso/" )
 print (DIR_UTILIDADES)
 from utilidades.fechas.GestorFechas import GestorFechas
 
-sys.path.insert( 0, ".." )
-import django
-import settings
 
 DIR_ESCANEOS="."
 SEPARADOR_CURSO="Cur"
@@ -68,7 +67,9 @@ def enviar_ficheros(ficheros):
         html_ficheros+="<li>{0} (se matricula en el curso {1}</li>".format(nombre_alumno, nombre_curso)
     mensaje_a_enviar=mensaje.format ( html_ficheros )
     print (mensaje_a_enviar)
-configure()
+
+
 averiguar_directorio()
 lista_escaneos=get_ficheros()
 enviar_ficheros ( lista_escaneos )
+    
