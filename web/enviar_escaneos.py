@@ -6,7 +6,7 @@ import datetime
 import os,sys
 
 from gestioncursos.models import Curso
-
+from web import settings
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DIR_UTILIDADES= ".." + os.sep+ ".."+os.sep+"utilidades" + os.sep + "src"
@@ -69,7 +69,7 @@ def enviar_ficheros(ficheros):
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "web.settings")
-
+    django.setup()
     averiguar_directorio()
     lista_escaneos=get_ficheros()
     enviar_ficheros ( lista_escaneos )
