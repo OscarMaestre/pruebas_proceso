@@ -114,7 +114,7 @@ def generar_excel_joomla ( combinacion_qs, nombre_fichero):
 
 def generar_csv(combinacion_qs, nombre_fichero):
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="{0}"'.format(nombre_fichero)
+    response['Content-Disposition'] = 'attachment; filename="{0}.csv"'.format(nombre_fichero)
 
     gaseosas=Gaseosa.objects.filter(combinacion_qs)
     writer = csv.writer(response)
