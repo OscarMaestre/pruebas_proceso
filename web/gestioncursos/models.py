@@ -7,6 +7,9 @@ class Curso(models.Model):
     descripcion=models.CharField(max_length=150)
     fecha_inicio=models.DateField()
     fecha_fin=models.DateField()
+    def __str__(self):
+        return self.descripcion
+    
     
 class Inscripcion(models.Model):
     id=models.AutoField(primary_key=True)

@@ -12,6 +12,7 @@ import re
 import os
 import smtplib
 import tempfile
+
 from email import encoders
 from email.mime.image import MIMEImage
 from email.mime.base import MIMEBase
@@ -91,6 +92,7 @@ PATRON_NO_ENCONTRADO="PATRON NO ENCONTRADO"
 
 
 ESPECIALIDAD_DESCONOCIDA="777"
+
 #La configuración del remitente debe estar en un fichero
 #La primera línea es la dirección del servidor de correo como por ejemplo pepito@gmail.com
 #La segunda contiene la clave
