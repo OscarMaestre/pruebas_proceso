@@ -15,8 +15,9 @@ DIR_UTILIDADES= SEPADORES + "utilidades" + os.sep + "src"
 
 sys.path.insert( 0, "/home/usuario/repos/varios/pruebas_proceso/" )
 print (DIR_UTILIDADES)
-from utilidades.fechas.GestorFechas import GestorFechas
 
+
+from django.core.management.base import BaseCommand, CommandError
 
 DIR_ESCANEOS="."
 SEPARADOR_CURSO="Cur"
@@ -39,9 +40,7 @@ mensaje="""
 </html>
 """
 
-def averiguar_directorio():
-    f=GestorFechas()
-    os.chdir(DIR_ESCANEOS + os.sep + f.get_hoy_iso())
+
 
 def get_ficheros():
     ficheros="*.pdf"
@@ -69,7 +68,17 @@ def enviar_ficheros(ficheros):
     print (mensaje_a_enviar)
 
 
-averiguar_directorio()
-lista_escaneos=get_ficheros()
-enviar_ficheros ( lista_escaneos )
+class Command(BaseCommand):
+    help="Procesa los ficheros de escaneado"
+    can_import_settings=True
+    
+    def averiguar_directorio(self):
+        from utilidades.fechas.GestorFechas import GestorFechas
+        f=GestorFechas()
+        os.chdir(DIR_ESCANEOS + os.sep + f.get_hoy_iso())
+    def handle(self, *args, **options):
+        sys.path.insert( 0, "/home/usuario/repos/varios/pruebas_proceso/utilidades/src" )
+        
+        directorio=self.averiguar_directorio()
+        print("Hola")
     
