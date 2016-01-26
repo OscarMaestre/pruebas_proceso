@@ -2,14 +2,15 @@
 # coding=utf-8
 #import smtplib
 import email.encoders
+from email.encoders import encode_base64
 from email.mime.image import MIMEImage
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import platform
+import smtplib
 
-
-def GestorEmail(object):
+class GestorEmail(object):
     def __init__(self):
         if platform.system()=="Linux":
             self.FICHERO_CONFIGURACION_EMAIL="/home/usuario/repos/configuracion_envio_email.txt"
@@ -42,14 +43,14 @@ def GestorEmail(object):
         except :
             nombre_remitente=usuario
             print("****************************************************************************")
-            print ("No hay un nombre de remitente en la linea 7 de "+FICHERO_CONFIGURACION_EMAIL)
-            print ("Usando el usuario como remitente (en este caso se usará {'})".format(usuario))
+            print ("No hay un nombre de remitente en la linea 7 de "+fichero_configuracion_remitente)
+            print ("Usando el usuario como remitente (en este caso se usará {0})".format(usuario))
             print("****************************************************************************")
             
-        return (usuario, clave, servidor_smtp, puerto_smtp, servidor_pop, puerto_pop, )
+        return (usuario, clave, servidor_smtp, puerto_smtp, servidor_pop, puerto_pop, nombre_remitente)
 
     def enviar_email(self, remitente, destinatario, asunto, mensaje, fichero_configuracion_email, ficheros):
-        (usuario, clave, servidor_smtp, puerto_smtp, servidor_pop, puerto_pop)=get_parametros(fichero_configuracion_email)
+        (usuario, clave, servidor_smtp, puerto_smtp, servidor_pop, puerto_pop, remitente)=self.get_parametros(fichero_configuracion_email)
         msg = MIMEMultipart()
         part = MIMEText('text', "html", _charset="utf-8")
         msg['Subject'] = asunto
@@ -63,7 +64,7 @@ def GestorEmail(object):
             adjunto=MIMEBase("application", "octet-stream")
             adjunto.set_payload(fich.read(), charset="utf-8")
             fich.close()
-            encoders.encode_base64(adjunto)
+            encode_base64(adjunto)
             adjunto.add_header('Content-Disposition', 'attachment', filename=filename)
             msg.attach(adjunto)
     
@@ -86,6 +87,6 @@ def GestorEmail(object):
     def enviar_matriculas_cursos(self, mensaje, lista_ficheros):
         (usuario, clave,
          servidor_smtp, puerto_smtp,
-         servidor_pop, puerto_pop,remitente)=self.get_parametros(fichero_configuracion_email)
-        enviar_email(remitente, remitente, "Matriculas cursos", mensaje, FICHERO_CONFIGURACION_EMAIL)
+         servidor_pop, puerto_pop,remitente)=self.get_parametros(self.FICHERO_CONFIGURACION_EMAIL)
+        self.enviar_email(remitente, remitente, "Matriculas cursos", mensaje, self.FICHERO_CONFIGURACION_EMAIL, lista_ficheros)
         

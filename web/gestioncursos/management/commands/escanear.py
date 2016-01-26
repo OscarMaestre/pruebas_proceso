@@ -75,10 +75,10 @@ class Command(BaseCommand):
             nombre_alumno=self.get_nombre_alumno( pos_curso, f    )
             nombre_curso=self.get_nombre_curso( pos_curso, f )
             #print (nombre_alumno, nombre_curso)
-            html_ficheros+="<li>{0} (se matricula en el curso '{1}'</li>".format(nombre_alumno, nombre_curso)
+            html_ficheros+="<li>{0} (se matricula en el curso '{1}')</li>".format(nombre_alumno, nombre_curso)
         mensaje_a_enviar=mensaje.format ( html_ficheros )
         print (mensaje_a_enviar)
-        enviar_matriculas_cursos(mensaje_a_enviar, lista_ficheros)
+        gestor_email.enviar_matriculas_cursos(mensaje_a_enviar, lista_ficheros)
 
 
     def handle(self, *args, **options):
