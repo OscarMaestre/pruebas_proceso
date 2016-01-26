@@ -150,7 +150,7 @@ def get_csv_joomla_afiliados_maestros_funcionarios (peticion):
 
     
 def get_csv_joomla_todos_afiliados(peticion):
-    combinacion_qs=(~Q(email="")
+    combinacion_qs=~Q(email="")
     return generar_csv(combinacion_qs, "csv_afiliados_joomla")
 
 #################       Fin Generacion de los CSV          ########################
