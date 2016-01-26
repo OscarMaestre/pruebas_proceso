@@ -123,6 +123,7 @@ def generar_csv(combinacion_qs, nombre_fichero):
     response['Content-Disposition'] = 'attachment; filename="{0}.csv"'.format(nombre_fichero)
     
     gaseosas=Gaseosa.objects.filter(combinacion_qs)
+    combinacion_qs = combinacion_qs & ~Q(cuota__contains="BAJA")
     writer = csv.writer(response)
     writer.writerow(["name", "email"])
     for c in CORREOS_ADMINISTRADORES:
@@ -150,7 +151,7 @@ def get_csv_joomla_afiliados_maestros_funcionarios (peticion):
 
     
 def get_csv_joomla_todos_afiliados(peticion):
-    combinacion_qs=(~Q(email=""), ~Q(cuota__contains="BAJA"))
+    combinacion_qs=~Q(email="")
     return generar_csv(combinacion_qs, "csv_afiliados_joomla")
 
 #################       Fin Generacion de los CSV          ########################
