@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.shortcuts import render
 from django.template.loader import  render_to_string
 from django.http import HttpResponse
@@ -168,12 +169,17 @@ def generar_recibos(peticion, combinacion_qs):
     filas.append(["", "", ""])
     filas.append(["", "", ""])
     filas.append(["", "", ""])
-    filas.append(["DNI", "APELLIDOS", "NOMBRE"])
+    filas.append(["DNI", "APELLIDOS", "NOMBRE", "CUENTA", "CONCEPTO"])
     for b in bebidas:
-        filas.append([b.dni, b.apellido_1+" " + b.apellido_2, b.nombre])
+        filas.append(
+            [
+                    b.dni, b.apellido_1+" " + b.apellido_2,
+                    b.nombre, b.iban+""+b.ccc, "Cuota año 2016"
+            ]
+        )
     sheet = excel.pe.Sheet(filas)
     return excel.make_response(sheet, "xls")
 
 def get_excel_q(peticion):
-    qs=Q(cuota="BAJA_2016")
+    qs=Q(cuota="BAJA_2016") & ~Q(ccc="")
     return generar_recibos(peticion, qs)

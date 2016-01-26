@@ -38,7 +38,9 @@ SQL_CREATE_GASEOSA="""
         cuerpo              char(10),
         cod_centro_def      char(12),
         cod_centro_actual   char(12),
-        auxiliar            char(2048)
+        auxiliar            char(2048),
+        iban                char(4),
+        ccc                 char(20)
     )
     
 """
@@ -80,6 +82,8 @@ class ProcesadorCSVGaseosa(object):
     CORRESPONDENCIA["CodCentroCursoActual"]="cod_centro_actual"
     CORRESPONDENCIA["Auxiliar"]="auxiliar"
     CORRESPONDENCIA["Cuerpo"]="cuerpo"
+    CORRESPONDENCIA["IBAN"]="iban"
+    CORRESPONDENCIA["Cuenta"]="ccc"
     def __init__(self):
         self.posiciones_campos=dict()
         self.posiciones_campos["DNI"]        = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
@@ -99,9 +103,12 @@ class ProcesadorCSVGaseosa(object):
         self.posiciones_campos["F_Baja"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["Cuerpo"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         
-        self.posiciones_campos["CodCentroDefinitivo"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
-        self.posiciones_campos["CodCentroCursoActual"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
-        self.posiciones_campos["Auxiliar"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["CodCentroDefinitivo"]   = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["CodCentroCursoActual"]  = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["Auxiliar"]              = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        
+        self.posiciones_campos["IBAN"]      = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["Cuenta"]      = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         
 
     #Si nos pasan la primera fila del CSV se rellenan las posiciones
