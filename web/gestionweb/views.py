@@ -121,7 +121,7 @@ def generar_excel_joomla ( combinacion_qs, nombre_fichero):
 def generar_csv(combinacion_qs, nombre_fichero):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="{0}.csv"'.format(nombre_fichero)
-
+    combinacion_qs=(combinacion_qs, ~Q(cuota__contains("BAJA")))
     gaseosas=Gaseosa.objects.filter(combinacion_qs)
     writer = csv.writer(response)
     writer.writerow(["name", "email"])
@@ -150,7 +150,7 @@ def get_csv_joomla_afiliados_maestros_funcionarios (peticion):
 
     
 def get_csv_joomla_todos_afiliados(peticion):
-    combinacion_qs=~Q(email="")
+    combinacion_qs=(~Q(email="")
     return generar_csv(combinacion_qs, "csv_afiliados_joomla")
 
 #################       Fin Generacion de los CSV          ########################
