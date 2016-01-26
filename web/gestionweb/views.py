@@ -121,9 +121,9 @@ def generar_excel_joomla ( combinacion_qs, nombre_fichero):
 def generar_csv(combinacion_qs, nombre_fichero):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="{0}.csv"'.format(nombre_fichero)
-    
-    gaseosas=Gaseosa.objects.filter(combinacion_qs)
     combinacion_qs = combinacion_qs & ~Q(cuota__contains="BAJA")
+    gaseosas=Gaseosa.objects.filter(combinacion_qs)
+    
     writer = csv.writer(response)
     writer.writerow(["name", "email"])
     for c in CORREOS_ADMINISTRADORES:
@@ -155,3 +155,25 @@ def get_csv_joomla_todos_afiliados(peticion):
     return generar_csv(combinacion_qs, "csv_afiliados_joomla")
 
 #################       Fin Generacion de los CSV          ########################
+
+
+############## Hojas Excel ################################
+
+
+def generar_recibos(peticion, combinacion_qs):
+    
+    bebidas=Gaseosa.objects.filter(combinacion_qs)
+    filas=[]
+    
+    filas.append(["", "", ""])
+    filas.append(["", "", ""])
+    filas.append(["", "", ""])
+    filas.append(["DNI", "APELLIDOS", "NOMBRE"])
+    for b in bebidas:
+        filas.append([b.dni, b.apellido_1+" " + b.apellido_2, b.nombre])
+    sheet = excel.pe.Sheet(filas)
+    return excel.make_response(sheet, "xls")
+
+def get_excel_q(peticion):
+    qs=Q(cuota="BAJA_2016")
+    return generar_recibos(peticion, qs)
