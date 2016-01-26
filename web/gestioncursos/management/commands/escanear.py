@@ -56,14 +56,15 @@ class Command(BaseCommand):
         return glob.glob(ficheros)
     def get_nombre_alumno(self, pos_separador, fichero):
         return fichero[:pos_separador].strip()
-    def get_nombre_curso(self, pos_separador, fichero):
+    def get_objeto_curso(self, pos_separador, fichero):
         from gestioncursos.models import Curso
         longitud_separador=len( SEPARADOR_CURSO )
         codigo_curso=fichero[pos_separador+longitud_separador:-4].strip()
-        return Curso.objects.get(pk=codigo_curso).descripcion
+        return Curso.objects.get(pk=codigo_curso)
     
     def enviar_ficheros(self, ficheros):
         from utilidades.email.GestorEmail import GestorEmail
+        from gestioncursos.models import Inscripcion
         gestor_email=GestorEmail()
         html_ficheros=""
         lista_ficheros=[]
@@ -73,9 +74,14 @@ class Command(BaseCommand):
             if pos_curso==-1:
                 continue
             nombre_alumno=self.get_nombre_alumno( pos_curso, f    )
-            nombre_curso=self.get_nombre_curso( pos_curso, f )
+            objeto_curso=self.get_objeto_curso( pos_curso, f )
+            nombre_curso=objeto_curso.descripcion
             #print (nombre_alumno, nombre_curso)
             html_ficheros+="<li>{0} (se matricula en el curso '{1}')</li>".format(nombre_alumno, nombre_curso)
+            inscripcion=Inscripcion()
+            inscripcion.nombre_alumno=nombre_alumno
+            inscripcion.curso=objeto_curso
+            inscripcion.save()
         mensaje_a_enviar=mensaje.format ( html_ficheros )
         print (mensaje_a_enviar)
         gestor_email.enviar_matriculas_cursos(mensaje_a_enviar, lista_ficheros)
