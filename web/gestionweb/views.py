@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.template.loader import  render_to_string
 from django.http import HttpResponse
-from .models import Gaseosa, Centros
+from .models import Gaseosa, Centros, Localidades
 from .plantillas import enviar_plantilla_texto
 from django.db.models import Q
 from .formularios import PosiblesCentrosCR
@@ -23,13 +23,28 @@ CORREOS_ADMINISTRADORES=[
 ]
 def index(peticion):
     qs=Q(codigo_localidad__startswith="13")
-    pueblos=Centros.objects.filter(qs)
+    pueblos=Localidades.objects.filter(qs)
     contexto={
         "objetos":pueblos
     }
     return render(peticion, 'gestionweb/index.html', contexto)
 
-
+def ver_datos (peticion, localidad_id
+    sql1=
+    """
+    SELECT * FROM gaseosa, localidades, centros  where localidades.codigo_localidad='130340002'
+            and gaseosa.cod_centro_actual=centros.codigo_centro
+            and centros.codigo_localidad=localidades.codigo_localidad"""
+    localidad=Localidades.objects.get(pk=localidad_id)
+    filtro_bebidas=Q(cod_centro_actual=localidad_id)
+    bebidas=Gaseosa.objects.filter(filtro_bebidas)
+    print (bebidas)
+    contexto={
+        "id":localidad_id,
+        'nombre_localidad':localidad.nombre_localidad,
+        'bebidas': bebidas
+    }
+    return render(peticion, 'gestionweb/ver_datos.html', contexto)
     
 
 def moviles_interinos_maestros(peticion):

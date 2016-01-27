@@ -1,7 +1,6 @@
 {% extends "gestionweb/base.html" %}
 
 {% block contenido %}
-<h1>Bienvenido a la Web interna</h1>
 
 <p>Por favor, elige una opción del menú de la izquierda
 O elige una de estas localidades para ver los centros y personal nuestro
@@ -9,7 +8,9 @@ O elige una de estas localidades para ver los centros y personal nuestro
 <ul>
     {% for pueblo in objetos%}
         <li>
-            {{pueblo.nombre_centro}}
+            <a href='{% url 'ver_datos_pueblo' pueblo.codigo_localidad %}'>
+            {{pueblo.nombre_localidad}}
+            </a>
         </li>
     {%endfor%}
 </ul>

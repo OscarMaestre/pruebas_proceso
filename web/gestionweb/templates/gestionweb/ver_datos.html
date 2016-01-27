@@ -1,0 +1,12 @@
+{% extends "gestionweb/base.html" %}
+
+{% block contenido %}
+<h2>Datos de {{nombre_localidad}}</h2>
+
+
+{{bebidas}}
+{%for b in bebidas%}
+    {{b.apellido_1}}
+{%endfor%}
+{% endblock %}
+
