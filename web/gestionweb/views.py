@@ -1,5 +1,6 @@
 # coding=utf-8
 from django.shortcuts import render
+from django.db import connection
 from django.template.loader import  render_to_string
 from django.http import HttpResponse
 from .models import Gaseosa, Centros, Localidades
@@ -29,16 +30,18 @@ def index(peticion):
     }
     return render(peticion, 'gestionweb/index.html', contexto)
 
-def ver_datos (peticion, localidad_id
-    sql1=
-    """
-    SELECT * FROM gaseosa, localidades, centros  where localidades.codigo_localidad='130340002'
-            and gaseosa.cod_centro_actual=centros.codigo_centro
-            and centros.codigo_localidad=localidades.codigo_localidad"""
+def ver_datos (peticion, localidad_id):
+    sql1="""select gaseosa.apellido_1, gaseosa.apellido_2, gaseosa.nombre,
+        gaseosa.tlf_movil,
+        centros.nombre_centro from gaseosa, centros
+        where gaseosa.cod_centro_actual=trim(centros.codigo_centro, 'C')
+        and centros.codigo_localidad='{0}' order by centros.nombre_centro,
+        gaseosa.apellido_1, gaseosa.apellido_2""".format( localidad_id )
     localidad=Localidades.objects.get(pk=localidad_id)
-    filtro_bebidas=Q(cod_centro_actual=localidad_id)
-    bebidas=Gaseosa.objects.filter(filtro_bebidas)
-    print (bebidas)
+    cursor=connection.cursor()
+    cursor.execute(sql1)
+    bebidas=cursor.fetchall()
+    
     contexto={
         "id":localidad_id,
         'nombre_localidad':localidad.nombre_localidad,

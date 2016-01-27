@@ -4,9 +4,19 @@
 <h2>Datos de {{nombre_localidad}}</h2>
 
 
-{{bebidas}}
+
+<table class="table">
+    
+
 {%for b in bebidas%}
-    {{b.apellido_1}}
+    <tr>
+        {% for campo in b %}
+            <td>
+                {{campo}}
+            </td>
+        {% endfor%}
+    </tr>
 {%endfor%}
+</table>
 {% endblock %}
 

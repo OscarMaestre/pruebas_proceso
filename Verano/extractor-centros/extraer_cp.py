@@ -70,6 +70,7 @@ for linea in lineas:
     longitud=0.0
     codigo_centro=utilidades.extraer_patron( utilidades.re_codigo_centro , linea)
     if (codigo_centro != utilidades.NO_CONCORDANCIA ):
+        codigo_centro=codigo_centro[:-1]
         codigo_localidad= utilidades.extraer_patron ( utilidades.re_codigo_localidad, linea[10:])
         pos_comienzo_codigo_localidad=utilidades.get_pos_comienzo_cadena(linea, codigo_localidad)
         provincia=utilidades.get_provincia(codigo_localidad)
