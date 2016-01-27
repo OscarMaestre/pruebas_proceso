@@ -22,7 +22,12 @@ CORREOS_ADMINISTRADORES=[
     ("Paco ANPE","pacodiestro@anpecr.com"),
 ]
 def index(peticion):
-    return render(peticion, 'gestionweb/index.html')
+    qs=Q(codigo_localidad__startswith="13")
+    pueblos=Centros.objects.filter(qs)
+    contexto={
+        "objetos":pueblos
+    }
+    return render(peticion, 'gestionweb/index.html', contexto)
 
 
     

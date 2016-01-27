@@ -3,7 +3,15 @@
 {% block contenido %}
 <h1>Bienvenido a la Web interna</h1>
 
-<p>Por favor, elige una opción del menú de la izquierda</p>
+<p>Por favor, elige una opción del menú de la izquierda
 O elige una de estas localidades para ver los centros y personal nuestro
+</p>
+<ul>
+    {% for pueblo in objetos%}
+        <li>
+            {{pueblo.nombre_centro}}
+        </li>
+    {%endfor%}
+</ul>
 
 {% endblock %}
