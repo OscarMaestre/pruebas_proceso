@@ -73,7 +73,7 @@
 	      </a>
               <ul class="dropdown-menu">
                 <li><a href="{% url 'excel_q' %}">
-		    Recibos 2016_R0(CSV)</a>
+		    Recibos 2016_R0 (XLS)</a>
 		</li>
 		
               </ul>
@@ -87,9 +87,10 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
+	{% block contenido %}
         <h1>Bienvenido a ANPEWeb</h1>
         <p>Por favor, elige una opción del menú.</p>
-        
+        {% endblock %}
       </div>
 
     </div> <!-- /container -->

@@ -169,12 +169,12 @@ def generar_recibos(peticion, combinacion_qs):
     filas.append(["", "", ""])
     filas.append(["", "", ""])
     filas.append(["", "", ""])
-    filas.append(["DNI", "APELLIDOS", "NOMBRE", "CUENTA", "CONCEPTO"])
+    filas.append(["DNI", "APELLIDOS/NOMBRE", "CUENTA", "IMPORTE", "CONCEPTO"])
     for b in bebidas:
         filas.append(
             [
-                    b.dni, b.apellido_1+" " + b.apellido_2,
-                    b.nombre, b.iban+""+b.ccc, "Cuota año 2016"
+                    b.dni, b.apellido_1+" " + b.apellido_2+","+ b.nombre,
+                    b.iban+""+b.ccc, "72", "Cuota año 2016"
             ]
         )
     sheet = excel.pe.Sheet(filas)
