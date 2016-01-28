@@ -32,7 +32,7 @@ def index(peticion):
 
 def ver_datos (peticion, localidad_id):
     sql1="""select gaseosa.apellido_1, gaseosa.apellido_2, gaseosa.nombre,
-        gaseosa.tlf_movil,
+        gaseosa.tlf_movil, gaseosa.email,
         centros.nombre_centro from gaseosa, centros
         where gaseosa.cod_centro_actual=trim(centros.codigo_centro, 'C')
         and centros.codigo_localidad='{0}' order by centros.nombre_centro,
