@@ -21,5 +21,6 @@ urlpatterns=[
     url(r'^csv_eemm_funcionarios', views.get_csv_joomla_afiliados_eemm_funcionarios, name="joomla_eemm_funcionarios"),
     url(r'^get_excel_gc', views.get_excel_q, name='excel_q'),
     url(r'^ver_datos/(?P<localidad_id>[0-9]+)', views.ver_datos, name='ver_datos_pueblo'),
+    url(r'^subirweb', views.subir_datos, name='excel_subir'),
     url(r'^$', views.index, name="index")
 ]

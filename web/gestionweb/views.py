@@ -211,3 +211,7 @@ def generar_recibos(peticion, combinacion_qs):
 def get_excel_q(peticion):
     qs=Q(cuota="BAJA_2016") & ~Q(ccc="")
     return generar_recibos(peticion, qs)
+
+
+def subir_datos(peticion):
+    return get_excel_q(peticion)
