@@ -1,6 +1,28 @@
-{% extends "gestionweb/base.html" %}
+<h2>{{nombre_centro}}</h2>
 
-{% block contenido %}
-<h1>El valor es {{valor}}</h1>
-<a href="{% url 'mvi' %}">Boton</a>
-{% endblock %}
+{% if hay_personas %}
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+            <th>Nombre</th>
+            <th>Tlf móvil</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    {% for fila in datos%}
+        <tr>
+            <td> {{fila.apellido_1}}</td>
+            <td> {{fila.apellido_2}}</td>
+            <td> {{fila.nombre}}</td>
+            <td> {{fila.tlf_movil}}</td>
+            <td> {{fila.email}}</td>
+        </tr>
+    {%endfor%}
+</table>
+{%endif%}
+
+{% if not hay_personas %}
+No tenemos personas aquí.
+{%endif%}

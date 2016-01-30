@@ -30,25 +30,29 @@ def index(peticion):
     }
     return render(peticion, 'gestionweb/index.html', contexto)
 
-def ver_datos (peticion, localidad_id):
-    sql1="""select gaseosa.apellido_1, gaseosa.apellido_2, gaseosa.nombre,
-        gaseosa.tlf_movil, gaseosa.email,
-        centros.nombre_centro from gaseosa, centros
-        where gaseosa.cod_centro_actual=trim(centros.codigo_centro, 'C')
-        and centros.codigo_localidad='{0}' order by centros.nombre_centro,
-        gaseosa.apellido_1, gaseosa.apellido_2""".format( localidad_id )
-    localidad=Localidades.objects.get(pk=localidad_id)
-    cursor=connection.cursor()
-    cursor.execute(sql1)
-    bebidas=cursor.fetchall()
-    
+
+def ver_datos(peticion, localidad_id):
+    qs=Q(codigo_localidad=localidad_id)
+    centros=Centros.objects.filter(qs).order_by("nombre_centro")
+    resultado=""
+    for c in centros:
+        #Esto sirve para quitar la C que hay al final de los codigos de centro
+        cod_centro=c.codigo_centro[:-1]
+        hay_personas=True
+        qs_personas=Q(cod_centro_actual=cod_centro)
+        personas=Gaseosa.objects.filter(qs_personas)
+        if len(personas)==0:
+            hay_personas=False
+        contexto={
+            "nombre_centro":c.nombre_centro,
+            "datos":personas,
+            "hay_personas":hay_personas
+        }
+        resultado+=render_to_string("gestionweb/datos_centro.html", contexto)
     contexto={
-        "id":localidad_id,
-        'nombre_localidad':localidad.nombre_localidad,
-        'bebidas': bebidas
+        "tablas_resultado":resultado
     }
     return render(peticion, 'gestionweb/ver_datos.html', contexto)
-    
 
 def moviles_interinos_maestros(peticion):
     gaseosas=Gaseosa.objects.filter(
@@ -76,7 +80,8 @@ def moviles_funcionarios_eemm(peticion):
 
 
 def todos_moviles(peticion):
-    gaseosas=Gaseosa.objects.all()
+    sin_movil=~Q(tlf_movil="")
+    gaseosas=Gaseosa.objects.filter(sin_movil)
     contexto={'objetos':gaseosas}
     texto=render_to_string ( "gestionweb/listado_telefonos_moviles.txt", contexto)
     return enviar_plantilla_texto (texto, "moviles_todos.txt")

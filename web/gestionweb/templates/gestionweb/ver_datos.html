@@ -1,29 +1,15 @@
 {% extends "gestionweb/base.html" %}
 
 {% block contenido %}
-<h2>Datos de {{nombre_localidad}}</h2>
 
-
-<center>
-    <form><input type="button" value=" Imprimir "
-onclick="window.print();return false;" /></form> 
-</center>
-<table class="table">
     
-
-{%for b in bebidas%}
-    <tr>
-        {% for campo in b %}
-            <td>
-                {{campo}}
-            </td>
-        {% endfor%}
-    </tr>
-{%endfor%}
-</table>
-{% endblock %}
+{%autoescape off%}
+{{tablas_resultado}}
+{% endautoescape %}
 
 <center>
     <form><input type="button" value=" Imprimir "
 onclick="window.print();return false;" /></form> 
 </center>
+
+{% endblock %}

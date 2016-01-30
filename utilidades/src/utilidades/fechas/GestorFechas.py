@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # coding=utf-8
 import datetime
-
+from datetime import timedelta
 class GestorFechas(object):
     def convertir_fecha_a_formato_iso(self, fecha):
         posibles_separadores=["-", "/"]
@@ -36,3 +36,9 @@ class GestorFechas(object):
     def get_hoy_espanol(self):
         hoy=datetime.datetime.now()
         return hoy.strftime("%d-%m-%Y")
+    
+    def get_rango_fechas_ultima_semana(self):
+        hoy=datetime.datetime.now()
+        diferencia=datetime.timedelta(days=7)
+        hace_una_semana=hoy-diferencia
+        return (hace_una_semana, hoy)
