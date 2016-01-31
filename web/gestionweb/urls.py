@@ -21,6 +21,9 @@ urlpatterns=[
     url(r'^csv_eemm_funcionarios', views.get_csv_joomla_afiliados_eemm_funcionarios, name="joomla_eemm_funcionarios"),
     url(r'^get_excel_gc', views.get_excel_q, name='excel_q'),
     url(r'^ver_datos/(?P<localidad_id>[0-9]+)', views.ver_datos, name='ver_datos_pueblo'),
-    url(r'^subirweb', views.subir_datos, name='excel_subir'),
+    url(r'^subirweb', views.mostrar_tandas, name='excel_subir'),
+    url(r'^tanda_desde_verano_2015', views.get_tanda_desde_verano_2015, name='tanda_desde_verano_2015'),
+    url(r'^subir_tanda/(?P<tanda>[0-9]+)', views.get_hoja_exportar, name='subir_tanda'),
+    
     url(r'^$', views.index, name="index")
 ]

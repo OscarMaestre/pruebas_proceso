@@ -10,12 +10,16 @@ class EscritorExcel(object):
         self.libro=xlwt.Workbook()
         self.hojas=[]
         self.fila_actual=0
+        self.formato_fechas= xlwt.XFStyle()
+        self.formato_fechas.num_format_str = 'dd/mm/yyyy'
     def anadir_hoja(self, nombre_hoja):
         self.hojas.append(self.libro.add_sheet(nombre_hoja))
     
-    def escribir_en_hoja(self, fila, columna, valor, hoja=0):
-        self.hojas[hoja].write(fila, columna, valor)
-        
+    def escribir_en_hoja(self, fila, columna, valor, es_fecha=False, hoja=0):
+        if not es_fecha:
+            self.hojas[hoja].write(fila, columna, valor)
+        else:
+            self.hojas[hoja].write(fila, columna, valor, self.formato_fechas)
     def get_nombre_fichero(self):
         return self.nombre_archivo_xls
     def set_configuracion_tipica(self, nombre_archivo="ParaImportar.xls"):
@@ -44,6 +48,23 @@ class EscritorExcel(object):
         self.escribir_en_hoja( fila_escritura,  1, modelo_gaseosa.nombre)
         self.escribir_en_hoja( fila_escritura,  2, modelo_gaseosa.apellido_1)
         self.escribir_en_hoja( fila_escritura,  3, modelo_gaseosa.apellido_2)
+        self.escribir_en_hoja( fila_escritura,  4, modelo_gaseosa.direccion)
+        self.escribir_en_hoja( fila_escritura,  5, modelo_gaseosa.ciudad)
+        self.escribir_en_hoja( fila_escritura,  6, modelo_gaseosa.codigo_postal)
+        self.escribir_en_hoja( fila_escritura,  7, modelo_gaseosa.sexo)
+        self.escribir_en_hoja( fila_escritura,  8, modelo_gaseosa.fecha_nacimiento, es_fecha=True)
+        email=modelo_gaseosa.email
+        if email.find("@")!=-1:
+            self.escribir_en_hoja( fila_escritura, 10, email)
+        self.escribir_en_hoja( fila_escritura, 11, "N")
+        self.escribir_en_hoja( fila_escritura, 12, modelo_gaseosa.tlf_casa)
+        self.escribir_en_hoja( fila_escritura, 13, modelo_gaseosa.tlf_movil)
+        self.escribir_en_hoja( fila_escritura, 14, "N")
+        self.escribir_en_hoja( fila_escritura, 15, modelo_gaseosa.fecha_alta, es_fecha=True)
+        self.escribir_en_hoja( fila_escritura, 16, "S")
+        iban="{0}{1}".format(modelo_gaseosa.iban, modelo_gaseosa.ccc)
+        self.escribir_en_hoja( fila_escritura, 26, iban)
+        
         
         self.fila_actual+=1
     def guardar(self):

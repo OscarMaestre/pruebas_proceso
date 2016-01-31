@@ -213,14 +213,12 @@ def get_excel_q(peticion):
     return generar_recibos(peticion, qs)
 
 
-def subir_datos(peticion):
+
+def enviar_excel_para_web(peticion, gaseosas, nombre_fichero):
     RUTA_IMPORTACION_UTILIDADES= ( ".." + os.sep )*4
     RUTA_IMPORTACION_UTILIDADES="/home/usuario/repos/varios/pruebas_proceso/utilidades/src/"
     sys.path.insert(0, RUTA_IMPORTACION_UTILIDADES)
     from utilidades.excel.GestorExcel import EscritorExcel    
-    #qs=Q(fecha_alta__date__gt(datetime.date(2015, 7, 1)))
-    #qs=Q(nombre="Antonio")
-    gaseosas=Gaseosa.objects.filter(fecha_alta__gt=datetime.date(2015,7,1))
     escritor_excel=EscritorExcel()
     escritor_excel.set_configuracion_tipica()
     for g in gaseosas:
@@ -230,7 +228,27 @@ def subir_datos(peticion):
     fsock = open(escritor_excel.get_nombre_fichero(),"rb")
     response = HttpResponse(fsock, content_type='application/vnd.ms-excel')
     response['Content-Length'] = os.path.getsize(escritor_excel.get_nombre_fichero())
-    response['Content-Disposition']='attachment; filename={0}'.format("SubirAfi.xls")
+    response['Content-Disposition']='attachment; filename={0}'.format(nombre_fichero)
     return response
 
+def get_tanda_desde_verano_2015(peticion):
     
+    #qs=Q(fecha_alta__date__gt(datetime.date(2015, 7, 1)))
+    #qs=Q(nombre="Antonio")
+    gaseosas=Gaseosa.objects.filter(fecha_alta__gt=datetime.date(2015,7,1))
+    return enviar_excel_para_web(peticion, gaseosas, "SubirAfi.xls")
+
+def mostrar_tandas(peticion):
+    MAX_TANDAS=3
+    tandas=range(0, MAX_TANDAS)
+    contexto={
+        "tandas":tandas
+    }
+    return render(peticion, "gestionweb/mostrar_tandas.html", contexto)
+    
+def get_hoja_exportar(peticion, tanda):
+    num=int(tanda)
+    lim_inferior=(num*500)
+    lim_superior=(lim_inferior+500)-1
+    gaseosas=Gaseosa.objects.all()[lim_inferior:lim_superior]
+    return enviar_excel_para_web(peticion, gaseosas, "Subir-Tanda-{0}.xls".format(tanda))

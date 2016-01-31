@@ -57,6 +57,7 @@ class Gaseosa(models.Model):
     apellido_1 = models.CharField(max_length=100, blank=True, null=True)
     apellido_2 = models.CharField(max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=60, blank=True, null=True)
+    sexo= models.CharField(max_length=2, blank=True, null=True)
     direccion = models.CharField(max_length=100, blank=True, null=True)
     codigo_postal = models.CharField(max_length=6, blank=True, null=True)
     ciudad = models.CharField(max_length=100, blank=True, null=True)

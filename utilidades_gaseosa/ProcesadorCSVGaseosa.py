@@ -25,6 +25,7 @@ SQL_CREATE_GASEOSA="""
         apellido_1          char(100),
         apellido_2          char(100),
         nombre              char(60),
+        sexo                char(2),
         direccion           char(100),
         codigo_postal       char(6),
         ciudad              char(100),
@@ -84,12 +85,14 @@ class ProcesadorCSVGaseosa(object):
     CORRESPONDENCIA["Cuerpo"]="cuerpo"
     CORRESPONDENCIA["IBAN"]="iban"
     CORRESPONDENCIA["Cuenta"]="ccc"
+    CORRESPONDENCIA["SEXO"]="sexo"
     def __init__(self):
         self.posiciones_campos=dict()
         self.posiciones_campos["DNI"]        = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["APELLIDO 1"] = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["APELLIDO 2"] = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["NOMBRE"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["SEXO"]       = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["Dirección"]  = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["C_Postal"]   = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["Ciudad"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
