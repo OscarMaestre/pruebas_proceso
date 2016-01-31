@@ -9,7 +9,7 @@ from django.db.models import Q
 from .formularios import PosiblesCentrosCR
 import django_excel as excel #sudo pip3 install django-excel
 import pyexcel.ext.xls  #sudo pip3 install pyexcel-xls
-import csv
+import csv, sys, os
 
 # Create your views here.
 
@@ -214,4 +214,9 @@ def get_excel_q(peticion):
 
 
 def subir_datos(peticion):
+    can_import_settings=True
+    RUTA_IMPORTACION_UTILIDADES= ( ".." + os.sep )*4
+    RUTA_IMPORTACION_UTILIDADES="/home/usuario/repos/varios/pruebas_proceso/utilidades/src"
+    sys.path.append(RUTA_IMPORTACION_UTILIDADES)
+    from utilidades.excel.GestorExcel import EscritorExcel
     return get_excel_q(peticion)
