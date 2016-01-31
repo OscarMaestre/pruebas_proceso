@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.db import connection
 from django.template.loader import  render_to_string
-from django.http import HttpResponse
+from django.http import HttpResponse, FileResponse
 from .models import Gaseosa, Centros, Localidades
 from .plantillas import enviar_plantilla_texto
 from django.db.models import Q
@@ -10,7 +10,7 @@ from .formularios import PosiblesCentrosCR
 import django_excel as excel #sudo pip3 install django-excel
 import pyexcel.ext.xls  #sudo pip3 install pyexcel-xls
 import csv, sys, os
-
+import datetime
 # Create your views here.
 
 
@@ -214,9 +214,23 @@ def get_excel_q(peticion):
 
 
 def subir_datos(peticion):
-    can_import_settings=True
     RUTA_IMPORTACION_UTILIDADES= ( ".." + os.sep )*4
-    RUTA_IMPORTACION_UTILIDADES="/home/usuario/repos/varios/pruebas_proceso/utilidades/src"
-    sys.path.append(RUTA_IMPORTACION_UTILIDADES)
-    from utilidades.excel.GestorExcel import EscritorExcel
-    return get_excel_q(peticion)
+    RUTA_IMPORTACION_UTILIDADES="/home/usuario/repos/varios/pruebas_proceso/utilidades/src/"
+    sys.path.insert(0, RUTA_IMPORTACION_UTILIDADES)
+    from utilidades.excel.GestorExcel import EscritorExcel    
+    #qs=Q(fecha_alta__date__gt(datetime.date(2015, 7, 1)))
+    #qs=Q(nombre="Antonio")
+    gaseosas=Gaseosa.objects.filter(fecha_alta__gt=datetime.date(2015,7,1))
+    escritor_excel=EscritorExcel()
+    escritor_excel.set_configuracion_tipica()
+    for g in gaseosas:
+        escritor_excel.anadir_fila(g)
+    escritor_excel.guardar()
+    
+    fsock = open(escritor_excel.get_nombre_fichero(),"rb")
+    response = HttpResponse(fsock, content_type='application/vnd.ms-excel')
+    response['Content-Length'] = os.path.getsize(escritor_excel.get_nombre_fichero())
+    response['Content-Disposition']='attachment; filename={0}'.format("SubirAfi.xls")
+    return response
+
+    

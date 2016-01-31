@@ -16,11 +16,13 @@ class EscritorExcel(object):
     def escribir_en_hoja(self, fila, columna, valor, hoja=0):
         self.hojas[hoja].write(fila, columna, valor)
         
-    def set_configuracion_tipica(self):
+    def get_nombre_fichero(self):
+        return self.nombre_archivo_xls
+    def set_configuracion_tipica(self, nombre_archivo="ParaImportar.xls"):
         self.nombre_archivo_xls="ParaImportar.xls"
         self.libro=xlwt.Workbook()
         self.hojas=[]
-        self.fila_actual=0
+        self.fila_actual=3
         self.anadir_hoja("Afiliados_Importar")
         self.escribir_en_hoja(0, 0, "AFIL_140208")
         self.escribir_en_hoja(1, 0, "AFILLIADOS PARA IMPORTAR (INSERTAR / ACTUALIZAR) ")
@@ -44,7 +46,7 @@ class EscritorExcel(object):
         self.escribir_en_hoja( fila_escritura,  3, modelo_gaseosa.apellido_2)
         
         self.fila_actual+=1
-    def __del__(self):
-        self.libro.save(self.nombre_archivo_xls)
+    def guardar(self):
+        self.libro.save ( self.nombre_archivo_xls )
         
         
