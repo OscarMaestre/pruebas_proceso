@@ -1,0 +1,13 @@
+{% extends "gestionweb/base.html" %}
+{% block contenido %}
+<ul>
+    {% for t in tandas%}
+        <li>
+            <a href="{% url 'subir_tanda' t%}"> Tanda {{t}}</a>
+        </li>
+    {% endfor %}
+    <li>
+        <a href="{% url 'tanda_desde_verano_2015'%}"> Tanda desde 1-Julio-2015{{t}}</a>
+    </li>
+</ul>
+{% endblock %}
