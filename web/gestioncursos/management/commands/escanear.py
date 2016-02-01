@@ -20,7 +20,7 @@ sys.path.insert( 0, "/home/usuario/repos/varios/pruebas_proceso/" )
 from django.core.management.base import BaseCommand, CommandError
 
 DIR_ESCANEOS="/home/usuario/repos/varios/pruebas_proceso/escaneos"
-SEPARADOR_CURSO="Curso"
+SEPARADOR_CURSO="Cur"
 BD_TEMPORAL="cursos.db"
 mensaje="""
 <!DOCTYPE html>
@@ -98,6 +98,9 @@ class Command(BaseCommand):
         
         directorio=self.averiguar_directorio()
         lista_cursos=self.get_ficheros()
+        if len (lista_cursos)==0:
+            print("No hay archivos hoy")
+            return 
         self.enviar_ficheros( lista_cursos )
         #print(lista_cursos)
     
