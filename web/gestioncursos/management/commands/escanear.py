@@ -46,11 +46,11 @@ mensaje="""
 class Command(BaseCommand):
     help="Procesa los ficheros de escaneado"
     can_import_settings=True
-    
     def averiguar_directorio(self):
         from utilidades.fechas.GestorFechas import GestorFechas
         f=GestorFechas()
-        os.chdir(DIR_ESCANEOS + os.sep + f.get_hoy_iso())
+        self.directorio_escaneos_hoy=DIR_ESCANEOS + os.sep + f.get_hoy_iso()
+        os.chdir(self.directorio_escaneos_hoy)
     def get_ficheros(self):
         ficheros="*.pdf"
         return glob.glob(ficheros)
@@ -63,6 +63,7 @@ class Command(BaseCommand):
         return Curso.objects.get(pk=codigo_curso)
     
     def enviar_ficheros(self, ficheros):
+        from utilidades.ficheros.GestorFicheros import GestorFicheros
         from utilidades.email.GestorEmail import GestorEmail
         from gestioncursos.models import Inscripcion
         gestor_email=GestorEmail()
@@ -85,6 +86,11 @@ class Command(BaseCommand):
         mensaje_a_enviar=mensaje.format ( html_ficheros )
         print (mensaje_a_enviar)
         gestor_email.enviar_matriculas_cursos(mensaje_a_enviar, lista_ficheros)
+        gestor_ficheros=GestorFicheros()
+        DIR_DESTINO="InscripcionesEnviadas"
+        gestor_ficheros.crear_directorio( self.directorio_escaneos_hoy + os.sep + DIR_DESTINO)
+        for f in ficheros:
+            gestor_ficheros.mover_fichero(f, DIR_DESTINO )
 
 
     def handle(self, *args, **options):
