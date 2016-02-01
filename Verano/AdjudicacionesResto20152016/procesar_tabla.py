@@ -182,6 +182,7 @@ for i in range(0, total_lineas):
         fecha_fin=extraer_patron(re_fecha, linea_posterior[141:])
         fecha_inicio = utilidades.convertir_fecha_a_formato_iso ( fecha_inicio )
         fecha_fin = utilidades.convertir_fecha_a_formato_iso ( fecha_fin )
+        nombre_persona=nombre_persona.replace("'", "-")
         lista_campos.append(dni)
         lista_campos.append(nombre_persona)
         lista_campos.append(codigo_especialidad)
@@ -212,4 +213,5 @@ for i in range(0, total_lineas):
 
     
 archivo.close()
+GestorDB.BD_RESULTADOS.activar_depuracion()
 GestorDB.BD_RESULTADOS.ejecutar_sentencias(lista_inserts_sql3)

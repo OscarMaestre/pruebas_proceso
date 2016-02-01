@@ -14,3 +14,51 @@
 47078678R:BERNABE SANCHEZ, IRENE:0590105:02000741:IES DON BOSCO:ALBACETE:2015-12-10:2016-01-15:2015-12-09
 05170178P:LOPEZ PEINADO, FRANCISCO JAVIER:P590111:02000741:IES DON BOSCO:ALBACETE:2015-12-10:2016-06-24:2015-12-09
 05916782D:BENAVENT LOPEZ, RAFAEL:0590111:13001327:IES MAESTRE DE CALATRAVA:CIUDAD REAL:2015-12-10:2016-06-24:2015-12-09
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04205922G','ALVAREZ ESPADAS, PATRICIA','2015-12-10','2016-01-31','Adjudicacion 09-12-2015','2015-12-09','0590004','45004752');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06268415H','REGUILLO MORENO, MARIA DOLORES','2015-12-10','2015-12-18','Adjudicacion 09-12-2015','2015-12-09','P590005','13003737');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('53376695C','NAVARRO VENTURA, IGNACIO','2015-12-10','2015-12-31','Adjudicacion 09-12-2015','2015-12-09','0590059','13004699');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('30945263M','HERRUZO SANCHEZ, MARIA','2015-12-10','2016-06-24','Adjudicacion 09-12-2015','2015-12-09','0590008','13004808');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('52483918B','ALGAR CANTERO, JESUS JOSE','2015-12-10','2016-02-02','Adjudicacion 09-12-2015','2015-12-09','0590009','02004008');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('50730249T','BERRIOBEÑA BARBA, LUSCINDA','2015-12-10','2016-01-15','Adjudicacion 09-12-2015','2015-12-09','0590009','19008204');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06576172N','MARTIN HERNANDEZ, RAQUEL','2015-12-10','2016-06-24','Adjudicacion 09-12-2015','2015-12-09','0590009','45004090');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('24393172Q','CERDEIRA CASINO, ELECTRO DANIEL','2015-12-10','2016-01-22','Adjudicacion 09-12-2015','2015-12-09','0590011','02002784');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44387245M','BRAVO ABAD, ANA MARIA','2015-12-10','2015-12-25','Adjudicacion 09-12-2015','2015-12-09','0590016','02004379');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05680963D','SERRANO SERRANO, MARIA ANGELES','2015-12-10','2016-01-31','Adjudicacion 09-12-2015','2015-12-09','0590016','45006049');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06215526Y','JIMENEZ RODRIGUEZ, ANTONIO','2015-12-10','2015-12-25','Adjudicacion 09-12-2015','2015-12-09','0590018','02000982');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('33403406T','AUÑON DIAZ, ENCARNA','2015-12-10','2016-03-16','Adjudicacion 09-12-2015','2015-12-09','0590018','19001027');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('75067404G','MARTINEZ GONZALEZ, MIGUEL ANGEL','2015-12-10','2015-12-31','Adjudicacion 09-12-2015','2015-12-09','0590019','13000220');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47078678R','BERNABE SANCHEZ, IRENE','2015-12-10','2016-01-15','Adjudicacion 09-12-2015','2015-12-09','0590105','02000741');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05170178P','LOPEZ PEINADO, FRANCISCO JAVIER','2015-12-10','2016-06-24','Adjudicacion 09-12-2015','2015-12-09','P590111','02000741');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05916782D','BENAVENT LOPEZ, RAFAEL','2015-12-10','2016-06-24','Adjudicacion 09-12-2015','2015-12-09','0590111','13001327');
+--------------------
