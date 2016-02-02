@@ -20,6 +20,7 @@ class GestorEmail(object):
             self.FICHERO_CONFIGURACION_EMAIL="C:\\repos\\configuracion_envio_email.txt"
             self.FICHERO_CONFIGURACION_EMAIL_AFILIADOS="C:\\repos\\configuracion_envio_email_afiliados.txt"
             self.FICHERO_DESTINATARIOS_EMAIL="C:\\repos\\destinatarios.txt"
+			self.FICHERO_CONFIGURACION_EMAIL_OSCAR="C:\\repos\\configuracion_envio_email_oscar.txt"
 
 
 
