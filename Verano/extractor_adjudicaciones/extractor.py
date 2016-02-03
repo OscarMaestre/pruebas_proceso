@@ -52,7 +52,7 @@ for fila in filas:
     dia_final=int(fecha_final[8:])
     #print(dia_final)
     #print (dia_final, mes_final, anio_final)
-    
+    codigo_centro=fila[2]
     fecha_final_contrato=datetime(anio_final, mes_final, dia_final)
     if i % max_filas == 0:
         nombre_funcion = prefijo_funcion + str(num_funcion)
@@ -62,41 +62,51 @@ for fila in filas:
         num_funcion = num_funcion + 1
 
         sql_intermedio = ''
+        
+    especialidad=fila[6]
+    if fecha_hoy>fecha_final_contrato:
+        if especialidad.find("597")!=-1:
+            codigo_centro="9999"
+        else:
+            codigo_centro="9998"
     lista_registros = []
     if fila[7] == None:
         registro = ';'.join([
             fila[0],
             fila[1],
-            fila[2],
+            codigo_centro,
             fila[3],
             fila[4],
             fila[5],
-            fila[6],
+            especialidad,
             'No relevante',
             ])
     else:
         registro = ';'.join([
             fila[0],
             fila[1],
-            fila[2],
+            codigo_centro,
             fila[3],
             fila[4],
             fila[5],
-            fila[6],
+            especialidad,
             fila[7],
             ])
 
     # temp="update gaseosa set codcentrodefinitivo='"+fila[2]+"' where dni='"+fila[0]+"'"
     # sql_intermedio+= (GestorDB.crear_sentencia_update(temp))
 
-    temp = "update gaseosa set codcentrocursoactual='" + fila[2] \
+    temp = "update gaseosa set codcentrocursoactual='" + codigo_centro \
         + "' where dni='" + fila[0] + "'"
     sql_intermedio += GestorDB.crear_sentencia_update(temp)
     
     fecha_inicio=utilidades.convertir_fecha_de_iso_a_estandar(fila[4])
     fecha_fin=utilidades.convertir_fecha_de_iso_a_estandar(fila[5])
-    descripcion_fechas = 'Desde ' + fecha_inicio + ' hasta ' + fecha_fin \
+    if fecha_hoy<fecha_final_contrato:
+        descripcion_fechas = 'Desde ' + fecha_inicio + ' hasta ' + fecha_fin \
         + ' (' + fila[3] + ')'
+    else:
+        descripcion_fechas = 'En paro, su ultimo contrato acabó el ' + fecha_fin 
     temp = "update gaseosa set auxiliar='" + descripcion_fechas \
         + "' where dni='" + fila[0] + "'"
     sql_intermedio += GestorDB.crear_sentencia_update(temp)
