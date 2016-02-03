@@ -68,11 +68,21 @@ class EscritorExcel(object):
         self.escribir_en_hoja( fila_escritura, 14, "N")
         self.escribir_en_hoja( fila_escritura, 15, modelo_gaseosa.fecha_alta, es_fecha=True)
         self.escribir_en_hoja( fila_escritura, 16, "S") #revista
-        if modelo_gaseosa.cuerpo=="19" or modelo_gaseosa.cuerpo=="10":
+        cuerpos_maestros=["10", "19", "7019"]
+        if modelo_gaseosa.cuerpo in cuerpos_maestros:
             self.escribir_en_hoja( fila_escritura, 18, "597" )
-        if modelo_gaseosa.cuerpo=="29" or modelo_gaseosa.cuerpo=="20":
+        cuerpos_sec=["20", "29"]
+        if modelo_gaseosa.cuerpo in cuerpos_sec:
             self.escribir_en_hoja( fila_escritura, 18, "590" )
-            
+        cuerpos_eoi=["40", "41", "49"]
+        if modelo_gaseosa.cuerpo in cuerpos_eoi:
+            self.escribir_en_hoja( fila_escritura, 18, "592" )
+        cuerpos_ptfp=["50", "51", "59"]
+        if modelo_gaseosa.cuerpo in cuerpos_ptfp:
+            self.escribir_en_hoja( fila_escritura, 18, "591" )
+        cuerpos_musica=["30", "31", "39"]
+        if modelo_gaseosa.cuerpo in cuerpos_ptfp:
+            self.escribir_en_hoja( fila_escritura, 18, "594" )
         iban="{0}{1}".format(modelo_gaseosa.iban, modelo_gaseosa.ccc)
         self.escribir_en_hoja( fila_escritura, 26, iban)
         
