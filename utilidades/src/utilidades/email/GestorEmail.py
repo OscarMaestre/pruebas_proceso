@@ -92,5 +92,5 @@ class GestorEmail(object):
         (usuario, clave,
          servidor_smtp, puerto_smtp,
          servidor_pop, puerto_pop,remitente)=self.get_parametros(self.FICHERO_CONFIGURACION_EMAIL)
-        self.enviar_email(remitente, remitente, "Matriculas cursos", mensaje, self.FICHERO_CONFIGURACION_EMAIL, lista_ficheros)
+        self.enviar_email(remitente, "oscar@anpecr.com", "Matriculas cursos", mensaje, self.FICHERO_CONFIGURACION_EMAIL, lista_ficheros)
         
