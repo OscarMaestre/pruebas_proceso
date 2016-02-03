@@ -3,6 +3,7 @@
 
 
 import xlwt
+from tempfile import TemporaryFile, mkstemp
 
 class EscritorExcel(object):
     def __init__(self, nombre_archivo_xls="ParaImportar.xls"):
@@ -23,7 +24,8 @@ class EscritorExcel(object):
     def get_nombre_fichero(self):
         return self.nombre_archivo_xls
     def set_configuracion_tipica(self, nombre_archivo="ParaImportar.xls"):
-        self.nombre_archivo_xls="ParaImportar.xls"
+        (descriptor, nombre)=mkstemp()
+        self.nombre_archivo_xls=nombre_archivo
         self.libro=xlwt.Workbook()
         self.hojas=[]
         self.fila_actual=3
@@ -69,5 +71,5 @@ class EscritorExcel(object):
         self.fila_actual+=1
     def guardar(self):
         self.libro.save ( self.nombre_archivo_xls )
-        
+    
         
