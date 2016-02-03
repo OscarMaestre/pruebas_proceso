@@ -81,7 +81,7 @@ class EscritorExcel(object):
         if modelo_gaseosa.cuerpo in cuerpos_ptfp:
             self.escribir_en_hoja( fila_escritura, 18, "591" )
         cuerpos_musica=["30", "31", "39"]
-        if modelo_gaseosa.cuerpo in cuerpos_ptfp:
+        if modelo_gaseosa.cuerpo in cuerpos_musica:
             self.escribir_en_hoja( fila_escritura, 18, "594" )
         iban="{0}{1}".format(modelo_gaseosa.iban, modelo_gaseosa.ccc)
         self.escribir_en_hoja( fila_escritura, 26, iban)
