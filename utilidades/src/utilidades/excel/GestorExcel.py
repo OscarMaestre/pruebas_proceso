@@ -24,7 +24,7 @@ class EscritorExcel(object):
     def get_nombre_fichero(self):
         return self.nombre_archivo_xls
     def set_configuracion_tipica(self, nombre_archivo="ParaImportar.xls"):
-        (descriptor, nombre)=mkstemp()
+        (descriptor, nombre)=mkstemp(suffix=".xls")
         self.nombre_archivo_xls=nombre_archivo
         self.libro=xlwt.Workbook()
         self.hojas=[]
