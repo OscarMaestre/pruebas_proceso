@@ -73,8 +73,6 @@ class EscritorExcel(object):
         
         self.fila_actual+=1
     def guardar(self):
-        if self.configuracion_tipica==True:
-            self.descriptor.close()
         self.libro.save ( self.nombre_archivo_xls )
     
         
