@@ -11,6 +11,7 @@ class EscritorExcel(object):
         self.libro=xlwt.Workbook()
         self.hojas=[]
         self.fila_actual=0
+        self.configuracion_tipica=False
         self.formato_fechas= xlwt.XFStyle()
         self.formato_fechas.num_format_str = 'dd/mm/yyyy'
     def anadir_hoja(self, nombre_hoja):
@@ -25,7 +26,9 @@ class EscritorExcel(object):
         return self.nombre_archivo_xls
     def set_configuracion_tipica(self, nombre_archivo="ParaImportar.xls"):
         (descriptor, nombre)=mkstemp(suffix=".xls")
-        self.nombre_archivo_xls=nombre_archivo
+        self.nombre_archivo_xls=nombre
+        self.configuracion_tipica=True
+        self.descriptor=descriptor
         self.libro=xlwt.Workbook()
         self.hojas=[]
         self.fila_actual=3
@@ -70,6 +73,8 @@ class EscritorExcel(object):
         
         self.fila_actual+=1
     def guardar(self):
+        if self.configuracion_tipica==True:
+            self.descriptor.close()
         self.libro.save ( self.nombre_archivo_xls )
     
         
