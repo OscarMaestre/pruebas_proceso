@@ -61,12 +61,18 @@ class EscritorExcel(object):
         email=modelo_gaseosa.email
         if email.find("@")!=-1:
             self.escribir_en_hoja( fila_escritura, 10, email)
+        
         self.escribir_en_hoja( fila_escritura, 11, "N")
         self.escribir_en_hoja( fila_escritura, 12, modelo_gaseosa.tlf_casa)
         self.escribir_en_hoja( fila_escritura, 13, modelo_gaseosa.tlf_movil)
         self.escribir_en_hoja( fila_escritura, 14, "N")
         self.escribir_en_hoja( fila_escritura, 15, modelo_gaseosa.fecha_alta, es_fecha=True)
-        self.escribir_en_hoja( fila_escritura, 16, "S")
+        self.escribir_en_hoja( fila_escritura, 16, "S") #revista
+        if modelo_gaseosa.cuerpo=="19" or modelo_gaseosa.cuerpo=="10":
+            self.escribir_en_hoja( fila_escritura, 18, "597" )
+        if modelo_gaseosa.cuerpo=="29" or modelo_gaseosa.cuerpo=="20":
+            self.escribir_en_hoja( fila_escritura, 18, "590" )
+            
         iban="{0}{1}".format(modelo_gaseosa.iban, modelo_gaseosa.ccc)
         self.escribir_en_hoja( fila_escritura, 26, iban)
         
