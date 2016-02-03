@@ -13,13 +13,14 @@ NUM_DIRECTORIOS_ANTERIORES=4
 SEPADORES=(".." + os.sep ) * NUM_DIRECTORIOS_ANTERIORES
 DIR_UTILIDADES= SEPADORES + "utilidades" + os.sep + "src"
 
-sys.path.insert( 0, "/home/usuario/repos/varios/pruebas_proceso/" )
+sys.path.insert( 0, "c:\\repos\\varios\\pruebas_proceso\\utilidades\\src" )
 #print (DIR_UTILIDADES)
 
 
 from django.core.management.base import BaseCommand, CommandError
 
-DIR_ESCANEOS="/home/usuario/repos/varios/pruebas_proceso/escaneos"
+DIR_ESCANEOS="C:/Documents and Settings/k/Mis documentos/Mis imágenes"
+#DIR_ESCANEOS="/home/usuario/repos/varios/pruebas_proceso/escaneos"
 SEPARADOR_CURSO="Cur"
 BD_TEMPORAL="cursos.db"
 mensaje="""
@@ -49,7 +50,7 @@ class Command(BaseCommand):
     def averiguar_directorio(self):
         from utilidades.fechas.GestorFechas import GestorFechas
         f=GestorFechas()
-        self.directorio_escaneos_hoy=DIR_ESCANEOS + os.sep + f.get_hoy_iso()
+        self.directorio_escaneos_hoy=DIR_ESCANEOS +"/"+ f.get_hoy_iso()
         os.chdir(self.directorio_escaneos_hoy)
     def get_ficheros(self):
         ficheros="*.pdf"
