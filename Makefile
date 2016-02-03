@@ -9,6 +9,7 @@ all:
 	cd Verano/AdjudicacionesResto20152016 && ./dodo.py
 	cd Verano/extractor_adjudicaciones && ./dodo.py
 	echo "Recuerda incluir las fechas de las adjudicaciones en extractor_adjudicaciones"
+	sqlite3 ../docencia.db -init variantes.thk
 mostrar:
 	sqlite3 nombramientos.db -init fichero.sql
 enviar:
