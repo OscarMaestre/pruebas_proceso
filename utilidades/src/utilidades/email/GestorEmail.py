@@ -20,8 +20,7 @@ class GestorEmail(object):
             self.FICHERO_CONFIGURACION_EMAIL="C:\\repos\\configuracion_envio_email.txt"
             self.FICHERO_CONFIGURACION_EMAIL_AFILIADOS="C:\\repos\\configuracion_envio_email_afiliados.txt"
             self.FICHERO_DESTINATARIOS_EMAIL="C:\\repos\\destinatarios.txt"
-			self.FICHERO_CONFIGURACION_EMAIL_OSCAR="C:\\repos\\configuracion_envio_email_oscar.txt"
-
+            self.FICHERO_DESTINATARIOS_EMAIL_LOCAL="C:\\repos\\configuracion_envio_email_oscar.txt"
 
 
     #La configuración del remitente debe estar en un fichero
@@ -84,7 +83,11 @@ class GestorEmail(object):
         for destinatario in lista_destinatarios:
             self.enviar_email("servicioemailautomatico@gmail.com",
                          destinatario, asunto, mensaje, FICHERO_CONFIGURACION_EMAIL, [])
-            
+    def enviar_email_servicio_corporativo(self, asunto, mensaje, lista_destinatarios):
+        for destinatario in lista_destinatarios:
+            self.enviar_email("servicioemailautomatico@gmail.com",
+                         destinatario, asunto, mensaje, FICHERO_CONFIGURACION_EMAIL_LOCAL, [])
+
     def enviar_matriculas_cursos(self, mensaje, lista_ficheros):
         (usuario, clave,
          servidor_smtp, puerto_smtp,
