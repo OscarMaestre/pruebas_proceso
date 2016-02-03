@@ -6,6 +6,7 @@ import sys
 import string
 import os
 
+from datetime import datetime
 NUM_SUBDIRECTORIOS_ANTERIORES = 1
 SEPARADOR = os.sep
 
@@ -40,6 +41,19 @@ sql_intermedio = ''
 # print ("nif; nombre_completo; codigo_centro; procedimiento; fecha_inicio; fecha_fin; especialidad; auxiliar")
 
 for fila in filas:
+    especialidad=fila[7]
+    fecha_final=fila[5]
+    fecha_hoy=datetime.now()
+    #print(fecha_final)
+    anio_final=int(fecha_final[0:4])
+    #print (anio_final)
+    mes_final=int(fecha_final[5:7])
+    #print(fecha_final[5:7], mes_final)
+    dia_final=int(fecha_final[8:])
+    #print(dia_final)
+    #print (dia_final, mes_final, anio_final)
+    
+    fecha_final_contrato=datetime(anio_final, mes_final, dia_final)
     if i % max_filas == 0:
         nombre_funcion = prefijo_funcion + str(num_funcion)
         imprimir = GestorDB.get_procedimiento(nombre_funcion,
