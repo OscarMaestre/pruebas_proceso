@@ -41,11 +41,11 @@ class GestorBD(object):
     def desactivar_depuracion(self):
         self.debug=False
         
-    def get_unico_valor(self, sql_con_valor_unico, nombre_campo):
+    def get_unico_valor(self, sql_con_valor_unico):
         if self.debug:
             print (sql_con_valor_unico)
         filas=self.get_filas(sql_con_valor_unico)
-        
+        #print(filas)
         return filas[0][0]
     
     def ejecutar_sentencias(self, lista_sentencias):

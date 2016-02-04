@@ -3,6 +3,8 @@
 
 import os
 import platform
+import requests
+
 from subprocess import call
 
 class GestorFicheros(object):
@@ -98,3 +100,9 @@ class GestorFicheros(object):
             #print("No hace falta renombrar:"+nombre_viejo)
             return 
         aplicar_comando(self.MOVER, "\""+nombre_viejo+"\"", nombre_nuevo)
+        
+    def descargar_fichero(self, url, nombre_fichero_destino):
+        peticion = requests.get ( url )
+        descriptor=open (nombre_fichero_destino, "w")
+        descriptor.write ( peticion.text )
+        descriptor.close()
