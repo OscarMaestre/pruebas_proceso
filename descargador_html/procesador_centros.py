@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup #sudo pip3 install BeautifulSoup4
 from constantes import *
 from datoscentros import Ensenanza, Centro
 import os, sys
@@ -52,6 +52,7 @@ def corregir_nombre_localidad(nombre_localidad):
     
     
 sql_busqueda_codigo_localidad = "select codigo_localidad from localidades where nombre_localidad='{0}'"
+sql_busqueda_codigo_centro="select codigo_centro from centros_region where codigo_localidad='{0}'"
 gf=GestorFicheros()
 lista_centros=[]
 bd=GestorBD ( ARCHIVO_RESULTADOS )
@@ -77,6 +78,13 @@ for i in range ( 0, TOTAL_PAGINAS):
         codigo_centro=codigo_centro.replace("[", "")
         codigo_centro=codigo_centro.replace("]", "")
         
+        try:
+            codigo_centro_en_bd=bd.get_unico_valor ( sql_busqueda_codigo_centro.format(codigo_centro) )
+            if codigo_centro_en_bd==codigo_centro:
+                continue
+        except :
+            #print ("Ops, no existe el centro {0}:".format(codigo_centro))
+            codigo_localidad="0000"
         #Se descarga el fichero ampliado
         url_informacion_centro = URL_JUNTA + enlace_centro
         fichero_mas_informacion=NOMBRE_FICHERO_INFORMACION_CENTRO.format (codigo_centro)
@@ -96,7 +104,7 @@ for i in range ( 0, TOTAL_PAGINAS):
         try:
             codigo_localidad=bd.get_unico_valor ( sql_busqueda_codigo_localidad.format(nombre_localidad) )
         except :
-            print ("Ops, no existe la localidad:"+nombre_localidad)
+            #print ("Ops, no existe la localidad:"+nombre_localidad)
             codigo_localidad="0000"
             
         div_provincia=centro.find("div", "campListPROVINCIA")
@@ -144,14 +152,38 @@ for i in range ( 0, TOTAL_PAGINAS):
         lista_centros.append ( c )
         
         
-bd.activar_depuracion()
-try:
-    bd.ejecutar_sentencias ( [Centro.get_sql_creacion_sqlite("centros_region")])
-    bd.ejecutar_sentencias ( [Ensenanza.get_sql_creacion_sqlite("ensenanzas_region")])
-except:
-    pass
+#bd.activar_depuracion()
+#try:
+#    bd.ejecutar_sentencias ( Centro.get_sql_creacion_sqlite("centros_region"))
+#    bd.ejecutar_sentencias ( Ensenanza.get_sql_creacion_sqlite("ensenanzas_region"))
+#except:
+#    pass
 
+print ("BEGIN TRANSACTION;")
+creacion_centros=Centro.get_sql_creacion_sqlite("centros_region")
+for c in creacion_centros:
+    print (c+";")
+
+creacion_ensenanzas=Ensenanza.get_sql_creacion_sqlite("ensenanzas_region")
+for e in creacion_ensenanzas:
+    print (e+";")
+    
+print ("COMMIT TRANSACTION;")
+print ("BEGIN TRANSACTION;")
 sql_insercion_centros=[]
 for c in lista_centros:
     sql_insercion_centros.append ( c.get_sql_centro_sqlite("centros_region") )
-bd.ejecutar_sentencias ( sql_insercion_centros )
+    
+sql_insercion_ensenanzas=[]
+for c in lista_centros:
+    sql_ensenanzas=c.get_sql_ensenanzas_sqlite("ensenanzas_region")
+    for sql in sql_ensenanzas:
+        print (sql+";")
+    
+for sql in sql_insercion_centros:
+    print (sql+";")
+for sql in sql_insercion_ensenanzas:
+    print (sql+";")
+
+print ("COMMIT TRANSACTION;")    
+#bd.ejecutar_sentencias ( sql_insercion_centros )

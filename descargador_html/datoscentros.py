@@ -11,8 +11,9 @@ class Ensenanza(object):
         self.fecha=fecha
     @staticmethod
     def get_sql_creacion_sqlite(nombre_tabla):
+        sentencias_sql=[]
         sql="""
-            create table {0} (
+            create table if not exists {0} (
                 nombre              char(120) primary key,
                 regimen             char(25),
                 unidades            integer,
@@ -21,7 +22,15 @@ class Ensenanza(object):
                 fecha               date
             )
         """
-        return sql.format ( nombre_tabla )
+        sentencias_sql.append ( sql.format (nombre_tabla)  )
+        
+        indice="""
+            create index if not exists idx_ensenanza_region on
+            {0} nombre
+        """
+        sentencias_sql.append ( indice.format(nombre_tabla) )
+        return sentencias_sql
+    
     def get_sql_sqlite(self, nombre_tabla):
         sql=""""
             insert or ignore into {0}
@@ -31,7 +40,7 @@ class Ensenanza(object):
             )
         """
         sql_devuelto=sql.format ( self.nombre, self.regimen, self.unidades,
-                                 self, puestos, self.unidades_concertadas, self.fecha)
+                                 self.puestos, self.unidades_concertadas, self.fecha)
         return sql_devuelto
     def __str__(self):
         return self.nombre
@@ -55,8 +64,9 @@ class Centro(object):
     
     @staticmethod
     def get_sql_creacion_sqlite(nombre_tabla):
+        sentencias_sql=[]
         sql="""
-        create table {0} (
+        create table if not exists {0} (
             codigo_centro char(10) primary key,
             nombre_centro char(120),
             codigo_localidad char(10),
@@ -69,7 +79,14 @@ class Centro(object):
             tipo_centro char(20),
             foreign key (codigo_localidad) references localidades(codigo_localidad)
         );"""
-        return sql.format ( nombre_tabla )
+        sentencias_sql.append (sql.format ( nombre_tabla ))
+        indice="""
+            create index if not exists idx_nombre_centro_region on
+            {0} codigo_centro
+        """
+        sentencias_sql.append ( indice.format(nombre_tabla) )
+        return sentencias_sql
+        
     def get_sql_centro_sqlite(self, nombre_tabla):
         
         sql_centro="""
@@ -89,7 +106,7 @@ class Centro(object):
     
     def get_sql_ensenanzas_sqlite ( self, nombre_tabla):
         sql_ensenanzas=[]
-        for e in self.ensenanzas:
+        for e in self.lista_ensenanzas:
             sql_ensenanzas.append ( e.get_sql_sqlite(nombre_tabla) )
         return sql_ensenanzas
     def __str__(self):
