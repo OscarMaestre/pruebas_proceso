@@ -227,10 +227,9 @@ def get_lineas_fichero(nombre_fichero):
     return lineas
 
 def sacar_tabla_de_una_bd_a_otra(nombre_tabla, bd_origen, bd_destino):
-    comando="echo \".dump {0}\" | sqlite3 {1} | sqlite3 {2}".format(
-        nombre_tabla, bd_origen, bd_destino
-    )
-    ejecutar_comando(comando, "")
+	if platform.system()=="Windows":comando="echo .dump {0} | sqlite3 {1} | sqlite3 {2}".format(nombre_tabla, bd_origen, bd_destino)
+	else:comando="echo \".dump {0}\" | sqlite3 {1} | sqlite3 {2}".format(nombre_tabla, bd_origen, bd_destino)
+	ejecutar_comando(comando, "")
 
 def extraer_cuerpo_con_especialidad(linea):
     return extraer_patron ( expr_regular_cuerpo_con_especialidad, linea )

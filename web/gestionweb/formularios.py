@@ -11,7 +11,7 @@ FAVORITE_COLORS_CHOICES = (
 )
 
 class PosiblesCentrosCR(forms.Form):
-    centros=Centros.objects.filter(codigo_centro__startswith="13")
-    elegibles=[(c.codigo_centro, c.nombre_centro) for c in centros]
+    posibles_centros=Centros.objects.filter(codigo_centro__startswith="13")
+    elegibles=[(c.codigo_centro, c.nombre_centro) for c in posibles_centros]
     posibles_centros= forms.MultipleChoiceField(required=False,
         widget=forms.Select, choices=elegibles)

@@ -61,7 +61,7 @@ class Command(BaseCommand):
         from gestioncursos.models import Curso
         longitud_separador=len( SEPARADOR_CURSO )
         codigo_curso=fichero[pos_separador+longitud_separador:-4].strip()
-        return Curso.objects.get(pk=codigo_curso)
+        return Curso.objects.using("remota").get(pk=codigo_curso)
     
     def enviar_ficheros(self, ficheros):
         from utilidades.ficheros.GestorFicheros import GestorFicheros
@@ -83,7 +83,7 @@ class Command(BaseCommand):
             inscripcion=Inscripcion()
             inscripcion.nombre_alumno=nombre_alumno
             inscripcion.curso=objeto_curso
-            inscripcion.save()
+            inscripcion.save(using="remota")
         mensaje_a_enviar=mensaje.format ( html_ficheros )
         print (mensaje_a_enviar)
         gestor_email.enviar_matriculas_cursos(mensaje_a_enviar, lista_ficheros)

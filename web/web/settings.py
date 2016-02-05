@@ -83,7 +83,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, '../../docencia.db'),
+    },
+	'remota': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'z:\\varios\\docencia.db'),
     }
+	
 }
 
 
