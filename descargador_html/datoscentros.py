@@ -30,8 +30,9 @@ class Ensenanza(object):
             self.fecha=fecha
         self.fecha=self.gf.convertir_fecha_a_formato_iso(self.fecha)
     @staticmethod
-    def get_sql_creacion_sqlite(nombre_tabla):
+    def get_sql_creacion_sqlite(nombre_tabla_ensenanzas, nombre_tabla_codigos):
         sentencias_sql=[]
+        sentencias_sql.append("pragma foreign_keys=on")
         sql="""
             create table if not exists {0} (
                 nombre              char(120) primary key,
@@ -39,28 +40,30 @@ class Ensenanza(object):
                 unidades            integer,
                 puestos             integer,
                 uds_concertadas     integer,
-                fecha               date
+                fecha               date,
+                codigo_centro       char(10),
+                foreign key (codigo_centro) references {1}
+                    on delete cascade on update cascade
             )
         """
-        sentencias_sql.append ( sql.format (nombre_tabla)  )
+        sentencias_sql.append ( sql.format (nombre_tabla_ensenanzas, nombre_tabla_codigos)  )
         
         indice="""
-            create index if not exists idx_ensenanza_region on
-            {0} nombre
+            create index if not exists idx_ensenanza_region on {0}(nombre)
         """
-        sentencias_sql.append ( indice.format(nombre_tabla) )
+        sentencias_sql.append ( indice.format(nombre_tabla_ensenanzas) )
         return sentencias_sql
     
-    def get_sql_sqlite(self, nombre_tabla):
+    def get_sql_sqlite(self, nombre_tabla, codigo_centro):
         sql="""
             insert or ignore into {0}
-                (nombre, regimen, unidades, puestos, uds_concertadas, fecha)
+                (nombre, regimen, unidades, puestos, uds_concertadas, fecha, codigo_centro)
             values (
-                '{1}', '{2}', {3}, {4}, {5}, '{6}'
+                '{1}', '{2}', {3}, {4}, {5}, '{6}', '{7}'
             )
         """
         sql_devuelto=sql.format ( nombre_tabla, self.nombre, self.regimen, self.unidades,
-                                 self.puestos, self.unidades_concertadas, self.fecha)
+                                 self.puestos, self.unidades_concertadas, self.fecha, codigo_centro)
         return sql_devuelto
     def __str__(self):
         return self.nombre
@@ -85,6 +88,7 @@ class Centro(object):
     @staticmethod
     def get_sql_creacion_sqlite(nombre_tabla):
         sentencias_sql=[]
+        sentencias_sql.append("pragma foreign_keys=on")
         sql="""
         create table if not exists {0} (
             codigo_centro char(10) primary key,
@@ -98,11 +102,11 @@ class Centro(object):
             web             char(140),
             tipo_centro char(20),
             foreign key (codigo_localidad) references localidades(codigo_localidad)
+                on delete cascade on update cascade
         )"""
         sentencias_sql.append (sql.format ( nombre_tabla ))
         indice="""
-            create index if not exists idx_nombre_centro_region on
-            {0} codigo_centro
+            create index if not exists idx_nombre_centro_region on  {0} (codigo_centro)
         """
         sentencias_sql.append ( indice.format(nombre_tabla) )
         return sentencias_sql
@@ -127,7 +131,7 @@ class Centro(object):
     def get_sql_ensenanzas_sqlite ( self, nombre_tabla):
         sql_ensenanzas=[]
         for e in self.lista_ensenanzas:
-            sql_ensenanzas.append ( e.get_sql_sqlite(nombre_tabla) )
+            sql_ensenanzas.append ( e.get_sql_sqlite(nombre_tabla, self.codigo_centro) )
         return sql_ensenanzas
     def __str__(self):
         cad="Codigo centro:{0}\n".format ( self.codigo_centro )

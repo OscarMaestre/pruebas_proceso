@@ -56,7 +56,7 @@ class GestorFicheros(object):
         call(cmd, shell=True)
     
     def ejecutar_comando (self, comando, fichero, *args):
-        aplicar_comando(comando, fichero, *args)
+        self.aplicar_comando(comando, fichero, *args)
         
     def escapar_fichero_con_espacios(self, nombre_fichero):
         nombre_fichero="\""+nombre_fichero+"\""
