@@ -1,14 +1,34 @@
 #!/usr/bin/env python3
 #coding=utf-8
 
+import os, sys
+DIR_UTILIDADES=".." + os.sep + "utilidades" + os.sep + "src"
+sys.path.insert(0, DIR_UTILIDADES)
+from utilidades.fechas.GestorFechas import GestorFechas
 class Ensenanza(object):
     def __init__(self, nombre, regimen, unidades, puestos, uds_concertadas, fecha):
+        self.gf=GestorFechas()
         self.nombre=nombre
         self.regimen=regimen
-        self.unidades=unidades
-        self.puestos=puestos
-        self.unidades_concertadas=uds_concertadas
-        self.fecha=fecha
+        try:
+            self.unidades=int (unidades)
+        except ValueError:
+            self.unidades=0
+        
+        try:
+            self.puestos=int (puestos)
+        except ValueError:
+            self.puestos=0
+        
+        try:
+            self.unidades_concertadas=int(uds_concertadas)
+        except ValueError:
+            self.unidades_concertadas=0
+        if fecha=="":
+            self.fecha="01/01/2000"
+        else:
+            self.fecha=fecha
+        self.fecha=self.gf.convertir_fecha_a_formato_iso(self.fecha)
     @staticmethod
     def get_sql_creacion_sqlite(nombre_tabla):
         sentencias_sql=[]
@@ -32,14 +52,14 @@ class Ensenanza(object):
         return sentencias_sql
     
     def get_sql_sqlite(self, nombre_tabla):
-        sql=""""
+        sql="""
             insert or ignore into {0}
                 (nombre, regimen, unidades, puestos, uds_concertadas, fecha)
             values (
-                '{0}', '{1}', {2}, {3}, {4}, '{5}'
+                '{1}', '{2}', {3}, {4}, {5}, '{6}'
             )
         """
-        sql_devuelto=sql.format ( self.nombre, self.regimen, self.unidades,
+        sql_devuelto=sql.format ( nombre_tabla, self.nombre, self.regimen, self.unidades,
                                  self.puestos, self.unidades_concertadas, self.fecha)
         return sql_devuelto
     def __str__(self):
@@ -78,7 +98,7 @@ class Centro(object):
             web             char(140),
             tipo_centro char(20),
             foreign key (codigo_localidad) references localidades(codigo_localidad)
-        );"""
+        )"""
         sentencias_sql.append (sql.format ( nombre_tabla ))
         indice="""
             create index if not exists idx_nombre_centro_region on

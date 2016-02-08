@@ -36,6 +36,7 @@ def procesar_archivo_centro(nombre_archivo):
         if nombre_ensenanzas=="":
             continue
         e=Ensenanza( nombre_ensenanzas, regimen, unidades, puestos, uds_concertadas, fecha_acceso)
+        print( nombre_ensenanzas, regimen, unidades, puestos, uds_concertadas, fecha_acceso)
         lista_ensenanzas.append(e)
     return lista_ensenanzas
     
@@ -56,7 +57,7 @@ sql_busqueda_codigo_centro="select codigo_centro from centros_region where codig
 gf=GestorFicheros()
 lista_centros=[]
 bd=GestorBD ( ARCHIVO_RESULTADOS )
-for i in range ( 0, TOTAL_PAGINAS):
+for i in range ( 0, 3):
     nombre_fichero = FICHERO_BASE.format ( i )
     descriptor_fichero= open ( nombre_fichero, "r" )
     sopa = BeautifulSoup ( descriptor_fichero, "html.parser")
@@ -178,7 +179,7 @@ sql_insercion_ensenanzas=[]
 for c in lista_centros:
     sql_ensenanzas=c.get_sql_ensenanzas_sqlite("ensenanzas_region")
     for sql in sql_ensenanzas:
-        print (sql+";")
+        print (sql.strip()+";")
     
 for sql in sql_insercion_centros:
     print (sql+";")
