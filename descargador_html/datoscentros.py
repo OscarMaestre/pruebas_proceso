@@ -56,11 +56,11 @@ class Ensenanza(object):
     
     def get_sql_sqlite(self, nombre_tabla, codigo_centro):
         sql="""
-            insert or ignore into {0}
-                (nombre, regimen, unidades, puestos, uds_concertadas, fecha, codigo_centro)
-            values (
-                '{1}', '{2}', {3}, {4}, {5}, '{6}', '{7}'
-            )
+        insert or ignore into {0}
+          (nombre, regimen, unidades, puestos, uds_concertadas, fecha, codigo_centro)
+        values (
+         '{1}', '{2}', {3}, {4}, {5}, '{6}', '{7}'
+        )
         """
         sql_devuelto=sql.format ( nombre_tabla, self.nombre, self.regimen, self.unidades,
                                  self.puestos, self.unidades_concertadas, self.fecha, codigo_centro)
@@ -84,7 +84,22 @@ class Centro(object):
         self.email=email
         self.web=web
         self.lista_ensenanzas=lista_ensenanzas
-    
+        self.tipo_centro=""
+        self.adivinar_tipo_centro()
+    def adivinar_tipo_centro(self):
+        for e in self.lista_ensenanzas:
+            if e.nombre.find("Infantil")!=-1 and e.nombre.find("Primer Ciclo")!=-1:
+                self.tipo_centro="EI"
+            if e.nombre.find("Infantil")!=-1 and e.nombre.find("Segundo Ciclo")!=-1:
+                self.tipo_centro="CEIP"
+        tipos=["CEIP", "IES", "CEE", "CEPA", "EOI", "CPM"]
+        emails=[".cp@", ".ies@", ".cee@", ".cepa@", ".eoi@", ".cm@"]
+        for i in range(0, len(tipos)):
+            if self.email.find( emails[i])!=-1:
+                self.tipo_centro=tipos[i]
+                return
+        
+        self.tipo="DESCONOCIDO"
     @staticmethod
     def get_sql_creacion_sqlite(nombre_tabla):
         sentencias_sql=[]
@@ -100,7 +115,8 @@ class Centro(object):
             fax             char(20),
             email           char(140),
             web             char(140),
-            tipo_centro char(20),
+            naturaleza      char(20),
+            tipo_centro     char(20)
             foreign key (codigo_localidad) references localidades(codigo_localidad)
                 on delete cascade on update cascade
         )"""
@@ -112,19 +128,20 @@ class Centro(object):
         return sentencias_sql
         
     def get_sql_centro_sqlite(self, nombre_tabla):
-        
+        self.adivinar_tipo_centro()
         sql_centro="""
-            insert or ignore into {0}
-            (codigo_centro, nombre_centro, codigo_localidad,
-            direccion_postal, codigo_postal, tlf, fax, email, web, tipo_centro)
-            values (
-                '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}'
-            )
+        insert or ignore into {0}
+        (codigo_centro, nombre_centro, codigo_localidad,
+        direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
+        values (
+         '{1}', '{2}', '{3}', '{4}', '{5}', '{6}',
+         '{7}', '{8}', '{9}', '{10}', '{11}'
+        )
         """
         sql_centro=sql_centro.format (nombre_tabla,
             self.codigo_centro, self.nombre_centro, self.codigo_localidad,
             self.direccion_postal, self.direccion_postal, self.tlf, self.fax, self.email,
-            self.web, self.naturaleza
+            self.web, self.naturaleza, self.tipo_centro
         )
         return sql_centro
     

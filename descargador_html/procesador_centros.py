@@ -58,6 +58,7 @@ gf=GestorFicheros()
 lista_centros=[]
 bd=GestorBD ( ARCHIVO_RESULTADOS )
 for i in range ( 0, TOTAL_PAGINAS):
+#for i in range ( 0, 50):
     nombre_fichero = FICHERO_BASE.format ( i )
     descriptor_fichero= open ( nombre_fichero, "r" )
     sopa = BeautifulSoup ( descriptor_fichero, "html.parser")
