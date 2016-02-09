@@ -47,7 +47,7 @@ ficheros_txt=glob.glob("*.txt")
 for f in ficheros_txt:
     utilidades.aplicar_comando(PROCESAR, f, "2015")
     
-utilidades.borrar_fichero(FICH_RESULTADO)
+
 
 
 utilidades.copiar_fichero( PROCESAR, " procesar_tabla.pytxt")
