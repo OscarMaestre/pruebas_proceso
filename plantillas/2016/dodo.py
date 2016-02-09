@@ -6,7 +6,7 @@ import platform
 import glob
 import os, sys
 
-NUM_SUBDIRECTORIOS_ANTERIORES=1
+NUM_SUBDIRECTORIOS_ANTERIORES=2
 SEPARADOR=os.sep
 
 RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
@@ -21,9 +21,11 @@ CONVERTIR="pdftotext -layout -nopgbrk "
 
 if (platform.system()=="Linux"):
     PROCESAR="./procesar_tabla.py "
+    PROCESAR_MAESTROS="./procesar_tabla_maestros.py "
     BORRAR="rm "
 if (platform.system()=="Windows"):
     PROCESAR="procesar_tabla.py "
+    PROCESAR_MAESTROS="procesar_tabla_maestros.py "
     BORRAR="del "
     
 FICH_RESULTADO="resultado.csv"
@@ -43,9 +45,8 @@ for f in ficheros_pdf:
         utilidades.aplicar_comando(CONVERTIR, f)
     
     
-ficheros_txt=glob.glob("*.txt")
-for f in ficheros_txt:
-    utilidades.aplicar_comando(PROCESAR, f, "2015")
+utilidades.aplicar_comando(PROCESAR, "590-Medias.txt", "2016")
+utilidades.aplicar_comando(PROCESAR_MAESTRPS, "597-Maestros.txt", "2016")
     
 
 
