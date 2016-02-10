@@ -12,7 +12,7 @@ pragma foreign_keys=on;
             email           char(140),
             web             char(140),
             naturaleza      char(20),
-            tipo_centro     char(20)
+            tipo_centro     char(20),
             foreign key (codigo_localidad) references localidades(codigo_localidad)
                 on delete cascade on update cascade
         );
@@ -43,7 +43,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008932', '- Sin Denominación -', '0000', 'Av. Castilla-La Mancha, S/N', 'Av. Castilla-La Mancha, S/N', '',
+         '02008932', '- Sin Denominación -', '0000', 'Av. Castilla-La Mancha, S/N', '02250', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -52,7 +52,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009596', 'San Miguel', '0000', 'Cl. Maestro Jose Piqueras, 1', 'Cl. Maestro Jose Piqueras, 1', '967474500',
+         '02009596', 'San Miguel', '0000', 'Cl. Maestro Jose Piqueras, 1', '02250', '967474500',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -61,7 +61,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009043', '- Sin Denominación -', '020030001', 'Pz. de los Colonos, 5', 'Pz. de los Colonos, 5', '967273288',
+         '02009043', '- Sin Denominación -', '020030001', 'Pz. de los Colonos, 5', '02049', '967273288',
          '967101748', 'aguas@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -70,7 +70,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010045', '- Sin Denominación -', '020030002', 'Cl. Francisco Belmonte, 1', 'Cl. Francisco Belmonte, 1', '',
+         '02010045', '- Sin Denominación -', '020030002', 'Cl. Francisco Belmonte, 1', '02006', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -79,7 +79,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010124', '- Sin Denominación -', '020030002', 'Cl. Zapateros, 25', 'Cl. Zapateros, 25', '967240177',
+         '02010124', '- Sin Denominación -', '020030002', 'Cl. Zapateros, 25', '02005', '967240177',
          '967215381', '02010124.cm@edu.jccm.es', '', 'Público', 'CPM'
         )
         ;
@@ -88,7 +88,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004094', '- Sin Denominación -', '020030002', 'Av. de España, 12', 'Av. de España, 12', '967215465',
+         '02004094', '- Sin Denominación -', '020030002', 'Av. de España, 12', '02002', '967215465',
          '967218101', '02004094.eoi@edu.jccm.es', 'http://edu.jccm.es/eoi/albacete', 'Público', 'EOI'
         )
         ;
@@ -97,7 +97,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010011', '- Sin Denominación -', '020030002', 'Cl. Francisco Belmonte, 1', 'Cl. Francisco Belmonte, 1', '967219942',
+         '02010011', '- Sin Denominación -', '020030002', 'Cl. Francisco Belmonte, 1', '02006', '967219942',
          '967219942', '02007757.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -106,7 +106,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000386', 'Academia Cedes', '020030002', 'Cl. Perez Galdos, 15', 'Cl. Perez Galdos, 15', '967502547',
+         '02000386', 'Academia Cedes', '020030002', 'Cl. Perez Galdos, 15', '02003', '967502547',
          '967502547', 'acacedes@gmail.com', 'http://edu.jccm.es/con/academiacedes', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -115,7 +115,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009602', 'Adeca', '020030002', 'Pq. Empresarial Campollano, Avenida 5ª, 11', 'Pq. Empresarial Campollano, Avenida 5ª, 11', '967264673',
+         '02009602', 'Adeca', '020030002', 'Pq. Empresarial Campollano, Avenida 5ª, 11', '02007', '967264673',
          '967264673', 'cai@clipes.com', '', 'Privado', 'EI'
         )
         ;
@@ -124,7 +124,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003508', 'Aguas Nuevas', '020030001', 'Cr. Aguas Nuevas, Km.6,7', 'Cr. Aguas Nuevas, Km.6,7', '967222312',
+         '02003508', 'Aguas Nuevas', '020030001', 'Cr. Aguas Nuevas, Km.6,7', '02049', '967222312',
          '967510125', '02003508.cifp@edu.jccm.es', 'http://edu.jccm.es/ieso/aguasnuevas', 'Público', ''
         )
         ;
@@ -133,7 +133,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009614', 'Aire Libre I', '020030002', 'Cl. Hermanos Jimenez, 60', 'Cl. Hermanos Jimenez, 60', '967220632',
+         '02009614', 'Aire Libre I', '020030002', 'Cl. Hermanos Jimenez, 60', '02004', '967220632',
          '967221751', 'joaquin123@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -142,7 +142,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009626', 'Aire Libre II', '020030002', 'Cl. Literatura, 34', 'Cl. Literatura, 34', '967509736',
+         '02009626', 'Aire Libre II', '020030002', 'Cl. Literatura, 34', '02006', '967509736',
          '967221751', '', '', 'Privado', 'EI'
         )
         ;
@@ -151,7 +151,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007794', 'Albacete', '020030002', 'Cl. Jose Carbajal, S/N', 'Cl. Jose Carbajal, S/N', '967600022',
+         '02007794', 'Albacete', '020030002', 'Cl. Jose Carbajal, S/N', '02008', '967600022',
          '967673770', '02007794.ea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -160,7 +160,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004240', 'Al-Basit', '020030002', 'Av. de España, 42', 'Av. de España, 42', '967228716',
+         '02004240', 'Al-Basit', '020030002', 'Av. de España, 42', '02006', '967228716',
          '967505326', 'ies.albasit@iesalbasit.es', 'http://edu.jccm.es/ies/albasit', 'Público', ''
         )
         ;
@@ -169,7 +169,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000556', 'Alto de los Molinos', '020030002', 'Cl. Arado, 53', 'Cl. Arado, 53', '967231453',
+         '02000556', 'Alto de los Molinos', '020030002', 'Cl. Arado, 53', '02006', '967231453',
          '967231720', '02000556.ies@edu.jccm.es', '', 'Público', 'IES'
         )
         ;
@@ -178,7 +178,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003481', 'Amparo Sanz', '020030002', 'Cl. Tomas Edison, S/N', 'Cl. Tomas Edison, S/N', '967665500',
+         '02003481', 'Amparo Sanz', '020030002', 'Cl. Tomas Edison, S/N', '02001', '967665500',
          '967665501', '02003481.ies@edu.jccm.es', 'http://ies-amparosanz.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -187,7 +187,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000878', 'Ana Soto', '020030002', 'Av. del Teatro, 1', 'Av. del Teatro, 1', '967210502',
+         '02000878', 'Ana Soto', '020030002', 'Av. del Teatro, 1', '02005', '967210502',
          '967210226', '02000878.cp@edu.jccm.es', 'http://www.colegioanasoto.es', 'Público', 'CEIP'
         )
         ;
@@ -196,7 +196,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000738', 'Andrés de Vandelvira', '020030002', 'Av. Cronista Mateo y Sotos, S/N', 'Av. Cronista Mateo y Sotos, S/N', '967210311',
+         '02000738', 'Andrés de Vandelvira', '020030002', 'Av. Cronista Mateo y Sotos, S/N', '02006', '967210311',
          '967523423', '02000738.ies@edu.jccm.es', 'http://edu.jccm.es/ies.andresdevandelvira', 'Público', 'IES'
         )
         ;
@@ -205,7 +205,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000805', 'Antonio Machado', '020030002', 'Cl. Duque de Rivas, 2', 'Cl. Duque de Rivas, 2', '967244395',
+         '02000805', 'Antonio Machado', '020030002', 'Cl. Duque de Rivas, 2', '02006', '967244395',
          '967244395', '02000805.cp@edu.jccm.es', 'http://edu.jccm.es/cp/amachado', 'Público', 'CEIP'
         )
         ;
@@ -214,7 +214,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000374', 'Aristos', '020030002', 'Cl. Obispo Tagaste, 23', 'Cl. Obispo Tagaste, 23', '967240503',
+         '02000374', 'Aristos', '020030002', 'Cl. Obispo Tagaste, 23', '02005', '967240503',
          '967240503', 'info@colegioaristos.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -223,7 +223,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000568', 'Azorín', '020030002', 'Ps. de Circunvalacion, 105', 'Ps. de Circunvalacion, 105', '967237713',
+         '02000568', 'Azorín', '020030002', 'Ps. de Circunvalacion, 105', '02003', '967237713',
          '967237713', 'ccazorin@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -232,7 +232,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010148', 'Babyidea', '020030002', 'Av. de la Guardia Civil, 46', 'Av. de la Guardia Civil, 46', '',
+         '02010148', 'Babyidea', '020030002', 'Av. de la Guardia Civil, 46', '02002', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -241,7 +241,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000714', 'Bachiller Sabuco', '020030002', 'Av. España, 5', 'Av. España, 5', '967229540',
+         '02000714', 'Bachiller Sabuco', '020030002', 'Av. España, 5', '02002', '967229540',
          '967506626', '02000714.ies@edu.jccm.es', '', 'Público', 'IES'
         )
         ;
@@ -250,7 +250,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009638', 'Balu', '020030002', 'Cl. Melilla, 4', 'Cl. Melilla, 4', '967214062',
+         '02009638', 'Balu', '020030002', 'Cl. Melilla, 4', '02001', '967214062',
          '967211555', '', '', 'Privado', 'EI'
         )
         ;
@@ -259,7 +259,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005086', 'Barrio del Ensanche', '020030002', 'Cl. Arquitecto Vandelvira, 73', 'Cl. Arquitecto Vandelvira, 73', '967222632',
+         '02005086', 'Barrio del Ensanche', '020030002', 'Cl. Arquitecto Vandelvira, 73', '02004', '967222632',
          '', 'einfantil.ensanche@ayto_albacete.es', '', 'Público', 'EI'
         )
         ;
@@ -268,7 +268,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009641', 'Base Aérea', '020030002', 'Cr. de Murcia, S/N', 'Cr. de Murcia, S/N', '967556271',
+         '02009641', 'Base Aérea', '020030002', 'Cr. de Murcia, S/N', '02006', '967556271',
          '967556352', '', '', 'Público', 'EI'
         )
         ;
@@ -277,7 +277,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000842', 'Benjamín Palencia', '020030002', 'Cl. Mejico, 8', 'Cl. Mejico, 8', '967225665',
+         '02000842', 'Benjamín Palencia', '020030002', 'Cl. Mejico, 8', '02006', '967225665',
          '967511730', '02000842.cp@edu.jccm.es', 'http://ceip-benjaminpalenciaalbacete.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -286,7 +286,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009651', 'Blabla', '020030002', 'Cl. Hermanos Pinzon, 41', 'Cl. Hermanos Pinzon, 41', '',
+         '02009651', 'Blabla', '020030002', 'Cl. Hermanos Pinzon, 41', '02006', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -295,7 +295,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000040', 'Carlos V', '020030002', 'Cl. Ejidos Feria, S/N', 'Cl. Ejidos Feria, S/N', '967224745',
+         '02000040', 'Carlos V', '020030002', 'Cl. Ejidos Feria, S/N', '02006', '967224745',
          '967224745', '02000040.cp@edu.jccm.es', 'http://ceip-carlosv.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -304,7 +304,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009663', 'Carrusel', '020030002', 'Cl. Derecho, 33', 'Cl. Derecho, 33', '967509050',
+         '02009663', 'Carrusel', '020030002', 'Cl. Derecho, 33', '02006', '967509050',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -313,7 +313,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000830', 'Castilla-La Mancha', '020030002', 'Cm. de Morata, 3-A', 'Cm. de Morata, 3-A', '967231329',
+         '02000830', 'Castilla-La Mancha', '020030002', 'Cm. de Morata, 3-A', '02006', '967231329',
          '967231329', '02000830.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cm', 'Público', 'CEIP'
         )
         ;
@@ -322,7 +322,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004598', 'Cedes', '020030002', 'Cr. de Peñas, 11', 'Cr. de Peñas, 11', '967220915',
+         '02004598', 'Cedes', '020030002', 'Cr. de Peñas, 11', '02006', '967220915',
          '967511437', 'colegiocedes@colegiocedes.com', 'http://www.colegiocedes.com', 'Privado', 'CEIP'
         )
         ;
@@ -331,7 +331,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010082', 'Centro de Formación de Imagen Personal', '020030002', 'Ps. Bachiller Olivia Sabuco de Nantes, 1 Bajo', 'Ps. Bachiller Olivia Sabuco de Nantes, 1 Bajo', '967119895',
+         '02010082', 'Centro de Formación de Imagen Personal', '020030002', 'Ps. Bachiller Olivia Sabuco de Nantes, 1 Bajo', '02006', '967119895',
          '', 'llobregatcenter@gmail.com', '', 'Privado', ''
         )
         ;
@@ -340,7 +340,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004963', 'Centro de Formación Profesional Sanitario', '020030002', 'Cl. Hermanos Jimenez, S/N', 'Cl. Hermanos Jimenez, S/N', '967238657',
+         '02004963', 'Centro de Formación Profesional Sanitario', '020030002', 'Cl. Hermanos Jimenez, S/N', '02004', '967238657',
          '967600858', 'mariaeugeniacamino@hotmail.com', '', 'Privado', ''
         )
         ;
@@ -349,7 +349,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005232', 'Centro Penitenciario', '020030002', 'Cr. de Ayora, Km. 72 (Centro Penitenciario)', 'Cr. de Ayora, Km. 72 (Centro Penitenciario)', '967244272',
+         '02005232', 'Centro Penitenciario', '020030002', 'Cr. de Ayora, Km. 72 (Centro Penitenciario)', '02071', '967244272',
          '', 'aepa_albacete@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -358,7 +358,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000064', 'Cervantes', '020030002', 'Cl. Santa Quiteria, 37', 'Cl. Santa Quiteria, 37', '967213313',
+         '02000064', 'Cervantes', '020030002', 'Cl. Santa Quiteria, 37', '02002', '967213313',
          '967246480', '02000064.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -367,7 +367,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009687', 'Chiquiticos', '020030002', 'Cl. Maria de Zayas, 3 Bajo', 'Cl. Maria de Zayas, 3 Bajo', '',
+         '02009687', 'Chiquiticos', '020030002', 'Cl. Maria de Zayas, 3 Bajo', '02006', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -376,7 +376,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000428', 'Compañía de María', '020030002', 'Cl. Octavio Cuartero, 5', 'Cl. Octavio Cuartero, 5', '967224650',
+         '02000428', 'Compañía de María', '020030002', 'Cl. Octavio Cuartero, 5', '02003', '967224650',
          '967228805', 'juliandirector@telefonica.net', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -385,7 +385,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000052', 'Cristóbal Colón', '020030002', 'Cm. de la Virgen, 30', 'Cm. de la Virgen, 30', '967223640',
+         '02000052', 'Cristóbal Colón', '020030002', 'Cm. de la Virgen, 30', '02005', '967223640',
          '967223640', '02000052.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cristobalcolonab', 'Público', 'CEIP'
         )
         ;
@@ -394,7 +394,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000076', 'Cristóbal Valera', '020030002', 'Cl. Zapateros, 26', 'Cl. Zapateros, 26', '967212162',
+         '02000076', 'Cristóbal Valera', '020030002', 'Cl. Zapateros, 26', '02005', '967212162',
          '967670673', '02000076.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cristobalvalera', 'Público', 'CEIP'
         )
         ;
@@ -403,7 +403,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010094', 'Damián Gómez Alfaro', '020030002', 'Cl. Luis Rosales, 7', 'Cl. Luis Rosales, 7', '',
+         '02010094', 'Damián Gómez Alfaro', '020030002', 'Cl. Luis Rosales, 7', '02003', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -412,7 +412,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004008', 'Diego de Siloé', '020030002', 'Cl. Mejico, S/N', 'Cl. Mejico, S/N', '967500204',
+         '02004008', 'Diego de Siloé', '020030002', 'Cl. Mejico, S/N', '02006', '967500204',
          '967500264', '02004008.ies@edu.jccm.es', '', 'Público', 'IES'
         )
         ;
@@ -421,7 +421,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000088', 'Diego Velázquez', '020030002', 'Av. Arquitecto Julio Carrilero, 18', 'Av. Arquitecto Julio Carrilero, 18', '967225330',
+         '02000088', 'Diego Velázquez', '020030002', 'Av. Arquitecto Julio Carrilero, 18', '02005', '967225330',
          '967550106', '02000088.CP@EDU.JCCM.ES', 'http://ceip-diegovelazquez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -430,7 +430,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000301', 'Diocesano', '020030002', 'Cl. Alcalde Conangla, 29', 'Cl. Alcalde Conangla, 29', '967243280',
+         '02000301', 'Diocesano', '020030002', 'Cl. Alcalde Conangla, 29', '02002', '967243280',
          '967215939', 'colegio@diocesano.es', 'http://www.diocesano.es/', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -439,7 +439,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000091', 'Doctor Fleming', '020030002', 'Cl. Doctor Fleming, 2', 'Cl. Doctor Fleming, 2', '967227025',
+         '02000091', 'Doctor Fleming', '020030002', 'Cl. Doctor Fleming, 2', '02004', '967227025',
          '967227025', '02000091.cp@edu.jccm.es', 'http://ceip-doctorfleming.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -448,7 +448,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000741', 'Don Bosco', '020030002', 'Ps. de la Cuba, 43', 'Ps. de la Cuba, 43', '967215405',
+         '02000741', 'Don Bosco', '020030002', 'Ps. de la Cuba, 43', '02006', '967215405',
          '967216192', '02000741.ies@edu.jccm.es', 'http://edu.jccm.es/ies.donbosco', 'Público', 'IES'
         )
         ;
@@ -457,7 +457,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000404', 'El Ave María', '020030002', 'Pz. del Ave Maria, S/N', 'Pz. del Ave Maria, S/N', '967242704',
+         '02000404', 'El Ave María', '020030002', 'Pz. del Ave Maria, S/N', '02006', '967242704',
          '967244360', 'colegio.el.ave.maria.ab@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -466,7 +466,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008981', 'El Pilar', '020030002', 'Cl. Churruca, 12', 'Cl. Churruca, 12', '967506741',
+         '02008981', 'El Pilar', '020030002', 'Cl. Churruca, 12', '02006', '967506741',
          '967506737', '02008981.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -475,7 +475,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008993', 'El Tren Azul', '020030002', 'Pj. Francisco Jareño, S/N', 'Pj. Francisco Jareño, S/N', '967213361',
+         '02008993', 'El Tren Azul', '020030002', 'Pj. Francisco Jareño, S/N', '02006', '967213361',
          '967211207', '02008993.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -484,7 +484,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003569', 'Eloy Camino', '020030002', 'Cl. Jesus del Gran Poder, 3', 'Cl. Jesus del Gran Poder, 3', '967214711',
+         '02003569', 'Eloy Camino', '020030002', 'Cl. Jesus del Gran Poder, 3', '02006', '967214711',
          '967214195', '02003569.cee@edu.jccm.es', 'http://cee-eloycamino.centros.castillalamancha.es', 'Público', 'CEE'
         )
         ;
@@ -493,7 +493,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010100', 'Escuela de Cuchillería de Albacete Amos Núñez', '020030002', 'Av. Gregorio Arcos, 42', 'Av. Gregorio Arcos, 42', '967193700',
+         '02010100', 'Escuela de Cuchillería de Albacete Amos Núñez', '020030002', 'Av. Gregorio Arcos, 42', '02007', '967193700',
          '967193710', 'escuela@escueladecuchilleria.com', '', 'Priv.Concert.', ''
         )
         ;
@@ -502,7 +502,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007824', 'Escuela Municipal de Música Moderna de Albacete', '020030002', 'Av. del Teatro, S/N', 'Av. del Teatro, S/N', '',
+         '02007824', 'Escuela Municipal de Música Moderna de Albacete', '020030002', 'Av. del Teatro, S/N', '02006', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -511,7 +511,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008831', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '020030002', 'Cl. Flora Tristan, 5', 'Cl. Flora Tristan, 5', '',
+         '02008831', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '020030002', 'Cl. Flora Tristan, 5', '02006', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -520,7 +520,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000431', 'Escuelas Pías', '020030002', 'Cl. San Jose de Calasanz, 7', 'Cl. San Jose de Calasanz, 7', '967666080',
+         '02000431', 'Escuelas Pías', '020030002', 'Cl. San Jose de Calasanz, 7', '02002', '967666080',
          '967666081', 'secretariaescolapios@gmail.com', 'http://ww.albacete.escolapios.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -529,7 +529,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007745', 'Europa Fashion', '020030002', 'Cl. Mariana Pineda, 6', 'Cl. Mariana Pineda, 6', '967666667',
+         '02007745', 'Europa Fashion', '020030002', 'Cl. Mariana Pineda, 6', '02005', '967666667',
          '967213260', 'europafashion2000@hotmail.com', 'http://www.europafashion.es', 'Privado', ''
         )
         ;
@@ -538,7 +538,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004941', 'Federico García Lorca', '020030002', 'Cl. Pintor Quijada, 1', 'Cl. Pintor Quijada, 1', '967505130',
+         '02004941', 'Federico García Lorca', '020030002', 'Cl. Pintor Quijada, 1', '02006', '967505130',
          '967550099', '02004941.ies@edu.jccm.es', 'http://ies-garcialorca.centros.castillalamancha.es/', 'Público', 'IES'
         )
         ;
@@ -547,7 +547,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000854', 'Federico Mayor Zaragoza', '020030002', 'Cl. Carmen Ibañez, 7', 'Cl. Carmen Ibañez, 7', '967212521',
+         '02000854', 'Federico Mayor Zaragoza', '020030002', 'Cl. Carmen Ibañez, 7', '02001', '967212521',
          '967212521', '02000854.cp@edu.jccm.es', 'http://edu.jccm.es/cp.fmz', 'Público', 'CEIP'
         )
         ;
@@ -556,7 +556,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004409', 'Feria-Isabel Bonal', '020030002', 'Av. Arquitecto Julio Carrilero, 56', 'Av. Arquitecto Julio Carrilero, 56', '967232402',
+         '02004409', 'Feria-Isabel Bonal', '020030002', 'Av. Arquitecto Julio Carrilero, 56', '02006', '967232402',
          '967510497', '02004409.cp@edu.jccm.es', 'http://edu.jccm.es/cp.feria-isabelbonal', 'Público', 'CEIP'
         )
         ;
@@ -565,7 +565,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008816', 'Francisco Giner de los Ríos', '020030002', 'Av. de la Mancha, S/N', 'Av. de la Mancha, S/N', '967242980',
+         '02008816', 'Francisco Giner de los Ríos', '020030002', 'Av. de la Mancha, S/N', '02006', '967242980',
          '967243097', '02008816.cp@edu.jccm.es', 'http://ceip-franciscoginerdelosrios.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -574,7 +574,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009699', 'Galafates', '020030002', 'Av. Primero de Mayo, 18', 'Av. Primero de Mayo, 18', '',
+         '02009699', 'Galafates', '020030002', 'Av. Primero de Mayo, 18', '02006', '',
          '', 'galafates@galafates.com', '', 'Privado', 'EI'
         )
         ;
@@ -583,7 +583,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007769', 'Gloria Fuertes', '020030002', 'Cl. Badajoz, S/N', 'Cl. Badajoz, S/N', '967616090',
+         '02007769', 'Gloria Fuertes', '020030002', 'Cl. Badajoz, S/N', '02006', '967616090',
          '967616090', '02007769.cp@edu.jccm.es', 'http://edu.jccm.es/cp/gfuertes', 'Público', 'CEIP'
         )
         ;
@@ -592,7 +592,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005062', 'Hermanos Falcó', '020030002', 'Cl. Jose de Espronceda, S/N', 'Cl. Jose de Espronceda, S/N', '967596100',
+         '02005062', 'Hermanos Falcó', '020030002', 'Cl. Jose de Espronceda, S/N', '02006', '967596100',
          '', 'einfantilhermanosfalco@ayto-albacete.es', '', 'Público', 'EI'
         )
         ;
@@ -601,7 +601,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000118', 'Inmaculada Concepción', '020030002', 'Cl. Maria Marin, 20', 'Cl. Maria Marin, 20', '967232346',
+         '02000118', 'Inmaculada Concepción', '020030002', 'Cl. Maria Marin, 20', '02003', '967232346',
          '967232346', '02000118.cp@edu.jccm.es', 'http://edu.jccm.es/cp/iconcepcionab', 'Público', 'CEIP'
         )
         ;
@@ -610,7 +610,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007800', 'José Antonio Ruiz', '020030002', 'Av. de la Mancha, S/N', 'Av. de la Mancha, S/N', '967192662',
+         '02007800', 'José Antonio Ruiz', '020030002', 'Av. de la Mancha, S/N', '02006', '967192662',
          '967246129', '02007800.cd@edu.jccm.es', 'http://edu.jccm.es/cd/albacete', 'Público', ''
         )
         ;
@@ -619,7 +619,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000441', 'José María Pemán', '020030002', 'Cl. Doctor Ferran, 80', 'Cl. Doctor Ferran, 80', '967234267',
+         '02000441', 'José María Pemán', '020030002', 'Cl. Doctor Ferran, 80', '02004', '967234267',
          '967234267', 'colegiopeman@hotmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -628,7 +628,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004112', 'José Prat García', '020030002', 'Cl. Fatima, 44', 'Cl. Fatima, 44', '967237310',
+         '02004112', 'José Prat García', '020030002', 'Cl. Fatima, 44', '02004', '967237310',
          '967237310', '02004112.cp@edu.jccm.es', 'http://ceip-josepratgarcia.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -637,7 +637,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004264', 'José Salustiano Serna', '020030002', 'Av. de la Estacion, 7', 'Av. de la Estacion, 7', '967210032',
+         '02004264', 'José Salustiano Serna', '020030002', 'Av. de la Estacion, 7', '02001', '967210032',
          '967210032', '02004264.cp@edu.jccm.es', 'http://edu.jccm.es/cp/jose_s_serna', 'Público', 'CEIP'
         )
         ;
@@ -646,7 +646,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004331', 'Julio Rey Pastor', '020030002', 'Cl. Huerta de Marzo, S/N', 'Cl. Huerta de Marzo, S/N', '967522262',
+         '02004331', 'Julio Rey Pastor', '020030002', 'Cl. Huerta de Marzo, S/N', '02002', '967522262',
          '967524179', '02004331.ies@edu.jccm.es', 'http://ies-julioreypastor.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -655,7 +655,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007885', 'La Cometa', '020030002', 'Cl. Juan de Toledo, 16', 'Cl. Juan de Toledo, 16', '',
+         '02007885', 'La Cometa', '020030002', 'Cl. Juan de Toledo, 16', '02005', '',
          '', 'eilacometa@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -664,7 +664,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009705', 'La Escuelita', '020030002', 'Cl. Herreros, 30', 'Cl. Herreros, 30', '967661666',
+         '02009705', 'La Escuelita', '020030002', 'Cl. Herreros, 30', '02001', '967661666',
          '967661666', 'laescuelitaab@hotmail.es', '', 'Privado', 'EI'
         )
         ;
@@ -673,7 +673,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007757', 'La Paz', '020030002', 'Cl. Francisco Belmonte, 1', 'Cl. Francisco Belmonte, 1', '967219942',
+         '02007757', 'La Paz', '020030002', 'Cl. Francisco Belmonte, 1', '02006', '967219942',
          '967219942', '02007757.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -682,7 +682,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003892', 'Leonardo Da Vinci', '020030002', 'Cl. la Paz, S/N', 'Cl. la Paz, S/N', '967238997',
+         '02003892', 'Leonardo Da Vinci', '020030002', 'Cl. la Paz, S/N', '02006', '967238997',
          '967502136', '02003892.ies@edu.jccm.es', 'http://edu.jccm.es/ies/leonardo-da-vinci', 'Público', 'IES'
         )
         ;
@@ -691,7 +691,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009161', 'Los Almendros', '020030002', 'Cl. Ramon Gomez Redondo, 10', 'Cl. Ramon Gomez Redondo, 10', '967551339',
+         '02009161', 'Los Almendros', '020030002', 'Cl. Ramon Gomez Redondo, 10', '02006', '967551339',
          '', 'einfantilramongr@ayto_albacete.es', '', 'Público', 'EI'
         )
         ;
@@ -700,7 +700,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009006', 'Los Girasoles', '020030002', 'Cl. Francisco Javier de Moya, 62', 'Cl. Francisco Javier de Moya, 62', '967227902',
+         '02009006', 'Los Girasoles', '020030002', 'Cl. Francisco Javier de Moya, 62', '02006', '967227902',
          '967227302', 'flopezn@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -709,7 +709,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003673', 'Los Llanos', '020030002', 'Cl. Diego Velazquez, 12', 'Cl. Diego Velazquez, 12', '967244272',
+         '02003673', 'Los Llanos', '020030002', 'Cl. Diego Velazquez, 12', '02002', '967244272',
          '967244272', '02003673.cea@edu.jccm.es', 'http://cepa-losllanos.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -718,7 +718,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000453', 'Los Olmos', '020030002', 'Cl. Letur, S/N', 'Cl. Letur, S/N', '967193170',
+         '02000453', 'Los Olmos', '020030002', 'Cl. Letur, S/N', '02006', '967193170',
          '967193171', '02000453.ies@edu.jccm.es', 'http://ies-losolmos.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -727,7 +727,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009729', 'Ludus', '020030002', 'Pz. Jesus de Medinaceli, 3', 'Pz. Jesus de Medinaceli, 3', '967236106',
+         '02009729', 'Ludus', '020030002', 'Pz. Jesus de Medinaceli, 3', '02003', '967236106',
          '', 'guarderialudus@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -736,7 +736,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000121', 'María de los Llanos Martínez', '020030002', 'Cl. Bernabe Cantos, 15', 'Cl. Bernabe Cantos, 15', '967229827',
+         '02000121', 'María de los Llanos Martínez', '020030002', 'Cl. Bernabe Cantos, 15', '02003', '967229827',
          '967662010', '02000121.cp@edu.jccm.es', 'http://ceip-mariadelosllanosmartinez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -745,7 +745,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000465', 'María Inmaculada', '020030002', 'Cl. Dionisio Guardiola, 22', 'Cl. Dionisio Guardiola, 22', '967604110',
+         '02000465', 'María Inmaculada', '020030002', 'Cl. Dionisio Guardiola, 22', '02003', '967604110',
          '967604111', 'mainmaculadaa@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -754,7 +754,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009730', 'Mi Cole', '020030002', 'Cl. Hermanos Pinzon, 18', 'Cl. Hermanos Pinzon, 18', '967505287',
+         '02009730', 'Mi Cole', '020030002', 'Cl. Hermanos Pinzon, 18', '02006', '967505287',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -763,7 +763,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009742', 'Mis Primeros Garabatos', '020030002', 'Cl. San Agustin, 30', 'Cl. San Agustin, 30', '',
+         '02009742', 'Mis Primeros Garabatos', '020030002', 'Cl. San Agustin, 30', '02001', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -772,7 +772,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009754', 'Mitete', '020030002', 'Cl. Lerida, 18', 'Cl. Lerida, 18', '967101210',
+         '02009754', 'Mitete', '020030002', 'Cl. Lerida, 18', '02006', '967101210',
          '', 'mitete@mitete.es', '', 'Privado', 'EI'
         )
         ;
@@ -781,7 +781,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009766', 'Mundo de Color', '020030002', 'Cl. Arquitecto Fernandez, 26', 'Cl. Arquitecto Fernandez, 26', '967521993',
+         '02009766', 'Mundo de Color', '020030002', 'Cl. Arquitecto Fernandez, 26', '02005', '967521993',
          '', 'jardindeinfancia@escuelainfantilmundodecolor.es', '', 'Privado', 'EI'
         )
         ;
@@ -790,7 +790,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009778', 'Nubes de Algodón', '020030002', 'Cl. Blasco Ibañez, 36', 'Cl. Blasco Ibañez, 36', '967606717',
+         '02009778', 'Nubes de Algodón', '020030002', 'Cl. Blasco Ibañez, 36', '02004', '967606717',
          '', 'escuelainfantil@nubesdealgodon.net', '', 'Privado', 'EI'
         )
         ;
@@ -799,7 +799,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000519', 'Nuestra Señora de Montserrat', '020030002', 'Cl. Antonio Cuevas Belmonte, 8, 10 y 12', 'Cl. Antonio Cuevas Belmonte, 8, 10 y 12', '967235289',
+         '02000519', 'Nuestra Señora de Montserrat', '020030002', 'Cl. Antonio Cuevas Belmonte, 8, 10 y 12', '02006', '967235289',
          '967235289', 'ccmontserrat@hotmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -808,7 +808,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000544', 'Nuestra Señora del Rosario', '020030002', 'Cl. Salamanca, 18', 'Cl. Salamanca, 18', '967214285',
+         '02000544', 'Nuestra Señora del Rosario', '020030002', 'Cl. Salamanca, 18', '02001', '967214285',
          '967523729', 'nsrosarioab@fefcoll.org', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -817,7 +817,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008750', 'Nueva Vereda', '020030002', 'Cl. Alcaraz, 7', 'Cl. Alcaraz, 7', '967237595',
+         '02008750', 'Nueva Vereda', '020030002', 'Cl. Alcaraz, 7', '02071', '967237595',
          '', 'eiinfantilvereda@ayto-albacete.es', '', 'Público', 'EI'
         )
         ;
@@ -826,7 +826,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009675', 'Nuevo Cervantes, S.C.', '020030002', 'Cl. San Sebastian, S/N', 'Cl. San Sebastian, S/N', '967217572',
+         '02009675', 'Nuevo Cervantes, S.C.', '020030002', 'Cl. San Sebastian, S/N', '02005', '967217572',
          '', 'guardcervantes@terra.es', '', 'Privado', 'EI'
         )
         ;
@@ -835,7 +835,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009781', 'Ñacos', '020030002', 'Cl. Melchor de Macanaz, 15', 'Cl. Melchor de Macanaz, 15', '',
+         '02009781', 'Ñacos', '020030002', 'Cl. Melchor de Macanaz, 15', '02005', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -844,7 +844,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000763', 'Parque Lineal', '020030002', 'Ps. de la Cuba, 53', 'Ps. de la Cuba, 53', '967219112',
+         '02000763', 'Parque Lineal', '020030002', 'Ps. de la Cuba, 53', '02006', '967219112',
          '967523785', '02000763.ies@edu.jccm.es', 'http://ies-parquelineal.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -853,7 +853,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003879', 'Parque Sur', '020030002', 'Cl. Oliva Sabuco de Nantes, 3', 'Cl. Oliva Sabuco de Nantes, 3', '967233712',
+         '02003879', 'Parque Sur', '020030002', 'Cl. Oliva Sabuco de Nantes, 3', '02002', '967233712',
          '967233712', '02003879.cp@edu.jccm.es', 'http://ceip-parquesur.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -862,7 +862,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009985', 'Paseo de la Cuba', '020030002', 'Cl. Doctor Alonso Vidal, 14', 'Cl. Doctor Alonso Vidal, 14', '',
+         '02009985', 'Paseo de la Cuba', '020030002', 'Cl. Doctor Alonso Vidal, 14', '02001', '',
          '', 'einfantildoctorav@ayto-albacete.es', '', 'Público', 'EI'
         )
         ;
@@ -871,7 +871,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001007', 'Pedro Simón Abril', '020030013', 'Cl. Nueva, S/N', 'Cl. Nueva, S/N', '967270060',
+         '02001007', 'Pedro Simón Abril', '020030013', 'Cl. Nueva, S/N', '02328', '967270060',
          '967270060', '02001007.cp@edu.jccm.es', 'http://edu.jccm.es/cp/psimonabril', 'Público', 'CEIP'
         )
         ;
@@ -880,7 +880,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003764', 'Pedro Simón Abril', '020030002', 'Cl. Hermanos Pinzon, 13', 'Cl. Hermanos Pinzon, 13', '967239616',
+         '02003764', 'Pedro Simón Abril', '020030002', 'Cl. Hermanos Pinzon, 13', '02006', '967239616',
          '967239616', '02003764.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -889,7 +889,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009717', 'Pekeñecos', '020030002', 'Cl. Feria, 43', 'Cl. Feria, 43', '967044289',
+         '02009717', 'Pekeñecos', '020030002', 'Cl. Feria, 43', '02005', '967044289',
          '967239095', 'escuelapequeñacos@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -898,7 +898,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009791', 'Pérez Pastor 90 C.B.', '020030002', 'Cl. Doctor Ferran, 95', 'Cl. Doctor Ferran, 95', '',
+         '02009791', 'Pérez Pastor 90 C.B.', '020030002', 'Cl. Doctor Ferran, 95', '02004', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -907,7 +907,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008919', 'Pinar de Salomón', '020030001', 'Cl. Escuelas, S/N', 'Cl. Escuelas, S/N', '967273874',
+         '02008919', 'Pinar de Salomón', '020030001', 'Cl. Escuelas, S/N', '02049', '967273874',
          '967273416', '02008919.ieso@edu.jccm.es', 'http://ies-pinardesalomon.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -916,7 +916,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009808', 'Primeros Pasitos', '020030002', 'Cl. Arquitecto Vandelvira, 8', 'Cl. Arquitecto Vandelvira, 8', '967611329',
+         '02009808', 'Primeros Pasitos', '020030002', 'Cl. Arquitecto Vandelvira, 8', '02003', '967611329',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -925,7 +925,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000994', 'Príncipe Felipe', '020030012', 'Cl. los Pozos, S/N', 'Cl. los Pozos, S/N', '967271566',
+         '02000994', 'Príncipe Felipe', '020030012', 'Cl. los Pozos, S/N', '02140', '967271566',
          '967271566', '02000994.cp@edu.jccm.es', 'http://cra-migueldecervantes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -934,7 +934,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000131', 'Príncipe Felipe', '020030002', 'Cl. del Amparo, 3', 'Cl. del Amparo, 3', '967243160',
+         '02000131', 'Príncipe Felipe', '020030002', 'Cl. del Amparo, 3', '02002', '967243160',
          '967246290', '02000131.cp@edu.jccm.es', 'http://ceip-principefelipe.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -943,7 +943,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004410', 'Ramón y Cajal', '020030002', 'Cl. Muñoz Seca, 19', 'Cl. Muñoz Seca, 19', '967503511',
+         '02004410', 'Ramón y Cajal', '020030002', 'Cl. Muñoz Seca, 19', '02002', '967503511',
          '967511240', '02004410.ies@edu.jccm.es', 'http://edu.jccm.es/ies/rycalba', 'Público', 'IES'
         )
         ;
@@ -952,7 +952,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004380', 'Rayuela', '020030002', 'Pj. Batalla del Salado, 9', 'Pj. Batalla del Salado, 9', '967224571',
+         '02004380', 'Rayuela', '020030002', 'Pj. Batalla del Salado, 9', '02002', '967224571',
          '', 'Rayuelac.i@hotmail.com', '', 'Privado', 'CEIP'
         )
         ;
@@ -961,7 +961,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003788', 'Real Conservatorio Profesional de Música y Danza', '020030002', 'Cl. Monjas, 11', 'Cl. Monjas, 11', '967523182',
+         '02003788', 'Real Conservatorio Profesional de Música y Danza', '020030002', 'Cl. Monjas, 11', '02005', '967523182',
          '967523182', 'conservatorio@dipualba.es', '', 'Público', ''
         )
         ;
@@ -970,7 +970,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000143', 'Reina Sofía', '020030002', 'Cl. de la Cruz, 20', 'Cl. de la Cruz, 20', '967212702',
+         '02000143', 'Reina Sofía', '020030002', 'Cl. de la Cruz, 20', '02001', '967212702',
          '967212702', '02000143.cp@edu.jccm.es', 'http://edu.jccm.es/cp/reinasofia', 'Público', 'CEIP'
         )
         ;
@@ -979,7 +979,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003909', 'San Antón', '020030002', 'Cl. Vicente Aleixandre, 3', 'Cl. Vicente Aleixandre, 3', '967214637',
+         '02003909', 'San Antón', '020030002', 'Cl. Vicente Aleixandre, 3', '02001', '967214637',
          '967248455', '02003909.cp@edu.jccm.es', 'http://ceip-sananton.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -988,7 +988,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000593', 'San Cristóbal', '020030002', 'Cl. Perez Pastor, 90', 'Cl. Perez Pastor, 90', '967226006',
+         '02000593', 'San Cristóbal', '020030002', 'Cl. Perez Pastor, 90', '02004', '967226006',
          '967226006', 'colegiosancristobal1@ono.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -997,7 +997,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000155', 'San Fernando', '020030002', 'Pq. Abelardo Sanchez, S/N', 'Pq. Abelardo Sanchez, S/N', '967224887',
+         '02000155', 'San Fernando', '020030002', 'Pq. Abelardo Sanchez, S/N', '02003', '967224887',
          '967224887', '02000155.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -1006,7 +1006,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000571', 'San Francisco Coll', '020030002', 'Cl. Garcia Mas, 40', 'Cl. Garcia Mas, 40', '967220289',
+         '02000571', 'San Francisco Coll', '020030002', 'Cl. Garcia Mas, 40', '02005', '967220289',
          '967220287', 'secretaria.albacete@fesd.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -1015,7 +1015,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000167', 'San Fulgencio', '020030002', 'Cl. San Fulgencio, 8', 'Cl. San Fulgencio, 8', '967220334',
+         '02000167', 'San Fulgencio', '020030002', 'Cl. San Fulgencio, 8', '02004', '967220334',
          '967229390', '02000167.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -1024,7 +1024,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000039', 'San Isidro Labrador', '020030001', 'Cl. Escuelas, 2', 'Cl. Escuelas, 2', '967273056',
+         '02000039', 'San Isidro Labrador', '020030001', 'Cl. Escuelas, 2', '02049', '967273056',
          '967273056', '02000039.cp@edu.jccm.es', 'http://ceip-sanisidroaguasnuevas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1033,7 +1033,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005049', 'San Pablo', '020030002', 'Cl. Santiago Rusiñol, 69', 'Cl. Santiago Rusiñol, 69', '967235753',
+         '02005049', 'San Pablo', '020030002', 'Cl. Santiago Rusiñol, 69', '02006', '967235753',
          '967235753', 'escuelainfantil@ono.com', '', 'Público', 'EI'
         )
         ;
@@ -1042,7 +1042,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003752', 'San Pablo', '020030002', 'Cl. Badajoz, S/N', 'Cl. Badajoz, S/N', '967669666',
+         '02003752', 'San Pablo', '020030002', 'Cl. Badajoz, S/N', '02006', '967669666',
          '967669666', '02003752.cp@edu.jccm.es', 'http://ceip-sanpabloalbacete.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1051,7 +1051,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005074', 'San Pedro Mortero', '020030002', 'Cl. Ecuador, S/N', 'Cl. Ecuador, S/N', '967596100',
+         '02005074', 'San Pedro Mortero', '020030002', 'Cl. Ecuador, S/N', '02006', '967596100',
          '', 'einfantilsanpedro@ayto_albacete.es', '', 'Público', 'EI'
         )
         ;
@@ -1060,7 +1060,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000787', 'Santo Ángel', '020030002', 'Cl. Hermanos Jimenez, 31', 'Cl. Hermanos Jimenez, 31', '967600070',
+         '02000787', 'Santo Ángel', '020030002', 'Cl. Hermanos Jimenez, 31', '02004', '967600070',
          '967600071', 'santoangelalba@planalfa.es', 'http://edu.jccm.es/con/santoangel', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -1069,7 +1069,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000106', 'Severo Ochoa', '020030002', 'Cl. Pedro Coca, 94', 'Cl. Pedro Coca, 94', '967229902',
+         '02000106', 'Severo Ochoa', '020030002', 'Cl. Pedro Coca, 94', '02003', '967229902',
          '967509762', '02000106.cp@edu.jccm.es', 'http://edu.jccm.es/cp/severoochoa', 'Público', 'CEIP'
         )
         ;
@@ -1078,7 +1078,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009811', 'Sonrisas', '020030002', 'Cr. Circunvalacion, 90', 'Cr. Circunvalacion, 90', '967039693',
+         '02009811', 'Sonrisas', '020030002', 'Cr. Circunvalacion, 90', '02006', '967039693',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -1087,7 +1087,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004616', 'Tomás de Torrejón y Velasco', '020030002', 'Cl. Zapateros, 25', 'Cl. Zapateros, 25', '967523340',
+         '02004616', 'Tomás de Torrejón y Velasco', '020030002', 'Cl. Zapateros, 25', '02005', '967523340',
          '967212006', '02004616.cm@edu.jccm.es', 'http://edu.jccm.es/cm/torrejon_y_velasco', 'Público', 'CPM'
         )
         ;
@@ -1096,7 +1096,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000726', 'Tomás Navarro Tomás', '020030002', 'Av. España, 40', 'Av. España, 40', '967220353',
+         '02000726', 'Tomás Navarro Tomás', '020030002', 'Av. España, 40', '02006', '967220353',
          '967220313', '02000726.ies@edu.jccm.es', 'http://ies-tomasnavarrotomas.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -1105,7 +1105,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009821', 'Trazos', '020030002', 'Cl. Iris, 34', 'Cl. Iris, 34', '967522322',
+         '02009821', 'Trazos', '020030002', 'Cl. Iris, 34', '02005', '967522322',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -1114,7 +1114,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009833', 'Tulgarita', '020030002', 'Cl. Marzo, 7', 'Cl. Marzo, 7', '',
+         '02009833', 'Tulgarita', '020030002', 'Cl. Marzo, 7', '02002', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -1123,7 +1123,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000799', 'Universidad Laboral', '020030002', 'Av. de la Mancha, S/N', 'Av. de la Mancha, S/N', '967210561',
+         '02000799', 'Universidad Laboral', '020030002', 'Av. de la Mancha, S/N', '02006', '967210561',
          '967210061', 'uni@universidadlaboral.com', 'http://edu.jccm.es/ies/universidadlaboralab', 'Público', ''
         )
         ;
@@ -1132,7 +1132,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004021', 'Villacerrada', '020030002', 'Pz. Mayor, 2', 'Pz. Mayor, 2', '967523037',
+         '02004021', 'Villacerrada', '020030002', 'Pz. Mayor, 2', '02001', '967523037',
          '967523037', '02004021.cp@edu.jccm.es', 'http://edu.jccm.es/cp/villacerrada', 'Público', 'CEIP'
         )
         ;
@@ -1141,7 +1141,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009018', 'Virgen de los Llanos', '020030002', 'Cl. San Pedro, 21', 'Cl. San Pedro, 21', '967211770',
+         '02009018', 'Virgen de los Llanos', '020030002', 'Cl. San Pedro, 21', '02006', '967211770',
          '967211770', '02009018.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -1150,7 +1150,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000180', 'Virgen de los Llanos', '020030002', 'Cl. del Amparo, 14', 'Cl. del Amparo, 14', '967243484',
+         '02000180', 'Virgen de los Llanos', '020030002', 'Cl. del Amparo, 14', '02002', '967243484',
          '967245087', '02000180.cp@edu.jccm.es', 'http://ceip-virgendelosllanos.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1159,7 +1159,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003442', 'Virgen de los Llanos', '020030002', 'Cl. Nuestra Señora de la Victoria, 4', 'Cl. Nuestra Señora de la Victoria, 4', '967213860',
+         '02003442', 'Virgen de los Llanos', '020030002', 'Cl. Nuestra Señora de la Victoria, 4', '02001', '967213860',
          '967216362', 'academiavirgendelosllanos@gmail.com', '', 'Privado', ''
         )
         ;
@@ -1168,7 +1168,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009055', '- Sin Denominación -', '020040001', 'Cr. Madrid, 21', 'Cr. Madrid, 21', '967324297',
+         '02009055', '- Sin Denominación -', '020040001', 'Cr. Madrid, 21', '02653', '967324297',
          '', 'albatana.alc@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1177,7 +1177,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004537', 'Laguna de Alboraj', '020040001', 'Cl. Aire, 2', 'Cl. Aire, 2', '967323263',
+         '02004537', 'Laguna de Alboraj', '020040001', 'Cl. Aire, 2', '02653', '967323263',
          '967323263', '02004537.cra@edu.jccm.es', 'http://cra-lagunadealboraj.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1186,7 +1186,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009845', 'El Molino', '020050001', 'Cr. Casas de Ves, S/N', 'Cr. Casas de Ves, S/N', '967477315',
+         '02009845', 'El Molino', '020050001', 'Cr. Casas de Ves, S/N', '02215', '967477315',
          '', 'albore@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1195,7 +1195,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004549', 'La Manchuela', '020050001', 'Cl. Casas Ibañez, 42', 'Cl. Casas Ibañez, 42', '967477242',
+         '02004549', 'La Manchuela', '020050001', 'Cl. Casas Ibañez, 42', '02215', '967477242',
          '967477242', '02004549.cra@edu.jccm.es', 'http://edu.jccm.es/cra/lamanchuela', 'Público', 'CEIP'
         )
         ;
@@ -1204,7 +1204,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009067', '- Sin Denominación -', '020070001', 'Cl. Olmeda, S/N', 'Cl. Olmeda, S/N', '967473323',
+         '02009067', '- Sin Denominación -', '020070001', 'Cl. Olmeda, S/N', '02210', '967473323',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -1213,7 +1213,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004483', 'Ribera del Júcar', '020070001', 'Cj. de la Virgen, 12', 'Cj. de la Virgen, 12', '967473043',
+         '02004483', 'Ribera del Júcar', '020070001', 'Cj. de la Virgen, 12', '02210', '967473043',
          '967473043', '02004483.cra@edu.jccm.es', 'http://edu.jccm.es/cra.riberadeljucar', 'Público', 'CEIP'
         )
         ;
@@ -1222,7 +1222,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004902', '- Sin Denominación -', '020080001', 'Cl. los Arcos, S/N', 'Cl. los Arcos, S/N', '967380729',
+         '02004902', '- Sin Denominación -', '020080001', 'Cl. los Arcos, S/N', '02300', '967380729',
          '967380400', '02003880.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -1231,7 +1231,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009079', '- Sin Denominación -', '020080001', 'Cl. Maestro Santiago Garrido, S/N', 'Cl. Maestro Santiago Garrido, S/N', '967380002',
+         '02009079', '- Sin Denominación -', '020080001', 'Cl. Maestro Santiago Garrido, S/N', '02300', '967380002',
          '', 'alcaraz@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1240,7 +1240,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001111', 'Nuestra Señora de Cortes', '020080001', 'Cr. de Riopar, 11', 'Cr. de Riopar, 11', '967380129',
+         '02001111', 'Nuestra Señora de Cortes', '020080001', 'Cr. de Riopar, 11', '02300', '967380129',
          '967380360', '02001111.cp@edu.jccm.es', 'http://edu.jccm.es/cp/nscortes', 'Público', 'CEIP'
         )
         ;
@@ -1249,7 +1249,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004082', 'Pedro Simón Abril', '020080001', 'Ps. de San Francisco, 89', 'Ps. de San Francisco, 89', '967380730',
+         '02004082', 'Pedro Simón Abril', '020080001', 'Ps. de San Francisco, 89', '02300', '967380730',
          '967380571', '02004082.ies@edu.jccm.es', 'http://edu.jccm.es/ies/simonabril', 'Público', 'IES'
         )
         ;
@@ -1258,7 +1258,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001135', 'Asprona', '020090001', 'Av. Jose Rodriguez, 28', 'Av. Jose Rodriguez, 28', '967312323',
+         '02001135', 'Asprona', '020090001', 'Av. Jose Rodriguez, 28', '02640', '967312323',
          '967342600', '02001135.con@edu.jccm.es', '', 'Priv.Concert.', ''
         )
         ;
@@ -1267,7 +1267,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003685', 'Castillo de Almansa', '020090001', 'Cl. Arcipreste de Hita, 1', 'Cl. Arcipreste de Hita, 1', '967344634',
+         '02003685', 'Castillo de Almansa', '020090001', 'Cl. Arcipreste de Hita, 1', '02640', '967344634',
          '967318866', '02003685.cea@edu.jccm.es', 'http://edu.jccm.es/cepa/almansa', 'Público', ''
         )
         ;
@@ -1276,7 +1276,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007836', 'Centro de Innovación y Tecnología del Calzado Aideca', '020090001', 'Cl. Velazquez, 25', 'Cl. Velazquez, 25', '967318114',
+         '02007836', 'Centro de Innovación y Tecnología del Calzado Aideca', '020090001', 'Cl. Velazquez, 25', '02640', '967318114',
          '967318800', 'correo@aideca.com', '', 'Privado', ''
         )
         ;
@@ -1285,7 +1285,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004033', 'Claudio Sánchez Albornoz', '020090001', 'Av. Jose Rodriguez, 27', 'Av. Jose Rodriguez, 27', '967342196',
+         '02004033', 'Claudio Sánchez Albornoz', '020090001', 'Av. Jose Rodriguez, 27', '02640', '967342196',
          '967312300', '02004033.cp@edu.jccm.es', 'http://edu.jccm.es/cp/claudiosanchez', 'Público', 'CEIP'
         )
         ;
@@ -1294,7 +1294,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001184', 'Colegio Episcopal-Obra Misionera Ekumene', '020090001', 'Rb. de la Mancha, 34', 'Rb. de la Mancha, 34', '967340250',
+         '02001184', 'Colegio Episcopal-Obra Misionera Ekumene', '020090001', 'Rb. de la Mancha, 34', '02640', '967340250',
          '967340250', 'cepiscopal@ekumene.org', 'http://edu.jccm.es/con/colegioepiscopal', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -1303,7 +1303,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001147', 'Duque de Alba', '020090001', 'Cl. San Luis, 22', 'Cl. San Luis, 22', '967341976',
+         '02001147', 'Duque de Alba', '020090001', 'Cl. San Luis, 22', '02640', '967341976',
          '967341976', '02001147.cp@edu.jccm.es', 'http://ceip-duquedealba.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1312,7 +1312,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009021', 'El Castillo', '020090001', 'Cl. Justo Mas, 2', 'Cl. Justo Mas, 2', '967343708',
+         '02009021', 'El Castillo', '020090001', 'Cl. Justo Mas, 2', '02640', '967343708',
          '967343708', 'mcpinto@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -1321,7 +1321,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009080', 'El Jardín', '020090001', 'Cl. San Francisco, 36', 'Cl. San Francisco, 36', '967310729',
+         '02009080', 'El Jardín', '020090001', 'Cl. San Francisco, 36', '02640', '967310729',
          '', 'escuelasinfantiles@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -1330,7 +1330,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001172', 'Esclavas de María', '020090001', 'Av. Jose Rodriguez, 25', 'Av. Jose Rodriguez, 25', '967341486',
+         '02001172', 'Esclavas de María', '020090001', 'Av. Jose Rodriguez, 25', '02640', '967341486',
          '967341486', 'emaria@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -1339,7 +1339,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010151', 'Escuela Territorial de Técnicos y Técnicos Deportivos Superiores de Fútbol', '020090001', 'Av. Jose Hernandez de la Asuncion, 4', 'Av. Jose Hernandez de la Asuncion, 4', '',
+         '02010151', 'Escuela Territorial de Técnicos y Técnicos Deportivos Superiores de Fútbol', '020090001', 'Av. Jose Hernandez de la Asuncion, 4', '02640', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -1348,7 +1348,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004011', 'Escultor José Luis Sánchez', '020090001', 'Av. Jose Hernandez de la Asuncion, 2', 'Av. Jose Hernandez de la Asuncion, 2', '967343800',
+         '02004011', 'Escultor José Luis Sánchez', '020090001', 'Av. Jose Hernandez de la Asuncion, 2', '02640', '967343800',
          '967311681', '02004011.ies@edu.jccm.es', 'http://ies-escultorjlsanchez.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -1357,7 +1357,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004951', 'Herminio Almendros', '020090001', 'Cl. Blasco Ibañez, S/N', 'Cl. Blasco Ibañez, S/N', '967318034',
+         '02004951', 'Herminio Almendros', '020090001', 'Cl. Blasco Ibañez, S/N', '02640', '967318034',
          '967318036', '02004951.ies@edu.jccm.es', 'http://edu.jccm.es/ies/halmendros', 'Público', 'IES'
         )
         ;
@@ -1366,7 +1366,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004252', 'Jerónimo Meseguer', '020090001', 'Cl. Virgen de Belen, 5', 'Cl. Virgen de Belen, 5', '967342568',
+         '02004252', 'Jerónimo Meseguer', '020090001', 'Cl. Virgen de Belen, 5', '02640', '967342568',
          '967311344', '02004252.cm@edu.jccm.es', 'http://edu.jccm.es/cm/almansa', 'Público', 'CPM'
         )
         ;
@@ -1375,7 +1375,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001202', 'José Conde García', '020090001', 'Av. Jose Hernandez de la Asuncion, 4', 'Av. Jose Hernandez de la Asuncion, 4', '967340694',
+         '02001202', 'José Conde García', '020090001', 'Av. Jose Hernandez de la Asuncion, 4', '02640', '967340694',
          '967340694', '02001202.ies@edu.jccm.es', 'http://ies-joseconde.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -1384,7 +1384,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004392', 'José Lloret Talens', '020090001', 'Cl. Villena, S/N', 'Cl. Villena, S/N', '967311565',
+         '02004392', 'José Lloret Talens', '020090001', 'Cl. Villena, S/N', '02640', '967311565',
          '967311565', '02004392.cp@edu.jccm.es', 'http://ceip-joselloret.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1393,7 +1393,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009092', 'Las Huertas', '020090001', 'Cl. Aragon Esquina Calle Alicia Gimenez-Bartlett', 'Cl. Aragon Esquina Calle Alicia Gimenez-Bartlett', '967341782',
+         '02009092', 'Las Huertas', '020090001', 'Cl. Aragon Esquina Calle Alicia Gimenez-Bartlett', '02640', '967341782',
          '', 'escuelasinfantiles@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -1402,7 +1402,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009109', 'Las Norias', '020090001', 'Cl. Santa Lucia, 151', 'Cl. Santa Lucia, 151', '967310619',
+         '02009109', 'Las Norias', '020090001', 'Cl. Santa Lucia, 151', '02640', '967310619',
          '', 'escuelasinfantiles@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -1411,7 +1411,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004343', 'María Moliner', '020090001', 'Av. Jose Hernandez de la Asuncion, 2', 'Av. Jose Hernandez de la Asuncion, 2', '967310307',
+         '02004343', 'María Moliner', '020090001', 'Av. Jose Hernandez de la Asuncion, 2', '02640', '967310307',
          '967310307', '02004343.eoi@edu.jccm.es', 'http://eoi-almansa.centros.castillalamancha.es', 'Público', 'EOI'
         )
         ;
@@ -1420,7 +1420,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004653', 'Miguel Pinilla', '020090001', 'Cl. Malakoff, 1', 'Cl. Malakoff, 1', '967341099',
+         '02004653', 'Miguel Pinilla', '020090001', 'Cl. Malakoff, 1', '02640', '967341099',
          '967341099', '02004653.cp@edu.jccm.es', 'http://ceip-miguelpinilla.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1429,7 +1429,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001160', 'Nuestra Señora de Belén', '020090001', 'Cl. la Rosa, 6', 'Cl. la Rosa, 6', '967340135',
+         '02001160', 'Nuestra Señora de Belén', '020090001', 'Cl. la Rosa, 6', '02640', '967340135',
          '967340135', '02001160.cp@edu.jccm.es', 'http://edu.jccm.es/cp.ntrasradebelen', 'Público', 'CEIP'
         )
         ;
@@ -1438,7 +1438,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001159', 'Príncipe de Asturias', '020090001', 'Cl. la Rosa, 112', 'Cl. la Rosa, 112', '967340240',
+         '02001159', 'Príncipe de Asturias', '020090001', 'Cl. la Rosa, 112', '02640', '967340240',
          '967340240', '02001159.cp@edu.jccm.es', 'http://ceip-principedeasturias.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1447,7 +1447,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009110', 'Puerta de la Villa', '020090001', 'Cl. Juana Maria Condesa, S/N', 'Cl. Juana Maria Condesa, S/N', '967318560',
+         '02009110', 'Puerta de la Villa', '020090001', 'Cl. Juana Maria Condesa, S/N', '02640', '967318560',
          '', 'escuelasinfantiles@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -1456,7 +1456,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009122', '- Sin Denominación -', '020100001', 'Cl. Mejorada, S/N', 'Cl. Mejorada, S/N', '967330709',
+         '02009122', '- Sin Denominación -', '020100001', 'Cl. Mejorada, S/N', '02690', '967330709',
          '', 'escuelainfantilalpera@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -1465,7 +1465,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008920', '- Sin Denominación -', '020100001', 'Pz. del Ayuntamiento, S/N (Casa de la Cultura)', 'Pz. del Ayuntamiento, S/N (Casa de la Cultura)', '',
+         '02008920', '- Sin Denominación -', '020100001', 'Pz. del Ayuntamiento, S/N (Casa de la Cultura)', '02690', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -1474,7 +1474,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005104', 'Pascual Serrano', '020100001', 'Cr. Estacion, S/N', 'Cr. Estacion, S/N', '967330924',
+         '02005104', 'Pascual Serrano', '020100001', 'Cr. Estacion, S/N', '02690', '967330924',
          '967330925', '02005104.ieso@edu.jccm.es', 'http://edu.jccm.es/ieso.pascualserrano', 'Público', ''
         )
         ;
@@ -1483,7 +1483,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001214', 'Vera Cruz', '020100001', 'Pz. Mercado, 3', 'Pz. Mercado, 3', '967330094',
+         '02001214', 'Vera Cruz', '020100001', 'Pz. Mercado, 3', '02690', '967330094',
          '967330094', '02001214.cp@edu.jccm.es', 'http://edu.jccm.es/cp.veracruz', 'Público', 'CEIP'
         )
         ;
@@ -1492,7 +1492,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009134', '- Sin Denominación -', '020120001', 'Cl. Doctor Fleming, S/N', 'Cl. Doctor Fleming, S/N', '967360251',
+         '02009134', '- Sin Denominación -', '020120001', 'Cl. Doctor Fleming, S/N', '02320', '967360251',
          '967360314', 'balazote@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1501,7 +1501,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004768', '- Sin Denominación -', '020120001', 'Av. Santiago, 3', 'Av. Santiago, 3', '967360001',
+         '02004768', '- Sin Denominación -', '020120001', 'Av. Santiago, 3', '02320', '967360001',
          '', 'aepa_balazote@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -1510,7 +1510,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001241', 'Nuestra Señora del Rosario', '020120001', 'Cl. Constitucion, 56', 'Cl. Constitucion, 56', '967360463',
+         '02001241', 'Nuestra Señora del Rosario', '020120001', 'Cl. Constitucion, 56', '02320', '967360463',
          '967360463', '02001241.cp@edu.jccm.es', 'http://edu.jccm.es/cp/nsrosario', 'Público', 'CEIP'
         )
         ;
@@ -1519,7 +1519,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005116', 'Vía Heraclea', '020120001', 'Cl. Progreso, S/N', 'Cl. Progreso, S/N', '967367015',
+         '02005116', 'Vía Heraclea', '020120001', 'Cl. Progreso, S/N', '02320', '967367015',
          '967360268', '02005116.ieso@edu.jccm.es', 'http://ies-viaheraclea.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -1528,7 +1528,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004811', '- Sin Denominación -', '020150001', 'Cl. Osedad, S/N', 'Cl. Osedad, S/N', '967365153',
+         '02004811', '- Sin Denominación -', '020150001', 'Cl. Osedad, S/N', '02639', '967365153',
          '', '', '', 'Público', ''
         )
         ;
@@ -1537,7 +1537,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001275', 'Benjamín Palencia', '020150001', 'Cl. Albacete, 6', 'Cl. Albacete, 6', '967365153',
+         '02001275', 'Benjamín Palencia', '020150001', 'Cl. Albacete, 6', '02639', '967365153',
          '967365073', '02001275.cp@edu.jccm.es', 'http://edu.jccm.es/cp.benjaminpalencia/', 'Público', 'CEIP'
         )
         ;
@@ -1546,7 +1546,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004689', 'Almenara', '020170002', 'Av. de la Constitucion, 27', 'Av. de la Constitucion, 27', '967290072',
+         '02004689', 'Almenara', '020170002', 'Av. de la Constitucion, 27', '02130', '967290072',
          '967290072', '02004689.cra@edu.jccm.es', 'http://edu.jccm.es/cra/almenara', 'Público', 'CEIP'
         )
         ;
@@ -1555,7 +1555,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009146', '- Sin Denominación -', '020180001', 'Cl. Pilar Iniesta, 6', 'Cl. Pilar Iniesta, 6', '967333442',
+         '02009146', '- Sin Denominación -', '020180001', 'Cl. Pilar Iniesta, 6', '02691', '967333442',
          '', 'escuelainfantildebonete@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -1564,7 +1564,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001378', 'Pablo Picasso', '020180001', 'Cl. Escuelas, S/N', 'Cl. Escuelas, S/N', '967334141',
+         '02001378', 'Pablo Picasso', '020180001', 'Cl. Escuelas, S/N', '02691', '967334141',
          '967334141', '02001378.cp@edu.jccm.es', 'http://ceip-pablopicasso.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1573,7 +1573,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004896', '- Sin Denominación -', '020190001', 'Cl. Quijote, 1', 'Cl. Quijote, 1', '967371156',
+         '02004896', '- Sin Denominación -', '020190001', 'Cl. Quijote, 1', '02610', '967371156',
          '967371156', '02003880.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -1582,7 +1582,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001381', 'Antón Díaz', '020190001', 'Cl. Huerto, 2', 'Cl. Huerto, 2', '967370073',
+         '02001381', 'Antón Díaz', '020190001', 'Cl. Huerto, 2', '02610', '967370073',
          '967370073', '02001381.cp@edu.jccm.es', 'http://edu.jccm.es/cp.antondiaz', 'Público', 'CEIP'
         )
         ;
@@ -1591,7 +1591,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009158', 'Colorines', '020190001', 'Tr. Cantarranas, 3 B', 'Tr. Cantarranas, 3 B', '967370588',
+         '02009158', 'Colorines', '020190001', 'Tr. Cantarranas, 3 B', '02610', '967370588',
          '', 'bonillo@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1600,7 +1600,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004422', 'Las Sabinas', '020190001', 'Cl. Don Quijote, S/N', 'Cl. Don Quijote, S/N', '967371112',
+         '02004422', 'Las Sabinas', '020190001', 'Cl. Don Quijote, S/N', '02610', '967371112',
          '967370048', '02004422.ies@edu.jccm.es', 'http://edu.jccm.es/ies/elbonillo', 'Público', 'IES'
         )
         ;
@@ -1609,7 +1609,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004628', 'Los Almendros', '0000', 'Cl. Cristo, 103', 'Cl. Cristo, 103', '967403129',
+         '02004628', 'Los Almendros', '0000', 'Cl. Cristo, 103', '02153', '967403129',
          '967403129', '02004628.cra@edu.jccm.es', 'http://cra-losalmendros.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1618,7 +1618,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009171', '- Sin Denominación -', '020210001', 'Av. Albacete, 1', 'Av. Albacete, 1', '650455906',
+         '02009171', '- Sin Denominación -', '020210001', 'Av. Albacete, 1', '02151', '650455906',
          '967405241', 'casasjuan@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1627,7 +1627,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001408', 'San Pedro Apóstol', '020210001', 'Cl. Doctor Honrubia, 18', 'Cl. Doctor Honrubia, 18', '967405021',
+         '02001408', 'San Pedro Apóstol', '020210001', 'Cl. Doctor Honrubia, 18', '02151', '967405021',
          '967405021', '02001408.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sanpedrocasas', 'Público', 'CEIP'
         )
         ;
@@ -1636,7 +1636,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009183', '- Sin Denominación -', '0000', 'Cl. la Mancha, 39', 'Cl. la Mancha, 39', '967475022',
+         '02009183', '- Sin Denominación -', '0000', 'Cl. la Mancha, 39', '02212', '967475022',
          '967475001', 'casasves@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1645,7 +1645,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004604', 'Bonifacio Sotos', '020240001', 'Cl. las Monjas, 32', 'Cl. las Monjas, 32', '967460756',
+         '02004604', 'Bonifacio Sotos', '020240001', 'Cl. las Monjas, 32', '02200', '967460756',
          '967461136', '02004604.ies@edu.jccm.es', 'http://ies-bonifaciosotos.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -1654,7 +1654,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004781', 'La Manchuela', '020240001', 'Cl. las Monjas, 3', 'Cl. las Monjas, 3', '967460245',
+         '02004781', 'La Manchuela', '020240001', 'Cl. las Monjas, 3', '02200', '967460245',
          '967460245', '02004781.cea@edu.jccm.es', 'http://edu.jccm.es/cea/lamanchuela', 'Público', ''
         )
         ;
@@ -1663,7 +1663,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009857', 'Los Guachos', '020240001', 'Tr. del Molino, 46', 'Tr. del Molino, 46', '967462025',
+         '02009857', 'Los Guachos', '020240001', 'Tr. del Molino, 46', '02200', '967462025',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -1672,7 +1672,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001433', 'San Agustín', '020240001', 'Cl. Colegio, 10', 'Cl. Colegio, 10', '967460750',
+         '02001433', 'San Agustín', '020240001', 'Cl. Colegio, 10', '02200', '967460750',
          '967460750', '02001433.cp@edu.jccm.es', 'http://edu.jccm.es/cp/san_agustin', 'Público', 'CEIP'
         )
         ;
@@ -1681,7 +1681,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010197', '- Sin Denominación -', '020250001', 'Cl. San Jaime, S/N', 'Cl. San Jaime, S/N', '967310307',
+         '02010197', '- Sin Denominación -', '020250001', 'Cl. San Jaime, S/N', '02660', '967310307',
          '967310307', '02004343.eoi@edu.jccm.es', '', 'Público', 'EOI'
         )
         ;
@@ -1690,7 +1690,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004926', '- Sin Denominación -', '020250001', 'Ps. Paseo Luis Golf, 4', 'Ps. Paseo Luis Golf, 4', '965826936',
+         '02004926', '- Sin Denominación -', '020250001', 'Ps. Paseo Luis Golf, 4', '02660', '965826936',
          '', 'aepa_caudete@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -1699,7 +1699,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009869', 'Albero Requena', '020250001', 'Cl. el Molino, 52', 'Cl. el Molino, 52', '685319862',
+         '02009869', 'Albero Requena', '020250001', 'Cl. el Molino, 52', '02660', '685319862',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -1708,7 +1708,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001494', 'Alcázar y Serrano', '020250001', 'Av. Virgen de Gracia, 66', 'Av. Virgen de Gracia, 66', '965825154',
+         '02001494', 'Alcázar y Serrano', '020250001', 'Av. Virgen de Gracia, 66', '02660', '965825154',
          '965827641', '02001494.cp@edu.jccm.es', 'http://ceip-alcazaryserrano.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1717,7 +1717,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001512', 'Amor de Dios', '020250001', 'Av. Ntra.Sra.De Gracia, 91', 'Av. Ntra.Sra.De Gracia, 91', '965827068',
+         '02001512', 'Amor de Dios', '020250001', 'Av. Ntra.Sra.De Gracia, 91', '02660', '965827068',
          '965827365', 'amordiosca@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -1726,7 +1726,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004732', 'El Paseo', '020250001', 'Cl. Echegaray, 21', 'Cl. Echegaray, 21', '965825561',
+         '02004732', 'El Paseo', '020250001', 'Cl. Echegaray, 21', '02660', '965825561',
          '965825561', '02004732.cp@edu.jccm.es', 'http://ceip-elpaseo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1735,7 +1735,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007782', 'Escuela Municipal de Música de Caudete', '020250001', 'Cl. las Heras, 29', 'Cl. las Heras, 29', '',
+         '02007782', 'Escuela Municipal de Música de Caudete', '020250001', 'Cl. las Heras, 29', '02660', '',
          '', 'escuelademusica@caudete.org', '', 'Público', ''
         )
         ;
@@ -1744,7 +1744,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004756', 'Gloria Fuertes', '020250001', 'Cl. el Molino, 123', 'Cl. el Molino, 123', '965825420',
+         '02004756', 'Gloria Fuertes', '020250001', 'Cl. el Molino, 123', '02660', '965825420',
          '965825420', '02004756.cp@edu.jccm.es', 'http://ceip-gloriafuertescaudete.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1753,7 +1753,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009870', 'Jardín de Infancia', '020250001', 'Cl. Miguel Martinez, 16', 'Cl. Miguel Martinez, 16', '965827422',
+         '02009870', 'Jardín de Infancia', '020250001', 'Cl. Miguel Martinez, 16', '02660', '965827422',
          '965827260', 'eijardindeinfancia@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -1762,7 +1762,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009882', 'Los Peques', '020250001', 'Cl. Madre Elisea, 2', 'Cl. Madre Elisea, 2', '965826043',
+         '02009882', 'Los Peques', '020250001', 'Cl. Madre Elisea, 2', '02660', '965826043',
          '', 'escuelainfantillospeques@hotmail.es', '', 'Privado', 'EI'
         )
         ;
@@ -1771,7 +1771,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004367', 'Pintor Rafael Requena', '020250001', 'Cl. Poeta Evaristo Bañon, 2', 'Cl. Poeta Evaristo Bañon, 2', '965827112',
+         '02004367', 'Pintor Rafael Requena', '020250001', 'Cl. Poeta Evaristo Bañon, 2', '02660', '965827112',
          '965827166', '02004367.ies@edu.jccm.es', 'http://edu.jccm.es/ies/pintorrafaelrequena', 'Público', 'IES'
         )
         ;
@@ -1780,7 +1780,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009195', '- Sin Denominación -', '020260001', 'Tr. Cruces, S/N', 'Tr. Cruces, S/N', '967489537',
+         '02009195', '- Sin Denominación -', '020260001', 'Tr. Cruces, S/N', '02247', '967489537',
          '967482344', 'cenizate@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1789,7 +1789,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008944', '- Sin Denominación -', '020260001', 'Cl. Picayo, S/N', 'Cl. Picayo, S/N', '',
+         '02008944', '- Sin Denominación -', '020260001', 'Cl. Picayo, S/N', '02247', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -1798,7 +1798,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004631', 'Pinares de la Manchuela', '020260001', 'Cl. Picayo, S/N', 'Cl. Picayo, S/N', '967482053',
+         '02004631', 'Pinares de la Manchuela', '020260001', 'Cl. Picayo, S/N', '02247', '967482053',
          '967482053', '02004631.cra@edu.jccm.es', 'http://edu.jccm.es/cra/pinaresdelamanchuela', 'Público', 'CEIP'
         )
         ;
@@ -1807,7 +1807,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008890', '- Sin Denominación -', '0000', 'Cl. San Julian, 4', 'Cl. San Julian, 4', '',
+         '02008890', '- Sin Denominación -', '0000', 'Cl. San Julian, 4', '02520', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -1816,7 +1816,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001573', 'Alcalde Galindo', '0000', 'Av. Constitucion, 22', 'Av. Constitucion, 22', '967260092',
+         '02001573', 'Alcalde Galindo', '0000', 'Av. Constitucion, 22', '02520', '967260092',
          '967260092', '02001573.cp@edu.jccm.es', 'http://edu.jccm.es/cp.alcaldegalindo', 'Público', 'CEIP'
         )
         ;
@@ -1825,7 +1825,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009201', 'Blancanieves', '0000', 'Cl. Moises Davia, S/N Esquina Calle Vista Bella, S/N', 'Cl. Moises Davia, S/N Esquina Calle Vista Bella, S/N', '967260001',
+         '02009201', 'Blancanieves', '0000', 'Cl. Moises Davia, S/N Esquina Calle Vista Bella, S/N', '02520', '967260001',
          '', 'ana@ayuntamientochinchilla.com', '', 'Público', 'EI'
         )
         ;
@@ -1834,7 +1834,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005207', 'Cinxella', '0000', 'Cl. del Pueblo Saharaui, S/N', 'Cl. del Pueblo Saharaui, S/N', '967260653',
+         '02005207', 'Cinxella', '0000', 'Cl. del Pueblo Saharaui, S/N', '02520', '967260653',
          '967260605', '02005207.ieso@edu.jccm.es', 'http://ies-cinxella.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -1843,7 +1843,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004847', '- Sin Denominación -', '020300001', 'Cl. Calderon de la Barca, 6', 'Cl. Calderon de la Barca, 6', '669393188',
+         '02004847', '- Sin Denominación -', '020300001', 'Cl. Calderon de la Barca, 6', '02430', '669393188',
          '', 'aepa_edlsierra@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -1852,7 +1852,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001639', 'Cristo Crucificado', '020300001', 'Ps. de la Libertad, 15', 'Ps. de la Libertad, 15', '967417102',
+         '02001639', 'Cristo Crucificado', '020300001', 'Ps. de la Libertad, 15', '02430', '967417102',
          '967417102', 'ccrucificadoes@planalfa.es', 'http://edu.jccm.es/con/cristocrucificado/', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -1861,7 +1861,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009894', 'María Seiquer', '020300001', 'Ps. Libertad, 15', 'Ps. Libertad, 15', '967410024',
+         '02009894', 'María Seiquer', '020300001', 'Ps. Libertad, 15', '02430', '967410024',
          '', 'ampaseiquer@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -1870,7 +1870,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009213', 'Platero', '020300001', 'Cl. los Pasos, 5', 'Cl. los Pasos, 5', '967410161',
+         '02009213', 'Platero', '020300001', 'Cl. los Pasos, 5', '02430', '967410161',
          '', 'caiplatero@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -1879,7 +1879,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001615', 'San Blas', '020300001', 'Cl. los Pasos, S/N', 'Cl. los Pasos, S/N', '967410185',
+         '02001615', 'San Blas', '020300001', 'Cl. los Pasos, S/N', '02430', '967410185',
          '967411090', '02001615.cp@edu.jccm.es', 'http://ceip-sanblas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -1888,7 +1888,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003582', 'Sierra del Segura', '020300001', 'Av. Luis Vives, S/N', 'Av. Luis Vives, S/N', '967410073',
+         '02003582', 'Sierra del Segura', '020300001', 'Av. Luis Vives, S/N', '02430', '967410073',
          '967411144', '02003582.ies@edu.jccm.es', 'http://ies-sierradelsegura.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -1897,7 +1897,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009225', 'Cántaros-Las Tortugas', '020310001', 'Cl. Cantareria, 28', 'Cl. Cantareria, 28', '967420207',
+         '02009225', 'Cántaros-Las Tortugas', '020310001', 'Cl. Cantareria, 28', '02436', '967420207',
          '967420050', 'cantaroscaiferez@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -1906,7 +1906,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001688', 'Nuestra Señora del Rosario', '020310001', 'Cr. Hijar, 18', 'Cr. Hijar, 18', '967420180',
+         '02001688', 'Nuestra Señora del Rosario', '020310001', 'Cr. Hijar, 18', '02436', '967420180',
          '967420180', '02001688.cp@edu.jccm.es', 'http://edu.jccm.es/cp/nsrosarioferez', 'Público', 'CEIP'
         )
         ;
@@ -1915,7 +1915,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009237', '- Sin Denominación -', '020330001', 'Cl. Jose Tarraga Marco, S/N', 'Cl. Jose Tarraga Marco, S/N', '967321809',
+         '02009237', '- Sin Denominación -', '020330001', 'Cl. Jose Tarraga Marco, S/N', '02651', '967321809',
          '967321439', 'fuentealamo@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -1924,7 +1924,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008907', '- Sin Denominación -', '020330001', 'Cr. de Almansa, S/N', 'Cr. de Almansa, S/N', '',
+         '02008907', '- Sin Denominación -', '020330001', 'Cr. de Almansa, S/N', '02651', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -1933,7 +1933,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001706', 'Don Quijote y Sancho', '020330001', 'Av. Grupo Escolar, 15', 'Av. Grupo Escolar, 15', '967321101',
+         '02001706', 'Don Quijote y Sancho', '020330001', 'Av. Grupo Escolar, 15', '02651', '967321101',
          '967321101', '02001706.cp@edu.jccm.es', 'http://edu.jccm.es/cp/donquijoteysancho', 'Público', 'CEIP'
         )
         ;
@@ -1942,7 +1942,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005001', 'Miguel de Cervantes', '020330001', 'Cl. Antonio Cerdan Milla, S/N', 'Cl. Antonio Cerdan Milla, S/N', '967321331',
+         '02005001', 'Miguel de Cervantes', '020330001', 'Cl. Antonio Cerdan Milla, S/N', '02651', '967321331',
          '967321452', '02005001.ies@edu.jccm.es', 'http://edu.jccm.es/ies/fuentealamo', 'Público', 'IES'
         )
         ;
@@ -1951,7 +1951,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001731', 'Cristo del Valle', '020340003', 'Av. Albacete, 11', 'Av. Albacete, 11', '967477573',
+         '02001731', 'Cristo del Valle', '020340003', 'Av. Albacete, 11', '02260', '967477573',
          '967477573', '02001731.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cv', 'Público', 'CEIP'
         )
         ;
@@ -1960,7 +1960,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009900', 'Renacuajos', '020340003', 'Cl. Zaragoza, 43', 'Cl. Zaragoza, 43', '649720149',
+         '02009900', 'Renacuajos', '020340003', 'Cl. Zaragoza, 43', '02260', '649720149',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -1969,7 +1969,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009249', '- Sin Denominación -', '020350001', 'Cl. la Guarderia, S/N', 'Cl. la Guarderia, S/N', '967275158',
+         '02009249', '- Sin Denominación -', '020350001', 'Cl. la Guarderia, S/N', '02110', '967275158',
          '967275305', 'escuelainfantil.lagineta@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -1978,7 +1978,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001743', 'Mariano Munera', '020350001', 'Cl. Santa Ana, 1', 'Cl. Santa Ana, 1', '967275129',
+         '02001743', 'Mariano Munera', '020350001', 'Cl. Santa Ana, 1', '02110', '967275129',
          '967275129', '02001743.cp@edu.jccm.es', 'http://edu.jccm.es/cp/marianomunera', 'Público', 'CEIP'
         )
         ;
@@ -1987,7 +1987,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009031', '- Sin Denominación -', '020370002', 'Cl. Murcia, S/N', 'Cl. Murcia, S/N', '967320202',
+         '02009031', '- Sin Denominación -', '020370002', 'Cl. Murcia, S/N', '02490', '967320202',
          '967302947', 'e.infantiles@ayuntamientodehellin.es', '', 'Público', 'EI'
         )
         ;
@@ -1996,7 +1996,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010161', '- Sin Denominación -', '020370005', 'Av. Constitucion, 78', 'Av. Constitucion, 78', '',
+         '02010161', '- Sin Denominación -', '020370005', 'Av. Constitucion, 78', '02400', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -2005,7 +2005,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009250', 'Aulas del Rosario', '020370005', 'Cl. Fortunato Arias, 10', 'Cl. Fortunato Arias, 10', '',
+         '02009250', 'Aulas del Rosario', '020370005', 'Cl. Fortunato Arias, 10', '02400', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -2014,7 +2014,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001949', 'Colegio Nuestra Señora de los Dolores-Padres Amigonianos', '020370005', 'Cl. Gran Via, 18', 'Cl. Gran Via, 18', '967303245',
+         '02001949', 'Colegio Nuestra Señora de los Dolores-Padres Amigonianos', '020370005', 'Cl. Gran Via, 18', '02400', '967303245',
          '967302722', 'ccnsdolores18@gmail.com', 'http://edu.jccm.es/con/nsdolores', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -2023,7 +2023,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001913', 'Compañía de María', '020370005', 'Cl. de las Eras, 3', 'Cl. de las Eras, 3', '967300103',
+         '02001913', 'Compañía de María', '020370005', 'Cl. de las Eras, 3', '02400', '967300103',
          '967300103', 'ciademariahellin@hotmail.com', 'http://www.ciademariahellin.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -2032,7 +2032,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004355', 'Conde de Floridablanca', '020370005', 'Av. Castilla-La Mancha, 5', 'Av. Castilla-La Mancha, 5', '967301314',
+         '02004355', 'Conde de Floridablanca', '020370005', 'Av. Castilla-La Mancha, 5', '02400', '967301314',
          '967301314', '02004355.eoi@edu.jccm.es', 'http://eoi-hellin.centros.castillalamancha.es', 'Público', 'EOI'
         )
         ;
@@ -2041,7 +2041,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001974', 'Cristóbal Lozano', '020370005', 'Pz. Plaza España, 2', 'Pz. Plaza España, 2', '967300153',
+         '02001974', 'Cristóbal Lozano', '020370005', 'Pz. Plaza España, 2', '02400', '967300153',
          '967680090', '02001974.ies@edu.jccm.es', 'http://ies-cristoballozano.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -2050,7 +2050,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003739', 'Cruz de Mayo', '020370005', 'Cr. de Jaen, 4', 'Cr. de Jaen, 4', '967301915',
+         '02003739', 'Cruz de Mayo', '020370005', 'Cr. de Jaen, 4', '02400', '967301915',
          '967306421', '02003739.cee@edu.jccm.es', 'http://cee-cruzdemayo.centros.castillalamancha.es', 'Público', 'CEE'
         )
         ;
@@ -2059,7 +2059,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009262', 'El Calvario', '020370005', 'Cl. Alcañiz, S/N (Barrio el Calvario)', 'Cl. Alcañiz, S/N (Barrio el Calvario)', '967303911',
+         '02009262', 'El Calvario', '020370005', 'Cl. Alcañiz, S/N (Barrio el Calvario)', '02400', '967303911',
          '967302947', 'e.infantiles@ayuntamientodehellin.es', '', 'Público', 'EI'
         )
         ;
@@ -2068,7 +2068,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009316', 'El Molino', '020370006', 'Ps. de los Pinos, S/N', 'Ps. de los Pinos, S/N', '967308650',
+         '02009316', 'El Molino', '020370006', 'Ps. de los Pinos, S/N', '02420', '967308650',
          '967302947', 'e.infantiles@ayuntamientodehellin.es', '', 'Público', 'EI'
         )
         ;
@@ -2077,7 +2077,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010112', 'Entre Culturas', '020370005', 'Av. Constitucion, 78', 'Av. Constitucion, 78', '967301355',
+         '02010112', 'Entre Culturas', '020370005', 'Av. Constitucion, 78', '02400', '967301355',
          '967301355', '02010112.cp@edu.jccm.es', 'http://ceip-entreculturas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2086,7 +2086,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004987', 'Escuela Municipal de Música, Danza y Teatro', '020370005', 'Pz. de las Monjas, S/N', 'Pz. de las Monjas, S/N', '967541508',
+         '02004987', 'Escuela Municipal de Música, Danza y Teatro', '020370005', 'Pz. de las Monjas, S/N', '02400', '967541508',
          '', 'escuelademusicahellin@gmail.com', '', 'Público', ''
         )
         ;
@@ -2095,7 +2095,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001810', 'Isabel la Católica', '020370005', 'Cl. Melchor de Macanaz, 18', 'Cl. Melchor de Macanaz, 18', '967301527',
+         '02001810', 'Isabel la Católica', '020370005', 'Cl. Melchor de Macanaz, 18', '02400', '967301527',
          '967301527', '02001810.cp@edu.jccm.es', 'http://ceip-isabellacatolica.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2104,7 +2104,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000601', 'Izpisúa Belmonte', '020370005', 'Av. de la Constitución, 29', 'Av. de la Constitución, 29', '967300161',
+         '02000601', 'Izpisúa Belmonte', '020370005', 'Av. de la Constitución, 29', '02400', '967300161',
          '967300401', '02000601.ies@edu.jccm.es', 'http://ies-izpisuabelmonte.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -2113,7 +2113,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003491', 'Justo Millán', '020370005', 'Cm. Viejo de Isso, S/N', 'Cm. Viejo de Isso, S/N', '967301702',
+         '02003491', 'Justo Millán', '020370005', 'Cm. Viejo de Isso, S/N', '02400', '967301702',
          '967300284', '02003491.ies@edu.jccm.es', 'http://edu.jccm.es/ies/justomillan', 'Público', 'IES'
         )
         ;
@@ -2122,7 +2122,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007770', 'La Olivarera', '020370005', 'Cr. de Iryda, S/N', 'Cr. de Iryda, S/N', '967542103',
+         '02007770', 'La Olivarera', '020370005', 'Cr. de Iryda, S/N', '02400', '967542103',
          '967542103', '02007770.cp@edu.jccm.es', 'http://ceip-laolivarera.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2131,7 +2131,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003697', 'López del Oro', '020370005', 'Cl. Alfareros, S/N', 'Cl. Alfareros, S/N', '967302718',
+         '02003697', 'López del Oro', '020370005', 'Cl. Alfareros, S/N', '02400', '967302718',
          '967542125', '02003697.cea@edu.jccm.es', 'http://cepa-lopezdeloro.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -2140,7 +2140,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009274', 'Martínez Parras', '020370005', 'Cl. Artemio Preciosos, 12', 'Cl. Artemio Preciosos, 12', '967303802',
+         '02009274', 'Martínez Parras', '020370005', 'Cl. Artemio Preciosos, 12', '02400', '967303802',
          '967302947', 'e.nfantiles@ayuntamientodehellin.es', '', 'Público', 'EI'
         )
         ;
@@ -2149,7 +2149,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001822', 'Martínez Parras', '020370005', 'Av. de la Libertad, 80', 'Av. de la Libertad, 80', '967300886',
+         '02001822', 'Martínez Parras', '020370005', 'Av. de la Libertad, 80', '02400', '967300886',
          '967112525', '02001822.cp@edu.jccm.es', 'http://ceip-martinezparras.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2158,7 +2158,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009924', 'Mayca', '020370005', 'Cl. Francisco Silvela, 28', 'Cl. Francisco Silvela, 28', '',
+         '02009924', 'Mayca', '020370005', 'Cl. Francisco Silvela, 28', '02400', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -2167,7 +2167,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001962', 'Melchor de Macanaz', '020370005', 'Av. Castilla-La Mancha, 5', 'Av. Castilla-La Mancha, 5', '967301571',
+         '02001962', 'Melchor de Macanaz', '020370005', 'Av. Castilla-La Mancha, 5', '02400', '967301571',
          '967301571', '02001962.ies@edu.jccm.es', 'http://edu.jccm.es/ies/mmacanaz', 'Público', 'IES'
         )
         ;
@@ -2176,7 +2176,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001834', 'Nuestra Señora del Rosario', '020370005', 'Cl. Gran Via, 51', 'Cl. Gran Via, 51', '967301122',
+         '02001834', 'Nuestra Señora del Rosario', '020370005', 'Cl. Gran Via, 51', '02400', '967301122',
          '967301122', '02001834.cp@edu.jccm.es', 'http://ceip-rosariohellin.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2185,7 +2185,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010173', 'Pepa y Pepo', '020370005', 'Av. de la Constitucion, 9 Bajo', 'Av. de la Constitucion, 9 Bajo', '',
+         '02010173', 'Pepa y Pepo', '020370005', 'Av. de la Constitucion, 9 Bajo', '02400', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -2194,7 +2194,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004525', 'Río Mundo', '020370002', 'Cl. Murcia, 81', 'Cl. Murcia, 81', '967320044',
+         '02004525', 'Río Mundo', '020370002', 'Cl. Murcia, 81', '02490', '967320044',
          '967320044', '02004525.cra@edu.jccm.es', 'http://edu.jccm.es/cra/crariomundo', 'Público', 'CEIP'
         )
         ;
@@ -2203,7 +2203,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001950', 'San Rafael', '020370005', 'Cr. de Jaen, 3', 'Cr. de Jaen, 3', '967300492',
+         '02001950', 'San Rafael', '020370005', 'Cr. de Jaen, 3', '02400', '967300492',
          '967300888', 'srafaelh@planalfa.es', 'http://edu.jccm.es/con/sanrafael', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -2212,7 +2212,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009286', 'San Vicente', '020370005', 'Cl. Jacinto Benavente, 18', 'Cl. Jacinto Benavente, 18', '967305789',
+         '02009286', 'San Vicente', '020370005', 'Cl. Jacinto Benavente, 18', '02400', '967305789',
          '967302947', 'e.infantiles@ayuntamientodehellin.es', '', 'Público', 'EI'
         )
         ;
@@ -2221,7 +2221,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02001986', 'Santiago Apóstol', '020370006', 'Cm. de Puente Herrera, S/N', 'Cm. de Puente Herrera, S/N', '967308560',
+         '02001986', 'Santiago Apóstol', '020370006', 'Cm. de Puente Herrera, S/N', '02420', '967308560',
          '967308560', '02001986.cp@edu.jccm.es', 'http://ceip-santiagoapostol.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2230,7 +2230,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009298', '- Sin Denominación -', '020390003', 'Av. Castilla-La Mancha, 1', 'Av. Castilla-La Mancha, 1', '967287100',
+         '02009298', '- Sin Denominación -', '020390003', 'Av. Castilla-La Mancha, 1', '02694', '967287100',
          '', 'eeihigueruela@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -2239,7 +2239,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008828', 'Los Molinos', '020390003', 'Cl. Baltasar Gonzalez Saez, 36', 'Cl. Baltasar Gonzalez Saez, 36', '967287096',
+         '02008828', 'Los Molinos', '020390003', 'Cl. Baltasar Gonzalez Saez, 36', '02694', '967287096',
          '', '02008828.cra@edu.jccm.es', 'http://edu.jccm.es/cra/losmolinos', 'Público', 'CEIP'
         )
         ;
@@ -2248,7 +2248,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009304', '- Sin Denominación -', '0000', 'Cl. Chinchilla, S/N', 'Cl. Chinchilla, S/N', '968287760',
+         '02009304', '- Sin Denominación -', '0000', 'Cl. Chinchilla, S/N', '02696', '968287760',
          '', 'caihoyagon@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -2257,7 +2257,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002140', 'Nuestra Señora de la Asunción', '020420003', 'Ps. Guardia Civil S/N', 'Ps. Guardia Civil S/N', '967426224',
+         '02002140', 'Nuestra Señora de la Asunción', '020420003', 'Ps. Guardia Civil S/N', '02434', '967426224',
          '967426330', '02002140.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -2266,7 +2266,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010033', '- Sin Denominación -', '020430001', 'Av. del Rey, 13', 'Av. del Rey, 13', '',
+         '02010033', '- Sin Denominación -', '020430001', 'Av. del Rey, 13', '02160', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -2275,7 +2275,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008956', '- Sin Denominación -', '020430001', 'Cl. Juan Xxiii, 23', 'Cl. Juan Xxiii, 23', '',
+         '02008956', '- Sin Denominación -', '020430001', 'Cl. Juan Xxiii, 23', '02160', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -2284,7 +2284,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007851', 'Camino de Aníbal', '020430001', 'Av. del Rey, 13', 'Av. del Rey, 13', '967354066',
+         '02007851', 'Camino de Aníbal', '020430001', 'Av. del Rey, 13', '02160', '967354066',
          '967354133', '02007851.cra@jccm.es', 'http://edu.jccm.es/cra.caminodeanibal', 'Público', 'CEIP'
         )
         ;
@@ -2293,7 +2293,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009328', 'Los Llorones', '020440005', 'Cl. Convento, 8 B', 'Cl. Convento, 8 B', '967292102',
+         '02009328', 'Los Llorones', '020440005', 'Cl. Convento, 8 B', '02410', '967292102',
          '967200154', 'lietor@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -2302,7 +2302,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002191', 'Martínez Parras', '020440005', 'Av. de la Paz, 18', 'Av. de la Paz, 18', '967200105',
+         '02002191', 'Martínez Parras', '020440005', 'Av. de la Paz, 18', '02410', '967200105',
          '967200105', '02002191.cp@edu.jccm.es', 'http://edu.jccm.es/cp/martinezparras', 'Público', 'CEIP'
         )
         ;
@@ -2311,7 +2311,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009331', '- Sin Denominación -', '020450001', 'Cl. San Jorge, 4', 'Cl. San Jorge, 4', '967485011',
+         '02009331', '- Sin Denominación -', '020450001', 'Cl. San Jorge, 4', '02230', '967485011',
          '', 'madrigueras@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -2320,7 +2320,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004835', '- Sin Denominación -', '020450001', 'Av. Levante, S/N', 'Av. Levante, S/N', '967485011',
+         '02004835', '- Sin Denominación -', '020450001', 'Av. Levante, S/N', '02230', '967485011',
          '', 'aepa_madrigueras@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -2329,7 +2329,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002206', 'Constitución Española', '020450001', 'Cl. Jesus Fuentes, 4', 'Cl. Jesus Fuentes, 4', '967484205',
+         '02002206', 'Constitución Española', '020450001', 'Cl. Jesus Fuentes, 4', '02230', '967484205',
          '967485232', '02002206.cp@edu.jccm.es', 'http://edu.jccm.es/cp.madrigueras', 'Público', 'CEIP'
         )
         ;
@@ -2338,7 +2338,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007861', 'Escuela Municipal de Música y Danza', '020450001', 'Cl. Pablo Picasso, 14', 'Cl. Pablo Picasso, 14', '967484835',
+         '02007861', 'Escuela Municipal de Música y Danza', '020450001', 'Cl. Pablo Picasso, 14', '02230', '967484835',
          '', 'cultura.madrigueras@dipualba.es', '', 'Público', ''
         )
         ;
@@ -2347,7 +2347,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004434', 'Río Júcar', '020450001', 'Av. Levante, S/N', 'Av. Levante, S/N', '967485001',
+         '02004434', 'Río Júcar', '020450001', 'Av. Levante, S/N', '02230', '967485001',
          '967484841', '02004434.ies@edu.jccm.es', 'http://edu.jccm.es/ies/riojucar', 'Público', 'IES'
         )
         ;
@@ -2356,7 +2356,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002218', 'Nuestra Señora de Gracia', '020460001', 'Cl. Ramon y Cajal, 43', 'Cl. Ramon y Cajal, 43', '967494030',
+         '02002218', 'Nuestra Señora de Gracia', '020460001', 'Cl. Ramon y Cajal, 43', '02240', '967494030',
          '', '02002218.cp@edu.jccm.es', 'http://edu.jccm.es/cp/n.s.degracia', 'Público', 'CEIP'
         )
         ;
@@ -2365,7 +2365,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002255', 'Diego Ciller Montoya', '020480001', 'Cl. Calvario, 50', 'Cl. Calvario, 50', '967450701',
+         '02002255', 'Diego Ciller Montoya', '020480001', 'Cl. Calvario, 50', '02620', '967450701',
          '967450701', '02002255.cp@edu.jccm.es', 'http://edu.jccm.es/cp/diegociller', 'Público', 'CEIP'
         )
         ;
@@ -2374,7 +2374,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009341', 'Garabatos', '020480001', 'Cl. Grande, 72', 'Cl. Grande, 72', '967450006',
+         '02009341', 'Garabatos', '020480001', 'Cl. Grande, 72', '02620', '967450006',
          '', 'minaya@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -2383,7 +2383,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002279', '- Sin Denominación -', '020490011', 'Av. de la Guardia Civil, 15', 'Av. de la Guardia Civil, 15', '967437065',
+         '02002279', '- Sin Denominación -', '020490011', 'Av. de la Guardia Civil, 15', '02440', '967437065',
          '967437065', '02002279.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -2392,7 +2392,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009353', '- Sin Denominación -', '020510001', 'Av. Joaquin Piqueras, S/N', 'Av. Joaquin Piqueras, S/N', '967336505',
+         '02009353', '- Sin Denominación -', '020510001', 'Av. Joaquin Piqueras, S/N', '02650', '967336505',
          '', 'eei@montealegredelcastillo.es', '', 'Público', 'EI'
         )
         ;
@@ -2401,7 +2401,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002309', 'Virgen de Consolación', '020510001', 'Cl. Maria Dolores Lajara, 54', 'Cl. Maria Dolores Lajara, 54', '967336003',
+         '02002309', 'Virgen de Consolación', '020510001', 'Cl. Maria Dolores Lajara, 54', '02650', '967336003',
          '967336003', '02002309.cp@edu.jccm.es', 'http://ceip-montealegre.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2410,7 +2410,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004914', '- Sin Denominación -', '020530001', 'Cl. Cadena, 26', 'Cl. Cadena, 26', '967372644',
+         '02004914', '- Sin Denominación -', '020530001', 'Cl. Cadena, 26', '02612', '967372644',
          '', '02003880.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -2419,7 +2419,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005131', 'Bodas de Camacho', '020530001', 'Cl. Bodas de Camacho, S/N', 'Cl. Bodas de Camacho, S/N', '967372158',
+         '02005131', 'Bodas de Camacho', '020530001', 'Cl. Bodas de Camacho, S/N', '02612', '967372158',
          '967372846', '02005131.ieso@edu.jccm.es', 'http://edu.jccm.es/ieso.bodasdecamacho', 'Público', ''
         )
         ;
@@ -2428,7 +2428,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002334', 'Cervantes', '020530001', 'Cl. Jardines, 1', 'Cl. Jardines, 1', '967372141',
+         '02002334', 'Cervantes', '020530001', 'Cl. Jardines, 1', '02612', '967372141',
          '967372141', '02002334.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cervantes-munera', 'Público', 'CEIP'
         )
         ;
@@ -2437,7 +2437,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009365', 'Sanchica', '020530001', 'Cl. Jardines, S/N', 'Cl. Jardines, S/N', '967372256',
+         '02009365', 'Sanchica', '020530001', 'Cl. Jardines, S/N', '02612', '967372256',
          '', 'munera@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -2446,7 +2446,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008762', '- Sin Denominación -', '020550009', 'Pz. Mayor, 8', 'Pz. Mayor, 8', '',
+         '02008762', '- Sin Denominación -', '020550009', 'Pz. Mayor, 8', '02530', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -2455,7 +2455,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005141', '- Sin Denominación -', '020550009', 'Cl. Escuelas, S/N', 'Cl. Escuelas, S/N', '967438810',
+         '02005141', '- Sin Denominación -', '020550009', 'Cl. Escuelas, S/N', '02530', '967438810',
          '967438081', '02005141.SES@EDU.JCCM.ES', 'http://edu.jccm.es/ses/nerpio', 'Público', ''
         )
         ;
@@ -2464,7 +2464,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009389', 'Cominos', '020550009', 'Cl. Terrera, 4', 'Cl. Terrera, 4', '967438001',
+         '02009389', 'Cominos', '020550009', 'Cl. Terrera, 4', '02530', '967438001',
          '925247487', 'nerpio@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -2473,7 +2473,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004501', 'Río Taibilla', '020550009', 'Cl. Escuelas, S/N', 'Cl. Escuelas, S/N', '967438033',
+         '02004501', 'Río Taibilla', '020550009', 'Cl. Escuelas, S/N', '02530', '967438033',
          '967438033', '02004501.cra@edu.jccm.es', 'http://edu.jccm.es/cra/nerpio', 'Público', 'CEIP'
         )
         ;
@@ -2482,7 +2482,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009390', '- Sin Denominación -', '020560001', 'Av. Parque, S/N', 'Av. Parque, S/N', '967323001',
+         '02009390', '- Sin Denominación -', '020560001', 'Av. Parque, S/N', '02652', '967323001',
          '', 'secretaria.ontur@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -2491,7 +2491,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002450', 'San José de Calasanz', '020560001', 'Pz. Clemente Cantos, S/N', 'Pz. Clemente Cantos, S/N', '967323012',
+         '02002450', 'San José de Calasanz', '020560001', 'Pz. Clemente Cantos, S/N', '02652', '967323012',
          '967323012', '02002450.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sjosedecalasanz', 'Público', 'CEIP'
         )
         ;
@@ -2500,7 +2500,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009407', '- Sin Denominación -', '020570002', 'Av. Principe de Asturias, 25', 'Av. Principe de Asturias, 25', '967377530',
+         '02009407', '- Sin Denominación -', '020570002', 'Av. Principe de Asturias, 25', '02611', '967377530',
          '967377207', '', '', 'Público', 'EI'
         )
         ;
@@ -2509,7 +2509,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008853', '- Sin Denominación -', '020570002', 'Pz. Constitucion, 1', 'Pz. Constitucion, 1', '',
+         '02008853', '- Sin Denominación -', '020570002', 'Pz. Constitucion, 1', '02611', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -2518,7 +2518,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005153', 'Belerma', '020570002', 'Cl. Principe de Asturias, 32', 'Cl. Principe de Asturias, 32', '967377727',
+         '02005153', 'Belerma', '020570002', 'Cl. Principe de Asturias, 32', '02611', '967377727',
          '967377726', '02005153.ieso@edu.jccm.es', 'http://ies-belerma.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -2527,7 +2527,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002462', 'Enriqueta Sánchez', '020570002', 'Av. Libertad, 9', 'Av. Libertad, 9', '967377229',
+         '02002462', 'Enriqueta Sánchez', '020570002', 'Av. Libertad, 9', '02611', '967377229',
          '967377229', '02002462.cp@edu.jccm.es', 'http://edu.jccm.es/cp/enriquetasanchez', 'Público', 'CEIP'
         )
         ;
@@ -2536,7 +2536,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004690', 'Peñas', '020600007', 'Cl. Mesones, 40', 'Cl. Mesones, 40', '967298152',
+         '02004690', 'Peñas', '020600007', 'Cl. Mesones, 40', '02120', '967298152',
          '967298152', '02004690.cra@edu.jccm.es', 'http://edu.jccm.es/cra.psp', 'Público', 'CEIP'
         )
         ;
@@ -2545,7 +2545,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004513', 'Laguna de Pétrola', '020610002', 'Cl. Maestro José Antonio López Escudero, 5', 'Cl. Maestro José Antonio López Escudero, 5', '967286090',
+         '02004513', 'Laguna de Pétrola', '020610002', 'Cl. Maestro José Antonio López Escudero, 5', '02692', '967286090',
          '967286090', '02004513.cra@edu.jccm.es', 'http://edu.jccm.es/cra/petrola', 'Público', 'CEIP'
         )
         ;
@@ -2554,7 +2554,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004771', '- Sin Denominación -', '029010001', 'Cl. Juan Pablo Ii, 30', 'Cl. Juan Pablo Ii, 30', '967250200',
+         '02004771', '- Sin Denominación -', '029010001', 'Cl. Juan Pablo Ii, 30', '02510', '967250200',
          '', '', '', 'Público', ''
         )
         ;
@@ -2563,7 +2563,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005165', 'Alfonso Iniesta', '029010001', 'Cl. Federico García Lorca, 2', 'Cl. Federico García Lorca, 2', '967250724',
+         '02005165', 'Alfonso Iniesta', '029010001', 'Cl. Federico García Lorca, 2', '02510', '967250724',
          '967250725', '02005165.ieso@edu.jccm.es', 'http://edu.jccm.es/ies/pozocanada', 'Público', ''
         )
         ;
@@ -2572,7 +2572,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009936', 'Los Pequeñeques', '029010001', 'Cl. Maria Collado, 8', 'Cl. Maria Collado, 8', '639639195',
+         '02009936', 'Los Pequeñeques', '029010001', 'Cl. Maria Collado, 8', '02510', '639639195',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -2581,7 +2581,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02000982', 'Virgen del Rosario', '029010001', 'Av. Juan Pablo Ii, 48', 'Av. Juan Pablo Ii, 48', '967250200',
+         '02000982', 'Virgen del Rosario', '029010001', 'Av. Juan Pablo Ii, 48', '02510', '967250200',
          '967250168', '02000982.cp@edu.jccm.es', 'http://ceip-virgenrosario.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2590,7 +2590,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009420', 'Nuestra Señora del Rosario', '020630005', 'Cl. San Isidro, 8', 'Cl. San Isidro, 8', '967205001',
+         '02009420', 'Nuestra Señora del Rosario', '020630005', 'Cl. San Isidro, 8', '02141', '967205001',
          '967205111', 'phondo@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -2599,7 +2599,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004744', 'Pozohondo', '020630005', 'Cr. de Hellin, 9', 'Cr. de Hellin, 9', '967205082',
+         '02004744', 'Pozohondo', '020630005', 'Cr. de Hellin, 9', '02141', '967205082',
          '967205082', '02004744.cra@edu.jccm.es', 'http://edu.jccm.es/cra/cra_pozohondo', 'Público', 'CEIP'
         )
         ;
@@ -2608,7 +2608,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004550', 'Los Llanos', '020650002', 'Cl. San Bartolome, S/N', 'Cl. San Bartolome, S/N', '967363868',
+         '02004550', 'Los Llanos', '020650002', 'Cl. San Bartolome, S/N', '02327', '967363868',
          '967368868', '02004550.cra@edu.jccm.es', 'http://edu.jccm.es/cra/llanos', 'Público', 'CEIP'
         )
         ;
@@ -2617,7 +2617,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009432', '- Sin Denominación -', '020670004', 'Cl. Juan Jorge Graubner, 10', 'Cl. Juan Jorge Graubner, 10', '967435095',
+         '02009432', '- Sin Denominación -', '020670004', 'Cl. Juan Jorge Graubner, 10', '02450', '967435095',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -2626,7 +2626,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008865', '- Sin Denominación -', '020670004', 'Cl. Rosario, S/N', 'Cl. Rosario, S/N', '967435026',
+         '02008865', '- Sin Denominación -', '020670004', 'Cl. Rosario, S/N', '02450', '967435026',
          '967435026', '02008865.ses@edu.jccm.es', 'http://ses-riopar.centros.castillalamancha.es/', 'Público', ''
         )
         ;
@@ -2635,7 +2635,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004707', 'Calar del Mundo', '020670004', 'Cl. Rosario, 3', 'Cl. Rosario, 3', '967435055',
+         '02004707', 'Calar del Mundo', '020670004', 'Cl. Rosario, 3', '02450', '967435055',
          '967435055', '02004707.cra@edu.jccm.es', 'http://cra-calardelmundo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2644,7 +2644,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004574', 'Sierra de Alcaraz', '020680003', 'Av. del Ayuntamiento, S/N', 'Av. del Ayuntamiento, S/N', '967388232',
+         '02004574', 'Sierra de Alcaraz', '020680003', 'Av. del Ayuntamiento, S/N', '02340', '967388232',
          '967390036', '02004574.cra@edu.jccm.es', 'http://cra-sierradealcaraz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2653,7 +2653,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010185', '- Sin Denominación -', '020690001', 'Cl. San Jose, 12', 'Cl. San Jose, 12', '967215465',
+         '02010185', '- Sin Denominación -', '020690001', 'Cl. San Jose, 12', '02630', '967215465',
          '', 'eoialbacete@telefonica.net', '', 'Público', ''
         )
         ;
@@ -2662,7 +2662,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004793', '- Sin Denominación -', '020690001', 'Cl. San Jose, 12', 'Cl. San Jose, 12', '967244272',
+         '02004793', '- Sin Denominación -', '020690001', 'Cl. San Jose, 12', '02630', '967244272',
          '967244272', '02003673.cea@edu.jccm.es', 'http://edu.jccm.es/cea/albacete', 'Público', ''
         )
         ;
@@ -2671,7 +2671,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002760', 'Doctor Alarcón Santón', '020690001', 'Av. de Castilla la Mancha, 60', 'Av. de Castilla la Mancha, 60', '967441472',
+         '02002760', 'Doctor Alarcón Santón', '020690001', 'Av. de Castilla la Mancha, 60', '02630', '967441472',
          '967441473', '02002760.ies@edu.jccm.es', 'http://ies-dralarconsanton.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -2680,7 +2680,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008774', 'Escuela Municipal de Música y Danza de la Roda', '020690001', 'Cl. Calderon de la Barca, 21', 'Cl. Calderon de la Barca, 21', '967443301',
+         '02008774', 'Escuela Municipal de Música y Danza de la Roda', '020690001', 'Cl. Calderon de la Barca, 21', '02630', '967443301',
          '', 'escuelademusica@laroda.es', '', 'Público', ''
         )
         ;
@@ -2689,7 +2689,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002711', 'José Antonio', '020690001', 'Cl. Virgen, 1', 'Cl. Virgen, 1', '967441372',
+         '02002711', 'José Antonio', '020690001', 'Cl. Virgen, 1', '02630', '967441372',
          '967548177', '02002711.cp@edu.jccm.es', 'http://edu.jccm.es/cp/joseantonio', 'Público', 'CEIP'
         )
         ;
@@ -2698,7 +2698,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002723', 'Juan Ramón Ramírez', '020690001', 'Cl. Santa Cruz, 2', 'Cl. Santa Cruz, 2', '967441399',
+         '02002723', 'Juan Ramón Ramírez', '020690001', 'Cl. Santa Cruz, 2', '02630', '967441399',
          '967548525', '02002723.cp@edu.jccm.es', 'http://edu.jccm.es/cp/juanramonramirez', 'Público', 'CEIP'
         )
         ;
@@ -2707,7 +2707,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002784', 'Maestro Juan Rubio', '020690001', 'Cl. San Jose, 12', 'Cl. San Jose, 12', '967441545',
+         '02002784', 'Maestro Juan Rubio', '020690001', 'Cl. San Jose, 12', '02630', '967441545',
          '967441752', '02002784.ies@edu.jccm.es', 'http://ies-maestrojuanrubio.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -2716,7 +2716,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002759', 'María Auxiliadora', '020690001', 'Ps. de la Estacion, 15', 'Ps. de la Estacion, 15', '967440166',
+         '02002759', 'María Auxiliadora', '020690001', 'Ps. de la Estacion, 15', '02630', '967440166',
          '967443721', 'dir.roda@stfma.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -2725,7 +2725,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004124', 'Miguel Hernández', '020690001', 'Cl. Honrubia, 17', 'Cl. Honrubia, 17', '967441685',
+         '02004124', 'Miguel Hernández', '020690001', 'Cl. Honrubia, 17', '02630', '967441685',
          '967442712', '02004124.cp@edu.jccm.es', 'http://ceip-miguelhernandez.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -2734,7 +2734,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009997', 'Peques', '020690001', 'Cl. Virgen, 7', 'Cl. Virgen, 7', '',
+         '02009997', 'Peques', '020690001', 'Cl. Virgen, 7', '02630', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -2743,7 +2743,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009444', 'Silvia Martínez Santiago', '020690001', 'Av. Reina Sofia, 31', 'Av. Reina Sofia, 31', '967443206',
+         '02009444', 'Silvia Martínez Santiago', '020690001', 'Av. Reina Sofia, 31', '02630', '967443206',
          '967443206', 'caisilviamartinezsantiago@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -2752,7 +2752,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009951', 'Soletes', '020690001', 'Cl. General Latorre, 7', 'Cl. General Latorre, 7', '626401201',
+         '02009951', 'Soletes', '020690001', 'Cl. General Latorre, 7', '02630', '626401201',
          '', 'soleteslaroda@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -2761,7 +2761,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002796', 'Tomás Navarro Tomás', '020690001', 'Av. Castilla-La Mancha, 48', 'Av. Castilla-La Mancha, 48', '967441413',
+         '02002796', 'Tomás Navarro Tomás', '020690001', 'Av. Castilla-La Mancha, 48', '02630', '967441413',
          '967548652', '02002796.cp@edu.jccm.es', 'http://edu.jccm.es/cp.tomasnavarrotomas', 'Público', 'CEIP'
         )
         ;
@@ -2770,7 +2770,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002701', 'Virgen de los Remedios', '020690001', 'Cl. Luis Braille, 4', 'Cl. Luis Braille, 4', '967442323',
+         '02002701', 'Virgen de los Remedios', '020690001', 'Cl. Luis Braille, 4', '02630', '967442323',
          '967442323', 'educacionlaroda@asprona.org', '', 'Priv.Concert.', ''
         )
         ;
@@ -2779,7 +2779,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002838', 'Margarita Sotos', '020710004', 'Cl. Cruz de la Ines, S/N', 'Cl. Cruz de la Ines, S/N', '967358073',
+         '02002838', 'Margarita Sotos', '020710004', 'Cl. Cruz de la Ines, S/N', '02326', '967358073',
          '967358073', '02002838.cp@edu.jccm.es', 'http://ceip-margaritasotos.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2788,7 +2788,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009456', 'El Hada Arco Iris', '020720004', 'Cl. Calvario, 29', 'Cl. Calvario, 29', '',
+         '02009456', 'El Hada Arco Iris', '020720004', 'Cl. Calvario, 29', '02435', '',
          '', 'caisocovos@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -2797,7 +2797,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005177', 'Encomienda de Santiago', '020720004', 'Lg. Zona Escolar, 2', 'Lg. Zona Escolar, 2', '967420951',
+         '02005177', 'Encomienda de Santiago', '020720004', 'Lg. Zona Escolar, 2', '02435', '967420951',
          '967420937', '02005177.ieso@edu.jccm.es', 'http://ies-encomiendasocovos.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -2806,7 +2806,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002875', 'León Felipe', '020720004', 'Cl. Zona Escolar, S/N', 'Cl. Zona Escolar, S/N', '967420063',
+         '02002875', 'León Felipe', '020720004', 'Cl. Zona Escolar, S/N', '02435', '967420063',
          '967420063', '02002875.cp@edu.jccm.es', 'http://edu.jccm.es/cp.leonfelipe', 'Público', 'CEIP'
         )
         ;
@@ -2815,7 +2815,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002863', 'Ramón y Cajal', '020720006', 'Av. de las Escuelas, 12', 'Av. de las Escuelas, 12', '967413753',
+         '02002863', 'Ramón y Cajal', '020720006', 'Av. de las Escuelas, 12', '02437', '967413753',
          '967413753', '02002863.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ramonycajal-tazona', 'Público', 'CEIP'
         )
         ;
@@ -2824,7 +2824,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004801', '- Sin Denominación -', '020730001', 'Pz. Felipe Sotos, 2', 'Pz. Felipe Sotos, 2', '967544043',
+         '02004801', '- Sin Denominación -', '020730001', 'Pz. Felipe Sotos, 2', '02100', '967544043',
          '', 'aepa_tarazonadlm@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -2833,7 +2833,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002887', 'Eduardo Sanchiz', '020730001', 'Pz. Felipe Sotos, 2', 'Pz. Felipe Sotos, 2', '967480092',
+         '02002887', 'Eduardo Sanchiz', '020730001', 'Pz. Felipe Sotos, 2', '02100', '967480092',
          '967481293', '02002887.cp@edu.jccm.es', 'http://ceip-eduardosanchiz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2842,7 +2842,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009468', 'Gloria Fuertes', '020730001', 'Cl. Canalejas, S/N', 'Cl. Canalejas, S/N', '967480386',
+         '02009468', 'Gloria Fuertes', '020730001', 'Cl. Canalejas, S/N', '02100', '967480386',
          '', 'eigloriafuertes2007@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -2851,7 +2851,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004379', 'José Isbert', '020730001', 'Cl. Carril del Ciego, 19', 'Cl. Carril del Ciego, 19', '967497362',
+         '02004379', 'José Isbert', '020730001', 'Cl. Carril del Ciego, 19', '02100', '967497362',
          '967497364', '02004379.ies@edu.jccm.es', 'http://ies-joseisbert.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -2860,7 +2860,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004872', '- Sin Denominación -', '020740006', 'Cl. Daniel Chulvi, 5', 'Cl. Daniel Chulvi, 5', '967302718',
+         '02004872', '- Sin Denominación -', '020740006', 'Cl. Daniel Chulvi, 5', '02500', '967302718',
          '967302718', '02003697.cea@edu.jccm.es', 'http://edu.jccm.es/aepa/tobarra', 'Público', ''
         )
         ;
@@ -2869,7 +2869,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02002954', 'Cervantes', '020740006', 'Cl. Perez Pastor, 13', 'Cl. Perez Pastor, 13', '967325287',
+         '02002954', 'Cervantes', '020740006', 'Cl. Perez Pastor, 13', '02500', '967325287',
          '967328170', '02002954.cp@edu.jccm.es', 'http://ceip-cervantes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2878,7 +2878,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004288', 'Cristo de la Antigua', '020740006', 'Cl. Granja, S/N (Apdo. de Correos Nº 42)', 'Cl. Granja, S/N (Apdo. de Correos Nº 42)', '967325427',
+         '02004288', 'Cristo de la Antigua', '020740006', 'Cl. Granja, S/N (Apdo. de Correos Nº 42)', '02500', '967325427',
          '967325610', '02004288.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cristoantigua', 'Público', 'CEIP'
         )
         ;
@@ -2887,7 +2887,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004446', 'Cristóbal Pérez Pastor', '020740006', 'Ps. Guijarral, S/N', 'Ps. Guijarral, S/N', '967328632',
+         '02004446', 'Cristóbal Pérez Pastor', '020740006', 'Ps. Guijarral, S/N', '02500', '967328632',
          '967328632', '02004446.ies@edu.jccm.es', 'http://ies-perezpastor.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -2896,7 +2896,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009471', 'La Granja', '020740006', 'Cl. la Granja, 2', 'Cl. la Granja, 2', '620565884',
+         '02009471', 'La Granja', '020740006', 'Cl. la Granja, 2', '02500', '620565884',
          '967325075', 'cait@tobarra.es', '', 'Público', 'EI'
         )
         ;
@@ -2905,7 +2905,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004719', 'Nuestra Señora de la Asunción', '020740006', 'Cl. Asuncion, 5', 'Cl. Asuncion, 5', '967325022',
+         '02004719', 'Nuestra Señora de la Asunción', '020740006', 'Cl. Asuncion, 5', '02500', '967325022',
          '967325022', '02004719.cp@edu.jccm.es', 'http://edu.jccm.es/cp/nsasuncion', 'Público', 'CEIP'
         )
         ;
@@ -2914,7 +2914,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010136', 'Primeros Pasitos', '020740006', 'Cl. Alberca, 5', 'Cl. Alberca, 5', '',
+         '02010136', 'Primeros Pasitos', '020740006', 'Cl. Alberca, 5', '02500', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -2923,7 +2923,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009501', 'San Roque I', '020740006', 'Cl. Francisco Cano Fontecha, 5', 'Cl. Francisco Cano Fontecha, 5', '647564234',
+         '02009501', 'San Roque I', '020740006', 'Cl. Francisco Cano Fontecha, 5', '02500', '647564234',
          '967325075', 'cai@tobarra.es', '', 'Público', 'EI'
         )
         ;
@@ -2932,7 +2932,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005219', 'Nuestra Señora del Rosario', '020750001', 'Cl. Virgen del Rosario, 9', 'Cl. Virgen del Rosario, 9', '967400127',
+         '02005219', 'Nuestra Señora del Rosario', '020750001', 'Cl. Virgen del Rosario, 9', '02150', '967400127',
          '967400127', '02005219.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -2941,7 +2941,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010070', 'Peques', '020750001', 'Ct. del Rio, 14', 'Ct. del Rio, 14', '',
+         '02010070', 'Peques', '020750001', 'Ct. del Rio, 14', '02150', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -2950,7 +2950,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009523', '- Sin Denominación -', '020780001', 'Cl. Huertas, 2', 'Cl. Huertas, 2', '680584577',
+         '02009523', '- Sin Denominación -', '020780001', 'Cl. Huertas, 2', '02636', '680584577',
          '967455001', 'villalgordo@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -2959,7 +2959,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003016', 'San Roque', '020780001', 'Cl. Tarazona, S/N', 'Cl. Tarazona, S/N', '967455103',
+         '02003016', 'San Roque', '020780001', 'Cl. Tarazona, S/N', '02636', '967455103',
          '967455223', '02003016.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -2968,7 +2968,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009535', '- Sin Denominación -', '020790001', 'Cl. Larga, 77', 'Cl. Larga, 77', '967483070',
+         '02009535', '- Sin Denominación -', '020790001', 'Cl. Larga, 77', '02270', '967483070',
          '967483295', '', '', 'Público', 'EI'
         )
         ;
@@ -2977,7 +2977,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004823', '- Sin Denominación -', '020790001', 'Cl. Larga, 112', 'Cl. Larga, 112', '967483069',
+         '02004823', '- Sin Denominación -', '020790001', 'Cl. Larga, 112', '02270', '967483069',
          '', 'aepa_villamalea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -2986,7 +2986,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003031', 'Ildefonso Navarro', '020790001', 'Cl. Larga, 106', 'Cl. Larga, 106', '967483295',
+         '02003031', 'Ildefonso Navarro', '020790001', 'Cl. Larga, 106', '02270', '967483295',
          '967483295', '02003031.cp@edu.jccm.es', 'http://ceip-ildefonsonavarro.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -2995,7 +2995,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005013', 'Río Cabriel', '020790001', 'Cl. Larga, 112', 'Cl. Larga, 112', '967483069',
+         '02005013', 'Río Cabriel', '020790001', 'Cl. Larga, 112', '02270', '967483069',
          '967486136', '02005013.ieso@edu.jccm.es', 'http://ies-riocabriel.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -3004,7 +3004,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004677', 'Los Olivos', '020800001', 'Av. de la Constitucion, 27', 'Av. de la Constitucion, 27', '967398177',
+         '02004677', 'Los Olivos', '020800001', 'Av. de la Constitucion, 27', '02350', '967398177',
          '967398177', '02004677.cra@edu.jccm.es', 'http://cra-losolivosserranos.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3013,7 +3013,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003880', 'Alonso Quijano', '020810003', 'Av. Menendez Pelayo, S/N', 'Av. Menendez Pelayo, S/N', '967143616',
+         '02003880', 'Alonso Quijano', '020810003', 'Av. Menendez Pelayo, S/N', '02600', '967143616',
          '967143616', '02003880.cea@edu.jccm.es', 'http://edu.jccm.es/cea/villarrobledo/', 'Público', ''
         )
         ;
@@ -3022,7 +3022,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008968', 'Barranco Cafetero', '020810003', 'Cl. Alfarerias Altas, 18', 'Cl. Alfarerias Altas, 18', '967145125',
+         '02008968', 'Barranco Cafetero', '020810003', 'Cl. Alfarerias Altas, 18', '02600', '967145125',
          '', '02008968.cp@edu.jccm.es', 'http://ceip-barrancocafetero.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3031,7 +3031,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009547', 'Barrio de Asturias', '020810003', 'Cl. Alfonso Xiii, S/N', 'Cl. Alfonso Xiii, S/N', '967145836',
+         '02009547', 'Barrio de Asturias', '020810003', 'Cl. Alfonso Xiii, S/N', '02600', '967145836',
          '967146576', '', '', 'Público', 'EI'
         )
         ;
@@ -3040,7 +3040,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009961', 'Caramelos', '020810003', 'Cl. Calderon de la Barca, 12', 'Cl. Calderon de la Barca, 12', '629504720',
+         '02009961', 'Caramelos', '020810003', 'Cl. Calderon de la Barca, 12', '02600', '629504720',
          '', 'caicaramelos@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -3049,7 +3049,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02005189', 'Cencibel', '020810003', 'Av. Francisco Tomas y Valiente, S/N', 'Av. Francisco Tomas y Valiente, S/N', '967137510',
+         '02005189', 'Cencibel', '020810003', 'Av. Francisco Tomas y Valiente, S/N', '02600', '967137510',
          '967137510', '02005189.ies@edu.jccm.es', 'http://edu.jccm.es/ies.cencibel', 'Público', 'IES'
         )
         ;
@@ -3058,7 +3058,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02008841', 'Centro de Enseñanzas Deportivas Filípides', '020810003', 'Cl. Cruz Verde, S/N', 'Cl. Cruz Verde, S/N', '967141958',
+         '02008841', 'Centro de Enseñanzas Deportivas Filípides', '020810003', 'Cl. Cruz Verde, S/N', '02600', '967141958',
          '967141958', 'filipides@mantia.es', '', 'Privado', ''
         )
         ;
@@ -3067,7 +3067,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004291', 'Diego Requena', '020810003', 'Cl. Socuellamos, 27', 'Cl. Socuellamos, 27', '967144441',
+         '02004291', 'Diego Requena', '020810003', 'Cl. Socuellamos, 27', '02600', '967144441',
          '967146803', '02004291.cp@edu.jccm.es', 'http://ceip-diegorequena.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3076,7 +3076,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003065', 'Don Francisco Giner de los Ríos', '020810003', 'Cl. Greco, 13', 'Cl. Greco, 13', '967142616',
+         '02003065', 'Don Francisco Giner de los Ríos', '020810003', 'Cl. Greco, 13', '02600', '967142616',
          '967117224', '02003065.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ginerdelosrios', 'Público', 'CEIP'
         )
         ;
@@ -3085,7 +3085,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003077', 'Graciano Atienza', '020810003', 'Cl. Infante Jaime, 23', 'Cl. Infante Jaime, 23', '967140777',
+         '02003077', 'Graciano Atienza', '020810003', 'Cl. Infante Jaime, 23', '02600', '967140777',
          '967143035', '02003077.cp@edu.jccm.es', 'http://ceip-gracianoatienza.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3094,7 +3094,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003053', 'Infanta Elena', '020810003', 'Cl. la Roda, 22', 'Cl. la Roda, 22', '967143626',
+         '02003053', 'Infanta Elena', '020810003', 'Cl. la Roda, 22', '02600', '967143626',
          '967138204', 'educacionvillarrobledo@asprona.org', '', 'Priv.Concert.', ''
         )
         ;
@@ -3103,7 +3103,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003089', 'Jiménez de Córdoba', '020810003', 'Cl. San Nicolas, 14', 'Cl. San Nicolas, 14', '967141328',
+         '02003089', 'Jiménez de Córdoba', '020810003', 'Cl. San Nicolas, 14', '02600', '967141328',
          '967137801', '02003089.cp@edu.jccm.es', 'http://ceip-jimenezdecordoba.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3112,7 +3112,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009559', 'Juan Valero-San Antón', '020810003', 'Cl. el Carmen, S/N', 'Cl. el Carmen, S/N', '967145043',
+         '02009559', 'Juan Valero-San Antón', '020810003', 'Cl. el Carmen, S/N', '02600', '967145043',
          '967146576', '', '', 'Público', 'EI'
         )
         ;
@@ -3121,7 +3121,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004471', 'Menéndez Pelayo', '020810003', 'Av. Menendez Pelayo, S/N', 'Av. Menendez Pelayo, S/N', '967145064',
+         '02004471', 'Menéndez Pelayo', '020810003', 'Av. Menendez Pelayo, S/N', '02600', '967145064',
          '967147396', '02004471.eoi@edu.jccm.es', 'http://eoi-villarrobledo.centros.castillalamancha.es', 'Público', 'EOI'
         )
         ;
@@ -3130,7 +3130,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003107', 'Nuestra Señora del Carmen', '020810003', 'Cl. Don Pedro, 29', 'Cl. Don Pedro, 29', '967141548',
+         '02003107', 'Nuestra Señora del Carmen', '020810003', 'Cl. Don Pedro, 29', '02600', '967141548',
          '967141548', 'cnscarmen@telefonica.net', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -3139,7 +3139,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003651', 'Octavio Cuartero', '020810003', 'Av. Menendez Pelayo, S/N', 'Av. Menendez Pelayo, S/N', '967143986',
+         '02003651', 'Octavio Cuartero', '020810003', 'Av. Menendez Pelayo, S/N', '02600', '967143986',
          '967145723', '02003651.ies@edu.jccm.es', 'http://edu.jccm.es/ies/octaviocuartero', 'Público', 'IES'
         )
         ;
@@ -3148,7 +3148,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009572', 'San Sebastián', '020810003', 'Pj. San Sebastian, S/N', 'Pj. San Sebastian, S/N', '967143605',
+         '02009572', 'San Sebastián', '020810003', 'Pj. San Sebastian, S/N', '02600', '967143605',
          '967146576', '', '', 'Público', 'EI'
         )
         ;
@@ -3157,7 +3157,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02007812', 'Tomás de Torrejón y Velasco', '020810003', 'Cl. Soledad, 3', 'Cl. Soledad, 3', '967144683',
+         '02007812', 'Tomás de Torrejón y Velasco', '020810003', 'Cl. Soledad, 3', '02600', '967144683',
          '967144683', '', '', 'Público', ''
         )
         ;
@@ -3166,7 +3166,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009973', 'Tucán', '020810003', 'Cl. Miguel de Cervantes, 2', 'Cl. Miguel de Cervantes, 2', '',
+         '02009973', 'Tucán', '020810003', 'Cl. Miguel de Cervantes, 2', '02600', '',
          '', 'tucan@tucanescuelainfantil.es', '', 'Privado', 'EI'
         )
         ;
@@ -3175,7 +3175,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003132', 'Virgen de la Caridad', '020810003', 'Cl. la Roda, 1', 'Cl. la Roda, 1', '967142669',
+         '02003132', 'Virgen de la Caridad', '020810003', 'Cl. la Roda, 1', '02600', '967142669',
          '967142669', '02003132.cp@edu.jccm.es', 'http://ceip-virgendelacaridad.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3184,7 +3184,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003120', 'Virrey Morcillo', '020810003', 'Av. Menendez Pelayo, S/N', 'Av. Menendez Pelayo, S/N', '967140881',
+         '02003120', 'Virrey Morcillo', '020810003', 'Av. Menendez Pelayo, S/N', '02600', '967140881',
          '967146200', '02003120.ies@edu.jccm.es', 'http://edu.jccm.es/ies/virreymorcillo', 'Público', 'IES'
         )
         ;
@@ -3193,7 +3193,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02003090', 'Virrey Morcillo', '020810003', 'Cl. Estacion, 31', 'Cl. Estacion, 31', '967140720',
+         '02003090', 'Virrey Morcillo', '020810003', 'Cl. Estacion, 31', '02600', '967140720',
          '967144941', '02003090.cp@edu.jccm.es', 'http://edu.jccm.es/cp.virreymorcillo', 'Público', 'CEIP'
         )
         ;
@@ -3202,7 +3202,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02009584', '- Sin Denominación -', '020860014', 'Cl. Escuelas, 2', 'Cl. Escuelas, 2', '616518124',
+         '02009584', '- Sin Denominación -', '020860014', 'Cl. Escuelas, 2', '02480', '616518124',
          '967431307', 'guarderia.yeste@dipualba.es', '', 'Público', 'EI'
         )
         ;
@@ -3211,7 +3211,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02010021', '- Sin Denominación -', '020860014', 'Cl. San Bartolome, 1', 'Cl. San Bartolome, 1', '967431017',
+         '02010021', '- Sin Denominación -', '020860014', 'Cl. San Bartolome, 1', '02480', '967431017',
          '967431017', '02010021.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -3220,7 +3220,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004884', '- Sin Denominación -', '020860014', 'Cl. San Bartolome, 1', 'Cl. San Bartolome, 1', '967302718',
+         '02004884', '- Sin Denominación -', '020860014', 'Cl. San Bartolome, 1', '02480', '967302718',
          '967302718', '02003697.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -3229,7 +3229,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '02004458', 'Beneche', '020860014', 'Cl. Fuente Somera, S/N', 'Cl. Fuente Somera, S/N', '967431103',
+         '02004458', 'Beneche', '020860014', 'Cl. Fuente Somera, S/N', '02480', '967431103',
          '967431350', '02004458.ies@edu.jccm.es', 'http://ies-beneche.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3238,7 +3238,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000013', 'Nuestra Señora de la Encarnación', '130010001', 'Tr. de las Escuelas, 8', 'Tr. de las Escuelas, 8', '926835082',
+         '13000013', 'Nuestra Señora de la Encarnación', '130010001', 'Tr. de las Escuelas, 8', '13180', '926835082',
          '926835082', '13000013.cp@edu.jccm.es', 'http://edu.jccm.es/cp/abenojar', 'Público', 'CEIP'
         )
         ;
@@ -3247,7 +3247,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011230', '- Sin Denominación -', '130020001', 'Ps. Juan Xxiii, 10', 'Ps. Juan Xxiii, 10', '686635235',
+         '13011230', '- Sin Denominación -', '130020001', 'Ps. Juan Xxiii, 10', '13410', '686635235',
          '926730396', '', '', 'Público', 'EI'
         )
         ;
@@ -3256,7 +3256,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000025', 'Virgen de la Estrella', '130020001', 'Cl. Manuel de Falla, 1', 'Cl. Manuel de Falla, 1', '926730191',
+         '13000025', 'Virgen de la Estrella', '130020001', 'Cl. Manuel de Falla, 1', '13410', '926730191',
          '926730334', '13000025.cp@edu.jccm.es', 'http://edu.jccm.es/cp/vestrella', 'Público', 'CEIP'
         )
         ;
@@ -3265,7 +3265,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012258', '- Sin Denominación -', '130030001', 'Cl. Ciudad Real, S/N', 'Cl. Ciudad Real, S/N', '926735020',
+         '13012258', '- Sin Denominación -', '130030001', 'Cl. Ciudad Real, S/N', '13413', '926735020',
          '', '13012258.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -3274,7 +3274,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012192', 'Orden de Santiago', '130040001', 'Cl. de la Fuente, 48', 'Cl. de la Fuente, 48', '926387395',
+         '13012192', 'Orden de Santiago', '130040001', 'Cl. de la Fuente, 48', '13340', '926387395',
          '926387395', '13012192.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -3283,7 +3283,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012121', '- Sin Denominación -', '130050002', 'Cl. Piedrola, S/N', 'Cl. Piedrola, S/N', '',
+         '13012121', '- Sin Denominación -', '130050002', 'Cl. Piedrola, S/N', '13600', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -3292,7 +3292,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003828', 'Alces', '130050002', 'Cl. Jupiter, 2', 'Cl. Jupiter, 2', '926544388',
+         '13003828', 'Alces', '130050002', 'Cl. Jupiter, 2', '13600', '926544388',
          '926544388', '13003828.cp@edu.jccm.es', 'http://edu.jccm.es/ceip.alces', 'Público', 'CEIP'
         )
         ;
@@ -3301,7 +3301,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012052', 'Alciares', '130050003', 'Cl. Dulcinea del Toboso, S/N', 'Cl. Dulcinea del Toboso, S/N', '926526000',
+         '13012052', 'Alciares', '130050003', 'Cl. Dulcinea del Toboso, S/N', '13720', '926526000',
          '926526000', '13012052.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -3310,7 +3310,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011618', 'Caramelo', '130050002', 'Cl. Corredera, 26', 'Cl. Corredera, 26', '',
+         '13011618', 'Caramelo', '130050002', 'Cl. Corredera, 26', '13600', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -3319,7 +3319,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005473', 'Centro Penitenciario', '130050002', 'Av. de Quero, 51 (Centro Penitenciario)', 'Av. de Quero, 51 (Centro Penitenciario)', '926550000',
+         '13005473', 'Centro Penitenciario', '130050002', 'Av. de Quero, 51 (Centro Penitenciario)', '13600', '926550000',
          '926550130', '13005473.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -3328,7 +3328,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011621', 'Colores', '130050002', 'Cl. Mosaicos, 45', 'Cl. Mosaicos, 45', '926540125',
+         '13011621', 'Colores', '130050002', 'Cl. Mosaicos, 45', '13600', '926540125',
          '', 'guarde.colores@terra.es', '', 'Privado', 'EI'
         )
         ;
@@ -3337,7 +3337,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011631', 'Coquitos', '130050002', 'Cl. Doctor Creus, 35', 'Cl. Doctor Creus, 35', '',
+         '13011631', 'Coquitos', '130050002', 'Cl. Doctor Creus, 35', '13600', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -3346,7 +3346,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000207', 'Efa el Gamonal', '130050002', 'Cl. San Marcos, 28', 'Cl. San Marcos, 28', '926588026',
+         '13000207', 'Efa el Gamonal', '130050002', 'Cl. San Marcos, 28', '13600', '926588026',
          '926588157', 'efa-gamonal@efa-centro.org', 'http://www.efa-centro.org', 'Priv.Concert.', ''
         )
         ;
@@ -3355,7 +3355,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011643', 'El Osito', '130050002', 'Cl. Rondilla Cruz Verde, 3', 'Cl. Rondilla Cruz Verde, 3', '619376949',
+         '13011643', 'El Osito', '130050002', 'Cl. Rondilla Cruz Verde, 3', '13600', '619376949',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -3364,7 +3364,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000104', 'El Santo', '130050002', 'Cl. Libertad, 56', 'Cl. Libertad, 56', '926540709',
+         '13000104', 'El Santo', '130050002', 'Cl. Libertad, 56', '13600', '926540709',
          '926543251', '13000104.cp@edu.jccm.es', 'http://edu.jccm.es/cp/elsanto', 'Público', 'CEIP'
         )
         ;
@@ -3373,7 +3373,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011242', 'El Tobogán', '130050002', 'Cl. Marques de Mudela, 32', 'Cl. Marques de Mudela, 32', '926546156',
+         '13011242', 'El Tobogán', '130050002', 'Cl. Marques de Mudela, 32', '13600', '926546156',
          '926579100', 'tobogan@telefonica.net', '', 'Público', 'EI'
         )
         ;
@@ -3382,7 +3382,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011060', 'El Torreón', '130050002', 'Cl. Tomas Tapia, 5', 'Cl. Tomas Tapia, 5', '926541542',
+         '13011060', 'El Torreón', '130050002', 'Cl. Tomas Tapia, 5', '13600', '926541542',
          '926541542', '13011060.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -3391,7 +3391,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004055', 'Enrique Tierno Galván', '130050002', 'Cl. General Benavent Garcia, 21 Bis', 'Cl. General Benavent Garcia, 21 Bis', '926540814',
+         '13004055', 'Enrique Tierno Galván', '130050002', 'Cl. General Benavent Garcia, 21 Bis', '13600', '926540814',
          '926552439', '13004055.cea@edu.jccm.es', 'http://cepa-enriquetiernogalvan.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -3400,7 +3400,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012076', 'Escuela Autonómica de Técnicos Deportivos de Baloncesto de Castilla-La Mancha', '130050002', 'Cl. Francisco de Ocampo, 1', 'Cl. Francisco de Ocampo, 1', '',
+         '13012076', 'Escuela Autonómica de Técnicos Deportivos de Baloncesto de Castilla-La Mancha', '130050002', 'Cl. Francisco de Ocampo, 1', '13600', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -3409,7 +3409,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010870', 'Escuela Municipal de Música y Danza de Alcázar de San Juan', '130050002', 'Cl. Isaac Peral, 56', 'Cl. Isaac Peral, 56', '926552738',
+         '13010870', 'Escuela Municipal de Música y Danza de Alcázar de San Juan', '130050002', 'Cl. Isaac Peral, 56', '13600', '926552738',
          '', 'educacion@aytoalcazar.es', '', 'Público', ''
         )
         ;
@@ -3418,7 +3418,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005461', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '130050002', 'Cl. Herencia, S/N', 'Cl. Herencia, S/N', '',
+         '13005461', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '130050002', 'Cl. Herencia, S/N', '13170', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -3427,7 +3427,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004870', 'Gloria Fuertes', '130050002', 'Cl. Doctor Jesus Gonzalez Merlo, S/N', 'Cl. Doctor Jesus Gonzalez Merlo, S/N', '926551169',
+         '13004870', 'Gloria Fuertes', '130050002', 'Cl. Doctor Jesus Gonzalez Merlo, S/N', '13600', '926551169',
          '926542855', '13004870.cp@edu.jccm.es', 'http://ceip-gloriafuertesalcazar.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -3436,7 +3436,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010900', 'Jardín de Arena', '130050002', 'Cl. Juan Genoves, S/N', 'Cl. Juan Genoves, S/N', '926547107',
+         '13010900', 'Jardín de Arena', '130050002', 'Cl. Juan Genoves, S/N', '13600', '926547107',
          '926552383', '13010900.cp@edu.jccm.es', 'http://edu.jccm.es/cp/n8alcazar/', 'Público', 'CEIP'
         )
         ;
@@ -3445,7 +3445,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000128', 'Jesús Ruiz de la Fuente', '130050002', 'Cl. Santo Domingo, 8', 'Cl. Santo Domingo, 8', '926540386',
+         '13000128', 'Jesús Ruiz de la Fuente', '130050002', 'Cl. Santo Domingo, 8', '13600', '926540386',
          '926540386', '13000128.cp@edu.jccm.es', 'http://ceip-jesusruiz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3454,7 +3454,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000220', 'Juan Bosco', '130050002', 'Av. de los Institutos, S/N', 'Av. de los Institutos, S/N', '926540369',
+         '13000220', 'Juan Bosco', '130050002', 'Av. de los Institutos, S/N', '13600', '926540369',
          '926540346', '13000220.ies@edu.jccm.es', 'http://edu.jccm.es/ies/juanbosco', 'Público', 'IES'
         )
         ;
@@ -3463,7 +3463,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000116', 'Juan de Austria', '130050002', 'Cl. Maria Monreal, 18', 'Cl. Maria Monreal, 18', '926546283',
+         '13000116', 'Juan de Austria', '130050002', 'Cl. Maria Monreal, 18', '13600', '926546283',
          '926547271', '13000116.cp@edu.jccm.es', 'http://ceip-juandeaustria.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3472,7 +3472,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004705', 'La Equidad', '130050002', 'Cl. Corregidor, 2', 'Cl. Corregidor, 2', '926547958',
+         '13004705', 'La Equidad', '130050002', 'Cl. Corregidor, 2', '13600', '926547958',
          '926588071', '13004705.eoi@edu.jccm.es', 'http://eoi-laequidad.centros.castillalamancha.es', 'Público', 'EOI'
         )
         ;
@@ -3481,7 +3481,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004687', 'María Zambrano', '130050002', 'Av. de los Institutos,S/N', 'Av. de los Institutos,S/N', '926547454',
+         '13004687', 'María Zambrano', '130050002', 'Av. de los Institutos,S/N', '13600', '926547454',
          '926547523', '13004687.ies@edu.jccm.es', 'http://ies-maria-zambrano.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3490,7 +3490,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000219', 'Miguel de Cervantes Saavedra', '130050002', 'Cl. Jesus de Haro, S/N', 'Cl. Jesus de Haro, S/N', '926540956',
+         '13000219', 'Miguel de Cervantes Saavedra', '130050002', 'Cl. Jesus de Haro, S/N', '13600', '926540956',
          '926540990', '13000219.ies@edu.jccm.es', 'http://ies-cervantes.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3499,7 +3499,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000190', 'Nuestra Señora de la Trinidad', '130050002', 'Pz. del Horno, 16', 'Pz. del Horno, 16', '926541166',
+         '13000190', 'Nuestra Señora de la Trinidad', '130050002', 'Pz. del Horno, 16', '13600', '926541166',
          '926542466', 'nstrinidadepasj@yahoo.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -3508,7 +3508,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004092', 'Pablo Ruiz Picasso', '130050002', 'Cl. Garcia Morato, 45', 'Cl. Garcia Morato, 45', '926541003',
+         '13004092', 'Pablo Ruiz Picasso', '130050002', 'Cl. Garcia Morato, 45', '13600', '926541003',
          '926547258', '13004092.cp@edu.jccm.es', 'http://ceip-pabloruizpicasso.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3517,7 +3517,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011667', 'Pasitos', '130050002', 'Av. de las Regiones, 41', 'Av. de las Regiones, 41', '',
+         '13011667', 'Pasitos', '130050002', 'Av. de las Regiones, 41', '13600', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -3526,7 +3526,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011679', 'Pinocho', '130050002', 'Cl. Salamanca, 20', 'Cl. Salamanca, 20', '926545911',
+         '13011679', 'Pinocho', '130050002', 'Cl. Salamanca, 20', '13600', '926545911',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -3535,7 +3535,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000189', 'Sagrada Familia', '130050002', 'Pz. de Santa Quiteria, 13', 'Pz. de Santa Quiteria, 13', '926540167',
+         '13000189', 'Sagrada Familia', '130050002', 'Pz. de Santa Quiteria, 13', '13600', '926540167',
          '926588092', 'direccion@colegiosafa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -3544,7 +3544,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000131', 'Santa Clara', '130050002', 'Ps. del Parque, 2', 'Ps. del Parque, 2', '926540813',
+         '13000131', 'Santa Clara', '130050002', 'Ps. del Parque, 2', '13600', '926540813',
          '926540813', '13000131.cp@edu.jccm.es', 'http://ceip-santaclara.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3553,7 +3553,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000165', 'Santísima Trinidad', '130050002', 'Cl. Trinidad, 31', 'Cl. Trinidad, 31', '926540779',
+         '13000165', 'Santísima Trinidad', '130050002', 'Cl. Trinidad, 31', '13600', '926540779',
          '926540779', 'strinidadasj@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -3562,7 +3562,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000256', 'Don Rodrigo', '130060001', 'Cl. Cervantes, 24', 'Cl. Cervantes, 24', '926770037',
+         '13000256', 'Don Rodrigo', '130060001', 'Cl. Cervantes, 24', '13116', '926770037',
          '926770037', '13000256.cp@edu.jccm.es', 'http://edu.jccm.es/cp.donrodrigo', 'Público', 'CEIP'
         )
         ;
@@ -3571,7 +3571,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005072', '- Sin Denominación -', '130070001', 'Cl. Escuelas, 1', 'Cl. Escuelas, 1', '926778803',
+         '13005072', '- Sin Denominación -', '130070001', 'Cl. Escuelas, 1', '13107', '926778803',
          '926762261', '13005072.cea@edu.jccm.es', 'http://edu.jccm.es/cepa/piedrabuena', 'Público', ''
         )
         ;
@@ -3580,7 +3580,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012064', '- Sin Denominación -', '130070001', 'Cl. Escuelas Esquina Calle Antonio Machado', 'Cl. Escuelas Esquina Calle Antonio Machado', '',
+         '13012064', '- Sin Denominación -', '130070001', 'Cl. Escuelas Esquina Calle Antonio Machado', '13107', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -3589,7 +3589,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000293', 'Tomasa Gallardo', '130070001', 'Cl. Escuelas, 3', 'Cl. Escuelas, 3', '926772069',
+         '13000293', 'Tomasa Gallardo', '130070001', 'Cl. Escuelas, 3', '13107', '926772069',
          '926772069', '13000293.cp@edu.jccm.es', 'http://edu.jccm.es/cp/tomasagallardo', 'Público', 'CEIP'
         )
         ;
@@ -3598,7 +3598,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000301', 'Nuestra Señora del Rosario', '130080001', 'Rd. de las Escuelas, S/N', 'Rd. de las Escuelas, S/N', '926356065',
+         '13000301', 'Nuestra Señora del Rosario', '130080001', 'Rd. de las Escuelas, S/N', '13391', '926356065',
          '926356168', '13000301.cp@edu.jccm.es', 'http://edu.jccm.es/cp/n.s.rosario', 'Público', 'CEIP'
         )
         ;
@@ -3607,7 +3607,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011254', 'El Parque', '130090001', 'Cl. Escuelas, S/N', 'Cl. Escuelas, S/N', '926866910',
+         '13011254', 'El Parque', '130090001', 'Cl. Escuelas, S/N', '13380', '926866910',
          '926865106', 'ayto.aldeadelrey@cim.es', '', 'Público', 'EI'
         )
         ;
@@ -3616,7 +3616,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009557', 'Escuela Municipal de Música y Danza de Aldea del Rey', '130090001', 'Cl. Cervantes, 41', 'Cl. Cervantes, 41', '926866910',
+         '13009557', 'Escuela Municipal de Música y Danza de Aldea del Rey', '130090001', 'Cl. Cervantes, 41', '13380', '926866910',
          '', 'ayto.aldeadelrey@cim.es', '', 'Público', ''
         )
         ;
@@ -3625,7 +3625,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000311', 'Maestro Navas', '130090001', 'Cl. Cervantes, 39', 'Cl. Cervantes, 39', '926865122',
+         '13000311', 'Maestro Navas', '130090001', 'Cl. Cervantes, 39', '13380', '926865122',
          '926865122', '13000311.cp@edu.jccm.es', 'http://ceip-maestronavas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3634,7 +3634,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000323', 'Nuestra Señora de Fátima', '130100001', 'Cl. Necropolis Visigoda, S/N', 'Cl. Necropolis Visigoda, S/N', '926356780',
+         '13000323', 'Nuestra Señora de Fátima', '130100001', 'Cl. Necropolis Visigoda, S/N', '13248', '926356780',
          '', '13000323.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sra.fatima', 'Público', 'CEIP'
         )
         ;
@@ -3643,7 +3643,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000335', 'Sagrado Corazón', '130100002', 'Cl. Iglesia, S/N', 'Cl. Iglesia, S/N', '926357005',
+         '13000335', 'Sagrado Corazón', '130100002', 'Cl. Iglesia, S/N', '13390', '926357005',
          '926357005', '13000335.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -3652,7 +3652,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004298', '- Sin Denominación -', '130110001', 'Pz. Waldo Ferrer, 41-1º', 'Pz. Waldo Ferrer, 41-1º', '926713334',
+         '13004298', '- Sin Denominación -', '130110001', 'Pz. Waldo Ferrer, 41-1º', '13400', '926713334',
          '', '13004298.cea@edu.jccm.es', 'http://cepa-almaden.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -3661,7 +3661,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011266', 'Arco Iris', '130110001', 'Cl. Gregorio Lillo, S/N', 'Cl. Gregorio Lillo, S/N', '926712432',
+         '13011266', 'Arco Iris', '130110001', 'Cl. Gregorio Lillo, S/N', '13400', '926712432',
          '', 'arcoiris@almaden.es', '', 'Público', 'EI'
         )
         ;
@@ -3670,7 +3670,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000360', 'Hijos de Obreros', '130110001', 'Av. de la Libertad, 1', 'Av. de la Libertad, 1', '926710424',
+         '13000360', 'Hijos de Obreros', '130110001', 'Av. de la Libertad, 1', '13400', '926710424',
          '926710424', '13000360.cp@edu.jccm.es', 'http://ceip-hijosdeobreros.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3679,7 +3679,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000359', 'Jesús Nazareno', '130110001', 'Cl. Cuenca, S/N', 'Cl. Cuenca, S/N', '926264011',
+         '13000359', 'Jesús Nazareno', '130110001', 'Cl. Cuenca, S/N', '13400', '926264011',
          '926264011', '13000359.cp@edu.jccm.es', 'http://ceip-jesusnazareno.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3688,7 +3688,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000384', 'Mercurio', '130110001', 'Cl. Europa, S/N', 'Cl. Europa, S/N', '926710559',
+         '13000384', 'Mercurio', '130110001', 'Cl. Europa, S/N', '13400', '926710559',
          '926713028', '13000384.ies@edu.jccm.es', 'http://ies-mercurio.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3697,7 +3697,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000372', 'Pablo Ruiz Picasso', '130110001', 'Av. de España, 68', 'Av. de España, 68', '926710256',
+         '13000372', 'Pablo Ruiz Picasso', '130110001', 'Av. de España, 68', '13400', '926710256',
          '926711068', '13000372.ies@edu.jccm.es', 'http://ies-prpicasso.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3706,7 +3706,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010811', '- Sin Denominación -', '130130001', 'Cl. Arzobispo Cañizares, 6', 'Cl. Arzobispo Cañizares, 6', '',
+         '13010811', '- Sin Denominación -', '130130001', 'Cl. Arzobispo Cañizares, 6', '13270', '',
          '', 'aepa_almagro@edu.jccm.es', 'http://edu.jccm.es/aepa/almagro', 'Público', ''
         )
         ;
@@ -3715,7 +3715,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000451', 'Antonio Calvín', '130130001', 'Cl. Ejido de Calatrava, 3', 'Cl. Ejido de Calatrava, 3', '926860351',
+         '13000451', 'Antonio Calvín', '130130001', 'Cl. Ejido de Calatrava, 3', '13270', '926860351',
          '926882586', '13000451.ies@edu.jccm.es', 'http://ies-antoniocalvin.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3724,7 +3724,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000475', 'Clavero Fernández de Córdoba', '130130001', 'Ps. Viejo de la Florida,1', 'Ps. Viejo de la Florida,1', '926860170',
+         '13000475', 'Clavero Fernández de Córdoba', '130130001', 'Ps. Viejo de la Florida,1', '13270', '926860170',
          '926861249', '13000475.ies@edu.jccm.es', 'http://ies-claverofernandezdecordoba.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3733,7 +3733,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000414', 'Diego de Almagro', '130130001', 'Ps. Plaza de Toros, 15', 'Ps. Plaza de Toros, 15', '926861047',
+         '13000414', 'Diego de Almagro', '130130001', 'Ps. Plaza de Toros, 15', '13270', '926861047',
          '926861047', '13000414.cp@edu.jccm.es', 'http://ceip-diegodealmagro.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3742,7 +3742,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011072', 'La Comedia', '130130001', 'Ps. de la Estacion, 4', 'Ps. de la Estacion, 4', '926860391',
+         '13011072', 'La Comedia', '130130001', 'Ps. de la Estacion, 4', '13270', '926860391',
          '926860391', '13011072.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -3751,7 +3751,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011278', 'Marioneta', '130130001', 'Cl. Conde de Barcelona, 2', 'Cl. Conde de Barcelona, 2', '686223180',
+         '13011278', 'Marioneta', '130130001', 'Cl. Conde de Barcelona, 2', '13270', '686223180',
          '926261462', 'bienestarsocial@almagro.es', '', 'Público', 'EI'
         )
         ;
@@ -3760,7 +3760,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000402', 'Miguel de Cervantes Saavedra', '130130001', 'Pz. Cervantes, 1', 'Pz. Cervantes, 1', '926261009',
+         '13000402', 'Miguel de Cervantes Saavedra', '130130001', 'Pz. Cervantes, 1', '13270', '926261009',
          '926261009', '13000402.cp@edu.jccm.es', 'http://ceip-cervantesalmagro.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3769,7 +3769,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009569', 'Pablo Molina', '130130001', 'Cl. Gran Maestre, 2', 'Cl. Gran Maestre, 2', '926882000',
+         '13009569', 'Pablo Molina', '130130001', 'Cl. Gran Maestre, 2', '13270', '926882000',
          '', 'escuelademusica@almagro.es', '', 'Público', ''
         )
         ;
@@ -3778,7 +3778,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004377', 'Paseo Viejo de la Florida', '130130001', 'Ps. Viejo de la Florida, 2', 'Ps. Viejo de la Florida, 2', '926860736',
+         '13004377', 'Paseo Viejo de la Florida', '130130001', 'Ps. Viejo de la Florida, 2', '13270', '926860736',
          '926860736', '13004377.cp@edu.jccm.es', 'http://ceip-paseoviejodelaflorida.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3787,7 +3787,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005126', '- Sin Denominación -', '130150001', 'Cl. Corredera, 12', 'Cl. Corredera, 12', '926423850',
+         '13005126', '- Sin Denominación -', '130150001', 'Cl. Corredera, 12', '13580', '926423850',
          '', 'aepa_almodovardc@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -3796,7 +3796,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011281', 'Gloria Fuertes', '130150001', 'Ps. de los Carmelitas, 5', 'Ps. de los Carmelitas, 5', '926483340',
+         '13011281', 'Gloria Fuertes', '130150001', 'Ps. de los Carmelitas, 5', '13580', '926483340',
          '926483671', 'escuelasinfantiles@alsimaconsultores.es', '', 'Público', 'EI'
         )
         ;
@@ -3805,7 +3805,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000529', 'Maestro Ávila y Santa Teresa', '130150001', 'Ps. Padres Carmelitas, 5', 'Ps. Padres Carmelitas, 5', '926464197',
+         '13000529', 'Maestro Ávila y Santa Teresa', '130150001', 'Ps. Padres Carmelitas, 5', '13580', '926464197',
          '926464197', '13000529.con@edu.jccm.es', 'http://www.colegiomaestroavila.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -3814,7 +3814,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000505', 'Maestro Juan de Ávila', '130150001', 'Cl. Corredera, 28', 'Cl. Corredera, 28', '926483225',
+         '13000505', 'Maestro Juan de Ávila', '130150001', 'Cl. Corredera, 28', '13580', '926483225',
          '926483225', '13000505.cp@edu.jccm.es', 'http://ceip-maestrojuandeavilaalmodovar.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3823,7 +3823,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000566', 'San Juan Bautista de la Concepción', '130150001', 'Cl. Doctor Fleming, 8', 'Cl. Doctor Fleming, 8', '926483343',
+         '13000566', 'San Juan Bautista de la Concepción', '130150001', 'Cl. Doctor Fleming, 8', '13580', '926483343',
          '926483572', '13000566.ies@edu.jccm.es', 'http://ies-almodovar.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3832,7 +3832,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000517', 'Virgen del Carmen', '130150001', 'Cl. Jacobo Roldan, 2', 'Cl. Jacobo Roldan, 2', '926483881',
+         '13000517', 'Virgen del Carmen', '130150001', 'Cl. Jacobo Roldan, 2', '13580', '926483881',
          '926483881', '13000517.cp@edu.jccm.es', 'http://ceip-virgendelcarmen.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3841,7 +3841,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000633', 'Santiago Apóstol', '130160001', 'Cl. San Antonio, 20', 'Cl. San Antonio, 20', '926339189',
+         '13000633', 'Santiago Apóstol', '130160001', 'Cl. San Antonio, 20', '13760', '926339189',
          '926339189', '13000633.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -3850,7 +3850,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011291', 'Pitupinos', '0000', 'Cl. Vicente Lara Espinosa, 6', 'Cl. Vicente Lara Espinosa, 6', '926584227',
+         '13011291', 'Pitupinos', '0000', 'Cl. Vicente Lara Espinosa, 6', '13619', '926584227',
          '926584016', 'ei.pitupinos@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -3859,7 +3859,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000694', 'San Bernabé', '130180001', 'Cl. Templarios, 1', 'Cl. Templarios, 1', '926893127',
+         '13000694', 'San Bernabé', '130180001', 'Cl. Templarios, 1', '13679', '926893127',
          '', '13000694.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sbernabe', 'Público', 'CEIP'
         )
         ;
@@ -3868,7 +3868,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005151', '- Sin Denominación -', '130190001', 'Cl. Tercia, 22', 'Cl. Tercia, 22', '926513929',
+         '13005151', '- Sin Denominación -', '130190001', 'Cl. Tercia, 22', '13710', '926513929',
          '926513929', '13004559.cea@jccm.es', '', 'Público', ''
         )
         ;
@@ -3877,7 +3877,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011308', 'Alba', '130190001', 'Cl. Angel Dotor, S/N', 'Cl. Angel Dotor, S/N', '926523427',
+         '13011308', 'Alba', '130190001', 'Cl. Angel Dotor, S/N', '13710', '926523427',
          '', 'coordinadorcs@argamasilladealba.es', '', 'Público', 'EI'
         )
         ;
@@ -3886,7 +3886,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003831', 'Azorín', '130190001', 'Cl. Conde de Barcelona, 14', 'Cl. Conde de Barcelona, 14', '926521538',
+         '13003831', 'Azorín', '130190001', 'Cl. Conde de Barcelona, 14', '13710', '926521538',
          '926523053', '13003831.cp@edu.jccm.es', 'http://ceip-azorin.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3895,7 +3895,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000700', 'Divino Maestro', '130190001', 'Cl. Ancha, 66', 'Cl. Ancha, 66', '926539504',
+         '13000700', 'Divino Maestro', '130190001', 'Cl. Ancha, 66', '13710', '926539504',
          '926539504', '13000700.cp@edu.jccm.es', 'http://edu.jccm.es/cp/divinomaestro', 'Público', 'CEIP'
         )
         ;
@@ -3904,7 +3904,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000712', 'Nuestra Señora de Peñarroya', '130190001', 'Cl. Batanes, 16', 'Cl. Batanes, 16', '926521346',
+         '13000712', 'Nuestra Señora de Peñarroya', '130190001', 'Cl. Batanes, 16', '13710', '926521346',
          '926523402', '13000712.cp@edu.jccm.es', 'http://ceip-penarroya.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3913,7 +3913,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011680', 'Veo Veo', '130190001', 'Cl. Infantas, 36', 'Cl. Infantas, 36', '926523579',
+         '13011680', 'Veo Veo', '130190001', 'Cl. Infantas, 36', '13710', '926523579',
          '926523579', 'guarderiainfantilveoveo@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -3922,7 +3922,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005278', 'Vicente Cano', '130190001', 'Cl. Prolongacion Encuentros, S/N', 'Cl. Prolongacion Encuentros, S/N', '926539520',
+         '13005278', 'Vicente Cano', '130190001', 'Cl. Prolongacion Encuentros, S/N', '13710', '926539520',
          '926539530', '13005278.ies@edu.jccm.es', 'http://ies-vicentecano.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -3931,7 +3931,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005138', '- Sin Denominación -', '130200001', 'Cl. Pinto, S/N', 'Cl. Pinto, S/N', '926423850',
+         '13005138', '- Sin Denominación -', '130200001', 'Cl. Pinto, S/N', '13440', '926423850',
          '', '13005138.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -3940,7 +3940,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005281', 'Alonso Quijano', '130200001', 'Cl. Rivera, S/N', 'Cl. Rivera, S/N', '926477450',
+         '13005281', 'Alonso Quijano', '130200001', 'Cl. Rivera, S/N', '13440', '926477450',
          '926477676', '13005281.seces@edu.jccm.es', 'http://ies-alonsoquijano.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -3949,7 +3949,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011311', 'Gloria Fuertes', '130200001', 'Pz. Santos Martires, S/N', 'Pz. Santos Martires, S/N', '629575548',
+         '13011311', 'Gloria Fuertes', '130200001', 'Pz. Santos Martires, S/N', '13440', '629575548',
          '926440068', 'caiargamasilla@accindes.org', '', 'Público', 'EI'
         )
         ;
@@ -3958,7 +3958,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000748', 'Rodríguez Marín', '130200001', 'Cl. Rodriguez Marin, 27', 'Cl. Rodriguez Marin, 27', '926442504',
+         '13000748', 'Rodríguez Marín', '130200001', 'Cl. Rodriguez Marin, 27', '13440', '926442504',
          '926442504', '13000748.cp@edu.jccm.es', 'http://ceip-rodriguezmarin.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -3967,7 +3967,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000773', 'Virgen del Socorro', '130200001', 'Cl. Tirtefuera, S/N', 'Cl. Tirtefuera, S/N', '926442503',
+         '13000773', 'Virgen del Socorro', '130200001', 'Cl. Tirtefuera, S/N', '13440', '926442503',
          '926442503', '13000773.cp@edu.jccm.es', 'http://edu.jccm.es/cp/virgendelsocorro', 'Público', 'CEIP'
         )
         ;
@@ -3976,7 +3976,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010754', 'Río San Marcos', '130210001', 'Pz. de las Escuelas, 36', 'Pz. de las Escuelas, 36', '926771705',
+         '13010754', 'Río San Marcos', '130210001', 'Pz. de las Escuelas, 36', '13193', '926771705',
          '926771705', '13010754.cra@edu.jccm.es', 'http://edu.jccm.es/cra/riosanmarcos', 'Público', 'CEIP'
         )
         ;
@@ -3985,7 +3985,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000797', 'José María del Moral', '130220001', 'Cl. Real, 68', 'Cl. Real, 68', '926842017',
+         '13000797', 'José María del Moral', '130220001', 'Cl. Real, 68', '13432', '926842017',
          '926842017', '13000797.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -3994,7 +3994,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010821', '- Sin Denominación -', '130230001', 'Pz. Pozo Nieve, 1', 'Pz. Pozo Nieve, 1', '',
+         '13010821', '- Sin Denominación -', '130230001', 'Pz. Pozo Nieve, 1', '13260', '',
          '', 'aepa_bdcalatrava@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -4003,7 +4003,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000815', 'Arzobispo Calzado', '130230001', 'Cl. Cristobal Colon, S/N', 'Cl. Cristobal Colon, S/N', '926870334',
+         '13000815', 'Arzobispo Calzado', '130230001', 'Cl. Cristobal Colon, S/N', '13260', '926870334',
          '926872865', '13000815.cp@edu.jccm.es', 'http://ceip-arzobispocalzado.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4012,7 +4012,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004778', 'Berenguela de Castilla', '130230001', 'Cl. Teofila Sanchez, 14', 'Cl. Teofila Sanchez, 14', '926872909',
+         '13004778', 'Berenguela de Castilla', '130230001', 'Cl. Teofila Sanchez, 14', '13260', '926872909',
          '926872830', '13004778.ies@edu.jccm.es', 'http://ies-berenguela.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -4021,7 +4021,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003865', 'Efa la Serna', '130230001', 'Cr. de Almagro, 150', 'Cr. de Almagro, 150', '926870335',
+         '13003865', 'Efa la Serna', '130230001', 'Cr. de Almagro, 150', '13260', '926870335',
          '926870335', 'efa-laserna@efa-centro.org', 'http://www.efa-centro.org/', 'Priv.Concert.', ''
         )
         ;
@@ -4030,7 +4030,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011084', 'El Castillo', '130230001', 'Cl. Guarderia, 2', 'Cl. Guarderia, 2', '926870660',
+         '13011084', 'El Castillo', '130230001', 'Cl. Guarderia, 2', '13260', '926870660',
          '926870660', '13011084.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -4039,7 +4039,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000803', 'Fernando III el Santo', '130230001', 'Cl. Colegio, 2', 'Cl. Colegio, 2', '926870216',
+         '13000803', 'Fernando III el Santo', '130230001', 'Cl. Colegio, 2', '13260', '926870216',
          '926871498', '13000803.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sanfernando', 'Público', 'CEIP'
         )
         ;
@@ -4048,7 +4048,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004936', 'Molino de Viento', '130230001', 'Cl. Antonio Machado, 2', 'Cl. Antonio Machado, 2', '926871613',
+         '13004936', 'Molino de Viento', '130230001', 'Cl. Antonio Machado, 2', '13260', '926871613',
          '926871613', '13004936.cp@edu.jccm.es', 'http://ceip-molinodeviento.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4057,7 +4057,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011977', 'Mundo Mágico', '130230001', 'Cl. Azucena, S/N', 'Cl. Azucena, S/N', '926884341',
+         '13011977', 'Mundo Mágico', '130230001', 'Cl. Azucena, S/N', '13260', '926884341',
          '', 'bolanos@arastasi.com', '', 'Público', 'EI'
         )
         ;
@@ -4066,7 +4066,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003786', 'Virgen del Monte', '130230001', 'Cl. Doctor Fleming, S/N', 'Cl. Doctor Fleming, S/N', '926870332',
+         '13003786', 'Virgen del Monte', '130230001', 'Cl. Doctor Fleming, S/N', '13260', '926870332',
          '926870332', '13003786.cp@edu.jccm.es', 'http://edu.jccm.es/cp.virgendelmonte/', 'Público', 'CEIP'
         )
         ;
@@ -4075,7 +4075,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000839', 'Cervantes', '130240001', 'Cr. Cabezarrubias, S/N', 'Cr. Cabezarrubias, S/N', '926471052',
+         '13000839', 'Cervantes', '130240001', 'Cr. Cabezarrubias, S/N', '13450', '926471052',
          '926471052', '13000839.cp@edu.jccm.es', 'http://ceip-cervantesbrazatortas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4084,7 +4084,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000864', 'Nuestra Señora de Finibusterre', '130250001', 'Cl. Doña Maria Antonia Zamorano, 1', 'Cl. Doña Maria Antonia Zamorano, 1', '926835354',
+         '13000864', 'Nuestra Señora de Finibusterre', '130250001', 'Cl. Doña Maria Antonia Zamorano, 1', '13192', '926835354',
          '926835354', '13000864.cp@edu.jccm.es', 'http://edu.jccm.es/cp/finibusterre', 'Público', 'CEIP'
         )
         ;
@@ -4093,7 +4093,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005141', '- Sin Denominación -', '130270001', 'Cl. Constitución, 13', 'Cl. Constitución, 13', '926423850',
+         '13005141', '- Sin Denominación -', '130270001', 'Cl. Constitución, 13', '13370', '926423850',
          '', 'aepa_calzadadc@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -4102,7 +4102,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000906', 'Eduardo Valencia', '130270001', 'Cl. Cervantes, 168', 'Cl. Cervantes, 168', '926875346',
+         '13000906', 'Eduardo Valencia', '130270001', 'Cl. Cervantes, 168', '13370', '926875346',
          '926875346', '13000906.ies@edu.jccm.es', 'http://edu.jccm.es/ies/eduardovalencia', 'Público', 'IES'
         )
         ;
@@ -4111,7 +4111,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000891', 'Ignacio de Loyola', '130270001', 'Cl. Santa Maria, 62', 'Cl. Santa Maria, 62', '926875255',
+         '13000891', 'Ignacio de Loyola', '130270001', 'Cl. Santa Maria, 62', '13370', '926875255',
          '926875255', '13000891.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ignaciodeloyola', 'Público', 'CEIP'
         )
         ;
@@ -4120,7 +4120,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000888', 'Santa Teresa de Jesús', '130270001', 'Cl. Cervantes, 166', 'Cl. Cervantes, 166', '926875254',
+         '13000888', 'Santa Teresa de Jesús', '130270001', 'Cl. Cervantes, 166', '13370', '926875254',
          '926875254', '13000888.cp@edu.jccm.es', 'http://ceip-santateresadejesus.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4129,7 +4129,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011321', 'Solete', '130270001', 'Cl. Cervantes, 24', 'Cl. Cervantes, 24', '926876101',
+         '13011321', 'Solete', '130270001', 'Cl. Cervantes, 24', '13370', '926876101',
          '926875110', 'cai@calzadadecalatrava.es', '', 'Público', 'EI'
         )
         ;
@@ -4138,7 +4138,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005011', '- Sin Denominación -', '130280002', 'Cl. Eruelas, 51', 'Cl. Eruelas, 51', '926560400',
+         '13005011', '- Sin Denominación -', '130280002', 'Cl. Eruelas, 51', '13610', '926560400',
          '', 'aepa_cdecriptana@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -4147,7 +4147,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004717', 'Alcázar de San Juan-Campo de Criptana', '130280002', 'Cl. Valenzuela, 10', 'Cl. Valenzuela, 10', '926560743',
+         '13004717', 'Alcázar de San Juan-Campo de Criptana', '130280002', 'Cl. Valenzuela, 10', '13610', '926560743',
          '926589023', '13004717.cm@edu.jccm.es', 'http://edu.jccm.es/cm/campodecriptana', 'Público', 'CPM'
         )
         ;
@@ -4156,7 +4156,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003968', 'Domingo Miras', '130280002', 'Av. de Sara Montiel, 38', 'Av. de Sara Montiel, 38', '926561212',
+         '13003968', 'Domingo Miras', '130280002', 'Av. de Sara Montiel, 38', '13610', '926561212',
          '926561212', '13003968.cp@edu.jccm.es', 'http://edu.jccm.es/cp/domingomiras', 'Público', 'CEIP'
         )
         ;
@@ -4165,7 +4165,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000992', 'Efa Molino de Viento', '130280002', 'Cl. Cristo de Villajos, S/N', 'Cl. Cristo de Villajos, S/N', '926560832',
+         '13000992', 'Efa Molino de Viento', '130280002', 'Cl. Cristo de Villajos, S/N', '13610', '926560832',
          '926563461', 'secretariamviento@efa-centro.org', 'http://www.efa-centro.org', 'Priv.Concert.', ''
         )
         ;
@@ -4174,7 +4174,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011692', 'El Duende', '130280002', 'Cl. Antonio Espin, 60', 'Cl. Antonio Espin, 60', '926561113',
+         '13011692', 'El Duende', '130280002', 'Cl. Antonio Espin, 60', '13610', '926561113',
          '92656113', '', '', 'Privado', 'EI'
         )
         ;
@@ -4183,7 +4183,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011023', 'Escuela Municipal de Musica y Danza de Campo de Criptana', '130280002', 'Cl. Eruelas C/V Ctra. N-420', 'Cl. Eruelas C/V Ctra. N-420', '926562034',
+         '13011023', 'Escuela Municipal de Musica y Danza de Campo de Criptana', '130280002', 'Cl. Eruelas C/V Ctra. N-420', '13610', '926562034',
          '', 'escuelademusica@campodecriptana.es', '', 'Público', ''
         )
         ;
@@ -4192,7 +4192,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001005', 'Isabel Perillán y Quirós', '130280002', 'Av. de la Hispanidad 20', 'Av. de la Hispanidad 20', '926560437',
+         '13001005', 'Isabel Perillán y Quirós', '130280002', 'Av. de la Hispanidad 20', '13610', '926560437',
          '926589653', '13001005.ies@edu.jccm.es', 'http://edu.jccm.es/ies/isabelperillan', 'Público', 'IES'
         )
         ;
@@ -4201,7 +4201,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011096', 'Los Gigantes', '130280002', 'Cl. Soledad, 4', 'Cl. Soledad, 4', '926561657',
+         '13011096', 'Los Gigantes', '130280002', 'Cl. Soledad, 4', '13610', '926561657',
          '926561657', '13011096.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -4210,7 +4210,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011333', 'Los Quijotes', '130280002', 'Cl. Virgen de Criptana, S/N', 'Cl. Virgen de Criptana, S/N', '926553355',
+         '13011333', 'Los Quijotes', '130280002', 'Cl. Virgen de Criptana, S/N', '13610', '926553355',
          '926560090', 'ccriptana@local.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -4219,7 +4219,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004146', 'María Auxiliadora', '130280002', 'Cr. de Arenales, 2', 'Cr. de Arenales, 2', '926561112',
+         '13004146', 'María Auxiliadora', '130280002', 'Cr. de Arenales, 2', '13610', '926561112',
          '926562379', 'aspana@mundivia.es', '', 'Priv.Concert.', ''
         )
         ;
@@ -4228,7 +4228,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000980', 'Nuestra Señora del Rosario', '130280002', 'Cl. Cervantes, 25', 'Cl. Cervantes, 25', '926589660',
+         '13000980', 'Nuestra Señora del Rosario', '130280002', 'Cl. Cervantes, 25', '13610', '926589660',
          '926589138', 'nsrosarioeso@fefcoll.org', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -4237,7 +4237,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000967', 'Sagrado Corazón', '130280002', 'Cl. Alvarez de Castro, 36', 'Cl. Alvarez de Castro, 36', '926561140',
+         '13000967', 'Sagrado Corazón', '130280002', 'Cl. Alvarez de Castro, 36', '13610', '926561140',
          '926561140', '13000967.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sagradocor', 'Público', 'CEIP'
         )
         ;
@@ -4246,7 +4246,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000955', 'Virgen de Criptana', '130280002', 'Cl. Virgen de Criptana, 150', 'Cl. Virgen de Criptana, 150', '926561173',
+         '13000955', 'Virgen de Criptana', '130280002', 'Cl. Virgen de Criptana, 150', '13610', '926561173',
          '926561173', '13000955.cp@edu.jccm.es', 'http://edu.jccm.es/cp/virgendecriptana', 'Público', 'CEIP'
         )
         ;
@@ -4255,7 +4255,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000943', 'Virgen de la Paz', '130280002', 'Cl. Don Quijote, 39', 'Cl. Don Quijote, 39', '926561493',
+         '13000943', 'Virgen de la Paz', '130280002', 'Cl. Don Quijote, 39', '13610', '926561493',
          '926561493', '13000943.cp@edu.jccm.es', 'http://ceip-virgendelapaz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4264,7 +4264,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011345', 'Clara Campoamor', '130310001', 'Av. America, S/N', 'Av. America, S/N', '926814081',
+         '13011345', 'Clara Campoamor', '130310001', 'Av. America, S/N', '13150', '926814081',
          '926814023', 'aedl@carriondecalatrava.es', '', 'Público', 'EI'
         )
         ;
@@ -4273,7 +4273,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011436', 'El Arca de los Sueños', '130310001', 'Cl. Velazquez, S/N', 'Cl. Velazquez, S/N', '',
+         '13011436', 'El Arca de los Sueños', '130310001', 'Cl. Velazquez, S/N', '13150', '',
          '', 'caielarca@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -4282,7 +4282,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001030', 'Nuestra Señora de la Encarnación', '130310001', 'Cl. Real, S/N', 'Cl. Real, S/N', '926814031',
+         '13001030', 'Nuestra Señora de la Encarnación', '130310001', 'Cl. Real, S/N', '13150', '926814031',
          '926814031', '13001030.cp@edu.jccm.es', 'http://ceip-colecarrion.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4291,7 +4291,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001054', 'Virgen del Salido', '130320001', 'Cl. Zona Escolar, S/N', 'Cl. Zona Escolar, S/N', '926368142',
+         '13001054', 'Virgen del Salido', '130320001', 'Cl. Zona Escolar, S/N', '13329', '926368142',
          '926368142', '13001054.cp@edu.jccm.es', 'http://ceip-virgendelsalido.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4300,7 +4300,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001066', 'San Juan de Ávila', '130330001', 'Cl. Ermita, 77', 'Cl. Ermita, 77', '926340127',
+         '13001066', 'San Juan de Ávila', '130330001', 'Cl. Ermita, 77', '13750', '926340127',
          '926340127', '13001066.cp@edu.jccm.es', 'http://ceip-casanjuandeavila.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4309,7 +4309,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011357', 'La Fuente del Barco', '130380001', 'Cl. Rosario Marquez, 36', 'Cl. Rosario Marquez, 36', '628367844',
+         '13011357', 'La Fuente del Barco', '130380001', 'Cl. Rosario Marquez, 36', '13412', '628367844',
          '926712849', '', '', 'Público', 'EI'
         )
         ;
@@ -4318,7 +4318,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001467', 'Nuestra Señora del Castillo', '130380001', 'Av. de España, 35', 'Av. de España, 35', '926711600',
+         '13001467', 'Nuestra Señora del Castillo', '130380001', 'Av. de España, 35', '13412', '926711600',
          '926711600', '13001467.cp@edu.jccm.es', 'http://ceip-nsdelcastillo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4327,7 +4327,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001421', 'Alarcos', '130340004', 'Rd. del Saliente, 1', 'Rd. del Saliente, 1', '926219944',
+         '13001421', 'Alarcos', '130340004', 'Rd. del Saliente, 1', '13195', '926219944',
          '926219944', '13001421.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -4336,7 +4336,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001078', 'Alcalde José Cruz Prado', '130340002', 'Cl. Luz, 36', 'Cl. Luz, 36', '926225377',
+         '13001078', 'Alcalde José Cruz Prado', '130340002', 'Cl. Luz, 36', '13003', '926225377',
          '926255941', '13001078.cp@edu.jccm.es', 'http://ceip-alcaldejosecruzprado.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -4345,7 +4345,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004882', 'Alcalde José Maestro', '130340002', 'Cl. Enebro, 9', 'Cl. Enebro, 9', '926211650',
+         '13004882', 'Alcalde José Maestro', '130340002', 'Cl. Enebro, 9', '13005', '926211650',
          '926200334', '13004882.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ajmaestro', 'Público', 'CEIP'
         )
         ;
@@ -4354,7 +4354,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011102', 'Alfonso X', '130340002', 'Cm. Campillo, S/N', 'Cm. Campillo, S/N', '926213633',
+         '13011102', 'Alfonso X', '130340002', 'Cm. Campillo, S/N', '13002', '926213633',
          '926213633', '13011102.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -4363,7 +4363,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012246', 'Allegro-Vivace', '130340002', 'Ps. Carlos Eraña, 19', 'Ps. Carlos Eraña, 19', '',
+         '13012246', 'Allegro-Vivace', '130340002', 'Ps. Carlos Eraña, 19', '13004', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -4372,7 +4372,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011709', 'Altagracia', '130340002', 'Cl. Altagracia, 5', 'Cl. Altagracia, 5', '926220033',
+         '13011709', 'Altagracia', '130340002', 'Cl. Altagracia, 5', '13003', '926220033',
          '', 'eialtagracia@hotmail.es', '', 'Privado', 'EI'
         )
         ;
@@ -4381,7 +4381,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001111', 'Ángel Andrade', '130340002', 'Cl. Vicente Aleixandre, 3', 'Cl. Vicente Aleixandre, 3', '926220242',
+         '13001111', 'Ángel Andrade', '130340002', 'Cl. Vicente Aleixandre, 3', '13004', '926220242',
          '926220242', '13001111.cp@edu.jccm.es', 'http://ceip-angelandrade.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4390,7 +4390,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004067', 'Antonio Gala', '130340002', 'Cl. Bernardo Balbuena, 5 - 2ª Planta', 'Cl. Bernardo Balbuena, 5 - 2ª Planta', '926216124',
+         '13004067', 'Antonio Gala', '130340002', 'Cl. Bernardo Balbuena, 5 - 2ª Planta', '13002', '926216124',
          '926214766', '13004067.cea@edu.jccm.es', 'http://edu.jccm.es/cea/ciudadreal', 'Público', ''
         )
         ;
@@ -4399,7 +4399,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011710', 'Atenea', '130340002', 'Cl. Calvario, 39', 'Cl. Calvario, 39', '926231194',
+         '13011710', 'Atenea', '130340002', 'Cl. Calvario, 39', '13004', '926231194',
          '', 'info@escuelainfantilatenea.com', '', 'Privado', 'EI'
         )
         ;
@@ -4408,7 +4408,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004675', 'Atenea', '130340002', 'Av. Puente de Retama, 1', 'Av. Puente de Retama, 1', '926254150',
+         '13004675', 'Atenea', '130340002', 'Av. Puente de Retama, 1', '13071', '926254150',
          '926216524', '13004675.ies@edu.jccm.es', 'http://edu.jccm.es/ies/atenea', 'Público', 'IES'
         )
         ;
@@ -4417,7 +4417,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004961', 'Autrade', '130340002', 'Av. Santa Maria de Alarcos, S/N', 'Av. Santa Maria de Alarcos, S/N', '926254259',
+         '13004961', 'Autrade', '130340002', 'Av. Santa Maria de Alarcos, S/N', '13004', '926254259',
          '926254259', 'autrade@autrade.org', '', 'Priv.Concert.', ''
         )
         ;
@@ -4426,7 +4426,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001391', 'Carlos Eraña', '130340002', 'Cl. Alcalde Bernardo Balbuena, 2', 'Cl. Alcalde Bernardo Balbuena, 2', '926212141',
+         '13001391', 'Carlos Eraña', '130340002', 'Cl. Alcalde Bernardo Balbuena, 2', '13002', '926212141',
          '926212141', '13001391.cp@edu.jccm.es', 'http://edu.jccm.es/ceip.carloserana', 'Público', 'CEIP'
         )
         ;
@@ -4435,7 +4435,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004389', 'Carlos Vázquez', '130340002', 'Av. Torreon del Alcazar, 4', 'Av. Torreon del Alcazar, 4', '926252936',
+         '13004389', 'Carlos Vázquez', '130340002', 'Av. Torreon del Alcazar, 4', '13004', '926252936',
          '926220979', '13004389.cp@edu.jccm.es', 'http://ceip-carlosvazquez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4444,7 +4444,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001108', 'Ciudad Jardín', '130340002', 'Cl. los Madroños, S/N', 'Cl. los Madroños, S/N', '926214343',
+         '13001108', 'Ciudad Jardín', '130340002', 'Cl. los Madroños, S/N', '13002', '926214343',
          '926214343', '13001108.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ciudadjardin', 'Público', 'CEIP'
         )
         ;
@@ -4453,7 +4453,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011722', 'Colorín Colorado', '130340002', 'Cl. Tomillo, 6', 'Cl. Tomillo, 6', '926210774',
+         '13011722', 'Colorín Colorado', '130340002', 'Cl. Tomillo, 6', '13005', '926210774',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -4462,7 +4462,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004651', 'Cristóbal Colón', '130340002', 'Cl. Venezuela, S/N', 'Cl. Venezuela, S/N', '926273484',
+         '13004651', 'Cristóbal Colón', '130340002', 'Cl. Venezuela, S/N', '13005', '926273484',
          '926200391', '13004651.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cristobal_colon', 'Público', 'CEIP'
         )
         ;
@@ -4471,7 +4471,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012155', 'Cumbria Peques', '130340002', 'Cr. de la Atalaya, S/N', 'Cr. de la Atalaya, S/N', '',
+         '13012155', 'Cumbria Peques', '130340002', 'Cr. de la Atalaya, S/N', '13005', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -4480,7 +4480,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011734', 'Dadu Garden', '130340002', 'Cr. Valdepeñas, 34', 'Cr. Valdepeñas, 34', '926226266',
+         '13011734', 'Dadu Garden', '130340002', 'Cr. Valdepeñas, 34', '13005', '926226266',
          '926226266', 'dadugarden@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -4489,7 +4489,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009466', 'Don Quijote', '130340002', 'Cm. de Santiago, 2 y 4', 'Cm. de Santiago, 2 y 4', '926270049',
+         '13009466', 'Don Quijote', '130340002', 'Cm. de Santiago, 2 y 4', '13003', '926270049',
          '926230221', '13009466.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -4498,7 +4498,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001121', 'Dulcinea del Toboso', '130340002', 'Cl. Vicente Aleixandre, 1', 'Cl. Vicente Aleixandre, 1', '926220963',
+         '13001121', 'Dulcinea del Toboso', '130340002', 'Cl. Vicente Aleixandre, 1', '13004', '926220963',
          '926220963', '13001121.cp@edu.jccm.es', 'http://edu.jccm.es/cp.dulcineadeltoboso', 'Público', 'CEIP'
         )
         ;
@@ -4507,7 +4507,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011746', 'El Jardín de Rosita', '130340002', 'Cl. Luz, 12', 'Cl. Luz, 12', '926230276',
+         '13011746', 'El Jardín de Rosita', '130340002', 'Cl. Luz, 12', '13003', '926230276',
          '', 'caisoletes@navigo.es', '', 'Privado', 'EI'
         )
         ;
@@ -4516,7 +4516,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011114', 'El Lirio', '130340002', 'Cl. Lirio, 8', 'Cl. Lirio, 8', '926220919',
+         '13011114', 'El Lirio', '130340002', 'Cl. Lirio, 8', '13004', '926220919',
          '926254658', 'juango@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -4525,7 +4525,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001194', 'Fantasía', '130340002', 'Cl. las Sabinas, 3', 'Cl. las Sabinas, 3', '926215501',
+         '13001194', 'Fantasía', '130340002', 'Cl. las Sabinas, 3', '13002', '926215501',
          '', 'eifantasia@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -4534,7 +4534,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011758', 'Fantasía II', '130340002', 'Cl. las Sabinas, 4', 'Cl. las Sabinas, 4', '926215501',
+         '13011758', 'Fantasía II', '130340002', 'Cl. las Sabinas, 4', '13002', '926215501',
          '', 'eifantasia@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -4543,7 +4543,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004444', 'Ferroviario', '130340002', 'Cl. Parque Gasset, 1', 'Cl. Parque Gasset, 1', '926224040',
+         '13004444', 'Ferroviario', '130340002', 'Cl. Parque Gasset, 1', '13002', '926224040',
          '926224040', '13004444.cp@edu.jccm.es', 'http://ceip-ferroviario.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4552,7 +4552,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011761', 'Garabatos', '130340002', 'Cl. Pedrera Baja, 44', 'Cl. Pedrera Baja, 44', '926923182',
+         '13011761', 'Garabatos', '130340002', 'Cl. Pedrera Baja, 44', '13003', '926923182',
          '', 'caigarabatoscr@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -4561,7 +4561,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001133', 'Hermano Gárate', '130340002', 'Cl. Ramirez de Arellano, 1', 'Cl. Ramirez de Arellano, 1', '926222100',
+         '13001133', 'Hermano Gárate', '130340002', 'Cl. Ramirez de Arellano, 1', '13001', '926222100',
          '926222108', 'director@salesianosciudadreal.com', 'http://www.salesianosciudadreal.com', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -4570,7 +4570,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003920', 'Hernán Pérez del Pulgar', '130340002', 'Cl. Gregorio Marañon, 2', 'Cl. Gregorio Marañon, 2', '926225300',
+         '13003920', 'Hernán Pérez del Pulgar', '130340002', 'Cl. Gregorio Marañon, 2', '13002', '926225300',
          '926230430', '13003920.ies@edu.jccm.es', 'http://ies-hernanperezdelpulgar.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -4579,7 +4579,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001169', 'Jorge Manrique', '130340002', 'Rd. de Alarcos, 19', 'Rd. de Alarcos, 19', '926213252',
+         '13001169', 'Jorge Manrique', '130340002', 'Rd. de Alarcos, 19', '13002', '926213252',
          '926213252', '13001169.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cpjorgemanrique', 'Público', 'CEIP'
         )
         ;
@@ -4588,7 +4588,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001157', 'José María de la Fuente', '130340002', 'Cl. Alemania, 5-7', 'Cl. Alemania, 5-7', '926255656',
+         '13001157', 'José María de la Fuente', '130340002', 'Cl. Alemania, 5-7', '13005', '926255656',
          '926228113', '13001157.cp@edu.jccm.es', 'http://ceip-josemariadelafuente.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4597,7 +4597,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003890', 'Juan Alcaide', '130340002', 'Cl. Echegaray, 4', 'Cl. Echegaray, 4', '926223042',
+         '13003890', 'Juan Alcaide', '130340002', 'Cl. Echegaray, 4', '13004', '926223042',
          '926223042', '13003890.cp@edu.jccm.es', 'http://edu.jccm.es/cp/juanalcaidecr', 'Público', 'CEIP'
         )
         ;
@@ -4606,7 +4606,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011783', 'Kid'S Garden Ciudad Real', '130340002', 'Cl. Romero, 38', 'Cl. Romero, 38', '926211428',
+         '13011783', 'KidS Garden Ciudad Real', '130340002', 'Cl. Romero, 38', '13005', '926211428',
          '', 'kidsgardencr@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -4615,7 +4615,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011771', 'La Cometa', '130340002', 'Cl. Virgen de las Batallas, 5', 'Cl. Virgen de las Batallas, 5', '',
+         '13011771', 'La Cometa', '130340002', 'Cl. Virgen de las Batallas, 5', '13002', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -4624,7 +4624,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011370', 'La Flauta Mágica', '130340002', 'Rd. del Carmen, S/N', 'Rd. del Carmen, S/N', '925255950',
+         '13011370', 'La Flauta Mágica', '130340002', 'Rd. del Carmen, S/N', '13002', '925255950',
          '', 'guarderia@dipucr.es', '', 'Público', 'EI'
         )
         ;
@@ -4633,7 +4633,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011382', 'La Granja', '130340002', 'Cl. Brasil, 6', 'Cl. Brasil, 6', '926211044',
+         '13011382', 'La Granja', '130340002', 'Cl. Brasil, 6', '13005', '926211044',
          '926226196', '', '', 'Público', 'EI'
         )
         ;
@@ -4642,7 +4642,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001327', 'Maestre de Calatrava', '130340002', 'Ps. de la Universidad, 1', 'Ps. de la Universidad, 1', '926232530',
+         '13001327', 'Maestre de Calatrava', '130340002', 'Ps. de la Universidad, 1', '13005', '926232530',
          '926224632', '13001327.ies@edu.jccm.es', 'http://edu.jccm.es/ies/maestre', 'Público', 'IES'
         )
         ;
@@ -4651,7 +4651,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001339', 'Maestro Juan de Ávila', '130340002', 'Rd. de Calatrava, S/N', 'Rd. de Calatrava, S/N', '926221207',
+         '13001339', 'Maestro Juan de Ávila', '130340002', 'Rd. de Calatrava, S/N', '13003', '926221207',
          '926256490', '13001339.ies@edu.jccm.es', 'http://edu.jccm.es/ies/maestrojuandeavila', 'Público', 'IES'
         )
         ;
@@ -4660,7 +4660,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004341', 'Marcos Redondo', '130340002', 'Cl. Pantano del Vicario, 1', 'Cl. Pantano del Vicario, 1', '926274154',
+         '13004341', 'Marcos Redondo', '130340002', 'Cl. Pantano del Vicario, 1', '13004', '926274154',
          '926252072', '13004341.cm@edu.jccm.es', 'http://edu.jccm.es/cm/ciudadreal', 'Público', 'CPM'
         )
         ;
@@ -4669,7 +4669,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004857', 'María de Pacheco', '130340002', 'Cl. Cañas, 1', 'Cl. Cañas, 1', '926221554',
+         '13004857', 'María de Pacheco', '130340002', 'Cl. Cañas, 1', '13004', '926221554',
          '926921464', '13004857.cp@edu.jccm.es', 'http://ceip-mariadepacheco.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4678,7 +4678,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003889', 'Miguel de Cervantes', '130340002', 'Cl. Vicente Aleixandre, 4', 'Cl. Vicente Aleixandre, 4', '926221912',
+         '13003889', 'Miguel de Cervantes', '130340002', 'Cl. Vicente Aleixandre, 4', '13004', '926221912',
          '926221912', '13003889.cp@edu.jccm.es', 'http://edu.jccm.es/cp.migueldecervantescr', 'Público', 'CEIP'
         )
         ;
@@ -4687,7 +4687,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001273', 'Nuestra Señora del Prado', '130340002', 'Ps. Carlos Eraña, 19', 'Ps. Carlos Eraña, 19', '926221426',
+         '13001273', 'Nuestra Señora del Prado', '130340002', 'Ps. Carlos Eraña, 19', '13004', '926221426',
          '926253567', 'colegio@marianistas-cr.org', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -4696,7 +4696,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003774', 'Nuestra Señora del Rosario', '130340001', 'Cr. de Porzuna, 21', 'Cr. de Porzuna, 21', '926252197',
+         '13003774', 'Nuestra Señora del Rosario', '130340001', 'Cr. de Porzuna, 21', '13196', '926252197',
          '926252197', '13003774.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -4705,7 +4705,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011801', 'Patucos', '130340002', 'Cl. Rosa, 6-8', 'Cl. Rosa, 6-8', '926228000',
+         '13011801', 'Patucos', '130340002', 'Cl. Rosa, 6-8', '13003', '926228000',
          '', 'martapatucos@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -4714,7 +4714,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001406', 'Pedro Almodóvar', '130340002', 'Pz. de la Provincia, 1', 'Pz. de la Provincia, 1', '926224000',
+         '13001406', 'Pedro Almodóvar', '130340002', 'Pz. de la Provincia, 1', '13001', '926224000',
          '926224032', '13001406.ea@edu.jccm.es', 'http://edu.jccm.es/ea/creal', 'Público', ''
         )
         ;
@@ -4723,7 +4723,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001091', 'Pérez Molina', '130340002', 'Cl. Ramon y Cajal, 8', 'Cl. Ramon y Cajal, 8', '926250353',
+         '13001091', 'Pérez Molina', '130340002', 'Cl. Ramon y Cajal, 8', '13001', '926250353',
          '926250353', '13001091.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -4732,7 +4732,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009612', 'Pianissimo', '130340002', 'Cl. Hervás y Buendía, 4', 'Cl. Hervás y Buendía, 4', '926229176',
+         '13009612', 'Pianissimo', '130340002', 'Cl. Hervás y Buendía, 4', '13003', '926229176',
          '', 'info@epianissimo.com', '', 'Privado', ''
         )
         ;
@@ -4741,7 +4741,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001170', 'Pío XII', '130340002', 'Cl. Zurbaran, S/N - Bjda. Pio XII', 'Cl. Zurbaran, S/N - Bjda. Pio XII', '926213766',
+         '13001170', 'Pío XII', '130340002', 'Cl. Zurbaran, S/N - Bjda. Pio XII', '13002', '926213766',
          '', '13001170.cp@edu.jccm.es', 'http://edu.jccm.es/cp/pioxii', 'Público', 'CEIP'
         )
         ;
@@ -4750,7 +4750,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004134', 'Prado de Alarcos', '130340002', 'Ps. de la Universidad, 2', 'Ps. de la Universidad, 2', '926221728',
+         '13004134', 'Prado de Alarcos', '130340002', 'Ps. de la Universidad, 2', '13004', '926221728',
          '926253547', '13004134.eoi@edu.jccm.es', 'http://eoi-pradodealarcos.centros.castillalamancha.es', 'Público', 'EOI'
         )
         ;
@@ -4759,7 +4759,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001224', 'Puerta de Santa María', '130340002', 'Cl. Caracola, 1', 'Cl. Caracola, 1', '926227304',
+         '13001224', 'Puerta de Santa María', '130340002', 'Cl. Caracola, 1', '13002', '926227304',
          '926220901', '13001224.cee@edu.jccm.es', 'http://cee-puertadesantamaria.centros.castillalamancha.es', 'Público', 'CEE'
         )
         ;
@@ -4768,7 +4768,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001248', 'San Francisco de Asís', '130340002', 'Rd. del Carmen, 56', 'Rd. del Carmen, 56', '926221932',
+         '13001248', 'San Francisco de Asís', '130340002', 'Rd. del Carmen, 56', '13003', '926221932',
          '926221932', 'sanfranciscodeasis.direccion@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -4777,7 +4777,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001285', 'San Francisco Javier', '130340002', 'Cl. Zarza, 10', 'Cl. Zarza, 10', '926228032',
+         '13001285', 'San Francisco Javier', '130340002', 'Cl. Zarza, 10', '13003', '926228032',
          '926274573', '13001285.con@edu.jccm.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -4786,7 +4786,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001297', 'San José', '130340002', 'Cl. Calatrava, 15', 'Cl. Calatrava, 15', '926221433',
+         '13001297', 'San José', '130340002', 'Cl. Calatrava, 15', '13003', '926221433',
          '926231681', 'csanjose@csanjose.org', 'http://www.csanjose.org', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -4795,7 +4795,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011825', 'San José Obrero', '130340002', 'Cl. Socuellamos, 2 Bis (Poligono Larache)', 'Cl. Socuellamos, 2 Bis (Poligono Larache)', '926215502',
+         '13011825', 'San José Obrero', '130340002', 'Cl. Socuellamos, 2 Bis (Poligono Larache)', '13005', '926215502',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -4804,7 +4804,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001340', 'Santa María de Alarcos', '130340002', 'Rd. Granada, 2', 'Rd. Granada, 2', '926230627',
+         '13001340', 'Santa María de Alarcos', '130340002', 'Rd. Granada, 2', '13004', '926230627',
          '926230520', '13001340.ies@edu.jccm.es', 'http:// http://edu.jccm.es/ies/santamariadealarcos/', 'Público', 'IES'
         )
         ;
@@ -4813,7 +4813,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003804', 'Santo Tomás', '130340002', 'Cr. de Piedrabuena, S/N', 'Cr. de Piedrabuena, S/N', '926213005',
+         '13003804', 'Santo Tomás', '130340002', 'Cr. de Piedrabuena, S/N', '13002', '926213005',
          '926213005', 'colegiosantotomas@yahoo.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -4822,7 +4822,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004754', 'Santo Tomás de Villanueva Nº 16', '130340002', 'Pz. de San Francisco, 1', 'Pz. de San Francisco, 1', '926220156',
+         '13004754', 'Santo Tomás de Villanueva Nº 16', '130340002', 'Pz. de San Francisco, 1', '13001', '926220156',
          '926220156', '13004754.cp@edu.jccm.es', 'http://edu.jccm.es/cp/tomasvillanueva', 'Público', 'CEIP'
         )
         ;
@@ -4831,7 +4831,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001376', 'Seminario Menor Diocesano Santo Tomás de Villanueva y San Juan de Ávila', '130340002', 'Cr. de Porzuna, 5', 'Cr. de Porzuna, 5', '926230328',
+         '13001376', 'Seminario Menor Diocesano Santo Tomás de Villanueva y San Juan de Ávila', '130340002', 'Cr. de Porzuna, 5', '13080', '926230328',
          '926228058', 'smenor@seminariociudadreal.com', 'http://www.seminariociudadreal.com', 'Privado', ''
         )
         ;
@@ -4840,7 +4840,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004456', 'Torreón del Alcázar', '130340002', 'Av. Torreon, 6', 'Av. Torreon, 6', '926252155',
+         '13004456', 'Torreón del Alcázar', '130340002', 'Av. Torreon, 6', '13004', '926252155',
          '926224147', '13004456.ies@edu.jccm.es', 'http://edu.jccm.es/ies/torreon', 'Público', 'IES'
         )
         ;
@@ -4849,7 +4849,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011837', 'Trotamundos', '130340002', 'Cl. Centauro Esq. Cruz del Sur, 4', 'Cl. Centauro Esq. Cruz del Sur, 4', '926228869',
+         '13011837', 'Trotamundos', '130340002', 'Cl. Centauro Esq. Cruz del Sur, 4', '13005', '926228869',
          '', 'info@caitrotamundos.es', '', 'Privado', 'EI'
         )
         ;
@@ -4858,7 +4858,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009491', 'Virgen de Guadalupe', '130340002', 'Cl. Pozo de Santa Catalina, 7', 'Cl. Pozo de Santa Catalina, 7', '926221230',
+         '13009491', 'Virgen de Guadalupe', '130340002', 'Cl. Pozo de Santa Catalina, 7', '', '926221230',
          '', 'vguadalupecrguarderia.e.@telefonica.net', '', 'Privado', 'EI'
         )
         ;
@@ -4867,7 +4867,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011849', 'Walt Disney', '130340002', 'Cl. Puerta de Alarcos, 2', 'Cl. Puerta de Alarcos, 2', '926211328',
+         '13011849', 'Walt Disney', '130340002', 'Cl. Puerta de Alarcos, 2', '13002', '926211328',
          '926211328', '', '', 'Privado', 'EI'
         )
         ;
@@ -4876,7 +4876,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001431', 'Nuestra Señora de la Paz', '130350001', 'Cl. Virgen, 1', 'Cl. Virgen, 1', '926830381',
+         '13001431', 'Nuestra Señora de la Paz', '130350001', 'Cl. Virgen, 1', '13190', '926830381',
          '926830378', '13001431.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -4885,7 +4885,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001443', 'Nuestra Señora de las Mercedes', '130360002', 'Cl. Paraje de la Loma, S/N', 'Cl. Paraje de la Loma, S/N', '926808084',
+         '13001443', 'Nuestra Señora de las Mercedes', '130360002', 'Cl. Paraje de la Loma, S/N', '13427', '926808084',
          '926808084', '13001443.cp@edu.jccm.es', 'http://edu.jccm.es/cp/nsmercedes', 'Público', 'CEIP'
         )
         ;
@@ -4894,7 +4894,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001455', 'Santísimo Cristo de la Veracruz', '130370001', 'Cl. Soledad S/N', 'Cl. Soledad S/N', '926365040',
+         '13001455', 'Santísimo Cristo de la Veracruz', '130370001', 'Cl. Soledad S/N', '13345', '926365040',
          '926365090', '13001455.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cristoveracruz', 'Público', 'CEIP'
         )
         ;
@@ -4903,7 +4903,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004663', 'Albuera', '130390001', 'Cl. Albuera, S/N', 'Cl. Albuera, S/N', '926853002',
+         '13004663', 'Albuera', '130390001', 'Cl. Albuera, S/N', '13250', '926853002',
          '926853668', '13004663.cp@edu.jccm.es', 'http://ceip-albuera.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4912,7 +4912,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004572', 'Calatrava', '130390001', 'Cl. Calatrava, 5', 'Cl. Calatrava, 5', '926850107',
+         '13004572', 'Calatrava', '130390001', 'Cl. Calatrava, 5', '13250', '926850107',
          '926850107', '13004572.cp@edu.jccm.es', 'http://edu.jccm.es/cp/calatrava', 'Público', 'CEIP'
         )
         ;
@@ -4921,7 +4921,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001561', 'Divina Pastora', '130390001', 'Cl. Estacion, 15', 'Cl. Estacion, 15', '926852389',
+         '13001561', 'Divina Pastora', '130390001', 'Cl. Estacion, 15', '13250', '926852389',
          '926855455', 'cdpsecre@infonegocio.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -4930,7 +4930,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009508', 'Escuela Municipal de Música y Danza de Daimiel', '130390001', 'Cl. Luis Ruiz-Valdepeñas, S/N', 'Cl. Luis Ruiz-Valdepeñas, S/N', '926850400',
+         '13009508', 'Escuela Municipal de Música y Danza de Daimiel', '130390001', 'Cl. Luis Ruiz-Valdepeñas, S/N', '13250', '926850400',
          '', '', '', 'Público', ''
         )
         ;
@@ -4939,7 +4939,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001480', 'Infante Don Felipe', '130390001', 'Cl. Dehesa, 45', 'Cl. Dehesa, 45', '926850738',
+         '13001480', 'Infante Don Felipe', '130390001', 'Cl. Dehesa, 45', '13250', '926850738',
          '926260173', '13001480.cp@edu.jccm.es', 'http://edu.jccm.es/cp/infante', 'Público', 'CEIP'
         )
         ;
@@ -4948,7 +4948,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003737', 'Juan D'Opazo', '130390001', 'Cl. Calatrava, 7', 'Cl. Calatrava, 7', '926852166',
+         '13003737', 'Juan DOpazo', '130390001', 'Cl. Calatrava, 7', '13250', '926852166',
          '926850356', '13003737.ies@edu.jccm.es', 'http://ies-juandopazo.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -4957,7 +4957,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001492', 'La Espinosa', '130390001', 'Cl. Espinosa, 1', 'Cl. Espinosa, 1', '926852000',
+         '13001492', 'La Espinosa', '130390001', 'Cl. Espinosa, 1', '13250', '926852000',
          '926852000', '13001492.cp@edu.jccm.es', 'http://ceip-laespinosa.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -4966,7 +4966,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004641', 'Miguel de Cervantes', '130390001', 'Cl. Huertos, S/N', 'Cl. Huertos, S/N', '926260033',
+         '13004641', 'Miguel de Cervantes', '130390001', 'Cl. Huertos, S/N', '13250', '926260033',
          '926260033', '13004641.cea@edu.jccm.es', 'http://cepa-migueldecervantesadultosdaimiel.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -4975,7 +4975,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001595', 'Ojos del Guadiana', '130390001', 'Cl. Francisco Perez, 3', 'Cl. Francisco Perez, 3', '926852415',
+         '13001595', 'Ojos del Guadiana', '130390001', 'Cl. Francisco Perez, 3', '13250', '926852415',
          '926853845', '13001595.ies@edu.jccm.es', 'http://ies-ojosdelguadiana.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -4984,7 +4984,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001479', 'San Isidro', '130390001', 'Cl. Estacion, 75', 'Cl. Estacion, 75', '926851049',
+         '13001479', 'San Isidro', '130390001', 'Cl. Estacion, 75', '13250', '926851049',
          '926851049', '13001479.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sanisidro', 'Público', 'CEIP'
         )
         ;
@@ -4993,7 +4993,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011126', 'Sancho', '130390001', 'Cl. Primavera, 46', 'Cl. Primavera, 46', '926852611',
+         '13011126', 'Sancho', '130390001', 'Cl. Primavera, 46', '13250', '926852611',
          '926852611', '13011126.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -5002,7 +5002,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011138', 'Virgen de las Cruces', '130390001', 'Cm. de Molemocho, 55', 'Cm. de Molemocho, 55', '926852814',
+         '13011138', 'Virgen de las Cruces', '130390001', 'Cm. de Molemocho, 55', '13250', '926852814',
          '926852814', '13011138.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -5011,7 +5011,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012167', 'Concha Mera', '130400001', 'Cl. Estacion, S/N', 'Cl. Estacion, S/N', '',
+         '13012167', 'Concha Mera', '130400001', 'Cl. Estacion, S/N', '13140', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -5020,7 +5020,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001601', 'Manuel Sastre Velasco', '130400001', 'Pz. Maestro Lorenzo Prieto, S/N', 'Pz. Maestro Lorenzo Prieto, S/N', '926695047',
+         '13001601', 'Manuel Sastre Velasco', '130400001', 'Pz. Maestro Lorenzo Prieto, S/N', '13140', '926695047',
          '926809001', '13001601.cp@edu.jccm.es', 'http://edu.jccm.es/cp/manuelsastre', 'Público', 'CEIP'
         )
         ;
@@ -5029,7 +5029,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001625', 'Nuestra Señora de los Baños', '130420001', 'Cl. Azuel, 13', 'Cl. Azuel, 13', '926470028',
+         '13001625', 'Nuestra Señora de los Baños', '130420001', 'Cl. Azuel, 13', '13130', '926470028',
          '926470233', '13001625.cp@edu.jccm.es', 'http://edu.jccm.es/cp/fuencaliente', 'Público', 'CEIP'
         )
         ;
@@ -5038,7 +5038,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005424', 'Peña Escrita', '130420001', 'Cl. Azuel, 13', 'Cl. Azuel, 13', '926470150',
+         '13005424', 'Peña Escrita', '130420001', 'Cl. Azuel, 13', '13130', '926470150',
          '926470150', '13005424.ieso@edu.jccm.es', 'http://ies-penaescrita.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -5047,7 +5047,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001650', 'Miguel Delibes', '130440003', 'Cl. Pio Xii, 16', 'Cl. Pio Xii, 16', '926806073',
+         '13001650', 'Miguel Delibes', '130440003', 'Cl. Pio Xii, 16', '13680', '926806073',
          '926804552', '13001650.cp@edu.jccm.es', 'http://edu.jccm.es/cp/fuenteelfresno', 'Público', 'CEIP'
         )
         ;
@@ -5056,7 +5056,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012180', 'Mundo Infantil', '130440003', 'Cl. el Rio, 106', 'Cl. el Rio, 106', '',
+         '13012180', 'Mundo Infantil', '130440003', 'Cl. el Rio, 106', '13680', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -5065,7 +5065,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001662', 'Nuestra Señora Oreto y Zuqueca', '130450001', 'Rd. de Pilas, 8', 'Rd. de Pilas, 8', '926868041',
+         '13001662', 'Nuestra Señora Oreto y Zuqueca', '130450001', 'Rd. de Pilas, 8', '13360', '926868041',
          '', '13001662.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -5074,7 +5074,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011369', '- Sin Denominación -', '130470001', 'Av. Tierno Galvan, S/N', 'Av. Tierno Galvan, S/N', '926571083',
+         '13011369', '- Sin Denominación -', '130470001', 'Av. Tierno Galvan, S/N', '13640', '926571083',
          '', 'cai@herencia.es', '', 'Público', 'EI'
         )
         ;
@@ -5083,7 +5083,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005023', '- Sin Denominación -', '130470001', 'Cl. Carrasco Alcalde, 11', 'Cl. Carrasco Alcalde, 11', '926572522',
+         '13005023', '- Sin Denominación -', '130470001', 'Cl. Carrasco Alcalde, 11', '13640', '926572522',
          '', 'aepa_herencia@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -5092,7 +5092,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001698', 'Carrasco Alcalde', '130470001', 'Cl. Tierno Galvan, 4', 'Cl. Tierno Galvan, 4', '926571204',
+         '13001698', 'Carrasco Alcalde', '130470001', 'Cl. Tierno Galvan, 4', '13640', '926571204',
          '926571204', '13001698.cp@edu.jccm.es', 'http://edu.jccm.es/cp/carrascoalcalde', 'Público', 'CEIP'
         )
         ;
@@ -5101,7 +5101,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010882', 'Escuela Municipal de Música y Danza de Herencia', '130470001', 'Cl. Gomez Montalban, S/N', 'Cl. Gomez Montalban, S/N', '',
+         '13010882', 'Escuela Municipal de Música y Danza de Herencia', '130470001', 'Cl. Gomez Montalban, S/N', '13640', '',
          '', 'escuelademusica@herencia.es', '', 'Público', ''
         )
         ;
@@ -5110,7 +5110,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004729', 'Hermógenes Rodríguez', '130470001', 'Av. Alcazar, 51 (Apdo. Correos Nº 56)', 'Av. Alcazar, 51 (Apdo. Correos Nº 56)', '926573380',
+         '13004729', 'Hermógenes Rodríguez', '130470001', 'Av. Alcazar, 51 (Apdo. Correos Nº 56)', '13640', '926573380',
          '926571696', '13004729.ies@edu.jccm.es', 'http://edu.jccm.es/ies/hermogenesrodriguez', 'Público', 'IES'
         )
         ;
@@ -5119,7 +5119,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011850', 'Los Peques', '130470001', 'Cl. Tercia, 25', 'Cl. Tercia, 25', '926571736',
+         '13011850', 'Los Peques', '130470001', 'Cl. Tercia, 25', '13640', '926571736',
          '926572123', '', '', 'Privado', 'EI'
         )
         ;
@@ -5128,7 +5128,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001716', 'Nuestra Señora de las Mercedes', '130470001', 'Cl. Cristo de Urda, 26', 'Cl. Cristo de Urda, 26', '926573689',
+         '13001716', 'Nuestra Señora de las Mercedes', '130470001', 'Cl. Cristo de Urda, 26', '13640', '926573689',
          '926573689', 'nsmherencia@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -5137,7 +5137,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001728', 'Seminario Menor Mercedario', '130470001', 'Cl. Colon, 29', 'Cl. Colon, 29', '926571087',
+         '13001728', 'Seminario Menor Mercedario', '130470001', 'Cl. Colon, 29', '13640', '926571087',
          '926573709', 'smmercedarioh@planalfa.es', '', 'Privado', ''
         )
         ;
@@ -5146,7 +5146,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004912', 'Valle de Alcudia', '130480001', 'Cl. Pocitas, S/N', 'Cl. Pocitas, S/N', '926485586',
+         '13004912', 'Valle de Alcudia', '130480001', 'Cl. Pocitas, S/N', '13590', '926485586',
          '926476029', '13004912.cra@edu.jccm.es', 'http://cra-valledealcudia.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5155,7 +5155,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005217', 'Montes de Cabañeros', '130490001', 'Cl. Ciudad Universitaria, 3', 'Cl. Ciudad Universitaria, 3', '926775213',
+         '13005217', 'Montes de Cabañeros', '130490001', 'Cl. Ciudad Universitaria, 3', '13110', '926775213',
          '926775283', '13005217.ies@edu.jccm.es', 'http://edu.jccm.es/ies.montesdecabaneros', 'Público', 'IES'
         )
         ;
@@ -5164,7 +5164,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010766', 'San Isidro', '130490001', 'Cl. Ernesto Camarena, 1', 'Cl. Ernesto Camarena, 1', '926775298',
+         '13010766', 'San Isidro', '130490001', 'Cl. Ernesto Camarena, 1', '13110', '926775298',
          '926775298', '13010766.cra@edu.jccm.es', 'http://cra-sanisidro.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5173,7 +5173,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001753', 'San José de Calasanz', '130500001', 'Cl. Zona Escolar, S/N', 'Cl. Zona Escolar, S/N', '926892029',
+         '13001753', 'San José de Calasanz', '130500001', 'Cl. Zona Escolar, S/N', '13660', '926892029',
          '926892029', '13001753.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -5182,7 +5182,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003749', 'El Oasis', '139040001', 'Cl. Virgen, 21', 'Cl. Virgen, 21', '926644143',
+         '13003749', 'El Oasis', '139040001', 'Cl. Virgen, 21', '13220', '926644143',
          '926644143', '13003749.cp@edu.jccm.es', 'http://ceip-eloasis.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5191,7 +5191,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001765', 'Isabel la Católica', '130510003', 'Ps. de los Eucaliptos, S/N', 'Ps. de los Eucaliptos, S/N', '926769023',
+         '13001765', 'Isabel la Católica', '130510003', 'Ps. de los Eucaliptos, S/N', '13108', '926769023',
          '926769023', '13001765.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -5200,7 +5200,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005035', '- Sin Denominación -', '130520003', 'Cl. Jacinto Benavente, 1-1º', 'Cl. Jacinto Benavente, 1-1º', '926801177',
+         '13005035', '- Sin Denominación -', '130520003', 'Cl. Jacinto Benavente, 1-1º', '13420', '926801177',
          '', 'aepa_malagon@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -5209,7 +5209,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001790', 'Cañada Real', '130520003', 'Cl. Ancha, 24', 'Cl. Ancha, 24', '926800733',
+         '13001790', 'Cañada Real', '130520003', 'Cl. Ancha, 24', '13420', '926800733',
          '', '13001790.cp@edu.jccm.es', 'http://edu.jccm.es/cp.canyadareal', 'Público', 'CEIP'
         )
         ;
@@ -5218,7 +5218,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004730', 'Estados del Duque', '130520003', 'Cl. Torralba, S/N', 'Cl. Torralba, S/N', '926800500',
+         '13004730', 'Estados del Duque', '130520003', 'Cl. Torralba, S/N', '13420', '926800500',
          '926802597', 'iesestados@telefonica.net', 'http://ies-estadosdelduque.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -5227,7 +5227,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001819', 'Santa Teresa', '130520003', 'Pz. de la Concordia, S/N', 'Pz. de la Concordia, S/N', '926800762',
+         '13001819', 'Santa Teresa', '130520003', 'Pz. de la Concordia, S/N', '13420', '926800762',
          '926800717', '13001819.cp@edu.jccm.es', 'http://ceip-santateresamalagon.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5236,7 +5236,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011141', 'Santa Teresa de Jesús', '130520003', 'Pz. de la Concordia, S/N', 'Pz. de la Concordia, S/N', '926800133',
+         '13011141', 'Santa Teresa de Jesús', '130520003', 'Pz. de la Concordia, S/N', '13420', '926800133',
          '926800133', '13011141.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -5245,7 +5245,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011400', '- Sin Denominación -', '130530003', 'Cr. de la Solana, 73', 'Cr. de la Solana, 73', '926622080',
+         '13011400', '- Sin Denominación -', '130530003', 'Cr. de la Solana, 73', '13200', '926622080',
          '926622080', 'caimunicipal@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -5254,7 +5254,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001935', 'Altagracia', '130530003', 'Cl. Alfonso Mellado, 9', 'Cl. Alfonso Mellado, 9', '926610622',
+         '13001935', 'Altagracia', '130530003', 'Cl. Alfonso Mellado, 9', '13200', '926610622',
          '926610622', '13001935.cp@edu.jccm.es', 'http://ceip-altagracia.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5263,7 +5263,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003798', 'Azuer', '130530003', 'Cr. de la Solana, 77', 'Cr. de la Solana, 77', '926610524',
+         '13003798', 'Azuer', '130530003', 'Cr. de la Solana, 77', '13200', '926610524',
          '926647037', '13003798.ies@edu.jccm.es', 'http://ies-azuer.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -5272,7 +5272,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005485', 'Centro Penitenciario', '0000', 'Cr. de Argamasilla de Alba, Km 66 (Centro Penitenciario)', 'Cr. de Argamasilla de Alba, Km 66 (Centro Penitenciario)', '926540814',
+         '13005485', 'Centro Penitenciario', '0000', 'Cr. de Argamasilla de Alba, Km 66 (Centro Penitenciario)', '13200', '926540814',
          '926540814', '13004055.cea@edujccm.es', '', 'Público', ''
         )
         ;
@@ -5281,7 +5281,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001923', 'Divina Pastora', '130530003', 'Cl. Maestra Doña Libia, 2', 'Cl. Maestra Doña Libia, 2', '926611713',
+         '13001923', 'Divina Pastora', '130530003', 'Cl. Maestra Doña Libia, 2', '13200', '926611713',
          '926611713', '13001923.cp@edu.jccm.es', 'http://edu.jccm.es/cp.divinapastora', 'Público', 'CEIP'
         )
         ;
@@ -5290,7 +5290,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001960', 'Don Cristóbal', '130530003', 'Cl. Obispo Carrascosa, 1 y 21', 'Cl. Obispo Carrascosa, 1 y 21', '926647071',
+         '13001960', 'Don Cristóbal', '130530003', 'Cl. Obispo Carrascosa, 1 y 21', '13200', '926647071',
          '926612550', 'ccdoncristobal@terra.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -5299,7 +5299,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012210', 'Dulcinea', '130530003', 'Ps. de Cordoba, 5', 'Ps. de Cordoba, 5', '',
+         '13012210', 'Dulcinea', '130530003', 'Ps. de Cordoba, 5', '13200', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -5308,7 +5308,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003877', 'Efa Moratalaz', '130530003', 'Av. Andalucia, S/N', 'Av. Andalucia, S/N', '926647017',
+         '13003877', 'Efa Moratalaz', '130530003', 'Av. Andalucia, S/N', '13200', '926647017',
          '926647140', 'info@efamoratalaz.com', 'http://www.efa-centro.org/', 'Priv.Concert.', ''
         )
         ;
@@ -5317,7 +5317,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011874', 'El Mundo de Lydiana', '130530003', 'Cl. Churruca, 8 B', 'Cl. Churruca, 8 B', '926614844',
+         '13011874', 'El Mundo de Lydiana', '130530003', 'Cl. Churruca, 8 B', '13200', '926614844',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -5326,7 +5326,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012015', 'El Parque de Dulcinea', '130530003', 'Ps. de Cordoba, S/N', 'Ps. de Cordoba, S/N', '926647312',
+         '13012015', 'El Parque de Dulcinea', '130530003', 'Ps. de Cordoba, S/N', '13200', '926647312',
          '', 'mamzanares@escuelasdulcinea.es', '', 'Privado', 'EI'
         )
         ;
@@ -5335,7 +5335,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004390', 'Enrique Tierno Galván', '130530003', 'Cr. de la Solana, 79', 'Cr. de la Solana, 79', '926647052',
+         '13004390', 'Enrique Tierno Galván', '130530003', 'Cr. de la Solana, 79', '13200', '926647052',
          '926647052', '13004390.cp@edu.jccm.es', 'http://ceip-tiernogalvanmanzanares.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5344,7 +5344,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009594', 'Guillermo Calero', '130530003', 'Cl. Mayorazgo, 4', 'Cl. Mayorazgo, 4', '926614058',
+         '13009594', 'Guillermo Calero', '130530003', 'Cl. Mayorazgo, 4', '13200', '926614058',
          '', '', '', 'Público', ''
         )
         ;
@@ -5353,7 +5353,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003853', 'La Candelaria', '130530003', 'Cl. Francisco Elipe, 7', 'Cl. Francisco Elipe, 7', '926610047',
+         '13003853', 'La Candelaria', '130530003', 'Cl. Francisco Elipe, 7', '13200', '926610047',
          '926610047', '13003853.cp@edu.jccm.es', 'http://ceip-lacandelariamanzanares.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5362,7 +5362,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011151', 'La Ínsula', '130530003', 'Cl. Alfonso Mellado, 5', 'Cl. Alfonso Mellado, 5', '926612865',
+         '13011151', 'La Ínsula', '130530003', 'Cl. Alfonso Mellado, 5', '13200', '926612865',
          '926612865', '13011151.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -5371,7 +5371,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001959', 'La Milagrosa', '130530003', 'Cl. Alfonso Mellado, 2', 'Cl. Alfonso Mellado, 2', '926610646',
+         '13001959', 'La Milagrosa', '130530003', 'Cl. Alfonso Mellado, 2', '13200', '926610646',
          '926610646', 'lamilagrosamanzanares@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -5380,7 +5380,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011862', 'Nenes', '130530003', 'Cl. Jesus del Perdon, 8', 'Cl. Jesus del Perdon, 8', '926614306',
+         '13011862', 'Nenes', '130530003', 'Cl. Jesus del Perdon, 8', '13200', '926614306',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -5389,7 +5389,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001984', 'Pedro Álvarez Sotomayor', '130530003', 'Cr. de la Solana, 75', 'Cr. de la Solana, 75', '926611363',
+         '13001984', 'Pedro Álvarez Sotomayor', '130530003', 'Cr. de la Solana, 75', '13200', '926611363',
          '926620265', '13001984.ies@edu.jccm.es', 'http://ies-sotomayor.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -5398,7 +5398,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004079', 'San Blas', '130530003', 'Cm. de Membrilla, S/N', 'Cm. de Membrilla, S/N', '926611701',
+         '13004079', 'San Blas', '130530003', 'Cm. de Membrilla, S/N', '13200', '926611701',
          '926611701', '13004079.cea@edu.jccm.es', 'http://cepa-sanblas.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -5407,7 +5407,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001972', 'San José', '130530003', 'Cl. Virgen del Carmen, 22', 'Cl. Virgen del Carmen, 22', '926611340',
+         '13001972', 'San José', '130530003', 'Cl. Virgen del Carmen, 22', '13200', '926611340',
          '926620896', 'manzanaresdir@concepcionistas.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -5416,7 +5416,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005102', '- Sin Denominación -', '130540001', 'Cl. Campos de Montiel, 1', 'Cl. Campos de Montiel, 1', '926611701',
+         '13005102', '- Sin Denominación -', '130540001', 'Cl. Campos de Montiel, 1', '13230', '926611701',
          '926611701', '13004079.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -5425,7 +5425,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011412', 'Lope de Vega', '130540001', 'Cl. Pintor Velazquez, 23', 'Cl. Pintor Velazquez, 23', '926637301',
+         '13011412', 'Lope de Vega', '130540001', 'Cl. Pintor Velazquez, 23', '13230', '926637301',
          '', 'cailopedevega@gmail.es', '', 'Público', 'EI'
         )
         ;
@@ -5434,7 +5434,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005291', 'Marmaria', '130540001', 'Av. Olimpica, 9', 'Av. Olimpica, 9', '926637480',
+         '13005291', 'Marmaria', '130540001', 'Av. Olimpica, 9', '13230', '926637480',
          '926637768', '13005291.ies@edu.jccm.es', 'http://ies-marmaria.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -5443,7 +5443,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002009', 'San José de Calasanz', '130540001', 'Cl. Campos de Montiel, 16', 'Cl. Campos de Montiel, 16', '926636721',
+         '13002009', 'San José de Calasanz', '130540001', 'Cl. Campos de Montiel, 16', '13230', '926636721',
          '926636293', '13002009.cp@edu.jccm.es', 'http://ceip-sanjosedecalasanzmembrilla.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5452,7 +5452,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13001996', 'Virgen del Espino', '130540001', 'Cl. Pintor Velazquez, 21', 'Cl. Pintor Velazquez, 21', '926636449',
+         '13001996', 'Virgen del Espino', '130540001', 'Cl. Pintor Velazquez, 21', '13230', '926636449',
          '926636449', '13001996.cp@edu.jccm.es', 'http://ceip-virgendelespinomembrilla.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5461,7 +5461,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011424', '- Sin Denominación -', '130560001', 'Cl. Jose Echegaray, S/N', 'Cl. Jose Echegaray, S/N', '926241110',
+         '13011424', '- Sin Denominación -', '130560001', 'Cl. Jose Echegaray, S/N', '13170', '926241110',
          '', 'cai_miguelturra@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -5470,7 +5470,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005047', '- Sin Denominación -', '130560001', 'Cl. Libertad, 20', 'Cl. Libertad, 20', '926242716',
+         '13005047', '- Sin Denominación -', '130560001', 'Cl. Libertad, 20', '13170', '926242716',
          '926242716', 'aepa_miguelturra@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -5479,7 +5479,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004973', 'Benito Pérez Galdós', '130560001', 'Cl. Enrique Tierno Galvan, S/N', 'Cl. Enrique Tierno Galvan, S/N', '926242761',
+         '13004973', 'Benito Pérez Galdós', '130560001', 'Cl. Enrique Tierno Galvan, S/N', '13170', '926242761',
          '926242761', '13004973.cp@edu.jccm.es', 'http://ceip-bpg.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5488,7 +5488,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004808', 'Campo de Calatrava', '130560001', 'Cl. Tomillo, S/N', 'Cl. Tomillo, S/N', '926241691',
+         '13004808', 'Campo de Calatrava', '130560001', 'Cl. Tomillo, S/N', '13170', '926241691',
          '926241692', '13004808.ies@edu.jccm.es', 'http://edu.jccm.es/ies/miguelturra', 'Público', 'IES'
         )
         ;
@@ -5497,7 +5497,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009521', 'Clara Campoamor', '130560001', 'Av. 1º de Mayo, 4', 'Av. 1º de Mayo, 4', '926240304',
+         '13009521', 'Clara Campoamor', '130560001', 'Av. 1º de Mayo, 4', '13170', '926240304',
          '926240304', '13009521.cp@edu.jccm.es', 'http://ceip-claracampoamor.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5506,7 +5506,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002061', 'El Pradillo', '130560001', 'Cl. Ancha, 5', 'Cl. Ancha, 5', '926241292',
+         '13002061', 'El Pradillo', '130560001', 'Cl. Ancha, 5', '13170', '926241292',
          '926241292', '13002061.cp@edu.jccm.es', 'http://ceip-elpradillo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5515,7 +5515,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011606', 'Escuela Municipal de Música de Miguelturra', '130560001', 'Cl. Libertad, 8', 'Cl. Libertad, 8', '926160604',
+         '13011606', 'Escuela Municipal de Música de Miguelturra', '130560001', 'Cl. Libertad, 8', '13170', '926160604',
          '', 'escuelamusicamiguelturra@hotmail.com', '', 'Público', ''
         )
         ;
@@ -5524,7 +5524,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010894', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '130560001', 'Cl. Juventud, S/N', 'Cl. Juventud, S/N', '',
+         '13010894', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '130560001', 'Cl. Juventud, S/N', '13170', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -5533,7 +5533,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011886', 'Los Soletes', '130560001', 'Cl. Santo Tomas de Villanueva, 113', 'Cl. Santo Tomas de Villanueva, 113', '926160012',
+         '13011886', 'Los Soletes', '130560001', 'Cl. Santo Tomas de Villanueva, 113', '13170', '926160012',
          '', 'ei.soletes@navigo.es', '', 'Privado', 'EI'
         )
         ;
@@ -5542,7 +5542,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012118', 'Municipal Nº 2', '130560001', 'Cl. Evita Peron, 1', 'Cl. Evita Peron, 1', '',
+         '13012118', 'Municipal Nº 2', '130560001', 'Cl. Evita Peron, 1', '13170', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -5551,7 +5551,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002083', 'Nuestra Señora de la Merced', '130560001', 'Pz. de la Virgen, 25', 'Pz. de la Virgen, 25', '926240405',
+         '13002083', 'Nuestra Señora de la Merced', '130560001', 'Pz. de la Virgen, 25', '13170', '926240405',
          '926240290', 'colegiomercedmiguelturra@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -5560,7 +5560,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002071', 'Santísimo Cristo de la Misericordia', '130560001', 'Cl. Isaac Peral, 23', 'Cl. Isaac Peral, 23', '926240527',
+         '13002071', 'Santísimo Cristo de la Misericordia', '130560001', 'Cl. Isaac Peral, 23', '13170', '926240527',
          '926240527', '13002071.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -5569,7 +5569,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011448', '- Sin Denominación -', '130570001', 'Av. Castilla-La Mancha, 13', 'Av. Castilla-La Mancha, 13', '926353392',
+         '13011448', '- Sin Denominación -', '130570001', 'Av. Castilla-La Mancha, 13', '13326', '926353392',
          '926355262', 'aytomontiel@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -5578,7 +5578,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002095', 'Gutiérrez de la Vega', '130570001', 'Cl. Fontanillas, S/N', 'Cl. Fontanillas, S/N', '926353156',
+         '13002095', 'Gutiérrez de la Vega', '130570001', 'Cl. Fontanillas, S/N', '13326', '926353156',
          '926353156', '13002095.cp@edu.jccm.es', 'http://edu.jccm.es/ceip.gutierrezdelavega', 'Público', 'CEIP'
         )
         ;
@@ -5587,7 +5587,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011451', '- Sin Denominación -', '130580001', 'Cl. Tercia, 9', 'Cl. Tercia, 9', '',
+         '13011451', '- Sin Denominación -', '130580001', 'Cl. Tercia, 9', '13350', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -5596,7 +5596,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010985', '- Sin Denominación -', '130580001', 'Cl. Jesus Velasco, S/N', 'Cl. Jesus Velasco, S/N', '',
+         '13010985', '- Sin Denominación -', '130580001', 'Cl. Jesus Velasco, S/N', '13350', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -5605,7 +5605,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002113', 'Agustín Sanz', '130580001', 'Cl. Cuevas, S/N', 'Cl. Cuevas, S/N', '926330046',
+         '13002113', 'Agustín Sanz', '130580001', 'Cl. Cuevas, S/N', '13350', '926330046',
          '926330746', '13002113.cp@edu.jccm.es', 'http://edu.jccm.es/cp/agustinsanz', 'Público', 'CEIP'
         )
         ;
@@ -5614,7 +5614,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004869', 'Manuel Clemente', '130580001', 'Cl. Gerardo Clemente, 1', 'Cl. Gerardo Clemente, 1', '926319557',
+         '13004869', 'Manuel Clemente', '130580001', 'Cl. Gerardo Clemente, 1', '13350', '926319557',
          '926319557', '13004869.cp@edu.jccm.es', 'http://edu.jccm.es/cp.manuelclemente', 'Público', 'CEIP'
         )
         ;
@@ -5623,7 +5623,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005311', 'Peñalba', '130580001', 'Cl. los Molinos, S/N', 'Cl. los Molinos, S/N', '926330625',
+         '13005311', 'Peñalba', '130580001', 'Cl. los Molinos, S/N', '13350', '926330625',
          '926319476', '13005311.seces@edu.jccm.es', 'http://ies-penalba.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -5632,7 +5632,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010808', '- Sin Denominación -', '130610001', 'Pz. de la Vendimia, S/N', 'Pz. de la Vendimia, S/N', '',
+         '13010808', '- Sin Denominación -', '130610001', 'Pz. de la Vendimia, S/N', '13620', '',
          '', '13010808.aepa@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -5641,7 +5641,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011461', '- Sin Denominación -', '130610001', 'Cl. Maestro Juan de Avila, 10 Esquina Calle Albacete', 'Cl. Maestro Juan de Avila, 10 Esquina Calle Albacete', '926586231',
+         '13011461', '- Sin Denominación -', '130610001', 'Cl. Maestro Juan de Avila, 10 Esquina Calle Albacete', '13620', '926586231',
          '926586231', 'caipedromunoz@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -5650,7 +5650,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011011', 'Hospitalillo', '130610001', 'Cl. Montecillo, S/N', 'Cl. Montecillo, S/N', '926568302',
+         '13011011', 'Hospitalillo', '130610001', 'Cl. Montecillo, S/N', '13620', '926568302',
          '926568302', '13011011.cp@edu.jccm.es', 'http:// http://edu.jccm.es/cp/hospitalillo', 'Público', 'CEIP'
         )
         ;
@@ -5659,7 +5659,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004781', 'Isabel Martínez Buendía', '130610001', 'Cl. Montecillo, S/N', 'Cl. Montecillo, S/N', '926568239',
+         '13004781', 'Isabel Martínez Buendía', '130610001', 'Cl. Montecillo, S/N', '13620', '926568239',
          '926587148', '13004781.ies@edu.jccm.es', 'http://ies-isabelmartinezbuendia.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -5668,7 +5668,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012088', 'Los Pitufos', '130610001', 'Cl. Paloma, 6', 'Cl. Paloma, 6', '',
+         '13012088', 'Los Pitufos', '130610001', 'Cl. Paloma, 6', '13620', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -5677,7 +5677,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004331', 'Maestro Juan de Ávila', '130610001', 'Cl. Maestro Juan de Avila, 13', 'Cl. Maestro Juan de Avila, 13', '926587122',
+         '13004331', 'Maestro Juan de Ávila', '130610001', 'Cl. Maestro Juan de Avila, 13', '13620', '926587122',
          '926587122', '13004331.cp@edu.jccm.es', 'http://ceip-maestrojuandeavila.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -5686,7 +5686,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002162', 'María Luisa Cañas', '130610001', 'Cl. del Zancara, 20', 'Cl. del Zancara, 20', '926568540',
+         '13002162', 'María Luisa Cañas', '130610001', 'Cl. del Zancara, 20', '13620', '926568540',
          '926569217', '13002162.cp@edu.jccm.es', 'http://ceip-lacopa.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5695,7 +5695,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002174', 'Nuestra Señora de los Ángeles', '130610001', 'Pz. de la Paz, S/N', 'Pz. de la Paz, S/N', '926587055',
+         '13002174', 'Nuestra Señora de los Ángeles', '130610001', 'Pz. de la Paz, S/N', '13620', '926587055',
          '926587055', '13002174.cp@edu.jccm.es', 'http://ceip-nuestrasenoradelosangeles.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5704,7 +5704,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002204', 'José María del Moral', '130620001', 'Cl. Cervantes, 4', 'Cl. Cervantes, 4', '926820107',
+         '13002204', 'José María del Moral', '130620001', 'Cl. Cervantes, 4', '13196', '926820107',
          '926820107', '13002204.cp@edu.jccm.es', 'http://edu.jccm.es/cp.jmdelmoral', 'Público', 'CEIP'
         )
         ;
@@ -5713,7 +5713,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003971', 'Luis Vives', '130630002', 'Cr. de Badajoz, S/N', 'Cr. de Badajoz, S/N', '926760343',
+         '13003971', 'Luis Vives', '130630002', 'Cr. de Badajoz, S/N', '13100', '926760343',
          '926760343', '13003971.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -5722,7 +5722,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002228', 'Miguel de Cervantes', '130630002', 'Cl. Rodriguez Marin, 1', 'Cl. Rodriguez Marin, 1', '926763813',
+         '13002228', 'Miguel de Cervantes', '130630002', 'Cl. Rodriguez Marin, 1', '13100', '926763813',
          '926763813', '13002228.cp@edu.jccm.es', 'http://ceip-cervantespiedrabuena.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5731,7 +5731,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005308', 'Mónico Sánchez', '130630002', 'Ps. de Castilla-La Mancha, S/N', 'Ps. de Castilla-La Mancha, S/N', '926760386',
+         '13005308', 'Mónico Sánchez', '130630002', 'Ps. de Castilla-La Mancha, S/N', '13100', '926760386',
          '926760145', '13005308.seces@edu.jccm.es', 'http://ies-monicosanchez.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -5740,7 +5740,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009582', 'Montes Norte', '130630002', 'Cl. Ruperto Villaverde, 48', 'Cl. Ruperto Villaverde, 48', '926778803',
+         '13009582', 'Montes Norte', '130630002', 'Cl. Ruperto Villaverde, 48', '13100', '926778803',
          '926762261', '13009582.cepa@edu.jccm.es', 'http://cepa-montesnorte.centros.castillalamancha.es', 'Público', 'CEPA'
         )
         ;
@@ -5749,7 +5749,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011898', 'El Parque de Dulcinea', '130640001', 'Cl. Esparragal, 3', 'Cl. Esparragal, 3', '926833276',
+         '13011898', 'El Parque de Dulcinea', '130640001', 'Cl. Esparragal, 3', '13195', '926833276',
          '926833276', '', '', 'Privado', 'EI'
         )
         ;
@@ -5758,7 +5758,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002290', 'La Alameda', '130640001', 'Cl. Alameda, S/N', 'Cl. Alameda, S/N', '926833118',
+         '13002290', 'La Alameda', '130640001', 'Cl. Alameda, S/N', '13195', '926833118',
          '926833118', '13002290.cp@edu.jccm.es', 'http://edu.jccm.es/cp/alameda', 'Público', 'CEIP'
         )
         ;
@@ -5767,7 +5767,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005084', '- Sin Denominación -', '130650002', 'Cr. de Toledo, S/N', 'Cr. de Toledo, S/N', '926778803',
+         '13005084', '- Sin Denominación -', '130650002', 'Cr. de Toledo, S/N', '13120', '926778803',
          '', 'aepa_porzuna@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -5776,7 +5776,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011473', 'Caramelo', '130650002', 'Cr. de Toledo, S/N', 'Cr. de Toledo, S/N', '926781328',
+         '13011473', 'Caramelo', '130650002', 'Cr. de Toledo, S/N', '13120', '926781328',
          '926780000', '', '', 'Público', 'EI'
         )
         ;
@@ -5785,7 +5785,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002356', 'Nuestra Señora de Guadalupe', '130650005', 'Pz. de Guadalupe, 8', 'Pz. de Guadalupe, 8', '926783412',
+         '13002356', 'Nuestra Señora de Guadalupe', '130650005', 'Pz. de Guadalupe, 8', '13194', '926783412',
          '936783412', '13002356.cp@edu.jccm.es', 'http://edu.jccm.es/cp.eltorno', 'Público', 'CEIP'
         )
         ;
@@ -5794,7 +5794,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002320', 'Nuestra Señora del Rosario', '130650002', 'Cr. de Toledo, S/N', 'Cr. de Toledo, S/N', '926780023',
+         '13002320', 'Nuestra Señora del Rosario', '130650002', 'Cr. de Toledo, S/N', '13120', '926780023',
          '926780023', '13002320.cp@edu.jccm.es', 'http://ceip-ntrasrarosario.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5803,7 +5803,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005199', 'Ribera del Bullaque', '130650002', 'Av. Dr. Garrido, S/N', 'Av. Dr. Garrido, S/N', '926781216',
+         '13005199', 'Ribera del Bullaque', '130650002', 'Av. Dr. Garrido, S/N', '13120', '926781216',
          '926781216', '13005199.ies@edu.jccm.es', 'http://ies-riberadelbullaque.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -5812,7 +5812,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005059', '- Sin Denominación -', '130660001', 'Pz. de España, 11', 'Pz. de España, 11', '926840277',
+         '13005059', '- Sin Denominación -', '130660001', 'Pz. de España, 11', '13179', '926840277',
          '926840710', 'aepa_pozuelodc@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -5821,7 +5821,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002368', 'José María de la Fuente', '130660001', 'Cl. los Molinos, S/N', 'Cl. los Molinos, S/N', '926840081',
+         '13002368', 'José María de la Fuente', '130660001', 'Cl. los Molinos, S/N', '13179', '926840081',
          '926840081', '13002368.cp@edu.jccm.es', 'http://ceip-jmdelafuente.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5830,7 +5830,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002371', 'Santa Quiteria', '130670001', 'Cl. Parque, S/N', 'Cl. Parque, S/N', '926832161',
+         '13002371', 'Santa Quiteria', '130670001', 'Cl. Parque, S/N', '13191', '926832161',
          '926832161', '13002371.cp@edu.jccm.es', 'http://edu.jccm.es/cp/santaquiteria', 'Público', 'CEIP'
         )
         ;
@@ -5839,7 +5839,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002401', 'San Fermín', '130680001', 'Cl. Diseminada, S/N', 'Cl. Diseminada, S/N', '926777046',
+         '13002401', 'San Fermín', '130680001', 'Cl. Diseminada, S/N', '13109', '926777046',
          '', '13002401.cp@edu.jccm.es', 'http://edu.jccm.es/cp.sanfermin', 'Público', 'CEIP'
         )
         ;
@@ -5848,7 +5848,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002423', 'Miguel González Calero', '130690001', 'Cl. 23 de Mayo, 4', 'Cl. 23 de Mayo, 4', '926359066',
+         '13002423', 'Miguel González Calero', '130690001', 'Cl. 23 de Mayo, 4', '13342', '926359066',
          '926359066', '13002423.cp@edu.jccm.es', 'http://edu.jccm.es/cp.miguelgonzalezcalero', 'Público', 'CEIP'
         )
         ;
@@ -5857,7 +5857,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002435', 'Juan Alcaide', '130700001', 'Gl. Juan Alcaide, 7', 'Gl. Juan Alcaide, 7', '926576008',
+         '13002435', 'Juan Alcaide', '130700001', 'Gl. Juan Alcaide, 7', '13650', '926576008',
          '', '13002435.cp@edu.jccm.es', 'http://edu.jccm.es/cp/juanalcaide', 'Público', 'CEIP'
         )
         ;
@@ -5866,7 +5866,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004286', 'Ángel Andrade', '130710004', 'Cl. Socuellamos, 49', 'Cl. Socuellamos, 49', '926427988',
+         '13004286', 'Ángel Andrade', '130710004', 'Cl. Socuellamos, 49', '13500', '926427988',
          '926427988', '13004286.cp@edu.jccm.es', 'http://ceip-angelandradepuertollano.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5875,7 +5875,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004213', 'Antonio Machado', '130710004', 'Cl. Abajo, S/N', 'Cl. Abajo, S/N', '926423850',
+         '13004213', 'Antonio Machado', '130710004', 'Cl. Abajo, S/N', '13500', '926423850',
          '926426554', '13004213.cea@edu.jccm.es', 'http://cepa-antoniomachado.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -5884,7 +5884,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004951', 'Aspades - la Laguna', '130710004', 'Cr. de Almodovar, S/N', 'Cr. de Almodovar, S/N', '926430270',
+         '13004951', 'Aspades - la Laguna', '130710004', 'Cr. de Almodovar, S/N', '13500', '926430270',
          '926413911', 'aspadeslaguna@fundacionfuenteagria.org', '', 'Priv.Concert.', ''
         )
         ;
@@ -5893,7 +5893,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002484', 'Calderón de la Barca', '130710004', 'Cl. Escuelas, 14', 'Cl. Escuelas, 14', '926426468',
+         '13002484', 'Calderón de la Barca', '130710004', 'Cl. Escuelas, 14', '13500', '926426468',
          '926426468', '13002484.CP@edu.jccm.es', 'http://ceip-calderondelabarca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5902,7 +5902,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011904', 'Cáritas', '130710004', 'Cl. Aprisco, 37', 'Cl. Aprisco, 37', '926426458',
+         '13011904', 'Cáritas', '130710004', 'Cl. Aprisco, 37', '13500', '926426458',
          '', 'caritas_puertollano@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -5911,7 +5911,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011047', 'Centro de Formación Dulcinea', '130710004', 'Av. 8 de Marzo, S/N', 'Av. 8 de Marzo, S/N', '926412514',
+         '13011047', 'Centro de Formación Dulcinea', '130710004', 'Av. 8 de Marzo, S/N', '13500', '926412514',
          '902101185', 'formacion@escuelasdulcinea.es', '', 'Privado', ''
         )
         ;
@@ -5920,7 +5920,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002472', 'Cervantes', '130710004', 'Cl. San Juan, 2', 'Cl. San Juan, 2', '926420762',
+         '13002472', 'Cervantes', '130710004', 'Cl. San Juan, 2', '13500', '926420762',
          '926420762', '13002472.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cervantespuertollano', 'Público', 'CEIP'
         )
         ;
@@ -5929,7 +5929,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011916', 'Chicos', '130710004', 'Cl. Norte, 39', 'Cl. Norte, 39', '926412331',
+         '13011916', 'Chicos', '130710004', 'Cl. Norte, 39', '13500', '926412331',
          '926430519', 'eichicos@ono.com', '', 'Privado', 'EI'
         )
         ;
@@ -5938,7 +5938,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004699', 'Comendador Juan de Távora', '130710004', 'Cl. Asdrubal, 51', 'Cl. Asdrubal, 51', '926411205',
+         '13004699', 'Comendador Juan de Távora', '130710004', 'Cl. Asdrubal, 51', '13500', '926411205',
          '926440223', '13004699.ies@edu.jccm.es', 'http://edu.jccm.es/ies/tavora', 'Público', 'IES'
         )
         ;
@@ -5947,7 +5947,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002708', 'Dámaso Alonso', '130710004', 'Av. de Almaden, S/N', 'Av. de Almaden, S/N', '926420036',
+         '13002708', 'Dámaso Alonso', '130710004', 'Av. de Almaden, S/N', '13500', '926420036',
          '926413496', '13002708.ies@edu.jccm.es', 'http://ies-damaso.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -5956,7 +5956,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004274', 'David Jiménez Avendaño', '130710004', 'Cl. Cañas, 21', 'Cl. Cañas, 21', '926427632',
+         '13004274', 'David Jiménez Avendaño', '130710004', 'Cl. Cañas, 21', '13500', '926427632',
          '926414125', '13004274.cp@edu.jccm.es', 'http://ceip-djavendano.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -5965,7 +5965,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002587', 'Doctor Limón', '130710004', 'Cl. Rosa, S/N', 'Cl. Rosa, S/N', '926440069',
+         '13002587', 'Doctor Limón', '130710004', 'Cl. Rosa, S/N', '13500', '926440069',
          '926440069', '13002587.cp@edu.jccm.es', 'http://edu.jccm.es/cp/doctorlimon', 'Público', 'CEIP'
         )
         ;
@@ -5974,7 +5974,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011928', 'Dulcinea Puertollano', '130710004', 'Cl. 8 de Marzo C/V Victoria Kent, S/N', 'Cl. 8 de Marzo C/V Victoria Kent, S/N', '926412514',
+         '13011928', 'Dulcinea Puertollano', '130710004', 'Cl. 8 de Marzo C/V Victoria Kent, S/N', '13500', '926412514',
          '926833276', 'puertollano@escuelasdulcinea.es', '', 'Privado', 'EI'
         )
         ;
@@ -5983,7 +5983,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011163', 'El Filón', '130710004', 'Cr. de Almodovar, S/N', 'Cr. de Almodovar, S/N', '926426169',
+         '13011163', 'El Filón', '130710004', 'Cr. de Almodovar, S/N', '13500', '926426169',
          '926426169', '13011163.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -5992,7 +5992,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004407', 'Enrique Tierno Galván', '130710004', 'Cl. Talavera Baja, 23', 'Cl. Talavera Baja, 23', '926431560',
+         '13004407', 'Enrique Tierno Galván', '130710004', 'Cl. Talavera Baja, 23', '13500', '926431560',
          '926428640', '13004407.cp@edu.jccm.es', 'http://edu.jccm.es/cp/etg', 'Público', 'CEIP'
         )
         ;
@@ -6001,7 +6001,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011059', 'Escuela Municipal de Danza', '130710004', 'Av. Primero de Mayo, 4', 'Av. Primero de Mayo, 4', '926411932',
+         '13011059', 'Escuela Municipal de Danza', '130710004', 'Av. Primero de Mayo, 4', '13500', '926411932',
          '', '', '', 'Público', ''
         )
         ;
@@ -6010,7 +6010,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002681', 'Fray Andrés', '130710004', 'Cl. Copa, 1', 'Cl. Copa, 1', '926424934',
+         '13002681', 'Fray Andrés', '130710004', 'Cl. Copa, 1', '13500', '926424934',
          '926425472', '13002681.ies@edu.jccm.es', 'http://edu.jccm.es/ies/frayandres', 'Público', 'IES'
         )
         ;
@@ -6019,7 +6019,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004811', 'Galileo Galilei', '130710004', 'Cl. Jaen, 1', 'Cl. Jaen, 1', '926430933',
+         '13004811', 'Galileo Galilei', '130710004', 'Cl. Jaen, 1', '13500', '926430933',
          '926440068', '13004811.ies@edu.jccm.es', 'http://ies-galileogalilei.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -6028,7 +6028,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002541', 'Giner de los Ríos', '130710004', 'Ps. de San Gregorio, 84', 'Ps. de San Gregorio, 84', '926426366',
+         '13002541', 'Giner de los Ríos', '130710004', 'Ps. de San Gregorio, 84', '13500', '926426366',
          '926426366', '13002541.cp@edu.jccm.es', 'http://edu.jccm.es/cp.ginerdelosrios', 'Público', 'CEIP'
         )
         ;
@@ -6037,7 +6037,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002551', 'Gonzalo de Berceo', '130710004', 'Cl. San Jose, 3', 'Cl. San Jose, 3', '926420578',
+         '13002551', 'Gonzalo de Berceo', '130710004', 'Cl. San Jose, 3', '13500', '926420578',
          '926420578', '13002551.cp@edu.jccm.es', 'http://ceip-gonzalodeberceo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6046,7 +6046,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002496', 'Inmaculada Enpetrol', '130710004', 'Cl. Valencia, 18', 'Cl. Valencia, 18', '926424922',
+         '13002496', 'Inmaculada Enpetrol', '130710004', 'Cl. Valencia, 18', '13500', '926424922',
          '926424922', 'inmaculada.enp@gmail.com', 'http://con-inmaculadaenpetrol.centros.castillalamancha.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6055,7 +6055,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009545', 'José Granero', '130710004', 'Cl. Malagon, S/N', 'Cl. Malagon, S/N', '926441953',
+         '13009545', 'José Granero', '130710004', 'Cl. Malagon, S/N', '13500', '926441953',
          '', '13009545.cd@edu.jccm.es', 'http://cd-conservatoriodanzapuertollano.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -6064,7 +6064,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003646', 'Juan Ramón Jiménez', '130710004', 'Cl. Paraguay, S/N', 'Cl. Paraguay, S/N', '926424325',
+         '13003646', 'Juan Ramón Jiménez', '130710004', 'Cl. Paraguay, S/N', '13500', '926424325',
          '926424325', '13003646.cp@edu.jccm.es', 'http://ceip-juanramonjimenez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6073,7 +6073,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004468', 'Leonardo Da Vinci', '130710004', 'Cl. Fernando el Santo, 86', 'Cl. Fernando el Santo, 86', '926431900',
+         '13004468', 'Leonardo Da Vinci', '130710004', 'Cl. Fernando el Santo, 86', '13500', '926431900',
          '926431969', '13004468.ies@edu.jccm.es', 'http://ies-leonardodavinci.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -6082,7 +6082,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002678', 'María Inmaculada', '130710004', 'Pz. de la Asuncion, 1', 'Pz. de la Asuncion, 1', '926426908',
+         '13002678', 'María Inmaculada', '130710004', 'Pz. de la Asuncion, 1', '13500', '926426908',
          '926426912', 'drp.mi.puertollano@hcsantaluisa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6091,7 +6091,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002502', 'Menéndez Pelayo', '130710004', 'Cl. Palomar, 2', 'Cl. Palomar, 2', '926421616',
+         '13002502', 'Menéndez Pelayo', '130710004', 'Cl. Palomar, 2', '13500', '926421616',
          '926421616', '13002502.cp@edu.jccm.es', 'http://edu.jccm.es/cp.menendezpelayo', 'Público', 'CEIP'
         )
         ;
@@ -6100,7 +6100,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002538', 'Miguel de Unamuno', '130710004', 'Cl. Piedrabuena, S/N', 'Cl. Piedrabuena, S/N', '926425218',
+         '13002538', 'Miguel de Unamuno', '130710004', 'Cl. Piedrabuena, S/N', '13500', '926425218',
          '926425218', '13002538.cp@edu.jccm.es', 'http://edu.jccm.es/cp/migueldeunamuno', 'Público', 'CEIP'
         )
         ;
@@ -6109,7 +6109,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004353', 'Pablo Sorozábal', '130710004', 'Av. Ciudad Real, S/N', 'Av. Ciudad Real, S/N', '926425165',
+         '13004353', 'Pablo Sorozábal', '130710004', 'Av. Ciudad Real, S/N', '13500', '926425165',
          '926440070', '13004353.cm@edu.jccm.es', 'http://cm-conservatoriopuertollano.centros.castillalamancha.es', 'Público', 'CPM'
         )
         ;
@@ -6118,7 +6118,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004596', 'Pozo Norte', '130710004', 'Cl. Asdrubal, 51', 'Cl. Asdrubal, 51', '926411205',
+         '13004596', 'Pozo Norte', '130710004', 'Cl. Asdrubal, 51', '13500', '926411205',
          '926440223', '13004596.eoi@edu.jccm.es', 'http://eoi-pozonortepuertollano.centros.castillalamancha.es', 'Público', 'EOI'
         )
         ;
@@ -6127,7 +6127,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002563', 'Ramón y Cajal', '130710004', 'Cl. Alejandro Prieto, 1', 'Cl. Alejandro Prieto, 1', '926420707',
+         '13002563', 'Ramón y Cajal', '130710004', 'Cl. Alejandro Prieto, 1', '13500', '926420707',
          '926420707', '13002563.cp@edu.jccm.es', 'http://ceip-rycpuertollano.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6136,7 +6136,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002460', 'San José', '130710004', 'Cl. la Plaza, 50', 'Cl. la Plaza, 50', '926425121',
+         '13002460', 'San José', '130710004', 'Cl. la Plaza, 50', '13500', '926425121',
          '926425121', 'direccion@sanjosepuertollano.org', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6145,7 +6145,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002630', 'San Juan Bosco', '130710004', 'Cl. Portugal,1', 'Cl. Portugal,1', '926425453',
+         '13002630', 'San Juan Bosco', '130710004', 'Cl. Portugal,1', '13500', '926425453',
          '926428396', 'colegiosanjuanbosco@salesianospuertollano.com', 'http://edu.jccm.es/pvips.sanjuanbosco', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6154,7 +6154,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002514', 'Santa Bárbara', '130710004', 'Cl. Fulgencio Arias, 21', 'Cl. Fulgencio Arias, 21', '926431713',
+         '13002514', 'Santa Bárbara', '130710004', 'Cl. Fulgencio Arias, 21', '13500', '926431713',
          '926951209', 'colsabar@ono.com', 'http://con-colegiosantabarbara.centros.castillalamancha.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6163,7 +6163,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002599', 'Severo Ochoa', '130710004', 'Cl. Porzuna, S/N', 'Cl. Porzuna, S/N', '926420243',
+         '13002599', 'Severo Ochoa', '130710004', 'Cl. Porzuna, S/N', '13500', '926420243',
          '926420243', '13002599.cp@edu.jccm.es', 'http://ceip-severoochoa.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6172,7 +6172,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012143', 'Trastes', '130710004', 'Cl. Menendez Pelayo, 11', 'Cl. Menendez Pelayo, 11', '',
+         '13012143', 'Trastes', '130710004', 'Cl. Menendez Pelayo, 11', '13500', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -6181,7 +6181,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002459', 'Vicente Aleixandre', '130710004', 'Cl. Valdepeñas, 1', 'Cl. Valdepeñas, 1', '926441788',
+         '13002459', 'Vicente Aleixandre', '130710004', 'Cl. Valdepeñas, 1', '13500', '926441788',
          '926441788', '13002459.cp@edu.jccm.es', 'http://edu.jccm.es/cp.vicentealeixandre', 'Público', 'CEIP'
         )
         ;
@@ -6190,7 +6190,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011175', 'Virgen de Gracia', '130710004', 'Cr. de Almodovar, 2', 'Cr. de Almodovar, 2', '926412211',
+         '13011175', 'Virgen de Gracia', '130710004', 'Cr. de Almodovar, 2', '13500', '926412211',
          '926427746', '13011175.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -6199,7 +6199,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002691', 'Virgen de Gracia', '130710004', 'Ps. San Gregorio, 82', 'Ps. San Gregorio, 82', '926426250',
+         '13002691', 'Virgen de Gracia', '130710004', 'Ps. San Gregorio, 82', '13500', '926426250',
          '926412350', '13002691.ies@edu.jccm.es', 'http://edu.jccm.es/ies/vgracia', 'Público', 'IES'
         )
         ;
@@ -6208,7 +6208,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010791', 'Montes de Toledo', '130720003', 'Av. del Rio Bullaque, 1', 'Av. del Rio Bullaque, 1', '925421671',
+         '13010791', 'Montes de Toledo', '130720003', 'Av. del Rio Bullaque, 1', '13194', '925421671',
          '925421671', '13010791.cra@edu.jccm.es', 'http://cra-montesdetoledo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6217,7 +6217,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005096', '- Sin Denominación -', '139010001', 'Cl. Zarza, 7', 'Cl. Zarza, 7', '926782003',
+         '13005096', '- Sin Denominación -', '139010001', 'Cl. Zarza, 7', '13114', '926782003',
          '', 'aepa_elrobledo@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -6226,7 +6226,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010778', 'Valle del Bullaque', '139010001', 'Cl. Candelaria, 19', 'Cl. Candelaria, 19', '926785085',
+         '13010778', 'Valle del Bullaque', '139010001', 'Cl. Candelaria, 19', '13114', '926785085',
          '926785085', '13010778.cra@edu.jccm.es', 'http://cra-valledelbullaque.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6235,7 +6235,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13000736', 'Juan Aguilar Molina', '139020001', 'Av. de Castilla-La Mancha, 69', 'Av. de Castilla-La Mancha, 69', '926528181',
+         '13000736', 'Juan Aguilar Molina', '139020001', 'Av. de Castilla-La Mancha, 69', '13249', '926528181',
          '926528181', '13000736.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -6244,7 +6244,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002800', 'Virgen de las Cruces', '130730001', 'Cl. Quijote, S/N', 'Cl. Quijote, S/N', '926779100',
+         '13002800', 'Virgen de las Cruces', '130730001', 'Cl. Quijote, S/N', '13414', '926779100',
          '926779100', '13002800.cp@edu.jccm.es', 'http://edu.jccm.es/cp.virgendelascruces', 'Público', 'CEIP'
         )
         ;
@@ -6253,7 +6253,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002824', 'San Juan Bosco', '130740001', 'Cl. Doctor Fleming, 2', 'Cl. Doctor Fleming, 2', '926630093',
+         '13002824', 'San Juan Bosco', '130740001', 'Cl. Doctor Fleming, 2', '13247', '926630093',
          '', '13002824.cp@edu.jccm.es', 'http://ceip-sanjuanbosco.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6262,7 +6262,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010781', 'Sierra Morena', '130750001', 'Cl. Rosales, 2', 'Cl. Rosales, 2', '926335071',
+         '13010781', 'Sierra Morena', '130750001', 'Cl. Rosales, 2', '13779', '926335071',
          '', '13010781.cra@edu.jccm.es', 'http://edu.jccm.es/cra/sierramorena', 'Público', 'CEIP'
         )
         ;
@@ -6271,7 +6271,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010869', '- Sin Denominación -', '130770001', 'Pz. Constitucion, S/N', 'Pz. Constitucion, S/N', '',
+         '13010869', '- Sin Denominación -', '130770001', 'Pz. Constitucion, S/N', '13730', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -6280,7 +6280,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002851', 'Cervantes', '130770001', 'Ps. Parque Municipal, S/N', 'Ps. Parque Municipal, S/N', '926349004',
+         '13002851', 'Cervantes', '130770001', 'Ps. Parque Municipal, S/N', '13730', '926349004',
          '926349004', '13002851.cp@edu.jccm.es', 'http://ceip-cervantessantacruz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6289,7 +6289,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011485', 'Gloria Fuertes', '130770001', 'Tr. Doctor Marañon, S/N', 'Tr. Doctor Marañon, S/N', '926331440',
+         '13011485', 'Gloria Fuertes', '130770001', 'Tr. Doctor Marañon, S/N', '13730', '926331440',
          '926331000', 'ssociales@stacruzmudela.org', '', 'Público', 'EI'
         )
         ;
@@ -6298,7 +6298,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002861', 'La Inmaculada', '130770001', 'Av. Pio Xii, 10', 'Av. Pio Xii, 10', '926342029',
+         '13002861', 'La Inmaculada', '130770001', 'Av. Pio Xii, 10', '13730', '926342029',
          '926342217', 'santacruzdir@concepcionistas.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6307,7 +6307,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005205', 'Máximo Laguna', '130770001', 'Pr. Gloria, S/N', 'Pr. Gloria, S/N', '926331409',
+         '13005205', 'Máximo Laguna', '130770001', 'Pr. Gloria, S/N', '13730', '926331409',
          '926331409', '13005205.ies@edu.jccm.es', 'http://ies-maximolaguna.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -6316,7 +6316,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005163', '- Sin Denominación -', '130780001', 'Cl. Ramiro Ledesma, S/N', 'Cl. Ramiro Ledesma, S/N', '926531296',
+         '13005163', '- Sin Denominación -', '130780001', 'Cl. Ramiro Ledesma, S/N', '13630', '926531296',
          '926513929', '13004559.cea@jccm', '', 'Público', ''
         )
         ;
@@ -6325,7 +6325,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011497', 'Arco Iris', '130780001', 'Cl. Muñoz Grande, 14', 'Cl. Muñoz Grande, 14', '926531530',
+         '13011497', 'Arco Iris', '130780001', 'Cl. Muñoz Grande, 14', '13630', '926531530',
          '', 'eiarcoiris@ayto-socuellamos.es', '', 'Público', 'EI'
         )
         ;
@@ -6334,7 +6334,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004316', 'Carmen Arias', '130780001', 'Cl. Villarrobledo, 34', 'Cl. Villarrobledo, 34', '926531326',
+         '13004316', 'Carmen Arias', '130780001', 'Cl. Villarrobledo, 34', '13630', '926531326',
          '926532786', '13004316.cp@edu.jccm.es', 'http://edu.jccm.es/cp/carmenarias', 'Público', 'CEIP'
         )
         ;
@@ -6343,7 +6343,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002885', 'El Coso', '130780001', 'Cl. Pedro Arias, 52', 'Cl. Pedro Arias, 52', '926530882',
+         '13002885', 'El Coso', '130780001', 'Cl. Pedro Arias, 52', '13630', '926530882',
          '926530882', '13002885.cp@edu.jccm.es', 'http://ceip-elcoso.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6352,7 +6352,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002903', 'Fernando de Mena', '130780001', 'Av. de Juan Xxiii, 18', 'Av. de Juan Xxiii, 18', '926530482',
+         '13002903', 'Fernando de Mena', '130780001', 'Av. de Juan Xxiii, 18', '13630', '926530482',
          '926532030', '13002903.ies@edu.jccm.es', 'http://ies-fernando-de-mena.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -6361,7 +6361,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002873', 'Gerardo Martínez', '130780001', 'Cl. Generalisimo, 155', 'Cl. Generalisimo, 155', '926530249',
+         '13002873', 'Gerardo Martínez', '130780001', 'Cl. Generalisimo, 155', '13630', '926530249',
          '926530249', '13002873.cp@edu.jccm.es', 'http://ceip-gerardomartinez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6370,7 +6370,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012179', 'La K@Sitos', '130780001', 'Cl. Carlos Vii, 19', 'Cl. Carlos Vii, 19', '',
+         '13012179', 'La K@Sitos', '130780001', 'Cl. Carlos Vii, 19', '13630', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -6379,7 +6379,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011941', 'Los Trastetes', '130780001', 'Ps. Martires, S/N', 'Ps. Martires, S/N', '926539136',
+         '13011941', 'Los Trastetes', '130780001', 'Ps. Martires, S/N', '13630', '926539136',
          '926539136', 'colegiovirgendeloreto@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -6388,7 +6388,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011953', 'Pekes', '130780001', 'Cl. el Principe, 1', 'Cl. el Principe, 1', '926532625',
+         '13011953', 'Pekes', '130780001', 'Cl. el Principe, 1', '13630', '926532625',
          '926532625', 'guarderiapekes@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -6397,7 +6397,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009600', 'Virgen de Loreto', '130780001', 'Ps. de los Mártires, S/N', 'Ps. de los Mártires, S/N', '926539135',
+         '13009600', 'Virgen de Loreto', '130780001', 'Ps. de los Mártires, S/N', '13630', '926539135',
          '926539136', 'colegiovirgendeloreto@yahoo.es', 'http://edu.jccm.es/con/virgendeloreto', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6406,7 +6406,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009511', 'Angel, Sancho y Lucía', '130790001', 'Cl. Concepcion, 10', 'Cl. Concepcion, 10', '926631000',
+         '13009511', 'Angel, Sancho y Lucía', '130790001', 'Cl. Concepcion, 10', '13240', '926631000',
          '926634045', '', '', 'Público', ''
         )
         ;
@@ -6415,7 +6415,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010924', 'Clara Campoamor', '130790001', 'Ps. de los Estudiantes, 2', 'Ps. de los Estudiantes, 2', '926648553',
+         '13010924', 'Clara Campoamor', '130790001', 'Ps. de los Estudiantes, 2', '13240', '926648553',
          '926648553', '13010924.ies@edu.jccm.es', 'http://ies-claracampoamor.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -6424,7 +6424,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004833', 'El Humilladero', '130790001', 'Cm. Altar de la Virgen, 1', 'Cm. Altar de la Virgen, 1', '926634516',
+         '13004833', 'El Humilladero', '130790001', 'Cm. Altar de la Virgen, 1', '13240', '926634516',
          '926635373', '13004833.cp@edu.jccm.es', 'http://edu.jccm.es/cp.elhumilladero', 'Público', 'CEIP'
         )
         ;
@@ -6433,7 +6433,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002940', 'El Santo', '130790001', 'Cl. Cruz de Hierro, 32', 'Cl. Cruz de Hierro, 32', '926648513',
+         '13002940', 'El Santo', '130790001', 'Cl. Cruz de Hierro, 32', '13240', '926648513',
          '926648513', '13002940.cp@edu.jccm.es', 'http://edu.jccm.es/cp/elsantolasolana', 'Público', 'CEIP'
         )
         ;
@@ -6442,7 +6442,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011001', 'Federico Romero', '130790001', 'Cl. Carrera, S/N', 'Cl. Carrera, S/N', '926635020',
+         '13011001', 'Federico Romero', '130790001', 'Cl. Carrera, S/N', '13240', '926635020',
          '926634557', '13011001.cp@edu.jccm.es', 'http://ceip-federicoromero.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6451,7 +6451,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010997', 'García Maroto', '130790001', 'Cl. de los Constructores, S/N', 'Cl. de los Constructores, S/N', '926633916',
+         '13010997', 'García Maroto', '130790001', 'Cl. de los Constructores, S/N', '13240', '926633916',
          '926634045', 'cepagarciamaroto@gmail.com', 'http://cepa-garciamaroto.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -6460,7 +6460,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011503', 'Hermanas Barrera', '130790001', 'Av. de la Romeria, S/N', 'Av. de la Romeria, S/N', '926648601',
+         '13011503', 'Hermanas Barrera', '130790001', 'Av. de la Romeria, S/N', '13240', '926648601',
          '926634045', 'caimunicipal@lasolana.es', '', 'Público', 'EI'
         )
         ;
@@ -6469,7 +6469,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004894', 'Javier Paulino Pérez', '130790001', 'Cl. Batalla del Salado, S/N', 'Cl. Batalla del Salado, S/N', '926632152',
+         '13004894', 'Javier Paulino Pérez', '130790001', 'Cl. Batalla del Salado, S/N', '13240', '926632152',
          '', '13004894.cp@edu.jccm.es', 'http://ceip-javierpaulino.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6478,7 +6478,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010912', 'La Moheda', '130790001', 'Av. de la Paz, S/N', 'Av. de la Paz, S/N', '926648897',
+         '13010912', 'La Moheda', '130790001', 'Av. de la Paz, S/N', '13240', '926648897',
          '926648897', '13010912.cp@edu.jccm.es', 'http://ceip-lamoheda.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6487,7 +6487,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002976', 'Modesto Navarro', '130790001', 'Av. Alcalde Lopez Posadas, S/N', 'Av. Alcalde Lopez Posadas, S/N', '926631206',
+         '13002976', 'Modesto Navarro', '130790001', 'Av. Alcalde Lopez Posadas, S/N', '13240', '926631206',
          '926631206', '13002976.ies@edu.jccm.es', 'http://edu.jccm.es/ies.modestonavarro', 'Público', 'IES'
         )
         ;
@@ -6496,7 +6496,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002939', 'Romero Peña', '130790001', 'Cl. San Quintin, 17', 'Cl. San Quintin, 17', '926631594',
+         '13002939', 'Romero Peña', '130790001', 'Cl. San Quintin, 17', '13240', '926631594',
          '926634208', '13002939.cp@edu.jccm.es', 'http://ceip-romeropena.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6505,7 +6505,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002927', 'Sagrado Corazón', '130790001', 'Cl. Lope de Vega, 1', 'Cl. Lope de Vega, 1', '926631001',
+         '13002927', 'Sagrado Corazón', '130790001', 'Cl. Lope de Vega, 1', '13240', '926631001',
          '926631001', '13002927.cp@edu.jccm.es', 'http://ceip-sagradocorazonlasolana.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6514,7 +6514,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13002952', 'San Luis Gonzaga', '130790001', 'Cl. Santa Ana, 10 Comendador, 5(Prim)', 'Cl. Santa Ana, 10 Comendador, 5(Prim)', '926648801',
+         '13002952', 'San Luis Gonzaga', '130790001', 'Cl. Santa Ana, 10 Comendador, 5(Prim)', '13240', '926648801',
          '926648801', 'csanluisgonzaga@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6523,7 +6523,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011187', 'Virgen del Camino', '130790001', 'Av. Constitucion, 3', 'Av. Constitucion, 3', '926631502',
+         '13011187', 'Virgen del Camino', '130790001', 'Av. Constitucion, 3', '13240', '926631502',
          '926635095', '13011187.ei@edu.jccm.es', 'http://edu.jccm.es/ei/virgendelcamino', 'Público', 'EI'
         )
         ;
@@ -6532,7 +6532,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003014', 'Miguel de Cervantes', '130810001', 'Av. de los Estudiantes, S/N', 'Av. de los Estudiantes, S/N', '926387083',
+         '13003014', 'Miguel de Cervantes', '130810001', 'Av. de los Estudiantes, S/N', '13341', '926387083',
          '926387083', '13003014.cp@edu.jccm.es', 'http://ceip-migueldecervantesterrinches.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6541,7 +6541,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004821', 'Airén', '130820002', 'Av. Juan Carlos I, S/N', 'Av. Juan Carlos I, S/N', '926506171',
+         '13004821', 'Airén', '130820002', 'Av. Juan Carlos I, S/N', '13700', '926506171',
          '926506263', '13004821.ies@edu.jccm.es', 'http://ies-airen.centros.castillalamancha.es/', 'Público', 'IES'
         )
         ;
@@ -6550,7 +6550,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004328', 'Almirante Topete', '130820002', 'Cl. Topete, 11', 'Cl. Topete, 11', '926513674',
+         '13004328', 'Almirante Topete', '130820002', 'Cl. Topete, 11', '13700', '926513674',
          '926503187', '13004328.cp@edu.jccm.es', 'http://ceip-almirantetopete.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6559,7 +6559,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005345', 'Alto Guadiana', '130820002', 'Cl. Lugo, 3', 'Cl. Lugo, 3', '926515065',
+         '13005345', 'Alto Guadiana', '130820002', 'Cl. Lugo, 3', '13700', '926515065',
          '926515820', '13005345.ies@edu.jccm.es', 'http://ies-altoguadiana.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -6568,7 +6568,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004122', 'Antonio López', '130820002', 'Av. Don Antonio Huertas, 2', 'Av. Don Antonio Huertas, 2', '926501101',
+         '13004122', 'Antonio López', '130820002', 'Av. Don Antonio Huertas, 2', '13700', '926501101',
          '926512923', '13004122.ea@edu.jccm.es', 'http://edu.jccm.es/ea.antoniolopez', 'Público', ''
         )
         ;
@@ -6577,7 +6577,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003051', 'Carmelo Cortés', '130820002', 'Cl. Padre Pedro, 4', 'Cl. Padre Pedro, 4', '926511718',
+         '13003051', 'Carmelo Cortés', '130820002', 'Cl. Padre Pedro, 4', '13700', '926511718',
          '926511935', '13003051.cp@edu.jccm.es', 'http://edu.jccm.es/cp/carmelocortes', 'Público', 'CEIP'
         )
         ;
@@ -6586,7 +6586,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004419', 'Conservatorio Municipal de Música', '130820002', 'Cl. Pintor Francisco Carretero, 8', 'Cl. Pintor Francisco Carretero, 8', '926510968',
+         '13004419', 'Conservatorio Municipal de Música', '130820002', 'Cl. Pintor Francisco Carretero, 8', '13700', '926510968',
          '', 'conservatorio@aytotomelloso.es', 'http://www.clipenet.org/usuarios/conservatorio', 'Público', ''
         )
         ;
@@ -6595,7 +6595,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003075', 'Doña Crisanta', '130820002', 'Cl. Calatrava, 1', 'Cl. Calatrava, 1', '926510889',
+         '13003075', 'Doña Crisanta', '130820002', 'Cl. Calatrava, 1', '13700', '926510889',
          '926503184', '13003075.cp@edu.jccm.es', 'http://edu.jccm.es/cp/donacrisanta', 'Público', 'CEIP'
         )
         ;
@@ -6604,7 +6604,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011199', 'Dulcinea', '130820002', 'Cm. de Garza, S/N', 'Cm. de Garza, S/N', '926513257',
+         '13011199', 'Dulcinea', '130820002', 'Cm. de Garza, S/N', '13700', '926513257',
          '926513257', '13011199.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -6613,7 +6613,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003129', 'Eladio Cabañero', '130820002', 'Cl. Lugo, 7', 'Cl. Lugo, 7', '926510033',
+         '13003129', 'Eladio Cabañero', '130820002', 'Cl. Lugo, 7', '13700', '926510033',
          '926505358', '13003129.ies@edu.jccm.es', 'http://edu.jccm.es/ies/eladioca', 'Público', 'IES'
         )
         ;
@@ -6622,7 +6622,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003981', 'Embajadores', '130820002', 'Rd. Embajadores, S/N', 'Rd. Embajadores, S/N', '926511712',
+         '13003981', 'Embajadores', '130820002', 'Rd. Embajadores, S/N', '13700', '926511712',
          '', '13003981.cp@edu.jccm.es', 'http://ceip-embajadores.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6631,7 +6631,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009478', 'Felix Grande', '130820002', 'Tr. Juan Carlos I, S/N', 'Tr. Juan Carlos I, S/N', '926515658',
+         '13009478', 'Felix Grande', '130820002', 'Tr. Juan Carlos I, S/N', '13700', '926515658',
          '926504420', '13009478.cp@edu.jccm.es', 'http://ceip-felixgrande.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6640,7 +6640,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003130', 'Francisco García Pavón', '130820002', 'Av. de Antonio Huertas, 34', 'Av. de Antonio Huertas, 34', '926501840',
+         '13003130', 'Francisco García Pavón', '130820002', 'Av. de Antonio Huertas, 34', '13700', '926501840',
          '926501841', '13003130.ies@edu.jccm.es', 'http://edu.jccm.es/ies/francisco_garcia_pavon', 'Público', 'IES'
         )
         ;
@@ -6649,7 +6649,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003087', 'José Antonio', '130820002', 'Cl. Campo, S/N', 'Cl. Campo, S/N', '926538063',
+         '13003087', 'José Antonio', '130820002', 'Cl. Campo, S/N', '13700', '926538063',
          '926538063', '13003087.cp@edu.jccm.es', 'http://edu.jccm.es/cp/tomelloso', 'Público', 'CEIP'
         )
         ;
@@ -6658,7 +6658,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003041', 'José María del Moral', '130820002', 'Cl. las Reatas, 2', 'Cl. las Reatas, 2', '926538066',
+         '13003041', 'José María del Moral', '130820002', 'Cl. las Reatas, 2', '13700', '926538066',
          '926538066', '13003041.cp@edu.jccm.es', 'http://edu.jccm.es/cp/josemariadelmoral', 'Público', 'CEIP'
         )
         ;
@@ -6667,7 +6667,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012027', 'Lorencete', '130820002', 'Cl. las Dunas, S/N', 'Cl. las Dunas, S/N', '',
+         '13012027', 'Lorencete', '130820002', 'Cl. las Dunas, S/N', '13700', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -6676,7 +6676,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004742', 'Mar de Viñas', '130820002', 'Cl. General Pinto, 1 (Apdo. de Correos 237)', 'Cl. General Pinto, 1 (Apdo. de Correos 237)', '926504584',
+         '13004742', 'Mar de Viñas', '130820002', 'Cl. General Pinto, 1 (Apdo. de Correos 237)', '13700', '926504584',
          '926505447', '13004742.eoi@edu.jccm.es', 'http://eoi-tomelloso.centros.castillalamancha.es', 'Público', 'EOI'
         )
         ;
@@ -6685,7 +6685,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011515', 'Mediodía', '130820002', 'Cl. Mediodia, 46', 'Cl. Mediodia, 46', '926506057',
+         '13011515', 'Mediodía', '130820002', 'Cl. Mediodia, 46', '13700', '926506057',
          '926506057', 'eimediodia@aytotomelloso.es', '', 'Público', 'EI'
         )
         ;
@@ -6694,7 +6694,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003038', 'Miguel de Cervantes', '130820002', 'Cl. Matadero, 8', 'Cl. Matadero, 8', '926538039',
+         '13003038', 'Miguel de Cervantes', '130820002', 'Cl. Matadero, 8', '13700', '926538039',
          '', '13003038.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cervantestomelloso', 'Público', 'CEIP'
         )
         ;
@@ -6703,7 +6703,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012222', 'Patitos', '130820002', 'Cl. Oriente, 5', 'Cl. Oriente, 5', '',
+         '13012222', 'Patitos', '130820002', 'Cl. Oriente, 5', '13700', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -6712,7 +6712,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004080', 'Ponce de León', '130820002', 'Cl. Alambique, S/N', 'Cl. Alambique, S/N', '926507000',
+         '13004080', 'Ponce de León', '130820002', 'Cl. Alambique, S/N', '13700', '926507000',
          '926506888', '13004080.cee@edu.jccm.es', 'http://poncedeleontomelloso.blogspot.com.es', 'Público', 'CEE'
         )
         ;
@@ -6721,7 +6721,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004109', 'San Antonio', '130820002', 'Cl. San Antonio, S/N', 'Cl. San Antonio, S/N', '926511746',
+         '13004109', 'San Antonio', '130820002', 'Cl. San Antonio, S/N', '13700', '926511746',
          '926511746', '13004109.cp@edu.jccm.es', 'http://ceip-sanantonio.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6730,7 +6730,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003993', 'San Isidro', '130820002', 'Ps. de San Isidro, S/N - Apdo. 161', 'Ps. de San Isidro, S/N - Apdo. 161', '926512577',
+         '13003993', 'San Isidro', '130820002', 'Ps. de San Isidro, S/N - Apdo. 161', '13700', '926512577',
          '926512577', '13003993.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ceipsanisidro', 'Público', 'CEIP'
         )
         ;
@@ -6739,7 +6739,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003762', 'San José de Calasanz', '130820002', 'Cl. Soria, S/N', 'Cl. Soria, S/N', '926511806',
+         '13003762', 'San José de Calasanz', '130820002', 'Cl. Soria, S/N', '13700', '926511806',
          '926511806', '13003762.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sanjosecalasanz', 'Público', 'CEIP'
         )
         ;
@@ -6748,7 +6748,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003105', 'Santo Tomás de Aquino-La Milagrosa', '130820002', 'Cl. Socuellamos, 16 (Apdo. 36)', 'Cl. Socuellamos, 16 (Apdo. 36)', '926510213',
+         '13003105', 'Santo Tomás de Aquino-La Milagrosa', '130820002', 'Cl. Socuellamos, 16 (Apdo. 36)', '13700', '926510213',
          '926510213', 'jjose.pagan@colegiosfec.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -6757,7 +6757,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004559', 'Simienza', '130820002', 'Cl. Garcia Pavon, 136', 'Cl. Garcia Pavon, 136', '926513929',
+         '13004559', 'Simienza', '130820002', 'Cl. Garcia Pavon, 136', '13700', '926513929',
          '926513929', '13004559.cea@edu.jccm.es', 'http://cepa-simienza.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -6766,7 +6766,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004948', 'Virgen de las Viñas', '130820002', 'Cl. Galicia, 2', 'Cl. Galicia, 2', '926538077',
+         '13004948', 'Virgen de las Viñas', '130820002', 'Cl. Galicia, 2', '13700', '926538077',
          '926538077', '13004948.cp@edu.jccm.es', 'http://ceip-virgendelasvinas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6775,7 +6775,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003142', 'Cristo del Consuelo', '130830001', 'Cl. Dulcinea, S/N', 'Cl. Dulcinea, S/N', '926811904',
+         '13003142', 'Cristo del Consuelo', '130830001', 'Cl. Dulcinea, S/N', '13160', '926811904',
          '926811904', '13003142.cp@edu.jccm.es', 'http://ceip-cristodelconsuelo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6784,7 +6784,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011527', 'El Arca de los Sueños', '130830001', 'Cl. Malagon, 25', 'Cl. Malagon, 25', '926810181',
+         '13011527', 'El Arca de los Sueños', '130830001', 'Cl. Malagon, 25', '13160', '926810181',
          '926811201', '', '', 'Público', 'EI'
         )
         ;
@@ -6793,7 +6793,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012040', 'Escuela de Música de Torralba de Calatrava', '130830001', 'Cl. Cristo, 6', 'Cl. Cristo, 6', '',
+         '13012040', 'Escuela de Música de Torralba de Calatrava', '130830001', 'Cl. Cristo, 6', '13160', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -6802,7 +6802,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011539', '- Sin Denominación -', '130840001', 'Cl. Cervantes, 1', 'Cl. Cervantes, 1', '926383404',
+         '13011539', '- Sin Denominación -', '130840001', 'Cl. Cervantes, 1', '13344', '926383404',
          '', 'cai.torre@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -6811,7 +6811,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003178', 'Francisco de Quevedo', '130840001', 'Cl. San Anton, 33', 'Cl. San Anton, 33', '926383068',
+         '13003178', 'Francisco de Quevedo', '130840001', 'Cl. San Anton, 33', '13344', '926383068',
          '926383068', '13003178.cp@edu.jccm.es', 'http://edu.jccm.es/cp/quevedo', 'Público', 'CEIP'
         )
         ;
@@ -6820,7 +6820,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011540', 'Nuestra Señora de la Cabeza', '130850001', 'Cl. Arjona, 53', 'Cl. Arjona, 53', '926332191',
+         '13011540', 'Nuestra Señora de la Cabeza', '130850001', 'Cl. Arjona, 53', '13740', '926332191',
          '926341408', '', '', 'Público', 'EI'
         )
         ;
@@ -6829,7 +6829,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003181', 'Santiago el Mayor', '130850001', 'Cl. Constitucion, 125', 'Cl. Constitucion, 125', '926344702',
+         '13003181', 'Santiago el Mayor', '130850001', 'Cl. Constitucion, 125', '13740', '926344702',
          '926344709', '13003181.cp@edu.jccm.es', 'http://ceip-santiagoelmayor.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6838,7 +6838,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003208', 'Virgen del Valle', '0000', 'Cl. la Cañada, S/N', 'Cl. la Cañada, S/N', '926741853',
+         '13003208', 'Virgen del Valle', '0000', 'Cl. la Cañada, S/N', '13411', '926741853',
          '926741741', '13003208.cp@edu.jccm.es', 'http://edu.jccm.es/cp/virgendelvalle', 'Público', 'CEIP'
         )
         ;
@@ -6847,7 +6847,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003324', 'Bernardo de Balbuena', '130870001', 'Av. Estudiantes, 103', 'Av. Estudiantes, 103', '926321831',
+         '13003324', 'Bernardo de Balbuena', '130870001', 'Av. Estudiantes, 103', '13300', '926321831',
          '926348041', '13003324.ies@edu.jccm.es', 'http://ies-bbalbuena.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -6856,7 +6856,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011552', 'Cachiporro', '130870001', 'Cl. Colombia, S/N', 'Cl. Colombia, S/N', '926329200',
+         '13011552', 'Cachiporro', '130870001', 'Cl. Colombia, S/N', '13300', '926329200',
          '926329200', 'escuelainfantil@valdepenas.es', '', 'Público', 'EI'
         )
         ;
@@ -6865,7 +6865,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011205', 'Cervantes', '130870001', 'Cl. Santa Paz, S/N (Barrio del Lucero)', 'Cl. Santa Paz, S/N (Barrio del Lucero)', '926323496',
+         '13011205', 'Cervantes', '130870001', 'Cl. Santa Paz, S/N (Barrio del Lucero)', '13300', '926323496',
          '926323496', '13011205.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -6874,7 +6874,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004845', 'Ciudad de Valdepeñas', '130870001', 'Av. Estudiantes, S/N', 'Av. Estudiantes, S/N', '926311557',
+         '13004845', 'Ciudad de Valdepeñas', '130870001', 'Av. Estudiantes, S/N', '13300', '926311557',
          '926313341', '13004845.eoi@edu.jccm.es', 'http://edu.jccm.es/eoi/valdepenas/', 'Público', 'EOI'
         )
         ;
@@ -6883,7 +6883,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012209', 'Escune', '130870001', 'Av. de los Estudiantes, 99', 'Av. de los Estudiantes, 99', '',
+         '13012209', 'Escune', '130870001', 'Av. de los Estudiantes, 99', '13300', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -6892,7 +6892,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004225', 'Francisco de Quevedo', '130870001', 'Av. los Estudiantes, S/N', 'Av. los Estudiantes, S/N', '926325395',
+         '13004225', 'Francisco de Quevedo', '130870001', 'Av. los Estudiantes, S/N', '13300', '926325395',
          '926325395', '13004225.cea@edu.jccm.es', 'http://edu.jccm.es/cea/valdep', 'Público', ''
         )
         ;
@@ -6901,7 +6901,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004766', 'Francisco Nieva', '130870001', 'Av. de los Estudiantes, 99', 'Av. de los Estudiantes, 99', '926310521',
+         '13004766', 'Francisco Nieva', '130870001', 'Av. de los Estudiantes, 99', '13300', '926310521',
          '926320130', '13004766.ies@edu.jccm.es', 'http://ies-francisconieva.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -6910,7 +6910,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003336', 'Gregorio Prieto', '130870001', 'Av. de los Estudiantes, S/N', 'Av. de los Estudiantes, S/N', '926321903',
+         '13003336', 'Gregorio Prieto', '130870001', 'Av. de los Estudiantes, S/N', '13300', '926321903',
          '926320234', '13003336.ies@edu.jccm.es', 'http://edu.jccm.es/ies/gprieto', 'Público', 'IES'
         )
         ;
@@ -6919,7 +6919,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13009533', 'Ignacio Morales Nieva', '130870001', 'Cl. Buensuceso, 23', 'Cl. Buensuceso, 23', '926316055',
+         '13009533', 'Ignacio Morales Nieva', '130870001', 'Cl. Buensuceso, 23', '13300', '926316055',
          '', 'conservatorio@valdepenas.es', '', 'Público', ''
         )
         ;
@@ -6928,7 +6928,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003211', 'Jesús Baeza', '130870001', 'Cl. Real, S/N', 'Cl. Real, S/N', '926348063',
+         '13003211', 'Jesús Baeza', '130870001', 'Cl. Real, S/N', '13300', '926348063',
          '926348063', '13003211.cp@edu.jccm.es', 'http://ceip-jesusbaeza.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6937,7 +6937,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003233', 'Jesús Castillo', '130870001', 'Cl. Feria del Vino, S/N', 'Cl. Feria del Vino, S/N', '926320420',
+         '13003233', 'Jesús Castillo', '130870001', 'Cl. Feria del Vino, S/N', '13300', '926320420',
          '926347452', '13003233.cp@edu.jccm.es', 'http://ceip-jesuscastillo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6946,7 +6946,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003221', 'Lorenzo Medina', '130870001', 'Cl. Bataneros, 16', 'Cl. Bataneros, 16', '926321058',
+         '13003221', 'Lorenzo Medina', '130870001', 'Cl. Bataneros, 16', '13300', '926321058',
          '926321058', '13003221.cp@edu.jccm.es', 'http://ceip-lorenzomedina.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -6955,7 +6955,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003245', 'Lucero', '130870001', 'Tr. del Lucero, 2', 'Tr. del Lucero, 2', '926320753',
+         '13003245', 'Lucero', '130870001', 'Tr. del Lucero, 2', '13300', '926320753',
          '926320753', '13003245.cp@edu.jccm.es', 'http://ceip-lucero.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6964,7 +6964,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003257', 'Luis Palacios', '130870001', 'Cl. Cristo, 88', 'Cl. Cristo, 88', '926348061',
+         '13003257', 'Luis Palacios', '130870001', 'Cl. Cristo, 88', '13300', '926348061',
          '926348061', '13003257.cp@edu.jccm.es', 'http://edu.jccm.es/cp/luispalacios', 'Público', 'CEIP'
         )
         ;
@@ -6973,7 +6973,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004006', 'Maestro Juan Alcaide', '130870001', 'Tr. de las Cruces, 25', 'Tr. de las Cruces, 25', '926323404',
+         '13004006', 'Maestro Juan Alcaide', '130870001', 'Tr. de las Cruces, 25', '13300', '926323404',
          '926323404', '13004006.cp@edu.jccm.es', 'http://ceip-maestrojuanalcaide.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -6982,7 +6982,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010948', 'María Luisa Navarro Margati', '130870001', 'Cl. Jose Pintado, 1', 'Cl. Jose Pintado, 1', '926321310',
+         '13010948', 'María Luisa Navarro Margati', '130870001', 'Cl. Jose Pintado, 1', '13300', '926321310',
          '926321310', '13010948.cee@edu.jccm.es', 'http://edu.jccm.es/cee.mlnmargati', 'Público', 'CEE'
         )
         ;
@@ -6991,7 +6991,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003294', 'Nuestra Señora de los Dolores', '130870001', 'Cl. Real, 28', 'Cl. Real, 28', '926321650',
+         '13003294', 'Nuestra Señora de los Dolores', '130870001', 'Cl. Real, 28', '13300', '926321650',
          '926310646', 'dtitular.valdepenas@stfma.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7000,7 +7000,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003270', 'San Agustín', '130870001', 'Pz. del Convento, 1', 'Pz. del Convento, 1', '926322105',
+         '13003270', 'San Agustín', '130870001', 'Pz. del Convento, 1', '13300', '926322105',
          '926320831', 'agustinasval@yahoo.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7009,7 +7009,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003300', 'Santísima Trinidad', '130870001', 'Cl. Virgen, 35', 'Cl. Virgen, 35', '926320017',
+         '13003300', 'Santísima Trinidad', '130870001', 'Cl. Virgen, 35', '13300', '926320017',
          '926322374', 'strinidadval@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7018,7 +7018,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003348', 'Virgen de Consolación', '130870002', 'Cl. Antonio Machado, S/N', 'Cl. Antonio Machado, S/N', '926318037',
+         '13003348', 'Virgen de Consolación', '130870002', 'Cl. Antonio Machado, S/N', '13310', '926318037',
          '926318037', '13003348.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -7027,7 +7027,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003661', 'Virgen de la Cabeza', '130870001', 'Cl. la Virgen, 155', 'Cl. la Virgen, 155', '926323385',
+         '13003661', 'Virgen de la Cabeza', '130870001', 'Cl. la Virgen, 155', '13300', '926323385',
          '926323385', '13003661.con@edu.jccm.es', 'http://edu.jccm.es/con/virgencabeza', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7036,7 +7036,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011217', 'Virgen de la Consolación', '130870001', 'Cl. Limon, 27', 'Cl. Limon, 27', '926320828',
+         '13011217', 'Virgen de la Consolación', '130870001', 'Cl. Limon, 27', '13300', '926320828',
          '926320828', '13011217.ei@edu.jccm.es', 'http://edu.jccm.es/eei.virgendelaconsolacion', 'Público', 'EI'
         )
         ;
@@ -7045,7 +7045,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003361', 'Nuestra Señora del Rosario', '130880001', 'Cl. Marqueses de Torremejias, 6', 'Cl. Marqueses de Torremejias, 6', '926867039',
+         '13003361', 'Nuestra Señora del Rosario', '130880001', 'Cl. Marqueses de Torremejias, 6', '13279', '926867039',
          '', '13003361.cp@edu.jccm.es', 'http://ceip-rosariovalenzuela.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7054,7 +7054,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003385', 'San Agustín', '130890002', 'Cl. la Lopez, S/N', 'Cl. la Lopez, S/N', '926375102',
+         '13003385', 'San Agustín', '130890002', 'Cl. la Lopez, S/N', '13332', '926375102',
          '', '13003385.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sanagustin', 'Público', 'CEIP'
         )
         ;
@@ -7063,7 +7063,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011564', 'Virgen de la Carrasca', '130890002', 'Tr. Virgen, 18', 'Tr. Virgen, 18', '926366177',
+         '13011564', 'Virgen de la Carrasca', '130890002', 'Tr. Virgen, 18', '13332', '926366177',
          '', 'escuelainfantilcarrasca@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -7072,7 +7072,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011989', '- Sin Denominación -', '130900001', 'Cl. Abrevadero, S/N', 'Cl. Abrevadero, S/N', '',
+         '13011989', '- Sin Denominación -', '130900001', 'Cl. Abrevadero, S/N', '13343', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -7081,7 +7081,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003397', 'Nuestra Señora de Gracia', '130900001', 'Cl. Maestra Julia Alcaide, 1', 'Cl. Maestra Julia Alcaide, 1', '926354084',
+         '13003397', 'Nuestra Señora de Gracia', '130900001', 'Cl. Maestra Julia Alcaide, 1', '13343', '926354084',
          '926354084', '13003397.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -7090,7 +7090,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003403', 'Inocente Martín', '130910001', 'Av. del Rey, S/N', 'Av. del Rey, S/N', '926466140',
+         '13003403', 'Inocente Martín', '130910001', 'Av. del Rey, S/N', '13595', '926466140',
          '926466140', '13003403.cp@edu.jccm.es', 'http://ceip-inocentemartin.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7099,7 +7099,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003415', 'Inmaculada Concepción', '130920001', 'Cl. Principe de Asturias, 2', 'Cl. Principe de Asturias, 2', '967396220',
+         '13003415', 'Inmaculada Concepción', '130920001', 'Cl. Principe de Asturias, 2', '13330', '967396220',
          '967396220', '13003415.cp@edu.jccm.es', 'http://edu.jccm.es/cp/inmaculada', 'Público', 'CEIP'
         )
         ;
@@ -7108,7 +7108,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011576', 'Mafalda', '130920001', 'Cl. Escuelas, 3', 'Cl. Escuelas, 3', '967396211',
+         '13011576', 'Mafalda', '130920001', 'Cl. Escuelas, 3', '13330', '967396211',
          '967396606', 'mafaldaescuelainfantil@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -7117,7 +7117,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005412', 'Mentesa Oretana', '130920001', 'Cl. Cañada Real, 7', 'Cl. Cañada Real, 7', '967396063',
+         '13005412', 'Mentesa Oretana', '130920001', 'Cl. Cañada Real, 7', '13330', '967396063',
          '967396063', '13005412.ieso@edu.jccm.es', 'http://edu.jccm.es/ieso.mentesaoretana', 'Público', ''
         )
         ;
@@ -7126,7 +7126,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003440', 'Arqueólogo García Bellido', '130930001', 'Cl. Feria, 1', 'Cl. Feria, 1', '926378003',
+         '13003440', 'Arqueólogo García Bellido', '130930001', 'Cl. Feria, 1', '13320', '926378003',
          '926378003', '13003440.cp@edu.jccm.es', 'http://edu.jccm.es/cp.garciabellido', 'Público', 'CEIP'
         )
         ;
@@ -7135,7 +7135,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13010936', 'Campo de Montiel', '130930001', 'Cl. San Isidro, 1', 'Cl. San Isidro, 1', '',
+         '13010936', 'Campo de Montiel', '130930001', 'Cl. San Isidro, 1', '13320', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -7144,7 +7144,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003464', 'Francisco de Quevedo', '130930001', 'Cr. de Almedina, S/N', 'Cr. de Almedina, S/N', '926350203',
+         '13003464', 'Francisco de Quevedo', '130930001', 'Cr. de Almedina, S/N', '13320', '926350203',
          '926350177', '13003464.ies@edu.jccm.es', 'http://edu.jccm.es/ies/franciscoquevedo', 'Público', 'IES'
         )
         ;
@@ -7153,7 +7153,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005175', 'Miguel de Cervantes', '130930001', 'Cl. Jose Francisco de Bustos, 34', 'Cl. Jose Francisco de Bustos, 34', '926350197',
+         '13005175', 'Miguel de Cervantes', '130930001', 'Cl. Jose Francisco de Bustos, 34', '13320', '926350197',
          '926350197', '13005175.cea@edu.jccm.es', 'http://cepa-infantes.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -7162,7 +7162,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004018', 'Ramón Giraldo', '130930001', 'Cl. Feria, S/N', 'Cl. Feria, S/N', '926360276',
+         '13004018', 'Ramón Giraldo', '130930001', 'Cl. Feria, S/N', '13320', '926360276',
          '926350318', '13004018.ies@edu.jccm.es', 'http://ies-ramongiraldo.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7171,7 +7171,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003452', 'Sagrado Corazón de Jesús', '130930001', 'Cl. Santo Tomas, 1', 'Cl. Santo Tomas, 1', '926360900',
+         '13003452', 'Sagrado Corazón de Jesús', '130930001', 'Cl. Santo Tomas, 1', '13320', '926360900',
          '926360900', 'colegioccorazon@gmail.com', 'http://edu.jccm.es/con/ccorazon', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7180,7 +7180,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011588', 'Santo Tomasillo', '130930001', 'Cl. Barreria de Garate, 18', 'Cl. Barreria de Garate, 18', '926361117',
+         '13011588', 'Santo Tomasillo', '130930001', 'Cl. Barreria de Garate, 18', '13320', '926361117',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -7189,7 +7189,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13005060', '- Sin Denominación -', '130960001', 'Pz. de la Constitucion, 2', 'Pz. de la Constitucion, 2', '926260033',
+         '13005060', '- Sin Denominación -', '130960001', 'Pz. de la Constitucion, 2', '13670', '926260033',
          '926260033', '13004641.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -7198,7 +7198,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011229', 'Guadiana', '130960001', 'Cl. Serafin Romeu, 37', 'Cl. Serafin Romeu, 37', '926896964',
+         '13011229', 'Guadiana', '130960001', 'Cl. Serafin Romeu, 37', '13670', '926896964',
          '926896964', '13011229.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -7207,7 +7207,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004900', 'Guadiana', '130960001', 'Cl. Instituto, 2', 'Cl. Instituto, 2', '926898381',
+         '13004900', 'Guadiana', '130960001', 'Cl. Instituto, 2', '13670', '926898381',
          '926898381', '13004900.ies@edu.jccm.es', 'http://ies-guadiana.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7216,7 +7216,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003521', 'Rufino Blanco', '130960001', 'Av. de Cristo Rey, 70', 'Av. de Cristo Rey, 70', '926114304',
+         '13003521', 'Rufino Blanco', '130960001', 'Av. de Cristo Rey, 70', '13670', '926114304',
          '926896404', '13003521.cp@edu.jccm.es', 'http://edu.jccm.es/cp/rufinoblanco', 'Público', 'CEIP'
         )
         ;
@@ -7225,7 +7225,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003543', 'Santa Rosa', '130960001', 'Cl. Iglesia,12 (Ei Ep), y Av.De la Virgen, S/N (Eso)', 'Cl. Iglesia,12 (Ei Ep), y Av.De la Virgen, S/N (Eso)', '926896053',
+         '13003543', 'Santa Rosa', '130960001', 'Cl. Iglesia,12 (Ei Ep), y Av.De la Virgen, S/N (Eso)', '13670', '926896053',
          '926898205', 'santarosa@planalfa.es', 'http://edu.jccm.es/con/santarosa', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7234,7 +7234,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003658', 'Virgen de la Sierra', '130960001', 'Cl. Avila, S/N', 'Cl. Avila, S/N', '926896561',
+         '13003658', 'Virgen de la Sierra', '130960001', 'Cl. Avila, S/N', '13670', '926896561',
          '926896274', '13003658.cp@edu.jccm.es', 'http://edu.jccm.es/cp/virgendelasierra', 'Público', 'CEIP'
         )
         ;
@@ -7243,7 +7243,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13011591', '- Sin Denominación -', '130970001', 'Cl. Juan de Avila, 1 y 3', 'Cl. Juan de Avila, 1 y 3', '926160012',
+         '13011591', '- Sin Denominación -', '130970001', 'Cl. Juan de Avila, 1 y 3', '13210', '926160012',
          '', 'caisoletes@navigo.es', '', 'Público', 'EI'
         )
         ;
@@ -7252,7 +7252,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003555', 'Nuestra Señora de la Paz', '130970001', 'Cl. Chica, 15', 'Cl. Chica, 15', '926642051',
+         '13003555', 'Nuestra Señora de la Paz', '130970001', 'Cl. Chica, 15', '13210', '926642051',
          '926642051', '13003555.cp@edu.jccm.es', 'http://ceip-nsdelapaz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7261,7 +7261,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13004791', 'Los Batanes', '130980008', 'Cl. Antonia Ruiz, 2', 'Cl. Antonia Ruiz, 2', '926337210',
+         '13004791', 'Los Batanes', '130980008', 'Cl. Antonia Ruiz, 2', '13770', '926337210',
          '926337106', '13004791.ies@edu.jccm.es', 'http://ies-losbatanes.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7270,7 +7270,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13012234', 'Los Siete Colores', '130980008', 'Cl. Almagro, 55', 'Cl. Almagro, 55', '',
+         '13012234', 'Los Siete Colores', '130980008', 'Cl. Almagro, 55', '13770', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -7279,7 +7279,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '13003634', 'Nuestra Señora del Valle', '130980008', 'Cl. Almagro, 53', 'Cl. Almagro, 53', '926336071',
+         '13003634', 'Nuestra Señora del Valle', '130980008', 'Cl. Almagro, 53', '13770', '926336071',
          '926336071', '13003634.cp@edu.jccm.es', 'http://ceip-nsdelvalle.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7288,7 +7288,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009465', 'Cocoliso', '160070001', 'Cl. Magisterio, 12', 'Cl. Magisterio, 12', '967167148',
+         '16009465', 'Cocoliso', '160070001', 'Cl. Magisterio, 12', '16620', '967167148',
          '967150375', '', '', 'Público', 'EI'
         )
         ;
@@ -7297,7 +7297,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004111', 'Jorge Manrique', '160070001', 'Cl. Magisterio, 1', 'Cl. Magisterio, 1', '967150169',
+         '16004111', 'Jorge Manrique', '160070001', 'Cl. Magisterio, 1', '16620', '967150169',
          '967150577', '16004111.cra@edu.jccm.es', 'http://edu.jccm.es/cra/jorgemanrique', 'Público', 'CEIP'
         )
         ;
@@ -7306,7 +7306,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009908', '- Sin Denominación -', '0000', 'Lg. Parcela 54 de Unidad de Actuacion 9', 'Lg. Parcela 54 de Unidad de Actuacion 9', '',
+         '16009908', '- Sin Denominación -', '0000', 'Lg. Parcela 54 de Unidad de Actuacion 9', '16123', '',
          '', 'arcaseduca@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -7315,7 +7315,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004248', 'Fermín Caballero', '160270001', 'Cl. Cristo, 29', 'Cl. Cristo, 29', '969121150',
+         '16004248', 'Fermín Caballero', '160270001', 'Cl. Cristo, 29', '16460', '969121150',
          '969121150', '16004248.cra@edu.jccm.es', 'http://cra-fermincaballero.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7324,7 +7324,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009477', 'Virgen de la Vega', '160270001', 'Cl. Cristo, S/N', 'Cl. Cristo, S/N', '969121165',
+         '16009477', 'Virgen de la Vega', '160270001', 'Cl. Cristo, S/N', '16460', '969121165',
          '969121161', '', '', 'Público', 'EI'
         )
         ;
@@ -7333,7 +7333,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000280', 'Fray Luis de León', '160330001', 'Cl. Eugenio Lopez, 2', 'Cl. Eugenio Lopez, 2', '967170078',
+         '16000280', 'Fray Luis de León', '160330001', 'Cl. Eugenio Lopez, 2', '16640', '967170078',
          '967170884', '16000280.cp@edu.jccm.es', 'http://ceip-frayluisdeleonbelmonte.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7342,7 +7342,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009830', 'La Lengua de las Mariposas', '160330001', 'Cl. Concepcion Baillo, 11', 'Cl. Concepcion Baillo, 11', '690653183',
+         '16009830', 'La Lengua de las Mariposas', '160330001', 'Cl. Concepcion Baillo, 11', '16640', '690653183',
          '', 'asociaciongrupocinco@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -7351,7 +7351,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004406', 'San Juan del Castillo', '160330001', 'Cl. Santa Cecilia, 2', 'Cl. Santa Cecilia, 2', '967170194',
+         '16004406', 'San Juan del Castillo', '160330001', 'Cl. Santa Cecilia, 2', '16640', '967170194',
          '967170325', '16004406.ies@edu.jccm.es', 'http://ies-sanjuandelcastillo.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7360,7 +7360,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000358', 'Virgen de la Rosa', '160350001', 'Cl. la Cava, S/N', 'Cl. la Cava, S/N', '969318181',
+         '16000358', 'Virgen de la Rosa', '160350001', 'Cl. la Cava, S/N', '16870', '969318181',
          '969318181', '16000358.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -7369,7 +7369,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009489', 'La Cometa Azul', '160420001', 'Cl. Toledillo, S/N', 'Cl. Toledillo, S/N', '969338180',
+         '16009489', 'La Cometa Azul', '160420001', 'Cl. Toledillo, S/N', '16210', '969338180',
          '', 'ayuntamiento@campillodealtobuey.com', '', 'Público', 'EI'
         )
         ;
@@ -7378,7 +7378,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009349', 'Los Pinares', '160420001', 'Cl. Toledillo, 91', 'Cl. Toledillo, 91', '969337102',
+         '16009349', 'Los Pinares', '160420001', 'Cl. Toledillo, 91', '16210', '969337102',
          '969337102', '16009349.cra@edu.jccm.es', 'http:// http://edu.jccm.es/cra/campillo', 'Público', 'CEIP'
         )
         ;
@@ -7387,7 +7387,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004376', '- Sin Denominación -', '0000', 'Cl. Santa Ana, 3', 'Cl. Santa Ana, 3', '969332542',
+         '16004376', '- Sin Denominación -', '0000', 'Cl. Santa Ana, 3', '16830', '969332542',
          '', 'aepa_carrascosadc@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -7396,7 +7396,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004157', 'Los Sauces', '160480001', 'Cl. Rodeo, 7', 'Cl. Rodeo, 7', '969310246',
+         '16004157', 'Los Sauces', '160480001', 'Cl. Rodeo, 7', '16890', '969310246',
          '969310123', '16004157.cra@edu.jccm.es', 'http://cra-lossauces.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7405,7 +7405,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009350', 'Los Olivos', '160500001', 'Cl. San Anton, S/N', 'Cl. San Anton, S/N', '969276048',
+         '16009350', 'Los Olivos', '160500001', 'Cl. San Anton, S/N', '16850', '969276048',
          '969276048', '16009350.cra@edu.jccm.es', 'http://cra-losolivos.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7414,7 +7414,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004169', 'Alto Cabriel', '160520001', 'Cr. Valdemeca, 18', 'Cr. Valdemeca, 18', '969346075',
+         '16004169', 'Alto Cabriel', '160520001', 'Cr. Valdemeca, 18', '16300', '969346075',
          '969346075', '16004169.cra@edu.jccm.es', 'http://cra-altocabriel.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7423,7 +7423,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004546', '4 de Junio', '160520001', 'Cr. Valdemeca, 18', 'Cr. Valdemeca, 18', '969346908',
+         '16004546', '4 de Junio', '160520001', 'Cr. Valdemeca, 18', '16300', '969346908',
          '969346908', '16004546.ses@edu.jccm.es', 'http://ies-4dejunio.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -7432,7 +7432,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004480', 'Juan de Valdés', '160550001', 'Cl. Santa Hijuela, 2', 'Cl. Santa Hijuela, 2', '969341862',
+         '16004480', 'Juan de Valdés', '160550001', 'Cl. Santa Hijuela, 2', '16350', '969341862',
          '969341125', '16004480.ieso@edu.jccm.es', 'http://ies-juandevaldes.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -7441,7 +7441,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009337', 'Miguel Cervantes', '160550001', 'Cl. Santa Hijuela, 2', 'Cl. Santa Hijuela, 2', '969341701',
+         '16009337', 'Miguel Cervantes', '160550001', 'Cl. Santa Hijuela, 2', '16350', '969341701',
          '969341701', '16009337.cra@edu.jccm.es', 'http://edu.jccm.es/cra.miguelcervantes', 'Público', 'CEIP'
         )
         ;
@@ -7450,7 +7450,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009490', 'Bambi', '160600002', 'Cl. Molino, S/N', 'Cl. Molino, S/N', '969382046',
+         '16009490', 'Bambi', '160600002', 'Cl. Molino, S/N', '16707', '969382046',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -7459,7 +7459,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004601', 'Molinos del Júcar', '160600002', 'Cl. el Molino, 58', 'Cl. el Molino, 58', '969382161',
+         '16004601', 'Molinos del Júcar', '160600002', 'Cl. el Molino, 58', '16707', '969382161',
          '969382161', '16004601.cra@edu.jccm.es', 'http://cra-molinosdeljucar.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7468,7 +7468,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004170', 'Tomás y Valiente', '160610001', 'Cl. Cervantes, 24', 'Cl. Cervantes, 24', '969383149',
+         '16004170', 'Tomás y Valiente', '160610001', 'Cl. Cervantes, 24', '16610', '969383149',
          '969383576', '16004170.cra@edu.jccm.es', 'http://edu.jccm.es/cra/tomasyvaliente', 'Público', 'CEIP'
         )
         ;
@@ -7477,7 +7477,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009911', 'Colorines', '0000', 'Cl. Grupo Escolar, S/N', 'Cl. Grupo Escolar, S/N', '',
+         '16009911', 'Colorines', '0000', 'Cl. Grupo Escolar, S/N', '16611', '',
          '', 'casasdeharo.colorines.educacion@dipucuenca.es', '', 'Público', 'EI'
         )
         ;
@@ -7486,7 +7486,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004273', '- Sin Denominación -', '160660001', 'Cl. Luis de Mateo, 2', 'Cl. Luis de Mateo, 2', '969331957',
+         '16004273', '- Sin Denominación -', '160660001', 'Cl. Luis de Mateo, 2', '16239', '969331957',
          '', 'aepa_casasimarro@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -7495,7 +7495,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009507', 'Arco Iris', '160660001', 'Cl. Doctor Vicente Martinez, 6', 'Cl. Doctor Vicente Martinez, 6', '967487328',
+         '16009507', 'Arco Iris', '160660001', 'Cl. Doctor Vicente Martinez, 6', '16239', '967487328',
          '967487328', 'ei.arcoiris@casasimarro.es', '', 'Público', 'EI'
         )
         ;
@@ -7504,7 +7504,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009258', 'Escuela Municipal de Música y Danza de Casasimarro', '160660001', 'Cl. Cervantes, 4', 'Cl. Cervantes, 4', '',
+         '16009258', 'Escuela Municipal de Música y Danza de Casasimarro', '160660001', 'Cl. Cervantes, 4', '16239', '',
          '', 'emmdcasasimarro@hotmail.com', '', 'Público', ''
         )
         ;
@@ -7513,7 +7513,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000693', 'Luis de Mateo', '160660001', 'Ps. San Miguel, 4', 'Ps. San Miguel, 4', '967487053',
+         '16000693', 'Luis de Mateo', '160660001', 'Ps. San Miguel, 4', '16239', '967487053',
          '967487760', '16000693.cp@edu.jccm.es', 'http://edu.jccm.es/cp/luisdemateo', 'Público', 'CEIP'
         )
         ;
@@ -7522,7 +7522,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009271', 'Publio López Mondejar', '160660001', 'Cl. del Azafran, 2', 'Cl. del Azafran, 2', '967487833',
+         '16009271', 'Publio López Mondejar', '160660001', 'Cl. del Azafran, 2', '16239', '967487833',
          '967487395', '16009271.ieso@edu.jccm.es', 'http://edu.jccm.es/ies/casasimarro', 'Público', ''
         )
         ;
@@ -7531,7 +7531,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009714', 'Aldeas Infantiles', '160780003', 'Cm. Resinera, S/N', 'Cm. Resinera, S/N', '969232995',
+         '16009714', 'Aldeas Infantiles', '160780003', 'Cm. Resinera, S/N', '16003', '969232995',
          '969228516', 'caicuenca@aldeasinfantiles.es', '', 'Privado', 'EI'
         )
         ;
@@ -7540,7 +7540,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000966', 'Alfonso VIII', '160780003', 'Cl. Lope de Vega, 1', 'Cl. Lope de Vega, 1', '969233764',
+         '16000966', 'Alfonso VIII', '160780003', 'Cl. Lope de Vega, 1', '16002', '969233764',
          '969222359', '16000966.ies@edu.jccm.es', 'http://ies-alfonsoviii.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7549,7 +7549,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009726', 'Appa', '160780003', 'Cl. Fermin Caballero, 2', 'Cl. Fermin Caballero, 2', '969225324',
+         '16009726', 'Appa', '160780003', 'Cl. Fermin Caballero, 2', '16004', '969225324',
          '969225324', 'centro_appa@terra.es', '', 'Privado', 'EI'
         )
         ;
@@ -7558,7 +7558,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009738', 'Bambi', '160780003', 'Cl. Cesar Gonzalez Ruano, 2', 'Cl. Cesar Gonzalez Ruano, 2', '',
+         '16009738', 'Bambi', '160780003', 'Cl. Cesar Gonzalez Ruano, 2', '16004', '',
          '', 'cei.bambi@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -7567,7 +7567,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009741', 'Canicas', '160780003', 'Cl. Antonio Machado, 34', 'Cl. Antonio Machado, 34', '',
+         '16009741', 'Canicas', '160780003', 'Cl. Antonio Machado, 34', '16003', '',
          '', 'canicascb@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -7576,7 +7576,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009519', 'Cañadillas Este', '160780003', 'Cl. los Robles, 1', 'Cl. los Robles, 1', '969235765',
+         '16009519', 'Cañadillas Este', '160780003', 'Cl. los Robles, 1', '16002', '969235765',
          '969235765', 'escuelainfantilmiky@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -7585,7 +7585,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001041', 'Casablanca', '160780003', 'Cl. Casablanca, 6', 'Cl. Casablanca, 6', '969220934',
+         '16001041', 'Casablanca', '160780003', 'Cl. Casablanca, 6', '16004', '969220934',
          '969220934', '16001041.cp@edu.jccm.es', 'http://ceip-casablanca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7594,7 +7594,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009428', 'Cascabel', '160780003', 'Av. de Nuestra Señora de las Angustias, 20', 'Av. de Nuestra Señora de las Angustias, 20', '969220789',
+         '16009428', 'Cascabel', '160780003', 'Av. de Nuestra Señora de las Angustias, 20', '16003', '969220789',
          '969220789', 'caicascabel@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -7603,7 +7603,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16010029', 'Centro Formación Plaza Cuenca Estrella 14', '160780003', 'Pg. Industrial Sepes, Calle la Estrella, 14', 'Pg. Industrial Sepes, Calle la Estrella, 14', '',
+         '16010029', 'Centro Formación Plaza Cuenca Estrella 14', '160780003', 'Pg. Industrial Sepes, Calle la Estrella, 14', '16004', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -7612,7 +7612,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004650', 'Centro Penitenciario', '160780003', 'Cr. Cuenca-Tarancon, Km. 78 (Centro Penitenciario)', 'Cr. Cuenca-Tarancon, Km. 78 (Centro Penitenciario)', '969224751',
+         '16004650', 'Centro Penitenciario', '160780003', 'Cr. Cuenca-Tarancon, Km. 78 (Centro Penitenciario)', '16071', '969224751',
          '', 'aepa_cuenca@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -7621,7 +7621,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16008722', 'Ciudad Encantada', '160780003', 'Cl. Alvaro de Luna, S/N', 'Cl. Alvaro de Luna, S/N', '969240660',
+         '16008722', 'Ciudad Encantada', '160780003', 'Cl. Alvaro de Luna, S/N', '16003', '969240660',
          '969240290', '16008722.cip@edu.jccm.es', 'http://edu.jccm.es/cp/ciudadencantada', 'Público', 'CEIP'
         )
         ;
@@ -7630,7 +7630,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009751', 'Colorín Colorado', '160780003', 'Cl. Rafael Lopez de Haro, 1', 'Cl. Rafael Lopez de Haro, 1', '',
+         '16009751', 'Colorín Colorado', '160780003', 'Cl. Rafael Lopez de Haro, 1', '16001', '',
          '', 'escuelainfantilcolorincolorado@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -7639,7 +7639,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009763', 'Coquito de Luz', '160780003', 'Av. de Juan Carlos I, 26, Locales 1 y 2', 'Av. de Juan Carlos I, 26, Locales 1 y 2', '969237722',
+         '16009763', 'Coquito de Luz', '160780003', 'Av. de Juan Carlos I, 26, Locales 1 y 2', '16004', '969237722',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -7648,7 +7648,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000802', 'El Carmen', '160780003', 'Pz. del Carmen, 4', 'Pz. del Carmen, 4', '969227157',
+         '16000802', 'El Carmen', '160780003', 'Pz. del Carmen, 4', '16001', '969227157',
          '969227157', '16000802.cp@edu.jccm.es', 'http://ceip-elcarmen.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7657,7 +7657,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009313', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '160780003', 'Cl. Duque de Ahumada, S/N', 'Cl. Duque de Ahumada, S/N', '969240720',
+         '16009313', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '160780003', 'Cl. Duque de Ahumada, S/N', '16003', '969240720',
          '', 'ffcm@ffcm.es', '', 'Privado', ''
         )
         ;
@@ -7666,7 +7666,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003487', 'Federico Muelas', '160780003', 'Cl. Colon, 4', 'Cl. Colon, 4', '969225316',
+         '16003487', 'Federico Muelas', '160780003', 'Cl. Colon, 4', '16002', '969225316',
          '969213722', '16003487.cp@edu.jccm.es', 'http://ceip-federicomuelas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7675,7 +7675,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003116', 'Fernando Zóbel', '160780003', 'Cl. de la Fuensanta, S/N', 'Cl. de la Fuensanta, S/N', '969228711',
+         '16003116', 'Fernando Zóbel', '160780003', 'Cl. de la Fuensanta, S/N', '16002', '969228711',
          '969225058', '16003116.ies@edu.jccm.es', 'http://ies-fernandozobel.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7684,7 +7684,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003074', 'Fray Luis de León', '160780003', 'Cl. Astrana Marin, 6', 'Cl. Astrana Marin, 6', '969223416',
+         '16003074', 'Fray Luis de León', '160780003', 'Cl. Astrana Marin, 6', '16002', '969223416',
          '969223416', '16003074.cp@edu.jccm.es', 'http://edu.jccm.es/cp/luisdeleon', 'Público', 'CEIP'
         )
         ;
@@ -7693,7 +7693,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003529', 'Fuente del Oro', '160780003', 'Av. San Julian, S/N', 'Av. San Julian, S/N', '969235867',
+         '16003529', 'Fuente del Oro', '160780003', 'Av. San Julian, S/N', '16002', '969235867',
          '969241067', '16003529.cp@edu.jccm.es', 'http://ceip-fuentedeloro.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7702,7 +7702,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16008643', 'Hermanos Valdés', '160780003', 'Cl. Rio Valhermoso, S/N', 'Cl. Rio Valhermoso, S/N', '969240786',
+         '16008643', 'Hermanos Valdés', '160780003', 'Cl. Rio Valhermoso, S/N', '16004', '969240786',
          '969240123', '16008643.cp@edu.jccm.es', 'http://ceip-hermanosvaldescuenca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7711,7 +7711,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003281', 'Infanta Elena', '160780003', 'Cr. Guadalajara, Km. 6.600', 'Cr. Guadalajara, Km. 6.600', '969225168',
+         '16003281', 'Infanta Elena', '160780003', 'Cr. Guadalajara, Km. 6.600', '16191', '969225168',
          '969225168', '16003281.cee@edu.jccm.es', 'http://cee-infantaelena.centros.castillalamancha.es', 'Público', 'CEE'
         )
         ;
@@ -7720,7 +7720,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009878', 'Isaac Albéniz', '160780003', 'Av. de la Musica Española, S/N', 'Av. de la Musica Española, S/N', '969172988',
+         '16009878', 'Isaac Albéniz', '160780003', 'Av. de la Musica Española, S/N', '16004', '969172988',
          '969172989', '16009878.cp@edu.jccm.es', 'http://ceip-isaacalbenizcuenca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7729,7 +7729,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16008692', 'Ismael Martínez Marín', '160780003', 'Cl. Palancares, 1', 'Cl. Palancares, 1', '969240081',
+         '16008692', 'Ismael Martínez Marín', '160780003', 'Cl. Palancares, 1', '16001', '969240081',
          '', 'direccion.emusica@cuenca.es', '', 'Público', ''
         )
         ;
@@ -7738,7 +7738,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16008667', 'José María Cruz Novillo', '160780003', 'Cl. San Pedro, 19', 'Cl. San Pedro, 19', '969237250',
+         '16008667', 'José María Cruz Novillo', '160780003', 'Cl. San Pedro, 19', '16001', '969237250',
          '969214488', '16008667.ea@edu.jccm.es', 'http://edu.jccm.es/ea/cruznovillo', 'Público', ''
         )
         ;
@@ -7747,7 +7747,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000917', 'La Milagrosa', '160780003', 'Cl. Mateo Miguel Ayllón, 14', 'Cl. Mateo Miguel Ayllón, 14', '969240729',
+         '16000917', 'La Milagrosa', '160780003', 'Cl. Mateo Miguel Ayllón, 14', '16001', '969240729',
          '969237235', 'lamilagrosacuenca@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7756,7 +7756,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009520', 'La Paz', '160780003', 'Av. de la Musica Española, 61', 'Av. de la Musica Española, 61', '620596424',
+         '16009520', 'La Paz', '160780003', 'Av. de la Musica Española, 61', '16004', '620596424',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -7765,7 +7765,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000838', 'La Paz', '160780003', 'Cl. Jorge Torner, 43', 'Cl. Jorge Torner, 43', '969241007',
+         '16000838', 'La Paz', '160780003', 'Cl. Jorge Torner, 43', '16004', '969241007',
          '969241007', '16000838.cp@edu.jccm.es', 'http://ceip-lapazcuenca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7774,7 +7774,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009805', 'La Virgen Niña', '160780003', 'Cl. Oregano, 2', 'Cl. Oregano, 2', '969212257',
+         '16009805', 'La Virgen Niña', '160780003', 'Cl. Oregano, 2', '16004', '969212257',
          '647011836', 'dominicascuenca@ono.com', '', 'Privado', 'EI'
         )
         ;
@@ -7783,7 +7783,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000978', 'Lorenzo Hervás y Panduro', '160780003', 'Cl. de la Fuensanta, S/N', 'Cl. de la Fuensanta, S/N', '969226511',
+         '16000978', 'Lorenzo Hervás y Panduro', '160780003', 'Cl. de la Fuensanta, S/N', '16002', '969226511',
          '969227161', '16000978.ies@edu.jccm.es', 'http://ies-lorenzohervasypanduro.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7792,7 +7792,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003207', 'Lucas Aguirre', '160780003', 'Cl. San Esteban, 1', 'Cl. San Esteban, 1', '969212711',
+         '16003207', 'Lucas Aguirre', '160780003', 'Cl. San Esteban, 1', '16001', '969212711',
          '969235554', '16003207.cea@edu.jccm.es', 'http://cepa-lucasaguirre.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -7801,7 +7801,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009775', 'Micky', '160780003', 'Cl. Miguel de Unamuno, 8', 'Cl. Miguel de Unamuno, 8', '969235553',
+         '16009775', 'Micky', '160780003', 'Cl. Miguel de Unamuno, 8', '16004', '969235553',
          '', 'escuelainfantilmiky@hotmail.es', '', 'Privado', 'EI'
         )
         ;
@@ -7810,7 +7810,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004479', 'Nuestra Señora del Perpetuo Socorro', '160780003', 'Av. de los Alfares, 46', 'Av. de los Alfares, 46', '969214111',
+         '16004479', 'Nuestra Señora del Perpetuo Socorro', '160780003', 'Av. de los Alfares, 46', '16002', '969214111',
          '969253349', 'jesus@rxcuenca.com', '', 'Privado', ''
         )
         ;
@@ -7819,7 +7819,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003301', 'Pedro Aranaz', '160780003', 'Cl. Palafox, 1', 'Cl. Palafox, 1', '969226911',
+         '16003301', 'Pedro Aranaz', '160780003', 'Cl. Palafox, 1', '16001', '969226911',
          '969230771', '16003301.cm@edu.jccm.es', 'http://edu.jccm.es/cm/cuenca', 'Público', 'CPM'
         )
         ;
@@ -7828,7 +7828,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001004', 'Pedro Mercedes', '160780003', 'Cl. Cañete, S/N', 'Cl. Cañete, S/N', '969220830',
+         '16001004', 'Pedro Mercedes', '160780003', 'Cl. Cañete, S/N', '16004', '969220830',
          '969231790', '16001004.ies@edu.jccm.es', 'http://ies-pedromercedes.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7837,7 +7837,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009787', 'Pequeños Pasos', '160780003', 'Cl. Rio San Martin, S/N', 'Cl. Rio San Martin, S/N', '653684273',
+         '16009787', 'Pequeños Pasos', '160780003', 'Cl. Rio San Martin, S/N', '16004', '653684273',
          '', 'fegomur@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -7846,7 +7846,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000841', 'Ramón y Cajal', '160780003', 'Cl. Garcilaso de la Vega, 2', 'Cl. Garcilaso de la Vega, 2', '969213665',
+         '16000841', 'Ramón y Cajal', '160780003', 'Cl. Garcilaso de la Vega, 2', '16001', '969213665',
          '969213665', '16000841.cp@edu.jccm.es', 'http://ceip-ramonycajalcuenca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7855,7 +7855,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000929', 'Sagrada Familia', '160780003', 'Av. de los Alfares, 46', 'Av. de los Alfares, 46', '969224011',
+         '16000929', 'Sagrada Familia', '160780003', 'Av. de los Alfares, 46', '16002', '969224011',
          '969213123', 'sagradafamiliacu@colegiosfec.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7864,7 +7864,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009532', 'Sagrado Corazón de Jesús', '160780003', 'Cl. Colon, 2', 'Cl. Colon, 2', '969223313',
+         '16009532', 'Sagrado Corazón de Jesús', '160780003', 'Cl. Colon, 2', '16002', '969223313',
          '969230821', 'viadel@dipucuenca.es', '', 'Público', 'EI'
         )
         ;
@@ -7873,7 +7873,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003608', 'San Fernando', '160780003', 'Cl. Hermanos Becerril, 23', 'Cl. Hermanos Becerril, 23', '969224675',
+         '16003608', 'San Fernando', '160780003', 'Cl. Hermanos Becerril, 23', '16004', '969224675',
          '969224675', '16003608.cp@edu.jccm.es', 'http://ceip-sanfernando.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7882,7 +7882,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000991', 'San José', '160780003', 'Cl. Fuensanta, 3', 'Cl. Fuensanta, 3', '969231260',
+         '16000991', 'San José', '160780003', 'Cl. Fuensanta, 3', '16002', '969231260',
          '969230992', '16000991.ies@edu.jccm.es', 'http://edu.jccm.es/ies/sanjose', 'Público', 'IES'
         )
         ;
@@ -7891,7 +7891,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003499', 'San Julian', '160780003', 'Av. Cruz Roja Española, S/N', 'Av. Cruz Roja Española, S/N', '969231271',
+         '16003499', 'San Julian', '160780003', 'Av. Cruz Roja Española, S/N', '16003', '969231271',
          '969225921', '16003499.cp@edu.jccm.es', 'http://ceip-sanjulian.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7900,7 +7900,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000863', 'Santa Ana', '160780003', 'Cl. Escultor Marco Perez, 1', 'Cl. Escultor Marco Perez, 1', '969240638',
+         '16000863', 'Santa Ana', '160780003', 'Cl. Escultor Marco Perez, 1', '16003', '969240638',
          '969692346', '16000863.cp@edu.jccm.es', 'http://ceip-santaana.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7909,7 +7909,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000942', 'Santa María de la Expectación', '160780003', 'Cl. la Esperanza, 2 y 3', 'Cl. la Esperanza, 2 y 3', '969225056',
+         '16000942', 'Santa María de la Expectación', '160780003', 'Cl. la Esperanza, 2 y 3', '16001', '969225056',
          '969229439', 'smexpectacion@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -7918,7 +7918,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003256', 'Santa Teresa', '160780003', 'Cl. Segobriga, S/N', 'Cl. Segobriga, S/N', '969240072',
+         '16003256', 'Santa Teresa', '160780003', 'Cl. Segobriga, S/N', '16001', '969240072',
          '969233142', '16003256.cp@edu.jccm.es', 'http://ceip-santateresa.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7927,7 +7927,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003931', 'Santiago Grisolía', '160780003', 'Av. del Mediterraneo, 4', 'Av. del Mediterraneo, 4', '969234043',
+         '16003931', 'Santiago Grisolía', '160780003', 'Av. del Mediterraneo, 4', '16004', '969234043',
          '969232624', '16003931.ies@edu.jccm.es', 'http://ies-santiagogrisolia.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -7936,7 +7936,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003682', 'Sebastián de Covarrubias', '160780003', 'Cm. de la Resinera, S/N', 'Cm. de la Resinera, S/N', '969213254',
+         '16003682', 'Sebastián de Covarrubias', '160780003', 'Cm. de la Resinera, S/N', '16002', '969213254',
          '969233073', '16003682.eoi@edu.jccm.es', 'http://edu.jccm.es/eoi/cuenca', 'Público', 'EOI'
         )
         ;
@@ -7945,7 +7945,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009881', 'Tizas', '160780003', 'Av. San Julian, 46, Local 5', 'Av. San Julian, 46, Local 5', '969693370',
+         '16009881', 'Tizas', '160780003', 'Av. San Julian, 46, Local 5', '16002', '969693370',
          '', 'tizasescuelainfantil@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -7954,7 +7954,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004182', 'Retama', '160860001', 'Cl. Alfonso Viii, 2', 'Cl. Alfonso Viii, 2', '969125378',
+         '16004182', 'Retama', '160860001', 'Cl. Alfonso Viii, 2', '16411', '969125378',
          '969125378', '16004182.cra@edu.jccm.es', 'http://cra-retama.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7963,7 +7963,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009891', 'Rosa León', '160860001', 'Cl. Tarancon, 2', 'Cl. Tarancon, 2', '',
+         '16009891', 'Rosa León', '160860001', 'Cl. Tarancon, 2', '16411', '',
          '', 'escuelainfantilrosaleon@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -7972,7 +7972,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004595', 'Camino Real de Levante', '160960001', 'Cl. Escuelas, S/N', 'Cl. Escuelas, S/N', '962187401',
+         '16004595', 'Camino Real de Levante', '160960001', 'Cl. Escuelas, S/N', '16251', '962187401',
          '962187401', '16004595.cra@edu.jccm.es', 'http://edu.jccm.es/cra/caminoreal', 'Público', 'CEIP'
         )
         ;
@@ -7981,7 +7981,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009362', 'Airén', '161000001', 'Cl. la Iglesia, 3', 'Cl. la Iglesia, 3', '969129775',
+         '16009362', 'Airén', '161000001', 'Cl. la Iglesia, 3', '16417', '969129775',
          '969129775', '16009362.cra@edu.jccm.es', 'http://cra-airen.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -7990,7 +7990,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004561', 'Los Girasoles', '161020001', 'Cl. Juan Angel Sevilla, 29', 'Cl. Juan Angel Sevilla, 29', '969292075',
+         '16004561', 'Los Girasoles', '161020001', 'Cl. Juan Angel Sevilla, 29', '16730', '969292075',
          '969292075', '16004561.cra@edu.jccm.es', 'http://edu.jccm.es/cra.losgirasoles', 'Público', 'CEIP'
         )
         ;
@@ -7999,7 +7999,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004352', '- Sin Denominación -', '161060001', 'Pz. del Caudillo, 2', 'Pz. del Caudillo, 2', '969322542',
+         '16004352', '- Sin Denominación -', '161060001', 'Pz. del Caudillo, 2', '16410', '969322542',
          '', 'aepa_horcajods@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -8008,7 +8008,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009544', 'Hervás y Panduro', '161060001', 'Pz. de Fray Bernardo de Lorca, 1', 'Pz. de Fray Bernardo de Lorca, 1', '969127678',
+         '16009544', 'Hervás y Panduro', '161060001', 'Pz. de Fray Bernardo de Lorca, 1', '16410', '969127678',
          '969128286', 'aulaeduca@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8017,7 +8017,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001314', 'José Montalvo', '161060001', 'Cl. Angela Rosa de Silva, S/N', 'Cl. Angela Rosa de Silva, S/N', '969127271',
+         '16001314', 'José Montalvo', '161060001', 'Cl. Angela Rosa de Silva, S/N', '16410', '969127271',
          '969127271', '16001314.cp@edu.jccm.es', 'http://edu.jccm.es/cp.josemontalvo', 'Público', 'CEIP'
         )
         ;
@@ -8026,7 +8026,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004492', 'Orden de Santiago', '161060001', 'Cl. Angela Rosa de Silva, 38', 'Cl. Angela Rosa de Silva, 38', '969127030',
+         '16004492', 'Orden de Santiago', '161060001', 'Cl. Angela Rosa de Silva, 38', '16410', '969127030',
          '969128238', '16004492.seces@edu.jccm.es', 'http://ies-ordendesantiago.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -8035,7 +8035,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009556', '- Sin Denominación -', '161120005', 'Cl. San Nicolas de Almazan, 3', 'Cl. San Nicolas de Almazan, 3', '969372198',
+         '16009556', '- Sin Denominación -', '161120005', 'Cl. San Nicolas de Almazan, 3', '16500', '969372198',
          '969371148', 'e.i.huete@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -8044,7 +8044,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16008679', '- Sin Denominación -', '161120005', 'Cl. Pedro Carrillo, S/N', 'Cl. Pedro Carrillo, S/N', '',
+         '16008679', '- Sin Denominación -', '161120005', 'Cl. Pedro Carrillo, S/N', '16500', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -8053,7 +8053,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004571', 'Campos de la Alcarria', '161120005', 'Cl. Colegio, S/N', 'Cl. Colegio, S/N', '969371191',
+         '16004571', 'Campos de la Alcarria', '161120005', 'Cl. Colegio, S/N', '16500', '969371191',
          '969371191', '16004571.cra@edu.jccm.es', 'http://cra-camposdelaalcarria.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8062,7 +8062,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004509', 'Ciudad de Luna', '161120005', 'Cl. Pedro Carrillo, S/N', 'Cl. Pedro Carrillo, S/N', '969372906',
+         '16004509', 'Ciudad de Luna', '161120005', 'Cl. Pedro Carrillo, S/N', '16500', '969372906',
          '969372923', '16004509.seces@edu.jccm.es', 'http://edu.jccm.es/ieso/huete', 'Público', ''
         )
         ;
@@ -8071,7 +8071,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001387', 'Efa el Batán', '161120005', 'Cl. Extramuros, S/N', 'Cl. Extramuros, S/N', '969371064',
+         '16001387', 'Efa el Batán', '161120005', 'Cl. Extramuros, S/N', '16500', '969371064',
          '969371107', 'efa-elbatan@efa-centro.org', 'http://www.efa-centro.org/', 'Priv.Concert.', ''
         )
         ;
@@ -8080,7 +8080,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009568', '- Sin Denominación -', '161130003', 'Cl. San Francisco, S/N', 'Cl. San Francisco, S/N', '967491220',
+         '16009568', '- Sin Denominación -', '161130003', 'Cl. San Francisco, S/N', '16235', '967491220',
          '967491220', 'cainiesta@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8089,7 +8089,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004261', '- Sin Denominación -', '161130003', 'Cl. Alarcón, 2', 'Cl. Alarcón, 2', '969331957',
+         '16004261', '- Sin Denominación -', '161130003', 'Cl. Alarcón, 2', '16235', '969331957',
          '', 'aepa_iniesta@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -8098,7 +8098,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16000899', 'Cañada de la Encina', '161130003', 'Cl. Era Pareja, 11', 'Cl. Era Pareja, 11', '967490156',
+         '16000899', 'Cañada de la Encina', '161130003', 'Cl. Era Pareja, 11', '16235', '967490156',
          '967491317', '16000899.ies@edu.jccm.es', 'http://edu.jccm.es/ies.encinainiesta', 'Público', 'IES'
         )
         ;
@@ -8107,7 +8107,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009921', 'Clave de Sol-Fa', '161130003', 'Cl. Alarcon C/V Hernan Cortes', 'Cl. Alarcon C/V Hernan Cortes', '656645803',
+         '16009921', 'Clave de Sol-Fa', '161130003', 'Cl. Alarcon C/V Hernan Cortes', '16235', '656645803',
          '', 'escuela.clavedesolfa@gmail.com', '', 'Público', ''
         )
         ;
@@ -8116,7 +8116,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001405', 'María Jover', '161130003', 'Cl. Convento, 9', 'Cl. Convento, 9', '967490260',
+         '16001405', 'María Jover', '161130003', 'Cl. Convento, 9', '16235', '967490260',
          '967491068', '16001405.cp@edu.jccm.es', 'http://ceip-mariajover.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8125,7 +8125,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004583', 'Ojos de Moya', '161170001', 'Cl. Pescadores, S/N', 'Cl. Pescadores, S/N', '969361012',
+         '16004583', 'Ojos de Moya', '161170001', 'Cl. Pescadores, S/N', '16330', '969361012',
          '969361012', '16004583.cra@edu.jccm.es', 'http://edu.jccm.es/cra.ojosdemoya', 'Público', 'CEIP'
         )
         ;
@@ -8134,7 +8134,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004081', 'Serranía Baja', '161170001', 'Cm. de Ademuz, 4', 'Cm. de Ademuz, 4', '969361149',
+         '16004081', 'Serranía Baja', '161170001', 'Cm. de Ademuz, 4', '16330', '969361149',
          '969361165', '16004081.ies@edu.jccm.es', 'http://ies-serraniabaja.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -8143,7 +8143,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001478', 'San Roque', '161180001', 'Cl. la Vega, 22', 'Cl. la Vega, 22', '967492318',
+         '16001478', 'San Roque', '161180001', 'Cl. la Vega, 22', '16237', '967492318',
          '967492318', '16001478.cp@edu.jccm.es', 'http://ceip-colegiosanroque.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8152,7 +8152,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004303', '- Sin Denominación -', '161240001', 'Pz. Constitución, S/N', 'Pz. Constitución, S/N', '969301666',
+         '16004303', '- Sin Denominación -', '161240001', 'Pz. Constitución, S/N', '16650', '969301666',
          '', 'aepa_lasmesas@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -8161,7 +8161,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009970', '- Sin Denominación -', '161240001', 'Cl. Hermanos Amoros, 2', 'Cl. Hermanos Amoros, 2', '967155254',
+         '16009970', '- Sin Denominación -', '161240001', 'Cl. Hermanos Amoros, 2', '16650', '967155254',
          '', '16009970.ses@edu.jccm.es', 'http://ies-seslasmesas.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -8170,7 +8170,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16008709', 'Escuela Municipal de Música y Danza', '161240001', 'Cl. Escuelas, 2', 'Cl. Escuelas, 2', '967155901',
+         '16008709', 'Escuela Municipal de Música y Danza', '161240001', 'Cl. Escuelas, 2', '16650', '967155901',
          '', '', '', 'Público', ''
         )
         ;
@@ -8179,7 +8179,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001533', 'Hermanos Amorós Fernández', '161240001', 'Cl. Hermanos Amoros, 2', 'Cl. Hermanos Amoros, 2', '967155085',
+         '16001533', 'Hermanos Amorós Fernández', '161240001', 'Cl. Hermanos Amoros, 2', '16650', '967155085',
          '967155252', '16001533.cp@edu.jccm.es', 'http://ceip-colelasmesas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8188,7 +8188,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009969', 'Santo Niño de la Bola', '161240001', 'Cl. Don Angel Moya, 25', 'Cl. Don Angel Moya, 25', '',
+         '16009969', 'Santo Niño de la Bola', '161240001', 'Cl. Don Angel Moya, 25', '16650', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -8197,7 +8197,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16010005', '- Sin Denominación -', '161250001', 'Av. de la Musica, S/N (Recinto Ferial)', 'Av. de la Musica, S/N (Recinto Ferial)', '',
+         '16010005', '- Sin Denominación -', '161250001', 'Av. de la Musica, S/N (Recinto Ferial)', '16260', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -8206,7 +8206,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009854', 'Escuela de Música de Minglanilla', '161250001', 'Pz. del Salero, S/N', 'Pz. del Salero, S/N', '',
+         '16009854', 'Escuela de Música de Minglanilla', '161250001', 'Pz. del Salero, S/N', '16260', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -8215,7 +8215,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001557', 'Princesa Sofía', '161250001', 'Cr. de Cuenca-Albacete, S/N', 'Cr. de Cuenca-Albacete, S/N', '962187218',
+         '16001557', 'Princesa Sofía', '161250001', 'Cr. de Cuenca-Albacete, S/N', '16260', '962187218',
          '962187218', '16001557.cp@edu.jccm.es', 'http://edu.jccm.es/cp/princesasofia', 'Público', 'CEIP'
         )
         ;
@@ -8224,7 +8224,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001788', 'Puerta de Castilla', '161250001', 'Cr. Cuenca-Albacete, 21', 'Cr. Cuenca-Albacete, 21', '962187436',
+         '16001788', 'Puerta de Castilla', '161250001', 'Cr. Cuenca-Albacete, 21', '16260', '962187436',
          '962188064', '16001788.ieso@edu.jccm.es', 'http://ies-puertadecastilla.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -8233,7 +8233,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009374', 'Fuente Vieja', '161260003', 'Cl. Callejuela, 18', 'Cl. Callejuela, 18', '969340134',
+         '16009374', 'Fuente Vieja', '161260003', 'Cl. Callejuela, 18', '16393', '969340134',
          '969340134', '16009374.cra@edu.jccm.es', 'http://cra-fuentevieja.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8242,7 +8242,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004327', '- Sin Denominación -', '161330001', 'Cl. Escuelas, 1', 'Cl. Escuelas, 1', '969301666',
+         '16004327', '- Sin Denominación -', '161330001', 'Cl. Escuelas, 1', '16630', '969301666',
          '', 'aepa_mdelcuervo@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -8251,7 +8251,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009581', 'Balú', '161330001', 'Cl. Santa Rita, 20', 'Cl. Santa Rita, 20', '',
+         '16009581', 'Balú', '161330001', 'Cl. Santa Rita, 20', '16630', '',
          '', 'caiaytobalu@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8260,7 +8260,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16010017', 'Conservatorio Profesional de Música Mota del Cuervo', '161330001', 'Cl. Guadalajara, 15', 'Cl. Guadalajara, 15', '',
+         '16010017', 'Conservatorio Profesional de Música Mota del Cuervo', '161330001', 'Cl. Guadalajara, 15', '16630', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -8269,7 +8269,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009593', 'El Santo', '161330001', 'Cl. Escuelas, 1', 'Cl. Escuelas, 1', '',
+         '16009593', 'El Santo', '161330001', 'Cl. Escuelas, 1', '16630', '',
          '', 'caiaytobalu@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8278,7 +8278,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009295', 'Escuela Municipal de Música y Danza de Mota del Cuervo', '161330001', 'Pz. Mayor, 12', 'Pz. Mayor, 12', '',
+         '16009295', 'Escuela Municipal de Música y Danza de Mota del Cuervo', '161330001', 'Pz. Mayor, 12', '16630', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -8287,7 +8287,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004431', 'Julián Zarco', '161330001', 'Cl. Don Sabino, 1', 'Cl. Don Sabino, 1', '967180006',
+         '16004431', 'Julián Zarco', '161330001', 'Cl. Don Sabino, 1', '16630', '967180006',
          '967182455', '16004431.ies@edu.jccm.es', 'http://edu.jccm.es/ies.julianzarco', 'Público', 'IES'
         )
         ;
@@ -8296,7 +8296,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009945', 'Santa Rita', '161330001', 'Pz. Ruiz Jarabo, S/N', 'Pz. Ruiz Jarabo, S/N', '967182082',
+         '16009945', 'Santa Rita', '161330001', 'Pz. Ruiz Jarabo, S/N', '16630', '967182082',
          '967182082', '16009945.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -8305,7 +8305,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001624', 'Virgen de Manjavacas', '161330001', 'Cl. Desafio, 26', 'Cl. Desafio, 26', '967180592',
+         '16001624', 'Virgen de Manjavacas', '161330001', 'Cl. Desafio, 26', '16630', '967180592',
          '967180592', '16001624.cp@edu.jccm.es', 'http://ceip-virgendemanjavacas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8314,7 +8314,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009994', '- Sin Denominación -', '161340001', 'Rd. Sur, 1', 'Rd. Sur, 1', '969333110',
+         '16009994', '- Sin Denominación -', '161340001', 'Rd. Sur, 1', '16200', '969333110',
          '', '16009994.eoi@edu.jccm.es', '', 'Público', 'EOI'
         )
         ;
@@ -8323,7 +8323,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004251', 'Cervantes', '161340001', 'Cl. Virgen, 48', 'Cl. Virgen, 48', '969331957',
+         '16004251', 'Cervantes', '161340001', 'Cl. Virgen, 48', '16200', '969331957',
          '969332203', '16004251.cea@edu.jccm.es', 'http://edu.jccm.es/cepa.cervantesmotilladelpalancar', 'Público', ''
         )
         ;
@@ -8332,7 +8332,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009601', 'Inmaculada Concepción', '161340001', 'Av. del Riato, 92', 'Av. del Riato, 92', '969331470',
+         '16009601', 'Inmaculada Concepción', '161340001', 'Av. del Riato, 92', '16200', '969331470',
          '969332174', 'caimotilladelpalancar@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8341,7 +8341,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003463', 'Jorge Manrique', '161340001', 'Rd. Sur, 1', 'Rd. Sur, 1', '969331178',
+         '16003463', 'Jorge Manrique', '161340001', 'Rd. Sur, 1', '16200', '969331178',
          '969332292', '16003463.ies@edu.jccm.es', 'http://ies-jorgemanrique.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -8350,7 +8350,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001651', 'San Gil Abad', '161340001', 'Cl. Benito Perez Galdos, S/N', 'Cl. Benito Perez Galdos, S/N', '969331228',
+         '16001651', 'San Gil Abad', '161340001', 'Cl. Benito Perez Galdos, S/N', '16200', '969331228',
          '969332714', '16001651.cp@edu.jccm.es', 'http://ceip-sangilabad.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8359,7 +8359,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004121', 'San José de Calasanz', '161480001', 'Av. de la Fuente, 14', 'Av. de la Fuente, 14', '969277567',
+         '16004121', 'San José de Calasanz', '161480001', 'Av. de la Fuente, 14', '16160', '969277567',
          '969277567', '16004121.cra@edu.jccm.es', 'http://cra-sanjosedecalasanz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8368,7 +8368,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001821', 'Juan Gualberto Avilés', '161530001', 'Av. de la Constitucion, S/N', 'Av. de la Constitucion, S/N', '967164096',
+         '16001821', 'Juan Gualberto Avilés', '161530001', 'Av. de la Constitucion, S/N', '16638', '967164096',
          '967164096', '16001821.cp@edu.jccm.es', 'http://ceip-juangualbertoaviles.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8377,7 +8377,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004297', '- Sin Denominación -', '161540001', 'Cl. General Borrero, 39', 'Cl. General Borrero, 39', '969301666',
+         '16004297', '- Sin Denominación -', '161540001', 'Cl. General Borrero, 39', '16660', '969301666',
          '', 'aepa_laspedro@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -8386,7 +8386,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001831', 'Adolfo Martínez Chicano', '161540001', 'Cl. Alicia Gomez Jareño, S/N', 'Cl. Alicia Gomez Jareño, S/N', '967160260',
+         '16001831', 'Adolfo Martínez Chicano', '161540001', 'Cl. Alicia Gomez Jareño, S/N', '16660', '967160260',
          '967160260', '16001831.cp@edu.jccm.es', 'http://edu.jccm.es/cp.adolfomartinezchicano', 'Público', 'CEIP'
         )
         ;
@@ -8395,7 +8395,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009301', 'Escuela Municipal de Música y Danza de las Pedroñeras', '161540001', 'Cl. Pelayo, 4', 'Cl. Pelayo, 4', '',
+         '16009301', 'Escuela Municipal de Música y Danza de las Pedroñeras', '161540001', 'Cl. Pelayo, 4', '16660', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -8404,7 +8404,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004066', 'Fray Luis de León', '161540001', 'Cl. General Borrero, 39', 'Cl. General Borrero, 39', '967160100',
+         '16004066', 'Fray Luis de León', '161540001', 'Cl. General Borrero, 39', '16660', '967160100',
          '967160488', '16004066.ies@edu.jccm.es', 'http://edu.jccm.es/ies/frayluisdeleon', 'Público', 'IES'
         )
         ;
@@ -8413,7 +8413,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009431', 'Platero', '161540001', 'Cl. General Borreros, 35', 'Cl. General Borreros, 35', '967160852',
+         '16009431', 'Platero', '161540001', 'Cl. General Borreros, 35', '16660', '967160852',
          '967162118', '16009431.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -8422,7 +8422,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009611', 'Campanilla', '0000', 'Cl. Francisco Ruiz Jarabo, 15 B', 'Cl. Francisco Ruiz Jarabo, 15 B', '969339635',
+         '16009611', 'Campanilla', '0000', 'Cl. Francisco Ruiz Jarabo, 15 B', '16240', '969339635',
          '969339501', 'aytoelperal@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8431,7 +8431,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003475', 'Diego Jesús Jiménez', '161700001', 'Tr. Padre Marquina, S/N', 'Tr. Padre Marquina, S/N', '969311274',
+         '16003475', 'Diego Jesús Jiménez', '161700001', 'Tr. Padre Marquina, S/N', '16800', '969311274',
          '969311274', '16003475.ies@edu.jccm.es', 'http://ies-diegojesusjimenez.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -8440,7 +8440,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004194', 'Guadiela', '161700001', 'Av. Luis Ocaña, 28', 'Av. Luis Ocaña, 28', '969311117',
+         '16004194', 'Guadiela', '161700001', 'Av. Luis Ocaña, 28', '16800', '969311117',
          '969312022', '16004194.cra@edu.jccm.es', 'http://edu.jccm.es/cra.guadiela', 'Público', 'CEIP'
         )
         ;
@@ -8449,7 +8449,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009416', '- Sin Denominación -', '161710001', 'Pz. de los Alcaldes, S/N', 'Pz. de los Alcaldes, S/N', '',
+         '16009416', '- Sin Denominación -', '161710001', 'Pz. de los Alcaldes, S/N', '16670', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -8458,7 +8458,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16008680', 'Escuela Municipal de Música y Danza de el Provencio', '161710001', 'Cl. la Villa, 29', 'Cl. la Villa, 29', '967165381',
+         '16008680', 'Escuela Municipal de Música y Danza de el Provencio', '161710001', 'Cl. la Villa, 29', '16670', '967165381',
          '', '', '', 'Público', ''
         )
         ;
@@ -8467,7 +8467,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16001995', 'Infanta Cristina', '161710001', 'Cl. Escuelas, 2', 'Cl. Escuelas, 2', '967165272',
+         '16001995', 'Infanta Cristina', '161710001', 'Cl. Escuelas, 2', '16670', '967165272',
          '967165056', '16001995.cp@edu.jccm.es', 'http://ceip-infantacristina.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8476,7 +8476,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009623', 'Los Pitufos', '161710001', 'Cl. Molino, S/N', 'Cl. Molino, S/N', '967166132',
+         '16009623', 'Los Pitufos', '161710001', 'Cl. Molino, S/N', '16670', '967166132',
          '967165263', 'cailospitufos@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -8485,7 +8485,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009283', 'Tomás de la Fuente Jurado', '161710001', 'Cl. Profesor Tierno Galvan, S/N', 'Cl. Profesor Tierno Galvan, S/N', '967165808',
+         '16009283', 'Tomás de la Fuente Jurado', '161710001', 'Cl. Profesor Tierno Galvan, S/N', '16670', '967165808',
          '967165809', '16009283.ieso@edu.jccm.es', 'http://edu.jccm.es/ieso.tomasdelafuentejurado', 'Público', ''
         )
         ;
@@ -8494,7 +8494,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16008655', '- Sin Denominación -', '161750001', 'Pz. Castilla la Mancha, S/N', 'Pz. Castilla la Mancha, S/N', '969331957',
+         '16008655', '- Sin Denominación -', '161750001', 'Pz. Castilla la Mancha, S/N', '16220', '969331957',
          '', 'aepa_quintanardr@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -8503,7 +8503,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009404', 'Escuela Municipal de Música y Danza de Quintanar del Rey', '161750001', 'Pz. Mayor, 1', 'Pz. Mayor, 1', '',
+         '16009404', 'Escuela Municipal de Música y Danza de Quintanar del Rey', '161750001', 'Pz. Mayor, 1', '16220', '',
          '', 'musicaquintanardelrey@gmail.com', '', 'Público', ''
         )
         ;
@@ -8512,7 +8512,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004030', 'Fernando de los Ríos', '161750001', 'Cr. de Cuenca, S/N', 'Cr. de Cuenca, S/N', '967496234',
+         '16004030', 'Fernando de los Ríos', '161750001', 'Cr. de Cuenca, S/N', '16220', '967496234',
          '967496098', '16004030.ies@edu.jccm.es', 'http://ies-fernandorios.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -8521,7 +8521,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009441', 'La Sagrada Familia', '161750001', 'Cl. la Rambla, S/N', 'Cl. la Rambla, S/N', '967495222',
+         '16009441', 'La Sagrada Familia', '161750001', 'Cl. la Rambla, S/N', '16220', '967495222',
          '967495222', 'caisagradafamilia@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -8530,7 +8530,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009957', 'Paula Soler Sanchiz', '161750001', 'Cl. Obispo Pascual Carrascosa, S/N', 'Cl. Obispo Pascual Carrascosa, S/N', '967495654',
+         '16009957', 'Paula Soler Sanchiz', '161750001', 'Cl. Obispo Pascual Carrascosa, S/N', '16220', '967495654',
          '967495654', '16009957.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -8539,7 +8539,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009635', 'Quinterias', '161750001', 'Cl. Principe, S/N', 'Cl. Principe, S/N', '967495806',
+         '16009635', 'Quinterias', '161750001', 'Cl. Principe, S/N', '16220', '967495806',
          '967495806', '', '', 'Público', 'EI'
         )
         ;
@@ -8548,7 +8548,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002033', 'Valdemembra', '161750001', 'Cl. Isaac Peral, 2', 'Cl. Isaac Peral, 2', '967495215',
+         '16002033', 'Valdemembra', '161750001', 'Cl. Isaac Peral, 2', '16220', '967495215',
          '967495215', '16002033.cp@edu.jccm.es', 'http://edu.jccm.es/cp.valdemembra', 'Público', 'CEIP'
         )
         ;
@@ -8557,7 +8557,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009386', 'Segóbriga', '161860001', 'Cl. el Santo, 23', 'Cl. el Santo, 23', '969132063',
+         '16009386', 'Segóbriga', '161860001', 'Cl. el Santo, 23', '16430', '969132063',
          '969132063', '16009386.cra@edu.jccm.es', 'http://cra-segobriga.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8566,7 +8566,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009647', '- Sin Denominación -', '161900002', 'Cl. Miguel de Cervantes, S/N', 'Cl. Miguel de Cervantes, S/N', '969300187',
+         '16009647', '- Sin Denominación -', '161900002', 'Cl. Miguel de Cervantes, S/N', '16600', '969300187',
          '969302047', 'sanclementecai@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8575,7 +8575,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004340', 'Campos del Záncara', '161900002', 'Cl. Emiliano Fernandez Ayuso, 5', 'Cl. Emiliano Fernandez Ayuso, 5', '969301666',
+         '16004340', 'Campos del Záncara', '161900002', 'Cl. Emiliano Fernandez Ayuso, 5', '16600', '969301666',
          '969301701', '16004340.cepa@edu.jccm.es', 'http://edu.jccm.es/cepa/sanclemente', 'Público', 'CEPA'
         )
         ;
@@ -8584,7 +8584,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009817', 'Chiquitín', '161900002', 'Cl. el Carmen, 13', 'Cl. el Carmen, 13', '969302350',
+         '16009817', 'Chiquitín', '161900002', 'Cl. el Carmen, 13', '16600', '969302350',
          '969300671', '', '', 'Privado', 'EI'
         )
         ;
@@ -8593,7 +8593,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002173', 'Diego Torrente Pérez', '161900002', 'Cl. Miguel de Cervantes, 2', 'Cl. Miguel de Cervantes, 2', '969300181',
+         '16002173', 'Diego Torrente Pérez', '161900002', 'Cl. Miguel de Cervantes, 2', '16600', '969300181',
          '969302282', '16002173.ies@edu.jccm.es', 'http://edu.jccm.es/ies.diegotorrenteperez', 'Público', 'IES'
         )
         ;
@@ -8602,7 +8602,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004467', 'Jérôme Lejeune', '161900002', 'Cl. Rus, 34', 'Cl. Rus, 34', '969301271',
+         '16004467', 'Jérôme Lejeune', '161900002', 'Cl. Rus, 34', '16600', '969301271',
          '969301271', 'jerome.lejeune@telefonica.net', '', 'Priv.Concert.', ''
         )
         ;
@@ -8611,7 +8611,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002161', 'Nuestra Señora de los Remedios', '161900002', 'Cl. Maria Josefa Melgarejo, 50', 'Cl. Maria Josefa Melgarejo, 50', '969300040',
+         '16002161', 'Nuestra Señora de los Remedios', '161900002', 'Cl. Maria Josefa Melgarejo, 50', '16600', '969300040',
          '969300040', 'dr.sanclemente@hcsantaluisa.es', 'http://edu.jccm.es/con/nsremedio', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -8620,7 +8620,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002151', 'Rafael López de Haro', '161900002', 'Cl. Emiliano Fernandez Ayuso, 7', 'Cl. Emiliano Fernandez Ayuso, 7', '969307009',
+         '16002151', 'Rafael López de Haro', '161900002', 'Cl. Emiliano Fernandez Ayuso, 7', '16600', '969307009',
          '969307041', '16002151.cp@edu.jccm.es', 'http://edu.jccm.es/cp/rfharo', 'Público', 'CEIP'
         )
         ;
@@ -8629,7 +8629,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004455', 'Gloria Fuertes', '161910001', 'Ct. de la Balsa, 2', 'Ct. de la Balsa, 2', '969296241',
+         '16004455', 'Gloria Fuertes', '161910001', 'Ct. de la Balsa, 2', '16770', '969296241',
          '969296241', '16004455.cra@edu.jccm.es', 'http://cra-gloriafuertes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8638,7 +8638,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004418', 'Camino Romano', '161980001', 'Ps. del Convento, 2', 'Ps. del Convento, 2', '969387166',
+         '16004418', 'Camino Romano', '161980001', 'Ps. del Convento, 2', '16700', '969387166',
          '969387166', '16004418.ieso@edu.jccm.es', 'http://ies-caminoromano.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -8647,7 +8647,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002264', 'Fernández Turégano', '161980001', 'Ps. del Convento, 2', 'Ps. del Convento, 2', '969387112',
+         '16002264', 'Fernández Turégano', '161980001', 'Ps. del Convento, 2', '16700', '969387112',
          '969387112', '16002264.cp@edu.jccm.es', 'http://ceip-fernandezturegano.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8656,7 +8656,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009659', 'La Colmena', '161980001', 'Cm. Caleras, 1', 'Cm. Caleras, 1', '969387112',
+         '16009659', 'La Colmena', '161980001', 'Cm. Caleras, 1', '16700', '969387112',
          '969387112', '', '', 'Público', 'EI'
         )
         ;
@@ -8665,7 +8665,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16003657', 'Altomira', '162030001', 'Pz. de España, S/N', 'Pz. de España, S/N', '969322542',
+         '16003657', 'Altomira', '162030001', 'Pz. de España, S/N', '16400', '969322542',
          '969322642', '16003657.cea@edu.jccm.es', 'http://cepa-altomira.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -8674,7 +8674,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002321', 'Duque de Riánsares', '162030001', 'Av. Reina Sofia, S/N', 'Av. Reina Sofia, S/N', '969321069',
+         '16002321', 'Duque de Riánsares', '162030001', 'Av. Reina Sofia, S/N', '16400', '969321069',
          '969325989', '16002321.cp@edu.jccm.es', 'http://ceip-duquederiansares.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8683,7 +8683,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004443', 'Gloria Fuertes', '162030001', 'Cl. General Emilio Villaescusa, 14', 'Cl. General Emilio Villaescusa, 14', '969321050',
+         '16004443', 'Gloria Fuertes', '162030001', 'Cl. General Emilio Villaescusa, 14', '16400', '969321050',
          '969324927', '16004443.cp@edu.jccm.es', 'http://ceip-gloriafuertestarancon.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8692,7 +8692,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009842', 'Guachetes', '162030001', 'Av. Pablo Iglesias, 22', 'Av. Pablo Iglesias, 22', '',
+         '16009842', 'Guachetes', '162030001', 'Av. Pablo Iglesias, 22', '16400', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -8701,7 +8701,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004534', 'La Hontanilla', '162030001', 'Cl. Antonio Machado, S/N', 'Cl. Antonio Machado, S/N', '969324114',
+         '16004534', 'La Hontanilla', '162030001', 'Cl. Antonio Machado, S/N', '16400', '969324114',
          '969325324', '16004534.ies@edu.jccm.es', 'http://ies-lahontanilla.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -8710,7 +8710,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002343', 'Melchor Cano', '162030001', 'Av. Juan Carlos I, 40', 'Av. Juan Carlos I, 40', '969320050',
+         '16002343', 'Melchor Cano', '162030001', 'Av. Juan Carlos I, 40', '16400', '969320050',
          '969320058', 'mecano@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -8719,7 +8719,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002355', 'Nuestra Señora de las Mercedes', '162030001', 'Cl. Santo Domingo de Guzman, 1', 'Cl. Santo Domingo de Guzman, 1', '969321005',
+         '16002355', 'Nuestra Señora de las Mercedes', '162030001', 'Cl. Santo Domingo de Guzman, 1', '16400', '969321005',
          '969321000', 'nsmercedest@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -8728,7 +8728,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009453', 'Nuestra Señora de Riansares', '162030001', 'Cl. Saturnino Fernandez, 3', 'Cl. Saturnino Fernandez, 3', '969320371',
+         '16009453', 'Nuestra Señora de Riansares', '162030001', 'Cl. Saturnino Fernandez, 3', '16400', '969320371',
          '969320371', 'cairiansares@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -8737,7 +8737,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009660', 'San Isidro', '162030001', 'Cl. San Isidro, 35', 'Cl. San Isidro, 35', '969324281',
+         '16009660', 'San Isidro', '162030001', 'Cl. San Isidro, 35', '16400', '969324281',
          '', 'escuela_infantil_sanisidro@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8746,7 +8746,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009672', 'Santa Quiteria', '162030001', 'Cl. Joaquin Rodriguez Cagancho, S/N', 'Cl. Joaquin Rodriguez Cagancho, S/N', '969322514',
+         '16009672', 'Santa Quiteria', '162030001', 'Cl. Joaquin Rodriguez Cagancho, S/N', '16400', '969322514',
          '', 'escuelainfantilquiteria@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -8755,7 +8755,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002495', 'Seminario Menor Santiago Apóstol', '0000', 'Monasterio de Ucles', 'Monasterio de Ucles', '969211000',
+         '16002495', 'Seminario Menor Santiago Apóstol', '0000', 'Monasterio de Ucles', '16452', '969211000',
          '969238527', 'seminariocuenca@gmail.com', '', 'Privado', ''
         )
         ;
@@ -8764,7 +8764,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004054', 'Duque de Alarcón', '169030001', 'Cm. Vallejo de la Sabina, S/N', 'Cm. Vallejo de la Sabina, S/N', '969208182',
+         '16004054', 'Duque de Alarcón', '169030001', 'Cm. Vallejo de la Sabina, S/N', '16120', '969208182',
          '969208413', '16004054.ies@edu.jccm.es', 'http://ies-duquedealarcon.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -8773,7 +8773,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002586', 'Virgen del Rosario', '169030001', 'Cl. San Roque,10', 'Cl. San Roque,10', '969208046',
+         '16002586', 'Virgen del Rosario', '169030001', 'Cl. San Roque,10', '16120', '969208046',
          '969208046', '16002586.cp@edu.jccm.es', 'http://edu.jccm.es/cp/virgendelrosario', 'Público', 'CEIP'
         )
         ;
@@ -8782,7 +8782,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004625', 'Ribera del Júcar', '162360001', 'Ps. del Santo Niño, 1', 'Ps. del Santo Niño, 1', '969201151',
+         '16004625', 'Ribera del Júcar', '162360001', 'Ps. del Santo Niño, 1', '16100', '969201151',
          '969201151', '16004625.cra@edu.jccm.es', 'http://edu.jccm.es/cra/riberadeljucar', 'Público', 'CEIP'
         )
         ;
@@ -8791,7 +8791,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009933', 'Villa de Valverde', '162360001', 'Cl. Nueva, 3', 'Cl. Nueva, 3', '',
+         '16009933', 'Villa de Valverde', '162360001', 'Cl. Nueva, 3', '16100', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -8800,7 +8800,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004145', 'Alonso Quijano', '162430002', 'Cl. Fray Juan de Yuste, 11', 'Cl. Fray Juan de Yuste, 11', '967168734',
+         '16004145', 'Alonso Quijano', '162430002', 'Cl. Fray Juan de Yuste, 11', '16647', '967168734',
          '967168734', '16004145.cra@edu.jccm.es', 'http://cra-aquijano.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8809,7 +8809,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002720', 'Virrey Núñez de Haro', '162440002', 'Cl. Virgen, 21', 'Cl. Virgen, 21', '967489084',
+         '16002720', 'Virrey Núñez de Haro', '162440002', 'Cl. Virgen, 21', '16236', '967489084',
          '967489084', '16002720.cp@edu.jccm.es', 'http://edu.jccm.es/ceip.virreynunezdeharo', 'Público', 'CEIP'
         )
         ;
@@ -8818,7 +8818,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009398', 'Miguel Delibes', '162450002', 'Cl. Cerro Nieto, 3', 'Cl. Cerro Nieto, 3', '969281096',
+         '16009398', 'Miguel Delibes', '162450002', 'Cl. Cerro Nieto, 3', '16140', '969281096',
          '969281391', '16009398.cra@edu.jccm.es', 'http://cra-migueldelibes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8827,7 +8827,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009866', 'Escuela de Música de Villalpardo', '162480001', 'Cl. Onesimo Redondo, 66', 'Cl. Onesimo Redondo, 66', '',
+         '16009866', 'Escuela de Música de Villalpardo', '162480001', 'Cl. Onesimo Redondo, 66', '16270', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -8836,7 +8836,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004005', 'Manchuela', '162480001', 'Cl. Ramon y Cajal, 5', 'Cl. Ramon y Cajal, 5', '962311080',
+         '16004005', 'Manchuela', '162480001', 'Cl. Ramon y Cajal, 5', '16270', '962311080',
          '962311080', '16004005.cra@edu.jccm.es', 'http://cramanchuela.com', 'Público', 'CEIP'
         )
         ;
@@ -8845,7 +8845,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004364', '- Sin Denominación -', '162490001', 'Cl. San Antón, 17', 'Cl. San Antón, 17', '969322542',
+         '16004364', '- Sin Denominación -', '162490001', 'Cl. San Antón, 17', '16415', '969322542',
          '', 'aepa_villamayords@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -8854,7 +8854,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002781', 'Gúzquez', '162490001', 'Cr. de Hontanaya, 20', 'Cr. de Hontanaya, 20', '969139213',
+         '16002781', 'Gúzquez', '162490001', 'Cr. de Hontanaya, 20', '16415', '969139213',
          '969139213', '16002781.cp@edu.jccm.es', 'http://ceip-guzquez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8863,7 +8863,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004510', 'Ítaca', '162490001', 'Cl. Angel Nieto, 1', 'Cl. Angel Nieto, 1', '969138306',
+         '16004510', 'Ítaca', '162490001', 'Cl. Angel Nieto, 1', '16415', '969138306',
          '969139239', '16004510.ieso@edu.jccm.es', 'http://ies-itaca.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -8872,7 +8872,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009684', 'La Casita', '162490001', 'Cl. San Anton, 17', 'Cl. San Anton, 17', '969138194',
+         '16009684', 'La Casita', '162490001', 'Cl. San Anton, 17', '16415', '969138194',
          '', 'cai@villamayordesantiago.es', '', 'Público', 'EI'
         )
         ;
@@ -8881,7 +8881,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009982', '- Sin Denominación -', '162510004', 'Cl. Venerable Ana, 5', 'Cl. Venerable Ana, 5', '967498614',
+         '16009982', '- Sin Denominación -', '162510004', 'Cl. Venerable Ana, 5', '16230', '967498614',
          '967498614', '16009982.ses@edu.jccm.es', 'http://ies-villanuevadelajara.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -8890,7 +8890,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009696', 'Gurugú', '162510004', 'Cl. Violeta, 8', 'Cl. Violeta, 8', '967493077',
+         '16009696', 'Gurugú', '162510004', 'Cl. Violeta, 8', '16230', '967493077',
          '967498359', '', '', 'Público', 'EI'
         )
         ;
@@ -8899,7 +8899,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16002823', 'Hermenegildo Moreno', '162510004', 'Cl. Carrero Blanco, 16', 'Cl. Carrero Blanco, 16', '967498089',
+         '16002823', 'Hermenegildo Moreno', '162510004', 'Cl. Carrero Blanco, 16', '16230', '967498089',
          '967483053', '16002823.cp@edu.jccm.es', 'http://ceip-hermenegildomoreno.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8908,7 +8908,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16009702', '- Sin Denominación -', '162630003', 'Cl. Hontenillas, S/N', 'Cl. Hontenillas, S/N', '659659576',
+         '16009702', '- Sin Denominación -', '162630003', 'Cl. Hontenillas, S/N', '16196', '659659576',
          '969235765', '', '', 'Público', 'EI'
         )
         ;
@@ -8917,7 +8917,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004236', 'Elena Fortún', '162630003', 'Cl. Mancha, 70', 'Cl. Mancha, 70', '969267184',
+         '16004236', 'Elena Fortún', '162630003', 'Cl. Mancha, 70', '16196', '969267184',
          '969267184', '16004236.cra@edu.jccm.es', 'http://cra-elenafortun.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -8926,7 +8926,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004649', 'El Quijote', '162690002', 'Cl. Calvario, 5', 'Cl. Calvario, 5', '969298100',
+         '16004649', 'El Quijote', '162690002', 'Cl. Calvario, 5', '16442', '969298100',
          '969298100', '16004649.cra@edu.jccm.es', 'http://edu.jccm.es/cra/elquijote', 'Público', 'CEIP'
         )
         ;
@@ -8935,7 +8935,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '16004042', 'Los Sauces', '162690002', 'Cl. Ramon Carrilero Parreño, S/N', 'Cl. Ramon Carrilero Parreño, S/N', '969298310',
+         '16004042', 'Los Sauces', '162690002', 'Cl. Ramon Carrilero Parreño, S/N', '16442', '969298310',
          '969298309', '16004042.ies@edu.jccm.es', 'http://ies-lossauces.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -8944,7 +8944,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003723', '- Sin Denominación -', '190060001', 'Cl. Escurridizo, S/N', 'Cl. Escurridizo, S/N', '',
+         '19003723', '- Sin Denominación -', '190060001', 'Cl. Escurridizo, S/N', '19117', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -8953,7 +8953,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008824', 'Garabatos', '190060001', 'Cl. Campoamor, 12', 'Cl. Campoamor, 12', '949377060',
+         '19008824', 'Garabatos', '190060001', 'Cl. Campoamor, 12', '19117', '949377060',
          '949377806', 'cai_garabatos@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -8962,7 +8962,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003991', 'La Colmena', '190060001', 'Cl. Escurridizo, S/N', 'Cl. Escurridizo, S/N', '949376134',
+         '19003991', 'La Colmena', '190060001', 'Cl. Escurridizo, S/N', '19117', '949376134',
          '949376134', '19000059.cp@edu.jccm.es', 'http://edu.jccm.es/cra.lacolmena', 'Público', 'CEIP'
         )
         ;
@@ -8971,7 +8971,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003474', 'Sierra Ministra', '190110001', 'Cl. Lino Bueno, S/N', 'Cl. Lino Bueno, S/N', '949300927',
+         '19003474', 'Sierra Ministra', '190110001', 'Cl. Lino Bueno, S/N', '19260', '949300927',
          '949300233', '19003474.cra@edu.jccm.es', 'http://edu.jccm.es/cra/alcoleadelpinar', 'Público', 'CEIP'
         )
         ;
@@ -8980,7 +8980,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008836', '- Sin Denominación -', '190210001', 'Cl. San Jose, S/N', 'Cl. San Jose, S/N', '',
+         '19008836', '- Sin Denominación -', '190210001', 'Cl. San Jose, S/N', '19115', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -8989,7 +8989,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003565', 'Pimafad', '190210001', 'Cl. San Jose, 9', 'Cl. San Jose, 9', '949380691',
+         '19003565', 'Pimafad', '190210001', 'Cl. San Jose, 9', '19115', '949380691',
          '949380691', '19003565.cra@edu.jccm.es', 'http://cra-pimafad.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -8998,7 +8998,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008848', 'Pitufilandia', '0000', 'Cl. Ronda, 5', 'Cl. Ronda, 5', '949376201',
+         '19008848', 'Pitufilandia', '0000', 'Cl. Ronda, 5', '19118', '949376201',
          '949377175', '', '', 'Público', 'EI'
         )
         ;
@@ -9007,7 +9007,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008711', '- Sin Denominación -', '190240001', 'Cl. la Dehesa, S/N', 'Cl. la Dehesa, S/N', '',
+         '19008711', '- Sin Denominación -', '190240001', 'Cl. la Dehesa, S/N', '19208', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -9016,7 +9016,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009521', 'Alopekes', '190240001', 'Cl. Eusebio Centenera, 60', 'Cl. Eusebio Centenera, 60', '',
+         '19009521', 'Alopekes', '190240001', 'Cl. Eusebio Centenera, 60', '19208', '',
          '', '', '', 'Privado', 'CEIP'
         )
         ;
@@ -9025,7 +9025,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009117', 'Baby Solete', '190240001', 'Cl. Vicente Aleixandre, 56', 'Cl. Vicente Aleixandre, 56', '949274155',
+         '19009117', 'Baby Solete', '190240001', 'Cl. Vicente Aleixandre, 56', '19208', '949274155',
          '949274326', 'babysolete@telefonica.net', '', 'Privado', 'EI'
         )
         ;
@@ -9034,7 +9034,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008186', 'Campiña Verde', '190240001', 'Av. Doña Maria de las Mercedes, 22', 'Av. Doña Maria de las Mercedes, 22', '949275564',
+         '19008186', 'Campiña Verde', '190240001', 'Av. Doña Maria de las Mercedes, 22', '19208', '949275564',
          '949275463', '19008186.cp@edu.jccm.es', 'http://ceip-campiverde.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9043,7 +9043,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008113', 'Carmen Burgos de Seguí', '190240001', 'Cl. la Dehesa, 2', 'Cl. la Dehesa, 2', '949297657',
+         '19008113', 'Carmen Burgos de Seguí', '190240001', 'Cl. la Dehesa, 2', '19208', '949297657',
          '949297331', '19008113.ies@edu.jccm.es', 'http://ies-carmenburgosdesegui.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9052,7 +9052,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008851', 'Corazones Pequeños', '190240001', 'Cl. los Terreros, 24', 'Cl. los Terreros, 24', '949297316',
+         '19008851', 'Corazones Pequeños', '190240001', 'Cl. los Terreros, 24', '19208', '949297316',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -9061,7 +9061,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008174', 'Escuela Municipal de Música y Danza de Alovera', '190240001', 'Cl. San Sebastian, 18', 'Cl. San Sebastian, 18', '949274491',
+         '19008174', 'Escuela Municipal de Música y Danza de Alovera', '190240001', 'Cl. San Sebastian, 18', '19208', '949274491',
          '', 'escuela.musica@aytoalovera.es', '', 'Público', ''
         )
         ;
@@ -9070,7 +9070,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008034', 'Parque Vallejo', '190240001', 'Cl. Rafael Alberti, 27', 'Cl. Rafael Alberti, 27', '949274491',
+         '19008034', 'Parque Vallejo', '190240001', 'Cl. Rafael Alberti, 27', '19208', '949274491',
          '949274492', '19008034.cp@edu.jccm.es', 'http://ceip-parquevallejo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9079,7 +9079,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008861', 'San Miguel Arcangel', '190240001', 'Av. de la Constitucion, 1', 'Av. de la Constitucion, 1', '949270112',
+         '19008861', 'San Miguel Arcangel', '190240001', 'Av. de la Constitucion, 1', '19208', '949270112',
          '949270311', 'cai.sanmiguel@aytoalovera.es', '', 'Público', 'EI'
         )
         ;
@@ -9088,7 +9088,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000205', 'Virgen de la Paz', '190240001', 'Cl. San Sebastian, 18', 'Cl. San Sebastian, 18', '949270100',
+         '19000205', 'Virgen de la Paz', '190240001', 'Cl. San Sebastian, 18', '19208', '949270100',
          '949297101', '19000205.cp@edu.jccm.es', 'http://ceip-virgendelapazalovera.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9097,7 +9097,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003486', 'Serranía de Atienza', '190440002', 'Cr. de Berlanga, S/N', 'Cr. de Berlanga, S/N', '949399057',
+         '19003486', 'Serranía de Atienza', '190440002', 'Cr. de Berlanga, S/N', '19270', '949399057',
          '949399057', '19003486.cra@edu.jccm.es', 'http://cra-serraniadeatienza.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9106,7 +9106,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002615', 'Arcipreste de Hita', '190460001', 'Ps. Poeta Manuel Martinez, 4', 'Ps. Poeta Manuel Martinez, 4', '949260432',
+         '19002615', 'Arcipreste de Hita', '190460001', 'Ps. Poeta Manuel Martinez, 4', '19200', '949260432',
          '949264869', '19002615.ies@edu.jccm.es', '', 'Público', 'IES'
         )
         ;
@@ -9115,7 +9115,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009622', 'Ceftral-Cetm', '190460001', 'Av. Lyon, 12 (Poligono Rodano)', 'Av. Lyon, 12 (Poligono Rodano)', '',
+         '19009622', 'Ceftral-Cetm', '190460001', 'Av. Lyon, 12 (Poligono Rodano)', '19200', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -9124,7 +9124,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002950', 'Clara Campoamor', '190460001', 'Cr. Villanueva, S/N', 'Cr. Villanueva, S/N', '949262235',
+         '19002950', 'Clara Campoamor', '190460001', 'Cr. Villanueva, S/N', '19200', '949262235',
          '949262235', '19002950.cea@edu.jccm.es', 'http://cepa-claracampoamor.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -9133,7 +9133,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009452', 'Colorín Colorado', '190460001', 'Cl. Rio Sella, 23', 'Cl. Rio Sella, 23', '',
+         '19009452', 'Colorín Colorado', '190460001', 'Cl. Rio Sella, 23', '19200', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9142,7 +9142,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009130', 'Dino', '190460001', 'Cl. Brihuega, 8', 'Cl. Brihuega, 8', '949265246',
+         '19009130', 'Dino', '190460001', 'Cl. Brihuega, 8', '19200', '949265246',
          '', 'guarderiadino@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -9151,7 +9151,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009491', 'Elvira Lindo', '190460001', 'Cl. Vicente Aleixandre, 7', 'Cl. Vicente Aleixandre, 7', '',
+         '19009491', 'Elvira Lindo', '190460001', 'Cl. Vicente Aleixandre, 7', '19200', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -9160,7 +9160,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000345', 'Giovanni Antonio Farina', '190460001', 'Av. Alcala, 6', 'Av. Alcala, 6', '949261250',
+         '19000345', 'Giovanni Antonio Farina', '190460001', 'Av. Alcala, 6', '19200', '949261250',
          '949264179', 'doroteazuqueca@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -9169,7 +9169,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008800', 'La Campiña', '190460001', 'Cl. Quebradilla, 5', 'Cl. Quebradilla, 5', '949260805',
+         '19008800', 'La Campiña', '190460001', 'Cl. Quebradilla, 5', '19200', '949260805',
          '949260805', '19008800.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -9178,7 +9178,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009610', 'La Casita de la Abuela', '190460001', 'Cl. Rio Ebro, 2', 'Cl. Rio Ebro, 2', '',
+         '19009610', 'La Casita de la Abuela', '190460001', 'Cl. Rio Ebro, 2', '19200', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9187,7 +9187,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009567', 'La Curva', '190460001', 'Av. de Torrelaguna, 2', 'Av. de Torrelaguna, 2', '',
+         '19009567', 'La Curva', '190460001', 'Av. de Torrelaguna, 2', '19200', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -9196,7 +9196,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008745', 'La Espiga', '190460001', 'Cl. Rafa Nadal, 2', 'Cl. Rafa Nadal, 2', '949883351',
+         '19008745', 'La Espiga', '190460001', 'Cl. Rafa Nadal, 2', '19200', '949883351',
          '949265251', '19008745.cp@edu.jccm.es', 'http://ceip-laespiga.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9205,7 +9205,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009154', 'La Guardería', '190460001', 'Tr. de la Soledad, S/N', 'Tr. de la Soledad, S/N', '949264809',
+         '19009154', 'La Guardería', '190460001', 'Tr. de la Soledad, S/N', '19200', '949264809',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9214,7 +9214,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008885', 'La Noguera', '190460001', 'Cl. Alto de la Noguera, 16', 'Cl. Alto de la Noguera, 16', '949264018',
+         '19008885', 'La Noguera', '190460001', 'Cl. Alto de la Noguera, 16', '19200', '949264018',
          '949264018', 'cailanoguera@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -9223,7 +9223,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008095', 'La Paloma', '190460001', 'Cl. Gonzalo Torrente Ballester, S/N', 'Cl. Gonzalo Torrente Ballester, S/N', '949249193',
+         '19008095', 'La Paloma', '190460001', 'Cl. Gonzalo Torrente Ballester, S/N', '19200', '949249193',
          '949249260', '19008095.cp@edu.jccm.es', 'http://ceip-lapaloma.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9232,7 +9232,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000333', 'La Paz', '190460001', 'Cl. la Flor, S/N', 'Cl. la Flor, S/N', '949261392',
+         '19000333', 'La Paz', '190460001', 'Cl. la Flor, S/N', '19200', '949261392',
          '949261392', '19000333.cp@edu.jccm.es', 'http://edu.jccm.es/cp.lapaz', 'Público', 'CEIP'
         )
         ;
@@ -9241,7 +9241,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003863', 'Maestra Plácida Herranz', '190460001', 'Cl. Chueca, S/N', 'Cl. Chueca, S/N', '949260466',
+         '19003863', 'Maestra Plácida Herranz', '190460001', 'Cl. Chueca, S/N', '19200', '949260466',
          '949260466', '19003863.cp@edu.jccm.es', 'http://ceip-maestraplacida.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9250,7 +9250,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009579', 'Mis Pekeñikes, C.B.', '190460001', 'Cl. Miguel Delibes, 15 a', 'Cl. Miguel Delibes, 15 a', '',
+         '19009579', 'Mis Pekeñikes, C.B.', '190460001', 'Cl. Miguel Delibes, 15 a', '19200', '',
          '', 'pekenikes@hotmail.es', '', 'Privado', 'EI'
         )
         ;
@@ -9259,7 +9259,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009415', 'Mundo Mágico', '190460001', 'Cl. Federico Garcia Lorca, 2', 'Cl. Federico Garcia Lorca, 2', '949249161',
+         '19009415', 'Mundo Mágico', '190460001', 'Cl. Federico Garcia Lorca, 2', '19200', '949249161',
          '', 'ei.mundomagico@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -9268,7 +9268,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003978', 'Profesor Domínguez Ortiz', '190460001', 'Av. Siglo Xxi, S/N', 'Av. Siglo Xxi, S/N', '949277149',
+         '19003978', 'Profesor Domínguez Ortiz', '190460001', 'Av. Siglo Xxi, S/N', '19200', '949277149',
          '949267425', '19003978.ies@edu.jccm.es', 'http://ies-profesordominguezortiz.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9277,7 +9277,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002640', 'San Isidro', '190460001', 'Cl. Poeta Manuel Martinez, 2', 'Cl. Poeta Manuel Martinez, 2', '949261181',
+         '19002640', 'San Isidro', '190460001', 'Cl. Poeta Manuel Martinez, 2', '19200', '949261181',
          '949262406', '19002640.ies@edu.jccm.es', 'http://ies-sanisidro.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9286,7 +9286,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19004004', 'Siglo XXI', '190460001', 'Cl. Dinamarca, 6', 'Cl. Dinamarca, 6', '949264974',
+         '19004004', 'Siglo XXI', '190460001', 'Cl. Dinamarca, 6', '19200', '949264974',
          '949278019', '19004004.cp@edu.jccm.es', 'http://edu.jccm.es/cp.sigloxxi', 'Público', 'CEIP'
         )
         ;
@@ -9295,7 +9295,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009166', 'Vallehermoso', '190460001', 'Cl. Albeniz, 35', 'Cl. Albeniz, 35', '616464737',
+         '19009166', 'Vallehermoso', '190460001', 'Cl. Albeniz, 35', '19200', '616464737',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9304,7 +9304,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000357', 'Virgen de la Soledad', '190460001', 'Cl. San Miguel, S/N', 'Cl. San Miguel, S/N', '949261989',
+         '19000357', 'Virgen de la Soledad', '190460001', 'Cl. San Miguel, S/N', '19200', '949261989',
          '949348924', '19000357.cp@edu.jccm.es', 'http://ceip-virgensoledad.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9313,7 +9313,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008873', '8 de Marzo', '190460001', 'Cl. Museo del Prado, 73', 'Cl. Museo del Prado, 73', '949266134',
+         '19008873', '8 de Marzo', '190460001', 'Cl. Museo del Prado, 73', '19200', '949266134',
          '949266134', 'cai8marzo@azuqueca.net', '', 'Público', 'EI'
         )
         ;
@@ -9322,7 +9322,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008897', '- Sin Denominación -', '190530003', 'Cl. Jesus Ruiz Pastor, S/N', 'Cl. Jesus Ruiz Pastor, S/N', '949280602',
+         '19008897', '- Sin Denominación -', '190530003', 'Cl. Jesus Ruiz Pastor, S/N', '19400', '949280602',
          '949280061', 'ayto@aytobrihuega.com', '', 'Público', 'EI'
         )
         ;
@@ -9331,7 +9331,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003462', 'Briocense', '190530003', 'Cl. Quiñoneros, S/N', 'Cl. Quiñoneros, S/N', '949280355',
+         '19003462', 'Briocense', '190530003', 'Cl. Quiñoneros, S/N', '19400', '949280355',
          '949340019', '19003462.seces@edu.jccm.es', 'http://edu.jccm.es/ies/briocense', 'Público', ''
         )
         ;
@@ -9340,7 +9340,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000394', 'Nuestra Señora de la Peña', '190530003', 'Cl. Quiñoneros, S/N', 'Cl. Quiñoneros, S/N', '949280114',
+         '19000394', 'Nuestra Señora de la Peña', '190530003', 'Cl. Quiñoneros, S/N', '19400', '949280114',
          '949280114', '19000394.cp@edu.jccm.es', 'http://edu.jccm.es/cp.nuestrasenioradelapenia', 'Público', 'CEIP'
         )
         ;
@@ -9349,7 +9349,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003590', 'Santa Lucía', '190540001', 'Cl. Teniente Verde, S/N', 'Cl. Teniente Verde, S/N', '949283556',
+         '19003590', 'Santa Lucía', '190540001', 'Cl. Teniente Verde, S/N', '19133', '949283556',
          '949283556', '19003590.cra@edu.jccm.es', 'http://cra-santalucia.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9358,7 +9358,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003981', 'Ana María Matute', '190580001', 'Av. Guadalajara, S/N', 'Av. Guadalajara, S/N', '949324456',
+         '19003981', 'Ana María Matute', '190580001', 'Av. Guadalajara, S/N', '19171', '949324456',
          '949324094', '19003981.ieso@edu.jccm.es', 'http://ies-anamariamatute.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -9367,7 +9367,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009178', 'El País de Liliput', '190580001', 'Cl. Lisboa, 2', 'Cl. Lisboa, 2', '949324298',
+         '19009178', 'El País de Liliput', '190580001', 'Cl. Lisboa, 2', '19171', '949324298',
          '', 'info@elpaisdeliliput.com', '', 'Privado', 'EI'
         )
         ;
@@ -9376,7 +9376,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008150', 'Escuela Municipal de Música y Danza de Cabanillas del Campo', '190580001', 'Cl. Juan Rhodes, 8', 'Cl. Juan Rhodes, 8', '949337725',
+         '19008150', 'Escuela Municipal de Música y Danza de Cabanillas del Campo', '190580001', 'Cl. Juan Rhodes, 8', '19171', '949337725',
          '', 'escuelamusica@aytocabanillas.org', '', 'Público', ''
         )
         ;
@@ -9385,7 +9385,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008216', 'La Senda', '190580001', 'Cl. Cipres, 2', 'Cl. Cipres, 2', '949337431',
+         '19008216', 'La Senda', '190580001', 'Cl. Cipres, 2', '19171', '949337431',
          '949337431', '19008216.cp@edu.jccm.es', 'http://edu.jccm.es/cp.lasenda', 'Público', 'CEIP'
         )
         ;
@@ -9394,7 +9394,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008903', 'Los Llanos', '190580001', 'Cl. Cuzco, 3', 'Cl. Cuzco, 3', '949332767',
+         '19008903', 'Los Llanos', '190580001', 'Cl. Cuzco, 3', '19171', '949332767',
          '', 'infodidac@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -9403,7 +9403,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008046', 'Los Olivos', '190580001', 'Cl. San Juan de la Cruz, 2', 'Cl. San Juan de la Cruz, 2', '949324457',
+         '19008046', 'Los Olivos', '190580001', 'Cl. San Juan de la Cruz, 2', '19171', '949324457',
          '949324457', '19008046.cp@edu.jccm.es', 'http://ceip-losolivos.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9412,7 +9412,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009506', 'Mirador', '190580001', 'Cl. Lope de Vega, S/N', 'Cl. Lope de Vega, S/N', '949324931',
+         '19009506', 'Mirador', '190580001', 'Cl. Lope de Vega, S/N', '19171', '949324931',
          '', 'elmirador@escuelainfantilquerubines.es', '', 'Público', 'EI'
         )
         ;
@@ -9421,7 +9421,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000461', 'San Blas', '190580001', 'Cl. Soledad, 27', 'Cl. Soledad, 27', '949332213',
+         '19000461', 'San Blas', '190580001', 'Cl. Soledad, 27', '19171', '949332213',
          '949332213', '19000461.cp@edu.jccm.es', 'http://ceip-sanblasgu.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9430,7 +9430,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008915', 'Tres Torres', '190580001', 'Cl. Madrazo, 2', 'Cl. Madrazo, 2', '949337663',
+         '19008915', 'Tres Torres', '190580001', 'Cl. Madrazo, 2', '19171', '949337663',
          '', 'info@caitrestorres.com', '', 'Público', 'EI'
         )
         ;
@@ -9439,7 +9439,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003681', '- Sin Denominación -', '190710001', 'Pz. Mayor, S/N', 'Pz. Mayor, S/N', '',
+         '19003681', '- Sin Denominación -', '190710001', 'Pz. Mayor, S/N', '19170', '',
          '', 'aepa_elcasar@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -9448,7 +9448,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008678', 'Asociacion Musical el Casar', '190710001', 'Cl. Valeriano Romanillos, S/N', 'Cl. Valeriano Romanillos, S/N', '949335072',
+         '19008678', 'Asociacion Musical el Casar', '190710001', 'Cl. Valeriano Romanillos, S/N', '19170', '949335072',
          '', 'secretaria@asomusicasar.org', '', 'Privado', ''
         )
         ;
@@ -9457,7 +9457,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003929', 'Campiña Alta', '190710001', 'Ps. de la Ermita, S/N', 'Ps. de la Ermita, S/N', '949334910',
+         '19003929', 'Campiña Alta', '190710001', 'Ps. de la Ermita, S/N', '19170', '949334910',
          '949334901', '19003929.seces@edu.jccm.es', 'http://ies-campalta.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -9466,7 +9466,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008733', 'Colegio Montealbir', '190710007', 'Ur. los Arenales de el Casar', 'Ur. los Arenales de el Casar', '949326542',
+         '19008733', 'Colegio Montealbir', '190710007', 'Ur. los Arenales de el Casar', '19170', '949326542',
          '949326541', 'administracion@montealbir.com', 'http://www.montealbir.com', 'Privado', 'CEIP'
         )
         ;
@@ -9475,7 +9475,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009488', 'El Casar', '190710001', 'Ps. de el Calvario, 2', 'Ps. de el Calvario, 2', '',
+         '19009488', 'El Casar', '190710001', 'Ps. de el Calvario, 2', '19170', '',
          '', 'escuelainfantil.elcasar@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -9484,7 +9484,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008162', 'El Coto', '190710003', 'Av. Bruselas, S/N', 'Av. Bruselas, S/N', '949335034',
+         '19008162', 'El Coto', '190710003', 'Av. Bruselas, S/N', '19170', '949335034',
          '949335034', '19008162.cp@edu.jccm.es', 'http://ceip-elcoto.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9493,7 +9493,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009634', 'El Coto Kids', '190710003', 'Cl. las Navas, S/N', 'Cl. las Navas, S/N', '',
+         '19009634', 'El Coto Kids', '190710003', 'Cl. las Navas, S/N', '19185', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9502,7 +9502,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008204', 'Juan García Valdemora', '190710001', 'Ps. del Calvario, S/N', 'Ps. del Calvario, S/N', '949322814',
+         '19008204', 'Juan García Valdemora', '190710001', 'Ps. del Calvario, S/N', '19170', '949322814',
          '949322856', '19008204.ies@edu.jccm.es', '', 'Público', 'IES'
         )
         ;
@@ -9511,7 +9511,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009191', 'La Cigüeña', '190710001', 'Cm. de Talamanca, S/N', 'Cm. de Talamanca, S/N', '949336045',
+         '19009191', 'La Cigüeña', '190710001', 'Cm. de Talamanca, S/N', '19170', '949336045',
          '949336820', '', '', 'Privado', 'EI'
         )
         ;
@@ -9520,7 +9520,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009464', 'La Colina Encantada', '0000', 'Cl. Rio Jarama, 691', 'Cl. Rio Jarama, 691', '949368622',
+         '19009464', 'La Colina Encantada', '0000', 'Cl. Rio Jarama, 691', '19185', '949368622',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9529,7 +9529,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009208', 'La Jirafa Azul', '190710007', 'Cl. Isla de Creta, 36', 'Cl. Isla de Creta, 36', '949100889',
+         '19009208', 'La Jirafa Azul', '190710007', 'Cl. Isla de Creta, 36', '19170', '949100889',
          '917130989', '', '', 'Privado', 'EI'
         )
         ;
@@ -9538,7 +9538,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009211', 'Los Kekos', '0000', 'Cl. Falla, 220', 'Cl. Falla, 220', '949334831',
+         '19009211', 'Los Kekos', '0000', 'Cl. Falla, 220', '19170', '949334831',
          '', 'itziarloskekos@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -9547,7 +9547,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000552', 'Maestros del Casar', '190710001', 'Av. de los Maestros, 3', 'Av. de los Maestros, 3', '949334870',
+         '19000552', 'Maestros del Casar', '190710001', 'Av. de los Maestros, 3', '19170', '949334870',
          '949334870', '19000552.cp@edu.jccm.es', 'http://ceip-maestrosdelcasar.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9556,7 +9556,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009427', 'María Montessori', '190710007', 'Av. los Arenales, S/N', 'Av. los Arenales, S/N', '949326623',
+         '19009427', 'María Montessori', '190710007', 'Av. los Arenales, S/N', '19170', '949326623',
          '949326681', '19009427.cp@edu.jccm.es', 'http://edu.jccm.es/cp.n3losarenales', 'Público', 'CEIP'
         )
         ;
@@ -9565,7 +9565,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009221', 'Mupa', '190710001', 'Cl. San Roque, 29', 'Cl. San Roque, 29', '949334967',
+         '19009221', 'Mupa', '190710001', 'Cl. San Roque, 29', '19170', '949334967',
          '949334867', '', '', 'Privado', 'EI'
         )
         ;
@@ -9574,7 +9574,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009233', 'Pequenautas', '190710003', 'Av. Bruselas, 1457', 'Av. Bruselas, 1457', '649433161',
+         '19009233', 'Pequenautas', '190710003', 'Av. Bruselas, 1457', '19185', '649433161',
          '', 'info@pequenautas.com', '', 'Privado', 'EI'
         )
         ;
@@ -9583,7 +9583,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003498', 'Sexma de la Sierra', '191030001', 'Cl. Veguillas, S/N', 'Cl. Veguillas, S/N', '949836368',
+         '19003498', 'Sexma de la Sierra', '191030001', 'Cl. Veguillas, S/N', '19310', '949836368',
          '949836368', '19003498.cra@edu.jccm.es', 'http://edu.jccm.es/cra.sexmadelasierra', 'Público', 'CEIP'
         )
         ;
@@ -9592,7 +9592,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000710', 'José Inglés', '191050002', 'Cl. Jose Ingles, S/N', 'Cl. Jose Ingles, S/N', '949271217',
+         '19000710', 'José Inglés', '191050002', 'Cl. Jose Ingles, S/N', '19160', '949271217',
          '949271461', '19000710.cp@edu.jccm.es', 'http://ceip-joseingles.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9601,7 +9601,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009476', 'La Sirenita', '0000', 'Cl. Carramolino, 13', 'Cl. Carramolino, 13', '',
+         '19009476', 'La Sirenita', '0000', 'Cl. Carramolino, 13', '19160', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9610,7 +9610,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009518', 'Las Ardillas', '0000', 'Cl. el Torvisco, 18', 'Cl. el Torvisco, 18', '',
+         '19009518', 'Las Ardillas', '0000', 'Cl. el Torvisco, 18', '19160', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9619,7 +9619,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008782', 'Peñalba', '191050002', 'Cl. la Hogaza, S/N', 'Cl. la Hogaza, S/N', '949271285',
+         '19008782', 'Peñalba', '191050002', 'Cl. la Hogaza, S/N', '19160', '949271285',
          '949271337', '19008782.ies@edu.jccm.es', 'http://ies-chiloeches.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9628,7 +9628,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009580', 'San Marcos', '191050002', 'Cl. Reajal, S/N', 'Cl. Reajal, S/N', '949271950',
+         '19009580', 'San Marcos', '191050002', 'Cl. Reajal, S/N', '19160', '949271950',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -9637,7 +9637,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008927', '- Sin Denominación -', '190860002', 'Rd. del Castillo, S/N', 'Rd. del Castillo, S/N', '949810572',
+         '19008927', '- Sin Denominación -', '190860002', 'Rd. del Castillo, S/N', '19420', '949810572',
          '949810435', '', '', 'Público', 'EI'
         )
         ;
@@ -9646,7 +9646,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003401', 'Don Juan Manuel', '190860002', 'Cm. de las Cruces, 1', 'Cm. de las Cruces, 1', '949811041',
+         '19003401', 'Don Juan Manuel', '190860002', 'Cm. de las Cruces, 1', '19420', '949811041',
          '949811041', '19003401.ies@edu.jccm.es', 'http://ies-donjuanmanuel.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9655,7 +9655,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000618', 'San Francisco', '190860002', 'Cm. del Val, S/N', 'Cm. del Val, S/N', '949810107',
+         '19000618', 'San Francisco', '190860002', 'Cm. del Val, S/N', '19420', '949810107',
          '949810107', '19000618.cp@edu.jccm.es', 'http://ceip-sanfrancisco.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9664,7 +9664,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003531', 'La Encina', '190920003', 'Pq. Municipal, S/N', 'Pq. Municipal, S/N', '949855085',
+         '19003531', 'La Encina', '190920003', 'Pq. Municipal, S/N', '19230', '949855085',
          '949855085', '19003531.cra@edu.jccm.es', 'http://cra-laencina.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9673,7 +9673,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008940', '- Sin Denominación -', '191170001', 'Cm. del Monte, 1', 'Cm. del Monte, 1', '949337212',
+         '19008940', '- Sin Denominación -', '191170001', 'Cm. del Monte, 1', '19290', '949337212',
          '949330544', 'maria_caidefontanar@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -9682,7 +9682,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000795', 'Virgen de la Soledad', '191170001', 'Cl. Antonio Machado, S/N', 'Cl. Antonio Machado, S/N', '949331322',
+         '19000795', 'Virgen de la Soledad', '191170001', 'Cl. Antonio Machado, S/N', '19290', '949331322',
          '949331322', '19000795.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -9691,7 +9691,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009592', 'Mi Pequeño Hogar', '0000', 'Cl. del Val, 1', 'Cl. del Val, 1', '',
+         '19009592', 'Mi Pequeño Hogar', '0000', 'Cl. del Val, 1', '19113', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -9700,7 +9700,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003000', 'Clara Sánchez', '191260001', 'Av. de la Cebada, S/N', 'Av. de la Cebada, S/N', '949339628',
+         '19003000', 'Clara Sánchez', '191260001', 'Av. de la Cebada, S/N', '19175', '949339628',
          '949339628', '19003000.cp@edu.jccm.es', 'http://ceip-clarasanchez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9709,7 +9709,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003191', '- Sin Denominación -', '191300001', 'Cl. Felipe Solano Antelo, 21', 'Cl. Felipe Solano Antelo, 21', '949218479',
+         '19003191', '- Sin Denominación -', '191300001', 'Cl. Felipe Solano Antelo, 21', '19002', '949218479',
          '949218604', '19003191.eoi@edu.jccm.es', 'http://edu.jccm.es/eoi/guadalajara', 'Público', 'EOI'
         )
         ;
@@ -9718,7 +9718,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008101', '- Sin Denominación -', '191300001', 'Pz. Ceuta y Melilla, 6 y 7', 'Pz. Ceuta y Melilla, 6 y 7', '949255933',
+         '19008101', '- Sin Denominación -', '191300001', 'Pz. Ceuta y Melilla, 6 y 7', '19005', '949255933',
          '949214768', '19008101.ea@edu.jccm.es', 'http://edu.jccm.es/ea/guadalajara', 'Público', ''
         )
         ;
@@ -9727,7 +9727,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009245', '... y Milú', '191300001', 'Ct. del Matadero, 3', 'Ct. del Matadero, 3', '949219301',
+         '19009245', '... y Milú', '191300001', 'Ct. del Matadero, 3', '19001', '949219301',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9736,7 +9736,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008125', 'Afen Escuela Técnico Deportiva', '191300001', 'Cl. Toledo, 24', 'Cl. Toledo, 24', '',
+         '19008125', 'Afen Escuela Técnico Deportiva', '191300001', 'Cl. Toledo, 24', '19002', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -9745,7 +9745,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003930', 'Aguas Vivas', '191300001', 'Av. Beleña, 9', 'Av. Beleña, 9', '949881264',
+         '19003930', 'Aguas Vivas', '191300001', 'Av. Beleña, 9', '19005', '949881264',
          '949881455', '19003930.ies@edu.jccm.es', 'http://ies-aguasvivas.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9754,7 +9754,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000989', 'Alcarria', '191300001', 'Cl. Cifuentes, 49', 'Cl. Cifuentes, 49', '949221014',
+         '19000989', 'Alcarria', '191300001', 'Cl. Cifuentes, 49', '19003', '949221014',
          '949223451', '19000989.cp@edu.jccm.es', 'http://ceip.alcarria.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9763,7 +9763,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008939', 'Alfanhuí', '191300001', 'Cl. Doctor Rafael de la Rica, 44 C/V Laguna Grande, 14', 'Cl. Doctor Rafael de la Rica, 44 C/V Laguna Grande, 14', '',
+         '19008939', 'Alfanhuí', '191300001', 'Cl. Doctor Rafael de la Rica, 44 C/V Laguna Grande, 14', '19005', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -9772,7 +9772,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002639', 'Alvar Fáñez de Minaya', '191300001', 'Cl. Constitucion, 31 B', 'Cl. Constitucion, 31 B', '949222030',
+         '19002639', 'Alvar Fáñez de Minaya', '191300001', 'Cl. Constitucion, 31 B', '19003', '949222030',
          '949222030', '19002639.cp@edu.jccm.es', 'http://ceip-alvarfanyezdeminaya.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9781,7 +9781,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002597', 'Antonio Buero Vallejo', '191300001', 'Cl. Enrique Fluiters Aguado,S/N', 'Cl. Enrique Fluiters Aguado,S/N', '949230661',
+         '19002597', 'Antonio Buero Vallejo', '191300001', 'Cl. Enrique Fluiters Aguado,S/N', '19003', '949230661',
          '949219390', '19002597.ies@edu.jccm.es', 'http://ies-antoniobuerovallejo.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9790,7 +9790,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009270', 'Baby Pitufos', '191300001', 'Cl. las Cañas, 26', 'Cl. las Cañas, 26', '949219088',
+         '19009270', 'Baby Pitufos', '191300001', 'Cl. las Cañas, 26', '19005', '949219088',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9799,7 +9799,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002767', 'Badiel', '191300001', 'Cl. Adoratrices, 12', 'Cl. Adoratrices, 12', '949215100',
+         '19002767', 'Badiel', '191300001', 'Cl. Adoratrices, 12', '19002', '949215100',
          '949220265', '19002767.cp@edu.jccm.es', 'http://ceip-badiel.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9808,7 +9808,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002706', 'Balconcillo', '191300001', 'Cl. Constitucion, 22-D', 'Cl. Constitucion, 22-D', '949227362',
+         '19002706', 'Balconcillo', '191300001', 'Cl. Constitucion, 22-D', '19003', '949227362',
          '949217902', '19002706.cp@edu.jccm.es', 'http://ceip-balconcillo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9817,7 +9817,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001076', 'Brianda de Mendoza', '191300001', 'Cl. Hermanos Fernandez Galiano, 6', 'Cl. Hermanos Fernandez Galiano, 6', '949213146',
+         '19001076', 'Brianda de Mendoza', '191300001', 'Cl. Hermanos Fernandez Galiano, 6', '19004', '949213146',
          '949253710', '19001076.ies@edu.jccm.es', 'http://edu.jccm.es/ies/brianda.de.mendoza', 'Público', 'IES'
         )
         ;
@@ -9826,7 +9826,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000953', 'Cardenal Cisneros', '191300001', 'Cl. Donante de Sangre, 1', 'Cl. Donante de Sangre, 1', '949248620',
+         '19000953', 'Cardenal Cisneros', '191300001', 'Cl. Donante de Sangre, 1', '19002', '949248620',
          '949225330', 'secretaria@diocesano.com', 'http://www.diocesano.com', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -9835,7 +9835,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000990', 'Cardenal Mendoza', '191300001', 'Cl. Laguna Grande, 10', 'Cl. Laguna Grande, 10', '949223844',
+         '19000990', 'Cardenal Mendoza', '191300001', 'Cl. Laguna Grande, 10', '19005', '949223844',
          '949255156', '19000990.cp@edu.jccm.es', 'http://ceip-cardenalmendoza.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9844,7 +9844,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002743', 'Castilla', '191300001', 'Cl. Virgen del Amparo, 4', 'Cl. Virgen del Amparo, 4', '949220396',
+         '19002743', 'Castilla', '191300001', 'Cl. Virgen del Amparo, 4', '19003', '949220396',
          '949212213', '19002743.ies@edu.jccm.es', 'http://edu.jccm.es/ies.castilla', 'Público', 'IES'
         )
         ;
@@ -9853,7 +9853,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008812', 'Castilla-La Mancha', '191300001', 'Tr. Nuevo Alamin, 8', 'Tr. Nuevo Alamin, 8', '949215852',
+         '19008812', 'Castilla-La Mancha', '191300001', 'Tr. Nuevo Alamin, 8', '19005', '949215852',
          '949215852', 'fgmartin@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -9862,7 +9862,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009257', 'Din Don', '191300001', 'Cl. Campiña, 3 Bajo, Pc. B 13-A, Sector Sp-O2', 'Cl. Campiña, 3 Bajo, Pc. B 13-A, Sector Sp-O2', '949298812',
+         '19009257', 'Din Don', '191300001', 'Cl. Campiña, 3 Bajo, Pc. B 13-A, Sector Sp-O2', '19005', '949298812',
          '', 'juanjose.torrent@din-don.es', '', 'Privado', 'EI'
         )
         ;
@@ -9871,7 +9871,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009269', 'El Balancín', '191300001', 'Cl. Felipe Solano Antelo, 6 Interior', 'Cl. Felipe Solano Antelo, 6 Interior', '696998645',
+         '19009269', 'El Balancín', '191300001', 'Cl. Felipe Solano Antelo, 6 Interior', '19002', '696998645',
          '949234929', 'elbalancin@elbalancin.es', '', 'Privado', 'EI'
         )
         ;
@@ -9880,7 +9880,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002718', 'El Doncel', '191300001', 'Cl. Rufino Blanco, 5', 'Cl. Rufino Blanco, 5', '949221348',
+         '19002718', 'El Doncel', '191300001', 'Cl. Rufino Blanco, 5', '19002', '949221348',
          '949221348', '19002718.cp@edu.jccm.es', 'http://edu.jccm.es/cp.eldoncel', 'Público', 'CEIP'
         )
         ;
@@ -9889,7 +9889,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008666', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '191300001', 'Cl. Leon Felipe, 4, Bajo', 'Cl. Leon Felipe, 4, Bajo', '',
+         '19008666', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '191300001', 'Cl. Leon Felipe, 4, Bajo', '19004', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -9898,7 +9898,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003589', 'Francisco Ibáñez', '191300002', 'Pz. de la Constitucion, S/N', 'Pz. de la Constitucion, S/N', '949228427',
+         '19003589', 'Francisco Ibáñez', '191300002', 'Pz. de la Constitucion, S/N', '19150', '949228427',
          '949228427', '19003589.cra@edu.jccm.es', 'http://cra-franciscoibanez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9907,7 +9907,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001027', 'Isidro Almazán', '191300001', 'Cl. Buenafuente, 15-17', 'Cl. Buenafuente, 15-17', '949201989',
+         '19001027', 'Isidro Almazán', '191300001', 'Cl. Buenafuente, 15-17', '19004', '949201989',
          '949203364', '19001027.cp@edu.jccm.es', 'http://ceip-isidroalmazan.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9916,7 +9916,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003450', 'José Luis Sampedro', '191300001', 'Cl. Zaragoza,18', 'Cl. Zaragoza,18', '949253205',
+         '19003450', 'José Luis Sampedro', '191300001', 'Cl. Zaragoza,18', '19005', '949253205',
          '949228874', '19003450.ies@edu.jccm.es', 'http://ies-jlsampedro.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9925,7 +9925,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009543', 'La Casa de Mamá', '191300001', 'Cl. Cuba, 3', 'Cl. Cuba, 3', '949218777',
+         '19009543', 'La Casa de Mamá', '191300001', 'Cl. Cuba, 3', '19005', '949218777',
          '', 'info@lacasademama.com', '', 'Privado', 'EI'
         )
         ;
@@ -9934,7 +9934,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009282', 'La Cotorrera', '191300001', 'Cl. Francisco de Medina, 13', 'Cl. Francisco de Medina, 13', '',
+         '19009282', 'La Cotorrera', '191300001', 'Cl. Francisco de Medina, 13', '19002', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9943,7 +9943,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009294', 'La Fábula', '191300001', 'Cl. Prado de Taracena, 11', 'Cl. Prado de Taracena, 11', '949491044',
+         '19009294', 'La Fábula', '191300001', 'Cl. Prado de Taracena, 11', '19005', '949491044',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -9952,7 +9952,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009300', 'La Rosaleda', '191300001', 'Cl. Jesus Garcia Perdices, 1 B', 'Cl. Jesus Garcia Perdices, 1 B', '949202021',
+         '19009300', 'La Rosaleda', '191300001', 'Cl. Jesus Garcia Perdices, 1 B', '19004', '949202021',
          '949229285', 'centro@infantillarosaleda.e.telefonica.net', '', 'Privado', 'EI'
         )
         ;
@@ -9961,7 +9961,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008058', 'Las Lomas', '191300001', 'Av. de la Salinera, 12', 'Av. de la Salinera, 12', '949228500',
+         '19008058', 'Las Lomas', '191300001', 'Av. de la Salinera, 12', '19005', '949228500',
          '949228500', '19008058.cp@edu.jccm.es', 'http://ceip-laslomas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -9970,7 +9970,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003139', 'Liceo Caracense', '191300001', 'Cl. Teniente Figueroa, 6', 'Cl. Teniente Figueroa, 6', '949215059',
+         '19003139', 'Liceo Caracense', '191300001', 'Cl. Teniente Figueroa, 6', '19001', '949215059',
          '949219857', '19003139.ies@edu.jccm.es', 'http://ies-liceocaracense.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -9979,7 +9979,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008952', 'Los Manantiales', '191300001', 'Cl. Sopetran, 5', 'Cl. Sopetran, 5', '949887070',
+         '19008952', 'Los Manantiales', '191300001', 'Cl. Sopetran, 5', '19004', '949887070',
          '', 'gmanantiales@grupoeducativo.com', '', 'Público', 'EI'
         )
         ;
@@ -9988,7 +9988,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001091', 'Luis de Lucena', '191300001', 'Cl. Francisco Aritio, 93', 'Cl. Francisco Aritio, 93', '949211383',
+         '19001091', 'Luis de Lucena', '191300001', 'Cl. Francisco Aritio, 93', '19004', '949211383',
          '949213285', '19001091.ies@edu.jccm.es', 'http://edu.jccm.es/ies/luisdelucena', 'Público', 'IES'
         )
         ;
@@ -9997,7 +9997,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000904', 'Marista Champagnat', '191300001', 'Cl. Pedro Pascual, 2', 'Cl. Pedro Pascual, 2', '949220697',
+         '19000904', 'Marista Champagnat', '191300001', 'Cl. Pedro Pascual, 2', '19001', '949220697',
          '949253350', 'guadalajara.dire@maristasiberica.es', 'http://www.guadalajara.maristasiberica.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -10006,7 +10006,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009312', 'Micos', '191300001', 'Cl. Bulevar Alto Tajo, 40', 'Cl. Bulevar Alto Tajo, 40', '949298586',
+         '19009312', 'Micos', '191300001', 'Cl. Bulevar Alto Tajo, 40', '19005', '949298586',
          '949298586', 'info@micosguarderia.es', '', 'Privado', 'EI'
         )
         ;
@@ -10015,7 +10015,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000916', 'Niña María', '191300001', 'Av. Francisco Aritmendi, 2', 'Av. Francisco Aritmendi, 2', '949220446',
+         '19000916', 'Niña María', '191300001', 'Av. Francisco Aritmendi, 2', '19002', '949220446',
          '949220230', 'nmariagu@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -10024,7 +10024,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002822', 'Ocejón', '191300001', 'Cl. Doctor Layna Serrano, 14', 'Cl. Doctor Layna Serrano, 14', '949231046',
+         '19002822', 'Ocejón', '191300001', 'Cl. Doctor Layna Serrano, 14', '19002', '949231046',
          '949231046', '19002822.cp@edu.jccm.es', 'http://ceip-ocejon.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10033,7 +10033,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008794', 'Parque de la Muñeca', '191300001', 'Av. del Sol, S/N', 'Av. del Sol, S/N', '949319723',
+         '19008794', 'Parque de la Muñeca', '191300001', 'Av. del Sol, S/N', '19005', '949319723',
          '949319723', '19008794.cp@edu.jccm.es', 'http://ceip-parquedelamuneca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10042,7 +10042,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001039', 'Pedro Sanz Vázquez', '191300001', 'Cl. del Rio, S/N', 'Cl. del Rio, S/N', '949213882',
+         '19001039', 'Pedro Sanz Vázquez', '191300001', 'Cl. del Rio, S/N', '19004', '949213882',
          '949213882', '19001039.cp@edu.jccm.es', 'http://edu.jccm.es/cp/pedrosanzvazquez', 'Público', 'CEIP'
         )
         ;
@@ -10051,7 +10051,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003164', 'Río Henares', '191300001', 'Ct. de Hita, 25', 'Ct. de Hita, 25', '949231751',
+         '19003164', 'Río Henares', '191300001', 'Ct. de Hita, 25', '19005', '949231751',
          '949231751', '19003164.cp@edu.jccm.es', 'http://ceip-riohenares.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10060,7 +10060,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002858', 'Río Sorbe', '191300001', 'Cl. Rio Sorbe, 19', 'Cl. Rio Sorbe, 19', '949212899',
+         '19002858', 'Río Sorbe', '191300001', 'Cl. Rio Sorbe, 19', '19004', '949212899',
          '949254497', '19002858.cea@edu.jccm.es', 'http://cepa-riosorbe.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -10069,7 +10069,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003097', 'Río Tajo', '191300001', 'Cl. Poeta Ramon de Garciasol, S/N', 'Cl. Poeta Ramon de Garciasol, S/N', '949200070',
+         '19003097', 'Río Tajo', '191300001', 'Cl. Poeta Ramon de Garciasol, S/N', '19004', '949200070',
          '949203153', '19003097.cp@edu.jccm.es', 'http://ceip-riotajo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10078,7 +10078,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001052', 'Rufino Blanco', '191300001', 'Ps. Doctor Fernandez Iparraguirre, 18', 'Ps. Doctor Fernandez Iparraguirre, 18', '949225594',
+         '19001052', 'Rufino Blanco', '191300001', 'Ps. Doctor Fernandez Iparraguirre, 18', '19001', '949225594',
          '949225594', '19001052.cp@edu.jccm.es', 'http://ceip-rufinoblanco.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10087,7 +10087,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000928', 'Sagrado Corazón', '191300001', 'Pz. Fernando Beladiez, 2', 'Pz. Fernando Beladiez, 2', '949220400',
+         '19000928', 'Sagrado Corazón', '191300001', 'Pz. Fernando Beladiez, 2', '19001', '949220400',
          '949229315', 'direccion@sagradocorazon.es', 'http://www.sagradocorazon.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -10096,7 +10096,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000931', 'Salesiano', '191300001', 'Cl. Toledo, 24', 'Cl. Toledo, 24', '949247111',
+         '19000931', 'Salesiano', '191300001', 'Cl. Toledo, 24', '19002', '949247111',
          '949247306', 'direccion.general@salesianosguadalajara.org', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -10105,7 +10105,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009324', 'San Diego', '191300001', 'Cl. Alonso Nuñez de Reinoso, 20', 'Cl. Alonso Nuñez de Reinoso, 20', '949221267',
+         '19009324', 'San Diego', '191300001', 'Cl. Alonso Nuñez de Reinoso, 20', '19002', '949221267',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -10114,7 +10114,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001015', 'San Pedro Apóstol', '191300001', 'Av. de Venezuela, 11', 'Av. de Venezuela, 11', '949223242',
+         '19001015', 'San Pedro Apóstol', '191300001', 'Av. de Venezuela, 11', '19005', '949223242',
          '949219686', '19001015.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sanpedroapostol', 'Público', 'CEIP'
         )
         ;
@@ -10123,7 +10123,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19000977', 'Santa Ana', '191300001', 'Cl. Cogolludo, 3', 'Cl. Cogolludo, 3', '949222400',
+         '19000977', 'Santa Ana', '191300001', 'Cl. Cogolludo, 3', '19003', '949222400',
          '949222404', 'secretsantaanagu@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -10132,7 +10132,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003127', 'Santa Cruz', '191300001', 'Av. de Burgos, 3', 'Av. de Burgos, 3', '949220061',
+         '19003127', 'Santa Cruz', '191300001', 'Av. de Burgos, 3', '19005', '949220061',
          '949220061', 'scruzg@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -10141,7 +10141,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003140', 'Sebastián Durón', '191300001', 'Ps. Doctor Fernandez Iparraguirre,24', 'Ps. Doctor Fernandez Iparraguirre,24', '949887577',
+         '19003140', 'Sebastián Durón', '191300001', 'Ps. Doctor Fernandez Iparraguirre,24', '19003', '949887577',
          '949232212', '19003140.cm@edu.jccm.es', 'http://edu.jccm.es/cm/guadalajara', 'Público', 'CPM'
         )
         ;
@@ -10150,7 +10150,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002846', 'Seminario Menor Agustiniano', '191300001', 'Cl. Donantes de Sangre, 6', 'Cl. Donantes de Sangre, 6', '949231628',
+         '19002846', 'Seminario Menor Agustiniano', '191300001', 'Cl. Donantes de Sangre, 6', '19002', '949231628',
          '949253541', 'direccion@agustiniano.com', 'http://www.agustiniano.com', 'Privado', ''
         )
         ;
@@ -10159,7 +10159,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009336', 'Tintín', '191300001', 'Cl. Wenceslao Argumosa, 4', 'Cl. Wenceslao Argumosa, 4', '994210119',
+         '19009336', 'Tintín', '191300001', 'Cl. Wenceslao Argumosa, 4', '19003', '994210119',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -10168,7 +10168,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002603', 'Virgen del Amparo', '191300001', 'Cr. de Zaragoza, 60', 'Cr. de Zaragoza, 60', '949232049',
+         '19002603', 'Virgen del Amparo', '191300001', 'Cr. de Zaragoza, 60', '19005', '949232049',
          '949232066', '19002603.cee@edu.jccm.es', 'http://cee-virgendelamparo.centros.castillalamancha.es', 'Público', 'CEE'
         )
         ;
@@ -10177,7 +10177,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008976', '- Sin Denominación -', '191430001', 'Cl. Azucenas, S/N', 'Cl. Azucenas, S/N', '949290615',
+         '19008976', '- Sin Denominación -', '191430001', 'Cl. Azucenas, S/N', '19140', '949290615',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -10186,7 +10186,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009440', 'Escuela Municipal de Música de Horche', '191430001', 'Cl. Mayor, 64', 'Cl. Mayor, 64', '',
+         '19009440', 'Escuela Municipal de Música de Horche', '191430001', 'Cl. Mayor, 64', '19140', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -10195,7 +10195,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008757', 'Nº 2', '191430001', 'Rd. del Poniente, 2 y 4', 'Rd. del Poniente, 2 y 4', '949820973',
+         '19008757', 'Nº 2', '191430001', 'Rd. del Poniente, 2 y 4', '19140', '949820973',
          '949290024', '19008757.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -10204,7 +10204,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001246', 'San Roque', '191430001', 'Cl. San Roque, S/N', 'Cl. San Roque, S/N', '949290024',
+         '19001246', 'San Roque', '191430001', 'Cl. San Roque, S/N', '19140', '949290024',
          '949290024', '19001246.cp@edu.jccm.es', 'http://ceip-sanroquehorche.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10213,7 +10213,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003760', '- Sin Denominación -', '191510002', 'Pz. del Ayuntamiento, S/N', 'Pz. del Ayuntamiento, S/N', '',
+         '19003760', '- Sin Denominación -', '191510002', 'Pz. del Ayuntamiento, S/N', '19220', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -10222,7 +10222,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001271', 'Efa el Llano', '191510002', 'Cl. Soledad, S/N', 'Cl. Soledad, S/N', '949850075',
+         '19001271', 'Efa el Llano', '191510002', 'Cl. Soledad, S/N', '19220', '949850075',
          '949850075', 'efa-el-llano@efa-centro.org', 'http://www.efa-centro.org/', 'Priv.Concert.', ''
         )
         ;
@@ -10231,7 +10231,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001261', 'Nuestra Señora de Peñahora', '191510002', 'Pz. de Santa Maria de la Cabeza, S/N', 'Pz. de Santa Maria de la Cabeza, S/N', '949850049',
+         '19001261', 'Nuestra Señora de Peñahora', '191510002', 'Pz. de Santa Maria de la Cabeza, S/N', '19220', '949850049',
          '949850049', '19001261.cp@edu.jccm.es', 'http://ceip-humanes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10240,7 +10240,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001313', 'Romualdo de Toledo', '191560002', 'Cl. Juan Casas, S/N', 'Cl. Juan Casas, S/N', '949890215',
+         '19001313', 'Romualdo de Toledo', '191560002', 'Cl. Juan Casas, S/N', '19240', '949890215',
          '949890215', '19001313.cp@edu.jccm.es', 'http://edu.jccm.es/cp.romualdodetoledo', 'Público', 'CEIP'
         )
         ;
@@ -10249,7 +10249,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003917', 'Valle del Henares', '191560002', 'Cm. Real de los Coches, 17', 'Cm. Real de los Coches, 17', '949890294',
+         '19003917', 'Valle del Henares', '191560002', 'Cm. Real de los Coches, 17', '19240', '949890294',
          '949343011', '19003917.seces@edu.jccm.es', 'http://ies-valledelhenares.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -10258,7 +10258,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001386', 'Miguel de la Cuesta', '191610001', 'Pz. Mayor, 2', 'Pz. Mayor, 2', '949291046',
+         '19001386', 'Miguel de la Cuesta', '191610001', 'Pz. Mayor, 2', '19142', '949291046',
          '949291046', '19001386.cp@edu.jccm.es', 'http://ceip-migueldelacuesta.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10267,7 +10267,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001416', 'La Cobatilla', '191680002', 'Cl. Cobatilla, S/N', 'Cl. Cobatilla, S/N', '949305032',
+         '19001416', 'La Cobatilla', '191680002', 'Cl. Cobatilla, S/N', '19294', '949305032',
          '949305032', '19001416.cp@edu.jccm.es', 'http:// http://edu.jccm.es/cp/lacobatilla', 'Público', 'CEIP'
         )
         ;
@@ -10276,7 +10276,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008988', '- Sin Denominación -', '191710001', 'Lg. Bulevar de Castilla-La Mancha, S/N', 'Lg. Bulevar de Castilla-La Mancha, S/N', '949252417',
+         '19008988', '- Sin Denominación -', '191710001', 'Lg. Bulevar de Castilla-La Mancha, S/N', '19180', '949252417',
          '949200796', '', '', 'Público', 'EI'
         )
         ;
@@ -10285,7 +10285,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008721', '- Sin Denominación -', '191710001', 'Cl. de la Iglesia, S/N', 'Cl. de la Iglesia, S/N', '',
+         '19008721', '- Sin Denominación -', '191710001', 'Cl. de la Iglesia, S/N', '19180', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -10294,7 +10294,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003553', 'Alejo Vera', '191710001', 'Cl. Castilla, S/N', 'Cl. Castilla, S/N', '949252250',
+         '19003553', 'Alejo Vera', '191710001', 'Cl. Castilla, S/N', '19180', '949252250',
          '949252344', '19003553.ies@edu.jccm.es', 'http://ies-alejovera.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -10303,7 +10303,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001441', 'Cristo de la Esperanza', '191710001', 'Cl. Llanos Manrique, S/N', 'Cl. Llanos Manrique, S/N', '949250953',
+         '19001441', 'Cristo de la Esperanza', '191710001', 'Cl. Llanos Manrique, S/N', '19180', '949250953',
          '949250953', '19001441.cp@edu.jccm.es', 'http://ceip-cristodelaesperanza.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10312,7 +10312,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008061', 'Maestra Teodora', '191710001', 'Cl. Paloma, S/N', 'Cl. Paloma, S/N', '949251180',
+         '19008061', 'Maestra Teodora', '191710001', 'Cl. Paloma, S/N', '19180', '949251180',
          '949251180', '19008061.cp@edu.jccm.es', 'http://ceip-maestrateodora.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10321,7 +10321,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003802', '- Sin Denominación -', '191900004', 'Ps. Alameda, S/N', 'Ps. Alameda, S/N', '',
+         '19003802', '- Sin Denominación -', '191900004', 'Ps. Alameda, S/N', '19300', '',
          '', '19003802.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -10330,7 +10330,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003516', 'Molina de Aragón', '191900004', 'Cl. Santa Rita, 1', 'Cl. Santa Rita, 1', '949830122',
+         '19003516', 'Molina de Aragón', '191900004', 'Cl. Santa Rita, 1', '19300', '949830122',
          '949832598', '19003516.ies@edu.jccm.es', 'http://ies-molinadearagon.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -10339,7 +10339,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001568', 'San José', '191900004', 'Cl. Enseñanza, S/N', 'Cl. Enseñanza, S/N', '949830127',
+         '19001568', 'San José', '191900004', 'Cl. Enseñanza, S/N', '19300', '949830127',
          '949832678', 'ursulinasmolina@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -10348,7 +10348,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001556', 'Virgen de la Hoz', '191900004', 'Cl. Alameda, S/N', 'Cl. Alameda, S/N', '949344152',
+         '19001556', 'Virgen de la Hoz', '191900004', 'Cl. Alameda, S/N', '19300', '949344152',
          '949830192', '19001556.cp@edu.jccm.es', 'http://ceip-virgendelahoz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10357,7 +10357,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008991', '- Sin Denominación -', '191920001', 'Cl. Anastasio Fernandez, 3', 'Cl. Anastasio Fernandez, 3', '949387208',
+         '19008991', '- Sin Denominación -', '191920001', 'Cl. Anastasio Fernandez, 3', '19110', '949387208',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -10366,7 +10366,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003701', 'Alcarria Baja', '191920001', 'Cl. Antonio Buero Vallejo, 19', 'Cl. Antonio Buero Vallejo, 19', '949385545',
+         '19003701', 'Alcarria Baja', '191920001', 'Cl. Antonio Buero Vallejo, 19', '19110', '949385545',
          '949385545', '19003701.cea@edu.jccm.es', 'http://cepa-alcarriabaja.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -10375,7 +10375,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003838', 'Alcarria Baja', '191920001', 'Av. Castilla la Mancha, S/N', 'Av. Castilla la Mancha, S/N', '949387246',
+         '19003838', 'Alcarria Baja', '191920001', 'Av. Castilla la Mancha, S/N', '19110', '949387246',
          '949387243', '19003838.ies@edu.jccm.es', 'http://edu.jccm.es/ies.alcarriabaja', 'Público', 'IES'
         )
         ;
@@ -10384,7 +10384,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001593', 'José Maldonado y Ayuso', '191920001', 'Av. de las Ciencias, 2 y 4', 'Av. de las Ciencias, 2 y 4', '949385218',
+         '19001593', 'José Maldonado y Ayuso', '191920001', 'Av. de las Ciencias, 2 y 4', '19110', '949385218',
          '949385693', '19001593.cp@edu.jccm.es', 'http://edu.jccm.es/cp.jma', 'Público', 'CEIP'
         )
         ;
@@ -10393,7 +10393,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003693', '- Sin Denominación -', '192120001', 'Cl. San Juan de la Cruz, 2-1º', 'Cl. San Juan de la Cruz, 2-1º', '',
+         '19003693', '- Sin Denominación -', '192120001', 'Cl. San Juan de la Cruz, 2-1º', '19100', '',
          '', 'aepa_pastrana@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -10402,7 +10402,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003541', '- Sin Denominación -', '192120001', 'Cl. Siete Chimeneas, 1', 'Cl. Siete Chimeneas, 1', '949370180',
+         '19003541', '- Sin Denominación -', '192120001', 'Cl. Siete Chimeneas, 1', '19100', '949370180',
          '949370180', '19003541.cra@edu.jccm.es', 'http://cra-pastrana.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10411,7 +10411,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003826', 'Escuela Municipal de Música', '192120001', 'Pz. del Dean, 2', 'Pz. del Dean, 2', '949370014',
+         '19003826', 'Escuela Municipal de Música', '192120001', 'Pz. del Dean, 2', '19100', '949370014',
          '', 'esmusicapastrana@wanadoo.es', '', 'Público', ''
         )
         ;
@@ -10420,7 +10420,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003437', 'Leandro Fernández Moratín', '192120001', 'Cl. Camilo Jose Cela, S/N', 'Cl. Camilo Jose Cela, S/N', '949370041',
+         '19003437', 'Leandro Fernández Moratín', '192120001', 'Cl. Camilo Jose Cela, S/N', '19100', '949370041',
          '949370179', '19003437.ies@edu.jccm.es', 'http://ies-pastrana.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -10429,7 +10429,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009002', 'Villa de Pastrana', '192120001', 'Cl. Siete Chimeneas, 1', 'Cl. Siete Chimeneas, 1', '949370961',
+         '19009002', 'Villa de Pastrana', '192120001', 'Cl. Siete Chimeneas, 1', '19100', '949370961',
          '949370473', '', '', 'Público', 'EI'
         )
         ;
@@ -10438,7 +10438,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008149', 'Castillo de Pioz', '192200001', 'Cm. de Aranzueque, S/N', 'Cm. de Aranzueque, S/N', '949272262',
+         '19008149', 'Castillo de Pioz', '192200001', 'Cm. de Aranzueque, S/N', '19162', '949272262',
          '949272246', '19008149.cp@edu.jccm.es', 'http://edu.jccm.es/cp.castillodepioz', 'Público', 'CEIP'
         )
         ;
@@ -10447,7 +10447,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009348', 'Colorines', '0000', 'Ps. Bosque del Henares, 240', 'Ps. Bosque del Henares, 240', '618447343',
+         '19009348', 'Colorines', '0000', 'Ps. Bosque del Henares, 240', '19220', '618447343',
          '', 'eipioz@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -10456,7 +10456,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008681', 'La Arboleda de Pioz', '192200006', 'Cl. de los Pinos, S/N', 'Cl. de los Pinos, S/N', '622842685',
+         '19008681', 'La Arboleda de Pioz', '192200006', 'Cl. de los Pinos, S/N', '19162', '622842685',
          '', '19008681.cp@edu.jccm.es', 'http://ceip-laarboledadepioz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10465,7 +10465,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009403', 'La Casita del Árbol', '192200006', 'Cl. los Sauces, 590', 'Cl. los Sauces, 590', '',
+         '19009403', 'La Casita del Árbol', '192200006', 'Cl. los Sauces, 590', '19162', '',
          '', 'lacasitadelarbolpioz@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -10474,7 +10474,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003504', 'José Luis Sampedro', '192230001', 'Cl. las Escuelas, S/N', 'Cl. las Escuelas, S/N', '949816289',
+         '19003504', 'José Luis Sampedro', '192230001', 'Cl. las Escuelas, S/N', '19463', '949816289',
          '949816098', '19003504-2.cra@edu.jccm.es', 'http://edu.jccm.es/cra.joseluissampedro', 'Público', 'CEIP'
         )
         ;
@@ -10483,7 +10483,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009014', 'El Parque', '192250001', 'Av. Constitucion, S/N', 'Av. Constitucion, S/N', '949272490',
+         '19009014', 'El Parque', '192250001', 'Av. Constitucion, S/N', '19161', '949272490',
          '949272216', 'escuelasgero@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -10492,7 +10492,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001817', 'Santa Brígida', '192250001', 'Av. de la Constitucion, S/N', 'Av. de la Constitucion, S/N', '949272131',
+         '19001817', 'Santa Brígida', '192250001', 'Av. de la Constitucion, S/N', '19161', '949272131',
          '949272131', '19001817.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -10501,7 +10501,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009026', 'Las Setitas', '192300001', 'Cl. Paez de Castro, 17', 'Cl. Paez de Castro, 17', '949297703',
+         '19009026', 'Las Setitas', '192300001', 'Cl. Paez de Castro, 17', '19209', '949297703',
          '949266775', 'lassetitas@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -10510,7 +10510,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008691', 'Villa de Quer', '192300001', 'Cl. Torrelaguna, S/N', 'Cl. Torrelaguna, S/N', '949297795',
+         '19008691', 'Villa de Quer', '192300001', 'Cl. Torrelaguna, S/N', '19209', '949297795',
          '949297795', '19008691.cp@edu.jccm.es', 'http://edu.jccm.es/cp.villadequer', 'Público', 'CEIP'
         )
         ;
@@ -10519,7 +10519,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003711', '- Sin Denominación -', '192450004', 'Cl. Isaac Pereal, 25, 3º', 'Cl. Isaac Pereal, 25, 3º', '',
+         '19003711', '- Sin Denominación -', '192450004', 'Cl. Isaac Pereal, 25, 3º', '19120', '',
          '', 'aepa_sacedon@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -10528,7 +10528,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19001933', 'La Isabela', '192450004', 'Cl. la Fuente, 26', 'Cl. la Fuente, 26', '949350257',
+         '19001933', 'La Isabela', '192450004', 'Cl. la Fuente, 26', '19120', '949350257',
          '949350342', '19001933.cp@edu.jccm.es', 'http://ceip-laisabela.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10537,7 +10537,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003841', 'Mar de Castilla', '192450004', 'Cl. la Fuente, 26', 'Cl. la Fuente, 26', '949350697',
+         '19003841', 'Mar de Castilla', '192450004', 'Cl. la Fuente, 26', '19120', '949350697',
          '949350497', '19003841.seces@edu.jccm.es', 'http://ies-mardecastilla.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -10546,7 +10546,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009609', '- Sin Denominación -', '192570025', 'Av. de Juan Carlos I, S/N', 'Av. de Juan Carlos I, S/N', '949393811',
+         '19009609', '- Sin Denominación -', '192570025', 'Av. de Juan Carlos I, S/N', '19250', '949393811',
          '', '19009609.eoi@edu.jccm.es', '', 'Público', 'EOI'
         )
         ;
@@ -10555,7 +10555,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003772', '- Sin Denominación -', '192570025', 'Cl. Juan Carlos I, S/N', 'Cl. Juan Carlos I, S/N', '',
+         '19003772', '- Sin Denominación -', '192570025', 'Cl. Juan Carlos I, S/N', '19250', '',
          '', 'aepa_siguenza@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -10564,7 +10564,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003395', 'Colegio Episcopal Sagrada Familia', '192570025', 'Cl. Villaviciosa, 2 y Pº de la Alameda, 36', 'Cl. Villaviciosa, 2 y Pº de la Alameda, 36', '949390790',
+         '19003395', 'Colegio Episcopal Sagrada Familia', '192570025', 'Cl. Villaviciosa, 2 y Pº de la Alameda, 36', '19250', '949390790',
          '949391920', 'direccion@safasi.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -10573,7 +10573,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009351', 'Jesús, María y José', '192570025', 'Cl. General Mola, 36', 'Cl. General Mola, 36', '',
+         '19009351', 'Jesús, María y José', '192570025', 'Cl. General Mola, 36', '19250', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -10582,7 +10582,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002071', 'Martín Vázquez de Arce', '192570025', 'Cl. Santa Barbara, 13', 'Cl. Santa Barbara, 13', '949390345',
+         '19002071', 'Martín Vázquez de Arce', '192570025', 'Cl. Santa Barbara, 13', '19250', '949390345',
          '949390814', '19002071.ies@edu.jccm.es', 'http://ies-martinvazquezdearce.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -10591,7 +10591,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009555', 'Sagrada Familia-Safa', '192570025', 'Cl. Villaviciosa, 2 y Pº de la Alameda, 36', 'Cl. Villaviciosa, 2 y Pº de la Alameda, 36', '',
+         '19009555', 'Sagrada Familia-Safa', '192570025', 'Cl. Villaviciosa, 2 y Pº de la Alameda, 36', '19250', '',
          '949391920', 'contacta@safasi.com', '', 'Privado', ''
         )
         ;
@@ -10600,7 +10600,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002056', 'San Antonio de Portaceli', '192570025', 'Av. de Juan Carlos I, S/N', 'Av. de Juan Carlos I, S/N', '949393820',
+         '19002056', 'San Antonio de Portaceli', '192570025', 'Av. de Juan Carlos I, S/N', '19250', '949393820',
          '949393820', '19002056.cp@edu.jccm.es', 'http://ceip-sanantoniodeportaceli.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10609,7 +10609,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009038', 'San Mateo', '192570025', 'Cl. Saturnino Lopez Novoa, S/N', 'Cl. Saturnino Lopez Novoa, S/N', '660408945',
+         '19009038', 'San Mateo', '192570025', 'Cl. Saturnino Lopez Novoa, S/N', '19250', '660408945',
          '949391554', 'ramon@sanmateo.com', '', 'Público', 'EI'
         )
         ;
@@ -10618,7 +10618,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003577', 'Valles del Tajuña', '192660001', 'Av. del Pinar, S/N', 'Av. del Pinar, S/N', '949298059',
+         '19003577', 'Valles del Tajuña', '192660001', 'Av. del Pinar, S/N', '19134', '949298059',
          '949298059', '19003577.CRA@EDU.JCCM.es', 'http://cra-vallesdeltajuna.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10627,7 +10627,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009041', 'La Abejita', '192740002', 'Cl. Musico Jesus Villarojo, 1', 'Cl. Musico Jesus Villarojo, 1', '94932003',
+         '19009041', 'La Abejita', '192740002', 'Cl. Musico Jesus Villarojo, 1', '19190', '94932003',
          '', 'cailaabejita@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -10636,7 +10636,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002214', 'Virgen del Amparo', '192740002', 'Cl. Clara Campoamor, 2', 'Cl. Clara Campoamor, 2', '949206888',
+         '19002214', 'Virgen del Amparo', '192740002', 'Cl. Clara Campoamor, 2', '19190', '949206888',
          '949206888', '19002214.cp@edu.jccm.es', 'http://ceip-virgendelamparo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10645,7 +10645,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009361', 'El Cole de los Pekes', '192800003', 'Av. Señorio de Muriel, 22', 'Av. Señorio de Muriel, 22', '949339388',
+         '19009361', 'El Cole de los Pekes', '192800003', 'Av. Señorio de Muriel, 22', '19174', '949339388',
          '949339388', 'elcoledelospekes@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -10654,7 +10654,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009439', 'El Señorío de Muriel', '192800003', 'Av. Señorio de Muriel, S/N', 'Av. Señorio de Muriel, S/N', '949339729',
+         '19009439', 'El Señorío de Muriel', '192800003', 'Av. Señorio de Muriel, S/N', '19174', '949339729',
          '949339729', '19009439.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -10663,7 +10663,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009385', 'Escuela de Musica y Danza de Torrejon del Rey', '192800002', 'Cl. Luis de Lucena, 1', 'Cl. Luis de Lucena, 1', '',
+         '19009385', 'Escuela de Musica y Danza de Torrejon del Rey', '192800002', 'Cl. Luis de Lucena, 1', '19174', '',
          '', 'escuelademusicaydanza@yahoo.es', '', 'Público', ''
         )
         ;
@@ -10672,7 +10672,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008198', 'Las Castillas', '192800001', 'Cl. Río Jarama, S/N', 'Cl. Río Jarama, S/N', '949328150',
+         '19008198', 'Las Castillas', '192800001', 'Cl. Río Jarama, S/N', '19174', '949328150',
          '949328137', '19008198.cp@edu.jccm.es', 'http://ceip-lascastillas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10681,7 +10681,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002241', 'Virgen de las Candelas', '192800002', 'Cm. Viejo, 1', 'Cm. Viejo, 1', '949600010',
+         '19002241', 'Virgen de las Candelas', '192800002', 'Cm. Viejo, 1', '19174', '949600010',
          '949338892', '19002241.cp@edu.jccm.es', 'http://ceip-virgendelascandelas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10690,7 +10690,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002275', 'Sagrado Corazón de Jesús', '192860001', 'Tr. Real de Guadalajara', 'Tr. Real de Guadalajara', '949313668',
+         '19002275', 'Sagrado Corazón de Jesús', '192860001', 'Tr. Real de Guadalajara', '19198', '949313668',
          '', '19002275.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -10699,7 +10699,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003759', '- Sin Denominación -', '192900001', 'Ed. Centro Social', 'Ed. Centro Social', '',
+         '19003759', '- Sin Denominación -', '192900001', 'Ed. Centro Social', '19192', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -10708,7 +10708,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002305', 'San Bernabé', '192900001', 'Cl. las Heras, S/N', 'Cl. las Heras, S/N', '949320288',
+         '19002305', 'San Bernabé', '192900001', 'Cl. las Heras, S/N', '19192', '949320288',
          '949320288', '19002305.cp@edu.jccm.es', 'http://ceip-sanbernabe.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10717,7 +10717,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009051', '- Sin Denominación -', '192910005', 'Cl. Vivero, 6', 'Cl. Vivero, 6', '949815238',
+         '19009051', '- Sin Denominación -', '192910005', 'Cl. Vivero, 6', '19450', '949815238',
          '', 'caitrillo@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -10726,7 +10726,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003796', '- Sin Denominación -', '192910005', 'Ed. Colegio Público Ciudad de Capadocia', 'Ed. Colegio Público Ciudad de Capadocia', '',
+         '19003796', '- Sin Denominación -', '192910005', 'Ed. Colegio Público Ciudad de Capadocia', '19450', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -10735,7 +10735,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002317', 'Ciudad de Capadocia', '192910005', 'Cl. Fronton, 9', 'Cl. Fronton, 9', '949815189',
+         '19002317', 'Ciudad de Capadocia', '192910005', 'Cl. Fronton, 9', '19450', '949815189',
          '949815189', '19002317.cp@edu.jccm.es', 'http://edu.jccm.es/cp/trillo/', 'Público', 'CEIP'
         )
         ;
@@ -10744,7 +10744,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009063', 'El Jardinillo', '192930002', 'Cl. Cardenal Cisneros, S/N', 'Cl. Cardenal Cisneros, S/N', '949856075',
+         '19009063', 'El Jardinillo', '192930002', 'Cl. Cardenal Cisneros, S/N', '19187', '949856075',
          '949856321', 'ei.eljardinillo@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -10753,7 +10753,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002329', 'García Lorca', '192930002', 'Cl. Mayor, S/N', 'Cl. Mayor, S/N', '949856484',
+         '19002329', 'García Lorca', '192930002', 'Cl. Mayor, S/N', '19187', '949856484',
          '949856484', '19002329.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ucedagarcialorca', 'Público', 'CEIP'
         )
         ;
@@ -10762,7 +10762,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009075', 'Sueños', '0000', 'Cl. Niza, S/N', 'Cl. Niza, S/N', '949857964',
+         '19009075', 'Sueños', '0000', 'Cl. Niza, S/N', '19187', '949857964',
          '', 'escuinfcol@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -10771,7 +10771,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009087', 'Cócoles', '193190001', 'Cl. Acacias, 8', 'Cl. Acacias, 8', '949276263',
+         '19009087', 'Cócoles', '193190001', 'Cl. Acacias, 8', '19209', '949276263',
          '949276263', 'cocoles@telefonica.net', '', 'Público', 'EI'
         )
         ;
@@ -10780,7 +10780,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009373', 'El Barco de Papel', '193190001', 'Cl. San Roque, 14', 'Cl. San Roque, 14', '949266775',
+         '19009373', 'El Barco de Papel', '193190001', 'Cl. San Roque, 14', '19209', '949266775',
          '949266775', 'garabatoscincoestrellas@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -10789,7 +10789,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008071', 'Gloria Fuertes', '193190001', 'Cr. Valdeavero, 2', 'Cr. Valdeavero, 2', '949277846',
+         '19008071', 'Gloria Fuertes', '193190001', 'Cr. Valdeavero, 2', '19209', '949277846',
          '949266184', '19008071.cp@edu.jccm.es', 'http://ceip-gloriafuertes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10798,7 +10798,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009099', 'Mofletes', '193190001', 'Cl. del Cerro, 2', 'Cl. del Cerro, 2', '949273459',
+         '19009099', 'Mofletes', '193190001', 'Cl. del Cerro, 2', '19209', '949273459',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -10807,7 +10807,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008137', 'Newton-Salas', '193190001', 'Cl. Paraje de Valdebrid, S/N', 'Cl. Paraje de Valdebrid, S/N', '949050290',
+         '19008137', 'Newton-Salas', '193190001', 'Cl. Paraje de Valdebrid, S/N', '19209', '949050290',
          '949050205', '19008137.ies@edu.jccm.es', 'http://ies-newton-salas.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -10816,7 +10816,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19004016', 'Paco Rabal', '193190001', 'Cl. Fernando de Rojas, 2', 'Cl. Fernando de Rojas, 2', '949273942',
+         '19004016', 'Paco Rabal', '193190001', 'Cl. Fernando de Rojas, 2', '19209', '949273942',
          '949273943', '19004016.cp@edu.jccm.es', 'http://edu.jccm.es/cp/pacorabal', 'Público', 'CEIP'
         )
         ;
@@ -10825,7 +10825,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003620', 'El Rincón de Castilla', '193240001', 'Pz. Don Pedro Gomez Fernandez, S/N', 'Pz. Don Pedro Gomez Fernandez, S/N', '949830090',
+         '19003620', 'El Rincón de Castilla', '193240001', 'Pz. Don Pedro Gomez Fernandez, S/N', '19332', '949830090',
          '949830090', '19003620-5.cra@edu.jccm.es', 'http://edu.jccm.es/cra.elrincondecastilla', 'Público', 'CEIP'
         )
         ;
@@ -10834,7 +10834,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009646', 'Valdeluz', '0000', 'Cl. Acebo, S/N', 'Cl. Acebo, S/N', '618488572',
+         '19009646', 'Valdeluz', '0000', 'Cl. Acebo, S/N', '19139', '618488572',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -10843,7 +10843,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009531', '- Sin Denominación -', '193310001', 'Av. de Castilla-La Mancha, S/N', 'Av. de Castilla-La Mancha, S/N', '',
+         '19009531', '- Sin Denominación -', '193310001', 'Av. de Castilla-La Mancha, S/N', '19210', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -10852,7 +10852,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19009105', '- Sin Denominación -', '193310001', 'Cl. Joaquin Sorolla, 3', 'Cl. Joaquin Sorolla, 3', '949331337',
+         '19009105', '- Sin Denominación -', '193310001', 'Cl. Joaquin Sorolla, 3', '19210', '949331337',
          '949330039', 'escuelasgero@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -10861,7 +10861,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19003875', 'Clara Campoamor', '193310001', 'Cl. Don Quijote, 3', 'Cl. Don Quijote, 3', '949331075',
+         '19003875', 'Clara Campoamor', '193310001', 'Cl. Don Quijote, 3', '19210', '949331075',
          '949331254', '19003875.seces@edu.jccm.es', 'http://edu.jccm.es/ies/yunquera', 'Público', ''
         )
         ;
@@ -10870,7 +10870,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19008769', 'Nº 2', '193310001', 'Av. Castilla-La Mancha, 13', 'Av. Castilla-La Mancha, 13', '949330274',
+         '19008769', 'Nº 2', '193310001', 'Av. Castilla-La Mancha, 13', '19210', '949330274',
          '949330677', '19008769.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -10879,7 +10879,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '19002500', 'Virgen de la Granja', '193310001', 'Rd. de San Antonio, 5', 'Rd. de San Antonio, 5', '949330274',
+         '19002500', 'Virgen de la Granja', '193310001', 'Rd. de San Antonio, 5', '19210', '949330274',
          '949330677', '19002500.cp@edu.jccm.es', 'http://ceip-virgendelagranja.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10888,7 +10888,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000011', 'Jacinto Guerrero', '450010001', 'Cl. Gavilanes, 1', 'Cl. Gavilanes, 1', '925390153',
+         '45000011', 'Jacinto Guerrero', '450010001', 'Cl. Gavilanes, 1', '45110', '925390153',
          '925390153', '45000011.cp@edu.jccm.es', 'http://ceip-jacintoguerrero.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10897,7 +10897,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012335', 'La Casa de los Duendes', '450010001', 'Cl. Real, 102', 'Cl. Real, 102', '925390070',
+         '45012335', 'La Casa de los Duendes', '450010001', 'Cl. Real, 102', '45110', '925390070',
          '925390633', 'lacasadelosduendes@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -10906,7 +10906,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012347', 'El Jardín de los Sueños', '450020001', 'Cl. Talavera, 1', 'Cl. Talavera, 1', '925500170',
+         '45012347', 'El Jardín de los Sueños', '450020001', 'Cl. Talavera, 1', '45240', '925500170',
          '', 'eljardindelossuenos@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -10915,7 +10915,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000023', 'Nuestra Señora de la Asunción', '450020001', 'Cl. Toledo, S/N', 'Cl. Toledo, S/N', '925500515',
+         '45000023', 'Nuestra Señora de la Asunción', '450020001', 'Cl. Toledo, S/N', '45240', '925500515',
          '925500515', '45000023.cp@edu.jccm.es', 'http://edu.jccm.es/cp/asuncion', 'Público', 'CEIP'
         )
         ;
@@ -10924,7 +10924,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000035', 'Benjamín Escalonilla', '450030001', 'Cl. la Cerca, S/N', 'Cl. la Cerca, S/N', '925749661',
+         '45000035', 'Benjamín Escalonilla', '450030001', 'Cl. la Cerca, S/N', '45522', '925749661',
          '925749661', '45000035.cp@edu.jccm.es', 'http://ceip-benjaminescalonilla.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10933,7 +10933,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000047', 'Nuestra Señora de la Aurora', '450040001', 'Pz. Erillas, S/N', 'Pz. Erillas, S/N', '925779552',
+         '45000047', 'Nuestra Señora de la Aurora', '450040001', 'Pz. Erillas, S/N', '45523', '925779552',
          '925779552', '45000047.cp@edu.jccm.es', 'http://edu.jccm.es/ceip.nsdelaaurora', 'Público', 'CEIP'
         )
         ;
@@ -10942,7 +10942,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000096', 'Rufino Mansi', '450060001', 'Av. Rufino Mansi, 11', 'Av. Rufino Mansi, 11', '925853097',
+         '45000096', 'Rufino Mansi', '450060001', 'Av. Rufino Mansi, 11', '45662', '925853097',
          '925853097', '45000096.cp@edu.jccm.es', 'http://ceip-rufinomansi.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10951,7 +10951,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012086', 'Río Tajo', '450070001', 'Av. Constitucion, 33', 'Av. Constitucion, 33', '925436649',
+         '45012086', 'Río Tajo', '450070001', 'Av. Constitucion, 33', '45571', '925436649',
          '925436649', '45012086.cra@edu.jccm.es', 'http://cra-riotajo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -10960,7 +10960,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000187', 'Virgen de la Oliva', '450120001', 'Cl. Lopez Manzano, 6', 'Cl. Lopez Manzano, 6', '925314256',
+         '45000187', 'Virgen de la Oliva', '450120001', 'Cl. Lopez Manzano, 6', '45420', '925314256',
          '925314256', '45000187.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -10969,7 +10969,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000229', 'Silvano Cirujano', '450130001', 'Cl. Valdenovillos, 24', 'Cl. Valdenovillos, 24', '918623361',
+         '45000229', 'Silvano Cirujano', '450130001', 'Cl. Valdenovillos, 24', '45900', '918623361',
          '918289106', '45000229.cp@edu.jccm.es', 'http://edu.jccm.es/cp/silvanocirujano', 'Público', 'CEIP'
         )
         ;
@@ -10978,7 +10978,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012359', '- Sin Denominación -', '450140001', 'Cl. Julian Besteiro, 2', 'Cl. Julian Besteiro, 2', '925506534',
+         '45012359', '- Sin Denominación -', '450140001', 'Cl. Julian Besteiro, 2', '45250', '925506534',
          '', 'alcaldiaresponde@anoverdeltajo.es', '', 'Público', 'EI'
         )
         ;
@@ -10987,7 +10987,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000230', 'Conde de Mayalde', '450140001', 'Cl. Doctor Carmena Villarta, 2', 'Cl. Doctor Carmena Villarta, 2', '925506153',
+         '45000230', 'Conde de Mayalde', '450140001', 'Cl. Doctor Carmena Villarta, 2', '45250', '925506153',
          '925555262', '45000230.cp@edu.jccm.es', 'http://edu.jccm.es/cp.condedemayalde', 'Público', 'CEIP'
         )
         ;
@@ -10996,7 +10996,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013881', 'Puliditos', '450140001', 'Cl. Virgen de la Vega, 17', 'Cl. Virgen de la Vega, 17', '',
+         '45013881', 'Puliditos', '450140001', 'Cl. Virgen de la Vega, 17', '45250', '',
          '', 'eipuliditos@anoverdetajo.es', '', 'Público', 'EI'
         )
         ;
@@ -11005,7 +11005,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006049', 'San Blas', '450140001', 'Cl. Fernando de los Rios, 2', 'Cl. Fernando de los Rios, 2', '925506910',
+         '45006049', 'San Blas', '450140001', 'Cl. Fernando de los Rios, 2', '45250', '925506910',
          '925506754', '45006049.ies@edu.jccm.es', 'http://ies-sanblas.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11014,7 +11014,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000254', 'San Blas', '450150001', 'Cl. Jose Antonio, S/N', 'Cl. Jose Antonio, S/N', '925350605',
+         '45000254', 'San Blas', '450150001', 'Cl. Jose Antonio, S/N', '45182', '925350605',
          '925350605', '45000254.cp@edu.jccm.es', 'http://edu.jccm.es/cp/arcicollar', 'Público', 'CEIP'
         )
         ;
@@ -11023,7 +11023,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012360', 'Ángel de la Guarda', '450160001', 'Cl. Ecuador, S/N', 'Cl. Ecuador, S/N', '925376927',
+         '45012360', 'Ángel de la Guarda', '450160001', 'Cl. Ecuador, S/N', '45122', '925376927',
          '', 'ei.angelguarda.arges@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -11032,7 +11032,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013081', 'Jardín de Infancia los Cinco Lobitos', '450160001', 'Cl. Paris, 5', 'Cl. Paris, 5', '925377314',
+         '45013081', 'Jardín de Infancia los Cinco Lobitos', '450160001', 'Cl. Paris, 5', '45122', '925377314',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -11041,7 +11041,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011781', 'Miguel de Cervantes', '450160001', 'Cm. de Berrocales, S/N', 'Cm. de Berrocales, S/N', '925377594',
+         '45011781', 'Miguel de Cervantes', '450160001', 'Cm. de Berrocales, S/N', '45122', '925377594',
          '925293707', '45011781.cp@edu.jccm.es', 'http://ceip-migueldecervantesarges.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11050,7 +11050,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013595', 'San Isidro Labrador', '450160001', 'Av. Aguardentero C/V Calle los Almendros', 'Av. Aguardentero C/V Calle los Almendros', '925377316',
+         '45013595', 'San Isidro Labrador', '450160001', 'Av. Aguardentero C/V Calle los Almendros', '45122', '925377316',
          '', 'eisanisidro@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -11059,7 +11059,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000278', 'Tirso de Molina', '450160001', 'Ur. Mendoza, S/N', 'Ur. Mendoza, S/N', '925376483',
+         '45000278', 'Tirso de Molina', '450160001', 'Ur. Mendoza, S/N', '45122', '925376483',
          '925376483', '45000278.cp@edu.jccm.es', 'http://ceip-tirsodemolina.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11068,7 +11068,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010405', 'Santa María la Blanca', '450180001', 'Cl. Torrijos, S/N', 'Cl. Torrijos, S/N', '925764360',
+         '45010405', 'Santa María la Blanca', '450180001', 'Cl. Torrijos, S/N', '45525', '925764360',
          '925764360', '45010405.cp@edu.jccm.es', 'http://ceip-barcience.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11077,7 +11077,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012372', 'Gloria Fuertes', '450190001', 'Cl. Garcilaso de la Vega, S/N', 'Cl. Garcilaso de la Vega, S/N', '925365723',
+         '45012372', 'Gloria Fuertes', '450190001', 'Cl. Garcilaso de la Vega, S/N', '45593', '925365723',
          '925358436', '', '', 'Público', 'EI'
         )
         ;
@@ -11086,7 +11086,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005653', 'Julio Verne', '450190001', 'Cl. Instituto, S/N', 'Cl. Instituto, S/N', '925358268',
+         '45005653', 'Julio Verne', '450190001', 'Cl. Instituto, S/N', '45593', '925358268',
          '925493089', '45005653.ies@edu.jccm.es', 'http://ies-julioverne.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11095,7 +11095,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004922', 'Madre de la Vida', '450190001', 'Cl. Santiago de la Fuente, 22', 'Cl. Santiago de la Fuente, 22', '925357052',
+         '45004922', 'Madre de la Vida', '450190001', 'Cl. Santiago de la Fuente, 22', '45593', '925357052',
          '925357052', 'colegiomadredelavida@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -11104,7 +11104,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012384', 'Pinocho', '450190001', 'Cl. Roble, S/N', 'Cl. Roble, S/N', '925357003',
+         '45012384', 'Pinocho', '450190001', 'Cl. Roble, S/N', '45593', '925357003',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11113,7 +11113,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011771', 'Pintor Tomás Camarero', '450190003', 'Cl. Trigal, S/N', 'Cl. Trigal, S/N', '925493522',
+         '45011771', 'Pintor Tomás Camarero', '450190003', 'Cl. Trigal, S/N', '45593', '925493522',
          '', '45011771.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -11122,7 +11122,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013091', 'Playschool', '450190001', 'Ur. Valdelagua, Parcela 105', 'Ur. Valdelagua, Parcela 105', '',
+         '45013091', 'Playschool', '450190001', 'Ur. Valdelagua, Parcela 105', '45593', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -11131,7 +11131,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000308', 'Santísimo Cristo de la Sala', '450190001', 'Cl. Angel Delgado, S/N', 'Cl. Angel Delgado, S/N', '925357102',
+         '45000308', 'Santísimo Cristo de la Sala', '450190001', 'Cl. Angel Delgado, S/N', '45593', '925357102',
          '925357102', '45000308.cp@edu.jccm.es', 'http://ceip-cristodelasala.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11140,7 +11140,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013546', '- Sin Denominación -', '450200001', 'Cl. Fernando Jimenez de Gregorio, 6', 'Cl. Fernando Jimenez de Gregorio, 6', '925858000',
+         '45013546', '- Sin Denominación -', '450200001', 'Cl. Fernando Jimenez de Gregorio, 6', '45660', '925858000',
          '', 'e.i.bellavista@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -11149,7 +11149,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000311', 'Fernando Jiménez de Gregorio', '450200001', 'Cl. Fernando Jimenez de Gregorio, S/N', 'Cl. Fernando Jimenez de Gregorio, S/N', '925858397',
+         '45000311', 'Fernando Jiménez de Gregorio', '450200001', 'Cl. Fernando Jimenez de Gregorio, S/N', '45660', '925858397',
          '925858397', '45000311.cp@edu.jccm.es', 'http://edu.jccm.es/cp/belvis', 'Público', 'CEIP'
         )
         ;
@@ -11158,7 +11158,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006050', 'La Jara', '450200001', 'Av. Castilla-La Mancha, S/N', 'Av. Castilla-La Mancha, S/N', '925858145',
+         '45006050', 'La Jara', '450200001', 'Av. Castilla-La Mancha, S/N', '45660', '925858145',
          '925858918', '45006050.ieso@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -11167,7 +11167,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000321', 'Nuestra Señora de la Salud', '450210001', 'Av. de Domingo Ortega, 2', 'Av. de Domingo Ortega, 2', '925528027',
+         '45000321', 'Nuestra Señora de la Salud', '450210001', 'Av. de Domingo Ortega, 2', '45222', '925528027',
          '925528027', '45000321.cp@edu.jccm.es', 'http://edu.jccm.es/cp/borox', 'Público', 'CEIP'
         )
         ;
@@ -11176,7 +11176,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013108', 'Soletes', '450210001', 'Cl. Seseña, 4 B', 'Cl. Seseña, 4 B', '691561004',
+         '45013108', 'Soletes', '450210001', 'Cl. Seseña, 4 B', '45222', '691561004',
          '92513108', '', '', 'Privado', 'EI'
         )
         ;
@@ -11185,7 +11185,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005628', 'Efa Oretana', '450230001', 'Cr. Madrid-Ciudad Real, Km 78,400', 'Cr. Madrid-Ciudad Real, Km 78,400', '925228215',
+         '45005628', 'Efa Oretana', '450230001', 'Cr. Madrid-Ciudad Real, Km 78,400', '45112', '925228215',
          '925393778', 'efa-oretana@efa-centro.org', 'http://www.efa-centro.org', 'Priv.Concert.', ''
         )
         ;
@@ -11194,7 +11194,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013625', 'La Campana', '450230001', 'Cl. Sierra, 16', 'Cl. Sierra, 16', '45013625',
+         '45013625', 'La Campana', '450230001', 'Cl. Sierra, 16', '45112', '45013625',
          '', 'eilacampana@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -11203,7 +11203,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013111', 'La Piruleta Mágica', '450230001', 'Cl. Anselmo de la Cruz, 33', 'Cl. Anselmo de la Cruz, 33', '925393405',
+         '45013111', 'La Piruleta Mágica', '450230001', 'Cl. Anselmo de la Cruz, 33', '45112', '925393405',
          '925393405', 'la_piruleta_magica@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -11212,7 +11212,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000357', 'Victorio Macho', '450230001', 'Cr. Ciudad Real, 6', 'Cr. Ciudad Real, 6', '925393288',
+         '45000357', 'Victorio Macho', '450230001', 'Cr. Ciudad Real, 6', '45112', '925393288',
          '925393288', '45000357.cp@edu.jccm.es', 'http://ceip-victoriomacho.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11221,7 +11221,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012402', '- Sin Denominación -', '450240001', 'Av. Castilla-La Mancha, S/N', 'Av. Castilla-La Mancha, S/N', '925756107',
+         '45012402', '- Sin Denominación -', '450240001', 'Av. Castilla-La Mancha, S/N', '45521', '925756107',
          '925748049', 'burujon@burujon.es', '', 'Público', 'EI'
         )
         ;
@@ -11230,7 +11230,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000369', 'Juan XXIII', '450240001', 'Cr. de Polan, 32', 'Cr. de Polan, 32', '925756048',
+         '45000369', 'Juan XXIII', '450240001', 'Cr. de Polan, 32', '45521', '925756048',
          '925756307', '45000369.cp@edu.jccm.es', 'http://edu.jccm.es/ceip.juanxxiii', 'Público', 'CEIP'
         )
         ;
@@ -11239,7 +11239,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013704', 'Gloria Fuertes', '450250001', 'Cl. Miguel de Cervantes, S/N', 'Cl. Miguel de Cervantes, S/N', '925355685',
+         '45013704', 'Gloria Fuertes', '450250001', 'Cl. Miguel de Cervantes, S/N', '45592', '925355685',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11248,7 +11248,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000370', 'San Isidro Labrador', '450250001', 'Cl. Miguel de Cervantes, S/N', 'Cl. Miguel de Cervantes, S/N', '925355358',
+         '45000370', 'San Isidro Labrador', '450250001', 'Cl. Miguel de Cervantes, S/N', '45592', '925355358',
          '925355358', '45000370.cp@edu.jccm.es', 'http://edu.jccm.es/cp.sanisidrolabrador', 'Público', 'CEIP'
         )
         ;
@@ -11257,7 +11257,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000394', 'Alonso de Cárdenas', '450270001', 'Cl. General Guzman, 12', 'Cl. General Guzman, 12', '925209083',
+         '45000394', 'Alonso de Cárdenas', '450270001', 'Cl. General Guzman, 12', '45890', '925209083',
          '925209083', '45000394.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -11266,7 +11266,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012414', 'Maestro Don Antonio Fernández', '450280002', 'Cl. Barrio Arriba, 6', 'Cl. Barrio Arriba, 6', '925846361',
+         '45012414', 'Maestro Don Antonio Fernández', '450280002', 'Cl. Barrio Arriba, 6', '45686', '925846361',
          '925847032', '', '', 'Público', 'EI'
         )
         ;
@@ -11275,7 +11275,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000400', 'San Isidro', '450280001', 'Pz. de Cervantes, S/N', 'Pz. de Cervantes, S/N', '925849112',
+         '45000400', 'San Isidro', '450280001', 'Pz. de Cervantes, S/N', '45695', '925849112',
          '925849033', '45000400.cp@edu.jccm.es', 'http://ceip-sanisidroalberche.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11284,7 +11284,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000412', 'Santísimo Cristo de Chozas', '450280002', 'Cl. Guardia Francisco Lopez, S/N', 'Cl. Guardia Francisco Lopez, S/N', '925846296',
+         '45000412', 'Santísimo Cristo de Chozas', '450280002', 'Cl. Guardia Francisco Lopez, S/N', '45686', '925846296',
          '925846604', '45000412.cp@edu.jccm.es', 'http://ceip-stmocristochozas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11293,7 +11293,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012189', 'Campo Arañuelo', '450300001', 'Cl. Ramon y Cajal, 2', 'Cl. Ramon y Cajal, 2', '925452048',
+         '45012189', 'Campo Arañuelo', '450300001', 'Cl. Ramon y Cajal, 2', '45580', '925452048',
          '925452048', '45012189.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -11302,7 +11302,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011975', 'Alonso Rodríguez', '450310001', 'Cl. Beatriz Rocha, 12', 'Cl. Beatriz Rocha, 12', '918134002',
+         '45011975', 'Alonso Rodríguez', '450310001', 'Cl. Beatriz Rocha, 12', '45180', '918134002',
          '918134002', '45011975.cp@edu.jccm.es', 'http://ceip-alonsorodriguez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11311,7 +11311,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012128', 'Blas de Prado', '450310001', 'Av. de los Medicos, S/N', 'Av. de los Medicos, S/N', '918134427',
+         '45012128', 'Blas de Prado', '450310001', 'Av. de los Medicos, S/N', '45180', '918134427',
          '918134409', '45012128.ies@edu.jccm.es', 'http://ies-blasdeprado.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11320,7 +11320,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012426', 'La Abeja Maya', '450310001', 'Cl. los Maestros, 2', 'Cl. los Maestros, 2', '918174019',
+         '45012426', 'La Abeja Maya', '450310001', 'Cl. los Maestros, 2', '45180', '918174019',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11329,7 +11329,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000448', 'María del Mar', '450310001', 'Cl. General Valera, S/N', 'Cl. General Valera, S/N', '918174151',
+         '45000448', 'María del Mar', '450310001', 'Cl. General Valera, S/N', '45180', '918174151',
          '918174758', '45000448.cp@edu.jccm.es', 'http://edu.jccm.es/cp/mariadelmar', 'Público', 'CEIP'
         )
         ;
@@ -11338,7 +11338,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000451', 'Nuestra Señora del Rosario', '450320001', 'Cl. Nueva, 19', 'Cl. Nueva, 19', '925359061',
+         '45000451', 'Nuestra Señora del Rosario', '450320001', 'Cl. Nueva, 19', '45181', '925359061',
          '925359061', '45000451.cp@edu.jccm.es', 'http://edu.jccm.es/cp/camarenilla', 'Público', 'CEIP'
         )
         ;
@@ -11347,7 +11347,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006271', 'La Jara', '450330001', 'Cl. Diputacion, 53', 'Cl. Diputacion, 53', '925455674',
+         '45006271', 'La Jara', '450330001', 'Cl. Diputacion, 53', '45578', '925455674',
          '925455674', '45006271.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -11356,7 +11356,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000485', 'Cardenal Cisneros', '450340001', 'Cl. Colegios, 4', 'Cl. Colegios, 4', '925470092',
+         '45000485', 'Cardenal Cisneros', '450340001', 'Cl. Colegios, 4', '45720', '925470092',
          '925470092', '45000485.cp@edu.jccm.es', 'http:// http://edu.jccm.es/cp/cardenalcisneros/', 'Público', 'CEIP'
         )
         ;
@@ -11365,7 +11365,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000503', 'Cristo de la Cueva', '450360001', 'Cm. del Cementerio, S/N', 'Cm. del Cementerio, S/N', '925742136',
+         '45000503', 'Cristo de la Cueva', '450360001', 'Cm. del Cementerio, S/N', '45531', '925742136',
          '925742136', '45000503.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cristocueva', 'Público', 'CEIP'
         )
         ;
@@ -11374,7 +11374,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014071', '- Sin Denominación -', '450370001', 'Cl. Don Ignacio, 3 a', 'Cl. Don Ignacio, 3 a', '',
+         '45014071', '- Sin Denominación -', '450370001', 'Cl. Don Ignacio, 3 a', '45533', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11383,7 +11383,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000515', 'Nuestra Señora de Ronda', '450370001', 'Cl. la Marina, 26', 'Cl. la Marina, 26', '925757141',
+         '45000515', 'Nuestra Señora de Ronda', '450370001', 'Cl. la Marina, 26', '45533', '925757141',
          '925757141', '45000515.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sraronda', 'Público', 'CEIP'
         )
         ;
@@ -11392,7 +11392,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013972', 'Cenafe', '450380001', 'Cm. de Cebadero, S/N', 'Cm. de Cebadero, S/N', '',
+         '45013972', 'Cenafe', '450380001', 'Cm. de Cebadero, S/N', '45216', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -11401,7 +11401,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012438', 'Garabatos', '450380001', 'Cl. Orion, 7 Bis (Urbanizacion Campo Verde)', 'Cl. Orion, 7 Bis (Urbanizacion Campo Verde)', '925544883',
+         '45012438', 'Garabatos', '450380001', 'Cl. Orion, 7 Bis (Urbanizacion Campo Verde)', '45216', '925544883',
          '925544993', 'caigarabatos@ayto-carranque.com', '', 'Público', 'EI'
         )
         ;
@@ -11410,7 +11410,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000527', 'Guadarrama', '450380001', 'Cm. de Cebadero, S/N', 'Cm. de Cebadero, S/N', '925519602',
+         '45000527', 'Guadarrama', '450380001', 'Cm. de Cebadero, S/N', '45216', '925519602',
          '925519609', '45000527.cp@edu.jccm.es', 'http://ceip-guadarrama.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11419,7 +11419,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011859', 'Libertad', '450380001', 'Cl. Cedillo del Condado, 1', 'Cl. Cedillo del Condado, 1', '925529556',
+         '45011859', 'Libertad', '450380001', 'Cl. Cedillo del Condado, 1', '45216', '925529556',
          '925529533', '45011859.ies@edu.jccm.es', 'http://ies-libertad.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11428,7 +11428,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013996', 'Pequeño Árbol', '450380001', 'Cl. Orion, 38', 'Cl. Orion, 38', '',
+         '45013996', 'Pequeño Árbol', '450380001', 'Cl. Orion, 38', '45216', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -11437,7 +11437,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012098', 'Villa de Materno', '450380001', 'Av. del Zagal, 1', 'Av. del Zagal, 1', '925544662',
+         '45012098', 'Villa de Materno', '450380001', 'Av. del Zagal, 1', '45216', '925544662',
          '925544699', '45012098.cp@edu.jccm.es', 'http://ceip-villadematerno.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11446,7 +11446,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000540', 'Doctor Cesar González Gómez', '450390001', 'Cl. Praderas, 1', 'Cl. Praderas, 1', '925880132',
+         '45000540', 'Doctor Cesar González Gómez', '450390001', 'Cl. Praderas, 1', '45532', '925880132',
          '925880132', '45000540.cp@edu.jccm.es', 'http://edu.jccm.es/cp/carriches', 'Público', 'CEIP'
         )
         ;
@@ -11455,7 +11455,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000552', 'Nuestra Señora de Hortum Sancho', '450400001', 'Cr. de Otero, S/N', 'Cr. de Otero, S/N', '925863382',
+         '45000552', 'Nuestra Señora de Hortum Sancho', '450400001', 'Cr. de Otero, S/N', '45542', '925863382',
          '925863382', '45000552.cp@edu.jccm.es', 'http://ceip-hortumsancho.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11464,7 +11464,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012451', 'Arco Iris', '450410001', 'Cl. Campillo, 1', 'Cl. Campillo, 1', '918172007',
+         '45012451', 'Arco Iris', '450410001', 'Cl. Campillo, 1', '45950', '918172007',
          '', 'cai.arcoiris@casarrubiosdelmonte.es', '', 'Público', 'EI'
         )
         ;
@@ -11473,7 +11473,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010375', 'Calypo', '450410002', 'Cl. de Mahón, 195', 'Cl. de Mahón, 195', '918132790',
+         '45010375', 'Calypo', '450410002', 'Cl. de Mahón, 195', '45950', '918132790',
          '918132790', '45010375.cp@edu.jccm.es', 'http://ceip-calypo.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -11482,7 +11482,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000576', 'San Juan de Dios', '450410001', 'Cl. Arenal, S/N', 'Cl. Arenal, S/N', '918172162',
+         '45000576', 'San Juan de Dios', '450410001', 'Cl. Arenal, S/N', '45950', '918172162',
          '918172162', '45000576.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sanjuandedios', 'Público', 'CEIP'
         )
         ;
@@ -11491,7 +11491,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013777', 'Trazos', '450410002', 'Cl. Almeria, 286', 'Cl. Almeria, 286', '',
+         '45013777', 'Trazos', '450410002', 'Cl. Almeria, 286', '45950', '',
          '', 'escuelainfantiltrazos@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -11500,7 +11500,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005781', 'Virgen de la Encina', '450410002', 'Cl. Gerona, 175', 'Cl. Gerona, 175', '918139397',
+         '45005781', 'Virgen de la Encina', '450410002', 'Cl. Gerona, 175', '45950', '918139397',
          '918139397', 'colegiovirgendelaencina@gmail.com', '', 'Privado', 'CEIP'
         )
         ;
@@ -11509,7 +11509,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013613', '- Sin Denominación -', '450450001', 'Cl. Sevilla, 8', 'Cl. Sevilla, 8', '',
+         '45013613', '- Sin Denominación -', '450450001', 'Cl. Sevilla, 8', '45683', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11518,7 +11518,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013923', 'Ebora Formación', '450450001', 'Lg. Parcela 1, Sector 7', 'Lg. Parcela 1, Sector 7', '',
+         '45013923', 'Ebora Formación', '450450001', 'Lg. Parcela 1, Sector 7', '45683', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -11527,7 +11527,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000606', 'Miguel de Cervantes', '450450001', 'Cl. Mayor, 44', 'Cl. Mayor, 44', '925869031',
+         '45000606', 'Miguel de Cervantes', '450450001', 'Cl. Mayor, 44', '45683', '925869031',
          '925869031', '45000606.cp@edu.jccm.es', 'http://edu.jccm.es/cp/migueldecervantes', 'Público', 'CEIP'
         )
         ;
@@ -11536,7 +11536,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006062', 'Arenales del Tajo', '450460001', 'Cl. Velazquez, 2', 'Cl. Velazquez, 2', '925866628',
+         '45006062', 'Arenales del Tajo', '450460001', 'Cl. Velazquez, 2', '45680', '925866628',
          '925866705', '45006062.ies@edu.jccm.es', 'http://ies-arenales.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11545,7 +11545,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000621', 'Nuestra Señora de la Antigua', '450460001', 'Cl. Horno, 38', 'Cl. Horno, 38', '925866073',
+         '45000621', 'Nuestra Señora de la Antigua', '450460001', 'Cl. Horno, 38', '45680', '925866073',
          '925866210', '45000621.cp@edu.jccm.es', 'http://ceip-nsantiguacebolla.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11554,7 +11554,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010326', 'Nuestra Señora de la Antigua- Misioneras de Nuestra Señora del Pilar', '450460001', 'Cl. Real, 2', 'Cl. Real, 2', '925866071',
+         '45010326', 'Nuestra Señora de la Antigua- Misioneras de Nuestra Señora del Pilar', '450460001', 'Cl. Real, 2', '45680', '925866071',
          '', 'gisantigua@eresmas.com', '', 'Privado', 'CEIP'
         )
         ;
@@ -11563,7 +11563,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000631', 'Nuestra Señora de la Natividad', '450470001', 'Cl. Camino de Toledo S/N', 'Cl. Camino de Toledo S/N', '925508517',
+         '45000631', 'Nuestra Señora de la Natividad', '450470001', 'Cl. Camino de Toledo S/N', '45214', '925508517',
          '925508517', '45000631.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -11572,7 +11572,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012463', 'Pompitas', '450470001', 'Cl. Magallanes, 7', 'Cl. Magallanes, 7', '925508778',
+         '45012463', 'Pompitas', '450470001', 'Cl. Magallanes, 7', '45214', '925508778',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11581,7 +11581,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011768', 'Entrerríos', '450480001', 'Cl. Antonio Machado, 11', 'Cl. Antonio Machado, 11', '925872005',
+         '45011768', 'Entrerríos', '450480001', 'Cl. Antonio Machado, 11', '45682', '925872005',
          '925872005', '45011768.cra@edu.jccm.es', 'http://cra-entrerrios.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11590,7 +11590,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012475', 'Pepito Conejo', '450560001', 'Cl. Presa, S/N', 'Cl. Presa, S/N', '918177710',
+         '45012475', 'Pepito Conejo', '450560001', 'Cl. Presa, S/N', '45960', '918177710',
          '918176186', 'e.i.pepitoconejo@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -11599,7 +11599,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013893', 'Pequelandia', '450560001', 'Cl. Jorge Manrique, 2', 'Cl. Jorge Manrique, 2', '',
+         '45013893', 'Pequelandia', '450560001', 'Cl. Jorge Manrique, 2', '45960', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -11608,7 +11608,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000801', 'Santa María Magdalena', '450560001', 'Cl. Doctor Fleming, S/N', 'Cl. Doctor Fleming, S/N', '918145617',
+         '45000801', 'Santa María Magdalena', '450560001', 'Cl. Doctor Fleming, S/N', '45960', '918145617',
          '918145617', '45000801.cp@edu.jccm.es', 'http://ceip-santamariamagdalena.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11617,7 +11617,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000679', 'Santísimo Cristo de la Misericordia', '450500001', 'Cl. la Luna, 7', 'Cl. la Luna, 7', '925147215',
+         '45000679', 'Santísimo Cristo de la Misericordia', '450500001', 'Cl. la Luna, 7', '45314', '925147215',
          '925147215', '45000679.cp@edu.jccm.es', 'http://ceip-ciruelos.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11626,7 +11626,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012487', 'Los Pitufitos', '450510001', 'Cl. Guadalajara, 1', 'Cl. Guadalajara, 1', '925551567',
+         '45012487', 'Los Pitufitos', '450510001', 'Cl. Guadalajara, 1', '45291', '925551567',
          '925551942', '', '', 'Público', 'EI'
         )
         ;
@@ -11635,7 +11635,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000680', 'San Juan Bautista', '450510001', 'Cl. Real, S/N', 'Cl. Real, S/N', '925551188',
+         '45000680', 'San Juan Bautista', '450510001', 'Cl. Real, S/N', '45291', '925551188',
          '925551188', '45000680.cp@edu.jccm.es', 'http://ceip-cobeja.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11644,7 +11644,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000692', 'Cardenal Tavera', '450520001', 'Cl. Arcipreste de Hita, 53', 'Cl. Arcipreste de Hita, 53', '925378299',
+         '45000692', 'Cardenal Tavera', '450520001', 'Cl. Arcipreste de Hita, 53', '45111', '925378299',
          '925378229', '45000692.cp@edu.jccm.es', 'http://ceip-cardenaltavera.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11653,7 +11653,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013601', 'Escuela Municipal de Música y Danza de Cobisa', '450520001', 'Cl. Robledo, S/N', 'Cl. Robledo, S/N', '',
+         '45013601', 'Escuela Municipal de Música y Danza de Cobisa', '450520001', 'Cl. Robledo, S/N', '45111', '',
          '', 'escuelademusica@cobisa.es', '', 'Público', ''
         )
         ;
@@ -11662,7 +11662,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011793', 'Gloria Fuertes', '450520001', 'Cl. Robledo, S/N', 'Cl. Robledo, S/N', '925378589',
+         '45011793', 'Gloria Fuertes', '450520001', 'Cl. Robledo, S/N', '45111', '925378589',
          '925378495', '45011793.cp@edu.jccm.es', 'http://ceip-gloriafuertescobisa.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11671,7 +11671,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013133', 'La Casita de Chocolate', '450520001', 'Cl. Montes de Toledo, 8', 'Cl. Montes de Toledo, 8', '646773094',
+         '45013133', 'La Casita de Chocolate', '450520001', 'Cl. Montes de Toledo, 8', '45111', '646773094',
          '', 'sonia@lacasitadechocolate.com', '', 'Privado', 'EI'
         )
         ;
@@ -11680,7 +11680,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012499', 'Los Cotos', '450520001', 'Cl. los Quintos, 27', 'Cl. los Quintos, 27', '925379137',
+         '45012499', 'Los Cotos', '450520001', 'Cl. los Quintos, 27', '45111', '925379137',
          '', 'cobisa@babyteca.es', '', 'Público', 'EI'
         )
         ;
@@ -11689,7 +11689,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014083', '- Sin Denominación -', '450530001', 'Av. de la Constitucion, 5', 'Av. de la Constitucion, 5', '',
+         '45014083', '- Sin Denominación -', '450530001', 'Av. de la Constitucion, 5', '45700', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11698,7 +11698,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004880', 'Castillo de Consuegra', '450530001', 'Cr. de Urda, S/N', 'Cr. de Urda, S/N', '925480612',
+         '45004880', 'Castillo de Consuegra', '450530001', 'Cr. de Urda, S/N', '45700', '925480612',
          '925475592', '45004880.cea@edu.jccm.es', 'http://cepa-castillodeconsuegra.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -11707,7 +11707,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000734', 'Consaburum', '450530001', 'Cr. de Urda, S/N', 'Cr. de Urda, S/N', '925480377',
+         '45000734', 'Consaburum', '450530001', 'Cr. de Urda, S/N', '45700', '925480377',
          '925475871', '45000734.ies@edu.jccm.es', 'http://ies-consaburum.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11716,7 +11716,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013145', 'La Prole', '450530001', 'Cl. Diego Galan, 9', 'Cl. Diego Galan, 9', '',
+         '45013145', 'La Prole', '450530001', 'Cl. Diego Galan, 9', '45700', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -11725,7 +11725,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000722', 'Miguel de Cervantes', '450530001', 'Cl. Estudiantes, 1', 'Cl. Estudiantes, 1', '925480050',
+         '45000722', 'Miguel de Cervantes', '450530001', 'Cl. Estudiantes, 1', '45700', '925480050',
          '925480050', '45000722.cp@edu.jccm.es', 'http://ceip-migueldecervantesconsuegra.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11734,7 +11734,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000710', 'Santísimo Cristo de la Vera Cruz', '450530001', 'Pz. de España, 18', 'Pz. de España, 18', '925481028',
+         '45000710', 'Santísimo Cristo de la Vera Cruz', '450530001', 'Pz. de España, 18', '45700', '925481028',
          '925481028', '45000710.cp@edu.jccm.es', 'http://ceip-sclaveracruz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11743,7 +11743,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012517', '- Sin Denominación -', '450540001', 'Cl. Camilo Jose Cela, 17', 'Cl. Camilo Jose Cela, 17', '925190886',
+         '45012517', '- Sin Denominación -', '450540001', 'Cl. Camilo Jose Cela, 17', '45880', '925190886',
          '', 'lolacarbonero@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -11752,7 +11752,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000758', 'Fundacion Diaz-Cordoves Segoviano', '450540001', 'Cl. Mayor, 9', 'Cl. Mayor, 9', '925190038',
+         '45000758', 'Fundacion Diaz-Cordoves Segoviano', '450540001', 'Cl. Mayor, 9', '45880', '925190038',
          '925190975', 'lasallecorral@lasalle.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -11761,7 +11761,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005801', 'La Besana', '450540001', 'Cm. Santa Cruz, S/N', 'Cm. Santa Cruz, S/N', '925207357',
+         '45005801', 'La Besana', '450540001', 'Cm. Santa Cruz, S/N', '45880', '925207357',
          '925207477', '45005801.ies@edu.jccm.es', 'http://ies-labesana.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11770,7 +11770,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000783', 'Nuestra Señora de la Muela', '450540001', 'Cl. Leoncia Diaz Cordoves, 46', 'Cl. Leoncia Diaz Cordoves, 46', '925190810',
+         '45000783', 'Nuestra Señora de la Muela', '450540001', 'Cl. Leoncia Diaz Cordoves, 46', '45880', '925190810',
          '925207266', '45000783.cp@edu.jccm.es', 'http://ceip-ntrasradelamuela.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11779,7 +11779,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000795', 'Soledad Alonso Dorado', '450550001', 'Cl. Pulgar, 7', 'Cl. Pulgar, 7', '925424100',
+         '45000795', 'Soledad Alonso Dorado', '450550001', 'Cl. Pulgar, 7', '45126', '925424100',
          '925424100', '45000795.cp@edu.jccm.es', 'http://ceip-soledadalonsodorado.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11788,7 +11788,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011756', 'Campos de Castilla', '450580001', 'Av. Castilla-La Mancha, S/N', 'Av. Castilla-La Mancha, S/N', '925880250',
+         '45011756', 'Campos de Castilla', '450580001', 'Av. Castilla-La Mancha, S/N', '45544', '925880250',
          '925880250', '45011756.cra@edu.jccm.es', 'http:// http://edu.jccm.es/cra/camposdecastilla', 'Público', 'CEIP'
         )
         ;
@@ -11797,7 +11797,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014034', 'Garabatos', '450590001', 'Pz. de Palacio, S/N', 'Pz. de Palacio, S/N', '',
+         '45014034', 'Garabatos', '450590001', 'Pz. de Palacio, S/N', '45311', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11806,7 +11806,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000862', 'San Isidro Labrador', '450590001', 'Cl. Principe, S/N', 'Cl. Principe, S/N', '925137259',
+         '45000862', 'San Isidro Labrador', '450590001', 'Cl. Principe, S/N', '45311', '925137259',
          '925122482', '45000862.cp@edu.jccm.es', 'http://ceip-sanisidrolabrador.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11815,7 +11815,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000898', 'Inmaculada Concepción', '450610001', 'Av. de Peñafiel, S/N', 'Av. de Peñafiel, S/N', '925780163',
+         '45000898', 'Inmaculada Concepción', '450610001', 'Av. de Peñafiel, S/N', '45910', '925780163',
          '925781199', '45000898.cp@edu.jccm.es', 'http://ceip-inmaculadaconcepcion.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11824,7 +11824,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006074', 'Lazarillo de Tormes', '450610001', 'Cl. Comuneros de Castilla, 4', 'Cl. Comuneros de Castilla, 4', '925780868',
+         '45006074', 'Lazarillo de Tormes', '450610001', 'Cl. Comuneros de Castilla, 4', '45910', '925780868',
          '925781042', '45006074.ies@edu.jccm.es', 'http://ies-lazarillo.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11833,7 +11833,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000904', 'Sagrados Corazones', '450620001', 'Cl. Soledad, S/N', 'Cl. Soledad, S/N', '925758288',
+         '45000904', 'Sagrados Corazones', '450620001', 'Cl. Soledad, S/N', '45517', '925758288',
          '925758288', '45000904.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sagradoscorazones', 'Público', 'CEIP'
         )
         ;
@@ -11842,7 +11842,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010387', 'Alonso Quijada', '450640001', 'Cl. Emilia Pardo Bazan, S/N', 'Cl. Emilia Pardo Bazan, S/N', '925520759',
+         '45010387', 'Alonso Quijada', '450640001', 'Cl. Emilia Pardo Bazan, S/N', '45221', '925520759',
          '925520759', '45010387.ieso@edu.jccm.es', 'http://ies-alonsoquijada.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -11851,7 +11851,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011963', 'Catalina de Palacios', '450640001', 'Cl. Calderon de la Barca, 1', 'Cl. Calderon de la Barca, 1', '925519846',
+         '45011963', 'Catalina de Palacios', '450640001', 'Cl. Calderon de la Barca, 1', '45221', '925519846',
          '925519846', '45011963.cp@edu.jccm.es', 'http://ceip-catalinadepalacios.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11860,7 +11860,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000931', 'Miguel de Cervantes', '450640001', 'Ps. de las Escuelas, S/N', 'Ps. de las Escuelas, S/N', '925546240',
+         '45000931', 'Miguel de Cervantes', '450640001', 'Ps. de las Escuelas, S/N', '45221', '925546240',
          '925546240', '45000931.cp@edu.jccm.es', 'http://ceip-migueldecervantes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11869,7 +11869,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012542', 'Sancho Panza', '450640001', 'Cl. Pablo Picasso, S/N', 'Cl. Pablo Picasso, S/N', '',
+         '45012542', 'Sancho Panza', '450640001', 'Cl. Pablo Picasso, S/N', '45221', '',
          '', 'direccioncai@aytoesquivias.es', '', 'Público', 'EI'
         )
         ;
@@ -11878,7 +11878,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011719', '- Sin Denominación -', '450660001', 'Av. de España, S/N', 'Av. de España, S/N', '',
+         '45011719', '- Sin Denominación -', '450660001', 'Av. de España, S/N', '45510', '',
          '', 'aepa_fuensalida@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -11887,7 +11887,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005665', 'Aldebarán', '450660001', 'Cl. Beato Juan de Avila ,15', 'Cl. Beato Juan de Avila ,15', '925731120',
+         '45005665', 'Aldebarán', '450660001', 'Cl. Beato Juan de Avila ,15', '45510', '925731120',
          '925730834', '45005665.ies@edu.jccm.es', 'http://ies-aldebaran.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11896,7 +11896,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013844', 'Arco Iris', '450660001', 'Cl. San Gabriel, 24', 'Cl. San Gabriel, 24', '',
+         '45013844', 'Arco Iris', '450660001', 'Cl. San Gabriel, 24', '45510', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -11905,7 +11905,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011801', 'Condes de Fuensalida', '450660001', 'Av. de España, S/N', 'Av. de España, S/N', '648224324',
+         '45011801', 'Condes de Fuensalida', '450660001', 'Av. de España, S/N', '45510', '648224324',
          '925788660', '45011801.cp@edu.jccm.es', 'http://ceip-condesdefuensalida.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11914,7 +11914,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013832', 'Garabatos', '450660001', 'Cl. Principal, 59', 'Cl. Principal, 59', '',
+         '45013832', 'Garabatos', '450660001', 'Cl. Principal, 59', '45510', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -11923,7 +11923,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011914', 'Maestro Vicente Rodríguez', '450660001', 'Cl. Toledo, 70', 'Cl. Toledo, 70', '',
+         '45011914', 'Maestro Vicente Rodríguez', '450660001', 'Cl. Toledo, 70', '45510', '',
          '', 'escuelademusica@fuensalida.com', '', 'Público', ''
         )
         ;
@@ -11932,7 +11932,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013157', 'Pequeños Talentos', '450660001', 'Cl. Lili Alvarez, 21', 'Cl. Lili Alvarez, 21', '691697637',
+         '45013157', 'Pequeños Talentos', '450660001', 'Cl. Lili Alvarez, 21', '45510', '691697637',
          '925266180', '', '', 'Privado', 'EI'
         )
         ;
@@ -11941,7 +11941,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000965', 'San José', '450660001', 'Cl. Madre Isabel Larrañaga, 40', 'Cl. Madre Isabel Larrañaga, 40', '925784010',
+         '45000965', 'San José', '450660001', 'Cl. Madre Isabel Larrañaga, 40', '45510', '925784010',
          '925731554', 'sjosef@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -11950,7 +11950,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000977', 'Tomás Romojaro', '450660001', 'Cl. Santo Tomas de Aquino, 4', 'Cl. Santo Tomas de Aquino, 4', '925785769',
+         '45000977', 'Tomás Romojaro', '450660001', 'Cl. Santo Tomas de Aquino, 4', '45510', '925785769',
          '925784134', '45000977.cp@edu.jccm.es', 'http://ceip-tomasromojaro.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11959,7 +11959,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013534', 'Zapatitos', '450660001', 'Cl. Islas Baleares, 25 y 27', 'Cl. Islas Baleares, 25 y 27', '68713947',
+         '45013534', 'Zapatitos', '450660001', 'Cl. Islas Baleares, 25 y 27', '45510', '68713947',
          '', 'ceifuensalida@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -11968,7 +11968,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013716', 'Garbancito', '450670001', 'Cl. Ramon y Cajal, 28', 'Cl. Ramon y Cajal, 28', '925401907',
+         '45013716', 'Garbancito', '450670001', 'Cl. Ramon y Cajal, 28', '45164', '925401907',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -11977,7 +11977,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005975', 'Montes de Toledo', '450670001', 'Cr. Menasalbas, S/N', 'Cr. Menasalbas, S/N', '925401021',
+         '45005975', 'Montes de Toledo', '450670001', 'Cr. Menasalbas, S/N', '45164', '925401021',
          '925401961', '45005975.ies@edu.jccm.es', 'http://ies-montesdeToledo.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -11986,7 +11986,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000989', 'San Juan de la Cruz', '450670001', 'Cr. de Toledo, S/N', 'Cr. de Toledo, S/N', '925400182',
+         '45000989', 'San Juan de la Cruz', '450670001', 'Cr. de Toledo, S/N', '45164', '925400182',
          '925400182', '45000989.cp@edu.jccm.es', 'http://ceip-colegalvez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -11995,7 +11995,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001027', 'Santa María Magdalena', '0000', 'Av. Castilla-La Mancha, S/N', 'Av. Castilla-La Mancha, S/N', '925862374',
+         '45001027', 'Santa María Magdalena', '0000', 'Av. Castilla-La Mancha, S/N', '45643', '925862374',
          '925862374', '45001027.cp@edu.jccm.es', 'http://edu.jccm.es/cp/smmagdalena', 'Público', 'CEIP'
         )
         ;
@@ -12004,7 +12004,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001039', 'San José', '450690001', 'Cl. Estacion, 28', 'Cl. Estacion, 28', '925762847',
+         '45001039', 'San José', '450690001', 'Cl. Estacion, 28', '45518', '925762847',
          '925762847', '45001039.cp@edu.jccm.es', 'http://edu.jccm.es/cp.sanjose', 'Público', 'CEIP'
         )
         ;
@@ -12013,7 +12013,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012554', 'La Casita de Elia', '450700001', 'Cl. Nueva, S/N', 'Cl. Nueva, S/N', '925291584',
+         '45012554', 'La Casita de Elia', '450700001', 'Cl. Nueva, S/N', '45160', '925291584',
          '925291624', 'guadamursecretaria@local.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -12022,7 +12022,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001040', 'Nuestra Señora de la Natividad', '450700001', 'Cl. del Prado, 53', 'Cl. del Prado, 53', '925291519',
+         '45001040', 'Nuestra Señora de la Natividad', '450700001', 'Cl. del Prado, 53', '45160', '925291519',
          '925294012', '45001040.cp@edu.jccm.es', 'http://ceip-natividad.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12031,7 +12031,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012566', '- Sin Denominación -', '450710001', 'Cl. Ciudad Real, S/N', 'Cl. Ciudad Real, S/N', '925123372',
+         '45012566', '- Sin Denominación -', '450710001', 'Cl. Ciudad Real, S/N', '45760', '925123372',
          '925123021', '', '', 'Público', 'EI'
         )
         ;
@@ -12040,7 +12040,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001052', 'Valentín Escobar', '450710001', 'Rd. de Mediodia, S/N', 'Rd. de Mediodia, S/N', '925138086',
+         '45001052', 'Valentín Escobar', '450710001', 'Rd. de Mediodia, S/N', '45760', '925138086',
          '925138086', '45001052.cp@edu.jccm.es', 'http://edu.jccm.es/cp/valentinescobar', 'Público', 'CEIP'
         )
         ;
@@ -12049,7 +12049,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005124', 'Ortega Pérez', '450720002', 'Cl. Carretera, S/N', 'Cl. Carretera, S/N', '925702817',
+         '45005124', 'Ortega Pérez', '450720002', 'Cl. Carretera, S/N', '45663', '925702817',
          '925702817', '45005124.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12058,7 +12058,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001064', 'Vera Cruz', '450720001', 'Cl. la Dehesa S/N', 'Cl. la Dehesa S/N', '925709130',
+         '45001064', 'Vera Cruz', '450720001', 'Cl. la Dehesa S/N', '45664', '925709130',
          '925709130', '45001064.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12067,7 +12067,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001091', 'Virgen de la Higuera', '450760001', 'Tr. de Cuatro Caminos, S/N', 'Tr. de Cuatro Caminos, S/N', '925740053',
+         '45001091', 'Virgen de la Higuera', '450760001', 'Tr. de Cuatro Caminos, S/N', '45919', '925740053',
          '925740053', '45001091.cp@edu.jccm.es', 'http://edu.jccm.es/ceip.virgendelahiguera', 'Público', 'CEIP'
         )
         ;
@@ -12076,7 +12076,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001118', 'Gregorio Marañón', '450770001', 'Cl. Vistillas, 7', 'Cl. Vistillas, 7', '925784625',
+         '45001118', 'Gregorio Marañón', '450770001', 'Cl. Vistillas, 7', '45511', '925784625',
          '925784625', '45001118.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12085,7 +12085,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012578', 'Garabatos', '450780001', 'Cl. del Pozo Nuevo, 22', 'Cl. del Pozo Nuevo, 22', '925129200',
+         '45012578', 'Garabatos', '450780001', 'Cl. del Pozo Nuevo, 22', '45750', '925129200',
          '925129514', 'caigarabatos@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -12094,7 +12094,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001121', 'Virgen del Rosario de Pastores', '450780001', 'Cl. Doctor Felix Rodriguez de la Fuente, 24', 'Cl. Doctor Felix Rodriguez de la Fuente, 24', '925129128',
+         '45001121', 'Virgen del Rosario de Pastores', '450780001', 'Cl. Doctor Felix Rodriguez de la Fuente, 24', '45750', '925129128',
          '', '45001121.cp@edu.jccm.es', 'http://ceip-virgenrpastores.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12103,7 +12103,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014010', 'Airbus', '450810001', 'Av. de las Naciones, 37', 'Av. de las Naciones, 37', '',
+         '45014010', 'Airbus', '450810001', 'Av. de las Naciones, 37', '45200', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -12112,7 +12112,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013789', 'Bambi', '450810001', 'Cl. San Pedro, 5', 'Cl. San Pedro, 5', '',
+         '45013789', 'Bambi', '450810001', 'Cl. San Pedro, 5', '45200', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -12121,7 +12121,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012441', 'Canguros', '450810001', 'Cl. Galatea, 6', 'Cl. Galatea, 6', '925541409',
+         '45012441', 'Canguros', '450810001', 'Cl. Galatea, 6', '45200', '925541409',
          '', 'nerea@eicanguros.es', '', 'Privado', 'EI'
         )
         ;
@@ -12130,7 +12130,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012581', 'Canicas', '450810001', 'Cl. Carmen Martin Gaite, S/N', 'Cl. Carmen Martin Gaite, S/N', '925512035',
+         '45012581', 'Canicas', '450810001', 'Cl. Carmen Martin Gaite, S/N', '45200', '925512035',
          '925514721', 'caicanicas@illescas.es', '', 'Público', 'EI'
         )
         ;
@@ -12139,7 +12139,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011999', 'Clara Campoamor', '450810001', 'Cl. Pedro Almodovar, S/N', 'Cl. Pedro Almodovar, S/N', '925542948',
+         '45011999', 'Clara Campoamor', '450810001', 'Cl. Pedro Almodovar, S/N', '45200', '925542948',
          '925532446', '45011999.cp@edu.jccm.es', 'http://ceip-claracampoamorillescas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12148,7 +12148,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005987', 'Condestable Álvaro de Luna', '450810001', 'Cr. de Ugena, S/N', 'Cr. de Ugena, S/N', '925540051',
+         '45005987', 'Condestable Álvaro de Luna', '450810001', 'Cr. de Ugena, S/N', '45200', '925540051',
          '925540287', '45005987.ies@edu.jccm.es', 'http://ies-condestable.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -12157,7 +12157,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012190', 'El Greco', '450810008', 'Cl. Julio Cortazar, S/N', 'Cl. Julio Cortazar, S/N', '925518194',
+         '45012190', 'El Greco', '450810008', 'Cl. Julio Cortazar, S/N', '45200', '925518194',
          '925518194', '45012190.cp@edu.jccm.es', 'http://ceip-elgrecoillescas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12166,7 +12166,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013509', 'El Nido del Señorío', '450810008', 'Cl. las Lomas, 15-H', 'Cl. las Lomas, 15-H', '',
+         '45013509', 'El Nido del Señorío', '450810008', 'Cl. las Lomas, 15-H', '45200', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -12175,7 +12175,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010454', 'Ilarcuris', '450810001', 'Cl. Bramante, S/N', 'Cl. Bramante, S/N', '925511268',
+         '45010454', 'Ilarcuris', '450810001', 'Cl. Bramante, S/N', '45200', '925511268',
          '925532181', '45010454.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12184,7 +12184,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004788', 'Juan de Padilla', '450810001', 'Cl. Yeles, S/N', 'Cl. Yeles, S/N', '925511800',
+         '45004788', 'Juan de Padilla', '450810001', 'Cl. Yeles, S/N', '45200', '925511800',
          '925513753', '45004788.ies@edu.jccm.es', 'http://ies-juandepadilla.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -12193,7 +12193,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005343', 'La Constitución', '450810001', 'Cl. Constitucion, 3', 'Cl. Constitucion, 3', '925512505',
+         '45005343', 'La Constitución', '450810001', 'Cl. Constitucion, 3', '45200', '925512505',
          '925540771', '45005343.cp@edu.jccm.es', 'http://ceip-laconstitucion.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12202,7 +12202,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013169', 'La Seta Mágica', '450810001', 'Cl. Greco, 11', 'Cl. Greco, 11', '',
+         '45013169', 'La Seta Mágica', '450810001', 'Cl. Greco, 11', '45200', '',
          '', 'info@lasetamagica.com', '', 'Privado', 'EI'
         )
         ;
@@ -12211,7 +12211,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001167', 'Martín Chico', '450810001', 'Cl. Yeles, S/N', 'Cl. Yeles, S/N', '925511064',
+         '45001167', 'Martín Chico', '450810001', 'Cl. Yeles, S/N', '45200', '925511064',
          '925540040', '45001167.cp@edu.jccm.es', 'http://ceip-martinchico.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12220,7 +12220,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013637', 'Nemo Marlin', '450810008', 'Cl. Intergolf, S/N, Edificio "Las Gaviotas", Local 5 y 6', 'Cl. Intergolf, S/N, Edificio "Las Gaviotas", Local 5 y 6', '925512683',
+         '45013637', 'Nemo Marlin', '450810008', 'Cl. Intergolf, S/N, Edificio "Las Gaviotas", Local 5 y 6', '45200', '925512683',
          '', 'illescas@escuelanemomarlin.com', '', 'Privado', 'EI'
         )
         ;
@@ -12229,7 +12229,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005914', 'Pedro Gumiel', '450810001', 'Cl. Rodrigo Carrasco Gallego, S/N', 'Cl. Rodrigo Carrasco Gallego, S/N', '925512166',
+         '45005914', 'Pedro Gumiel', '450810001', 'Cl. Rodrigo Carrasco Gallego, S/N', '45200', '925512166',
          '925512166', '45005914.cea@edu.jccm.es', 'http://cepa-pedrogumiel.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -12238,7 +12238,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012591', 'Truke', '450810001', 'Cl. Bramante, 12', 'Cl. Bramante, 12', '925513422',
+         '45012591', 'Truke', '450810001', 'Cl. Bramante, 12', '45200', '925513422',
          '650376936', 'caicanicas@illescas.es', '', 'Público', 'EI'
         )
         ;
@@ -12247,7 +12247,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001179', 'Virgen de la Caridad', '450810001', 'Av. del Recinto Ferial, S/N', 'Av. del Recinto Ferial, S/N', '925513338',
+         '45001179', 'Virgen de la Caridad', '450810001', 'Av. del Recinto Ferial, S/N', '45200', '925513338',
          '925512237', 'directorgerente@colegiovirgencaridad.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -12256,7 +12256,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012608', 'El Castillejo', '450820001', 'Cl. Condesa de Orgaz, 9', 'Cl. Condesa de Orgaz, 9', '',
+         '45012608', 'El Castillejo', '450820001', 'Cl. Condesa de Orgaz, 9', '45567', '',
          '', 'bienestarsocial@lagartera.es', '', 'Público', 'EI'
         )
         ;
@@ -12265,7 +12265,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001192', 'Jacinto Guerrero', '450820001', 'Cl. Condesa de Orgaz, 9', 'Cl. Condesa de Orgaz, 9', '925430387',
+         '45001192', 'Jacinto Guerrero', '450820001', 'Cl. Condesa de Orgaz, 9', '45567', '925430387',
          '925430387', '45001192.cp@edu.jccm.es', 'http://edu.jccm.es/cp/jacintoguerrero', 'Público', 'CEIP'
         )
         ;
@@ -12274,7 +12274,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001210', 'María Magdalena', '450830001', 'Cl. Calvo Sotelo, S/N', 'Cl. Calvo Sotelo, S/N', '925293282',
+         '45001210', 'María Magdalena', '450830001', 'Cl. Calvo Sotelo, S/N', '45123', '925293282',
          '925293282', '45001210.cp@edu.jccm.es', 'http://ceip-mariamagdalena.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12283,7 +12283,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001222', 'Marcelino Murillo', '450840001', 'Cj. de las Escuelas, 1', 'Cj. de las Escuelas, 1', '925170363',
+         '45001222', 'Marcelino Murillo', '450840001', 'Cj. de las Escuelas, 1', '45870', '925170363',
          '925170030', '45001222.cp@edu.jccm.es', 'http://ceip-marcelinomurillo.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -12292,7 +12292,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012611', 'Tris-Tras', '450840001', 'Cr. del Romeral, 6', 'Cr. del Romeral, 6', '925170203',
+         '45012611', 'Tris-Tras', '450840001', 'Cr. del Romeral, 6', '45870', '925170203',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -12301,7 +12301,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012621', 'Aldea Pitufa', '450850001', 'Cl. Marbella, S/N', 'Cl. Marbella, S/N', '925558101',
+         '45012621', 'Aldea Pitufa', '450850001', 'Cl. Marbella, S/N', '45212', '925558101',
          '925558327', 'lominchar@diputoledo.es', '', 'Público', 'EI'
         )
         ;
@@ -12310,7 +12310,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001234', 'Ramón y Cajal', '450850001', 'Cl. Quiñon, 18', 'Cl. Quiñon, 18', '925558033',
+         '45001234', 'Ramón y Cajal', '450850001', 'Cl. Quiñon, 18', '45212', '925558033',
          '925558033', '45001234.cp@edu.jccm.es', 'http://ceip-ramonycajal.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12319,7 +12319,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012633', '- Sin Denominación -', '450870001', 'Cl. el Peso, S/N', 'Cl. el Peso, S/N', '925463464',
+         '45012633', '- Sin Denominación -', '450870001', 'Cl. el Peso, S/N', '45710', '925463464',
          '925265319', '', '', 'Público', 'EI'
         )
         ;
@@ -12328,7 +12328,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010478', '- Sin Denominación -', '450870001', 'Ps. del Cristo, S/N', 'Ps. del Cristo, S/N', '',
+         '45010478', '- Sin Denominación -', '450870001', 'Ps. del Cristo, S/N', '45710', '',
          '', 'aepa_madridejos@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -12337,7 +12337,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001271', 'Amor de Dios', '450870001', 'Cl. Portugal, 10', 'Cl. Portugal, 10', '925462880',
+         '45001271', 'Amor de Dios', '450870001', 'Cl. Portugal, 10', '45710', '925462880',
          '925463990', 'amordiosma@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -12346,7 +12346,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001283', 'Cervantes', '450870001', 'Cl. de las Cruces, 22', 'Cl. de las Cruces, 22', '925460166',
+         '45001283', 'Cervantes', '450870001', 'Cl. de las Cruces, 22', '45710', '925460166',
          '925460166', 'colegiocervantes@madridejos.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -12355,7 +12355,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014058', 'Enanitos', '450870001', 'Cl. Sueños, 1', 'Cl. Sueños, 1', '',
+         '45014058', 'Enanitos', '450870001', 'Cl. Sueños, 1', '45710', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -12364,7 +12364,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011720', 'Escuela Municipal de Música y Danza de Madridejos', '450870001', 'Cl. Argentina, S/N', 'Cl. Argentina, S/N', '',
+         '45011720', 'Escuela Municipal de Música y Danza de Madridejos', '450870001', 'Cl. Argentina, S/N', '45710', '',
          '', 'escuelademusica@madridejos.es', '', 'Público', ''
         )
         ;
@@ -12373,7 +12373,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001313', 'Garcilaso de la Vega', '450870001', 'Pz. Don Jesus Requejo, 2', 'Pz. Don Jesus Requejo, 2', '925460334',
+         '45001313', 'Garcilaso de la Vega', '450870001', 'Pz. Don Jesus Requejo, 2', '45710', '925460334',
          '925460334', '45001313.cp@edu.jccm.es', 'http://edu.jccm.es/cp.garcilasodelavegamadridejos', 'Público', 'CEIP'
         )
         ;
@@ -12382,7 +12382,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013522', 'Juan Vicente Camacho', '450870001', 'Cl. Arcos, 10', 'Cl. Arcos, 10', '',
+         '45013522', 'Juan Vicente Camacho', '450870001', 'Cl. Arcos, 10', '45710', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -12391,7 +12391,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012062', 'Mingoliva', '450870001', 'Cr. de Andalucia, S/N', 'Cr. de Andalucia, S/N', '925463984',
+         '45012062', 'Mingoliva', '450870001', 'Cr. de Andalucia, S/N', '45710', '925463984',
          '925463984', '45012062.cee@edu.jccm.es', 'http://cee-mingoliva.centros.castillalamancha.es/', 'Público', 'CEE'
         )
         ;
@@ -12400,7 +12400,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005185', 'Santa Ana', '450870001', 'Cl. Ruiseñor, 1', 'Cl. Ruiseñor, 1', '925460709',
+         '45005185', 'Santa Ana', '450870001', 'Cl. Ruiseñor, 1', '45710', '925460709',
          '925463920', '45005185.cp@edu.jccm.es', 'http://edu.jccm.es/cp/santaanamadridejos', 'Público', 'CEIP'
         )
         ;
@@ -12409,7 +12409,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001337', 'Valdehierro', '450870001', 'Cm. Viejo de Tembleque, S/N', 'Cm. Viejo de Tembleque, S/N', '925460944',
+         '45001337', 'Valdehierro', '450870001', 'Cm. Viejo de Tembleque, S/N', '45710', '925460944',
          '925460944', '45001337.ies@edu.jccm.es', 'http://ies-valdehierro.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -12418,7 +12418,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001349', 'Santa Marina', '450880001', 'Cl. Santa Marina, S/N', 'Cl. Santa Marina, S/N', '925363160',
+         '45001349', 'Santa Marina', '450880001', 'Cl. Santa Marina, S/N', '45590', '925363160',
          '925363160', '45001349.cp@edu.jccm.es', 'http://ceip-santamarina.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -12427,7 +12427,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013959', 'Soletes', '450880001', 'Cl. los Sauces, 2', 'Cl. los Sauces, 2', '',
+         '45013959', 'Soletes', '450880001', 'Cl. los Sauces, 2', '45590', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -12436,7 +12436,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013182', 'Triciclo', '450880001', 'Cl. Isaac Albeniz, 6', 'Cl. Isaac Albeniz, 6', '925270476',
+         '45013182', 'Triciclo', '450880001', 'Cl. Isaac Albeniz, 6', '45590', '925270476',
          '925360646', 'cai_triciclo@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -12445,7 +12445,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001374', 'Fulgencio Sánchez Cabezudo', '450890002', 'Cl. Escuelas, 6', 'Cl. Escuelas, 6', '925877086',
+         '45001374', 'Fulgencio Sánchez Cabezudo', '450890002', 'Cl. Escuelas, 6', '45692', '925877086',
          '925877086', '45001374.cp@edu.jccm.es', 'http://edu.jccm.es/cp/fulgenciosanchezcabezudo', 'Público', 'CEIP'
         )
         ;
@@ -12454,7 +12454,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012645', '- Sin Denominación -', '450900001', 'Cl. Aquilino Sanchez Jaime, S/N', 'Cl. Aquilino Sanchez Jaime, S/N', '',
+         '45012645', '- Sin Denominación -', '450900001', 'Cl. Aquilino Sanchez Jaime, S/N', '45460', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -12463,7 +12463,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001398', 'Álvarez de Toledo', '450900001', 'Cl. Orgaz, 15', 'Cl. Orgaz, 15', '925344841',
+         '45001398', 'Álvarez de Toledo', '450900001', 'Cl. Orgaz, 15', '45460', '925344841',
          '925344841', '45001398.cp@edu.jccm.es', 'http://edu.jccm.es/cp/alvatoledo', 'Público', 'CEIP'
         )
         ;
@@ -12472,7 +12472,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001416', 'Don Álvaro de Luna', '450910001', 'Cl. Hospital, S/N', 'Cl. Hospital, S/N', '925790200',
+         '45001416', 'Don Álvaro de Luna', '450910001', 'Cl. Hospital, S/N', '45515', '925790200',
          '925790200', '45001416.cp@edu.jccm.es', 'http://edu.jccm.es/cp/donalvarodeluna', 'Público', 'CEIP'
         )
         ;
@@ -12481,7 +12481,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006037', 'San Juan', '450920001', 'Cl. Martires, 8', 'Cl. Martires, 8', '925348136',
+         '45006037', 'San Juan', '450920001', 'Cl. Martires, 8', '45479', '925348136',
          '925348136', '45001428.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12490,7 +12490,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001441', 'Juan de Padilla', '450940001', 'Pz. Curato, 2', 'Pz. Curato, 2', '925316147',
+         '45001441', 'Juan de Padilla', '450940001', 'Pz. Curato, 2', '45430', '925316147',
          '925316147', '45001441.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12499,7 +12499,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013868', 'Dulcinea del Toboso', '450950001', 'Cl. Dulcinea del Toboso, 2', 'Cl. Dulcinea del Toboso, 2', '',
+         '45013868', 'Dulcinea del Toboso', '450950001', 'Cl. Dulcinea del Toboso, 2', '45534', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -12508,7 +12508,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001453', 'Severo Ochoa', '450950001', 'Cl. Severo Ochoa, S/N', 'Cl. Severo Ochoa, S/N', '925747032',
+         '45001453', 'Severo Ochoa', '450950001', 'Cl. Severo Ochoa, S/N', '45534', '925747032',
          '925747032', '45001453.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12517,7 +12517,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001477', 'Nuestra Señora del Sagrario', '450960002', 'Cl. General Lacy, 42', 'Cl. General Lacy, 42', '925397506',
+         '45001477', 'Nuestra Señora del Sagrario', '450960002', 'Cl. General Lacy, 42', '45114', '925397506',
          '925397506', '45001477.cp@edu.jccm.es', 'http://ceip-ntra.sra.sagrario.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12526,7 +12526,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010429', 'Ribera del Guadyerbas', '450970001', 'Cl. San Roque, 72', 'Cl. San Roque, 72', '925890360',
+         '45010429', 'Ribera del Guadyerbas', '450970001', 'Cl. San Roque, 72', '45622', '925890360',
          '925890360', '45010429.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12535,7 +12535,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013753', 'Menapeques', '450980001', 'Cl. Virgen de Fatima, 3', 'Cl. Virgen de Fatima, 3', '637588968',
+         '45013753', 'Menapeques', '450980001', 'Cl. Virgen de Fatima, 3', '45128', '637588968',
          '', 'menapeques@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -12544,7 +12544,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001490', 'Nuestra Señora de Fátima', '450980001', 'Cl. Eras, 17', 'Cl. Eras, 17', '925407056',
+         '45001490', 'Nuestra Señora de Fátima', '450980001', 'Cl. Eras, 17', '45128', '925407056',
          '925407225', '45001490.cp@edu.jccm.es', 'http://ceip-nsfatima.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12553,7 +12553,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011860', 'Antonio Jiménez-Landi', '450990001', 'Cr. Mentrida-Torre de Esteban Hambran, S/N', 'Cr. Mentrida-Torre de Esteban Hambran, S/N', '918177375',
+         '45011860', 'Antonio Jiménez-Landi', '450990001', 'Cr. Mentrida-Torre de Esteban Hambran, S/N', '45930', '918177375',
          '918177375', '45011860.ieso@edu.jccm.es', 'http://ies-antoniojimenezlandi.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -12562,7 +12562,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013194', 'Dulces', '450990001', 'Cl. Avila, 3', 'Cl. Avila, 3', '918178422',
+         '45013194', 'Dulces', '450990001', 'Cl. Avila, 3', '45930', '918178422',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -12571,7 +12571,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001507', 'Luis Solana', '450990001', 'Av. Castilla-La Mancha, 1', 'Av. Castilla-La Mancha, 1', '918177484',
+         '45001507', 'Luis Solana', '450990001', 'Av. Castilla-La Mancha, 1', '45930', '918177484',
          '918177484', '45001507.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -12580,7 +12580,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001532', 'Cervantes', '451010001', 'Cl. las Memorias, 1', 'Cl. las Memorias, 1', '925172303',
+         '45001532', 'Cervantes', '451010001', 'Cl. las Memorias, 1', '45830', '925172303',
          '925567285', '45001532.cp@edu.jccm.es', 'http://ceip-cervantesmiguelesteban.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12589,7 +12589,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006098', 'Juan Patiño Torres', '451010001', 'Av. de Europa, S/N', 'Av. de Europa, S/N', '925172266',
+         '45006098', 'Juan Patiño Torres', '451010001', 'Av. de Europa, S/N', '45830', '925172266',
          '925172266', '45006098.ieso@edu.jccm.es', 'http://ies-miguelesteban.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -12598,7 +12598,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012657', 'La Abejita', '451010001', 'Cl. Capitan Cortes, S/N', 'Cl. Capitan Cortes, S/N', '925172650',
+         '45012657', 'La Abejita', '451010001', 'Cl. Capitan Cortes, S/N', '45830', '925172650',
          '', 'cai.laabejita@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -12607,7 +12607,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012049', '- Sin Denominación -', '451020002', 'Cl. Juan Hernandez, 2', 'Cl. Juan Hernandez, 2', '',
+         '45012049', '- Sin Denominación -', '451020002', 'Cl. Juan Hernandez, 2', '45270', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -12616,7 +12616,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012669', 'La Oca', '451020002', 'Cl. Tinte, 11', 'Cl. Tinte, 11', '925270495',
+         '45012669', 'La Oca', '451020002', 'Cl. Tinte, 11', '45270', '925270495',
          '925270495', 'cai@mocejon.es', '', 'Público', 'EI'
         )
         ;
@@ -12625,7 +12625,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001544', 'Miguel de Cervantes', '451020002', 'Cl. Juan Hernandez, 2', 'Cl. Juan Hernandez, 2', '925360228',
+         '45001544', 'Miguel de Cervantes', '451020002', 'Cl. Juan Hernandez, 2', '45270', '925360228',
          '925360228', '45001544.cp@edu.jccm.es', 'http://ceip-mocejon.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12634,7 +12634,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012670', '- Sin Denominación -', '451060001', 'Cl. Moya C/V Calle Consuegra', 'Cl. Moya C/V Calle Consuegra', '925341170',
+         '45012670', '- Sin Denominación -', '451060001', 'Cl. Moya C/V Calle Consuegra', '45400', '925341170',
          '', 'csocial@mora.es', '', 'Público', 'EI'
         )
         ;
@@ -12643,7 +12643,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010466', '- Sin Denominación -', '451060001', 'Cl. San Lorenzo, 3', 'Cl. San Lorenzo, 3', '',
+         '45010466', '- Sin Denominación -', '451060001', 'Cl. San Lorenzo, 3', '45400', '',
          '', 'aepa_mora@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -12652,7 +12652,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012682', '- Sin Denominación -', '451060001', 'Tr. del Olivo, 24', 'Tr. del Olivo, 24', '925301020',
+         '45012682', '- Sin Denominación -', '451060001', 'Tr. del Olivo, 24', '45400', '925301020',
          '925265319', 'csocial@mora.es', '', 'Público', 'EI'
         )
         ;
@@ -12661,7 +12661,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001672', 'Fernando Martín', '451060001', 'Cl. Consuegra, 35', 'Cl. Consuegra, 35', '925340492',
+         '45001672', 'Fernando Martín', '451060001', 'Cl. Consuegra, 35', '45400', '925340492',
          '925340492', '45001672.cp@edu.jccm.es', 'http://ceip-fernandomartin.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12670,7 +12670,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001623', 'José Ramón Villa', '451060001', 'Ps. Delicias, 32', 'Ps. Delicias, 32', '925300741',
+         '45001623', 'José Ramón Villa', '451060001', 'Ps. Delicias, 32', '45400', '925300741',
          '925341183', '45001623.cp@edu.jccm.es', 'http://ceip-joseramonvilla.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12679,7 +12679,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001611', 'María Inmaculada', '451060001', 'Cl. Maria Martin Maestro, 13', 'Cl. Maria Martin Maestro, 13', '925300100',
+         '45001611', 'María Inmaculada', '451060001', 'Cl. Maria Martin Maestro, 13', '45400', '925300100',
          '925300966', 'direccionpedagogica@mora.escuelateresiana.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -12688,7 +12688,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006220', 'Peñas Negras', '451060001', 'Cl. Luis Hidalgo, 1', 'Cl. Luis Hidalgo, 1', '925300847',
+         '45006220', 'Peñas Negras', '451060001', 'Cl. Luis Hidalgo, 1', '45400', '925300847',
          '925300847', '45006220.ies@edu.jccm.es', 'http://edu.jccm.es/ies/mora', 'Público', 'IES'
         )
         ;
@@ -12697,7 +12697,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012694', '- Sin Denominación -', '451070001', 'Cl. San Quintin C/V Camino de las Nieves, S/N', 'Cl. San Quintin C/V Camino de las Nieves, S/N', '925366127',
+         '45012694', '- Sin Denominación -', '451070001', 'Cl. San Quintin C/V Camino de las Nieves, S/N', '45400', '925366127',
          '', 'escuelainfantil@nambroca.com', '', 'Público', 'EI'
         )
         ;
@@ -12706,7 +12706,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001726', 'La Fuente', '451070001', 'Cl. la Fuente, S/N', 'Cl. la Fuente, S/N', '925366126',
+         '45001726', 'La Fuente', '451070001', 'Cl. la Fuente, S/N', '45190', '925366126',
          '925366126', '45001726.cp@edu.jccm.es', 'http://ceip-lafuente.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12715,7 +12715,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013212', 'Las Nieves', '0000', 'Cl. Albacete, 13, Parcela 405', 'Cl. Albacete, 13, Parcela 405', '925278746',
+         '45013212', 'Las Nieves', '0000', 'Cl. Albacete, 13, Parcela 405', '45191', '925278746',
          '', 'cailasnieves@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -12724,7 +12724,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010430', 'Montes de Toledo', '451080001', 'Av. de la Jara, 74', 'Av. de la Jara, 74', '925444555',
+         '45010430', 'Montes de Toledo', '451080001', 'Av. de la Jara, 74', '45670', '925444555',
          '925444555', '45010430.cra@edu.jccm.es', 'http://edu.jccm.es/cra/lanava', 'Público', 'CEIP'
         )
         ;
@@ -12733,7 +12733,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012700', '- Sin Denominación -', '451090001', 'Cl. los Molinos, S/N', 'Cl. los Molinos, S/N', '925410151',
+         '45012700', '- Sin Denominación -', '451090001', 'Cl. los Molinos, S/N', '45150', '925410151',
          '', 'einavahermosa@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -12742,7 +12742,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010341', 'La Raña', '451090001', 'Cl. Navarrisquillos, 3', 'Cl. Navarrisquillos, 3', '925428371',
+         '45010341', 'La Raña', '451090001', 'Cl. Navarrisquillos, 3', '45150', '925428371',
          '925428371', '45010341.cea@edu.jccm.es', 'http://cepa-navahermosa.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -12751,7 +12751,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006207', 'Manuel de Guzmán', '451090001', 'Pz. Rio Tajo, S/N', 'Pz. Rio Tajo, S/N', '925410277',
+         '45006207', 'Manuel de Guzmán', '451090001', 'Pz. Rio Tajo, S/N', '45150', '925410277',
          '925429956', '45006207.ieso@edu.jccm.es', 'http://ies-manueldeguzman.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -12760,7 +12760,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001763', 'San Miguel Arcángel', '451090001', 'Cl. Prado, 25', 'Cl. Prado, 25', '925410384',
+         '45001763', 'San Miguel Arcángel', '451090001', 'Cl. Prado, 25', '45150', '925410384',
          '925410320', '45001763.cp@edu.jccm.es', 'http://edu.jccm.es/cp/smarcangel', 'Público', 'CEIP'
         )
         ;
@@ -12769,7 +12769,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001787', 'Blas Tello', '451100001', 'Cl. Inge Morath, S/N', 'Cl. Inge Morath, S/N', '925844044',
+         '45001787', 'Blas Tello', '451100001', 'Cl. Inge Morath, S/N', '45610', '925844044',
          '925844044', '45001787.cp@edu.jccm.es', 'http://edu.jccm.es/cp.blastello', 'Público', 'CEIP'
         )
         ;
@@ -12778,7 +12778,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005495', 'Los Navalmorales', '451120001', 'Cl. San Francisco, 80', 'Cl. San Francisco, 80', '925404563',
+         '45005495', 'Los Navalmorales', '451120001', 'Cl. San Francisco, 80', '45140', '925404563',
          '925404292', '45005495.ies@edu.jccm.es', 'http://ies-losnavalmorales.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -12787,7 +12787,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001805', 'San Francisco', '451120001', 'Cl. Romero, 2', 'Cl. Romero, 2', '925404619',
+         '45001805', 'San Francisco', '451120001', 'Cl. Romero, 2', '45140', '925404619',
          '925404619', '45001805.cp@edu.jccm.es', 'http://edu.jccm.es/cp.sanfrancisco', 'Público', 'CEIP'
         )
         ;
@@ -12796,7 +12796,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013200', 'Virgen de los Remedios', '451120001', 'Cl. Tomas Costa, 24', 'Cl. Tomas Costa, 24', '925404652',
+         '45013200', 'Virgen de los Remedios', '451120001', 'Cl. Tomas Costa, 24', '45140', '925404652',
          '925404032', 'virgendelosremedios.guarderia@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -12805,7 +12805,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001854', 'Nuestra Señora de las Saleras', '451130002', 'Cl. Toledo, 83', 'Cl. Toledo, 83', '925426834',
+         '45001854', 'Nuestra Señora de las Saleras', '451130002', 'Cl. Toledo, 83', '45130', '925426834',
          '925426834', '45001854.cp@edu.jccm.es', 'http://edu.jccm.es/cp/saleras', 'Público', 'CEIP'
         )
         ;
@@ -12814,7 +12814,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006268', 'Sierra de San Vicente', '451140001', 'Cl. Palacio, S/N', 'Cl. Palacio, S/N', '925868055',
+         '45006268', 'Sierra de San Vicente', '451140001', 'Cl. Palacio, S/N', '45630', '925868055',
          '925868055', '45006268.cra@edu.jccm.es', 'http://cra-sierradesanvicente.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12823,7 +12823,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012037', '- Sin Denominación -', '451150001', 'Cl. Juan Xxiii, 23', 'Cl. Juan Xxiii, 23', '',
+         '45012037', '- Sin Denominación -', '451150001', 'Cl. Juan Xxiii, 23', '45350', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -12832,7 +12832,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001891', 'Nuestra Señora de los Desamparados', '451150001', 'Cl. Valentina Garcia Suelto, 6', 'Cl. Valentina Garcia Suelto, 6', '925140012',
+         '45001891', 'Nuestra Señora de los Desamparados', '451150001', 'Cl. Valentina Garcia Suelto, 6', '45350', '925140012',
          '925141268', 'cnsdes@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -12841,7 +12841,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012712', 'Rosa Sensat', '451150001', 'Cl. Mayor, 45 e', 'Cl. Mayor, 45 e', '925141305',
+         '45012712', 'Rosa Sensat', '451150001', 'Cl. Mayor, 45 e', '45350', '925141305',
          '925140309', 'gestion@noblejas.es', '', 'Público', 'EI'
         )
         ;
@@ -12850,7 +12850,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001908', 'Santísimo Cristo de las Injurias', '451150001', 'Cl. de la Escuela, 4', 'Cl. de la Escuela, 4', '925140283',
+         '45001908', 'Santísimo Cristo de las Injurias', '451150001', 'Cl. de la Escuela, 4', '45350', '925140283',
          '925140283', '45001908.cp@edu.jccm.es', 'http://ceip-stmocristoinjurias.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12859,7 +12859,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001945', 'Santísimo Cristo de la Salud', '451160001', 'Cl. Martires, 21', 'Cl. Martires, 21', '925374021',
+         '45001945', 'Santísimo Cristo de la Salud', '451160001', 'Cl. Martires, 21', '45162', '925374021',
          '925374021', '45001945.cp@edu.jccm.es', 'http://ceip-santisimocristodelasalud.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12868,7 +12868,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001957', 'Cristo de la Nava', '451170001', 'Cl. Pozo Nuevo, S/N', 'Cl. Pozo Nuevo, S/N', '925792353',
+         '45001957', 'Cristo de la Nava', '451170001', 'Cl. Pozo Nuevo, S/N', '45917', '925792353',
          '925792353', '45001957.cp@edu.jccm.es', 'http://edu.jccm.es/cp/cristodelanava', 'Público', 'CEIP'
         )
         ;
@@ -12877,7 +12877,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012724', 'Barrio Sésamo', '451180001', 'Cl. Abogado, 6', 'Cl. Abogado, 6', '666591400',
+         '45012724', 'Barrio Sésamo', '451180001', 'Cl. Abogado, 6', '45519', '666591400',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -12886,7 +12886,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001969', 'Nuestra Señora de la Monjia', '451180001', 'Cl. Carrera, 27', 'Cl. Carrera, 27', '925778612',
+         '45001969', 'Nuestra Señora de la Monjia', '451180001', 'Cl. Carrera, 27', '45519', '925778612',
          '925778612', '45001969.cp@edu.jccm.es', 'http://edu.jccm.es/cp.monjia', 'Público', 'CEIP'
         )
         ;
@@ -12895,7 +12895,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012736', 'Garabatos', '451190001', 'Cl. Jacinto Benavente, 1', 'Cl. Jacinto Benavente, 1', '925516870',
+         '45012736', 'Garabatos', '451190001', 'Cl. Jacinto Benavente, 1', '45230', '925516870',
          '', 'caigarabatos@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -12904,7 +12904,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011872', 'Profesor Emilio Lledó', '451190001', 'Ps. Prado Valverde, 1', 'Ps. Prado Valverde, 1', '925516428',
+         '45011872', 'Profesor Emilio Lledó', '451190001', 'Ps. Prado Valverde, 1', '45230', '925516428',
          '925516429', '45011872.ieso@edu.jccm.es', 'http://ies-profesoremiliolledo.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -12913,7 +12913,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45001970', 'Santísimo Cristo de la Misericordia', '451190001', 'Cl. del Caño, S/N', 'Cl. del Caño, S/N', '925537258',
+         '45001970', 'Santísimo Cristo de la Misericordia', '451190001', 'Cl. del Caño, S/N', '45230', '925537258',
          '925537258', '45001970.cp@edu.jccm.es', 'http://ceip-stmocristodelamisericordia.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12922,7 +12922,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013731', '- Sin Denominación -', '451210001', 'Cl. Don Jose Peña, 8', 'Cl. Don Jose Peña, 8', '925131651',
+         '45013731', '- Sin Denominación -', '451210001', 'Cl. Don Jose Peña, 8', '45300', '925131651',
          '', 'escuela.infantil@aytoocana.com', '', 'Público', 'EI'
         )
         ;
@@ -12931,7 +12931,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004685', 'Alonso de Ercilla', '451210001', 'Cl. Puerta de Murcia, 13', 'Cl. Puerta de Murcia, 13', '925130715',
+         '45004685', 'Alonso de Ercilla', '451210001', 'Cl. Puerta de Murcia, 13', '45300', '925130715',
          '925120639', '45004685.ies@edu.jccm.es', 'http://ies-alonsodeercilla.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -12940,7 +12940,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006293', 'Centro Penitenciario', '451210001', 'Cl. Mártires, 6 (Centro Penitenciario)', 'Cl. Mártires, 6 (Centro Penitenciario)', '925120883',
+         '45006293', 'Centro Penitenciario', '451210001', 'Cl. Mártires, 6 (Centro Penitenciario)', '45300', '925120883',
          '925120883', '45005631.cea@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -12949,7 +12949,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002007', 'Colegio Diocesano Santa Clara', '451210001', 'Cl. Martires, 12', 'Cl. Martires, 12', '925691727',
+         '45002007', 'Colegio Diocesano Santa Clara', '451210001', 'Cl. Martires, 12', '45300', '925691727',
          '925130461', 'rogelio@colegioinfantes.com', 'http://con-diocesanosantaclara.centros.castillalamancha.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -12958,7 +12958,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005631', 'Gutierre de Cárdenas', '451210001', 'Cl. Noblejas, 8', 'Cl. Noblejas, 8', '925120816',
+         '45005631', 'Gutierre de Cárdenas', '451210001', 'Cl. Noblejas, 8', '45300', '925120816',
          '925120013', '45005631.cea@edu.jccm.es', 'http://edu.jccm.es/cea/gutierredecardenas', 'Público', ''
         )
         ;
@@ -12967,7 +12967,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012232', 'Mesa de Ocaña', '451210001', 'Cl. Virgen de los Remedios, 12', 'Cl. Virgen de los Remedios, 12', '925131416',
+         '45012232', 'Mesa de Ocaña', '451210001', 'Cl. Virgen de los Remedios, 12', '45300', '925131416',
          '925121690', '45012232.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -12976,7 +12976,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004791', 'Miguel Hernández', '451210001', 'Cl. Miguel Hernandez, 4', 'Cl. Miguel Hernandez, 4', '925131412',
+         '45004791', 'Miguel Hernández', '451210001', 'Cl. Miguel Hernandez, 4', '45300', '925131412',
          '925121200', '45004791.ies@edu.jccm.es', 'http://ies-miguelhernandez.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -12985,7 +12985,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012177', 'Pastor Poeta', '451210001', 'Cl. Reina Sofia Esquina Juan Carlos I, S/N', 'Cl. Reina Sofia Esquina Juan Carlos I, S/N', '925120240',
+         '45012177', 'Pastor Poeta', '451210001', 'Cl. Reina Sofia Esquina Juan Carlos I, S/N', '45300', '925120240',
          '', '45012177.cp@edu.jccm.es', 'http://ceip-pastorpoeta.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -12994,7 +12994,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002020', 'San José de Calasanz', '451210001', 'Cl. Miguel Hernandez, 6', 'Cl. Miguel Hernandez, 6', '925130050',
+         '45002020', 'San José de Calasanz', '451210001', 'Cl. Miguel Hernandez, 6', '45300', '925130050',
          '925156192', '45002020.cp@edu.jccm.es', 'http://edu.jccm.es/cp/sjcalasanz', 'Público', 'CEIP'
         )
         ;
@@ -13003,7 +13003,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013224', 'Timón', '451210001', 'Cl. Toledo, 6', 'Cl. Toledo, 6', '',
+         '45013224', 'Timón', '451210001', 'Cl. Toledo, 6', '45300', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -13012,7 +13012,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012748', 'Árbol Mágico', '451220001', 'Cm. del Arenal, S/N', 'Cm. del Arenal, S/N', '925490609',
+         '45012748', 'Árbol Mágico', '451220001', 'Cm. del Arenal, S/N', '45280', '925490609',
          '', 'caidos@aytoolias.es', '', 'Público', 'EI'
         )
         ;
@@ -13021,7 +13021,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012751', 'Bosque de los Sueños', '451220001', 'Cl. Alcantara, S/N (Urbanizacion Mirador de los Pinos)', 'Cl. Alcantara, S/N (Urbanizacion Mirador de los Pinos)', '925353824',
+         '45012751', 'Bosque de los Sueños', '451220001', 'Cl. Alcantara, S/N (Urbanizacion Mirador de los Pinos)', '45280', '925353824',
          '925490912', 'cai@aytoolias.es', '', 'Público', 'EI'
         )
         ;
@@ -13030,7 +13030,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005616', 'Madre Dolores Medina', '451220001', 'Cl. Tomillo, 20 (Urbanizacion "Los Olivos")', 'Cl. Tomillo, 20 (Urbanizacion "Los Olivos")', '925353326',
+         '45005616', 'Madre Dolores Medina', '451220001', 'Cl. Tomillo, 20 (Urbanizacion "Los Olivos")', '45280', '925353326',
          '925353326', 'ceimdm@planalfa.es', '', 'Privado', 'EI'
         )
         ;
@@ -13039,7 +13039,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002044', 'Pedro Melendo García', '451220001', 'Cl. Arenal, S/N', 'Cl. Arenal, S/N', '925490365',
+         '45002044', 'Pedro Melendo García', '451220001', 'Cl. Arenal, S/N', '45280', '925490365',
          '925490365', '45002044.cp@edu.jccm.es', 'http://ceip-pedromelendogarcia.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13048,7 +13048,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013819', '- Sin Denominación -', '451230001', 'Cl. Carrera, S/N', 'Cl. Carrera, S/N', '',
+         '45013819', '- Sin Denominación -', '451230001', 'Cl. Carrera, S/N', '45340', '',
          '', 'emmontigola@gmail.com', '', 'Público', ''
         )
         ;
@@ -13057,7 +13057,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013236', 'Monigotes', '451230001', 'Cl. la Fresa, 1', 'Cl. la Fresa, 1', '638010320',
+         '45013236', 'Monigotes', '451230001', 'Cl. la Fresa, 1', '45340', '638010320',
          '', 'guarderiamonigotes@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -13066,7 +13066,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002056', 'Virgen del Rosario', '451230001', 'Cl. Carrera, S/N', 'Cl. Carrera, S/N', '925127222',
+         '45002056', 'Virgen del Rosario', '451230001', 'Cl. Carrera, S/N', '45340', '925127222',
          '925127222', '45002056.cp@edu.jccm.es', 'http://ceip-virgendelrosario.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13075,7 +13075,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002093', 'Conde de Orgaz', '451240002', 'Cl. Socorro, 32', 'Cl. Socorro, 32', '925317255',
+         '45002093', 'Conde de Orgaz', '451240002', 'Cl. Socorro, 32', '45450', '925317255',
          '925317329', '45002093.cp@edu.jccm.es', 'http://ceip-condedeorgaz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13084,7 +13084,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013662', 'Escuela Municipal de Música de Orgaz', '451240002', 'Cl. Lobo, 4', 'Cl. Lobo, 4', '',
+         '45013662', 'Escuela Municipal de Música de Orgaz', '451240002', 'Cl. Lobo, 4', '45450', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -13093,7 +13093,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012761', 'Nube de Algodón', '451240002', 'Rd. de las Escuelas, 9', 'Rd. de las Escuelas, 9', '925317390',
+         '45012761', 'Nube de Algodón', '451240002', 'Rd. de las Escuelas, 9', '45450', '925317390',
          '925347004', 'escuelainfantil@ayto-orgaz.es', '', 'Público', 'EI'
         )
         ;
@@ -13102,7 +13102,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004727', 'Alonso de Orozco', '451250002', 'Cl. Beato Alonso de Orozco, S/N', 'Cl. Beato Alonso de Orozco, S/N', '925431274',
+         '45004727', 'Alonso de Orozco', '451250002', 'Cl. Beato Alonso de Orozco, S/N', '45560', '925431274',
          '925430402', '45004727.ies@edu.jccm.es', 'http://edu.jccm.es/ies/alonsodeorozco', 'Público', 'IES'
         )
         ;
@@ -13111,7 +13111,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013960', 'María Arnús', '451250002', 'Cl. Calzada Real, S/N', 'Cl. Calzada Real, S/N', '',
+         '45013960', 'María Arnús', '451250002', 'Cl. Calzada Real, S/N', '45560', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -13120,7 +13120,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002123', 'Martín Gallinar', '451250002', 'Ps. Escolar, S/N', 'Ps. Escolar, S/N', '925430254',
+         '45002123', 'Martín Gallinar', '451250002', 'Ps. Escolar, S/N', '45560', '925430254',
          '925430254', '45002123.cp@edu.jccm.es', 'http://ceip-martingallinar.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13129,7 +13129,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002184', 'San Juan Bautista', '451270001', 'Av. Castilla-La Mancha, S/N', 'Av. Castilla-La Mancha, S/N', '925508242',
+         '45002184', 'San Juan Bautista', '451270001', 'Av. Castilla-La Mancha, S/N', '45213', '925508242',
          '925508242', '45002184.cp@edu.jccm.es', 'http://edu.jccm.es/cp.sanjuanbautista', 'Público', 'CEIP'
         )
         ;
@@ -13138,7 +13138,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012773', '- Sin Denominación -', '451280001', 'Cl. Claudia Cabrera, S/N', 'Cl. Claudia Cabrera, S/N', '925554681',
+         '45012773', '- Sin Denominación -', '451280001', 'Cl. Claudia Cabrera, S/N', '45290', '925554681',
          '925554830', 'escjclm@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -13147,7 +13147,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002196', 'Marqueses de Manzanedo', '451280001', 'Cl. Cementerio, 25', 'Cl. Cementerio, 25', '925554035',
+         '45002196', 'Marqueses de Manzanedo', '451280001', 'Cl. Cementerio, 25', '45290', '925554035',
          '925554394', '45002196.cp@edu.jccm.es', 'http://ceip-marquesesdemanzanedo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13156,7 +13156,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002202', 'Nuestra Señora de la Luz', '451300001', 'Cl. Manuel Garcia, 2', 'Cl. Manuel Garcia, 2', '925844241',
+         '45002202', 'Nuestra Señora de la Luz', '451300001', 'Cl. Manuel Garcia, 2', '45611', '925844241',
          '925844241', '45002202.cp@edu.jccm.es', 'http://edu.jccm.es/cp.nsdelaluz', 'Público', 'CEIP'
         )
         ;
@@ -13165,7 +13165,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014046', '- Sin Denominación -', '0000', 'Ps. de las Eras, S/N', 'Ps. de las Eras, S/N', '',
+         '45014046', '- Sin Denominación -', '0000', 'Ps. de las Eras, S/N', '45638', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -13174,7 +13174,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012141', '- Sin Denominación -', '451330001', 'Av. Jose Antonio, S/N', 'Av. Jose Antonio, S/N', '',
+         '45012141', '- Sin Denominación -', '451330001', 'Av. Jose Antonio, S/N', '45161', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -13183,7 +13183,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012785', 'Arco Iris', '451330001', 'Cl. Roma Esquina Calle Bruselas', 'Cl. Roma Esquina Calle Bruselas', '925290137',
+         '45012785', 'Arco Iris', '451330001', 'Cl. Roma Esquina Calle Bruselas', '45161', '925290137',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -13192,7 +13192,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002241', 'José María Corcuera', '451330001', 'Cl. Castillo, 17', 'Cl. Castillo, 17', '925370552',
+         '45002241', 'José María Corcuera', '451330001', 'Cl. Castillo, 17', '45161', '925370552',
          '925370552', '45002241.cp@edu.jccm.es', 'http://ceip-josemariacorcuera.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13201,7 +13201,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002251', 'Conde de Ruiseñada', '451340001', 'Cl. Ramon y Cajal, 64', 'Cl. Ramon y Cajal, 64', '925785245',
+         '45002251', 'Conde de Ruiseñada', '451340001', 'Cl. Ramon y Cajal, 64', '45512', '925785245',
          '925785245', '45002251.cp@edu.jccm.es', 'http://ceip-condederuisenada.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13210,7 +13210,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012153', '- Sin Denominación -', '451350001', 'Cl. Ramon y Cajal, 1', 'Cl. Ramon y Cajal, 1', '',
+         '45012153', '- Sin Denominación -', '451350001', 'Cl. Ramon y Cajal, 1', '45840', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -13219,7 +13219,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006116', 'Aldonza Lorenzo', '451350001', 'Av. de la Libertad, 43', 'Av. de la Libertad, 43', '925561019',
+         '45006116', 'Aldonza Lorenzo', '451350001', 'Av. de la Libertad, 43', '45840', '925561019',
          '925561020', '45006116.ies@edu.jccm.es', 'http://http://ies-aldonzalorenzo.centros.castillalamancha.es/', 'Público', 'IES'
         )
         ;
@@ -13228,7 +13228,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002287', 'Ramón y Cajal', '451350001', 'Cl. Santa Ana, 97', 'Cl. Santa Ana, 97', '925178428',
+         '45002287', 'Ramón y Cajal', '451350001', 'Cl. Santa Ana, 97', '45840', '925178428',
          '925178428', '45002287.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ramonycajalpuebladealmoradiel', 'Público', 'CEIP'
         )
         ;
@@ -13237,7 +13237,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011941', 'Santo Tomás de Aquino', '451350001', 'Cl. Emperador Carlos V, 6', 'Cl. Emperador Carlos V, 6', '925178001',
+         '45011941', 'Santo Tomás de Aquino', '451350001', 'Cl. Emperador Carlos V, 6', '45840', '925178001',
          '', 'puebla@pueblaalmoradiel.org', '', 'Público', ''
         )
         ;
@@ -13246,7 +13246,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005941', '- Sin Denominación -', '451360001', 'Cl. Santo y Soledad, S/N', 'Cl. Santo y Soledad, S/N', '925745409',
+         '45005941', '- Sin Denominación -', '451360001', 'Cl. Santo y Soledad, S/N', '45516', '925745409',
          '925745409', 'calistoymelibea@vodafone.es', '', 'Público', ''
         )
         ;
@@ -13255,7 +13255,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012797', 'Arco Iris', '451360001', 'Av. Alvaro de Montalban, S/N', 'Av. Alvaro de Montalban, S/N', '925745699',
+         '45012797', 'Arco Iris', '451360001', 'Av. Alvaro de Montalban, S/N', '45516', '925745699',
          '', 'caipueblademontalban@yahoo.es', '', 'Público', 'EI'
         )
         ;
@@ -13264,7 +13264,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002330', 'Fernando de Rojas', '451360001', 'Cl. Alvaro de Montalban, S/N', 'Cl. Alvaro de Montalban, S/N', '925750911',
+         '45002330', 'Fernando de Rojas', '451360001', 'Cl. Alvaro de Montalban, S/N', '45516', '925750911',
          '925750911', '45002330.cp@edu.jccm.es', 'http://ceip-fernandoderojas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13273,7 +13273,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002317', 'Franciscano de la Inmaculada', '451360001', 'Pz. del Convento, 1', 'Pz. del Convento, 1', '925750037',
+         '45002317', 'Franciscano de la Inmaculada', '451360001', 'Pz. del Convento, 1', '45516', '925750037',
          '925750037', 'finmaculada@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -13282,7 +13282,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004739', 'Juan de Lucena', '451360001', 'Cl. Sinagoga,S/N', 'Cl. Sinagoga,S/N', '925750951',
+         '45004739', 'Juan de Lucena', '451360001', 'Cl. Sinagoga,S/N', '45516', '925750951',
          '925750951', '45004739.ies@edu.jccm.es', 'http://edu.jccm.es/ies/juandelucena', 'Público', 'IES'
         )
         ;
@@ -13291,7 +13291,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012803', '- Sin Denominación -', '451370001', 'Cl. Cantarranas, 5', 'Cl. Cantarranas, 5', '925861070',
+         '45012803', '- Sin Denominación -', '451370001', 'Cl. Cantarranas, 5', '45690', '925861070',
          '', 'guarderialapueblanueva@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -13300,7 +13300,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002366', 'San Isidro', '451370001', 'Cr. de las Vegas, S/N', 'Cr. de las Vegas, S/N', '925860050',
+         '45002366', 'San Isidro', '451370001', 'Cr. de las Vegas, S/N', '45690', '925860050',
          '925860275', '45002366.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -13309,7 +13309,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013984', 'Villas del Tajo', '451380001', 'Cl. Tres Cruces, 2', 'Cl. Tres Cruces, 2', '925436231',
+         '45013984', 'Villas del Tajo', '451380001', 'Cl. Tres Cruces, 2', '45570', '925436231',
          '925436195', '45013984.cra@edu.jccm.es', 'http://edu.jccm.es/cra.elpuentedelarzobispo', 'Público', 'CEIP'
         )
         ;
@@ -13318,7 +13318,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012815', 'Virgen de Bienvenida', '451380001', 'Cl. de las Tres Cruces, S/N', 'Cl. de las Tres Cruces, S/N', '925436008',
+         '45012815', 'Virgen de Bienvenida', '451380001', 'Cl. de las Tres Cruces, S/N', '45570', '925436008',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -13327,7 +13327,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002411', 'Nuestra Señora de la Blanca', '451400001', 'Cl. Calvo Sotelo, 12', 'Cl. Calvo Sotelo, 12', '925292101',
+         '45002411', 'Nuestra Señora de la Blanca', '451400001', 'Cl. Calvo Sotelo, 12', '45125', '925292101',
          '925292101', '45002411.cp@edu.jccm.es', 'http://ceip-blanca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13336,7 +13336,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012827', 'Pulgarcito', '451400001', 'Cl. Escuelas, 1', 'Cl. Escuelas, 1', '925292435',
+         '45012827', 'Pulgarcito', '451400001', 'Cl. Escuelas, 1', '45125', '925292435',
          '', 'laura3bs@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -13345,7 +13345,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012839', '- Sin Denominación -', '451410001', 'Pz. Nacional, 1', 'Pz. Nacional, 1', '926577004',
+         '45012839', '- Sin Denominación -', '451410001', 'Pz. Nacional, 1', '45790', '926577004',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -13354,7 +13354,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002421', 'Santiago Cabañas', '451410001', 'Av. de la Virgen, 19', 'Av. de la Virgen, 19', '926577056',
+         '45002421', 'Santiago Cabañas', '451410001', 'Av. de la Virgen, 19', '45790', '926577056',
          '926577056', '45002421.cp@edu.jccm.es', 'http://ceip-santiagocabanas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13363,7 +13363,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004867', 'Alonso Quijano', '451420001', 'Av. Reyes Catolicos, 16', 'Av. Reyes Catolicos, 16', '925180600',
+         '45004867', 'Alonso Quijano', '451420001', 'Av. Reyes Catolicos, 16', '45800', '925180600',
          '925180690', '45004867.ies@edu.jccm.es', 'http://ies-alonso.quijano.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -13372,7 +13372,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012001', 'Antonio Machado', '451420001', 'Cl. Baldomero Mota, S/N', 'Cl. Baldomero Mota, S/N', '925181776',
+         '45012001', 'Antonio Machado', '451420001', 'Cl. Baldomero Mota, S/N', '45800', '925181776',
          '925181776', '45012001.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -13381,7 +13381,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002457', 'Cristóbal Colón', '451420001', 'Cl. Dr. Anselmo Madero, 1', 'Cl. Dr. Anselmo Madero, 1', '925181560',
+         '45002457', 'Cristóbal Colón', '451420001', 'Cl. Dr. Anselmo Madero, 1', '45800', '925181560',
          '925181560', '45002457.cp@edu.jccm.es', 'http://ceip-cristobalcolon.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13390,7 +13390,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002470', 'Infante Don Fadrique', '451420001', 'Av. de los Reyes Catolicos, 14', 'Av. de los Reyes Catolicos, 14', '925180376',
+         '45002470', 'Infante Don Fadrique', '451420001', 'Av. de los Reyes Catolicos, 14', '45800', '925180376',
          '925181962', '45002470.ies@edu.jccm.es', 'http://edu.jccm.es/ies.infantedonfadrique', 'Público', 'IES'
         )
         ;
@@ -13399,7 +13399,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005288', 'Luis Vives', '451420001', 'Av. Reyes Catolicos, 14', 'Av. Reyes Catolicos, 14', '925181777',
+         '45005288', 'Luis Vives', '451420001', 'Av. Reyes Catolicos, 14', '45800', '925181777',
          '925565119', '45005288.cea@edu.jccm.es', 'http://cepa-luisvives.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -13408,7 +13408,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002433', 'Nuestra Señora de la Consolación', '451420001', 'Cl. Pio Xii, 2', 'Cl. Pio Xii, 2', '925180711',
+         '45002433', 'Nuestra Señora de la Consolación', '451420001', 'Cl. Pio Xii, 2', '45800', '925180711',
          '925180504', 'nscqo@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -13417,7 +13417,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002445', 'Nuestra Señora de los Dolores', '451420001', 'Ps. Nuestra Señora de los Dolores, 2', 'Ps. Nuestra Señora de los Dolores, 2', '925180843',
+         '45002445', 'Nuestra Señora de los Dolores', '451420001', 'Ps. Nuestra Señora de los Dolores, 2', '45800', '925180843',
          '925180843', 'colnsdolores@telefonica.net', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -13426,7 +13426,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012840', 'Pim Pon', '451420001', 'Cl. San Jose de Calasanz, 2', 'Cl. San Jose de Calasanz, 2', '925564552',
+         '45012840', 'Pim Pon', '451420001', 'Cl. San Jose de Calasanz, 2', '45800', '925564552',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -13435,7 +13435,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005823', 'Santísimo Cristo de la Salud', '451420001', 'Cr. Madrid-Cartagena, Km 120', 'Cr. Madrid-Cartagena, Km 120', '925180899',
+         '45005823', 'Santísimo Cristo de la Salud', '451420001', 'Cr. Madrid-Cartagena, Km 120', '45800', '925180899',
          '925564829', 'direccioncee@asprodiq.es', '', 'Priv.Concert.', ''
         )
         ;
@@ -13444,7 +13444,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002512', 'Pedro Zamorano', '451430001', 'Cl. Patricio Puebla, S/N', 'Cl. Patricio Puebla, S/N', '925790550',
+         '45002512', 'Pedro Zamorano', '451430001', 'Cl. Patricio Puebla, S/N', '45514', '925790550',
          '925790550', '45002512.cp@edu.jccm.es', 'http://ceip-pedrozamorano.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13453,7 +13453,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014022', 'Tierras de Viriato', '451440001', 'Tr. de Juan de Dios Diaz, 2', 'Tr. de Juan de Dios Diaz, 2', '925879487',
+         '45014022', 'Tierras de Viriato', '451440001', 'Tr. de Juan de Dios Diaz, 2', '45640', '925879487',
          '925879487', '45014022.cra@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -13462,7 +13462,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012131', 'Arcipreste de Canales', '451450001', 'Cl. Instituto, S/N', 'Cl. Instituto, S/N', '925547139',
+         '45012131', 'Arcipreste de Canales', '451450001', 'Cl. Instituto, S/N', '45211', '925547139',
          '925522896', '45012131.ies@edu.jccm.es', 'http://ies-arciprestedecanales.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -13471,7 +13471,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013728', 'Aserrín Aserrán', '451450001', 'Cl. Argentina, 5', 'Cl. Argentina, 5', '925522500',
+         '45013728', 'Aserrín Aserrán', '451450001', 'Cl. Argentina, 5', '45211', '925522500',
          '', 'cai@recas.es', '', 'Público', 'EI'
         )
         ;
@@ -13480,7 +13480,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002536', 'Cesar Cabañas Caballero', '451450001', 'Cl. Ramon y Cajal, 21', 'Cl. Ramon y Cajal, 21', '925522050',
+         '45002536', 'Cesar Cabañas Caballero', '451450001', 'Cl. Ramon y Cajal, 21', '45211', '925522050',
          '925522050', '45002536.cp@edu.jccm.es', 'http://ceip-cesarcabanyascaballero.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -13489,7 +13489,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002551', 'Maximina Felisa Gómez Aguero', '451470001', 'Cl. Calvario S/N', 'Cl. Calvario S/N', '925743532',
+         '45002551', 'Maximina Felisa Gómez Aguero', '451470001', 'Cl. Calvario S/N', '45524', '925743532',
          '925743532', '45002551.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -13498,7 +13498,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002627', 'Silvano Cirujano', '451490001', 'Cl. los Maestros, S/N', 'Cl. los Maestros, S/N', '925126193',
+         '45002627', 'Silvano Cirujano', '451490001', 'Cl. los Maestros, S/N', '45770', '925126193',
          '925126193', '45002627.cp@edu.jccm.es', 'http://edu.jccm.es/cp.silvanocirujano', 'Público', 'CEIP'
         )
         ;
@@ -13507,7 +13507,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002652', 'Santísimo Cristo de la Luz', '451510001', 'Av. Santa Maria de Melque, 90', 'Av. Santa Maria de Melque, 90', '925419685',
+         '45002652', 'Santísimo Cristo de la Luz', '451510001', 'Av. Santa Maria de Melque, 90', '45165', '925419685',
          '925419685', '45002652.cp@edu.jccm.es', 'http://ceip-santisimocristodelaluz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13516,7 +13516,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013871', 'Río Pusa', '451520001', 'Cl. Barrio Nuevo, 6', 'Cl. Barrio Nuevo, 6', '925420059',
+         '45013871', 'Río Pusa', '451520001', 'Cl. Barrio Nuevo, 6', '45170', '925420059',
          '925420376', '45013871.cra@edu.jccm.es', 'http://cra-riopusa.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13525,7 +13525,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002676', 'Nuestra Señora de Gracia', '451530001', 'Cl. Progreso, 1', 'Cl. Progreso, 1', '925415301',
+         '45002676', 'Nuestra Señora de Gracia', '451530001', 'Cl. Progreso, 1', '45120', '925415301',
          '925415301', '45002676.cp@edu.jccm.es', 'http://edu.jccm.es/cp/nsgracia', 'Público', 'CEIP'
         )
         ;
@@ -13534,7 +13534,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012852', 'San Pablo de los Montes', '451530001', 'Cl. Progreso, 11', 'Cl. Progreso, 11', '925415277',
+         '45012852', 'San Pablo de los Montes', '451530001', 'Cl. Progreso, 11', '45120', '925415277',
          '', 'caisanpablodelosmontes@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -13543,7 +13543,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010417', 'Nuestra Señora del Buen Camino', '451540001', 'Cl. Granadillo, 5', 'Cl. Granadillo, 5', '925887010',
+         '45010417', 'Nuestra Señora del Buen Camino', '451540001', 'Cl. Granadillo, 5', '45646', '925887010',
          '925887010', '45010417.cp@edu.jccm.es', 'http://ceip-nsbuencamino.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13552,7 +13552,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012864', '- Sin Denominación -', '451560001', 'Cl. Subida de Santiago, 1', 'Cl. Subida de Santiago, 1', '925125963',
+         '45012864', '- Sin Denominación -', '451560001', 'Cl. Subida de Santiago, 1', '45370', '925125963',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -13561,7 +13561,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002721', 'Eduardo Palomo Rodríguez', '451560001', 'Cl. Velsinia, S/N', 'Cl. Velsinia, S/N', '925143377',
+         '45002721', 'Eduardo Palomo Rodríguez', '451560001', 'Cl. Velsinia, S/N', '45370', '925143377',
          '925143377', '45002721.cp@edu.jccm.es', 'http://ceip-eduardopalomo.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -13570,7 +13570,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006190', 'Velsinia', '451560001', 'Cl. Velsinia, 63', 'Cl. Velsinia, 63', '925125898',
+         '45006190', 'Velsinia', '451560001', 'Cl. Velsinia, 63', '45370', '925125898',
          '925125898', '45006190.ieso@edu.jccm.es', 'http://ies-velsinia.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -13579,7 +13579,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013251', 'Atlas', '451570003', 'Cm. de la Fuente, 6', 'Cm. de la Fuente, 6', '925794611',
+         '45013251', 'Atlas', '451570003', 'Cm. de la Fuente, 6', '45513', '925794611',
          '925794611', 'escuelainfantilatlas@yahoo.es', 'http://ww.escuelainfantilatlas.com', 'Privado', 'EI'
         )
         ;
@@ -13588,7 +13588,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002767', 'Nuestra Señora de la Paz', '451570003', 'Cl. Escuelas, S/N', 'Cl. Escuelas, S/N', '925794553',
+         '45002767', 'Nuestra Señora de la Paz', '451570003', 'Cl. Escuelas, S/N', '45513', '925794553',
          '925794553', '45002767.cp@edu.jccm.es', 'http://edu.jccm.es/cp/santacruz', 'Público', 'CEIP'
         )
         ;
@@ -13597,7 +13597,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011811', 'Ribera del Alberche', '451570001', 'Av. la Mancha, S/N', 'Av. la Mancha, S/N', '918179507',
+         '45011811', 'Ribera del Alberche', '451570001', 'Av. la Mancha, S/N', '45909', '918179507',
          '918179507', '45011811.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -13606,7 +13606,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002779', 'Nuestra Señora de la Piedad', '451580001', 'Cl. Mayor, 47', 'Cl. Mayor, 47', '925797450',
+         '45002779', 'Nuestra Señora de la Piedad', '451580001', 'Cl. Mayor, 47', '45530', '925797450',
          '925797532', '45002779.cp@edu.jccm.es', 'http://ceip-ntrasrapiedad.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13615,7 +13615,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004144', 'Santa Ana', '459010001', 'Cr. Toledo-Avila, S/N', 'Cr. Toledo-Avila, S/N', '925779182',
+         '45004144', 'Santa Ana', '459010001', 'Cr. Toledo-Avila, S/N', '45519', '925779182',
          '925779182', '45004144.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -13624,7 +13624,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010399', '- Sin Denominación -', '451610004', 'Av. del Valle, S/N', 'Av. del Valle, S/N', '918936144',
+         '45010399', '- Sin Denominación -', '451610004', 'Av. del Valle, S/N', '45224', '918936144',
          '', '45010399.cea@edu.jccm.es', 'http://cepa-sesena.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -13633,7 +13633,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012529', 'Barquito de Papel', '451610003', 'Cl. Leonardo Da Vinci, 4, Locales 11, 13 y 15', 'Cl. Leonardo Da Vinci, 4, Locales 11, 13 y 15', '',
+         '45012529', 'Barquito de Papel', '451610003', 'Cl. Leonardo Da Vinci, 4, Locales 11, 13 y 15', '45223', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -13642,7 +13642,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012876', 'Burbujas', '451610004', 'Cl. Lepanto, S/N', 'Cl. Lepanto, S/N', '918013266',
+         '45012876', 'Burbujas', '451610004', 'Cl. Lepanto, S/N', '45224', '918013266',
          '', 'murosam@ayto-sesena.org', '', 'Público', 'EI'
         )
         ;
@@ -13651,7 +13651,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013261', 'El Bosque Encantado', '451610004', 'Cl. Salinas, 2', 'Cl. Salinas, 2', '918012009',
+         '45013261', 'El Bosque Encantado', '451610004', 'Cl. Salinas, 2', '45224', '918012009',
          '918936541', '', '', 'Privado', 'EI'
         )
         ;
@@ -13660,7 +13660,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011951', 'El Quiñón', '451610004', 'Cl. Zurbaran, 10 (Urbanizacion el Quiñon)', 'Cl. Zurbaran, 10 (Urbanizacion el Quiñon)', '911370150',
+         '45011951', 'El Quiñón', '451610004', 'Cl. Zurbaran, 10 (Urbanizacion el Quiñon)', '45224', '911370150',
          '911370150', '45011951.cp@edu.jccm.es', 'http://ceip-elquinon.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13669,7 +13669,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002810', 'Fernando de Rojas', '451610004', 'Cl. Constitucion, 1', 'Cl. Constitucion, 1', '918936418',
+         '45002810', 'Fernando de Rojas', '451610004', 'Cl. Constitucion, 1', '45224', '918936418',
          '918012512', '45002810.cp@edu.jccm.es', 'http://ceip-fernandoderojas.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -13678,7 +13678,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002809', 'Gabriel Uriarte', '451610003', 'Cl. Ciudad Real, S/N', 'Cl. Ciudad Real, S/N', '918957078',
+         '45002809', 'Gabriel Uriarte', '451610003', 'Cl. Ciudad Real, S/N', '45223', '918957078',
          '918957078', '45002809.cp@edu.jccm.es', 'http://ceip-gabrieluriarte.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13687,7 +13687,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010363', 'Gloria Fuertes', '451610004', 'Av. del Valle, S/N', 'Av. del Valle, S/N', '918013111',
+         '45010363', 'Gloria Fuertes', '451610004', 'Av. del Valle, S/N', '45224', '918013111',
          '918013103', '45010363.cp@edu.jccm.es', 'http://edu.jccm.es/cp/gloriafuertes', 'Público', 'CEIP'
         )
         ;
@@ -13696,7 +13696,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011823', 'Juan Carlos I', '451610003', 'Av. Juan Carlos I, S/N', 'Av. Juan Carlos I, S/N', '918098040',
+         '45011823', 'Juan Carlos I', '451610003', 'Av. Juan Carlos I, S/N', '45223', '918098040',
          '918098040', '45011823.cp@edu.jccm.es', 'http://edu.jccm.es/cp.juancarlosi', 'Público', 'CEIP'
         )
         ;
@@ -13705,7 +13705,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006244', 'Las Salinas', '451610003', 'Cl. Camino de Seseña Nuevo, S/N', 'Cl. Camino de Seseña Nuevo, S/N', '918012657',
+         '45006244', 'Las Salinas', '451610003', 'Cl. Camino de Seseña Nuevo, S/N', '45223', '918012657',
          '918012649', '45006244.ies@edu.jccm.es', 'http://edu.jccm.es/ies/lassalinas', 'Público', 'IES'
         )
         ;
@@ -13714,7 +13714,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005677', 'Margarita Salas', '451610003', 'Lg. Finca del Quinto, S/N', 'Lg. Finca del Quinto, S/N', '918098184',
+         '45005677', 'Margarita Salas', '451610003', 'Lg. Finca del Quinto, S/N', '45223', '918098184',
          '918088440', '45005677.ies@edu.jccm.es', 'http://edu.jccm.es/ies.margaritasalas', 'Público', 'IES'
         )
         ;
@@ -13723,7 +13723,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013650', 'Nanos', '451610003', 'Cl. Castilla-La Mancha, 13', 'Cl. Castilla-La Mancha, 13', '692029486',
+         '45013650', 'Nanos', '451610003', 'Cl. Castilla-La Mancha, 13', '45223', '692029486',
          '', 'dtarjuelo@nanosguarderias.com', '', 'Privado', 'EI'
         )
         ;
@@ -13732,7 +13732,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012888', 'Pequeñines', '451610003', 'Cl. Himno, 42', 'Cl. Himno, 42', '918957526',
+         '45012888', 'Pequeñines', '451610003', 'Cl. Himno, 42', '45223', '918957526',
          '', 'murosam@ayto-sesena.org', '', 'Público', 'EI'
         )
         ;
@@ -13741,7 +13741,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010442', 'Sisius', '451610003', 'Av. del Fútbol, 1', 'Av. del Fútbol, 1', '918957752',
+         '45010442', 'Sisius', '451610003', 'Av. del Fútbol, 1', '45223', '918957752',
          '918957752', '45010442.cp@edu.jccm.es', 'http://ceip-sisius.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13750,7 +13750,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012891', 'Arco Iris', '451630002', 'Pz. Don Ramon, 4', 'Pz. Don Ramon, 4', '925383572',
+         '45012891', 'Arco Iris', '451630002', 'Pz. Don Ramon, 4', '45100', '925383572',
          '925382861', 'cai@ayto-sonseca.com', '', 'Público', 'EI'
         )
         ;
@@ -13759,7 +13759,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013273', 'Colorines I', '451630002', 'Cl. del Rey, 6', 'Cl. del Rey, 6', '925380201',
+         '45013273', 'Colorines I', '451630002', 'Cl. del Rey, 6', '45100', '925380201',
          '', 'colorinesuno@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -13768,7 +13768,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005926', 'Cum Laude', '451630002', 'Gl. del Calvario, S/N', 'Gl. del Calvario, S/N', '925380008',
+         '45005926', 'Cum Laude', '451630002', 'Gl. del Calvario, S/N', '45100', '925380008',
          '925380008', '45005926.cea@edu.jccm.es', 'http://cepa-cumlaude.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -13777,7 +13777,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010351', 'Escuela Municipal de Música y Danza de Sonseca', '451630002', 'Cl. Toledo, 5', 'Cl. Toledo, 5', '925383545',
+         '45010351', 'Escuela Municipal de Música y Danza de Sonseca', '451630002', 'Cl. Toledo, 5', '45100', '925383545',
          '', 'bandademusicadesonseca@gmail.com', '', 'Público', ''
         )
         ;
@@ -13786,7 +13786,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005355', 'La Sisla', '451630002', 'Cl. San Gregorio,S/N', 'Cl. San Gregorio,S/N', '925381240',
+         '45005355', 'La Sisla', '451630002', 'Cl. San Gregorio,S/N', '45100', '925381240',
          '925383577', '45005355.ies@edu.jccm.es', 'http://ies-lasisla.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -13795,7 +13795,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012074', 'Peñamiel', '451630002', 'Cl. la Mancha, S/N', 'Cl. la Mancha, S/N', '925381035',
+         '45012074', 'Peñamiel', '451630002', 'Cl. la Mancha, S/N', '45100', '925381035',
          '925383362', '45012074.cp@edu.jccm.es', 'http://ceip-penamiel.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13804,7 +13804,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002883', 'San Juan Evangelista', '451630002', 'Av. San Gregorio, S/N', 'Av. San Gregorio, S/N', '925381052',
+         '45002883', 'San Juan Evangelista', '451630002', 'Av. San Gregorio, S/N', '45100', '925381052',
          '925381052', '45002883.cp@edu.jccm.es', 'http://ceip-sanjuanevangelista.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13813,7 +13813,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012244', 'Virgen de la Salud', '451630002', 'Cl. Salud, 48', 'Cl. Salud, 48', '925380365',
+         '45012244', 'Virgen de la Salud', '451630002', 'Cl. Salud, 48', '45100', '925380365',
          '925382164', 'rosanchez@jccm.es', 'http://45012244.ei@edu.jccm.es', 'Público', 'EI'
         )
         ;
@@ -13822,7 +13822,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003231', 'Adalid Meneses', '451650006', 'Cr. de Cervera, Km. 3,500 (Apartado de Correos, 190)', 'Cr. de Cervera, Km. 3,500 (Apartado de Correos, 190)', '925803374',
+         '45003231', 'Adalid Meneses', '451650006', 'Cr. de Cervera, Km. 3,500 (Apartado de Correos, 190)', '45600', '925803374',
          '925709757', '45003231.con@edu.jccm.es', 'http://con-adalidmeneses.centros.castillalamancha.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -13831,7 +13831,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004855', 'Antonio Machado', '451650006', 'Cl. Colombia, 9', 'Cl. Colombia, 9', '925809473',
+         '45004855', 'Antonio Machado', '451650006', 'Cl. Colombia, 9', '45600', '925809473',
          '925809473', '45004855.cp@edu.jccm.es', 'http://ceip-antoniomachado.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13840,7 +13840,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013911', 'Arco Iris', '451650006', 'Cl. Cañada de la Sierra, S/N', 'Cl. Cañada de la Sierra, S/N', '',
+         '45013911', 'Arco Iris', '451650006', 'Cl. Cañada de la Sierra, S/N', '45600', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -13849,7 +13849,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013583', 'Bartolomé Nicolau', '451650006', 'Cl. Talavera del Peru Esquina Paseo del Cementerio, S/N', 'Cl. Talavera del Peru Esquina Paseo del Cementerio, S/N', '925806976',
+         '45013583', 'Bartolomé Nicolau', '451650006', 'Cl. Talavera del Peru Esquina Paseo del Cementerio, S/N', '45600', '925806976',
          '925806976', '45013583.cp@edu.jccm.es', 'http://ceip-bartolomenicolau.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13858,7 +13858,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013285', 'Bichos', '451650006', 'Av. Francisco Aguirre, 232', 'Av. Francisco Aguirre, 232', '925802354',
+         '45013285', 'Bichos', '451650006', 'Av. Francisco Aguirre, 232', '45600', '925802354',
          '925720228', 'drueda@jccm.es', '', 'Privado', 'EI'
         )
         ;
@@ -13867,7 +13867,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005811', 'Bios', '451650006', 'Cl. Paris, S/N', 'Cl. Paris, S/N', '925802278',
+         '45005811', 'Bios', '451650006', 'Cl. Paris, S/N', '45600', '925802278',
          '925802278', '45005811.cee@edu.jccm.es', 'http://cee-bios.centros.castillalamancha.es', 'Público', 'CEE'
         )
         ;
@@ -13876,7 +13876,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004636', 'Booma', '451650006', 'Pz. de Mora, 5', 'Pz. de Mora, 5', '925804824',
+         '45004636', 'Booma', '451650006', 'Pz. de Mora, 5', '45600', '925804824',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -13885,7 +13885,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013741', 'Cáscara de Nuez', '451650006', 'Cl. San Juan de Dios, 31', 'Cl. San Juan de Dios, 31', '',
+         '45013741', 'Cáscara de Nuez', '451650006', 'Cl. San Juan de Dios, 31', '45600', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -13894,7 +13894,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003036', 'Cervantes', '451650006', 'Ps. de la Estacion, 64-66', 'Ps. de la Estacion, 64-66', '925803603',
+         '45003036', 'Cervantes', '451650006', 'Ps. de la Estacion, 64-66', '45600', '925803603',
          '925801365', 'cervantes@colegiocervantes.com', 'http://edu.jccm.es/con/cervantes', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -13903,7 +13903,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013479', 'Chiquitines', '451650006', 'Cl. Ciudad de Bron, S/N', 'Cl. Ciudad de Bron, S/N', '925682880',
+         '45013479', 'Chiquitines', '451650006', 'Cl. Ciudad de Bron, S/N', '45600', '925682880',
          '', 'escuela@chiquitinescentroinfantil.es', '', 'Privado', 'EI'
         )
         ;
@@ -13912,7 +13912,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005082', 'Clemente Palencia', '451650006', 'Cl. Tres Carabelas, S/N', 'Cl. Tres Carabelas, S/N', '925811186',
+         '45005082', 'Clemente Palencia', '451650006', 'Cl. Tres Carabelas, S/N', '45600', '925811186',
          '925808008', 'colegio@clementepalencia.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -13921,7 +13921,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003073', 'Compañía de María', '451650006', 'Cl. Santo Domingo, 21', 'Cl. Santo Domingo, 21', '925828756',
+         '45003073', 'Compañía de María', '451650006', 'Cl. Santo Domingo, 21', '45600', '925828756',
          '925828756', 'secretaria_talavera@colegiosons.es', '', 'Privado', 'CEIP'
         )
         ;
@@ -13930,7 +13930,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014101', 'Conservatorio Profesional de Música de Talavera de la Reina', '451650006', 'Cl. Matadero, 17', 'Cl. Matadero, 17', '',
+         '45014101', 'Conservatorio Profesional de Música de Talavera de la Reina', '451650006', 'Cl. Matadero, 17', '45600', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -13939,7 +13939,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003280', 'Cristóbal Colón', '451650006', 'Av. del Principe, 8', 'Av. del Principe, 8', '925803808',
+         '45003280', 'Cristóbal Colón', '451650006', 'Av. del Principe, 8', '45600', '925803808',
          '925816836', 'secretaria@colegiocristobalcolon.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -13948,7 +13948,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002962', 'Don Cristóbal López', '451650005', 'Ps. Benito Garrido, 4', 'Ps. Benito Garrido, 4', '925892426',
+         '45002962', 'Don Cristóbal López', '451650005', 'Ps. Benito Garrido, 4', '45613', '925892426',
          '925892426', '45002962.cp@edu.jccm.es', 'http://ceip-doncristobalopez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -13957,7 +13957,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012906', 'Dulcinea', '451650007', 'Rd. del Sol C/V Calle del Melonar', 'Rd. del Sol C/V Calle del Melonar', '925850456',
+         '45012906', 'Dulcinea', '451650007', 'Rd. del Sol C/V Calle del Melonar', '45694', '925850456',
          '925850001', 'ayuntamiento@talaveralanueva.es', '', 'Público', 'EI'
         )
         ;
@@ -13966,7 +13966,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012256', 'El Alfar', '451650006', 'Av. de Portugal, 3', 'Av. de Portugal, 3', '925804723',
+         '45012256', 'El Alfar', '451650006', 'Av. de Portugal, 3', '45600', '925804723',
          '925823897', 'teresas@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -13975,7 +13975,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013297', 'El Bosque Encantado', '451650006', 'Cl. Carlos Barral, 3', 'Cl. Carlos Barral, 3', '696186235',
+         '45013297', 'El Bosque Encantado', '451650006', 'Cl. Carlos Barral, 3', '45600', '696186235',
          '', 'elbosqueencantadoentalavera@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -13984,7 +13984,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000618', 'Eusebio Rubalcaba', '451650006', 'Cl. Matadero, 17', 'Cl. Matadero, 17', '925821069',
+         '45000618', 'Eusebio Rubalcaba', '451650006', 'Cl. Matadero, 17', '45600', '925821069',
          '', 'direccion@escuelamusicatalavera.es', '', 'Público', ''
         )
         ;
@@ -13993,7 +13993,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003127', 'Exa', '451650006', 'Cl. Cañada de la Sierra, 65', 'Cl. Cañada de la Sierra, 65', '925802594',
+         '45003127', 'Exa', '451650006', 'Cl. Cañada de la Sierra, 65', '45600', '925802594',
          '925809560', 'administracion@colegioexa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14002,7 +14002,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002950', 'Federico García Lorca', '451650006', 'Cl. San Marcos, 124', 'Cl. San Marcos, 124', '925807536',
+         '45002950', 'Federico García Lorca', '451650006', 'Cl. San Marcos, 124', '45600', '925807536',
          '925721245', '45002950.cp@edu.jccm.es', 'http://ceip-federicogarcialorca.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14011,7 +14011,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003103', 'Fernando de Rojas', '451650006', 'Cl. Capitán Cortés, 125', 'Cl. Capitán Cortés, 125', '925805650',
+         '45003103', 'Fernando de Rojas', '451650006', 'Cl. Capitán Cortés, 125', '45600', '925805650',
          '925805654', 'colegio@fernandoderojas.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14020,7 +14020,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003140', 'Fray Hernando de Talavera', '451650006', 'Cl. Medellin, 26', 'Cl. Medellin, 26', '925802008',
+         '45003140', 'Fray Hernando de Talavera', '451650006', 'Cl. Medellin, 26', '45600', '925802008',
          '925802008', '45003140.cp@edu.jccm.es', 'http://edu.jccm.es/cp/frayhernando', 'Público', 'CEIP'
         )
         ;
@@ -14029,7 +14029,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004740', 'Gabriel Alonso de Herrera', '451650006', 'Av. Pio Xii, 2', 'Av. Pio Xii, 2', '925800655',
+         '45004740', 'Gabriel Alonso de Herrera', '451650006', 'Av. Pio Xii, 2', '45600', '925800655',
          '925800614', '45004740.ies@edu.jccm.es', 'http://edu.jccm.es/ies/gaherrera', 'Público', 'IES'
         )
         ;
@@ -14038,7 +14038,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013649', 'Gamonital', '451650005', 'Cl. de la Iglesia, S/N', 'Cl. de la Iglesia, S/N', '',
+         '45013649', 'Gamonital', '451650005', 'Cl. de la Iglesia, S/N', '45613', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -14047,7 +14047,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004624', 'Hernán Cortés', '451650006', 'Cl. Hernan Cortes, 8', 'Cl. Hernan Cortes, 8', '925803591',
+         '45004624', 'Hernán Cortés', '451650006', 'Cl. Hernan Cortes, 8', '45600', '925803591',
          '925803591', '45004624.cp@edu.jccm.es', 'http://ceip-hernancortes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14056,7 +14056,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003085', 'Joaquín Alonso', '451650006', 'Cl. Capitan Cortes,103', 'Cl. Capitan Cortes,103', '925817275',
+         '45003085', 'Joaquín Alonso', '451650006', 'Cl. Capitan Cortes,103', '45600', '925817275',
          '925817275', 'jalonsomp@planalfa.es', 'http://edu.jccm.es/con/joaquinalonso', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14065,7 +14065,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004831', 'José Bárcena', '451650006', 'Rd. de los Andes, 12', 'Rd. de los Andes, 12', '925800719',
+         '45004831', 'José Bárcena', '451650006', 'Rd. de los Andes, 12', '45600', '925800719',
          '925805756', '45004831.cp@edu.jccm.es', 'http://ceip-josebarcena.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14074,7 +14074,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003267', 'Juan Antonio Castro', '451650006', 'Av. Francisco Aguirre, 220', 'Av. Francisco Aguirre, 220', '925801250',
+         '45003267', 'Juan Antonio Castro', '451650006', 'Av. Francisco Aguirre, 220', '45600', '925801250',
          '925801270', '45003267.ies@edu.jccm.es', 'http://edu.jccm.es/ies/juanantoniocastro', 'Público', 'IES'
         )
         ;
@@ -14083,7 +14083,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003221', 'Juan Ramón Jiménez', '451650006', 'Pz. del Salvador, 3', 'Pz. del Salvador, 3', '925802166',
+         '45003221', 'Juan Ramón Jiménez', '451650006', 'Pz. del Salvador, 3', '45600', '925802166',
          '925805641', 'secretaria@colegiojrj.es', 'http://edu.jccm.es/con/juanramonjimenez', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14092,7 +14092,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012268', 'Julián Besteiro', '451650006', 'Cl. Alferez Provisional, 58', 'Cl. Alferez Provisional, 58', '925812489',
+         '45012268', 'Julián Besteiro', '451650006', 'Cl. Alferez Provisional, 58', '45600', '925812489',
          '925823928', '45012268.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -14101,7 +14101,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014113', 'Kapital Inteligente', '451650006', 'Cr. Calera - Poligono Creta, 48-50', 'Cr. Calera - Poligono Creta, 48-50', '607548368',
+         '45014113', 'Kapital Inteligente', '451650006', 'Cr. Calera - Poligono Creta, 48-50', '45600', '607548368',
          '', 'direccion@kapitalinteligente.com', '', 'Privado', ''
         )
         ;
@@ -14110,7 +14110,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013303', 'Kindergarten', '451650006', 'Cl. Pio Baroja, 10', 'Cl. Pio Baroja, 10', '925827761',
+         '45013303', 'Kindergarten', '451650006', 'Cl. Pio Baroja, 10', '45600', '925827761',
          '', 'emilia@kindergartentalavera.com', '', 'Privado', 'EI'
         )
         ;
@@ -14119,7 +14119,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013807', 'La Guarde de Nana', '451650006', 'Cl. Pedro de Valdivia, 8', 'Cl. Pedro de Valdivia, 8', '607858612',
+         '45013807', 'La Guarde de Nana', '451650006', 'Cl. Pedro de Valdivia, 8', '45600', '607858612',
          '', 'laguarde.denanagmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -14128,7 +14128,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003000', 'La Milagrosa', '451650006', 'Cl. Rio Tajo, 4', 'Cl. Rio Tajo, 4', '925800857',
+         '45003000', 'La Milagrosa', '451650006', 'Cl. Rio Tajo, 4', '45600', '925800857',
          '925800857', 'lamilagrosatr@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14137,7 +14137,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003051', 'La Salle - Joaquina Santander', '451650006', 'Tr. del Patio de San Jose, 1', 'Tr. del Patio de San Jose, 1', '925721071',
+         '45003051', 'La Salle - Joaquina Santander', '451650006', 'Tr. del Patio de San Jose, 1', '45600', '925721071',
          '925721205', 'lasalletalavera@lasalle.es', 'http://edu.jccm.es/con/lasalletalavera', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14146,7 +14146,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005525', 'Lady Elena', '451650006', 'Av. de Toledo 31, 2ª Planta', 'Av. de Toledo 31, 2ª Planta', '925815686',
+         '45005525', 'Lady Elena', '451650006', 'Av. de Toledo 31, 2ª Planta', '45600', '925815686',
          '925827712', 'escuela@ladyelena.es', 'http://www.ladyelena.es', 'Privado', ''
         )
         ;
@@ -14155,7 +14155,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004995', 'Lope de Vega', '451650006', 'Ps. del Muelle, 27', 'Ps. del Muelle, 27', '925815645',
+         '45004995', 'Lope de Vega', '451650006', 'Ps. del Muelle, 27', '45600', '925815645',
          '925815645', 'lopedevega@terra.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14164,7 +14164,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003218', 'Madre de la Esperanza', '451650006', 'Cl. Mira al Rio, 4', 'Cl. Mira al Rio, 4', '925802413',
+         '45003218', 'Madre de la Esperanza', '451650006', 'Cl. Mira al Rio, 4', '45600', '925802413',
          '925827609', 'educacion@madredelaesperanza.org', '', 'Priv.Concert.', ''
         )
         ;
@@ -14173,7 +14173,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003097', 'Maristas Santa María del Prado', '451650006', 'Cl. Capitán Cortés, 24', 'Cl. Capitán Cortés, 24', '925806250',
+         '45003097', 'Maristas Santa María del Prado', '451650006', 'Cl. Capitán Cortés, 24', '45600', '925806250',
          '925806240', 'direccion@maristas-talavera.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14182,7 +14182,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013315', 'Mary Poppins', '451650006', 'Av. Francisco Aguirre, 10', 'Av. Francisco Aguirre, 10', '925819416',
+         '45013315', 'Mary Poppins', '451650006', 'Av. Francisco Aguirre, 10', '45600', '925819416',
          '', 'marypopinsinfantil@gmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -14191,7 +14191,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013327', 'Niño Jesús', '451650006', 'Pz. Mora, 3', 'Pz. Mora, 3', '925807593',
+         '45013327', 'Niño Jesús', '451650006', 'Pz. Mora, 3', '45600', '925807593',
          '925812141', '', '', 'Privado', 'EI'
         )
         ;
@@ -14200,7 +14200,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004879', 'Nuestra Señora del Prado', '451650006', 'Cl. del Pilar, S/N', 'Cl. del Pilar, S/N', '925805726',
+         '45004879', 'Nuestra Señora del Prado', '451650006', 'Cl. del Pilar, S/N', '45600', '925805726',
          '925809833', 'centroeducativo@apacetalavera.es', '', 'Priv.Concert.', ''
         )
         ;
@@ -14209,7 +14209,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003139', 'Nuestra Señora del Prado', '451650006', 'Cl. Clemente Palencia, S/N', 'Cl. Clemente Palencia, S/N', '925802715',
+         '45003139', 'Nuestra Señora del Prado', '451650006', 'Cl. Clemente Palencia, S/N', '45600', '925802715',
          '925802715', '45003139.cp@edu.jccm.es', 'http://ceip-nsdelprado.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14218,7 +14218,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005197', 'Pablo Iglesias', '451650006', 'Av. Francisco Aguirre, 178', 'Av. Francisco Aguirre, 178', '925811088',
+         '45005197', 'Pablo Iglesias', '451650006', 'Av. Francisco Aguirre, 178', '45600', '925811088',
          '925825722', '45005197.cp@edu.jccm.es', 'http://ceip-pabloiglesias.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14227,7 +14227,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003255', 'Padre Juan de Mariana', '451650006', 'Cl. Plateros, S/N', 'Cl. Plateros, S/N', '925802200',
+         '45003255', 'Padre Juan de Mariana', '451650006', 'Cl. Plateros, S/N', '45600', '925802200',
          '925824641', '45003255.ies@edu.jccm.es', 'http://edu.jccm.es/ies/padrejuandemariana', 'Público', 'IES'
         )
         ;
@@ -14236,7 +14236,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013339', 'Peques', '451650006', 'Cl. Zuloaga, 1', 'Cl. Zuloaga, 1', '',
+         '45013339', 'Peques', '451650006', 'Cl. Zuloaga, 1', '45600', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -14245,7 +14245,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005461', 'Puerta de Cuartos', '451650006', 'Ps. del Cementerio, 7.', 'Ps. del Cementerio, 7.', '925827007',
+         '45005461', 'Puerta de Cuartos', '451650006', 'Ps. del Cementerio, 7.', '45600', '925827007',
          '925827063', '45005461.ies@edu.jccm.es', 'http://edu.jccm.es/ies/puertadecuartos', 'Público', 'IES'
         )
         ;
@@ -14254,7 +14254,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013340', 'Pulgarcito', '451650006', 'Cl. Ramon Corrochano, 2', 'Cl. Ramon Corrochano, 2', '',
+         '45013340', 'Pulgarcito', '451650006', 'Cl. Ramon Corrochano, 2', '45600', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -14263,7 +14263,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003206', 'Rafael Morales', '451650006', 'Pz. Leonardo Da Vinci, 2', 'Pz. Leonardo Da Vinci, 2', '925810941',
+         '45003206', 'Rafael Morales', '451650006', 'Pz. Leonardo Da Vinci, 2', '45600', '925810941',
          '925828020', 'colegiormorales@gmail.es', 'http://con-rafaelmorales.centros.castillalamancha.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14272,7 +14272,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005471', 'Ribera del Tajo', '451650006', 'Cl. Templarios, 39', 'Cl. Templarios, 39', '925722233',
+         '45005471', 'Ribera del Tajo', '451650006', 'Cl. Templarios, 39', '45600', '925722233',
          '925804375', '45005471.ies@edu.jccm.es', 'http://ies-riberadeltajo.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -14281,7 +14281,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004958', 'Río Tajo', '451650006', 'Av. Pio Xii, 2', 'Av. Pio Xii, 2', '925812446',
+         '45004958', 'Río Tajo', '451650006', 'Av. Pio Xii, 2', '45600', '925812446',
          '925812452', '45004958.cea@edu.jccm.es', 'http://edu.jccm.es/cepa/talavera', 'Público', ''
         )
         ;
@@ -14290,7 +14290,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005331', 'Ruiz de Luna', '451650006', 'Av. Principe, 53', 'Av. Principe, 53', '925810836',
+         '45005331', 'Ruiz de Luna', '451650006', 'Av. Principe, 53', '45600', '925810836',
          '925808674', 'colegio@colegioruizdeluna.com', 'http://con-ruizdeluna.centros.castillalamancha.es', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14299,7 +14299,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003012', 'Sagrados Corazones', '451650006', 'Cl. Hnos. Maristas de Bugobe, 4', 'Cl. Hnos. Maristas de Bugobe, 4', '925815854',
+         '45003012', 'Sagrados Corazones', '451650006', 'Cl. Hnos. Maristas de Bugobe, 4', '45600', '925815854',
          '925803660', 'scorazonestr@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14308,7 +14308,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003152', 'San Ildefonso', '451650006', 'Cl. Hernan Cortes, 6', 'Cl. Hernan Cortes, 6', '925806984',
+         '45003152', 'San Ildefonso', '451650006', 'Cl. Hernan Cortes, 6', '45600', '925806984',
          '925809267', '45003152.cp@edu.jccm.es', 'http://ceip-sanildefonsotalaveradelareina.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14317,7 +14317,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003279', 'San Isidro', '451650006', 'Cr. Extremadura, Km 119,4', 'Cr. Extremadura, Km 119,4', '925722093',
+         '45003279', 'San Isidro', '451650006', 'Cr. Extremadura, Km 119,4', '45600', '925722093',
          '925722139', '45003279.ies@edu.jccm.es', 'http://edu.jccm.es/ies/sanisidro', 'Público', 'IES'
         )
         ;
@@ -14326,7 +14326,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003358', 'San Isidro', '451650007', 'Cl. San Isidro, 16', 'Cl. San Isidro, 16', '925850049',
+         '45003358', 'San Isidro', '451650007', 'Cl. San Isidro, 16', '45694', '925850049',
          '925850049', '45003358.cp@edu.jccm.es', 'http://ceip-sanisidro.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14335,7 +14335,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003164', 'San Juan de Dios', '451650006', 'Cl. Nuestra Señora de la Piedad, 2', 'Cl. Nuestra Señora de la Piedad, 2', '925802701',
+         '45003164', 'San Juan de Dios', '451650006', 'Cl. Nuestra Señora de la Piedad, 2', '45600', '925802701',
          '925802701', '45003164.cp@edu.jccm.es', 'http://ceip-sanjuandedios.centros.castillalamancha.es/', 'Público', 'CEIP'
         )
         ;
@@ -14344,7 +14344,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45002986', 'Santa María', '451650006', 'Cl. Santa Engracia, 38', 'Cl. Santa Engracia, 38', '925821654',
+         '45002986', 'Santa María', '451650006', 'Cl. Santa Engracia, 38', '45600', '925821654',
          '925821654', '45002986.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -14353,7 +14353,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012271', 'Santo Ángel de la Guarda', '451650006', 'Ps. de Colombia, 4', 'Ps. de Colombia, 4', '925801147',
+         '45012271', 'Santo Ángel de la Guarda', '451650006', 'Ps. de Colombia, 4', '45600', '925801147',
          '925823914', '45012271.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -14362,7 +14362,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005057', 'Talavera', '451650006', 'Cl. Segurilla, 1', 'Cl. Segurilla, 1', '925811942',
+         '45005057', 'Talavera', '451650006', 'Cl. Segurilla, 1', '45600', '925811942',
          '925820853', '45005057.ea@edu.jccm.es', 'http://edu.jccm.es/ea/talavera', 'Público', ''
         )
         ;
@@ -14371,7 +14371,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005537', 'Talavera de la Reina', '451650006', 'Av. Real Fabrica de Sedas, 33', 'Av. Real Fabrica de Sedas, 33', '925818081',
+         '45005537', 'Talavera de la Reina', '451650006', 'Av. Real Fabrica de Sedas, 33', '45600', '925818081',
          '925820214', '45005537.eoi@edu.jccm.es', 'http://eoi-talavera.centros.castillalamancha.es', 'Público', 'EOI'
         )
         ;
@@ -14380,7 +14380,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013571', 'Trasto'S', '451650006', 'Cl. Santa Cristeta, 9', 'Cl. Santa Cristeta, 9', '925680556',
+         '45013571', 'TrastoS', '451650006', 'Cl. Santa Cristeta, 9', '45600', '925680556',
          '', 'guarderiaelcarmen06@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -14389,7 +14389,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003361', 'Antonia González', '451660001', 'Cl. Santa Ana, 2', 'Cl. Santa Ana, 2', '925145016',
+         '45003361', 'Antonia González', '451660001', 'Cl. Santa Ana, 2', '45780', '925145016',
          '925145016', '45003361.cp@edu.jccm.es', 'http://ceip-antoniagonzalez.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14398,7 +14398,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012918', 'Cervantes II', '451660001', 'Cl. Ave Maria, S/N', 'Cl. Ave Maria, S/N', '925145910',
+         '45012918', 'Cervantes II', '451660001', 'Cl. Ave Maria, S/N', '45780', '925145910',
          '925145585', 'eicervantes@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -14407,7 +14407,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012921', 'Cuna de Dulcinea', '451670001', 'Cl. Jose Espronceda, S/N', 'Cl. Jose Espronceda, S/N', '925568153',
+         '45012921', 'Cuna de Dulcinea', '451670001', 'Cl. Jose Espronceda, S/N', '45820', '925568153',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -14416,7 +14416,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003371', 'Miguel de Cervantes', '451670001', 'Cl. Padilla, S/N', 'Cl. Padilla, S/N', '925197324',
+         '45003371', 'Miguel de Cervantes', '451670001', 'Cl. Padilla, S/N', '45820', '925197324',
          '925197324', '45003371.cp@edu.jccm.es', 'http://ceip-cervanteseltoboso.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14425,7 +14425,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013765', '- Sin Denominación -', '451680001', 'Cl. Bulevar del Rio Alberche, S/N', 'Cl. Bulevar del Rio Alberche, S/N', '',
+         '45013765', '- Sin Denominación -', '451680001', 'Cl. Bulevar del Rio Alberche, S/N', '45007', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -14434,7 +14434,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45500007', 'Academia de Infantería', '451680001', 'Ct. de San Servando, S/N', 'Ct. de San Servando, S/N', '',
+         '45500007', 'Academia de Infantería', '451680001', 'Ct. de San Servando, S/N', '45009', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -14443,7 +14443,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012207', 'Academia de Peluquería y Estética', '451680001', 'Pj. de Mayoral, 7 Bajo', 'Pj. de Mayoral, 7 Bajo', '',
+         '45012207', 'Academia de Peluquería y Estética', '451680001', 'Pj. de Mayoral, 7 Bajo', '45003', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -14452,7 +14452,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003942', 'Alfonso VI', '451680001', 'Av. Portugal, 16', 'Av. Portugal, 16', '925226496',
+         '45003942', 'Alfonso VI', '451680001', 'Av. Portugal, 16', '45005', '925226496',
          '925256914', '45003942.cp@edu.jccm.es', 'http://ceip-alfonsovi.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14461,7 +14461,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004752', 'Alfonso X el Sabio', '451680001', 'Cl. Valdehuesa, 6', 'Cl. Valdehuesa, 6', '925230970',
+         '45004752', 'Alfonso X el Sabio', '451680001', 'Cl. Valdehuesa, 6', '45007', '925230970',
          '925240850', '45004752.ies@edu.jccm.es', 'http://edu.jccm.es/ies/alfonsox', 'Público', 'IES'
         )
         ;
@@ -14470,7 +14470,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013790', 'Ana María Matute', '451680001', 'Cl. Rio Bullaque, Parcela 71-B', 'Cl. Rio Bullaque, Parcela 71-B', '925049475',
+         '45013790', 'Ana María Matute', '451680001', 'Cl. Rio Bullaque, Parcela 71-B', '45007', '925049475',
          '', 'lacasitadedulcinea@hotmail.es', '', 'Público', 'EI'
         )
         ;
@@ -14479,7 +14479,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012931', 'Ángel de la Guarda', '451680001', 'Ps. del Carmen, S/N', 'Ps. del Carmen, S/N', '925225529',
+         '45012931', 'Ángel de la Guarda', '451680001', 'Ps. del Carmen, S/N', '45001', '925225529',
          '', 'eiangeldelaguarda.toledo@gmail.com', '', 'Público', 'EI'
         )
         ;
@@ -14488,7 +14488,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003401', 'Ángel del Alcázar', '451680001', 'Cl. Puerto, 62', 'Cl. Puerto, 62', '925221387',
+         '45003401', 'Ángel del Alcázar', '451680001', 'Cl. Puerto, 62', '45006', '925221387',
          '925221387', '45003401.cp@edu.jccm.es', 'http://ceip-angeldelalcazar.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14497,7 +14497,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003875', 'Azarquiel', '451680001', 'Ps. San Eugenio, 21', 'Ps. San Eugenio, 21', '925284043',
+         '45003875', 'Azarquiel', '451680001', 'Ps. San Eugenio, 21', '45003', '925284043',
          '925284784', '45003875.ies@edu.jccm.es', '', 'Público', 'IES'
         )
         ;
@@ -14506,7 +14506,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013856', 'Cardenal Silíceo del Colegio de Infantes', '451680001', 'Av. de Europa, 2', 'Av. de Europa, 2', '',
+         '45013856', 'Cardenal Silíceo del Colegio de Infantes', '451680001', 'Av. de Europa, 2', '45003', '',
          '', '', '', 'Privado', ''
         )
         ;
@@ -14515,7 +14515,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005562', 'Carlos III', '451680001', 'Av. de Francia, 5', 'Av. de Francia, 5', '925212967',
+         '45005562', 'Carlos III', '451680001', 'Av. de Francia, 5', '45071', '925212967',
          '925254747', '45005562.ies@edu.jccm.es', 'http://ies-carlos3.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -14524,7 +14524,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012281', 'Castilla-La Mancha', '451680001', 'Av. Guadarrama, S/N', 'Av. Guadarrama, S/N', '925232907',
+         '45012281', 'Castilla-La Mancha', '451680001', 'Av. Guadarrama, S/N', '45007', '925232907',
          '925232847', '45012281.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -14533,7 +14533,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014009', 'Ces Juan Pablo II', '451680001', 'Cl. Reyes Catolicos, S/N', 'Cl. Reyes Catolicos, S/N', '925221526',
+         '45014009', 'Ces Juan Pablo II', '451680001', 'Cl. Reyes Catolicos, S/N', '45006', '925221526',
          '925221526', 'info.toledo@cesjuanpablosegundo.es', 'http://www.cestoledo.es', 'Privado', ''
         )
         ;
@@ -14542,7 +14542,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005318', 'Ciudad de Aquisgrán', '451680001', 'Av. Santa Barbara, S/N', 'Av. Santa Barbara, S/N', '925216686',
+         '45005318', 'Ciudad de Aquisgrán', '451680001', 'Av. Santa Barbara, S/N', '45006', '925216686',
          '925216686', '45005318.cp@edu.jccm.es', 'http://ceip-ciudaddeaquisgran.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14551,7 +14551,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004843', 'Ciudad de Nara', '451680001', 'Av. de Francia, 8', 'Av. de Francia, 8', '925257966',
+         '45004843', 'Ciudad de Nara', '451680001', 'Av. de Francia, 8', '45005', '925257966',
          '925211830', '45004843.cp@edu.jccm.es', 'http://ceip-ciudaddenara.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14560,7 +14560,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005574', 'Ciudad de Toledo', '451680001', 'Cl. Rio Fresnedoso, 16-18', 'Cl. Rio Fresnedoso, 16-18', '925232252',
+         '45005574', 'Ciudad de Toledo', '451680001', 'Cl. Rio Fresnedoso, 16-18', '45007', '925232252',
          '925234485', '45005574.cee@edu.jccm.es', 'http://edu.jccm.es/cee.ciudaddetoledo', 'Público', 'CEE'
         )
         ;
@@ -14569,7 +14569,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003531', 'Colegio Mayol, S.C.L.', '451680001', 'Cl. Airen, S/N', 'Cl. Airen, S/N', '925220733',
+         '45003531', 'Colegio Mayol, S.C.L.', '451680001', 'Cl. Airen, S/N', '45004', '925220733',
          '925222084', 'colegiomayol@colegiomayol.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14578,7 +14578,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012293', 'Cristo de la Vega', '451680001', 'Cl. Alicante, 2', 'Cl. Alicante, 2', '925220538',
+         '45012293', 'Cristo de la Vega', '451680001', 'Cl. Alicante, 2', '45005', '925220538',
          '925227855', '45012293.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -14587,7 +14587,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005847', 'Diego Ortiz', '451680001', 'Cl. Cardenal Cisneros, 1', 'Cl. Cardenal Cisneros, 1', '925223245',
+         '45005847', 'Diego Ortiz', '451680001', 'Cl. Cardenal Cisneros, 1', '45002', '925223245',
          '925223245', 'direccion@diego-ortiz.com', '', 'Público', ''
         )
         ;
@@ -14596,7 +14596,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003528', 'Divina Pastora', '451680001', 'Cl. San Miguel de los Angeles, 22', 'Cl. San Miguel de los Angeles, 22', '925222760',
+         '45003528', 'Divina Pastora', '451680001', 'Cl. San Miguel de los Angeles, 22', '45002', '925222760',
          '925222760', 'dpastoratoledo@anamogas.org', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14605,7 +14605,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013352', 'El Bosque de las Hadas', '451680001', 'Pz. Antonio Machado, 10', 'Pz. Antonio Machado, 10', '925234631',
+         '45013352', 'El Bosque de las Hadas', '451680001', 'Pz. Antonio Machado, 10', '45007', '925234631',
          '925245421', 'bosque.delashadas@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -14614,7 +14614,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003863', 'El Greco', '451680001', 'Ps. de San Eugenio, 23', 'Ps. de San Eugenio, 23', '925223594',
+         '45003863', 'El Greco', '451680001', 'Ps. de San Eugenio, 23', '45003', '925223594',
          '925228798', '45003863.ies@edu.jccm.es', 'http://edu.jccm.es/ies.elgreco', 'Público', 'IES'
         )
         ;
@@ -14623,7 +14623,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012301', 'El Olivo', '451680001', 'Av. de Portugal, 14', 'Av. de Portugal, 14', '925224816',
+         '45012301', 'El Olivo', '451680001', 'Av. de Portugal, 14', '45005', '925224816',
          '925224816', 'agpaz@jccm.es', 'http://eei-elolivo.centros.castillalamancha.es', 'Público', 'EI'
         )
         ;
@@ -14632,7 +14632,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010491', 'Escuela de Hostelería de Toledo', '451680001', 'Av. de Castilla-La Mancha, 30', 'Av. de Castilla-La Mancha, 30', '925257417',
+         '45010491', 'Escuela de Hostelería de Toledo', '451680001', 'Av. de Castilla-La Mancha, 30', '45003', '925257417',
          '925257729', 'admin@ehtoledo.com', 'http://www.ehtoledo.com', 'Privado', ''
         )
         ;
@@ -14641,7 +14641,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010314', 'Escuela Superior de Gastronomía y Hostelería', '451680001', 'Cl. Río Cabriel, S/N', 'Cl. Río Cabriel, S/N', '925245470',
+         '45010314', 'Escuela Superior de Gastronomía y Hostelería', '451680001', 'Cl. Río Cabriel, S/N', '45007', '925245470',
          '925245450', 'jefaturaestudios@esght.com', '', 'Privado', ''
         )
         ;
@@ -14650,7 +14650,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011884', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '451680001', 'Av. Alonso Berruguete, 23', 'Av. Alonso Berruguete, 23', '925222424',
+         '45011884', 'Escuela Territorial de Técnicos y Técnicos Superiores Deportivos de Fútbol y Fútbol Sala', '451680001', 'Av. Alonso Berruguete, 23', '45003', '925222424',
          '', 'e.entrenadorestoledo@gmail.com', '', 'Privado', ''
         )
         ;
@@ -14659,7 +14659,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005203', 'Escultor Alberto Sánchez', '451680001', 'Av. de Boladiez, S/N', 'Av. de Boladiez, S/N', '925231550',
+         '45005203', 'Escultor Alberto Sánchez', '451680001', 'Av. de Boladiez, S/N', '45007', '925231550',
          '925231550', '45005203.cp@edu.jccm.es', 'http://edu.jccm.es/cp/escultoralberto', 'Público', 'CEIP'
         )
         ;
@@ -14668,7 +14668,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010296', 'Europa', '451680001', 'Cl. Belgica, 3', 'Cl. Belgica, 3', '925283653',
+         '45010296', 'Europa', '451680001', 'Cl. Belgica, 3', '45005', '925283653',
          '925283654', '45010296.cp@edu.jccm.es', 'http://ceip-europa.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14677,7 +14677,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003644', 'Fábrica de Armas', '451680001', 'Av. Lorenzo de la Plana, S/N', 'Av. Lorenzo de la Plana, S/N', '925220288',
+         '45003644', 'Fábrica de Armas', '451680001', 'Av. Lorenzo de la Plana, S/N', '45004', '925220288',
          '925252149', '45003644.cp@edu.jccm.es', 'http://ceip-fabricadearmas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14686,7 +14686,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004806', 'Garcilaso de la Vega', '451680001', 'Pz. Ciudad de Nara, 1', 'Pz. Ciudad de Nara, 1', '925254023',
+         '45004806', 'Garcilaso de la Vega', '451680001', 'Pz. Ciudad de Nara, 1', '45005', '925254023',
          '925255966', '45004806.cp@edu.jccm.es', 'http://edu.jccm.es/cp/garcilaso', 'Público', 'CEIP'
         )
         ;
@@ -14695,7 +14695,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013935', 'Gloria Fuertes', '451680001', 'Av. de Irlanda, S/N', 'Av. de Irlanda, S/N', '',
+         '45013935', 'Gloria Fuertes', '451680001', 'Av. de Irlanda, S/N', '45005', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -14704,7 +14704,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004818', 'Gómez Manrique', '451680001', 'Cl. Rio Miño, 2', 'Cl. Rio Miño, 2', '925230332',
+         '45004818', 'Gómez Manrique', '451680001', 'Cl. Rio Miño, 2', '45007', '925230332',
          '925234295', '45004818.cp@edu.jccm.es', 'http://edu.jccm.es/cp/gomezmanrique', 'Público', 'CEIP'
         )
         ;
@@ -14713,7 +14713,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005239', 'Gregorio Marañón', '451680001', 'Av. Guadarrama, S/N', 'Av. Guadarrama, S/N', '925230808',
+         '45005239', 'Gregorio Marañón', '451680001', 'Av. Guadarrama, S/N', '45007', '925230808',
          '925230808', '45005239.cp@edu.jccm.es', 'http://ceip-gregoriomaranon.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14722,7 +14722,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004946', 'Gustavo Adolfo Bécquer', '451680001', 'Cl. Dinamarca, 10', 'Cl. Dinamarca, 10', '925229017',
+         '45004946', 'Gustavo Adolfo Bécquer', '451680001', 'Cl. Dinamarca, 10', '45003', '925229017',
          '925224503', '45004946.cea@edu.jccm.es', 'http://cepa-gabecquer.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -14731,7 +14731,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013364', 'Hadas y Duendes', '451680001', 'Cl. Tulipan, 10', 'Cl. Tulipan, 10', '925228567',
+         '45013364', 'Hadas y Duendes', '451680001', 'Cl. Tulipan, 10', '45005', '925228567',
          '925228567', 'informacion@hadasyduendes.com', '', 'Privado', 'EI'
         )
         ;
@@ -14740,7 +14740,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011926', 'International School San Patricio Toledo', '451680001', 'Cl. Juan de Vergara, 1 (Urbanizacion "La Legua")', 'Cl. Juan de Vergara, 1 (Urbanizacion "La Legua")', '925280363',
+         '45011926', 'International School San Patricio Toledo', '451680001', 'Cl. Juan de Vergara, 1 (Urbanizacion "La Legua")', '45005', '925280363',
          '925280364', 'infotoledo@colegiosanpatricio.es', '', 'Privado', 'CEIP'
         )
         ;
@@ -14749,7 +14749,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005011', 'Jacinto Guerrero', '451680001', 'Cl. San Juan de la Penitencia, 2', 'Cl. San Juan de la Penitencia, 2', '925211020',
+         '45005011', 'Jacinto Guerrero', '451680001', 'Cl. San Juan de la Penitencia, 2', '45001', '925211020',
          '925225150', '45005011.cm@edu.jccm.es', 'http://cm-conservatoriodetoledo.centros.castillalamancha.es', 'Público', 'CPM'
         )
         ;
@@ -14758,7 +14758,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003929', 'Jaime de Foxa', '451680001', 'Cl. Espinarejo, 5', 'Cl. Espinarejo, 5', '925230170',
+         '45003929', 'Jaime de Foxa', '451680001', 'Cl. Espinarejo, 5', '45007', '925230170',
          '925230170', '45003929.cp@edu.jccm.es', 'http://ceip-jaimedefoxa.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14767,7 +14767,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004971', 'Juan de Padilla', '451680001', 'Cl. Valdemarias, S/N', 'Cl. Valdemarias, S/N', '925231415',
+         '45004971', 'Juan de Padilla', '451680001', 'Cl. Valdemarias, S/N', '45007', '925231415',
          '925231415', '45004971.cp@edu.jccm.es', 'http://edu.jccm.es/cp.juandepadilla/', 'Público', 'CEIP'
         )
         ;
@@ -14776,7 +14776,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004909', 'Juanelo Turriano', '451680001', 'Cl. Valdemarias, 19', 'Cl. Valdemarias, 19', '925230707',
+         '45004909', 'Juanelo Turriano', '451680001', 'Cl. Valdemarias, 19', '45007', '925230707',
          '925232982', '45004909.ies@edu.jccm.es', 'http://ies-juaneloturriano.centros.castillalamancha.es/', 'Público', 'IES'
         )
         ;
@@ -14785,7 +14785,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013376', 'Kinder May', '451680001', 'Cl. Clavel, 31 (Urbanizacion Vistahermosa)', 'Cl. Clavel, 31 (Urbanizacion Vistahermosa)', '925221488',
+         '45013376', 'Kinder May', '451680001', 'Cl. Clavel, 31 (Urbanizacion Vistahermosa)', '45005', '925221488',
          '925221488', 'kindermay@terra.es', '', 'Privado', 'EI'
         )
         ;
@@ -14794,7 +14794,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003383', 'La Candelaria', '451680001', 'Cm. de la Huerta, S/N', 'Cm. de la Huerta, S/N', '925236344',
+         '45003383', 'La Candelaria', '451680001', 'Cm. de la Huerta, S/N', '45008', '925236344',
          '925236344', '45003383.cp@edu.jccm.es', 'http://edu.jccm.es/cp.lacandelaria/', 'Público', 'CEIP'
         )
         ;
@@ -14803,7 +14803,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012311', 'La Cigarra', '451680001', 'Cl. Esparteros, S/N', 'Cl. Esparteros, S/N', '925223871',
+         '45012311', 'La Cigarra', '451680001', 'Cl. Esparteros, S/N', '45006', '925223871',
          '925258015', '45012311.ei@edu.jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -14812,7 +14812,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013388', 'Los Pastorcitos de Fátima', '451680001', 'Cl. Moscatel, 2', 'Cl. Moscatel, 2', '925253243',
+         '45013388', 'Los Pastorcitos de Fátima', '451680001', 'Cl. Moscatel, 2', '45004', '925253243',
          '', 'pastorcitosdefatima@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -14821,7 +14821,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013391', 'Los Siete Enanitos', '451680001', 'Cl. San Pedro el Verde, 13', 'Cl. San Pedro el Verde, 13', '925257327',
+         '45013391', 'Los Siete Enanitos', '451680001', 'Cl. San Pedro el Verde, 13', '45004', '925257327',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -14830,7 +14830,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006301', 'María Pacheco', '451680001', 'Av. de Barber, 4', 'Av. de Barber, 4', '925282161',
+         '45006301', 'María Pacheco', '451680001', 'Av. de Barber, 4', '45004', '925282161',
          '925280076', '45006301.ies@edu.jccm.es', 'http://edu.jccm.es/ies/mariapacheco', 'Público', 'IES'
         )
         ;
@@ -14839,7 +14839,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003450', 'Maristas Santa María', '451680001', 'Rd. de Buenavista, 49', 'Rd. de Buenavista, 49', '925226312',
+         '45003450', 'Maristas Santa María', '451680001', 'Rd. de Buenavista, 49', '45005', '925226312',
          '925254060', 'toledo.direccion@maristasiberica.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14848,7 +14848,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005501', 'Martín Codax', '451680001', 'Cl. Agen, Local 20', 'Cl. Agen, Local 20', '',
+         '45005501', 'Martín Codax', '451680001', 'Cl. Agen, Local 20', '45005', '',
          '', 'educacionmusica@terra.com', '', 'Privado', ''
         )
         ;
@@ -14857,7 +14857,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003486', 'Medalla Milagrosa', '451680001', 'Cl. Nuñez de Arce, 7', 'Cl. Nuñez de Arce, 7', '925221910',
+         '45003486', 'Medalla Milagrosa', '451680001', 'Cl. Nuñez de Arce, 7', '45003', '925221910',
          '925211374', 'cmedamilato@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14866,7 +14866,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013480', 'Menudetes', '451680001', 'Av. la Legua, 5, Centro Comercial la Legua, Fase II', 'Av. la Legua, 5, Centro Comercial la Legua, Fase II', '',
+         '45013480', 'Menudetes', '451680001', 'Av. la Legua, 5, Centro Comercial la Legua, Fase II', '45005', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -14875,7 +14875,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45014061', 'Mis Cuquitos', '451680001', 'Rd. Buenavista, 19, Bajo', 'Rd. Buenavista, 19, Bajo', '',
+         '45014061', 'Mis Cuquitos', '451680001', 'Rd. Buenavista, 19, Bajo', '45005', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -14884,7 +14884,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003632', 'Nuestra Señora de los Infantes', '451680001', 'Av. de Europa, 2', 'Av. de Europa, 2', '925224510',
+         '45003632', 'Nuestra Señora de los Infantes', '451680001', 'Av. de Europa, 2', '45005', '925224510',
          '925226510', 'director@colegioinfantes.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14893,7 +14893,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003474', 'Nuestra Señora del Pilar', '451680001', 'Cobertizo de Santo Domingo el Real, 6', 'Cobertizo de Santo Domingo el Real, 6', '925222468',
+         '45003474', 'Nuestra Señora del Pilar', '451680001', 'Cobertizo de Santo Domingo el Real, 6', '45002', '925222468',
          '', '', '', 'Privado', 'CEIP'
         )
         ;
@@ -14902,7 +14902,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005641', 'Polígono', '451680001', 'Av. Boladiez, 50', 'Av. Boladiez, 50', '925234079',
+         '45005641', 'Polígono', '451680001', 'Av. Boladiez, 50', '45007', '925234079',
          '925234894', '45005641.cea@edu.jccm.es', 'http://cepa-poligono.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -14911,7 +14911,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006311', 'Princesa Galiana', '451680001', 'Av. de Santa Barbara, S/N', 'Av. de Santa Barbara, S/N', '925254457',
+         '45006311', 'Princesa Galiana', '451680001', 'Av. de Santa Barbara, S/N', '45006', '925254457',
          '925258860', '45006311.ieso@edu.jccm.es', 'http://www.iesoprincesagaliana.com/', 'Público', ''
         )
         ;
@@ -14920,7 +14920,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005483', 'Raimundo de Toledo', '451680001', 'Pz. Santa Eulalia, 2', 'Pz. Santa Eulalia, 2', '925216112',
+         '45005483', 'Raimundo de Toledo', '451680001', 'Pz. Santa Eulalia, 2', '45002', '925216112',
          '925254095', '45005483.eoi@edu.jccm.es', '', 'Público', 'EOI'
         )
         ;
@@ -14929,7 +14929,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013406', 'San José Obrero', '451680001', 'Cl. Alberche, 53', 'Cl. Alberche, 53', '925230535',
+         '45013406', 'San José Obrero', '451680001', 'Cl. Alberche, 53', '45007', '925230535',
          '', 'siervastoledo@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -14938,7 +14938,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003462', 'San Juan Bautista', '451680001', 'Costanilla de San Lazaro, S/N', 'Costanilla de San Lazaro, S/N', '925220533',
+         '45003462', 'San Juan Bautista', '451680001', 'Costanilla de San Lazaro, S/N', '45003', '925220533',
          '925213042', 'sjbautistat@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14947,7 +14947,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005215', 'San Juan de Dios', '451680001', 'Cl. Retamosillo, 13', 'Cl. Retamosillo, 13', '925233030',
+         '45005215', 'San Juan de Dios', '451680001', 'Cl. Retamosillo, 13', '45007', '925233030',
          '925233030', 'centroeducativo@apacetoledo.org', '', 'Priv.Concert.', ''
         )
         ;
@@ -14956,7 +14956,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004892', 'San Lucas y María', '451680001', 'Cj. de Doctrinos, 10', 'Cj. de Doctrinos, 10', '925210409',
+         '45004892', 'San Lucas y María', '451680001', 'Cj. de Doctrinos, 10', '45001', '925210409',
          '925210409', '45004892.cp@edu.jccm.es', 'http://ceip-sanlucasymaria.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -14965,7 +14965,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005793', 'Santa Bárbara y Nuestra Señora de las Nieves', '451680001', 'Av. Santa Barbara, S/N', 'Av. Santa Barbara, S/N', '',
+         '45005793', 'Santa Bárbara y Nuestra Señora de las Nieves', '451680001', 'Av. Santa Barbara, S/N', '45006', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -14974,7 +14974,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003668', 'Santa Teresa', '451680001', 'Av. Carlos Iii, S/N', 'Av. Carlos Iii, S/N', '925224803',
+         '45003668', 'Santa Teresa', '451680001', 'Av. Carlos Iii, S/N', '45004', '925224803',
          '925255673', '45003668.cp@edu.jccm.es', 'http://edu.jccm.es/cp/santateresatoledo', 'Público', 'CEIP'
         )
         ;
@@ -14983,7 +14983,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003656', 'Santiago el Mayor', '451680001', 'Pz. Solar de Antequeruela, 3', 'Pz. Solar de Antequeruela, 3', '925226555',
+         '45003656', 'Santiago el Mayor', '451680001', 'Pz. Solar de Antequeruela, 3', '45003', '925226555',
          '925221705', 'colegio@santiagoelmayor.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -14992,7 +14992,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005240', 'Sefarad', '451680001', 'Bj. de San Juan de los Reyes, 8', 'Bj. de San Juan de los Reyes, 8', '925229951',
+         '45005240', 'Sefarad', '451680001', 'Bj. de San Juan de los Reyes, 8', '45002', '925229951',
          '925280104', '45005240.ies@edu.jccm.es', 'http://edu.jccm.es/ies/sefarad', 'Público', 'IES'
         )
         ;
@@ -15001,7 +15001,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003735', 'Seminario Menor Santo Tomás de Villanueva', '451680001', 'Pz. San Andres, 4', 'Pz. San Andres, 4', '925224950',
+         '45003735', 'Seminario Menor Santo Tomás de Villanueva', '451680001', 'Pz. San Andres, 4', '45002', '925224950',
          '925222271', 'secretaria@seminariomenortoledo.es', '', 'Privado', ''
         )
         ;
@@ -15010,7 +15010,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013418', 'Tatina', '451680001', 'Cj. Antequeruela, 4', 'Cj. Antequeruela, 4', '925253294',
+         '45013418', 'Tatina', '451680001', 'Cj. Antequeruela, 4', '45003', '925253294',
          '925280479', 'gtatina2@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -15019,7 +15019,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003930', 'Toledo', '451680001', 'Cl. Reyes Catolicos, 15', 'Cl. Reyes Catolicos, 15', '925223938',
+         '45003930', 'Toledo', '451680001', 'Cl. Reyes Catolicos, 15', '45002', '925223938',
          '925257208', '45003930.ea@edu.jccm.es', 'http://edu.jccm.es/ea/toledo', 'Público', ''
         )
         ;
@@ -15028,7 +15028,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003796', 'Universidad Laboral', '451680001', 'Av. Europa, 28', 'Av. Europa, 28', '925223400',
+         '45003796', 'Universidad Laboral', '451680001', 'Av. Europa, 28', '45003', '925223400',
          '925222454', '45003796.ies@edu.jccm.es', 'http://edu.jccm.es/ies/universidadlaboral', 'Público', 'IES'
         )
         ;
@@ -15037,7 +15037,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010302', 'Valparaíso', '451680001', 'Av. del Olmo, 61', 'Av. del Olmo, 61', '925257421',
+         '45010302', 'Valparaíso', '451680001', 'Av. del Olmo, 61', '45005', '925257421',
          '925257421', '45010302.cp@edu.jccm.es', 'http://ceip-valparaiso.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15046,7 +15046,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45003498', 'Virgen del Carmen', '451680001', 'Av. de la Reconquista, 1', 'Av. de la Reconquista, 1', '925221048',
+         '45003498', 'Virgen del Carmen', '451680001', 'Av. de la Reconquista, 1', '45004', '925221048',
          '925216808', 'toledo@vedruna1826.org', 'http://www.vedruna.org', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -15055,7 +15055,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004016', 'Juan Aguado', '0000', 'Pz. Constitucion, S/N', 'Pz. Constitucion, S/N', '925795026',
+         '45004016', 'Juan Aguado', '0000', 'Pz. Constitucion, S/N', '45920', '925795026',
          '925795026', '45004016.cp@edu.jccm.es', 'http://edu.jccm.es/cp/latorre', 'Público', 'CEIP'
         )
         ;
@@ -15064,7 +15064,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004090', 'Alonso de Covarrubias', '451730001', 'Cl. la Fuentecilla, S/N', 'Cl. la Fuentecilla, S/N', '925760508',
+         '45004090', 'Alonso de Covarrubias', '451730001', 'Cl. la Fuentecilla, S/N', '45500', '925760508',
          '925764007', '45004090.ies@edu.jccm.es', 'http://ies-covarrubias.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -15073,7 +15073,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010284', 'Cárdenas', '451730001', 'Cl. Ingenios, 1', 'Cl. Ingenios, 1', '925761567',
+         '45010284', 'Cárdenas', '451730001', 'Cl. Ingenios, 1', '45500', '925761567',
          '925761567', 'escuela-cardenas@hotmail.com', '', 'Privado', 'EI'
         )
         ;
@@ -15082,7 +15082,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012323', 'Cristo de la Sangre', '451730001', 'Cr. de Albarreal, S/N', 'Cr. de Albarreal, S/N', '925760714',
+         '45012323', 'Cristo de la Sangre', '451730001', 'Cr. de Albarreal, S/N', '45500', '925760714',
          '925760318', 'mjmontoro@jccm.es', '', 'Público', 'EI'
         )
         ;
@@ -15091,7 +15091,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005252', 'Juan de Padilla', '451730001', 'Cl. Fuentecilla S/N', 'Cl. Fuentecilla S/N', '925762700',
+         '45005252', 'Juan de Padilla', '451730001', 'Cl. Fuentecilla S/N', '45500', '925762700',
          '925770732', '45005252.ies@edu.jccm.es', '', 'Público', 'IES'
         )
         ;
@@ -15100,7 +15100,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013421', 'La Colegiata', '451730001', 'Cl. Orozco, 19', 'Cl. Orozco, 19', '925760428',
+         '45013421', 'La Colegiata', '451730001', 'Cl. Orozco, 19', '45500', '925760428',
          '925760428', '', '', 'Privado', 'EI'
         )
         ;
@@ -15109,7 +15109,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011835', 'Lazarillo de Tormes', '451730001', 'Cl. Juan Ramon Jimenez, 5', 'Cl. Juan Ramon Jimenez, 5', '925772174',
+         '45011835', 'Lazarillo de Tormes', '451730001', 'Cl. Juan Ramon Jimenez, 5', '45500', '925772174',
          '925772174', '45011835.cp@edu.jccm.es', 'http://ceip-lazarillodetormes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15118,7 +15118,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012220', 'Maestro Gómez de Agüero', '451730001', 'Cl. Eras de San Francisco, 28', 'Cl. Eras de San Francisco, 28', '925760050',
+         '45012220', 'Maestro Gómez de Agüero', '451730001', 'Cl. Eras de San Francisco, 28', '45500', '925760050',
          '', 'escuela-musica@torrijos.es', '', 'Público', ''
         )
         ;
@@ -15127,7 +15127,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012943', 'Pequeñines', '451730001', 'Cl. Nuestra Señora del Rosario, S/N', 'Cl. Nuestra Señora del Rosario, S/N', '925762892',
+         '45012943', 'Pequeñines', '451730001', 'Cl. Nuestra Señora del Rosario, S/N', '45500', '925762892',
          '925770517', 'torrijos@elparquededulcinea.es', '', 'Público', 'EI'
         )
         ;
@@ -15136,7 +15136,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005872', 'Santísimo Cristo de la Sangre', '451730001', 'Av. Plaza de Toros, 59', 'Av. Plaza de Toros, 59', '925761546',
+         '45005872', 'Santísimo Cristo de la Sangre', '451730001', 'Av. Plaza de Toros, 59', '45500', '925761546',
          '925775135', 'colecristosangre@gmail.com', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -15145,7 +15145,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005276', 'Teresa Enríquez', '451730001', 'Cl. Puente, S/N', 'Cl. Puente, S/N', '925762581',
+         '45005276', 'Teresa Enríquez', '451730001', 'Cl. Puente, S/N', '45500', '925762581',
          '925770199', '45005276.cea@edu.jccm.es', 'http://cepa-teresaenriquez.centros.castillalamancha.es/', 'Público', ''
         )
         ;
@@ -15154,7 +15154,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004053', 'Villa de Torrijos', '451730001', 'Av. de la Estación, 72', 'Av. de la Estación, 72', '925762910',
+         '45004053', 'Villa de Torrijos', '451730001', 'Av. de la Estación, 72', '45500', '925762910',
          '925772131', '45004053.cp@edu.jccm.es', 'http://edu.jccm.es/cp/villadetorrijos', 'Público', 'CEIP'
         )
         ;
@@ -15163,7 +15163,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004107', 'Inmaculada Concepción', '451740001', 'Cl. la Mancha, S/N', 'Cl. la Mancha, S/N', '925400298',
+         '45004107', 'Inmaculada Concepción', '451740001', 'Cl. la Mancha, S/N', '45163', '925400298',
          '925400298', '45004107.cp@edu.jccm.es', 'http://ceip-inmaculadaconcepciontotanes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15172,7 +15172,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004119', 'Fernán González', '451750001', 'Cl. el Cristo, 50', 'Cl. el Cristo, 50', '925327184',
+         '45004119', 'Fernán González', '451750001', 'Cl. el Cristo, 50', '45789', '925327184',
          '925327184', '45004119.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -15181,7 +15181,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012955', 'Los Peques', '451760001', 'Cl. Velazquez, 17 a', 'Cl. Velazquez, 17 a', '925533243',
+         '45012955', 'Los Peques', '451760001', 'Cl. Velazquez, 17 a', '45217', '925533243',
          '925533243', 'caiayto-ugena.org', '', 'Público', 'EI'
         )
         ;
@@ -15190,7 +15190,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004120', 'Miguel de Cervantes', '451760001', 'Cl. Puerto, 21', 'Cl. Puerto, 21', '925533429',
+         '45004120', 'Miguel de Cervantes', '451760001', 'Cl. Puerto, 21', '45217', '925533429',
          '925533429', '45004120.cp@edu.jccm.es', 'http://edu.jccm.es/cp.migueldecervantesugena', 'Público', 'CEIP'
         )
         ;
@@ -15199,7 +15199,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011847', 'Tres Torres', '451760001', 'Cl. Miguel Angel, 55', 'Cl. Miguel Angel, 55', '925533990',
+         '45011847', 'Tres Torres', '451760001', 'Cl. Miguel Angel, 55', '45217', '925533990',
          '925533960', '45011847.cp@edu.jccm.es', 'http://ceip-trestorres.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15208,7 +15208,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012979', 'Blasa Ruíz', '451770001', 'Cl. Manuel Rodriguez, 55', 'Cl. Manuel Rodriguez, 55', '925472090',
+         '45012979', 'Blasa Ruíz', '451770001', 'Cl. Manuel Rodriguez, 55', '45480', '925472090',
          '', 'ayuntamiento@urda.es', '', 'Público', 'EI'
         )
         ;
@@ -15217,7 +15217,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004132', 'Santo Cristo', '451770001', 'Cl. Concepcion, 42', 'Cl. Concepcion, 42', '925474321',
+         '45004132', 'Santo Cristo', '451770001', 'Cl. Concepcion, 42', '45480', '925474321',
          '925474321', '45004132.cp@edu.jccm.es', 'http://edu.jccm.es/cp/urda', 'Público', 'CEIP'
         )
         ;
@@ -15226,7 +15226,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012165', '- Sin Denominación -', '451800001', 'Cl. Mentrida, 2', 'Cl. Mentrida, 2', '',
+         '45012165', '- Sin Denominación -', '451800001', 'Cl. Mentrida, 2', '45940', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -15235,7 +15235,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006141', 'Cañada Real', '451800001', 'Cl. Alameda del Fresno, 18', 'Cl. Alameda del Fresno, 18', '918183106',
+         '45006141', 'Cañada Real', '451800001', 'Cl. Alameda del Fresno, 18', '45940', '918183106',
          '918171809', '45006141.ies@edu.jccm.es', 'http://edu.jccm.es/ies/canadareal', 'Público', 'IES'
         )
         ;
@@ -15244,7 +15244,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013674', 'Nubes', '451800001', 'Cl. la Luna, 1', 'Cl. la Luna, 1', '918183836',
+         '45013674', 'Nubes', '451800001', 'Cl. la Luna, 1', '45940', '918183836',
          '', 'einubes@hotmail.com', 'http://699861872', 'Privado', 'EI'
         )
         ;
@@ -15253,7 +15253,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013431', 'Rosario', '451800001', 'Cl. Ventas de Retamosa, 9', 'Cl. Ventas de Retamosa, 9', '918170939',
+         '45013431', 'Rosario', '451800001', 'Cl. Ventas de Retamosa, 9', '45940', '918170939',
          '918170939', 'rosarioguarderia@yahoo.es', '', 'Privado', 'EI'
         )
         ;
@@ -15262,7 +15262,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004168', 'Santo Domingo de Guzmán', '451800001', 'Cl. Casarrubios, 12', 'Cl. Casarrubios, 12', '918170126',
+         '45004168', 'Santo Domingo de Guzmán', '451800001', 'Cl. Casarrubios, 12', '45940', '918170126',
          '918170126', '45004168.cp@edu.jccm.es', 'http://ceip-santodomingodeguzman.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15271,7 +15271,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004171', 'Andrés Arango', '451810001', 'Av. de Extremadura, 37', 'Av. de Extremadura, 37', '925892288',
+         '45004171', 'Andrés Arango', '451810001', 'Av. de Extremadura, 37', '45612', '925892288',
          '925892288', '45004171.cp@edu.jccm.es', 'http://edu.jccm.es/cp.andresarango', 'Público', 'CEIP'
         )
         ;
@@ -15280,7 +15280,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004181', 'Nuestra Señora del Águila', '0000', 'Cl. Conde de Casal, S/N', 'Cl. Conde de Casal, S/N', '925418060',
+         '45004181', 'Nuestra Señora del Águila', '0000', 'Cl. Conde de Casal, S/N', '45127', '925418060',
          '925418060', '45004181.cp@edu.jccm.es', 'http://ceip-nsaguila.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15289,7 +15289,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012967', 'Aladín', '451830001', 'Av. Sexta Bandera, 26-Bi', 'Av. Sexta Bandera, 26-Bi', '',
+         '45012967', 'Aladín', '451830001', 'Av. Sexta Bandera, 26-Bi', '45183', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -15298,7 +15298,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013558', 'El Chupete', '451830001', 'Cl. Neptuno, 6', 'Cl. Neptuno, 6', '918173667',
+         '45013558', 'El Chupete', '451830001', 'Cl. Neptuno, 6', '45183', '918173667',
          '', 'ceifuensalida@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -15307,7 +15307,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004201', 'Santiago Paniego', '451830001', 'Cl. San Pedro, 3', 'Cl. San Pedro, 3', '918173946',
+         '45004201', 'Santiago Paniego', '451830001', 'Cl. San Pedro, 3', '45183', '918173946',
          '918173946', '45004201.cp@edu.jccm.es', 'http://ceip-santiagopaniego.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15316,7 +15316,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010508', 'Leonor de Guzmán', '451860001', 'Cl. la Piscina, S/N', 'Cl. la Piscina, S/N', '925195066',
+         '45010508', 'Leonor de Guzmán', '451860001', 'Cl. la Piscina, S/N', '45850', '925195066',
          '925195217', '45010508.ieso@edu.jccm.es', 'http://ies-leonordeguzman.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -15325,7 +15325,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004284', 'Ramón y Cajal', '451860001', 'Ps. de Ronda, 5', 'Ps. de Ronda, 5', '925195428',
+         '45004284', 'Ramón y Cajal', '451860001', 'Ps. de Ronda, 5', '45850', '925195428',
          '925195806', '45004284.cp@edu.jccm.es', 'http://edu.jccm.es/ceip.ramonycajallavilladedonfadrique', 'Público', 'CEIP'
         )
         ;
@@ -15334,7 +15334,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010338', '- Sin Denominación -', '451850001', 'Cl. Instituto, S/N', 'Cl. Instituto, S/N', '',
+         '45010338', '- Sin Denominación -', '451850001', 'Cl. Instituto, S/N', '45860', '',
          '', 'aepa_villacanas@edu.jccm.es', '', 'Público', ''
         )
         ;
@@ -15343,7 +15343,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012992', 'Cuestas Blancas', '451850001', 'Cl. Castellon, S/N', 'Cl. Castellon, S/N', '',
+         '45012992', 'Cuestas Blancas', '451850001', 'Cl. Castellon, S/N', '45860', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -15352,7 +15352,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005321', 'Enrique de Arfe', '451850001', 'Cl. Vison, 5', 'Cl. Vison, 5', '925160801',
+         '45005321', 'Enrique de Arfe', '451850001', 'Cl. Vison, 5', '45860', '925160801',
          '925161050', '45005321.ies@edu.jccm.es', 'http://ies-enriquedearfe.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -15361,7 +15361,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004272', 'Garcilaso de la Vega', '451850001', 'Cl. Instituto, S/N', 'Cl. Instituto, S/N', '925160589',
+         '45004272', 'Garcilaso de la Vega', '451850001', 'Cl. Instituto, S/N', '45860', '925160589',
          '925160589', '45004272.ies@edu.jccm.es', 'http://ies-garcilasodelavega.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -15370,7 +15370,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011938', 'Gratiniano Martínez', '451850001', 'Cl. Valencia, 46', 'Cl. Valencia, 46', '925160120',
+         '45011938', 'Gratiniano Martínez', '451850001', 'Cl. Valencia, 46', '45860', '925160120',
          '', 'escuelademusica@aytovillacanas.com', '', 'Público', ''
         )
         ;
@@ -15379,7 +15379,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004235', 'Nuestra Señora de la Consolación', '451850001', 'Cl. Santa Maria Rosa Molas, 18', 'Cl. Santa Maria Rosa Molas, 18', '925160033',
+         '45004235', 'Nuestra Señora de la Consolación', '451850001', 'Cl. Santa Maria Rosa Molas, 18', '45860', '925160033',
          '925160558', 'nsconsolacionvi@planalfa.es', '', 'Priv.Concert.', 'CEIP'
         )
         ;
@@ -15388,7 +15388,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004259', 'Santa Bárbara', '451850001', 'Cl. Instituto, 7', 'Cl. Instituto, 7', '925160541',
+         '45004259', 'Santa Bárbara', '451850001', 'Cl. Instituto, 7', '45860', '925160541',
          '925160952', '45004259.cp@edu.jccm.es', 'http://ceip-santabarbara.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15397,7 +15397,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010481', 'Escuela Municipal de Música y Danza de Villafranca de los Caballeros', '0000', 'Cl. Nueva, S/N', 'Cl. Nueva, S/N', '926558640',
+         '45010481', 'Escuela Municipal de Música y Danza de Villafranca de los Caballeros', '0000', 'Cl. Nueva, S/N', '45730', '926558640',
          '', 'escuelamusica@aytovillafranca.es', '', 'Público', ''
         )
         ;
@@ -15406,7 +15406,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013005', 'Gloria Fuertes', '0000', 'Cl. Santa Lucia, S/N', 'Cl. Santa Lucia, S/N', '926558567',
+         '45013005', 'Gloria Fuertes', '0000', 'Cl. Santa Lucia, S/N', '45730', '926558567',
          '926578672', 'empleo@aytovillafranca.es', '', 'Público', 'EI'
         )
         ;
@@ -15415,7 +15415,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006153', 'La Falcata', '0000', 'Cl. de la Sal, S/N', 'Cl. de la Sal, S/N', '926578242',
+         '45006153', 'La Falcata', '0000', 'Cl. de la Sal, S/N', '45730', '926578242',
          '926578299', '45006153.ieso@edu.jccm.es', 'http://ies-lafalcata.centros.castillalamancha.es', 'Público', ''
         )
         ;
@@ -15424,7 +15424,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004296', 'Miguel de Cervantes', '0000', 'Av. San Marcos, S/N', 'Av. San Marcos, S/N', '926578074',
+         '45004296', 'Miguel de Cervantes', '0000', 'Av. San Marcos, S/N', '45730', '926578074',
          '926578074', '45004296.cp@edu.jccm.es', 'http://ceip-mdecervantes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15433,7 +15433,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006165', 'Castillo del Águila', '451880001', 'Cm. de Yuncler, S/N', 'Cm. de Yuncler, S/N', '925530347',
+         '45006165', 'Castillo del Águila', '451880001', 'Cm. de Yuncler, S/N', '45520', '925530347',
          '925530012', '45006165.ies@edu.jccm.es', 'http://ies-castilloaguila.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -15442,7 +15442,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004302', 'Juan Palarea', '451880001', 'Ps. del Prado, S/N', 'Ps. del Prado, S/N', '925530077',
+         '45004302', 'Juan Palarea', '451880001', 'Ps. del Prado, S/N', '45520', '925530077',
          '925530077', '45004302.cp@edu.jccm.es', 'http://ceip-juanpalarea.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15451,7 +15451,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013017', 'Villapeques', '451880001', 'Cl. Nogal, 28', 'Cl. Nogal, 28', '925524326',
+         '45013017', 'Villapeques', '451880001', 'Cl. Nogal, 28', '45520', '925524326',
          '', 'villaluenga@escuelasdulcinea.es', '', 'Público', 'EI'
         )
         ;
@@ -15460,7 +15460,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004326', 'Nuestra Señora de la Redonda', '451890001', 'Cl. Encinas, 1', 'Cl. Encinas, 1', '925740349',
+         '45004326', 'Nuestra Señora de la Redonda', '451890001', 'Cl. Encinas, 1', '45594', '925740349',
          '925740349', '45004326.cp@edu.jccm.es', 'http://edu.jccm.es/cp/nsredonda', 'Público', 'CEIP'
         )
         ;
@@ -15469,7 +15469,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004338', 'Santo Domingo de Silos', '451900001', 'Pz. Don Diego, 6', 'Pz. Don Diego, 6', '925345138',
+         '45004338', 'Santo Domingo de Silos', '451900001', 'Pz. Don Diego, 6', '45440', '925345138',
          '', '45004338.cp@edu.jccm.es', '', 'Público', 'CEIP'
         )
         ;
@@ -15478,7 +15478,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004341', 'Santa María Magdalena', '451910001', 'Cl. Eras, 1', 'Cl. Eras, 1', '925346691',
+         '45004341', 'Santa María Magdalena', '451910001', 'Cl. Eras, 1', '45749', '925346691',
          '925346691', '45004341.cp@edu.jccm.es', 'http://ceip-villamuelas.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15487,7 +15487,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013029', '- Sin Denominación -', '451920001', 'Pz. Santa Maria de la Cabeza, 2', 'Pz. Santa Maria de la Cabeza, 2', '',
+         '45013029', '- Sin Denominación -', '451920001', 'Pz. Santa Maria de la Cabeza, 2', '45810', '',
          '925166171', 'concejales@villanuevadealcardete.org', '', 'Público', 'EI'
         )
         ;
@@ -15496,7 +15496,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004363', 'Nuestra Señora de la Piedad', '451920001', 'Cl. Aceña, S/N', 'Cl. Aceña, S/N', '925166362',
+         '45004363', 'Nuestra Señora de la Piedad', '451920001', 'Cl. Aceña, S/N', '45810', '925166362',
          '925167496', '45004363.cp@edu.jccm.es', 'http://edu.jccm.es/cp/ntra.de.la.piedad', 'Público', 'CEIP'
         )
         ;
@@ -15505,7 +15505,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004375', 'Santa Ana', '451930001', 'Cl. Maestro, 5', 'Cl. Maestro, 5', '925313159',
+         '45004375', 'Santa Ana', '451930001', 'Cl. Maestro, 5', '45410', '925313159',
          '925313159', '45004375.cp@edu.jccm.es', 'http://edu.jccm.es/cp/santanavb', 'Público', 'CEIP'
         )
         ;
@@ -15514,7 +15514,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013561', '- Sin Denominación -', '451950001', 'Av. Castilla-La Mancha, S/N', 'Av. Castilla-La Mancha, S/N', '925150788',
+         '45013561', '- Sin Denominación -', '451950001', 'Av. Castilla-La Mancha, S/N', '45360', '925150788',
          '', 'cai.villarrubiadesantiago@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -15523,7 +15523,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004399', 'Nuestra Señora del Castellar', '451950001', 'Cl. Cervantes, 2', 'Cl. Cervantes, 2', '925150275',
+         '45004399', 'Nuestra Señora del Castellar', '451950001', 'Cl. Cervantes, 2', '45360', '925150275',
          '925150275', '45004399.cp@edu.jccm.es', 'http://ceip-castellar.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15532,7 +15532,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013030', 'Colorines', '451960002', 'Cl. Marqueses de Montemayor, S/N', 'Cl. Marqueses de Montemayor, S/N', '925278114',
+         '45013030', 'Colorines', '451960002', 'Cl. Marqueses de Montemayor, S/N', '45260', '925278114',
          '925278114', 'cai@villasecadelasagra.es', '', 'Público', 'EI'
         )
         ;
@@ -15541,7 +15541,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004429', 'Virgen de las Angustias', '451960002', 'Cl. Villaluenga, S/N', 'Cl. Villaluenga, S/N', '925278070',
+         '45004429', 'Virgen de las Angustias', '451960002', 'Cl. Villaluenga, S/N', '45260', '925278070',
          '925275016', '45004429.cp@edu.jccm.es', 'http://edu.jccm.es/cp/virgendelasangustias', 'Público', 'CEIP'
         )
         ;
@@ -15550,7 +15550,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013042', '- Sin Denominación -', '451970001', 'Cl. Mora, 38', 'Cl. Mora, 38', '925310299',
+         '45013042', '- Sin Denominación -', '451970001', 'Cl. Mora, 38', '45740', '925310299',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -15559,7 +15559,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004442', 'San Isidro Labrador', '451970001', 'Cl. Maestro Antonio Perez, S/N', 'Cl. Maestro Antonio Perez, S/N', '925310152',
+         '45004442', 'San Isidro Labrador', '451970001', 'Cl. Maestro Antonio Perez, S/N', '45740', '925310152',
          '925310152', '45004442.cp@edu.jccm.es', 'http://ceip-sanisidrovillasequilla.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15568,7 +15568,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004454', 'Sagrado Corazón de Jesús', '451980001', 'Cl. Huertas, 5', 'Cl. Huertas, 5', '925152025',
+         '45004454', 'Sagrado Corazón de Jesús', '451980001', 'Cl. Huertas, 5', '45310', '925152025',
          '925152256', '45004454.cp@edu.jccm.es', 'http://ceip-sagradocorazondejesus.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15577,7 +15577,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004466', 'Fernando de Alarcón', '451990001', 'Cr. de Cedillo, S/N', 'Cr. de Cedillo, S/N', '925559597',
+         '45004466', 'Fernando de Alarcón', '451990001', 'Cr. de Cedillo, S/N', '45215', '925559597',
          '925559597', '45004466.cp@edu.jccm.es', 'http://ceip-fernandodealarcon.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15586,7 +15586,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45011987', 'Miguel Delibes', '451990001', 'Cl. Federico Martin Bahamontes, S/N', 'Cl. Federico Martin Bahamontes, S/N', '680221480',
+         '45011987', 'Miguel Delibes', '451990001', 'Cl. Federico Martin Bahamontes, S/N', '45215', '680221480',
          '925559855', '45011987.cp@edu.jccm.es', 'http://edu.jccm.es/cp.migueldelibes', 'Público', 'CEIP'
         )
         ;
@@ -15595,7 +15595,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013510', 'Patuko'S', '451990001', 'Cl. Cigüeña, 1', 'Cl. Cigüeña, 1', '925526386',
+         '45013510', 'PatukoS', '451990001', 'Cl. Cigüeña, 1', '45215', '925526386',
          '', 'caipatukos@terra.es', '', 'Público', 'EI'
         )
         ;
@@ -15604,7 +15604,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013054', '- Sin Denominación -', '452000005', 'Cl. Fernandez de los Rios, 43', 'Cl. Fernandez de los Rios, 43', '925320181',
+         '45013054', '- Sin Denominación -', '452000005', 'Cl. Fernandez de los Rios, 43', '45470', '925320181',
          '925320855', 'mjesus@losyebenes.es', '', 'Público', 'EI'
         )
         ;
@@ -15613,7 +15613,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012050', '- Sin Denominación -', '452000005', 'Pz. de San Juan, 4', 'Pz. de San Juan, 4', '',
+         '45012050', '- Sin Denominación -', '452000005', 'Pz. de San Juan, 4', '45470', '',
          '', '', '', 'Público', ''
         )
         ;
@@ -15622,7 +15622,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45005689', 'Guadalerzas', '452000005', 'Av. de Europa, 6', 'Av. de Europa, 6', '925348269',
+         '45005689', 'Guadalerzas', '452000005', 'Av. de Europa, 6', '45470', '925348269',
          '925348164', '45005689.ies@edu.jccm.es', 'http://ies-guadalerzas.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -15631,7 +15631,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004478', 'San José de Calasanz', '452000005', 'Cl. Concepcion, S/N', 'Cl. Concepcion, S/N', '925320017',
+         '45004478', 'San José de Calasanz', '452000005', 'Cl. Concepcion, S/N', '45470', '925320017',
          '925322610', '45004478.cp@edu.jccm.es', 'http://ceip-sanjosedecalasanz.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15640,7 +15640,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013066', 'Rocinante', '452010001', 'Ps. de Guaten, 22', 'Ps. de Guaten, 22', '',
+         '45013066', 'Rocinante', '452010001', 'Ps. de Guaten, 22', '45220', '',
          '', '', '', 'Público', 'EI'
         )
         ;
@@ -15649,7 +15649,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004533', 'San Antonio', '452010001', 'Cl. Vidal Garcia Seves, S/N', 'Cl. Vidal Garcia Seves, S/N', '925545124',
+         '45004533', 'San Antonio', '452010001', 'Cl. Vidal Garcia Seves, S/N', '45220', '925545124',
          '925545124', '45004533.cp@edu.jccm.es', 'http://ceip-sanantonioyeles.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15658,7 +15658,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45000746', 'A.M.A.F.I.', '452020001', 'Cr. de Yepes a Ciruelos, S/N', 'Cr. de Yepes a Ciruelos, S/N', '925155570',
+         '45000746', 'A.M.A.F.I.', '452020001', 'Cr. de Yepes a Ciruelos, S/N', '45313', '925155570',
          '925154862', 'aamafi@terra.es', '', 'Priv.Concert.', ''
         )
         ;
@@ -15667,7 +15667,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006177', 'Carpetania', '452020001', 'Av. de las Escuelas, S/N', 'Av. de las Escuelas, S/N', '925154364',
+         '45006177', 'Carpetania', '452020001', 'Av. de las Escuelas, S/N', '45313', '925154364',
          '925147216', '45006177.ies@edu.jccm.es', 'http://edu.jccm.es/ies/carpetania', 'Público', 'IES'
         )
         ;
@@ -15676,7 +15676,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013078', 'Fuentearriba', '452020001', 'Av. Juan Pablo Ii, S/N', 'Av. Juan Pablo Ii, S/N', '925154361',
+         '45013078', 'Fuentearriba', '452020001', 'Av. Juan Pablo Ii, S/N', '45313', '925154361',
          '925147231', 'caifuentearriba@hotmail.com', '', 'Público', 'EI'
         )
         ;
@@ -15685,7 +15685,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013947', 'Niña María', '452020001', 'Cl. Hospital, 6', 'Cl. Hospital, 6', '',
+         '45013947', 'Niña María', '452020001', 'Cl. Hospital, 6', '45313', '',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -15694,7 +15694,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004557', 'Rafael García Valiño', '452020001', 'Av. del Maestro, S/N', 'Av. del Maestro, S/N', '925154288',
+         '45004557', 'Rafael García Valiño', '452020001', 'Av. del Maestro, S/N', '45313', '925154288',
          '925147064', '45004557.cp@edu.jccm.es', 'http://ceip-yepes.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15703,7 +15703,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004582', 'Remigio Laín', '452030001', 'Cl. Doña Jimena, 1', 'Cl. Doña Jimena, 1', '925531146',
+         '45004582', 'Remigio Laín', '452030001', 'Cl. Doña Jimena, 1', '45529', '925531146',
          '925531146', '45004582.cp@edu.jccm.es', 'http://ceip-remigiolain.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15712,7 +15712,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004594', 'Nuestra Señora de la Salud', '452040001', 'Cm. de Toledo, 5', 'Cm. de Toledo, 5', '925356107',
+         '45004594', 'Nuestra Señora de la Salud', '452040001', 'Cm. de Toledo, 5', '45591', '925356107',
          '925356107', '45004594.cp@edu.jccm.es', 'http://edu.jccm.es/cp.nsdelasalud', 'Público', 'CEIP'
         )
         ;
@@ -15721,7 +15721,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013492', 'Acuarela', '452050001', 'Cl. Garcilaso de la Vega, 2', 'Cl. Garcilaso de la Vega, 2', '925557060',
+         '45013492', 'Acuarela', '452050001', 'Cl. Garcilaso de la Vega, 2', '45210', '925557060',
          '', 'escuelainfantilacuarela@yuncos.es', '', 'Público', 'EI'
         )
         ;
@@ -15730,7 +15730,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45010511', 'Guillermo Plaza', '452050001', 'Cl. Torrejón de la Calzada, 4', 'Cl. Torrejón de la Calzada, 4', '925536253',
+         '45010511', 'Guillermo Plaza', '452050001', 'Cl. Torrejón de la Calzada, 4', '45210', '925536253',
          '925536253', '45010511.cp@edu.jccm.es', 'http://ceip-guillermoplaza.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15739,7 +15739,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45006189', 'La Cañuela', '452050001', 'Cl. Magallanes, 2', 'Cl. Magallanes, 2', '925557923',
+         '45006189', 'La Cañuela', '452050001', 'Cl. Magallanes, 2', '45210', '925557923',
          '925553938', '45006189.ies@edu.jccm.es', 'http://ies-lacanuela.centros.castillalamancha.es', 'Público', 'IES'
         )
         ;
@@ -15748,7 +15748,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013455', 'La Casita de Bambi', '452050001', 'Cl. Hijos de Daniel Aguado, 24', 'Cl. Hijos de Daniel Aguado, 24', '925553812',
+         '45013455', 'La Casita de Bambi', '452050001', 'Cl. Hijos de Daniel Aguado, 24', '45210', '925553812',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -15757,7 +15757,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45013467', 'La Villita de Yuncos', '452050001', 'Cl. Santa Gema, 27', 'Cl. Santa Gema, 27', '925536306',
+         '45013467', 'La Villita de Yuncos', '452050001', 'Cl. Santa Gema, 27', '45210', '925536306',
          '', '', '', 'Privado', 'EI'
         )
         ;
@@ -15766,7 +15766,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45004600', 'Nuestra Señora del Consuelo', '452050001', 'Cl. Lepanto, 6', 'Cl. Lepanto, 6', '925537117',
+         '45004600', 'Nuestra Señora del Consuelo', '452050001', 'Cl. Lepanto, 6', '45210', '925537117',
          '925537117', '45004600.cp@edu.jccm.es', 'http://ceip-nsconsuelo.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;
@@ -15775,7 +15775,7 @@ BEGIN TRANSACTION;
         (codigo_centro, nombre_centro, codigo_localidad,
         direccion_postal, codigo_postal, tlf, fax, email, web, naturaleza,tipo_centro)
         values (
-         '45012104', 'Villa de Yuncos', '452050001', 'Cl. Villaluenga, 4', 'Cl. Villaluenga, 4', '925525941',
+         '45012104', 'Villa de Yuncos', '452050001', 'Cl. Villaluenga, 4', '45210', '925525941',
          '925525941', '45012104.cp@edu.jccm.es', 'http://ceip-villadeyuncos.centros.castillalamancha.es', 'Público', 'CEIP'
         )
         ;

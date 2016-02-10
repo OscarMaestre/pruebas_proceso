@@ -26,7 +26,13 @@ class GestorBD(object):
         sql="\tsql=\""+sentencia+"\"\n"
         sql+="\tdb.Execute sql, dbFailOnError\n"
         return sql
-
+    
+    def crear_tabla_itinerancias(self, nombre_tabla=NOMBRE_TABLA_ITINERANCIAS):
+        self.ejecutar_sentencias(
+            [
+                SQL_CREACION_PLANTILLAS.format ( nombre_tabla )
+            ]
+        )
     def get_procedimiento(nombre, sql_intermedio):
         inicio=get_preludio_sql(nombre)
         fin=get_fin_sql()

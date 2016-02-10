@@ -47,6 +47,14 @@ class GestorFicheros(object):
             texto+=l
         return texto
     
+    
+    def reemplazar_espacios(self, nombre):
+        temp=nombre.replace(" ", "_")
+        temp=temp.replace("(", "_")
+        temp=temp.replace(")", "_")
+        #print ("Nombre viejo {0}, nombre nuevo {1}".format(nombre, temp))
+        return temp
+
     def aplicar_comando (self, comando, fichero, *args):
         
         cmd=comando + " "+fichero
@@ -63,13 +71,13 @@ class GestorFicheros(object):
         return nombre_fichero
     
     def copiar_fichero(self, nombre_origen, nombre_destino):
-        aplicar_comando(self.COPIAR, nombre_origen, nombre_destino)
+        self.aplicar_comando(self.COPIAR, nombre_origen, nombre_destino)
         
     def borrar_fichero(self, nombre_fichero):
-        aplicar_comando(self.BORRAR, nombre_fichero)
+        self.aplicar_comando(self.BORRAR, nombre_fichero)
         
     def concatenar_fichero(self, fichero1, fichero2):
-        aplicar_comando(self.CONCAT, fichero1, " >> ", fichero2)
+        self.aplicar_comando(self.CONCAT, fichero1, " >> ", fichero2)
         
     def obtener_ficheros(self, patron):
         return glob.glob(patron)

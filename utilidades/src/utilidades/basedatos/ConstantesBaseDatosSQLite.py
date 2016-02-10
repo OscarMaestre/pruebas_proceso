@@ -32,6 +32,18 @@ create table if not exists {0}(
 );
 """
 
+NOMBRE_TABLA_ITINERANCIAS="itinerancias"
+SQL_CREACION_ITINERANCIAS="""
+CREATE TABLE if not exists {0} (
+    codigo_especialidad 	char(150),
+    codigo_centro_origen	char(10),
+    codigo_centro_destino	char(10),
+    anio			int,
+    foreign key (codigo_especialidad) references especialidades(especialidad),
+    foreign key (codigo_centro_origen) references especialidades(centros_region),
+    foreign key (codigo_centro_destino) references especialidades(centros_region)
+)
+""".format ( NOMBRE_TABLA_ITINERANCIAS )
 
 NOMBRE_TABLA_PLANTILLAS="plantillas"
 SQL_CREACION_PLANTILLAS="""
@@ -41,7 +53,9 @@ CREATE TABLE if not exists {0} (
     codigo_centro char(10),
     codigo_especialidad char(150),
     tipo_plaza char(20),
-    cantidad integer   );
+    cantidad integer,
+    foreign key (codigo_especialidad) references especialidades(especialidad)
+    );
 """
 
 if (platform.system()=="Linux"):

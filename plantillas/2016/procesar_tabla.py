@@ -2,7 +2,7 @@
 
 import os, sys, re
 
-NUM_SUBDIRECTORIOS_ANTERIORES=1
+NUM_SUBDIRECTORIOS_ANTERIORES=2
 SEPARADOR=os.sep
 
 RUTA_PAQUETE_BD=(".."+SEPARADOR) * NUM_SUBDIRECTORIOS_ANTERIORES
@@ -160,13 +160,7 @@ while i < len(lineas):
         
         sql+=inserts
     i=i+1
+
+for sentencia in sql:
+    print (sentencia)
     
-    
-GestorDB.BD_RESULTADOS.activar_depuracion()
-GestorDB.BD_RESULTADOS.ejecutar_sentencias (
-    [GestorDB.SQL_CREACION_PLANTILLAS.format (
-        GestorDB.NOMBRE_TABLA_PLANTILLAS
-    )]
-)
-print (sql)
-GestorDB.BD_RESULTADOS.ejecutar_sentencias( sql )

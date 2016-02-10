@@ -73,7 +73,8 @@ class Centro(object):
                  codigo_localidad, nombre_provincia, tlf, fax, email, web, lista_ensenanzas):
         self.naturaleza=naturaleza
         self.codigo_centro=codigo_centro
-        self.nombre_centro=nombre_centro
+        #Hay muchos nombre como kid's y la comilla estropea cadenas
+        self.nombre_centro=nombre_centro.replace("'", "")
         self.direccion_postal=direccion_postal
         self.codigo_postal=codigo_postal
         self.nombre_localidad=nombre_localidad
@@ -116,7 +117,7 @@ class Centro(object):
             email           char(140),
             web             char(140),
             naturaleza      char(20),
-            tipo_centro     char(20)
+            tipo_centro     char(20),
             foreign key (codigo_localidad) references localidades(codigo_localidad)
                 on delete cascade on update cascade
         )"""
@@ -140,7 +141,7 @@ class Centro(object):
         """
         sql_centro=sql_centro.format (nombre_tabla,
             self.codigo_centro, self.nombre_centro, self.codigo_localidad,
-            self.direccion_postal, self.direccion_postal, self.tlf, self.fax, self.email,
+            self.direccion_postal, self.codigo_postal, self.tlf, self.fax, self.email,
             self.web, self.naturaleza, self.tipo_centro
         )
         return sql_centro

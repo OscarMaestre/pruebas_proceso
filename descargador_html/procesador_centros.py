@@ -43,6 +43,7 @@ def procesar_archivo_centro(nombre_archivo):
 def corregir_nombre_localidad(nombre_localidad):
     temp=nombre_localidad
     temp=temp.replace("VI", "Vi")
+    temp=temp.replace("'", "")
     articulos=[" (El)", " (La)", " (Los)", " (Las)"]
     corregir=["El ", "La ", "Los ", "Las "]
     for i in range(0, len(articulos)):
