@@ -45,7 +45,8 @@ class Especialidades(models.Model):
     descripcion = models.TextField(blank=True, null=True)  # This field type is a guess.
     idioma = models.TextField(blank=True, null=True)  # This field type is a guess.
     tiempo_parcial = models.TextField(blank=True, null=True)  # This field type is a guess.
-
+    def __str__(self):
+	    return self.especialidad + " " + self.descripcion
     class Meta:
         managed = False
         db_table = 'especialidades'
