@@ -4,3 +4,4 @@ from django.contrib import admin
 from .models import Localidades, Especialidades
 
 admin.site.register(Localidades)
+admin.site.register(Especialidades)
