@@ -57,6 +57,18 @@ sql_busqueda_codigo_localidad = "select codigo_localidad from localidades where 
 sql_busqueda_codigo_centro="select codigo_centro from centros_region where codigo_localidad='{0}'"
 gf=GestorFicheros()
 lista_centros=[]
+
+paro_maestros=Centro("", "9999", "MAESTROS PARO", "",
+                     "", "", "",
+                     "", "", "", "", "", "")
+lista_centros.append( paro_maestros )
+paro_sec=Centro("", "9998", "EEMM PARO", "",
+                     "", "", "",
+                     "", "", "", "", "", "")
+lista_centros.append( paro_sec )
+
+
+
 bd=GestorBD ( ARCHIVO_RESULTADOS )
 for i in range ( 0, TOTAL_PAGINAS):
 #for i in range ( 0, 50):

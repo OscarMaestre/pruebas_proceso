@@ -87,6 +87,7 @@ class Centro(object):
         self.lista_ensenanzas=lista_ensenanzas
         self.tipo_centro=""
         self.adivinar_tipo_centro()
+        self.corregir_nombre()
     def adivinar_tipo_centro(self):
         for e in self.lista_ensenanzas:
             if e.nombre.find("Infantil")!=-1 and e.nombre.find("Primer Ciclo")!=-1:
@@ -99,8 +100,11 @@ class Centro(object):
             if self.email.find( emails[i])!=-1:
                 self.tipo_centro=tipos[i]
                 return
+        self.tipo_centro="DESCONOCIDO"
         
-        self.tipo="DESCONOCIDO"
+    def corregir_nombre(self):
+        if self.tipo_centro!="DESCONOCIDO":
+            self.nombre_centro=self.tipo_centro + " " + self.nombre_centro
     @staticmethod
     def get_sql_creacion_sqlite(nombre_tabla):
         sentencias_sql=[]
