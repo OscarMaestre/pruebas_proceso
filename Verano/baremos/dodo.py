@@ -45,12 +45,12 @@ for f in ficheros_pdf:
         utilidades.aplicar_comando(CONVERTIR, f)
     
     
-ficheros_txt=utilidades.obtener_ficheros("*EEMM*2015*.txt")
+ficheros_txt=utilidades.obtener_ficheros("*EEMM*2016*.txt")
 for f in ficheros_txt:
     utilidades.aplicar_comando(EXTRACTOR,f, "2015", NOMBRE_BD)
     #utilidades.borrar_fichero(nombre_escapado)
     
-ficheros_txt=utilidades.obtener_ficheros("*Maestros*2015*.txt")
+ficheros_txt=utilidades.obtener_ficheros("*Maestros*2016*.txt")
 for f in ficheros_txt:
     utilidades.aplicar_comando(EXTRACTOR_MAESTROS,f, "2015", NOMBRE_BD)
     
