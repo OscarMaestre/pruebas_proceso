@@ -220,8 +220,8 @@ def obtener_ficheros(patron):
     return glob.glob(patron)
 
 
-def get_lineas_fichero(nombre_fichero):
-    with open(nombre_fichero, "r") as f:
+def get_lineas_fichero(nombre_fichero, codificacion="utf-8"):
+    with open(nombre_fichero, "r", encoding=codificacion) as f:
         lineas=f.readlines()
         f.close()
     return lineas

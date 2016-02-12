@@ -15,7 +15,7 @@ sys.path.insert(0, DIRECTORIO)
 import GestorDB
 import utilidades
 
-ANIO_ACTUAL=2016
+ANIO_ACTUAL=2017
 TABLA_GASEOSA="gaseosa"
 TABLA_ERRORES="errores"
 ARCHIVO_BD=sys.argv[1]
@@ -61,7 +61,7 @@ for f in filas_nif:
     )
     NOMBRE_FICHERO=DIRECTORIO_INFORMES+os.sep+"Recurso"+dni
     utilidades.escribir_en_fichero(informe_usuario, NOMBRE_FICHERO+".html")
-    utilidades.aplicar_comando("pandoc", "-o ", NOMBRE_FICHERO+".docx", NOMBRE_FICHERO+".html")
+    #utilidades.aplicar_comando("pandoc", "-o ", NOMBRE_FICHERO+".docx", NOMBRE_FICHERO+".html")
     utilidades.enviar_email(
         "Servicio afiliados", "torrente76@yahoo.es", "Errores en el baremo",
         informe_usuario,

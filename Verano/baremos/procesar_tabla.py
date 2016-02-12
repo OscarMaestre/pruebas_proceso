@@ -176,9 +176,10 @@ for i in range(0, total_lineas):
         #print(":".join(decimales_parte2))
         #print(":".join(decimales_parte3))
 
+
 #gestor_db.activar_depuracion()
 #print (sql_participantes)
 gestor_db.ejecutar_sentencias(sql_participantes)
+gestor_db.ejecutar_sentencias(sql_errores)
 gestor_db.ejecutar_sentencias(sql_participantes_especialidades)
 gestor_db.ejecutar_sentencias(sql_resultas)
-gestor_db.ejecutar_sentencias(sql_errores)
