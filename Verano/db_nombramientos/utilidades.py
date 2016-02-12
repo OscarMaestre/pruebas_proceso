@@ -180,8 +180,8 @@ def anadir_a_fichero(texto, nombre_fichero):
     with open (nombre_fichero, "a") as f:
         f.write(texto)
         
-def leer_linea_fichero(num_linea, nombre_fichero):
-    with open (nombre_fichero, "r") as f:
+def leer_linea_fichero(num_linea, nombre_fichero, codificacion="utf-8"):
+    with open (nombre_fichero, "r", encoding=codificacion) as f:
         lineas=f.readlines()
         return lineas[num_linea].strip()
     
