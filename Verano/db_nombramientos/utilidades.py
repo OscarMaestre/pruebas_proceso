@@ -581,8 +581,6 @@ NOMBRE_TABLA_ERRORES="errores"
 SQL_CREACION_PARTICIPANTES="""
 create table if not exists {0} (
     nif character(12) ,
-    anio_oposicion unsigned int,
-    nota_oposicion float,
     nombre_completo character(160),
     primary key (nif)
 )
@@ -594,8 +592,9 @@ SQL_CREACION_ESPECIALIDADES_PARTICIPANTES="""
 create table if not exists {0} (
     nif character(12),
     anio_participacion unsigned int,
+    anio_oposicion unsigned int,
+    nota_oposicion float,
     especialidad char(10),
-    primary key (nif, especialidad),
     foreign key (nif) references {1}(nif)
 )
 """

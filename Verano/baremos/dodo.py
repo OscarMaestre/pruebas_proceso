@@ -19,7 +19,13 @@ import platform
 import glob
 
 
-NOMBRE_BD="baremos.db"
+try:
+    NOMBRE_BD=sys.argv[1]
+    db=GestorDB.GestorDB(NOMBRE_BD)
+    db.crear_tabla_todas_especialidades("especialidades")
+except:
+    NOMBRE_BD=( (".." + os.sep )*3 ) + "docencia.db"
+    
 
 CONVERTIR="pdftotext -layout -nopgbrk "
 EXTRACTOR="procesar_tabla.py "
@@ -31,6 +37,7 @@ if platform.system()=="Linux":
 FICH_RESULTADO="resultado.csv"
     
 
+utilidades.aplicar_comando ( "cat ",  "borrado.txt ",  "| sqlite3 ", NOMBRE_BD)
 ficheros_pdf=utilidades.obtener_ficheros("*.pdf")
 for f in ficheros_pdf:
     nombre_sin_espacios=utilidades.reemplazar_espacios(f)
@@ -43,15 +50,23 @@ for f in ficheros_pdf:
     if not utilidades.existe_fichero(f[:-4]+".txt"):
         nombre_escapado=utilidades.escapar_fichero_con_espacios(f)
         utilidades.aplicar_comando(CONVERTIR, f)
-    
-    
-ficheros_txt=utilidades.obtener_ficheros("*EEMM*2016*.txt")
+
+
+ficheros_txt=utilidades.obtener_ficheros("*597*2016*.txt")
 for f in ficheros_txt:
-    utilidades.aplicar_comando(EXTRACTOR,f, "2015", NOMBRE_BD)
+    utilidades.aplicar_comando(EXTRACTOR_MAESTROS,f, "2016", NOMBRE_BD)    
+    
+ficheros_txt=utilidades.obtener_ficheros("*590*2016*.txt")
+for f in ficheros_txt:
+    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD)
+    #utilidades.borrar_fichero(nombre_escapado)
+
+
+ficheros_txt=utilidades.obtener_ficheros("*591*2016*.txt")
+for f in ficheros_txt:
+    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD)
     #utilidades.borrar_fichero(nombre_escapado)
     
-ficheros_txt=utilidades.obtener_ficheros("*Maestros*2016*.txt")
-for f in ficheros_txt:
-    utilidades.aplicar_comando(EXTRACTOR_MAESTROS,f, "2015", NOMBRE_BD)
+
     
     

@@ -115,8 +115,9 @@ for i in range(0, total_lineas):
             lista_campos_especialidades_participantes=ListaCampos.ListaCampos()
             lista_campos_especialidades_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
             #lista_campos_especialidades_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
-            lista_campos_especialidades_participantes.anadir("anio_participacion", ANO_PUBLICACION_BAREMO)
-            
+            lista_campos_especialidades_participantes.anadir("anio_participacion", ANO_PUBLICACION_BAREMO, ListaCampos.ListaCampos.NUMERO)
+            lista_campos_especialidades_participantes.anadir("anio_oposicion", anio_oposicion, ListaCampos.ListaCampos.CADENA)
+            lista_campos_especialidades_participantes.anadir("nota_oposicion", nota_oposicion, ListaCampos.ListaCampos.CADENA)
             lista_campos_especialidades_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
             sql_participantes_especialidades.append(
                 lista_campos_especialidades_participantes.generar_insert(
@@ -125,11 +126,10 @@ for i in range(0, total_lineas):
         
         lista_campos_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
         lista_campos_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
-        lista_campos_participantes.anadir("anio_oposicion", anio_oposicion, ListaCampos.ListaCampos.NUMERO)
-        lista_campos_participantes.anadir("nota_oposicion", nota_oposicion, ListaCampos.ListaCampos.NUMERO)
+        
         #lista_campos_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
         sql_participantes.append(
-            lista_campos_participantes.generar_insert(utilidades.NOMBRE_TABLA_PARTICIPANTES)
+            lista_campos_participantes.generar_insert(utilidades.NOMBRE_TABLA_PARTICIPANTES, con_ignore=True)            
         )
         
         parte1=lineas_fichero[i+1]

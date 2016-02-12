@@ -110,6 +110,8 @@ for i in range(0, total_lineas):
             #print (dni, centro_resulta, cod_especialidad)
             especialidad_resulta=codigo_cuerpo_actual+codigo_especialidad_actual
             lista_campos_resulta=ListaCampos.ListaCampos()
+            
+    
             lista_campos_resulta.anadir("nif", dni)
             lista_campos_resulta.anadir("anio_participacion", ANO_PUBLICACION_BAREMO, ListaCampos.ListaCampos.NUMERO)
             lista_campos_resulta.anadir("codigo_centro", centro_resulta+"C")
@@ -131,7 +133,8 @@ for i in range(0, total_lineas):
         lista_campos_especialidades_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
         #lista_campos_especialidades_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
         lista_campos_especialidades_participantes.anadir("anio_participacion", ANO_PUBLICACION_BAREMO)
-        
+        lista_campos_especialidades_participantes.anadir("anio_oposicion", anio_oposicion, ListaCampos.ListaCampos.NUMERO)
+        lista_campos_especialidades_participantes.anadir("nota_oposicion", nota_oposicion, ListaCampos.ListaCampos.NUMERO)
         lista_campos_especialidades_participantes.anadir("especialidad",
                                     codigo_cuerpo_actual+codigo_especialidad_actual)
         sql_participantes_especialidades.append(
@@ -141,8 +144,8 @@ for i in range(0, total_lineas):
         
         lista_campos_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
         lista_campos_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
-        lista_campos_participantes.anadir("anio_oposicion", anio_oposicion, ListaCampos.ListaCampos.NUMERO)
-        lista_campos_participantes.anadir("nota_oposicion", nota_oposicion, ListaCampos.ListaCampos.NUMERO)
+        
+        
         #lista_campos_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
         sql_participantes.append(
             lista_campos_participantes.generar_insert(utilidades.NOMBRE_TABLA_PARTICIPANTES, con_ignore=True)
