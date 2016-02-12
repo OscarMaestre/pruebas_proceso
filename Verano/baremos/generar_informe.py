@@ -61,9 +61,9 @@ for f in filas_nif:
     )
     NOMBRE_FICHERO=DIRECTORIO_INFORMES+os.sep+"Recurso"+dni
     utilidades.escribir_en_fichero(informe_usuario, NOMBRE_FICHERO+".html")
-    utilidades.aplicar_comando("pandoc", "-o ", NOMBRE_FICHERO+".docx", NOMBRE_FICHERO+".html")
-    utilidades.enviar_email(
-        "Servicio afiliados", "torrente76@yahoo.es", "Errores en el baremo",
-        informe_usuario,
-        utilidades.FICHERO_CONFIGURACION_EMAIL, [NOMBRE_FICHERO+".docx"]
-    )
+    #utilidades.aplicar_comando("pandoc", "-o ", NOMBRE_FICHERO+".docx", NOMBRE_FICHERO+".html")
+    #utilidades.enviar_email(
+    #    "Servicio afiliados", "torrente76@yahoo.es", "Errores en el baremo",
+    #    informe_usuario,
+    #    utilidades.FICHERO_CONFIGURACION_EMAIL, [NOMBRE_FICHERO+".docx"]
+    #)
