@@ -126,7 +126,11 @@ class GestorDB(object):
                 print("-"*20)
                 print (sql)
                 print("-"*20)
-            self.cursor.execute(sql)
+            try:
+                self.cursor.execute(sql)
+            except:
+                print("Fallo la sentencia siguiente:")
+                print(sql)
         self.conexion.commit()
     
     def get_filas(self, select):
@@ -154,7 +158,7 @@ class GestorDB(object):
         sql=SQL_CREACION_ESPECIALIDADES.format(nombre_tabla_especialidades)
         
         self.ejecutar_sentencias([sql])
-        ficheros=["590", "591", "592", "594", "595", "596", "597"]
+        ficheros=["590", "591", "592", "594", "595", "596", "597", "511"]
         for f in ficheros:
             self.crear_tabla_especialidades(f, nombre_tabla_especialidades)
             
@@ -194,7 +198,7 @@ class GestorDB(object):
         sql.append(insert_primaria)
         insert_secundaria="insert or ignore into especialidades values ('SECUNDARIA', 'DESCONOCIDA', 'ESPAÑOL', 'NO')"
         sql.append(insert_secundaria)
-        ficheros=["590", "591", "592", "594", "595", "596", "597"]
+        ficheros=["511", "590", "591", "592", "594", "595", "596", "597"]
         for f in ficheros:
             self.crear_tabla_especialidades(f, "especialidades")
         return sql

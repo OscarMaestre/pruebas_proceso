@@ -477,6 +477,35 @@ def get_iban(numero_de_cuenta):
         raise ValueError("El numero de cuenta {0} no tiene 20 digitos".format(numero_de_cuenta))
 
 
+
+def get_lista_campos_apartados():
+    campos=[]
+    for d in DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS:
+        pos_parentesis=d.find(")")
+        desc=d[0:pos_parentesis]
+        desc=desc.replace(".", "")
+        desc=desc.replace(" ", "")
+        campos.append(desc)
+    return campos
+
+def get_sql_puntuacion(nif, anio_participacion, especialidad, decimales_baremo, tipo_baremo, nombre_tabla_puntuaciones="puntuacion"):
+    sql="insert into {0} (nif, anio_participacion, especialidad, {1}, tipo_baremo) values ('{2}', {3}, '{4}', {5}, '{6}')"
+    campos=get_lista_campos_apartados()
+    lista_nombres_campos=",".join(campos)
+    cad_decimales=map(str, decimales_baremo)
+    valores_decimales=",".join(cad_decimales)
+    cad_sql=sql.format(nombre_tabla_puntuaciones, lista_nombres_campos,
+                       nif, anio_participacion, especialidad, valores_decimales, tipo_baremo)
+    return cad_sql
+    
+
+def get_sql_creacion_puntuacion(nombre_tabla_puntuacion, nombre_tabla_participantes):
+    campos=get_lista_campos_apartados()
+    lista_campos=",".join(campos)
+    #print(lista_campos)
+    sql=SQL_CREACION_PUNTUACION.format(nombre_tabla_puntuacion, lista_campos, nombre_tabla_participantes)
+    #print(sql)
+    return sql
 #Constantes de interés
 
 #Descripciones de los apartados del baremo en concursos de traslados
@@ -540,7 +569,7 @@ DESCRIPCIONES_APARTADOS_BAREMO_TRASLADOS=[
     #25
     "Ap 3.3.e) Por titulo(s) FP",
     #26
-    "Ap 3.3.e) Por titulo(s) Música/Danza",
+    "Ap 3.3.f) Por titulo(s) Música/Danza",
     #27
     "Ap 4) Cargos directivos",
     #28
@@ -595,7 +624,8 @@ create table if not exists {0} (
     anio_oposicion unsigned int,
     nota_oposicion float,
     especialidad char(10),
-    foreign key (nif) references {1}(nif)
+    foreign key (nif) references {1}(nif),
+    foreign key (especialidad) references {2}(especialidad)
 )
 """
 SQL_CREACION_ERRORES="""
@@ -618,6 +648,20 @@ create table if not exists {0} (
     codigo_centro char(10),
     especialidad char(10),
     primary key (nif, especialidad),
-    foreign key (nif) references {1}(nif)
+    foreign key (nif) references {1}(nif),
+    foreign key (especialidad) references {2}(especialidad)
+)
+"""
+
+
+NOMBRE_TABLA_PUNTUACION="puntuacion"
+SQL_CREACION_PUNTUACION="""
+create table if not exists {0} (
+    nif character(12),
+    anio_participacion unsigned int,
+    especialidad char(10),
+    tipo_baremo char(15),
+    {1}
+    ,foreign key (nif) references {2}(nif)
 )
 """

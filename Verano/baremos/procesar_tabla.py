@@ -20,7 +20,6 @@ import re
 
 
 
-ANO_PUBLICACION_BAREMO=sys.argv[2]
 
 re_cuerpo="Cuerpo:( )+05[0-9]{2}"
 expr_regular_cuerpo=re.compile(re_cuerpo)
@@ -36,8 +35,12 @@ def get_sql_lista_especialidades(str_especialidades):
         
 
 
+lineas_fichero=utilidades.get_lineas_fichero(sys.argv[1])
+ANO_PUBLICACION_BAREMO=sys.argv[2]
+BASE_DE_DATOS=sys.argv[3]
+TIPO_BAREMO=sys.argv[4]
 
-gestor_db=GestorDB.GestorDB(sys.argv[3])
+gestor_db=GestorDB.GestorDB( BASE_DE_DATOS )
 gestor_db.crear_tabla_todas_especialidades(utilidades.NOMBRE_TABLA_ESPECIALIDADES)
 gestor_db.ejecutar_sentencias([utilidades.SQL_CREACION_PARTICIPANTES.format(
     utilidades.NOMBRE_TABLA_PARTICIPANTES,
@@ -51,23 +54,25 @@ gestor_db.ejecutar_sentencias(
 
 gestor_db.ejecutar_sentencias(
     [utilidades.SQL_CREACION_ESPECIALIDADES_PARTICIPANTES.format(
-        utilidades.NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES, utilidades.NOMBRE_TABLA_PARTICIPANTES)]
+        utilidades.NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES,
+        utilidades.NOMBRE_TABLA_PARTICIPANTES,
+        utilidades.NOMBRE_TABLA_ESPECIALIDADES)]
 )
 
 gestor_db.ejecutar_sentencias(
     [utilidades.SQL_CREACION_RESULTAS.format(
-        utilidades.NOMBRE_TABLA_RESULTAS, utilidades.NOMBRE_TABLA_PARTICIPANTES)]
+        utilidades.NOMBRE_TABLA_RESULTAS, utilidades.NOMBRE_TABLA_PARTICIPANTES,utilidades.NOMBRE_TABLA_ESPECIALIDADES)]
 )
 
 
 
 
-lineas_fichero=utilidades.get_lineas_fichero(sys.argv[1])
 
 sql_participantes=[]
 sql_resultas=[]
 sql_participantes_especialidades=[]
 sql_errores=[]
+sql_puntuacion=[]
 codigo_cuerpo_actual=""
 codigo_especialidad_actual=""
 total_lineas=len(lineas_fichero)
@@ -77,13 +82,13 @@ for i in range(0, total_lineas):
         expr_regular_cuerpo, l
     )
     if (codigo_cuerpo!=utilidades.PATRON_NO_ENCONTRADO):
-        codigo_cuerpo_actual=codigo_cuerpo[11:15]
+        codigo_cuerpo_actual=codigo_cuerpo[11:15].strip()
         
     (inicio_especialidad, fin_especialidad, codigo_especialidad)=utilidades.extraer_patron(
         expr_regular_codigo_especialidad, l
     )
     if (codigo_especialidad!=utilidades.PATRON_NO_ENCONTRADO):
-        codigo_especialidad_actual=codigo_especialidad[13:18]
+        codigo_especialidad_actual=codigo_especialidad[13:18].strip()
         
         
     lista_campos_participantes=ListaCampos.ListaCampos()
@@ -165,6 +170,10 @@ for i in range(0, total_lineas):
             print(nombre, len(decimales_baremo))
             print (decimales_baremo)
             
+        sql_puntuacion.append(
+            utilidades.get_sql_puntuacion(dni, ANO_PUBLICACION_BAREMO,
+                                          codigo_cuerpo_actual.strip()+codigo_especialidad_actual,
+                                          decimales_baremo, TIPO_BAREMO)  )
         #Aqui se comprueban si los totales que calculamos nosotros coinciden con los
         #que publica la junta
         #Por ejemplo, lo que hay en la posicion 0 del baremo de decimales debería ser la
@@ -186,3 +195,4 @@ gestor_db.ejecutar_sentencias(sql_participantes)
 gestor_db.ejecutar_sentencias(sql_errores)
 gestor_db.ejecutar_sentencias(sql_participantes_especialidades)
 gestor_db.ejecutar_sentencias(sql_resultas)
+gestor_db.ejecutar_sentencias(sql_puntuacion)

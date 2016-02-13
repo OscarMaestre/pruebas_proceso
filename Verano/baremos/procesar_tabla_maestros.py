@@ -20,8 +20,6 @@ import re
 
 
 
-ANO_PUBLICACION_BAREMO=sys.argv[2]
-
 
 def get_sql_lista_especialidades(str_especialidades):
     especialidades=str_especialidades.strip()
@@ -32,11 +30,21 @@ def get_sql_lista_especialidades(str_especialidades):
 re_codigo_centro="[0-9]{8}"
 expr_regular_codigo_centro=re.compile(re_codigo_centro)
 
+FICHERO=sys.argv[1]
+ANO_PUBLICACION_BAREMO=sys.argv[2]
+TIPO_BAREMO=sys.argv[4]
 gestor_db=GestorDB.GestorDB(sys.argv[3])
 gestor_db.crear_tabla_todas_especialidades(utilidades.NOMBRE_TABLA_ESPECIALIDADES)
 gestor_db.ejecutar_sentencias([utilidades.SQL_CREACION_PARTICIPANTES.format(
     utilidades.NOMBRE_TABLA_PARTICIPANTES,
     utilidades.NOMBRE_TABLA_ESPECIALIDADES)]
+)
+
+gestor_db.ejecutar_sentencias( [
+    utilidades.get_sql_creacion_puntuacion(
+        utilidades.NOMBRE_TABLA_PUNTUACION, utilidades.NOMBRE_TABLA_PARTICIPANTES
+    )
+    ]
 )
 
 gestor_db.ejecutar_sentencias(
@@ -46,23 +54,26 @@ gestor_db.ejecutar_sentencias(
 
 gestor_db.ejecutar_sentencias(
     [utilidades.SQL_CREACION_ESPECIALIDADES_PARTICIPANTES.format(
-        utilidades.NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES, utilidades.NOMBRE_TABLA_PARTICIPANTES)]
+        utilidades.NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES,
+        utilidades.NOMBRE_TABLA_PARTICIPANTES,
+        utilidades.NOMBRE_TABLA_ESPECIALIDADES)]
 )
 
 gestor_db.ejecutar_sentencias(
     [utilidades.SQL_CREACION_RESULTAS.format(
-        utilidades.NOMBRE_TABLA_RESULTAS, utilidades.NOMBRE_TABLA_PARTICIPANTES)]
+        utilidades.NOMBRE_TABLA_RESULTAS, utilidades.NOMBRE_TABLA_PARTICIPANTES, utilidades.NOMBRE_TABLA_ESPECIALIDADES)]
 )
 
 
 
 
-lineas_fichero=utilidades.get_lineas_fichero(sys.argv[1])
+lineas_fichero=utilidades.get_lineas_fichero(FICHERO)
 
 sql_participantes=[]
 sql_resultas=[]
 sql_participantes_especialidades=[]
 sql_errores=[]
+sql_puntuacion=[]
 
 total_lineas=len(lineas_fichero)
 for i in range(0, total_lineas):
@@ -111,18 +122,7 @@ for i in range(0, total_lineas):
             lista_especialidades=get_sql_lista_especialidades(utilidades.ESPECIALIDAD_DESCONOCIDA)
         else:
             lista_especialidades=get_sql_lista_especialidades(especialidades)
-        for especialidad in lista_especialidades:
-            lista_campos_especialidades_participantes=ListaCampos.ListaCampos()
-            lista_campos_especialidades_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
-            #lista_campos_especialidades_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
-            lista_campos_especialidades_participantes.anadir("anio_participacion", ANO_PUBLICACION_BAREMO, ListaCampos.ListaCampos.NUMERO)
-            lista_campos_especialidades_participantes.anadir("anio_oposicion", anio_oposicion, ListaCampos.ListaCampos.CADENA)
-            lista_campos_especialidades_participantes.anadir("nota_oposicion", nota_oposicion, ListaCampos.ListaCampos.CADENA)
-            lista_campos_especialidades_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
-            sql_participantes_especialidades.append(
-                lista_campos_especialidades_participantes.generar_insert(
-                    utilidades.NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES )
-            )
+        
         
         lista_campos_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
         lista_campos_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
@@ -145,7 +145,22 @@ for i in range(0, total_lineas):
             print ("ERROR, el baremo de {0} no tiene 43 decimales", nombre)
             print(nombre, len(decimales_baremo))
             print (decimales_baremo)
-            
+        for especialidad in lista_especialidades:
+            lista_campos_especialidades_participantes=ListaCampos.ListaCampos()
+            lista_campos_especialidades_participantes.anadir("nif", dni, ListaCampos.ListaCampos.CADENA)
+            #lista_campos_especialidades_participantes.anadir("nombre_completo", nombre, ListaCampos.ListaCampos.CADENA)
+            lista_campos_especialidades_participantes.anadir("anio_participacion", ANO_PUBLICACION_BAREMO, ListaCampos.ListaCampos.NUMERO)
+            lista_campos_especialidades_participantes.anadir("anio_oposicion", anio_oposicion, ListaCampos.ListaCampos.CADENA)
+            lista_campos_especialidades_participantes.anadir("nota_oposicion", nota_oposicion, ListaCampos.ListaCampos.CADENA)
+            lista_campos_especialidades_participantes.anadir("especialidad", "0597"+especialidad, ListaCampos.ListaCampos.CADENA)
+            sql_participantes_especialidades.append(
+                lista_campos_especialidades_participantes.generar_insert(
+                    utilidades.NOMBRE_TABLA_ESPECIALIDADES_PARTICIPANTES )
+            )
+            sql_puntuacion.append(
+            utilidades.get_sql_puntuacion(dni, ANO_PUBLICACION_BAREMO,
+                                          "0597"+especialidad,
+                                          decimales_baremo, TIPO_BAREMO)  )    
         #Aqui se comprueban si los totales que calculamos nosotros coinciden con los
         #que publica la junta
         #Por ejemplo, lo que hay en la posicion 0 del baremo de decimales debería ser la
@@ -166,3 +181,4 @@ gestor_db.ejecutar_sentencias(sql_participantes)
 gestor_db.ejecutar_sentencias(sql_participantes_especialidades)
 gestor_db.ejecutar_sentencias(sql_resultas)
 gestor_db.ejecutar_sentencias(sql_errores)
+gestor_db.ejecutar_sentencias(sql_puntuacion)

@@ -2,4 +2,5 @@ drop table participantes;
 drop table especialidades_participantes;
 drop table resultas;
 drop table errores;
+drop table puntuacion;
 .quit

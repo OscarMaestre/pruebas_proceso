@@ -60,7 +60,11 @@ class GestorBD(object):
                 print("-"*20)
                 print (sql)
                 print("-"*20)
-            self.cursor.execute(sql)
+            try:
+                self.cursor.execute(sql)
+            except:
+                print("Fallo la sentencia siguiente:")
+                print(sql)
         self.conexion.commit()
     
     def get_filas(self, select):

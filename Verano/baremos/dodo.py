@@ -37,6 +37,9 @@ if platform.system()=="Linux":
 FICH_RESULTADO="resultado.csv"
     
 
+PROVISIONAL="Provisional"
+DEFINITIVO="Definitivo"
+
 utilidades.aplicar_comando ( "cat ",  "borrado.txt ",  "| sqlite3 ", NOMBRE_BD)
 ficheros_pdf=utilidades.obtener_ficheros("*.pdf")
 for f in ficheros_pdf:
@@ -52,21 +55,38 @@ for f in ficheros_pdf:
         utilidades.aplicar_comando(CONVERTIR, f)
 
 
-ficheros_txt=utilidades.obtener_ficheros("*597*2016*.txt")
+ficheros_txt=utilidades.obtener_ficheros("*Provisional*597*2016*.txt")
 for f in ficheros_txt:
-    utilidades.aplicar_comando(EXTRACTOR_MAESTROS,f, "2016", NOMBRE_BD)    
+    utilidades.aplicar_comando(EXTRACTOR_MAESTROS,f, "2016", NOMBRE_BD, PROVISIONAL)    
     
-ficheros_txt=utilidades.obtener_ficheros("*590*2016*.txt")
+ficheros_txt=utilidades.obtener_ficheros("*Provisional*590*2016*.txt")
 for f in ficheros_txt:
-    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD)
+    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD, PROVISIONAL)
     #utilidades.borrar_fichero(nombre_escapado)
 
 
-ficheros_txt=utilidades.obtener_ficheros("*591*2016*.txt")
+ficheros_txt=utilidades.obtener_ficheros("*Provisional*591*2016*.txt")
 for f in ficheros_txt:
-    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD)
+    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD, PROVISIONAL)
     #utilidades.borrar_fichero(nombre_escapado)
     
 
+ficheros_txt=utilidades.obtener_ficheros("*Provisional*592*2016*.txt")
+for f in ficheros_txt:
+    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD, PROVISIONAL)
+    #utilidades.borrar_fichero(nombre_escapado)    
     
+ficheros_txt=utilidades.obtener_ficheros("*Provisional*594*2016*.txt")
+for f in ficheros_txt:
+    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD, PROVISIONAL)
+    #utilidades.borrar_fichero(nombre_escapado)
     
+ficheros_txt=utilidades.obtener_ficheros("*Provisional*511*2016*.txt")
+for f in ficheros_txt:
+    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD, PROVISIONAL)
+    #utilidades.borrar_fichero(nombre_escapado)
+    
+ficheros_txt=utilidades.obtener_ficheros("*Provisional*595*2016*.txt")
+for f in ficheros_txt:
+    utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD, PROVISIONAL)
+    #utilidades.borrar_fichero(nombre_escapado)    
