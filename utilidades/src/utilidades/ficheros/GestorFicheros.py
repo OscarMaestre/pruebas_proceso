@@ -109,6 +109,42 @@ class GestorFicheros(object):
             return 
         aplicar_comando(self.MOVER, "\""+nombre_viejo+"\"", nombre_nuevo)
         
+    def enviar_texto_a_comando(self, texto, comando):
+        if platform.system()=="Linux":
+            comando_envio="echo '{0}'".format(texto)
+        else:
+            comando_envio="echo {0}".format(texto)
+            
+        self.aplicar_comando ( comando_envio, "|", comando)
+    
+    def extraer_esquema(self, archivo_bd, nombre_tabla, archivo_sql_resultado, anadir=False):
+        texto=".schema {0}".format ( nombre_tabla )
+        if anadir:
+            comando="sqlite3 {0} >> {1}".format(archivo_bd, archivo_sql_resultado)
+        else:
+            comando="sqlite3 {0} > {1}".format(archivo_bd, archivo_sql_resultado)
+        self.enviar_texto_a_comando( texto, comando)
+        
+    def extraer_datos_tabla(self, archivo_bd, nombre_tabla, archivo_sql_resultado,anadir=True):
+        texto=r".mode insert {0}\nselect * from {0};".format(
+            nombre_tabla
+        )
+        if anadir:
+            comando="sqlite3 {0}>>{1}".format ( archivo_bd ,archivo_sql_resultado)
+        else:
+            comando="sqlite3 {0}>{1}".format ( archivo_bd ,archivo_sql_resultado)
+        self.enviar_texto_a_comando ( texto, comando)
+    
+    def exportar_tabla(self, archivo_bd, nombre_tabla, archivo_sql_resultado):
+        self.extraer_esquema ( archivo_bd, nombre_tabla, archivo_sql_resultado,anadir=True )
+        self.extraer_datos_tabla ( archivo_bd, nombre_tabla, archivo_sql_resultado )
+        
+    def exportar_lista_tablas (self, archivo_bd, lista_tablas, archivo_sql_resultado):
+        self.borrar_fichero ( archivo_sql_resultado )
+        for t in lista_tablas:
+            self.anadir_a_fichero("BEGIN TRANSACTION;", archivo_sql_resultado)
+            self.exportar_tabla ( archivo_bd, t, archivo_sql_resultado)
+            self.anadir_a_fichero("COMMIT TRANSACTION;", archivo_sql_resultado)
     def descargar_fichero(self, url, nombre_fichero_destino):
         peticion = requests.get ( url )
         descriptor=open (nombre_fichero_destino, "w")

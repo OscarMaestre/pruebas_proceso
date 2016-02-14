@@ -13,3 +13,4 @@ gf=GestorFicheros()
 
 gf.ejecutar_comando("./descargador_html.py", "")
 gf.ejecutar_comando("./procesador_centros.py", ">", "centros_region.sql")
+gf.ejecutar_comando ("cat centros_region.sql", "|", "sqlite3 ../../docencia.db")

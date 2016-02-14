@@ -12,7 +12,8 @@ all:
 	echo "Recuerda incluir las fechas de las adjudicaciones en extractor_adjudicaciones"
 	./gaseosa.py
 	./nombramientos.py
-	sqlite3 ../docencia.db -init variantes.thk
+	cat variantes.thk | sqlite3 ../docencia.db 
+	cat descargador_html/centros_region.sql | sqlite3 ../docencia.db
 mostrar:
 	sqlite3 nombramientos.db -init fichero.sql
 enviar:
