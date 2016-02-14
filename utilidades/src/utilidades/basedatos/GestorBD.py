@@ -8,8 +8,6 @@ import tempfile
 from .ConstantesBaseDatosSQLite import *
 
 
-
-
 class GestorBD(object):
     
     def __init__(self, archivo_db):

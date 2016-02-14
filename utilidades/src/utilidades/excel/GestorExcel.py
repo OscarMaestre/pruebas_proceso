@@ -15,7 +15,14 @@ class EscritorExcel(object):
         self.formato_fechas= xlwt.XFStyle()
         self.formato_fechas.num_format_str = 'dd/mm/yyyy'
     def anadir_hoja(self, nombre_hoja):
-        self.hojas.append(self.libro.add_sheet(nombre_hoja))
+        nombre_limpio=self.limpiar_nombre_hoja(nombre_hoja)
+        self.hojas.append(self.libro.add_sheet(nombre_limpio))
+    
+    def limpiar_nombre_hoja(self, nombre):
+        eliminar=["(", ")", " ", ":", "/"]
+        for simbolo in eliminar:
+            nombre=nombre.replace(simbolo, "_")
+        return nombre[0:30]
     
     def escribir_en_hoja(self, fila, columna, valor, es_fecha=False, hoja=0):
         if not es_fecha:

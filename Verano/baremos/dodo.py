@@ -30,9 +30,11 @@ except:
 CONVERTIR="pdftotext -layout -nopgbrk "
 EXTRACTOR="procesar_tabla.py "
 EXTRACTOR_MAESTROS="procesar_tabla_maestros.py"
+EXTRACTOR_LOCALIDADES="extraer_localidades.py"
 if platform.system()=="Linux":
     EXTRACTOR="."+os.sep+EXTRACTOR
     EXTRACTOR_MAESTROS="."+os.sep+EXTRACTOR_MAESTROS
+    EXTRACTOR_LOCALIDADES="./extraer_localidades.py"
     
 FICH_RESULTADO="resultado.csv"
     
@@ -89,4 +91,10 @@ for f in ficheros_txt:
 ficheros_txt=utilidades.obtener_ficheros("*Provisional*595*2016*.txt")
 for f in ficheros_txt:
     utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD, PROVISIONAL)
-    #utilidades.borrar_fichero(nombre_escapado)    
+    #utilidades.borrar_fichero(nombre_escapado)
+    
+utilidades.aplicar_comando(EXTRACTOR_LOCALIDADES, "")
+
+utilidades.aplicar_comando(
+    utilidades.CONCAT, "geo.sql", "|", "sqlite3 baremos.db"
+)
