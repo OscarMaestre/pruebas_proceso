@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 from .GestorFicheros import GestorFicheros
 import re
 
@@ -92,38 +91,44 @@ class ProcesadorPDF(object):
     def eof(self):
         return self.FIN_DE_FICHERO
     
-    def avanzar_buscando_patron(self, expr_regular):
-        if self.lineas_fichero==[]:
-            print("No hay ningun fichero abierto")
-            return
-        linea_actual=self.lineas_fichero[ self.num_fila ]
-        concordancia=None
-        while concordancia==None:
-            #print ("Concordancia:"+str(concordancia))
-            if concordancia:
-                inicio=concordancia.start()
-                final=concordancia.end()
-                patron=concordancia.string[inicio:final]
-                #print ("----->"+patron)
-                self.num_columna=inicio
-                return (inicio, final, patron)
-            else:
-                if self.num_fila==self.MAX_FILAS:
-                    self.FIN_DE_FICHERO=True
-                    return (self.FIN_DE_FICHERO, self.FIN_DE_FICHERO, self.FIN_DE_FICHERO)
-                else:
-                    self.num_fila=self.num_fila+1
-                linea_actual=self.lineas_fichero[ self.num_fila ]
-                #print("Buscando {0} en {1}".format( str(expr_regular), linea_actual))
-                concordancia=expr_regular.search(linea_actual)
-                ##("Resultado {0}".format(str(concordancia)))
+    def siguiente_fila(self):
+        self.num_fila+=1
+        if self.num_fila>=self.MAX_FILAS:
+            self.FIN_DE_FICHERO=True
+        self.num_columna=0
+        
+    
+    def linea_contiene_patron(self, expr_regular, linea):
+        #print ("Buscando {0} en {1}".format( str(expr_regular), linea))
+        concordancia=expr_regular.search(linea)
         if concordancia:
             inicio=concordancia.start()
             final=concordancia.end()
             patron=concordancia.string[inicio:final]
-            #print ("----->"+patron)
-            self.num_columna=inicio
+            #print ("-->Encontrado {0} en {1}".format( str(expr_regular), linea))
             return (inicio, final, patron)
+        return (self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO)
+    
+    def siguiente_linea(self):
+        self.num_fila=self.num_fila+1
+        self.num_columna=0
+        if self.num_fila>=self.MAX_FILAS:
+            self.FIN_DE_FICHERO=True
+            
+    def avanzar_buscando_patron(self, expr_regular):
+        if self.lineas_fichero==[]:
+            print("No hay ningun fichero abierto")
+            return
+        linea_actual=self.lineas_fichero[ self.num_fila ][self.num_columna:]
+        (ini, fin, resultado)=self.linea_contiene_patron ( expr_regular, linea_actual)
+        while resultado==self.PATRON_NO_ENCONTRADO and not self.FIN_DE_FICHERO:
+            self.siguiente_linea()
+            linea_actual=self.lineas_fichero[ self.num_fila ]
+            (ini, fin, resultado)=self.linea_contiene_patron ( expr_regular, linea_actual)
+        if resultado!=self.PATRON_NO_ENCONTRADO:
+            #print("Patron encontrado")
+            self.num_columna=fin
+            return (ini, fin, resultado)
         return (self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO)
     
     def avanzar_buscando_codigo_localidad(self):        
@@ -141,7 +146,8 @@ class ProcesadorPDF(object):
         return self.avanzar_buscando_patron ( self.expr_regular_nombre_persona )
     
     def avanzar_buscando_decimal(self):
-        return self.avanzar_buscando_patron ( self.expr_regular_decimales )
+        devolver= self.avanzar_buscando_patron ( self.expr_regular_decimales )
+        return devolver
     
     def saltar_linea(self):
         self.num_fila = self.num_fila + 1
@@ -149,7 +155,7 @@ class ProcesadorPDF(object):
         
     def extraer_todos_decimales(self):
         linea_actual=self.lineas_fichero [ self.num_fila ]
-        print(linea_actual)
+        #print(linea_actual)
         concordancia=self.expr_regular_decimales.search(linea_actual)
         if concordancia:
             decimales_como_cadenas=self.expr_regular_decimales.findall(linea_actual)

@@ -15,7 +15,7 @@ NOMBRE_BD=sys.argv[1]
 ANIO=sys.argv[2]
 TIPO_BAREMO=sys.argv[3]
 
-ficheros=["DPC-597-provisional.pdf", "DPLZ-597-provisional.pdf"]
+ficheros=["DPC-597-provisional.pdf"]#, "DPLZ-597-provisional.pdf"]
 
 procesador_pdf=ProcesadorPDF()
 gf=GestorFicheros()
@@ -26,7 +26,6 @@ for fichero in ficheros:
         sys.exit(-1)
     nombre_txt=procesador_pdf.convertir_a_txt( fichero )
     procesador_pdf.abrir_fichero_txt ( nombre_txt )
-    (ini, fin, codigo_localidad)=procesador_pdf.avanzar_buscando_codigo_localidad()
     while not procesador_pdf.eof():
         (ini, fin, codigo_localidad)=procesador_pdf.avanzar_buscando_codigo_localidad()
         if codigo_localidad!=procesador_pdf.FIN_DE_FICHERO and codigo_localidad!=procesador_pdf.PATRON_NO_ENCONTRADO:
@@ -43,21 +42,19 @@ for fichero in ficheros:
         (ini, fin, dni)=procesador_pdf.avanzar_buscando_dni()
         if dni!=procesador_pdf.FIN_DE_FICHERO and dni!=procesador_pdf.PATRON_NO_ENCONTRADO:
             print("Dni:"+dni)
+            pass
             
         (ini, fin, decimal)=procesador_pdf.avanzar_buscando_decimal()
         if decimal!=procesador_pdf.FIN_DE_FICHERO and decimal!=procesador_pdf.PATRON_NO_ENCONTRADO:
             lista_decimales=procesador_pdf.extraer_todos_decimales()
             print ("T1:")
             print(lista_decimales)
-            procesador_pdf.saltar_linea()
             lista_decimales=procesador_pdf.extraer_todos_decimales()
             print ("T2:")
             print(lista_decimales)
-            procesador_pdf.saltar_linea()
             lista_decimales=procesador_pdf.extraer_todos_decimales()
             print ("T3:")
             print(lista_decimales)
-            procesador_pdf.saltar_linea()
         print ("---------------------")
      
     
