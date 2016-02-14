@@ -43,6 +43,21 @@ for fichero in ficheros:
         (ini, fin, dni)=procesador_pdf.avanzar_buscando_dni()
         if dni!=procesador_pdf.FIN_DE_FICHERO and dni!=procesador_pdf.PATRON_NO_ENCONTRADO:
             print("Dni:"+dni)
+            
+        (ini, fin, decimal)=procesador_pdf.avanzar_buscando_decimal()
+        if decimal!=procesador_pdf.FIN_DE_FICHERO and decimal!=procesador_pdf.PATRON_NO_ENCONTRADO:
+            lista_decimales=procesador_pdf.extraer_todos_decimales()
+            print ("T1:")
+            print(lista_decimales)
+            procesador_pdf.saltar_linea()
+            lista_decimales=procesador_pdf.extraer_todos_decimales()
+            print ("T2:")
+            print(lista_decimales)
+            procesador_pdf.saltar_linea()
+            lista_decimales=procesador_pdf.extraer_todos_decimales()
+            print ("T3:")
+            print(lista_decimales)
+            procesador_pdf.saltar_linea()
         print ("---------------------")
      
     

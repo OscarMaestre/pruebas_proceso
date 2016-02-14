@@ -9,6 +9,8 @@ class ProcesadorPDF(object):
         self.CONVERTIR="pdftotext -layout -nopgbrk "
         self.PATRON_NO_ENCONTRADO="XxXxXxX"
         self.FIN_DE_FICHERO=False
+        self.DECIMAL_NO_ENCONTRADO="xxxxxxxxxxx"
+        self.DECIMAL_NO_CONCORDANTE="zzzzzzzzzzzzz"
         self.gf=GestorFicheros()
         
         re_dni="[0-9]{7,8}[A-Z]"
@@ -56,6 +58,10 @@ class ProcesadorPDF(object):
         
         re_nombre_persona="[ÑÁÉÍÓÚA-Z\- ]+,[ÑÁÉÍÓÚA-Z ]+"
         self.expr_regular_nombre_persona=re.compile ( re_nombre_persona )
+        
+        re_decimales_baremo="[0-9]{1,3}[\,|\.][0-9]{4}"
+        self.expr_regular_decimales=re.compile( re_decimales_baremo )
+        
         self.num_fila=0
         self.num_columna=0
         self.lineas_fichero=[]
@@ -78,7 +84,11 @@ class ProcesadorPDF(object):
         self.MAX_FILAS=len(self.lineas_fichero) - 1
         #print(self.MAX_FILAS)
         descriptor.close()
-        
+    
+    def convertir_decimal_baremo_a_float(self, str_decimal):
+        str_con_punto=str_decimal.replace(",", ".")
+        return float(str_con_punto)
+
     def eof(self):
         return self.FIN_DE_FICHERO
     
@@ -130,3 +140,22 @@ class ProcesadorPDF(object):
     def avanzar_buscando_nombre_persona(self):        
         return self.avanzar_buscando_patron ( self.expr_regular_nombre_persona )
     
+    def avanzar_buscando_decimal(self):
+        return self.avanzar_buscando_patron ( self.expr_regular_decimales )
+    
+    def saltar_linea(self):
+        self.num_fila = self.num_fila + 1
+        self.num_columna = 0
+        
+    def extraer_todos_decimales(self):
+        linea_actual=self.lineas_fichero [ self.num_fila ]
+        print(linea_actual)
+        concordancia=self.expr_regular_decimales.search(linea_actual)
+        if concordancia:
+            decimales_como_cadenas=self.expr_regular_decimales.findall(linea_actual)
+            lista_floats=[]
+            for d in decimales_como_cadenas:
+                lista_floats.append(self.convertir_decimal_baremo_a_float(d))
+            self.num_fila = self.num_fila + 1
+            return lista_floats
+        return (self.DECIMAL_NO_ENCONTRADO, self.DECIMAL_NO_ENCONTRADO, self.DECIMAL_NO_CONCORDANTE)
