@@ -447,8 +447,6 @@ COMMIT TRANSACTION;BEGIN TRANSACTION;CREATE TABLE centros_region (
         );
 CREATE INDEX idx_nombre_centro_region on  centros_region (codigo_centro)
         ;
-INSERT INTO centros_region VALUES('9999','MAESTROS PARO','','','','','','','','','DESCONOCIDO');
-INSERT INTO centros_region VALUES('9998','EEMM PARO','','','','','','','','','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02008932','- Sin Denominación -','020010001','Av. Castilla-La Mancha, S/N','02250','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02009596','San Miguel','020010001','Cl. Maestro Jose Piqueras, 1','02250','967474500','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02009043','- Sin Denominación -','020030001','Pz. de los Colonos, 5','02049','967273288','967101748','aguas@dipualba.es','','Público','DESCONOCIDO');
@@ -623,10 +621,8 @@ INSERT INTO centros_region VALUES('02004896','- Sin Denominación -','020190001'
 INSERT INTO centros_region VALUES('02001381','CEIP Antón Díaz','020190001','Cl. Huerto, 2','02610','967370073','967370073','02001381.cp@edu.jccm.es','http://edu.jccm.es/cp.antondiaz','Público','CEIP');
 INSERT INTO centros_region VALUES('02009158','Colorines','020190001','Tr. Cantarranas, 3 B','02610','967370588','','bonillo@dipualba.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02004422','IES Las Sabinas','020190001','Cl. Don Quijote, S/N','02610','967371112','967370048','02004422.ies@edu.jccm.es','http://edu.jccm.es/ies/elbonillo','Público','IES');
-INSERT INTO centros_region VALUES('02004628','Los Almendros','0000','Cl. Cristo, 103','02153','967403129','967403129','02004628.cra@edu.jccm.es','http://cra-losalmendros.centros.castillalamancha.es','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02009171','- Sin Denominación -','020210001','Av. Albacete, 1','02151','650455906','967405241','casasjuan@dipualba.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02001408','CEIP San Pedro Apóstol','020210001','Cl. Doctor Honrubia, 18','02151','967405021','967405021','02001408.cp@edu.jccm.es','http://edu.jccm.es/cp/sanpedrocasas','Público','CEIP');
-INSERT INTO centros_region VALUES('02009183','- Sin Denominación -','0000','Cl. la Mancha, 39','02212','967475022','967475001','casasves@dipualba.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02004604','IES Bonifacio Sotos','020240001','Cl. las Monjas, 32','02200','967460756','967461136','02004604.ies@edu.jccm.es','http://ies-bonifaciosotos.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('02004781','La Manchuela','020240001','Cl. las Monjas, 3','02200','967460245','967460245','02004781.cea@edu.jccm.es','http://edu.jccm.es/cea/lamanchuela','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02009857','Los Guachos','020240001','Tr. del Molino, 46','02200','967462025','','','','Público','DESCONOCIDO');
@@ -645,10 +641,6 @@ INSERT INTO centros_region VALUES('02004367','IES Pintor Rafael Requena','020250
 INSERT INTO centros_region VALUES('02009195','- Sin Denominación -','020260001','Tr. Cruces, S/N','02247','967489537','967482344','cenizate@dipualba.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02008944','- Sin Denominación -','020260001','Cl. Picayo, S/N','02247','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02004631','Pinares de la Manchuela','020260001','Cl. Picayo, S/N','02247','967482053','967482053','02004631.cra@edu.jccm.es','http://edu.jccm.es/cra/pinaresdelamanchuela','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('02008890','- Sin Denominación -','0000','Cl. San Julian, 4','02520','','','','','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('02001573','CEIP Alcalde Galindo','0000','Av. Constitucion, 22','02520','967260092','967260092','02001573.cp@edu.jccm.es','http://edu.jccm.es/cp.alcaldegalindo','Público','CEIP');
-INSERT INTO centros_region VALUES('02009201','Blancanieves','0000','Cl. Moises Davia, S/N Esquina Calle Vista Bella, S/N','02520','967260001','','ana@ayuntamientochinchilla.com','','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('02005207','Cinxella','0000','Cl. del Pueblo Saharaui, S/N','02520','967260653','967260605','02005207.ieso@edu.jccm.es','http://ies-cinxella.centros.castillalamancha.es','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02004847','- Sin Denominación -','020300001','Cl. Calderon de la Barca, 6','02430','669393188','','aepa_edlsierra@edu.jccm.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02001639','Cristo Crucificado','020300001','Ps. de la Libertad, 15','02430','967417102','967417102','ccrucificadoes@planalfa.es','http://edu.jccm.es/con/cristocrucificado/','Priv.Concert.','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02009894','María Seiquer','020300001','Ps. Libertad, 15','02430','967410024','','ampaseiquer@yahoo.es','','Privado','DESCONOCIDO');
@@ -694,7 +686,6 @@ INSERT INTO centros_region VALUES('02009286','San Vicente','020370005','Cl. Jaci
 INSERT INTO centros_region VALUES('02001986','CEIP Santiago Apóstol','020370006','Cm. de Puente Herrera, S/N','02420','967308560','967308560','02001986.cp@edu.jccm.es','http://ceip-santiagoapostol.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('02009298','- Sin Denominación -','020390003','Av. Castilla-La Mancha, 1','02694','967287100','','eeihigueruela@yahoo.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02008828','Los Molinos','020390003','Cl. Baltasar Gonzalez Saez, 36','02694','967287096','','02008828.cra@edu.jccm.es','http://edu.jccm.es/cra/losmolinos','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('02009304','- Sin Denominación -','0000','Cl. Chinchilla, S/N','02696','968287760','','caihoyagon@hotmail.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02002140','CEIP Nuestra Señora de la Asunción','020420003','Ps. Guardia Civil S/N','02434','967426224','967426330','02002140.cp@edu.jccm.es','','Público','CEIP');
 INSERT INTO centros_region VALUES('02010033','- Sin Denominación -','020430001','Av. del Rey, 13','02160','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('02008956','- Sin Denominación -','020430001','Cl. Juan Xxiii, 23','02160','','','','','Público','DESCONOCIDO');
@@ -872,7 +863,6 @@ INSERT INTO centros_region VALUES('13000505','CEIP Maestro Juan de Ávila','1301
 INSERT INTO centros_region VALUES('13000566','IES San Juan Bautista de la Concepción','130150001','Cl. Doctor Fleming, 8','13580','926483343','926483572','13000566.ies@edu.jccm.es','http://ies-almodovar.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('13000517','CEIP Virgen del Carmen','130150001','Cl. Jacobo Roldan, 2','13580','926483881','926483881','13000517.cp@edu.jccm.es','http://ceip-virgendelcarmen.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('13000633','CEIP Santiago Apóstol','130160001','Cl. San Antonio, 20','13760','926339189','926339189','13000633.cp@edu.jccm.es','','Público','CEIP');
-INSERT INTO centros_region VALUES('13011291','Pitupinos','0000','Cl. Vicente Lara Espinosa, 6','13619','926584227','926584016','ei.pitupinos@gmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('13000694','CEIP San Bernabé','130180001','Cl. Templarios, 1','13679','926893127','','13000694.cp@edu.jccm.es','http://edu.jccm.es/cp/sbernabe','Público','CEIP');
 INSERT INTO centros_region VALUES('13005151','- Sin Denominación -','130190001','Cl. Tercia, 22','13710','926513929','926513929','13004559.cea@jccm.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('13011308','Alba','130190001','Cl. Angel Dotor, S/N','13710','926523427','','coordinadorcs@argamasilladealba.es','','Público','DESCONOCIDO');
@@ -1204,7 +1194,6 @@ INSERT INTO centros_region VALUES('13011539','- Sin Denominación -','130840001'
 INSERT INTO centros_region VALUES('13003178','CEIP Francisco de Quevedo','130840001','Cl. San Anton, 33','13344','926383068','926383068','13003178.cp@edu.jccm.es','http://edu.jccm.es/cp/quevedo','Público','CEIP');
 INSERT INTO centros_region VALUES('13011540','Nuestra Señora de la Cabeza','130850001','Cl. Arjona, 53','13740','926332191','926341408','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('13003181','CEIP Santiago el Mayor','130850001','Cl. Constitucion, 125','13740','926344702','926344709','13003181.cp@edu.jccm.es','http://ceip-santiagoelmayor.centros.castillalamancha.es','Público','CEIP');
-INSERT INTO centros_region VALUES('13003208','CEIP Virgen del Valle','0000','Cl. la Cañada, S/N','13411','926741853','926741741','13003208.cp@edu.jccm.es','http://edu.jccm.es/cp/virgendelvalle','Público','CEIP');
 INSERT INTO centros_region VALUES('13003324','IES Bernardo de Balbuena','130870001','Av. Estudiantes, 103','13300','926321831','926348041','13003324.ies@edu.jccm.es','http://ies-bbalbuena.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('13011552','Cachiporro','130870001','Cl. Colombia, S/N','13300','926329200','926329200','escuelainfantil@valdepenas.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('13011205','Cervantes','130870001','Cl. Santa Paz, S/N (Barrio del Lucero)','13300','926323496','926323496','13011205.ei@edu.jccm.es','','Público','DESCONOCIDO');
@@ -1256,7 +1245,6 @@ INSERT INTO centros_region VALUES('13012234','Los Siete Colores','130980008','Cl
 INSERT INTO centros_region VALUES('13003634','CEIP Nuestra Señora del Valle','130980008','Cl. Almagro, 53','13770','926336071','926336071','13003634.cp@edu.jccm.es','http://ceip-nsdelvalle.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('16009465','Cocoliso','160070001','Cl. Magisterio, 12','16620','967167148','967150375','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16004111','Jorge Manrique','160070001','Cl. Magisterio, 1','16620','967150169','967150577','16004111.cra@edu.jccm.es','http://edu.jccm.es/cra/jorgemanrique','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('16009908','- Sin Denominación -','0000','Lg. Parcela 54 de Unidad de Actuacion 9','16123','','','arcaseduca@gmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16004248','Fermín Caballero','160270001','Cl. Cristo, 29','16460','969121150','969121150','16004248.cra@edu.jccm.es','http://cra-fermincaballero.centros.castillalamancha.es','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16009477','Virgen de la Vega','160270001','Cl. Cristo, S/N','16460','969121165','969121161','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16000280','CEIP Fray Luis de León','160330001','Cl. Eugenio Lopez, 2','16640','967170078','967170884','16000280.cp@edu.jccm.es','http://ceip-frayluisdeleonbelmonte.centros.castillalamancha.es','Público','CEIP');
@@ -1275,7 +1263,6 @@ INSERT INTO centros_region VALUES('16009337','Miguel Cervantes','160550001','Cl.
 INSERT INTO centros_region VALUES('16009490','Bambi','160600002','Cl. Molino, S/N','16707','969382046','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16004601','Molinos del Júcar','160600002','Cl. el Molino, 58','16707','969382161','969382161','16004601.cra@edu.jccm.es','http://cra-molinosdeljucar.centros.castillalamancha.es','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16004170','Tomás y Valiente','160610001','Cl. Cervantes, 24','16610','969383149','969383576','16004170.cra@edu.jccm.es','http://edu.jccm.es/cra/tomasyvaliente','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('16009911','Colorines','0000','Cl. Grupo Escolar, S/N','16611','','','casasdeharo.colorines.educacion@dipucuenca.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16004273','- Sin Denominación -','160660001','Cl. Luis de Mateo, 2','16239','969331957','','aepa_casasimarro@edu.jccm.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16009507','Arco Iris','160660001','Cl. Doctor Vicente Martinez, 6','16239','967487328','967487328','ei.arcoiris@casasimarro.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16009258','Escuela Municipal de Música y Danza de Casasimarro','160660001','Cl. Cervantes, 4','16239','','','emmdcasasimarro@hotmail.com','','Público','DESCONOCIDO');
@@ -1380,7 +1367,6 @@ INSERT INTO centros_region VALUES('16001831','CEIP Adolfo Martínez Chicano','16
 INSERT INTO centros_region VALUES('16009301','Escuela Municipal de Música y Danza de las Pedroñeras','161540001','Cl. Pelayo, 4','16660','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16004066','IES Fray Luis de León','161540001','Cl. General Borrero, 39','16660','967160100','967160488','16004066.ies@edu.jccm.es','http://edu.jccm.es/ies/frayluisdeleon','Público','IES');
 INSERT INTO centros_region VALUES('16009431','Platero','161540001','Cl. General Borreros, 35','16660','967160852','967162118','16009431.ei@edu.jccm.es','','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('16009611','Campanilla','0000','Cl. Francisco Ruiz Jarabo, 15 B','16240','969339635','969339501','aytoelperal@gmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16003475','IES Diego Jesús Jiménez','161700001','Tr. Padre Marquina, S/N','16800','969311274','969311274','16003475.ies@edu.jccm.es','http://ies-diegojesusjimenez.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('16004194','Guadiela','161700001','Av. Luis Ocaña, 28','16800','969311117','969312022','16004194.cra@edu.jccm.es','http://edu.jccm.es/cra.guadiela','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16009416','- Sin Denominación -','161710001','Pz. de los Alcaldes, S/N','16670','','','','','Público','DESCONOCIDO');
@@ -1417,7 +1403,6 @@ INSERT INTO centros_region VALUES('16002355','Nuestra Señora de las Mercedes','
 INSERT INTO centros_region VALUES('16009453','Nuestra Señora de Riansares','162030001','Cl. Saturnino Fernandez, 3','16400','969320371','969320371','cairiansares@jccm.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16009660','San Isidro','162030001','Cl. San Isidro, 35','16400','969324281','','escuela_infantil_sanisidro@hotmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16009672','Santa Quiteria','162030001','Cl. Joaquin Rodriguez Cagancho, S/N','16400','969322514','','escuelainfantilquiteria@hotmail.com','','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('16002495','Seminario Menor Santiago Apóstol','0000','Monasterio de Ucles','16452','969211000','969238527','seminariocuenca@gmail.com','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('16004054','IES Duque de Alarcón','169030001','Cm. Vallejo de la Sabina, S/N','16120','969208182','969208413','16004054.ies@edu.jccm.es','http://ies-duquedealarcon.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('16002586','CEIP Virgen del Rosario','169030001','Cl. San Roque,10','16120','969208046','969208046','16002586.cp@edu.jccm.es','http://edu.jccm.es/cp/virgendelrosario','Público','CEIP');
 INSERT INTO centros_region VALUES('16004625','Ribera del Júcar','162360001','Ps. del Santo Niño, 1','16100','969201151','969201151','16004625.cra@edu.jccm.es','http://edu.jccm.es/cra/riberadeljucar','Público','DESCONOCIDO');
@@ -1444,7 +1429,6 @@ INSERT INTO centros_region VALUES('19003991','CEIP La Colmena','190060001','Cl. 
 INSERT INTO centros_region VALUES('19003474','Sierra Ministra','190110001','Cl. Lino Bueno, S/N','19260','949300927','949300233','19003474.cra@edu.jccm.es','http://edu.jccm.es/cra/alcoleadelpinar','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008836','- Sin Denominación -','190210001','Cl. San Jose, S/N','19115','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19003565','Pimafad','190210001','Cl. San Jose, 9','19115','949380691','949380691','19003565.cra@edu.jccm.es','http://cra-pimafad.centros.castillalamancha.es/','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('19008848','Pitufilandia','0000','Cl. Ronda, 5','19118','949376201','949377175','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008711','- Sin Denominación -','190240001','Cl. la Dehesa, S/N','19208','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19009521','Alopekes','190240001','Cl. Eusebio Centenera, 60','19208','','','','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19009117','Baby Solete','190240001','Cl. Vicente Aleixandre, 56','19208','949274155','949274326','babysolete@telefonica.net','','Privado','DESCONOCIDO');
@@ -1502,17 +1486,13 @@ INSERT INTO centros_region VALUES('19008162','CEIP El Coto','190710003','Av. Bru
 INSERT INTO centros_region VALUES('19009634','El Coto Kids','190710003','Cl. las Navas, S/N','19185','','','','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008204','IES Juan García Valdemora','190710001','Ps. del Calvario, S/N','19170','949322814','949322856','19008204.ies@edu.jccm.es','','Público','IES');
 INSERT INTO centros_region VALUES('19009191','La Cigüeña','190710001','Cm. de Talamanca, S/N','19170','949336045','949336820','','','Privado','DESCONOCIDO');
-INSERT INTO centros_region VALUES('19009464','La Colina Encantada','0000','Cl. Rio Jarama, 691','19185','949368622','','','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19009208','La Jirafa Azul','190710007','Cl. Isla de Creta, 36','19170','949100889','917130989','','','Privado','DESCONOCIDO');
-INSERT INTO centros_region VALUES('19009211','Los Kekos','0000','Cl. Falla, 220','19170','949334831','','itziarloskekos@hotmail.com','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19000552','CEIP Maestros del Casar','190710001','Av. de los Maestros, 3','19170','949334870','949334870','19000552.cp@edu.jccm.es','http://ceip-maestrosdelcasar.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('19009427','CEIP María Montessori','190710007','Av. los Arenales, S/N','19170','949326623','949326681','19009427.cp@edu.jccm.es','http://edu.jccm.es/cp.n3losarenales','Público','CEIP');
 INSERT INTO centros_region VALUES('19009221','Mupa','190710001','Cl. San Roque, 29','19170','949334967','949334867','','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19009233','Pequenautas','190710003','Av. Bruselas, 1457','19185','649433161','','info@pequenautas.com','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19003498','Sexma de la Sierra','191030001','Cl. Veguillas, S/N','19310','949836368','949836368','19003498.cra@edu.jccm.es','http://edu.jccm.es/cra.sexmadelasierra','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19000710','CEIP José Inglés','191050002','Cl. Jose Ingles, S/N','19160','949271217','949271461','19000710.cp@edu.jccm.es','http://ceip-joseingles.centros.castillalamancha.es','Público','CEIP');
-INSERT INTO centros_region VALUES('19009476','La Sirenita','0000','Cl. Carramolino, 13','19160','','','','','Privado','DESCONOCIDO');
-INSERT INTO centros_region VALUES('19009518','Las Ardillas','0000','Cl. el Torvisco, 18','19160','','','','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008782','IES Peñalba','191050002','Cl. la Hogaza, S/N','19160','949271285','949271337','19008782.ies@edu.jccm.es','http://ies-chiloeches.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('19009580','San Marcos','191050002','Cl. Reajal, S/N','19160','949271950','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008927','- Sin Denominación -','190860002','Rd. del Castillo, S/N','19420','949810572','949810435','','','Público','DESCONOCIDO');
@@ -1521,7 +1501,6 @@ INSERT INTO centros_region VALUES('19000618','CEIP San Francisco','190860002','C
 INSERT INTO centros_region VALUES('19003531','La Encina','190920003','Pq. Municipal, S/N','19230','949855085','949855085','19003531.cra@edu.jccm.es','http://cra-laencina.centros.castillalamancha.es','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008940','- Sin Denominación -','191170001','Cm. del Monte, 1','19290','949337212','949330544','maria_caidefontanar@hotmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19000795','CEIP Virgen de la Soledad','191170001','Cl. Antonio Machado, S/N','19290','949331322','949331322','19000795.cp@edu.jccm.es','','Público','CEIP');
-INSERT INTO centros_region VALUES('19009592','Mi Pequeño Hogar','0000','Cl. del Val, 1','19113','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19003000','CEIP Clara Sánchez','191260001','Av. de la Cebada, S/N','19175','949339628','949339628','19003000.cp@edu.jccm.es','http://ceip-clarasanchez.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('19003191','EOI - Sin Denominación -','191300001','Cl. Felipe Solano Antelo, 21','19002','949218479','949218604','19003191.eoi@edu.jccm.es','http://edu.jccm.es/eoi/guadalajara','Público','EOI');
 INSERT INTO centros_region VALUES('19008101','- Sin Denominación -','191300001','Pz. Ceuta y Melilla, 6 y 7','19005','949255933','949214768','19008101.ea@edu.jccm.es','http://edu.jccm.es/ea/guadalajara','Público','DESCONOCIDO');
@@ -1605,7 +1584,6 @@ INSERT INTO centros_region VALUES('19003826','Escuela Municipal de Música','192
 INSERT INTO centros_region VALUES('19003437','IES Leandro Fernández Moratín','192120001','Cl. Camilo Jose Cela, S/N','19100','949370041','949370179','19003437.ies@edu.jccm.es','http://ies-pastrana.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('19009002','Villa de Pastrana','192120001','Cl. Siete Chimeneas, 1','19100','949370961','949370473','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008149','CEIP Castillo de Pioz','192200001','Cm. de Aranzueque, S/N','19162','949272262','949272246','19008149.cp@edu.jccm.es','http://edu.jccm.es/cp.castillodepioz','Público','CEIP');
-INSERT INTO centros_region VALUES('19009348','Colorines','0000','Ps. Bosque del Henares, 240','19220','618447343','','eipioz@yahoo.es','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008681','CEIP La Arboleda de Pioz','192200006','Cl. de los Pinos, S/N','19162','622842685','','19008681.cp@edu.jccm.es','http://ceip-laarboledadepioz.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('19009403','La Casita del Árbol','192200006','Cl. los Sauces, 590','19162','','','lacasitadelarbolpioz@hotmail.com','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19003504','José Luis Sampedro','192230001','Cl. las Escuelas, S/N','19463','949816289','949816098','19003504-2.cra@edu.jccm.es','http://edu.jccm.es/cra.joseluissampedro','Público','DESCONOCIDO');
@@ -1640,7 +1618,6 @@ INSERT INTO centros_region VALUES('19003796','- Sin Denominación -','192910005'
 INSERT INTO centros_region VALUES('19002317','CEIP Ciudad de Capadocia','192910005','Cl. Fronton, 9','19450','949815189','949815189','19002317.cp@edu.jccm.es','http://edu.jccm.es/cp/trillo/','Público','CEIP');
 INSERT INTO centros_region VALUES('19009063','El Jardinillo','192930002','Cl. Cardenal Cisneros, S/N','19187','949856075','949856321','ei.eljardinillo@yahoo.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19002329','CEIP García Lorca','192930002','Cl. Mayor, S/N','19187','949856484','949856484','19002329.cp@edu.jccm.es','http://edu.jccm.es/cp/ucedagarcialorca','Público','CEIP');
-INSERT INTO centros_region VALUES('19009075','Sueños','0000','Cl. Niza, S/N','19187','949857964','','escuinfcol@hotmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19009087','Cócoles','193190001','Cl. Acacias, 8','19209','949276263','949276263','cocoles@telefonica.net','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19009373','El Barco de Papel','193190001','Cl. San Roque, 14','19209','949266775','949266775','garabatoscincoestrellas@yahoo.es','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19008071','CEIP Gloria Fuertes','193190001','Cr. Valdeavero, 2','19209','949277846','949266184','19008071.cp@edu.jccm.es','http://ceip-gloriafuertes.centros.castillalamancha.es','Público','CEIP');
@@ -1648,7 +1625,6 @@ INSERT INTO centros_region VALUES('19009099','Mofletes','193190001','Cl. del Cer
 INSERT INTO centros_region VALUES('19008137','IES Newton-Salas','193190001','Cl. Paraje de Valdebrid, S/N','19209','949050290','949050205','19008137.ies@edu.jccm.es','http://ies-newton-salas.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('19004016','CEIP Paco Rabal','193190001','Cl. Fernando de Rojas, 2','19209','949273942','949273943','19004016.cp@edu.jccm.es','http://edu.jccm.es/cp/pacorabal','Público','CEIP');
 INSERT INTO centros_region VALUES('19003620','El Rincón de Castilla','193240001','Pz. Don Pedro Gomez Fernandez, S/N','19332','949830090','949830090','19003620-5.cra@edu.jccm.es','http://edu.jccm.es/cra.elrincondecastilla','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('19009646','Valdeluz','0000','Cl. Acebo, S/N','19139','618488572','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19009531','- Sin Denominación -','193310001','Av. de Castilla-La Mancha, S/N','19210','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19009105','- Sin Denominación -','193310001','Cl. Joaquin Sorolla, 3','19210','949331337','949330039','escuelasgero@hotmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('19003875','Clara Campoamor','193310001','Cl. Don Quijote, 3','19210','949331075','949331254','19003875.seces@edu.jccm.es','http://edu.jccm.es/ies/yunquera','Público','DESCONOCIDO');
@@ -1777,7 +1753,6 @@ INSERT INTO centros_region VALUES('45013534','Zapatitos','450660001','Cl. Islas 
 INSERT INTO centros_region VALUES('45013716','Garbancito','450670001','Cl. Ramon y Cajal, 28','45164','925401907','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45005975','IES Montes de Toledo','450670001','Cr. Menasalbas, S/N','45164','925401021','925401961','45005975.ies@edu.jccm.es','http://ies-montesdeToledo.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('45000989','CEIP San Juan de la Cruz','450670001','Cr. de Toledo, S/N','45164','925400182','925400182','45000989.cp@edu.jccm.es','http://ceip-colegalvez.centros.castillalamancha.es','Público','CEIP');
-INSERT INTO centros_region VALUES('45001027','CEIP Santa María Magdalena','0000','Av. Castilla-La Mancha, S/N','45643','925862374','925862374','45001027.cp@edu.jccm.es','http://edu.jccm.es/cp/smmagdalena','Público','CEIP');
 INSERT INTO centros_region VALUES('45001039','CEIP San José','450690001','Cl. Estacion, 28','45518','925762847','925762847','45001039.cp@edu.jccm.es','http://edu.jccm.es/cp.sanjose','Público','CEIP');
 INSERT INTO centros_region VALUES('45012554','La Casita de Elia','450700001','Cl. Nueva, S/N','45160','925291584','925291624','guadamursecretaria@local.jccm.es','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45001040','CEIP Nuestra Señora de la Natividad','450700001','Cl. del Prado, 53','45160','925291519','925294012','45001040.cp@edu.jccm.es','http://ceip-natividad.centros.castillalamancha.es','Público','CEIP');
@@ -1857,7 +1832,6 @@ INSERT INTO centros_region VALUES('45001611','María Inmaculada','451060001','Cl
 INSERT INTO centros_region VALUES('45006220','IES Peñas Negras','451060001','Cl. Luis Hidalgo, 1','45400','925300847','925300847','45006220.ies@edu.jccm.es','http://edu.jccm.es/ies/mora','Público','IES');
 INSERT INTO centros_region VALUES('45012694','- Sin Denominación -','451070001','Cl. San Quintin C/V Camino de las Nieves, S/N','45400','925366127','','escuelainfantil@nambroca.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45001726','CEIP La Fuente','451070001','Cl. la Fuente, S/N','45190','925366126','925366126','45001726.cp@edu.jccm.es','http://ceip-lafuente.centros.castillalamancha.es','Público','CEIP');
-INSERT INTO centros_region VALUES('45013212','Las Nieves','0000','Cl. Albacete, 13, Parcela 405','45191','925278746','','cailasnieves@hotmail.com','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45010430','Montes de Toledo','451080001','Av. de la Jara, 74','45670','925444555','925444555','45010430.cra@edu.jccm.es','http://edu.jccm.es/cra/lanava','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45012700','- Sin Denominación -','451090001','Cl. los Molinos, S/N','45150','925410151','','einavahermosa@hotmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45010341','La Raña','451090001','Cl. Navarrisquillos, 3','45150','925428371','925428371','45010341.cea@edu.jccm.es','http://cepa-navahermosa.centros.castillalamancha.es','Público','DESCONOCIDO');
@@ -1907,7 +1881,6 @@ INSERT INTO centros_region VALUES('45002184','CEIP San Juan Bautista','451270001
 INSERT INTO centros_region VALUES('45012773','- Sin Denominación -','451280001','Cl. Claudia Cabrera, S/N','45290','925554681','925554830','escjclm@hotmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45002196','CEIP Marqueses de Manzanedo','451280001','Cl. Cementerio, 25','45290','925554035','925554394','45002196.cp@edu.jccm.es','http://ceip-marquesesdemanzanedo.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('45002202','CEIP Nuestra Señora de la Luz','451300001','Cl. Manuel Garcia, 2','45611','925844241','925844241','45002202.cp@edu.jccm.es','http://edu.jccm.es/cp.nsdelaluz','Público','CEIP');
-INSERT INTO centros_region VALUES('45014046','- Sin Denominación -','0000','Ps. de las Eras, S/N','45638','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45012141','- Sin Denominación -','451330001','Av. Jose Antonio, S/N','45161','','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45012785','Arco Iris','451330001','Cl. Roma Esquina Calle Bruselas','45161','925290137','','','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45002241','CEIP José María Corcuera','451330001','Cl. Castillo, 17','45161','925370552','925370552','45002241.cp@edu.jccm.es','http://ceip-josemariacorcuera.centros.castillalamancha.es','Público','CEIP');
@@ -2117,7 +2090,6 @@ INSERT INTO centros_region VALUES('45003930','Toledo','451680001','Cl. Reyes Cat
 INSERT INTO centros_region VALUES('45003796','IES Universidad Laboral','451680001','Av. Europa, 28','45003','925223400','925222454','45003796.ies@edu.jccm.es','http://edu.jccm.es/ies/universidadlaboral','Público','IES');
 INSERT INTO centros_region VALUES('45010302','CEIP Valparaíso','451680001','Av. del Olmo, 61','45005','925257421','925257421','45010302.cp@edu.jccm.es','http://ceip-valparaiso.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('45003498','Virgen del Carmen','451680001','Av. de la Reconquista, 1','45004','925221048','925216808','toledo@vedruna1826.org','http://www.vedruna.org','Priv.Concert.','DESCONOCIDO');
-INSERT INTO centros_region VALUES('45004016','CEIP Juan Aguado','0000','Pz. Constitucion, S/N','45920','925795026','925795026','45004016.cp@edu.jccm.es','http://edu.jccm.es/cp/latorre','Público','CEIP');
 INSERT INTO centros_region VALUES('45004090','IES Alonso de Covarrubias','451730001','Cl. la Fuentecilla, S/N','45500','925760508','925764007','45004090.ies@edu.jccm.es','http://ies-covarrubias.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('45010284','Cárdenas','451730001','Cl. Ingenios, 1','45500','925761567','925761567','escuela-cardenas@hotmail.com','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45012323','Cristo de la Sangre','451730001','Cr. de Albarreal, S/N','45500','925760714','925760318','mjmontoro@jccm.es','','Público','DESCONOCIDO');
@@ -2142,7 +2114,6 @@ INSERT INTO centros_region VALUES('45013674','Nubes','451800001','Cl. la Luna, 1
 INSERT INTO centros_region VALUES('45013431','Rosario','451800001','Cl. Ventas de Retamosa, 9','45940','918170939','918170939','rosarioguarderia@yahoo.es','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45004168','CEIP Santo Domingo de Guzmán','451800001','Cl. Casarrubios, 12','45940','918170126','918170126','45004168.cp@edu.jccm.es','http://ceip-santodomingodeguzman.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('45004171','CEIP Andrés Arango','451810001','Av. de Extremadura, 37','45612','925892288','925892288','45004171.cp@edu.jccm.es','http://edu.jccm.es/cp.andresarango','Público','CEIP');
-INSERT INTO centros_region VALUES('45004181','CEIP Nuestra Señora del Águila','0000','Cl. Conde de Casal, S/N','45127','925418060','925418060','45004181.cp@edu.jccm.es','http://ceip-nsaguila.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('45012967','Aladín','451830001','Av. Sexta Bandera, 26-Bi','45183','','','','','Privado','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45013558','El Chupete','451830001','Cl. Neptuno, 6','45183','918173667','','ceifuensalida@hotmail.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45004201','CEIP Santiago Paniego','451830001','Cl. San Pedro, 3','45183','918173946','918173946','45004201.cp@edu.jccm.es','http://ceip-santiagopaniego.centros.castillalamancha.es','Público','CEIP');
@@ -2155,10 +2126,6 @@ INSERT INTO centros_region VALUES('45004272','IES Garcilaso de la Vega','4518500
 INSERT INTO centros_region VALUES('45011938','Gratiniano Martínez','451850001','Cl. Valencia, 46','45860','925160120','','escuelademusica@aytovillacanas.com','','Público','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45004235','Nuestra Señora de la Consolación','451850001','Cl. Santa Maria Rosa Molas, 18','45860','925160033','925160558','nsconsolacionvi@planalfa.es','','Priv.Concert.','DESCONOCIDO');
 INSERT INTO centros_region VALUES('45004259','CEIP Santa Bárbara','451850001','Cl. Instituto, 7','45860','925160541','925160952','45004259.cp@edu.jccm.es','http://ceip-santabarbara.centros.castillalamancha.es','Público','CEIP');
-INSERT INTO centros_region VALUES('45010481','Escuela Municipal de Música y Danza de Villafranca de los Caballeros','0000','Cl. Nueva, S/N','45730','926558640','','escuelamusica@aytovillafranca.es','','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('45013005','Gloria Fuertes','0000','Cl. Santa Lucia, S/N','45730','926558567','926578672','empleo@aytovillafranca.es','','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('45006153','La Falcata','0000','Cl. de la Sal, S/N','45730','926578242','926578299','45006153.ieso@edu.jccm.es','http://ies-lafalcata.centros.castillalamancha.es','Público','DESCONOCIDO');
-INSERT INTO centros_region VALUES('45004296','CEIP Miguel de Cervantes','0000','Av. San Marcos, S/N','45730','926578074','926578074','45004296.cp@edu.jccm.es','http://ceip-mdecervantes.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('45006165','IES Castillo del Águila','451880001','Cm. de Yuncler, S/N','45520','925530347','925530012','45006165.ies@edu.jccm.es','http://ies-castilloaguila.centros.castillalamancha.es','Público','IES');
 INSERT INTO centros_region VALUES('45004302','CEIP Juan Palarea','451880001','Ps. del Prado, S/N','45520','925530077','925530077','45004302.cp@edu.jccm.es','http://ceip-juanpalarea.centros.castillalamancha.es','Público','CEIP');
 INSERT INTO centros_region VALUES('45013017','Villapeques','451880001','Cl. Nogal, 28','45520','925524326','','villaluenga@escuelasdulcinea.es','','Público','DESCONOCIDO');

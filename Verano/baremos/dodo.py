@@ -86,7 +86,7 @@ for f in ficheros_txt:
 ficheros_txt=utilidades.obtener_ficheros("*Provisional*511*2016*.txt")
 for f in ficheros_txt:
     utilidades.aplicar_comando(EXTRACTOR,f, "2016", NOMBRE_BD, PROVISIONAL)
-    #utilidades.borrar_fichero(nombre_escapado)
+    #utilidpuades.borrar_fichero(nombre_escapado)
     
 ficheros_txt=utilidades.obtener_ficheros("*Provisional*595*2016*.txt")
 for f in ficheros_txt:

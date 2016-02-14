@@ -94,11 +94,13 @@ for i in range ( 0, TOTAL_PAGINAS):
         codigo_centro=codigo_centro.replace("]", "")
         
         try:
-            codigo_centro_en_bd=bd.get_unico_valor ( sql_busqueda_codigo_centro.format(codigo_centro) )
+            sql_busqueda_centro=sql_busqueda_codigo_centro.format(codigo_centro)
+            #print(sql_busqueda_centro)
+            codigo_centro_en_bd=bd.get_unico_valor ( sql_busqueda_centro )
             if codigo_centro_en_bd==codigo_centro:
                 continue
         except :
-            #print ("Ops, no existe el centro {0}:".format(codigo_centro))
+            #print ("Ops, no existe el centro {0}".format(codigo_centro))
             codigo_localidad="0000"
         #Se descarga el fichero ampliado
         url_informacion_centro = URL_JUNTA + enlace_centro

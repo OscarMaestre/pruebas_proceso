@@ -1,3 +1,34 @@
+Ops, no existe la localidad:Carcelen
+Ops, no existe la localidad:Casas de Ves
+Ops, no existe la localidad:Chinchilla de Monte-Aragon
+Ops, no existe la localidad:Chinchilla de Monte-Aragon
+Ops, no existe la localidad:Chinchilla de Monte-Aragon
+Ops, no existe la localidad:Chinchilla de Monte-Aragon
+Ops, no existe la localidad:Hoya-Gonzalo
+Ops, no existe la localidad:Arenales de San Gregorio
+Ops, no existe la localidad:Valdemanco del Esteras
+Ops, no existe la localidad:Arcas
+Ops, no existe la localidad:Casas de Haro
+Ops, no existe la localidad:El Peral
+Ops, no existe la localidad:Ucles
+Ops, no existe la localidad:Almonacid de Zorita
+Ops, no existe la localidad:Las Colinas
+Ops, no existe la localidad:Montecalderon
+Ops, no existe la localidad:La Celada
+Ops, no existe la localidad:El Mapa
+Ops, no existe la localidad:Fuentenovilla
+Ops, no existe la localidad:El Bosque del Henares
+Ops, no existe la localidad:Caraquiz
+Ops, no existe la localidad:Valdeluz
+Ops, no existe la localidad:Garciotun
+Ops, no existe la localidad:Las Nieves
+Ops, no existe la localidad:Pepino
+Ops, no existe la localidad:La Torre de Esteban Hambran
+Ops, no existe la localidad:Las Ventas con Peña Aguilera
+Ops, no existe la localidad:Villafranca de los Caballeros
+Ops, no existe la localidad:Villafranca de los Caballeros
+Ops, no existe la localidad:Villafranca de los Caballeros
+Ops, no existe la localidad:Villafranca de los Caballeros
 BEGIN TRANSACTION;
 pragma foreign_keys=on;
 
