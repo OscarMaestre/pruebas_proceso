@@ -98,6 +98,10 @@ class GestorFicheros(object):
         dir_destino=self.escapar_fichero_con_espacios(dir_destino)
         self.aplicar_comando ( self.MOVER, fichero , dir_destino)
         
+    def renombrar_fichero_con_espacios(self, fichero):
+        nuevo_nombre=self.escapar_fichero_con_espacios(fichero)
+        self.mover_fichero (fichero, nuevo_nombre)
+        return nuevo_nombre
     def existe_fichero(self, nombre_fichero):
         if os.path.isfile(nombre_fichero):
             return True
