@@ -24,7 +24,7 @@ gestor_bd=GestorBD ( NOMBRE_BD )
 escritor_excel=EscritorExcel ( NOMBRE_EXCEL )
 
 plantilla_sql="""
-    select distinct r.codigo_centro, r.especialidad, e.descripcion, p.nombre_completo,
+    select distinct r.codigo_centro as CodigoCentro, r.especialidad, e.descripcion, p.nombre_completo,
             cr.nombre_centro, l.nombre_localidad, l.nombre_provincia, punt.apfinal
         from resultas as r, especialidades as e, participantes as p, puntuacion as punt,
                 centros_region as cr, localidades as l
@@ -49,6 +49,8 @@ num_fila=0
 num_columna=0
 cabeceras=["Provincia", "Localidad", "Centro", "Persona", "Puntos"]
 for fila_especialidad in filas_especialidades:
+    descripciones=gestor_bd.get_nombres_columnas()
+    #print (descripciones)
     codigo_especialidad=fila_especialidad[0]
     nombre_especialidad=fila_especialidad[1]
     sql=plantilla_sql.format ( codigo_especialidad )

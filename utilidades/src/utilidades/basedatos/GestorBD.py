@@ -74,7 +74,15 @@ class GestorBD(object):
     def __del__(self):
         self.cursor.close()
         
-        
+    def get_descripcion(self):
+        return self.cursor.description
+    def get_nombres_columnas(self):
+        descripciones=self.cursor.description
+        nombres_columnas=[]
+        for d in descripciones:
+            nombres_columnas.append ( d[0] )
+        return nombres_columnas
+            
     def extraer_tuplas_especialidades_de_fichero(self, nombre_fichero):
         fichero=open(nombre_fichero, encoding="utf-8")
         lineas=fichero.readlines()
