@@ -27,15 +27,20 @@ for fichero in ficheros:
     nombre_txt=procesador_pdf.convertir_a_txt( fichero )
     procesador_pdf.abrir_fichero_txt ( nombre_txt )
     while not procesador_pdf.eof():
-        (ini, fin, codigo_localidad)=procesador_pdf.avanzar_buscando_codigo_localidad()
+        (ini, fin, codigo_localidad)=procesador_pdf.avanzar_buscando_codigo_localidad(
+            debe_estar_en_misma_linea=False
+        )
         if codigo_localidad!=procesador_pdf.FIN_DE_FICHERO and codigo_localidad!=procesador_pdf.PATRON_NO_ENCONTRADO:
             print("Loc:"+codigo_localidad)
             
-        (ini, fin, codigo_centro)=procesador_pdf.avanzar_buscando_codigo_centro(con_c=False)
+        (ini, fin, codigo_centro)=procesador_pdf.avanzar_buscando_codigo_centro(
+            con_c=False,debe_estar_en_misma_linea=False)
         if codigo_centro!=procesador_pdf.FIN_DE_FICHERO and codigo_centro!=procesador_pdf.PATRON_NO_ENCONTRADO:
             print("Cen:"+codigo_centro)
         
-        (ini, fin, nombre_persona)=procesador_pdf.avanzar_buscando_nombre_persona()
+        (ini, fin, nombre_persona)=procesador_pdf.avanzar_buscando_nombre_persona(
+            debe_estar_en_misma_linea=False
+        )
         if nombre_persona!=procesador_pdf.FIN_DE_FICHERO and nombre_persona!=procesador_pdf.PATRON_NO_ENCONTRADO:
             print("Nom:"+nombre_persona)
             
@@ -43,7 +48,22 @@ for fichero in ficheros:
         if dni!=procesador_pdf.FIN_DE_FICHERO and dni!=procesador_pdf.PATRON_NO_ENCONTRADO:
             print("Dni:"+dni)
             pass
-            
+        
+        (ini, fin, anio)=procesador_pdf.avanzar_buscando_anio()
+        if anio!=procesador_pdf.FIN_DE_FICHERO and anio!=procesador_pdf.PATRON_NO_ENCONTRADO:
+            print("Anio:"+anio  )
+            pass
+        
+        (ini, fin, espe)=procesador_pdf.avanzar_buscando_especialidades_maestros_concurso_traslados()
+        if espe!=procesador_pdf.FIN_DE_FICHERO and espe!=procesador_pdf.PATRON_NO_ENCONTRADO:
+            print("Especialidades:"+espe  )
+            pass
+        
+        (ini, fin, nota)=procesador_pdf.avanzar_buscando_decimal()
+        if nota!=procesador_pdf.FIN_DE_FICHERO and nota!=procesador_pdf.PATRON_NO_ENCONTRADO:
+            print("Nota:"+nota)
+            pass
+        procesador_pdf.siguiente_linea()
         (ini, fin, decimal)=procesador_pdf.avanzar_buscando_decimal()
         if decimal!=procesador_pdf.FIN_DE_FICHERO and decimal!=procesador_pdf.PATRON_NO_ENCONTRADO:
             lista_decimales=procesador_pdf.extraer_todos_decimales()

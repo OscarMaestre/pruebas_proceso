@@ -61,6 +61,11 @@ class ProcesadorPDF(object):
         re_decimales_baremo="[0-9]{1,3}[\,|\.][0-9]{4}"
         self.expr_regular_decimales=re.compile( re_decimales_baremo )
         
+        re_especialidades_maestros_en_concurso_traslados="([0-9]{3} )+"
+        self.expr_regular_especialidad_maestros_en_concurso_de_traslados=re.compile(
+            re_especialidades_maestros_en_concurso_traslados
+        )
+        
         self.num_fila=0
         self.num_columna=0
         self.lineas_fichero=[]
@@ -115,12 +120,20 @@ class ProcesadorPDF(object):
         if self.num_fila>=self.MAX_FILAS:
             self.FIN_DE_FICHERO=True
             
-    def avanzar_buscando_patron(self, expr_regular):
+    def avanzar_buscando_patron(self, expr_regular, debe_estar_en_misma_linea=True):
         if self.lineas_fichero==[]:
             print("No hay ningun fichero abierto")
             return
+        if self.num_fila>=self.MAX_FILAS:
+            self.FIN_DE_FICHERO=True
+            return (self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO)
         linea_actual=self.lineas_fichero[ self.num_fila ][self.num_columna:]
         (ini, fin, resultado)=self.linea_contiene_patron ( expr_regular, linea_actual)
+        if debe_estar_en_misma_linea:
+            if resultado==self.PATRON_NO_ENCONTRADO:
+                return (self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO)
+            else:
+                return (ini, fin, resultado)
         while resultado==self.PATRON_NO_ENCONTRADO and not self.FIN_DE_FICHERO:
             self.siguiente_linea()
             linea_actual=self.lineas_fichero[ self.num_fila ]
@@ -131,22 +144,42 @@ class ProcesadorPDF(object):
             return (ini, fin, resultado)
         return (self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO)
     
-    def avanzar_buscando_codigo_localidad(self):        
-        return self.avanzar_buscando_patron ( self.expr_regular_codigo_localidad )
-    def avanzar_buscando_dni(self):        
-        return self.avanzar_buscando_patron ( self.expr_regular_dni )
-    def avanzar_buscando_nif(self):        
-        return self.avanzar_buscando_patron ( self.expr_regular_dni )
-    def avanzar_buscando_codigo_centro(self, con_c=False):
-        if con_c:
-            return self.avanzar_buscando_patron ( self.expr_regular_codigo_centro_con_c )
-        else:
-            return self.avanzar_buscando_patron ( self.expr_regular_codigo_centro_sin_c )
-    def avanzar_buscando_nombre_persona(self):        
-        return self.avanzar_buscando_patron ( self.expr_regular_nombre_persona )
+    def avanzar_buscando_codigo_localidad(self, debe_estar_en_misma_linea=True):        
+        return self.avanzar_buscando_patron ( self.expr_regular_codigo_localidad,
+                                             debe_estar_en_misma_linea)
+    def avanzar_buscando_dni(self, debe_estar_en_misma_linea=True):        
+        return self.avanzar_buscando_patron ( self.expr_regular_dni,
+                                             debe_estar_en_misma_linea)
+    def avanzar_buscando_nif(self, debe_estar_en_misma_linea=True):        
+        return self.avanzar_buscando_patron ( self.expr_regular_dni,
+                                             debe_estar_en_misma_linea)
     
-    def avanzar_buscando_decimal(self):
-        devolver= self.avanzar_buscando_patron ( self.expr_regular_decimales )
+    def avanzar_buscando_codigo_centro(self, con_c=False, debe_estar_en_misma_linea=True):
+        if con_c:
+            return self.avanzar_buscando_patron ( self.expr_regular_codigo_centro_con_c,
+                                                 debe_estar_en_misma_linea)
+        else:
+            return self.avanzar_buscando_patron ( self.expr_regular_codigo_centro_sin_c,
+                                                 debe_estar_en_misma_linea)
+    def avanzar_buscando_nombre_persona(self, debe_estar_en_misma_linea=True):        
+        return self.avanzar_buscando_patron ( self.expr_regular_nombre_persona,
+                                             debe_estar_en_misma_linea)
+    
+    def avanzar_buscando_decimal(self, debe_estar_en_misma_linea=True):
+        devolver= self.avanzar_buscando_patron ( self.expr_regular_decimales,
+                                                debe_estar_en_misma_linea)
+        return devolver
+    
+    def avanzar_buscando_anio(self, debe_estar_en_misma_linea=True):
+        devolver= self.avanzar_buscando_patron ( self.expr_regular_anio,
+                                                debe_estar_en_misma_linea)
+        return devolver
+    
+    def avanzar_buscando_especialidades_maestros_concurso_traslados(self,debe_estar_en_misma_linea=True):
+        devolver= self.avanzar_buscando_patron (
+            self.expr_regular_especialidad_maestros_en_concurso_de_traslados,
+            debe_estar_en_misma_linea
+        )
         return devolver
     
     def saltar_linea(self):
