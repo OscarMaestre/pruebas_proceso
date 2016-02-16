@@ -5,5 +5,7 @@ drop table errores;
 drop table puntuacion;
 drop table provincias;
 drop table localidades;
+drop table cpd;
+drop table dplz;
 drop table centros_region;
 .quit

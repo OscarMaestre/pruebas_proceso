@@ -8,6 +8,7 @@ DIRECTORIO_UTILIDADES=( (".." + os.sep ) * NUM_DIRECTORIOS_ANTERIORES) +"utilida
 sys.path.insert(0, DIRECTORIO_UTILIDADES)
 from utilidades.excel.GestorExcel import EscritorExcel
 from utilidades.basedatos.GestorBD import GestorBD
+from utilidades.basedatos.ParticipanteConDerechos import ParticipanteConDPC
 from utilidades.ficheros.ProcesadorPDF import ProcesadorPDF
 from utilidades.ficheros.GestorFicheros import GestorFicheros
 
@@ -57,7 +58,10 @@ for fichero in ficheros:
         (ini, fin, espe)=procesador_pdf.avanzar_buscando_especialidades_maestros_concurso_traslados()
         if espe!=procesador_pdf.FIN_DE_FICHERO and espe!=procesador_pdf.PATRON_NO_ENCONTRADO:
             print("Especialidades:"+espe  )
-            pass
+            trozos=espe.split(" ")
+            especialidades=[]
+            for t in trozos:
+                especialidades.append("0597"+t)
         
         (ini, fin, nota)=procesador_pdf.avanzar_buscando_decimal()
         if nota!=procesador_pdf.FIN_DE_FICHERO and nota!=procesador_pdf.PATRON_NO_ENCONTRADO:
@@ -76,5 +80,7 @@ for fichero in ficheros:
             print ("T3:")
             print(lista_decimales)
         print ("---------------------")
+        participante=ParticipanteConDPC(dni, anio, TIPO_BAREMO, codigo_centro)
+        print (participante.generar_sql())
      
     

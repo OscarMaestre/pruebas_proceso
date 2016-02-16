@@ -48,7 +48,11 @@ Un afectuoso saludo y una vez más ¡felicidades!
 
 <br/><br/>
 <center><b>Tus compañeros de ANPE-Ciudad Real</b></center>
-
+<br/><br/>
+<small>Por favor, si has encontrado este correo en la bandeja de SPAM/Correo no
+deseado, por favor pulsa el botón "Es correo deseado" para que en el futuro no
+pierdas mensajes nuestros que puedan ser importantes.
+</small>
 </body>
 </html>             
                 
@@ -80,6 +84,11 @@ Un saludo cordial y por segunda vez ¡felicidades!
 <br/><br/>
 <center><b>Tus compañeros de ANPE-Ciudad Real</b></center>
 
+<br/><br/>
+<small>Por favor, si has encontrado este correo en la bandeja de SPAM/Correo no
+deseado, por favor pulsa el botón "Es correo deseado" para que en el futuro no
+pierdas mensajes nuestros que puedan ser importantes.
+</small>
 </body>
 </html>             
                 
@@ -135,6 +144,9 @@ def enviar_email_felicitacion_si_procede(posiciones_campos, fila):
             utilidades.enviar_email(remitente, destinatario,
                                 asunto, mensaje,
                                 fichero_configuracion_email, ficheros)
+            utilidades.enviar_email("oscar@anpecr.com", destinatario,
+                                asunto, mensaje,
+                                fichero_configuracion_email, ficheros)
             utilidades.anadir_a_fichero(
             "<li>{0} {1} cumple hoy los años y se le felicitó correctamente en &lt;{2}&gt;</li>".format(
                 nombre, ap1, email
@@ -169,6 +181,6 @@ utilidades.anadir_a_fichero("</ul>", ARCHIVO_LOG)
         
 utilidades.enviar_email_servicio_automatico (
     "Informe del felicitador a {0}-{1}-{2}".format(dia_hoy, mes_hoy, anio_hoy),
-    utilidades.leer_fichero ( ARCHIVO_LOG), ["ogomezgarcia@gmail.com]"]
+    utilidades.leer_fichero ( ARCHIVO_LOG), ["oscar@anpecr.com]"]
 )
 utilidades.borrar_fichero(ARCHIVO_LOG)

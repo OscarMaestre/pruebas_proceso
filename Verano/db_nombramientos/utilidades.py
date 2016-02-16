@@ -665,3 +665,19 @@ create table if not exists {0} (
     ,foreign key (nif) references {2}(nif)
 )
 """
+
+NOMBRE_TABLA_DERECHO_PREF_CENTRO="dpc"
+SQL_CREACION_DPC="""
+create table if not exists {0} (
+    nif character(12),
+    anio_participacion unsigned int,
+    especialidad char(10),
+    tipo_baremo char(15),
+    codigo_centro char(10),
+    foreign key (codigo_centro) references {1} (codigo_centro),
+    foreign key (nif) references {2}(nif)
+)
+"""
+
+NOMBRE_TABLA_DERECHO_PREF_CENTRO="dplz"
+SQL_CREACION_DPLZ=SQL_CREACION_DPC
