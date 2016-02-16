@@ -174,4 +174,14 @@ create table if not exists {0} (
 """
 
 NOMBRE_TABLA_DERECHO_PREF_CENTRO="dplz"
-SQL_CREACION_DPLZ=SQL_CREACION_DPC
+SQL_CREACION_DPLZ="""
+create table if not exists {0} (
+    nif character(12),
+    anio_participacion unsigned int,
+    especialidad char(10),
+    tipo_baremo char(15),
+    codigo_localidad char(10),
+    foreign key (codigo_localidad) references {1} (codigo_localidad),
+    foreign key (nif) references {2}(nif)
+)
+"""

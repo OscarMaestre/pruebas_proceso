@@ -85,6 +85,7 @@ class ProcesadorPDF(object):
         self.lineas_fichero=descriptor.readlines()
         self.num_columna=0
         self.num_fila=0
+        self.FIN_DE_FICHERO=False
         self.MAX_FILAS=len(self.lineas_fichero) - 1
         #print(self.MAX_FILAS)
         descriptor.close()
