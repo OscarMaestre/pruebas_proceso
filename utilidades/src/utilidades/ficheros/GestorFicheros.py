@@ -88,10 +88,13 @@ class GestorFicheros(object):
         except FileExistsError:
             return 
     def get_lineas_fichero(self, nombre_fichero):
+        lineas_sin_fin_de_linea=[]
         with open(nombre_fichero, "r") as f:
             lineas=f.readlines()
             f.close()
-        return lineas
+        for l in lineas:
+            lineas_sin_fin_de_linea.append ( l.strip() )
+        return lineas_sin_fin_de_linea
     
     def mover_fichero(self, fichero, dir_destino):
         fichero=self.escapar_fichero_con_espacios(fichero)

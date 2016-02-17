@@ -26,7 +26,12 @@ class GestorMySQL(object):
                 print("No existe la base de datos {0}".format ( bd ) )
             else:
                 print(err)
-        
+                
+    def activar_depuracion(self):
+        self.debug=True
+    def dsactivar_depuracion(self):
+        self.debug=False
+            
     def mostrar_mensaje_debug(self, mensaje):
         print ("==> {0}".format ( mensaje ) )
         
