@@ -45,6 +45,14 @@ class GestorMySQL(object):
             self.conexion.commit()
         return self.cursor
     
+    def ejecutar_insert(self, sql_insert, tupla_parametros=[]):
+        self.ejecutar_select ( sql_insert, tupla_parametros, ejecutar_commit=True)
+    def get_filas(self, sql, tupla_parametros=[]):
+        cursor=self.ejecutar_select (sql, tupla_parametros)
+        return cursor.fetchall()
+    def get_valor_unico(self, sql, tupla_parametros=[]):
+        filas=self.get_filas(sql, tupla_parametros)
+        return filas[0][0]
     def __del__(self):
         if self.conexion!=None:
             self.conexion.close()
