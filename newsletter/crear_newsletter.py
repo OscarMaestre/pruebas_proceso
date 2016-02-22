@@ -112,20 +112,24 @@ for f in filas_historias:
 fecha_hoy=gestor_fechas.convertir_fecha_de_iso_a_estandar(fecha_hoy)
 
 gf=GestorFicheros()
-texto_plantilla=gf.leer_fichero("plantilla_boletin.html")
-texto_boletin=texto_plantilla.format(
-    TITULO_BOLETIN.format(fecha_hoy),
-    gestor_fechas.convertir_fecha_de_iso_a_estandar(fecha_hace_una_semana),
-    fecha_hoy,boletin
-    
-)
+valores_para_rellenar_plantilla=dict()
+valores_para_rellenar_plantilla["titulo"]=TITULO_BOLETIN.format ( fecha_hoy )
+valores_para_rellenar_plantilla["fecha_hoy"]=fecha_hoy
+valores_para_rellenar_plantilla["fecha_semana_pasada"]=gestor_fechas.convertir_fecha_de_iso_a_estandar(fecha_hace_una_semana),
+valores_para_rellenar_plantilla["contenido"]=boletin
+
+texto_plantilla_rellenar=gf.rellenar_fichero_plantilla("plantilla_boletin2.html",
+                                             valores_para_rellenar_plantilla)
+
+texto_plantilla_rellenar=texto_plantilla_rellenar.replace("'", "\"")
 #print (texto_boletin)
 sql_insercion=SQL_INSERCION_BOLETIN.format (
-        texto_boletin,
+        texto_plantilla_rellenar,
         TITULO_BOLETIN.format(fecha_hoy),
         TIMESTAMP_UNIX_DE_HOY
 )
 
+print (sql_insercion)
 #print(sql_insercion)
 gestor_mysql.ejecutar_insert (sql_insercion)
 

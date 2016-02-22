@@ -4,7 +4,7 @@
 import os
 import platform
 import requests
-
+import jinja2
 from subprocess import call
 
 class GestorFicheros(object):
@@ -157,3 +157,10 @@ class GestorFicheros(object):
         descriptor=open (nombre_fichero_destino, "w")
         descriptor.write ( peticion.text )
         descriptor.close()
+    def rellenar_fichero_plantilla(self, fichero_plantilla, diccionario, directorio_plantillas=".", fichero_salida=None):
+        
+        texto_plantilla=self.leer_fichero(fichero_plantilla)
+        plantilla=jinja2.Template(texto_plantilla)
+        
+        return plantilla.render( diccionario )
+        
