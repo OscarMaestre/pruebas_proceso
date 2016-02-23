@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django_tables2',
     'gestionweb.apps.GestionwebConfig',
     'gestioncursos.apps.GestioncursosConfig',
+    'gestionmensajeria.apps.GestionmensajeriaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
