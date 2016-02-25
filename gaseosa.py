@@ -24,4 +24,5 @@ else:
                             "| sqlite3 ",BD_RESULTADO )
 utilidades.ejecutar_comando(
     "utilidades_gaseosa"+SEPARADOR+"insertar_bd.py",
-    ".."+SEPARADOR+"toshiba.txt", BD_RESULTADO, "gaseosa")
+    ".."+SEPARADOR+"toshiba.txt", BD_RESULTADO, "gaseosa",
+    "correspondencia_especialidades.csv")
