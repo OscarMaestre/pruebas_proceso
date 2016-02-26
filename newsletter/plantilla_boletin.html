@@ -3,36 +3,45 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{0}</title>
+    <title>{{titulo}}</title>
     <style>
-        img#logo_principal{{
+        img#logo_principal{
             size: 20%;
-        }}
-        body{{
+        }
+        body{
             font-size: large;
-        }}
+        }
     </style>
 </head>
 
 <body style="font-size: large;">
 
 <center>
-    <img style="size: 20%;" src="http://www.anpeclm.com/web/images/stories/imagenes/logo-s.png">
-        <h1>BOLETÍN SEMANAL DE NOTICIAS (del {1} al {2})</h1>
+    <img style="width: 20%;height: 20%" src="http://www.anpeclm.com/web/images/stories/imagenes/logo-s.png">
+        <h1>BOLETÍN SEMANAL DE NOTICIAS (del {{fecha_semana_pasada}} al {{fecha_hoy}})</h1>
 
 <br/><br/>
 <b>Este mensaje ha sido enviado de manera automática, por favor, no contestes a esta dirección.</b>
+<br/><br/>
 </center>
-{3}
+{{contenido}}
 
+<br/>
 <hr/>
+<center style="font-size: large">
+    <a href="http://www.anpeclm.com/web/index.php?option=com_content&view=article&id=1796&Itemid=962">Consulta todos las ventajas, descuentos y promociones de los que te puedes beneficiar por ser afiliado/a a ANPE.</a>
+</center>
+<br/>
 
 En ANPE Sindicato Independiente NO PRACTICAMOS SPAM, nos declaramos totalmente contrarios a esta práctica. <br/>
 Trabajamos cada día para informarte lo mejor posible.
 
 
-<br/><br/>{{share:facebook}}{{share:twitter}}{{share:google}}
-<a href="http://www.anpeclm.com/web/index.php?option=com_content&view=article&id=1796&Itemid=962">Consulta todos las ventajas, descuentos y promociones de los que te puedes beneficiar por ser afiliado/a a ANPE.</a>
+<br/><br/>
+{%raw%}
+    {share:facebook}{share:twitter}{share:google}
+{%endraw%}
+
 <br/><br/><br/>
 <center>
 <img src="images/stories/IMAGENES_CLM/pagina_principal/actualiza-azul.gif">
