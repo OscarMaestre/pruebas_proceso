@@ -18,11 +18,23 @@ BOLSA_597_NO_CONVOCADAS=BOLSA_597_CONVOCADAS+1
 MAX_LONGITUD_DESCRIPCION_ESPECIALIDAD=100
 MAX_LONGITUD_DNI=10
 MAX_LONGITUD_NOMBRE=100
+
+
+class Especialidad(Base):
+    __tablename__=NOMBRE_TABLA_ESPECIALIDADES
+    codigo_especialidad=Column(String, primary_key=True)
+    descripcion=Column(String(MAX_LONGITUD_DESCRIPCION_ESPECIALIDAD), )
+    tiempo_parcial=Column( Boolean, default=False, unique=False)
+    con_ingles=Column (Boolean, default=False, unique=False)
+    con_frances=Column (Boolean, default=False, unique=False)
+
+
 class Bolsa(Base):
      __tablename__ = NOMBRE_TABLA_BOLSAS
 
      id = Column(Integer, primary_key=True)
-     nombre = Column(String)
+     codigo_especialidad = Column(String,
+                ForeignKey (NOMBRE_TABLA_ESPECIALIDADES+".codigo_especialidad"))
      
      def __repr__(self):
         return self.nombre
@@ -40,17 +52,11 @@ class Interino(Base):
         return "<Interino (nombre='%s', dni='%s')>" % (
                              self.nombre, self.dni)
     
-class Especialidad(Base):
-    __tablename__=NOMBRE_TABLA_ESPECIALIDADES
-    codigo_especialidad=Column(String, primary_key=True)
-    descripcion=Column(String(MAX_LONGITUD_DESCRIPCION_ESPECIALIDAD), )
-    tiempo_parcial=Column( Boolean, default=False, unique=False)
-    con_ingles=Column (Boolean, default=False, unique=False)
-    con_frances=Column (Boolean, default=False, unique=False)
     
 class InterinosBolsas(Base):
     __tablename__=NOMBRE_TABLA_CRUCE_INTERINOS_BOLSAS
     
     dni_interino=Column (String(MAX_LONGITUD_DNI), ForeignKey(NOMBRE_TABLA_INTERINOS+".dni"), primary_key=True)
     id_bolsa=Column ( Integer, ForeignKey ( NOMBRE_TABLA_BOLSAS+".id"), primary_key=True)
+    codigo_especialidad=Column
     numero_en_bolsa=Column ( Integer, unique=False )
