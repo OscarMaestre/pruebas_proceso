@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding=utf-8
-from mysql.connector import connection
+from mysql.connector import connection #Si ves un error aqui ejecuta "sudo apt-get install python3-mysql.connector" (En Linux) o "pip3 install python3-mysql.connector" en Windows
 from mysql.connector import errorcode
 from mysql.connector import Error
 
