@@ -12,7 +12,7 @@ class ProcesadorPDF(object):
         self.DECIMAL_NO_CONCORDANTE="zzzzzzzzzzzzz"
         self.gf=GestorFicheros()
         
-        re_dni="[0-9]{7,8}[A-Z]"
+        re_dni="X?[0-9]{7,8}[A-Z]"
         self.expr_regular_dni=re.compile(re_dni)
         
         re_decimales_baremo="[0-9]{1,3}[\,|\.][0-9]{4}"
@@ -55,7 +55,7 @@ class ProcesadorPDF(object):
         re_codigo_centro_con_c="[0-9]{8}C"
         self.expr_regular_codigo_centro_con_c=re.compile ( re_codigo_centro_con_c )
         
-        re_nombre_persona="[ÑÁÉÍÓÚA-Z\- ]+,[ÑÁÉÍÓÚA-Z ]+"
+        re_nombre_persona="[ÜÑÁÉÍÓÚA-Z\-\. ]+,[\.ÜÑÁÉÍÓÚA-Z ]+"
         self.expr_regular_nombre_persona=re.compile ( re_nombre_persona )
         
         re_decimales_baremo="[0-9]{1,3}[\,|\.][0-9]{4}"
@@ -103,6 +103,15 @@ class ProcesadorPDF(object):
             self.FIN_DE_FICHERO=True
         self.num_columna=0
         
+    def get_linea_anterior(self):
+        return self.lineas_fichero [ self.num_fila-1 ]
+    def get_linea_siguiente(self):
+        return self.lineas_fichero [ self.num_fila+1 ]
+    def fila_anterior(self):
+        self.num_fila-=1
+        if self.num_fila<0:
+            self.num_fila=0
+        self.num_columna=0
     
     def linea_contiene_patron(self, expr_regular, linea):
         #print ("Buscando {0} en {1}".format( str(expr_regular), linea))
@@ -115,6 +124,8 @@ class ProcesadorPDF(object):
             return (inicio, final, patron)
         return (self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO, self.PATRON_NO_ENCONTRADO)
     
+    def get_nombre_persona(self, linea):
+        return self.linea_contiene_patron ( self.expr_regular_nombre_persona, linea )
     def siguiente_linea(self):
         self.num_fila=self.num_fila+1
         self.num_columna=0
