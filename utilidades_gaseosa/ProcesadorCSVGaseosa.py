@@ -32,6 +32,7 @@ SQL_CREATE_GASEOSA="""
         provincia           char(20),
         email               char(100),
         fecha_nacimiento    date,
+        especialidad        char(10),
         tlf_casa            char(18),
         tlf_movil           char(18),
         fecha_alta          date,
@@ -83,6 +84,7 @@ class ProcesadorCSVGaseosa(object):
     CORRESPONDENCIA["CodCentroCursoActual"]="cod_centro_actual"
     CORRESPONDENCIA["Auxiliar"]="auxiliar"
     CORRESPONDENCIA["Cuerpo"]="cuerpo"
+    CORRESPONDENCIA["Espec 1"]="especialidad"
     CORRESPONDENCIA["IBAN"]="iban"
     CORRESPONDENCIA["Cuenta"]="ccc"
     CORRESPONDENCIA["SEXO"]="sexo"
@@ -105,6 +107,7 @@ class ProcesadorCSVGaseosa(object):
         self.posiciones_campos["F_Alta"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["F_Baja"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["Cuerpo"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
+        self.posiciones_campos["Espec 1"]     = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         
         self.posiciones_campos["CodCentroDefinitivo"]   = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["CodCentroCursoActual"]  = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
@@ -112,8 +115,23 @@ class ProcesadorCSVGaseosa(object):
         
         self.posiciones_campos["IBAN"]      = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
         self.posiciones_campos["Cuenta"]      = ProcesadorCSVGaseosa.CAMPO_NO_LOCALIZADO
-        
+        self.usar_nuevas_especialidades=False
 
+    #Determina las correspondencias entre las especialidades
+    #antiguas (con 3 numeros) a las nuevas
+    def set_activar_nuevas_especialidades(self, fichero_correspondencias):
+        self.correspondencias=dict()
+        with open(fichero_correspondencias, newline='', encoding="utf-8") as fichero_csv:
+            lector=csv.reader(fichero_csv, delimiter=";", quotechar="\"")
+            
+            num_fila=0
+            for fila in lector:
+                if num_fila!=0:
+                    self.correspondencias[fila[0]]=fila[1]
+                num_fila=num_fila+1
+        print(self.correspondencias)
+        self.usar_nuevas_especialidades=True
+    
     #Si nos pasan la primera fila del CSV se rellenan las posiciones
     #de los campos
     def averiguar_posiciones_campos(self, lista_campos):
@@ -159,6 +177,8 @@ class ProcesadorCSVGaseosa(object):
                         #El campo fecha tiene que reordenarse de 31-11-2015 a 2015-11-31
                         if clave=="F_nace" or clave=="F_Alta" or clave=="F_Baja":
                             valor_campo=self.reformatear_fecha(valor_campo)
+                        if clave=="Espec 1" and self.usar_nuevas_especialidades:
+                            valor_campo=self.correspondencias[valor_campo]
                         lista_campos.anadir(nombre_campo, valor_campo)
                     sql_insercion.append ( lista_campos.generar_insert( nombre_tabla ) )
                 else:

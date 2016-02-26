@@ -64,6 +64,7 @@ class Gaseosa(models.Model):
     ciudad = models.CharField(max_length=100, blank=True, null=True)
     provincia = models.CharField(max_length=20, blank=True, null=True)
     email = models.CharField(max_length=100, blank=True, null=True)
+    especialidad = models.CharField(max_length=10, blank=True, null=True)
     fecha_nacimiento = models.DateField(blank=True, null=True)
     tlf_casa = models.CharField(max_length=18, blank=True, null=True)
     tlf_movil = models.CharField(max_length=18, blank=True, null=True)

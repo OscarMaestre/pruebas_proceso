@@ -8,6 +8,8 @@ import sys
 archivo_csv=sys.argv[1]
 archivo_bd=sys.argv[2]
 nombre_tabla=sys.argv[3]
-procesador_gaseosa=ProcesadorCSVGaseosa.ProcesadorCSVGaseosa()
+fichero_correspondencia_especialidades=sys.argv[4]
 
+procesador_gaseosa=ProcesadorCSVGaseosa.ProcesadorCSVGaseosa()
+procesador_gaseosa.set_activar_nuevas_especialidades(fichero_correspondencia_especialidades)
 procesador_gaseosa.insertar_en_bd(archivo_bd, nombre_tabla, archivo_csv)
