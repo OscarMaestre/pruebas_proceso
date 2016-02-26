@@ -61,7 +61,9 @@ class ProcesadorPDF(object):
         re_decimales_baremo="[0-9]{1,3}[\,|\.][0-9]{4}"
         self.expr_regular_decimales=re.compile( re_decimales_baremo )
         
-        re_especialidades_maestros_en_concurso_traslados="([0-9]{3} )+"
+        re_numero_orden_interinos="[0-9]{1,5}"
+        self.expr_regular_numero_orden_interinos=re.compile ( re_numero_orden_interinos )
+        re_especialidades_maestros_en_concurso_traslados="( [0-9]{3})+"
         self.expr_regular_especialidad_maestros_en_concurso_de_traslados=re.compile(
             re_especialidades_maestros_en_concurso_traslados
         )
@@ -103,6 +105,9 @@ class ProcesadorPDF(object):
             self.FIN_DE_FICHERO=True
         self.num_columna=0
         
+    def get_linea_actual(self):
+        return self.lineas_fichero [ self.num_fila ]
+    
     def get_linea_anterior(self):
         return self.lineas_fichero [ self.num_fila-1 ]
     def get_linea_siguiente(self):
@@ -187,6 +192,11 @@ class ProcesadorPDF(object):
                                                 debe_estar_en_misma_linea)
         return devolver
     
+    def avanzar_buscando_numero_de_orden(self, debe_estar_en_misma_linea=True):
+        devolver= self.avanzar_buscando_patron ( self.expr_regular_numero_orden_interinos,
+                                                debe_estar_en_misma_linea)
+        return devolver
+    
     def avanzar_buscando_especialidades_maestros_concurso_traslados(self,debe_estar_en_misma_linea=True):
         devolver= self.avanzar_buscando_patron (
             self.expr_regular_especialidad_maestros_en_concurso_de_traslados,
@@ -197,7 +207,11 @@ class ProcesadorPDF(object):
     def saltar_linea(self):
         self.num_fila = self.num_fila + 1
         self.num_columna = 0
-        
+    
+    
+    def extraer_dni(self):
+        linea=self.get_linea_actual()
+        return self.linea_contiene_patron( self.expr_regular_dni, linea)
     def extraer_todos_decimales(self):
         linea_actual=self.lineas_fichero [ self.num_fila ]
         #print(linea_actual)
