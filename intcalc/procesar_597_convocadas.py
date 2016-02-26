@@ -20,7 +20,8 @@ import modelos
 convocadas="Interinos2015_0597_Convocadas.pdf"
 
 modelos.Base.metadata.create_all(motor)
-bolsa=modelos.Bolsa(nombre="2015-2016-597-Convocadas")
+bolsa=modelos.Bolsa(nombre="2015-2016-597-Convocadas",
+                    id=modelos.BOLSA_597_CONVOCADAS)
 
 def esta_disponible(linea):
     inicio_disponibilidad=130
@@ -48,6 +49,8 @@ def es_bilingue_ingles(linea):
     
 
 procesador_pdf=ProcesadorPDF()
+lista_interinos=[]
+lista_participaciones_de_cada_interino_en_bolsas=[]
 nombre_txt=procesador_pdf.convertir_a_txt ( convocadas )
 procesador_pdf.abrir_fichero_txt( nombre_txt )
 num_orden=1
@@ -56,6 +59,7 @@ while not procesador_pdf.FIN_DE_FICHERO:
     if patron!=procesador_pdf.PATRON_NO_ENCONTRADO:
         
         (ini, fin, nombre)=procesador_pdf.avanzar_buscando_nombre_persona()
+        nombre=nombre.strip()
         if nombre==procesador_pdf.PATRON_NO_ENCONTRADO:
             linea_anterior=procesador_pdf.get_linea_anterior()
             linea_siguiente=procesador_pdf.get_linea_siguiente()
@@ -65,18 +69,27 @@ while not procesador_pdf.FIN_DE_FICHERO:
         (ini, fin , especialidades)=procesador_pdf.avanzar_buscando_especialidades_maestros_concurso_traslados()
         linea=procesador_pdf.get_linea_actual()
         if esta_disponible (linea):
-            disponible="Si Disp."
+            disponible=True
         else:
-            disponible="No Disp."
+            disponible=False
         if es_bilingue_frances(linea):
-            frances="Con Frances"
+            frances=True
         else:
-            frances="Sin Frances"
+            frances=False
         if es_bilingue_ingles(linea):
-            ingles="Con Ingles"
+            ingles=True
         else:
-            ingles="Sin Ingles"
-        print (num_orden, patron, "-"+nombre.strip()+"-", especialidades, disponible, frances, ingles)
+            ingles=False
+        #print (num_orden, patron, "-"+nombre.strip()+"-", especialidades, disponible, frances, ingles)
+        interino=modelos.Interino ( dni=patron, nombre=nombre,
+                           bilingue_ingles=ingles, bilingue_frances=frances,
+                           disponible=disponible)
+        participacion=modelos.InterinosBolsas(dni_interino=interino.dni,
+                                    id_bolsa=bolsa.id, numero_en_bolsa=num_orden)
+        lista_participaciones_de_cada_interino_en_bolsas.append (
+            participacion
+        )
+        lista_interinos.append ( interino )
         num_orden+=1
     (ini, fin, patron) = procesador_pdf.avanzar_buscando_dni(debe_estar_en_misma_linea=False)
     
@@ -86,4 +99,7 @@ sesion=creador_sesiones()
 
 
 sesion.add(bolsa)
+sesion.add_all ( lista_interinos )
+sesion.commit()
+sesion.add_all ( lista_participaciones_de_cada_interino_en_bolsas )
 sesion.commit()
