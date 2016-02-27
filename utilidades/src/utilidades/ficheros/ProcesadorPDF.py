@@ -131,6 +131,10 @@ class ProcesadorPDF(object):
     
     def get_nombre_persona(self, linea):
         return self.linea_contiene_patron ( self.expr_regular_nombre_persona, linea )
+    
+    def get_especialidades(self, linea):
+        return self.linea_contiene_patron ( self.expr_regular_especialidad_maestros_en_concurso_de_traslados, linea)
+    
     def siguiente_linea(self):
         self.num_fila=self.num_fila+1
         self.num_columna=0

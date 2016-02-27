@@ -58,8 +58,9 @@ def anadir_interino_a_bolsa_especialidad(especialidades, interino, num_orden):
     lista_participaciones=[]
     trozos=especialidades.strip().split (" ")
     cuerpo="597"
-    print (trozos)
+    #print (trozos)
     for t in trozos:
+        #print ("Viendo especialidad:"+t)
         especialidad_del_interino_tiempo_completo="0"+cuerpo + t
         interino_en_bolsa=InterinosBolsas (
             dni_interino=interino.dni,
@@ -116,8 +117,7 @@ def anadir_interino_a_bolsa_especialidad(especialidades, interino, num_orden):
             lista_participaciones.append (
                 interino_en_bolsa
             )
-            print (lista_participaciones)
-            return lista_participaciones
+    return lista_participaciones
 
 
 
@@ -140,7 +140,9 @@ while not procesador_pdf.FIN_DE_FICHERO:
             #print (linea_compuesta)
             (ini, fin, nombre)=procesador_pdf.get_nombre_persona(linea_compuesta)
         (ini, fin , especialidades)=procesador_pdf.avanzar_buscando_especialidades_maestros_concurso_traslados()
-        
+        if especialidades==procesador_pdf.PATRON_NO_ENCONTRADO:
+            linea_anterior=procesador_pdf.get_linea_anterior()
+            (ini, fin, especialidades)=procesador_pdf.get_especialidades(linea_anterior)
         linea=procesador_pdf.get_linea_actual()
         if esta_disponible (linea):
             disponible=True
@@ -160,7 +162,7 @@ while not procesador_pdf.FIN_DE_FICHERO:
                            disponible=disponible)
         participaciones=anadir_interino_a_bolsa_especialidad(
             especialidades,  interino, num_orden)
-        sesion.add_all(participaciones)
+        lista_participaciones_de_cada_interino_en_bolsas += participaciones
         
         lista_interinos.append ( interino )
         num_orden+=1

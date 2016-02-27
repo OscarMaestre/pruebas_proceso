@@ -23,7 +23,7 @@ MAX_LONGITUD_NOMBRE=100
 class Especialidad(Base):
     __tablename__=NOMBRE_TABLA_ESPECIALIDADES
     codigo_especialidad=Column(String, primary_key=True)
-    descripcion=Column(String(MAX_LONGITUD_DESCRIPCION_ESPECIALIDAD), )
+    descripcion=Column(String(MAX_LONGITUD_DESCRIPCION_ESPECIALIDAD) )
     con_ingles=Column (Boolean, default=False, unique=False)
     con_frances=Column (Boolean, default=False, unique=False)
     a_tiempo_parcial=Column (Boolean, default=False, unique=False)
@@ -129,8 +129,8 @@ class Interino(Base):
      bilingue_frances=Column(Boolean, default=False, unique=False)
      disponible=Column(Boolean, default=True, unique=False)
      def __repr__(self):
-        return "<Interino (nombre='%s', dni='%s')>" % (
-                             self.nombre, self.dni)
+        return "<Interino (nombre='%s', dni='%s', frances=%s, ingles=%s)>" % (
+                             self.nombre, self.dni, self.bilingue_frances, self.bilingue_ingles)
     
     
 class InterinosBolsas(Base):
@@ -141,6 +141,9 @@ class InterinosBolsas(Base):
     codigo_especialidad=Column(String,
                                ForeignKey (
                                 NOMBRE_TABLA_ESPECIALIDADES+".codigo_especialidad"
-                                )
+                                ), primary_key=True
                         )
     numero_en_bolsa=Column ( Integer, unique=False )
+    
+    def __str__(self):
+        return "Dni:{0} en {1}".format ( self.dni_interino, self.codigo_especialidad)

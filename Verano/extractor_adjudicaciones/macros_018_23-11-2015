@@ -92,9 +92,9 @@ On Error GoTo Proc_Err
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 22-12-2015' where dni='52386711W'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='13002371' where dni='24252484L'"
+	sql="update gaseosa set codcentrocursoactual='9999' where dni='24252484L'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 24-11-2015 hasta 26-02-2016 (Adjudicacion 23-11-2015)' where dni='24252484L'"
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 26-02-2016' where dni='24252484L'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='9999' where dni='77575179C'"
 	db.Execute sql, dbFailOnError
