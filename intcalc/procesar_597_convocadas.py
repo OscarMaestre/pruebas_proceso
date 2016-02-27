@@ -12,7 +12,7 @@ from sqlalchemy import Column, Integer, String
 
 
 cad_conexion=sys.argv[1]
-motor= create_engine(cad_conexion, echo=True)
+motor= create_engine(cad_conexion, echo=False)
 
 
 from utilidades.modelos.Modelos import *
@@ -54,6 +54,70 @@ Especialidad.crear_todas_especialidades ( sesion, "597" )
 
 
 
+def anadir_interino_a_bolsa_especialidad(especialidades, interino, num_orden):
+    lista_participaciones=[]
+    trozos=especialidades.strip().split (" ")
+    cuerpo="597"
+    print (trozos)
+    for t in trozos:
+        especialidad_del_interino_tiempo_completo="0"+cuerpo + t
+        interino_en_bolsa=InterinosBolsas (
+            dni_interino=interino.dni,
+            codigo_especialidad=especialidad_del_interino_tiempo_completo,
+            numero_en_bolsa=num_orden
+        )
+        lista_participaciones.append (
+            interino_en_bolsa
+        )
+        especialidad_del_interino_tiempo_parcial="P"+cuerpo + t
+        interino_en_bolsa=InterinosBolsas (
+            dni_interino=interino.dni,
+            codigo_especialidad=especialidad_del_interino_tiempo_parcial,
+            numero_en_bolsa=num_orden
+        )
+        lista_participaciones.append (
+            interino_en_bolsa
+        )
+        if interino.bilingue_ingles:
+            especialidad_del_interino_tiempo_completo="B"+cuerpo + t
+            interino_en_bolsa=InterinosBolsas (
+                dni_interino=interino.dni,
+                codigo_especialidad=especialidad_del_interino_tiempo_completo,
+                numero_en_bolsa=num_orden
+            )
+            lista_participaciones.append (
+                interino_en_bolsa
+            )
+            especialidad_del_interino_tiempo_parcial="W"+cuerpo + t
+            interino_en_bolsa=InterinosBolsas (
+                dni_interino=interino.dni,
+                codigo_especialidad=especialidad_del_interino_tiempo_parcial,
+                numero_en_bolsa=num_orden
+            )
+            lista_participaciones.append (
+                interino_en_bolsa
+            )
+        if interino.bilingue_frances:
+            especialidad_del_interino_tiempo_completo="F"+cuerpo + t
+            interino_en_bolsa=InterinosBolsas (
+                dni_interino=interino.dni,
+                codigo_especialidad=especialidad_del_interino_tiempo_completo,
+                numero_en_bolsa=num_orden
+            )
+            lista_participaciones.append (
+                interino_en_bolsa
+            )
+            especialidad_del_interino_tiempo_parcial="R"+cuerpo + t
+            interino_en_bolsa=InterinosBolsas (
+                dni_interino=interino.dni,
+                codigo_especialidad=especialidad_del_interino_tiempo_parcial,
+                numero_en_bolsa=num_orden
+            )
+            lista_participaciones.append (
+                interino_en_bolsa
+            )
+            print (lista_participaciones)
+            return lista_participaciones
 
 
 
@@ -76,6 +140,7 @@ while not procesador_pdf.FIN_DE_FICHERO:
             #print (linea_compuesta)
             (ini, fin, nombre)=procesador_pdf.get_nombre_persona(linea_compuesta)
         (ini, fin , especialidades)=procesador_pdf.avanzar_buscando_especialidades_maestros_concurso_traslados()
+        
         linea=procesador_pdf.get_linea_actual()
         if esta_disponible (linea):
             disponible=True
@@ -93,11 +158,10 @@ while not procesador_pdf.FIN_DE_FICHERO:
         interino=Interino ( dni=patron, nombre=nombre,
                            bilingue_ingles=ingles, bilingue_frances=frances,
                            disponible=disponible)
-        participacion=InterinosBolsas(dni_interino=interino.dni,
-                                    id_bolsa=bolsa.id, numero_en_bolsa=num_orden)
-        lista_participaciones_de_cada_interino_en_bolsas.append (
-            participacion
-        )
+        participaciones=anadir_interino_a_bolsa_especialidad(
+            especialidades,  interino, num_orden)
+        sesion.add_all(participaciones)
+        
         lista_interinos.append ( interino )
         num_orden+=1
     (ini, fin, patron) = procesador_pdf.avanzar_buscando_dni(debe_estar_en_misma_linea=False)
@@ -105,7 +169,7 @@ while not procesador_pdf.FIN_DE_FICHERO:
     
 
 
-sesion.add(bolsa)
+
 sesion.add_all ( lista_interinos )
 sesion.commit()
 sesion.add_all ( lista_participaciones_de_cada_interino_en_bolsas )

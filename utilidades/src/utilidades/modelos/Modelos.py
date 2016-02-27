@@ -137,7 +137,7 @@ class InterinosBolsas(Base):
     __tablename__=NOMBRE_TABLA_CRUCE_INTERINOS_BOLSAS
     
     dni_interino=Column (String(MAX_LONGITUD_DNI), ForeignKey(NOMBRE_TABLA_INTERINOS+".dni"), primary_key=True)
-    id_bolsa=Column ( Integer, ForeignKey ( NOMBRE_TABLA_BOLSAS+".id"), primary_key=True)
+    
     codigo_especialidad=Column(String,
                                ForeignKey (
                                 NOMBRE_TABLA_ESPECIALIDADES+".codigo_especialidad"
