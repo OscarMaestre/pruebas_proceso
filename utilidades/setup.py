@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
-from distutils.core import setup
+#from distutils.core import setup
+import os
+from setuptools import setup
+ficheros_especialidades=[]
+ficheros_especialidades.append ( os.sep.join(["utilidades","modelos","Especialidades0597.txt"]))
+print (ficheros_especialidades)
 setup(name='utilidades',
       version='1.0',
       package_dir={'':'src'},
@@ -9,5 +14,8 @@ setup(name='utilidades',
                 'utilidades.email',
                 'utilidades.fechas',
                 'utilidades.excel',
-                'utilidades.ficheros']
+                'utilidades.ficheros',
+                'utilidades.modelos'],
+      package_data={'utilidades.modelos':ficheros_especialidades},
+      include_package_data=True
 )

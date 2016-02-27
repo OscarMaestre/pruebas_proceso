@@ -15,13 +15,8 @@ cad_conexion=sys.argv[1]
 motor= create_engine(cad_conexion, echo=True)
 
 
-import modelos
+from utilidades.modelos.Modelos import *
 
-convocadas="Interinos2015_0597_Convocadas.pdf"
-
-modelos.Base.metadata.create_all(motor)
-bolsa=modelos.Bolsa(nombre="2015-2016-597-Convocadas",
-                    id=modelos.BOLSA_597_CONVOCADAS)
 
 def esta_disponible(linea):
     inicio_disponibilidad=130
@@ -47,6 +42,20 @@ def es_bilingue_ingles(linea):
         return True
     return False
     
+
+convocadas="Interinos2015_0597_Convocadas.pdf"
+
+Base.metadata.create_all(motor)
+
+
+creador_sesiones= sessionmaker(bind=motor)
+sesion=creador_sesiones()
+Especialidad.crear_todas_especialidades ( sesion, "597" )
+
+
+
+
+
 
 procesador_pdf=ProcesadorPDF()
 lista_interinos=[]
@@ -81,10 +90,10 @@ while not procesador_pdf.FIN_DE_FICHERO:
         else:
             ingles=False
         #print (num_orden, patron, "-"+nombre.strip()+"-", especialidades, disponible, frances, ingles)
-        interino=modelos.Interino ( dni=patron, nombre=nombre,
+        interino=Interino ( dni=patron, nombre=nombre,
                            bilingue_ingles=ingles, bilingue_frances=frances,
                            disponible=disponible)
-        participacion=modelos.InterinosBolsas(dni_interino=interino.dni,
+        participacion=InterinosBolsas(dni_interino=interino.dni,
                                     id_bolsa=bolsa.id, numero_en_bolsa=num_orden)
         lista_participaciones_de_cada_interino_en_bolsas.append (
             participacion
@@ -94,8 +103,6 @@ while not procesador_pdf.FIN_DE_FICHERO:
     (ini, fin, patron) = procesador_pdf.avanzar_buscando_dni(debe_estar_en_misma_linea=False)
     
     
-creador_sesiones= sessionmaker(bind=motor)
-sesion=creador_sesiones()
 
 
 sesion.add(bolsa)
