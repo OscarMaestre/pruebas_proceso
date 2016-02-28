@@ -33,6 +33,9 @@ class GestorFicheros(object):
     def anadir_a_fichero(self, texto, nombre_fichero):
         with open (nombre_fichero, "a") as f:
             f.write(texto)
+    def escribir_en_fichero(self, texto, nombre_fichero):
+        with open (nombre_fichero, "w") as f:
+            f.write(texto)
             
     def leer_linea_fichero(self, num_linea, nombre_fichero):
         with open (nombre_fichero, "r") as f:
@@ -166,10 +169,12 @@ class GestorFicheros(object):
         descriptor=open (nombre_fichero_destino, "w")
         descriptor.write ( peticion.text )
         descriptor.close()
-    def rellenar_fichero_plantilla(self, fichero_plantilla, diccionario, directorio_plantillas=".", fichero_salida=None):
+    def rellenar_fichero_plantilla(self, fichero_plantilla, diccionario,  fichero_salida=None):
         
         texto_plantilla=self.leer_fichero(fichero_plantilla)
         plantilla=jinja2.Template(texto_plantilla)
-        
-        return plantilla.render( diccionario )
+        plantilla_rellena=plantilla.render( diccionario )
+        if fichero_salida!=None:
+            self.escribir_en_fichero ( plantilla_rellena, fichero_salida)
+        return plantilla_rellena
         

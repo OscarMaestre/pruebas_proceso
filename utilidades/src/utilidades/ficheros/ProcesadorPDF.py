@@ -118,6 +118,9 @@ class ProcesadorPDF(object):
             self.num_fila=0
         self.num_columna=0
     
+    def linea_actual_contiene_patron (self, expr_regular):
+        linea_actual=self.get_linea_actual()
+        return self.linea_contiene_patron ( expr_regular, linea_actual )
     def linea_contiene_patron(self, expr_regular, linea):
         #print ("Buscando {0} en {1}".format( str(expr_regular), linea))
         concordancia=expr_regular.search(linea)

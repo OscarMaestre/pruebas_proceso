@@ -13,6 +13,7 @@ NOMBRE_TABLA_CRUCE_INTERINOS_BOLSAS="interinos_bolsas"
 NOMBRE_TABLA_INTERINOS="interinos"
 NOMBRE_TABLA_BOLSAS="bolsas"
 NOMBRE_TABLA_ESPECIALIDADES="especialidades"
+NOMBRE_TABLA_ULTIMAS_BOLSAS="ultima_relacion_bolsa"
 BOLSA_597_CONVOCADAS=1
 BOLSA_597_NO_CONVOCADAS=BOLSA_597_CONVOCADAS+1
 MAX_LONGITUD_DESCRIPCION_ESPECIALIDAD=100
@@ -147,3 +148,14 @@ class InterinosBolsas(Base):
     
     def __str__(self):
         return "Dni:{0} en {1}".format ( self.dni_interino, self.codigo_especialidad)
+    
+class UltimaRelacionInterinosBolsas(Base):
+    __tablename__=NOMBRE_TABLA_ULTIMAS_BOLSAS
+    dni_interino=Column (String(MAX_LONGITUD_DNI), ForeignKey(NOMBRE_TABLA_CRUCE_INTERINOS_BOLSAS+".dni_interino"), primary_key=True)
+    
+    codigo_especialidad=Column(String,
+                               ForeignKey (
+                                NOMBRE_TABLA_ESPECIALIDADES+".codigo_especialidad"
+                                ), primary_key=True
+                        )
+    num_orden=Column ( Integer, unique=False )

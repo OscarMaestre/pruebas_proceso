@@ -18,3 +18,4 @@ gestor_ficheros.borrar_fichero ( FICHERO_NOMBRAMIENTOS_SQL )
 gestor_ficheros.exportar_tabla ( DOCENCIA, "nombramientos", FICHERO_NOMBRAMIENTOS_SQL, ARCHIVO_BD,
                                 borrar_fichero_sql_intermedio=False)
 gestor_ficheros.borrar_fichero ( FICHERO_NOMBRAMIENTOS_SQL )
+gestor_ficheros.ejecutar_comando("./procesar_ultima_relacion_maestros.py", bd)
