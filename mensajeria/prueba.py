@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
-import requests, json
-token="215386563:AAHm7fcMR6BwJ9fnx87c8Tohb5BLTXabCGw"
+import requests, json, os
 
-URL="https://api.telegram.org/bot"
+from utilidades.ficheros.GestorFicheros import GestorFicheros
+from utilidades.mensajeria.telegram import GestorTelegram
 
-respuesta=requests.get ( URL+token+"/getMe")
-print(respuesta.text)
+NUM_SUBDIRECTORIOS_ANTERIORES =3
+FICHERO_CONFIGURACION= ( ( ".." + os.sep ) * NUM_SUBDIRECTORIOS_ANTERIORES ) + "configuracion_telegram.txt"
 
-respuesta=requests.get ( URL+token+"/getUpdates")
-objeto=json.loads(respuesta.text)
-print(objeto['result'])
+gestor_ficheros=GestorFicheros()
+
+token=gestor_ficheros.leer_linea_fichero ( 0, FICHERO_CONFIGURACION )
+
+gestor_telegram=GestorTelegram ( token )
+
+respuesta=gestor_telegram.getUpdates()
+for r in respuesta:
+    print (r)

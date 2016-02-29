@@ -16,6 +16,8 @@ src/utilidades/ficheros/ExcepcionFinPDF.py
 src/utilidades/ficheros/GestorFicheros.py
 src/utilidades/ficheros/ProcesadorPDF.py
 src/utilidades/ficheros/__init__.py
+src/utilidades/mensajeria/__init__.py
+src/utilidades/mensajeria/telegram.py
 src/utilidades/modelos/Especialidades0511.txt
 src/utilidades/modelos/Especialidades0590.txt
 src/utilidades/modelos/Especialidades0591.txt

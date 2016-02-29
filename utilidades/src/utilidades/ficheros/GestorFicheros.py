@@ -8,6 +8,7 @@ import jinja2
 from subprocess import call
 
 class GestorFicheros(object):
+    """Simplica las operaciones con ficheros"""
     def __init__(self):
         self.BORRAR=""
         self.COPIAR=""
@@ -38,6 +39,14 @@ class GestorFicheros(object):
             f.write(texto)
             
     def leer_linea_fichero(self, num_linea, nombre_fichero):
+        """Devuelve una linea de un fichero.
+        
+            Argumentos:
+            
+            num_linea -- Numero de línea a leer
+            
+            nombre_fichero -- Cadena con la ruta del fichero a leer
+        """
         with open (nombre_fichero, "r") as f:
             lineas=f.readlines()
             return lineas[num_linea].strip()
