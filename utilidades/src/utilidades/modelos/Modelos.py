@@ -14,10 +14,15 @@ NOMBRE_TABLA_INTERINOS="interinos"
 NOMBRE_TABLA_BOLSAS="bolsas"
 NOMBRE_TABLA_ESPECIALIDADES="especialidades"
 NOMBRE_TABLA_ULTIMAS_BOLSAS="ultima_relacion_bolsa"
+NOMBRE_TABLA_GRUPOS_MENSAJERIA="grupos_mensajeria"
+NOMBRE_TABLA_MIEMBRO_GRUPO="miembro_grupo"
+NOMBRE_TABLA_PERTENENCIA_GRUPO="miembro_pertenece_grupo"
+
 BOLSA_597_CONVOCADAS=1
 BOLSA_597_NO_CONVOCADAS=BOLSA_597_CONVOCADAS+1
 MAX_LONGITUD_DESCRIPCION_ESPECIALIDAD=100
 MAX_LONGITUD_DNI=10
+MAX_LONGITUD_TLF=20
 MAX_LONGITUD_NOMBRE=100
 
 
@@ -159,3 +164,23 @@ class UltimaRelacionInterinosBolsas(Base):
                                 ), primary_key=True
                         )
     num_orden=Column ( Integer, unique=False )
+    
+class GrupoMensajeria(object):
+    __tablename__=NOMBRE_TABLA_GRUPOS_MENSAJERIA
+    id=Column(Integer, primary_key=True, nullable=False)
+    nombre=Column ( String(MAX_LONGITUD_NOMBRE))
+    
+class MiembroGrupo(object):
+    __tablename__=NOMBRE_TABLA_MIEMBRO_GRUPO
+    id=Column(Integer, primary_key=True, nullable=False)
+    nombre=Column ( String(MAX_LONGITUD_NOMBRE))
+    numero_movil = Column ( String (MAX_LONGITUD_TLF ) )
+    
+class MiembroPerteneceGrupo(object):
+    __tablename__=NOMBRE_TABLA_PERTENENCIA_GRUPO
+    id_miembro=Column(Integer,
+                      ForeignKey(NOMBRE_TABLA_MIEMBRO_GRUPO+".id"),
+                      primary_key=True, nullable=False)
+    id_grupo=Column(Integer,
+                      ForeignKey(NOMBRE_TABLA_GRUPOS_MENSAJERIA+".id"),
+                      primary_key=True, nullable=False)
