@@ -17,7 +17,8 @@ NOMBRE_TABLA_ULTIMAS_BOLSAS="ultima_relacion_bolsa"
 NOMBRE_TABLA_GRUPOS_MENSAJERIA="grupos_mensajeria"
 NOMBRE_TABLA_MIEMBRO_GRUPO="miembro_grupo"
 NOMBRE_TABLA_PERTENENCIA_GRUPO="miembro_pertenece_grupo"
-
+NOMBRE_TABLA_MENSAJES_EN_COLA="mensajes_en_cola"
+NOMBRE_TABLA_ULTIMAS_ACTUALIZACIONES="ultimas_actualizaciones"
 BOLSA_597_CONVOCADAS=1
 BOLSA_597_NO_CONVOCADAS=BOLSA_597_CONVOCADAS+1
 MAX_LONGITUD_DESCRIPCION_ESPECIALIDAD=100
@@ -184,3 +185,13 @@ class MiembroPerteneceGrupo(object):
     id_grupo=Column(Integer,
                       ForeignKey(NOMBRE_TABLA_GRUPOS_MENSAJERIA+".id"),
                       primary_key=True, nullable=False)
+
+class MensajeEnCola(object):
+    __tablename__=NOMBRE_TABLA_MENSAJES_EN_COLA
+    id=Column(Integer, primary_key=True, nullable=False)
+    numero_movil = Column ( String (MAX_LONGITUD_TLF ) )
+    enviado_correctamente=Column(Boolean, default=False, unique=False)
+    
+class UltimaActualizacion(object):
+    __tablename__=NOMBRE_TABLA_ULTIMAS_ACTUALIZACIONES
+    id=Column(Integer, primary_key=True, nullable=False)

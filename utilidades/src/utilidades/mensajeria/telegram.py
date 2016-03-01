@@ -7,6 +7,7 @@ if __name__ == '__main__':
 
 import requests, json
 
+from utilidades.modelos.Modelos import *
 
 OFFSET_DEFECTO=-1
 
@@ -92,4 +93,20 @@ class GestorTelegram(object):
         else:
             print (objeto)
         return None
-        
+    def send_data_to_url(self, diccionario, url=None):
+        if url==None:
+            url_envio=self.URL_BASE+self.token+"/sendMessage"
+        else:
+            url_envio=url
+        respuesta=requests.post(url_envio, diccionario)
+        print (respuesta.text)
+    def sendMessage(self, chat_id, text):
+        diccionario_para_enviar_datos=dict()
+        diccionario_para_enviar_datos['chat_id']=chat_id
+        diccionario_para_enviar_datos['text']=text
+        self.send_data_to_url(diccionario_para_enviar_datos)
+    
+    def crear_base_datos_asociada(self, cad_conexion):
+        motor= create_engine( cad_conexion , echo=False)
+        creador_sesiones= sessionmaker(bind=motor)  
+        sesion=creador_sesiones()
