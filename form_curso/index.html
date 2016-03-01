@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de inscripción</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/kube.min.css" />
+
+</head>
+<body>
+    <h1>Formulario de inscripción</h1>
+    <form class="forms">
+        <section>
+            <label>Nombre</label>
+            <input type="text" name="nombre" class="width-6">
+        </section>
+        <section>
+            <label>Apellido 1</label>
+            <input type="text" name="ap1" class="width-6">
+        </section>
+        <section>
+            <label>Apellido 2</label>
+            <input type="text" name="ap1" class="width-6">
+        </section>
+        <section>
+            <label>E-mail</label>
+            <input type="email" name="email" class="width-6">
+        </section>
+        <section>
+            <label>Teléfono</label>
+            <input type="tel" name="tlf" class="width-6">
+        </section>
+        <section>
+            <select class="select">
+                <option value="0">0 (Nunca he trabajado)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">Tengo 6 años de experiencia o más</option>
+            </select>
+        </section>
+        <section class="checkbox-list" class="width-6">
+            Afiliado<br/>
+                <label><input type="radio" name="afiliado" value="si">Si</label>
+                <label><input type="radio" name="afiliado" value="no">No</label>
+        </section>
+        <section class="checkbox-list" class="width-6">
+            Forma de pago<br/>
+                <label><input type="radio" name="afiliado" value="si">En efectivo en la sede de ANPE</label>
+                <label><input type="radio" name="afiliado" value="no">Por transferencia bancaria</label>
+        </section>
+        <section class="checkbox-list">
+            <label><input type="checkbox"> <big>He leído y acepto la Política de Privacidad</big</label>
+    </section>
+    </form>
+</body>
+</html>
