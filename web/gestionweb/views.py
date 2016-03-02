@@ -37,7 +37,12 @@ def ver_datos(peticion, localidad_id):
     resultado=""
     for c in centros:
         #Esto sirve para quitar la C que hay al final de los codigos de centro
-        cod_centro=c.codigo_centro[:-1]
+        ultimo_simbolo=c.codigo_centro[-1:]
+        print (ultimo_simbolo)
+        if ultimo_simbolo=="C":
+            cod_centro=c.codigo_centro[:-1]
+        else:
+            cod_centro=c.codigo_centro
         hay_personas=True
         qs_personas=Q(cod_centro_actual=cod_centro)
         personas=Gaseosa.objects.filter(qs_personas)
@@ -45,7 +50,7 @@ def ver_datos(peticion, localidad_id):
         if len(personas)==0:
             hay_personas=False
         contexto={
-            "nombre_centro":c.nombre_centro,
+            "nombre_centro":c.nombre_centro +" (" + cod_centro+")",
             "datos":personas,
             "hay_personas":hay_personas
         }
