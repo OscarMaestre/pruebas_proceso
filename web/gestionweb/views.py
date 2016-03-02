@@ -41,6 +41,7 @@ def ver_datos(peticion, localidad_id):
         hay_personas=True
         qs_personas=Q(cod_centro_actual=cod_centro)
         personas=Gaseosa.objects.filter(qs_personas)
+        print(personas)
         if len(personas)==0:
             hay_personas=False
         contexto={
