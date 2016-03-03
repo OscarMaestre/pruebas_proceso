@@ -17,23 +17,35 @@ if (isset($_POST['nombre'])) {
     $pdf->SetXY(10, 50);
     $pdf->Cell(190, 24,"I Jornadas sobre programaciones didácticas de ANPE-Ciudad Real", $SIN_BORDE);
     $x_nombre=20;
+    $x_valor=$x_nombre+42;
     $y_nombre=90;
     $altura_texto=24;
-    $anchura_texto=180;
+    $anchura_texto=50;
     
     $separacion_vertical=20;
     $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
-    $pdf->Cell($anchura_texto, $altura_texto, "Nombre: ".$_POST['nombre']);
+    $pdf->Cell($anchura_texto, $altura_texto, "Nombre: ");
+    $pdf->SetFont('Arial','',12);
+    $pdf->SetXY($x_valor,$y_nombre);
+    $pdf->Cell($anchura_texto, $altura_texto, $_POST['nombre']);
     $y_nombre+=$separacion_vertical;
     
+    $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
-    $pdf->Cell($anchura_texto, $altura_texto,"Apellidos: ".$_POST['apellido1']." ".$_POST['apellido2']);
+    $pdf->Cell($anchura_texto, $altura_texto,"Apellidos: ");
+    $pdf->SetXY($x_valor,$y_nombre);
+    $pdf->SetFont('Arial','',12);
+    $pdf->Cell($anchura_texto, $altura_texto,$_POST['apellido1']." ".$_POST['apellido2']);
     $y_nombre+=$separacion_vertical;
     
     
+    $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
-    $pdf->Cell($anchura_texto, $altura_texto,"Email: ".$_POST['email']);
+    $pdf->Cell($anchura_texto-10, $altura_texto,"Email: ");
+    $pdf->SetXY($x_valor,$y_nombre);
+    $pdf->SetFont('Arial','',12);
+    $pdf->Cell($anchura_texto-10, $altura_texto,$_POST['email']);
     $y_nombre+=$separacion_vertical;
     
     $antiguedad="";
@@ -43,8 +55,12 @@ if (isset($_POST['nombre'])) {
     else {
         $antiguedad=$_POST['anios_exp']." años de experiencia";
     }
+    $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
-    $pdf->Cell($anchura_texto, $altura_texto,"Experiencia: ".$antiguedad);
+    $pdf->Cell($anchura_texto, $altura_texto,"Experiencia: ");
+    $pdf->SetXY($x_valor,$y_nombre);
+    $pdf->SetFont('Arial','',12);
+    $pdf->Cell($anchura_texto, $altura_texto,$antiguedad);
     $y_nombre+=$separacion_vertical;
     
     if ($_POST['afiliado']=='si'){
@@ -53,8 +69,12 @@ if (isset($_POST['nombre'])) {
     else {
         $afiliacion="No afiliado";
     }
+    $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
-    $pdf->Cell($anchura_texto, $altura_texto,"Afiliación a ANPE:".$afiliacion);
+    $pdf->Cell($anchura_texto, $altura_texto,"Afiliación a ANPE:");
+    $pdf->SetXY($x_valor,$y_nombre);
+    $pdf->SetFont('Arial','',12);
+    $pdf->Cell($anchura_texto, $altura_texto,$afiliacion);
     $y_nombre+=$separacion_vertical;
     
     
@@ -66,8 +86,12 @@ if (isset($_POST['nombre'])) {
         $forma_pago="Transferencia bancaria";
     }
 
+    $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
-    $pdf->Cell($anchura_texto, $altura_texto,"Modalidad de pago: ".$forma_pago);
+    $pdf->Cell($anchura_texto, $altura_texto,"Modalidad de pago: ");
+    $pdf->SetFont('Arial','',12);
+    $pdf->SetXY($x_valor,$y_nombre);
+    $pdf->Cell($anchura_texto, $altura_texto,$forma_pago);
     $y_nombre+=$separacion_vertical;
     
     
