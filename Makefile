@@ -21,4 +21,5 @@ mostrar:
 enviar:
 	cd Verano/estadisticas/ && ./dodo.py
 clean:
-	rm nombramientos.db
+	cat borrar_nombramientos.sql | sqlite3 ../docencia.db 
+
