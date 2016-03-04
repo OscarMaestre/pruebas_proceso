@@ -71,12 +71,12 @@ class EnsenanzasRegion(models.Model):
 
 
 class Especialidades(models.Model):
-    especialidad = models.TextField(primary_key=True, blank=True, null=False)  # This field type is a guess.
-    descripcion = models.TextField(blank=True, null=True)  # This field type is a guess.
-    idioma = models.TextField(blank=True, null=True)  # This field type is a guess.
-    tiempo_parcial = models.TextField(blank=True, null=True)  # This field type is a guess.
-    def __str__(self):
-        return self.especialidad + " " + self.descripcion
+    codigo_especialidad = models.TextField(primary_key=True)  # This field type is a guess.
+    descripcion = models.CharField(max_length=100, blank=True, null=True)
+    con_ingles = models.NullBooleanField()
+    con_frances = models.NullBooleanField()
+    a_tiempo_parcial = models.NullBooleanField()
+
     class Meta:
         managed = False
         db_table = 'especialidades'

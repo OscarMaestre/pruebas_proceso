@@ -43,7 +43,7 @@ def get_datos_personas_para_mostrar(personas):
         print (persona.dni, persona.especialidad)
         filtrado=Q(codigo_especialidad=persona.especialidad)
         especialidades=Especialidades.objects.get(
-            especialidad=persona.especialidad)
+            codigo_especialidad=persona.especialidad)
         diccionario['especialidad']=especialidades.descripcion
         lista_personas.append ( diccionario )
     return lista_personas
