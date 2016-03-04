@@ -92,7 +92,6 @@ for i in range ( 0, TOTAL_PAGINAS):
         codigo_centro=div_codigo_centro.string.strip()
         codigo_centro=codigo_centro.replace("[", "")
         codigo_centro=codigo_centro.replace("]", "")
-        
         try:
             sql_busqueda_centro=sql_busqueda_codigo_centro.format(codigo_centro)
             #print(sql_busqueda_centro)

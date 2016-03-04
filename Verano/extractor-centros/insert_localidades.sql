@@ -626,7 +626,7 @@ insert or ignore into localidades values ('451820001', 'Ventas Con Peña Aguiler
 insert or ignore into localidades values ('451830001', 'Las Ventas de Retamosa', 'Toledo', 40.1550113, -4.1141353);
 insert or ignore into localidades values ('451860001', 'La Villa de Don Fadrique', 'Toledo', 39.6143232, -3.2169622);
 insert or ignore into localidades values ('451850001', 'Villacañas', 'Toledo', 39.6247278, -3.3373237);
-insert or ignore into localidades values ('451870001', 'Villafranca de los', 'Toledo', 39.426019, -3.358937);
+insert or ignore into localidades values ('451870001', 'Villafranca de los', 'Toledo', 39.4260066, -3.3589348);
 insert or ignore into localidades values ('451880001', 'Villaluenga de la Sagra', 'Toledo', 40.0270069, -3.9100897);
 insert or ignore into localidades values ('451890001', 'Villamiel de Toledo', 'Toledo', 39.983277, -4.1257588);
 insert or ignore into localidades values ('451900001', 'Villaminaya', 'Toledo', 39.7124803, -3.8718935);

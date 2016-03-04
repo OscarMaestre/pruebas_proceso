@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import utilidades
 import sys
@@ -30,8 +30,9 @@ codigo_centro_actual=""
 codigo_localidad=""
 for linea in lineas:
     codigo_centro=utilidades.extraer_patron( utilidades.re_codigo_centro, linea )
+    
     if  codigo_centro!= utilidades.NO_CONCORDANCIA:
-        
+        print(codigo_centro)
         codigo_localidad=utilidades.extraer_patron( utilidades.re_codigo_localidad, linea[10:] )
         
         pos_inicio_codigo_localidad=utilidades.get_pos_comienzo_cadena(linea, codigo_localidad)

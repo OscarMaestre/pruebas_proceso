@@ -12,6 +12,7 @@ from sqlalchemy import Column, Integer, String, Boolean
 NOMBRE_TABLA_CRUCE_INTERINOS_BOLSAS="interinos_bolsas"
 NOMBRE_TABLA_INTERINOS="interinos"
 NOMBRE_TABLA_BOLSAS="bolsas"
+NOMBRE_TABLA_CORRESPONDENCIAS="correspondencias"
 NOMBRE_TABLA_ESPECIALIDADES="especialidades"
 NOMBRE_TABLA_ULTIMAS_BOLSAS="ultima_relacion_bolsa"
 NOMBRE_TABLA_GRUPOS_MENSAJERIA="grupos_mensajeria"
@@ -125,7 +126,13 @@ class Especialidad(Base):
         sesion.commit()
 
 
-    
+
+class Correspondencia(Base):
+     __tablename__ = NOMBRE_TABLA_CORRESPONDENCIAS
+     codigo_gaseosa=Column(Integer, primary_key=True)
+     codigo_real=Column(String,
+            ForeignKey(NOMBRE_TABLA_ESPECIALIDADES+".codigo_especialidad"),
+            primary_key=True)
     
 class Interino(Base):
      __tablename__ = NOMBRE_TABLA_INTERINOS
@@ -195,3 +202,5 @@ class MensajeEnCola(object):
 class UltimaActualizacion(object):
     __tablename__=NOMBRE_TABLA_ULTIMAS_ACTUALIZACIONES
     id=Column(Integer, primary_key=True, nullable=False)
+    
+    

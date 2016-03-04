@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.db import connection
 from django.template.loader import  render_to_string
 from django.http import HttpResponse, FileResponse
-from .models import Gaseosa, Centros, Localidades
+from .models import Gaseosa, Centros, Localidades, CentrosRegion
 from .plantillas import enviar_plantilla_texto
 from django.db.models import Q
 from .formularios import PosiblesCentrosCR
@@ -32,8 +32,9 @@ def index(peticion):
 
 
 def ver_datos(peticion, localidad_id):
-    qs=Q(codigo_localidad=localidad_id)
-    centros=Centros.objects.filter(qs).order_by("nombre_centro")
+    localidad_asociada=Localidades.objects.get(pk=localidad_id)
+    qs=Q(codigo_localidad=localidad_id, naturaleza="Público")
+    centros=CentrosRegion.objects.filter(qs).order_by("nombre_centro")
     resultado=""
     for c in centros:
         #Esto sirve para quitar la C que hay al final de los codigos de centro
@@ -50,7 +51,14 @@ def ver_datos(peticion, localidad_id):
         if len(personas)==0:
             hay_personas=False
         contexto={
-            "nombre_centro":c.nombre_centro +" (" + cod_centro+")",
+            "nombre_centro":c.nombre_centro,
+            "codigo_centro":cod_centro,
+            "direccion_postal":c.direccion_postal,
+            "codigo_postal":c.codigo_postal,
+            "nombre_localidad":localidad_asociada.nombre_localidad,
+            "telefono":c.tlf,
+            "fax":c.fax,
+            "email":c.email,
             "datos":personas,
             "hay_personas":hay_personas
         }

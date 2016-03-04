@@ -178,7 +178,10 @@ class ProcesadorCSVGaseosa(object):
                         if clave=="F_nace" or clave=="F_Alta" or clave=="F_Baja":
                             valor_campo=self.reformatear_fecha(valor_campo)
                         if clave=="Espec 1" and self.usar_nuevas_especialidades:
-                            valor_campo=self.correspondencias[valor_campo]
+                            try:
+                                valor_campo=self.correspondencias[valor_campo]
+                            except KeyError:
+                                valor_campo="101"
                         lista_campos.anadir(nombre_campo, valor_campo)
                     sql_insercion.append ( lista_campos.generar_insert( nombre_tabla ) )
                 else:

@@ -6,7 +6,7 @@ import os
 from setuptools import setup
 ficheros_especialidades=[]
 ficheros_especialidades.append ( os.sep.join(["utilidades","modelos","Especialidades0597.txt"]))
-print (ficheros_especialidades)
+#print (ficheros_especialidades)
 setup(name='utilidades',
       version='1.0',
       package_dir={'':'src'},

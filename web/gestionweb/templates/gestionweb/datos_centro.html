@@ -1,5 +1,9 @@
 <h2>{{nombre_centro}}</h2>
-
+<p>Codigo centro:{{codigo_centro}}</p>
+<p>{{direccion_postal}}, {{codigo_postal}}, {{nombre_localidad}}</p>
+<p>Telefono:{{telefono}}</p>
+<p>Email:<a href="{{email}}">{{email}}</a></p>
+<p>Fax:{{fax}}</p>
 {% if hay_personas %}
 <table class="table table-bordered table-striped table-hover">
     <thead>
@@ -26,3 +30,5 @@
 {% if not hay_personas %}
 No tenemos personas aquí.
 {%endif%}
+
+<br/>
