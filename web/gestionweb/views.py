@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.db import connection
 from django.template.loader import  render_to_string
 from django.http import HttpResponse, FileResponse
-from .models import Gaseosa, Centros, Localidades, CentrosRegion
+from .models import Gaseosa, Centros, Localidades, CentrosRegion, Especialidades
 from .plantillas import enviar_plantilla_texto
 from django.db.models import Q
 from .formularios import PosiblesCentrosCR
@@ -31,6 +31,22 @@ def index(peticion):
     return render(peticion, 'gestionweb/index.html', contexto)
 
 
+def get_datos_personas_para_mostrar(personas):
+    lista_personas=[]
+    for persona in personas:
+        diccionario=dict()
+        diccionario['apellido_1']=persona.apellido_1
+        diccionario['apellido_2']=persona.apellido_2
+        diccionario['nombre']=persona.nombre
+        diccionario['tlf_movil']=persona.tlf_movil
+        diccionario['email']=persona.email
+        print (persona.dni, persona.especialidad)
+        filtrado=Q(codigo_especialidad=persona.especialidad)
+        especialidades=Especialidades.objects.get(
+            especialidad=persona.especialidad)
+        diccionario['especialidad']=especialidades.descripcion
+        lista_personas.append ( diccionario )
+    return lista_personas
 def ver_datos(peticion, localidad_id):
     localidad_asociada=Localidades.objects.get(pk=localidad_id)
     qs=Q(codigo_localidad=localidad_id, naturaleza="Público")
@@ -39,7 +55,7 @@ def ver_datos(peticion, localidad_id):
     for c in centros:
         #Esto sirve para quitar la C que hay al final de los codigos de centro
         ultimo_simbolo=c.codigo_centro[-1:]
-        print (ultimo_simbolo)
+        #print (ultimo_simbolo)
         if ultimo_simbolo=="C":
             cod_centro=c.codigo_centro[:-1]
         else:
@@ -47,7 +63,7 @@ def ver_datos(peticion, localidad_id):
         hay_personas=True
         qs_personas=Q(cod_centro_actual=cod_centro)
         personas=Gaseosa.objects.filter(qs_personas)
-        print(personas)
+        #print(personas)
         if len(personas)==0:
             hay_personas=False
         contexto={
@@ -59,7 +75,8 @@ def ver_datos(peticion, localidad_id):
             "telefono":c.tlf,
             "fax":c.fax,
             "email":c.email,
-            "datos":personas,
+            #"datos":get_datos_personas_para_mostrar(personas),
+            "datos":get_datos_personas_para_mostrar(personas),
             "hay_personas":hay_personas
         }
         resultado+=render_to_string("gestionweb/datos_centro.html", contexto)
