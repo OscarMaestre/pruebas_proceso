@@ -23,6 +23,7 @@ else:
 def obtener_totales_por_provincia(codigo_provincia):
     global procedimiento
     sql_cantidad_por_provincia="select count(codigo_centro) from nombramientos where codigo_centro like '{0}%' and procedimiento like '{1}'%".format(codigo_provincia, procedimiento)
+    
     filas=gestordb.get_filas(sql_cantidad_por_provincias)
     return filas[0]
 
@@ -36,7 +37,7 @@ def extraer_fecha(procedimiento):
     return fecha
 def ordenar_filas_procedimientos(filas):
     total=len(filas)
-    
+    #print (filas)
     for i in range(0, total):
         for j in range (i+1, total):
             tupla1=filas[i]
@@ -81,6 +82,7 @@ def get_duraciones(sql):
         fecha_fin=datetime.date(int(anio_fin), int(mes_fin), int (dia_fin))
         duracion=fecha_fin-fecha_inicio
         duraciones.append(duracion)
+    #print (duraciones)
     return duraciones
 
 def get_duracion_mayor(timedeltas):
@@ -209,7 +211,7 @@ sql_plazas_castellano="""
             where
                 procedimiento like '{0}'
                 and
-                nombramientos.especialidad=especialidades.especialidad
+                nombramientos.especialidad=especialidades.codigo_especialidad
                 and especialidades.idioma='ESPAÑOL'
 """
 sql_plazas_castellano=sql_plazas_castellano.format(procedimiento)
@@ -221,7 +223,7 @@ sql_plazas_ingles="""
             where
                 procedimiento like '{0}'
                 and
-                nombramientos.especialidad=especialidades.especialidad
+                nombramientos.especialidad=especialidades.codigo_especialidad
                 and especialidades.idioma='INGLÉS'
 """
 sql_plazas_ingles=sql_plazas_ingles.format(procedimiento)
@@ -233,7 +235,7 @@ sql_plazas_frances="""
             where
                 procedimiento like '{0}'
                 and
-                nombramientos.especialidad=especialidades.especialidad
+                nombramientos.especialidad=especialidades.codigo_especialidad
                 and especialidades.idioma='FRANCÉS'
 """
 sql_plazas_frances=sql_plazas_frances.format(procedimiento)
@@ -247,7 +249,7 @@ sql_plazas_completas="""
             where
                 procedimiento like '{0}'
                 and
-                nombramientos.especialidad=especialidades.especialidad
+                nombramientos.especialidad=especialidades.codigo_especialidad
                 and especialidades.tiempo_parcial='NO'
 """
 sql_plazas_completas=sql_plazas_completas.format(procedimiento)
@@ -259,21 +261,21 @@ sql_plazas_parciales="""
             where
                 procedimiento like '{0}'
                 and
-                nombramientos.especialidad=especialidades.especialidad
+                nombramientos.especialidad=especialidades.codigo_especialidad
                 and especialidades.tiempo_parcial='SI'
 """
 sql_plazas_parciales=sql_plazas_parciales.format(procedimiento)
 imprimir_valor_unico(sql_plazas_parciales, "\tPlazas a tiempo parcial :{0} ({1:.2f}% del total)", total_plazas)
 print(DIVISION_SECCIONES)
 sql_adjudicaciones_por_especialidad="""
-    select especialidades.especialidad, especialidades.idioma, especialidades.tiempo_parcial, descripcion, count(*) as total
+    select especialidades.codigo_especialidad, especialidades.idioma, especialidades.tiempo_parcial, descripcion, count(*) as total
         from nombramientos, especialidades
             where
                 procedimiento like '{0}'
                 and
-                nombramientos.especialidad=especialidades.especialidad
+                nombramientos.especialidad=especialidades.codigo_especialidad
             
-            group by especialidades.especialidad order by total desc limit 30
+            group by especialidades.codigo_especialidad order by total desc limit 30
 """
 sql_adjudicaciones_por_especialidad=sql_adjudicaciones_por_especialidad.format(procedimiento)
 #print(sql_adjudicaciones_por_especialidad)

@@ -20,6 +20,12 @@ Un ejemplo de código
 .. autoclass:: utilidades.mensajeria.telegram.GestorTelegram
    :members:
    
+Clase Updates
+====================
+
+.. autoclass:: utilidades.mensajeria.telegram.Update
+   :members:
+   
    
 
 

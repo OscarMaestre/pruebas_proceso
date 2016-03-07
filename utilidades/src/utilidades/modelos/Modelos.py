@@ -12,6 +12,7 @@ from sqlalchemy import Column, Integer, String, Boolean
 NOMBRE_TABLA_CRUCE_INTERINOS_BOLSAS="interinos_bolsas"
 NOMBRE_TABLA_INTERINOS="interinos"
 NOMBRE_TABLA_BOLSAS="bolsas"
+NOMBRE_TABLA_GASEOSA="gaseosa"
 NOMBRE_TABLA_CORRESPONDENCIAS="correspondencias"
 NOMBRE_TABLA_ESPECIALIDADES="especialidades"
 NOMBRE_TABLA_ULTIMAS_BOLSAS="ultima_relacion_bolsa"
@@ -28,6 +29,11 @@ MAX_LONGITUD_TLF=20
 MAX_LONGITUD_NOMBRE=100
 
 
+
+class Gaseosa(Base):
+    __tablename__=NOMBRE_TABLA_GASEOSA
+    dni=Column(String(10), primary_key=True)
+    
 class Especialidad(Base):
     __tablename__=NOMBRE_TABLA_ESPECIALIDADES
     codigo_especialidad=Column(String, primary_key=True)
@@ -173,18 +179,18 @@ class UltimaRelacionInterinosBolsas(Base):
                         )
     num_orden=Column ( Integer, unique=False )
     
-class GrupoMensajeria(object):
+class GrupoMensajeria(Base):
     __tablename__=NOMBRE_TABLA_GRUPOS_MENSAJERIA
     id=Column(Integer, primary_key=True, nullable=False)
     nombre=Column ( String(MAX_LONGITUD_NOMBRE))
     
-class MiembroGrupo(object):
+class MiembroGrupo(Base):
     __tablename__=NOMBRE_TABLA_MIEMBRO_GRUPO
     id=Column(Integer, primary_key=True, nullable=False)
     nombre=Column ( String(MAX_LONGITUD_NOMBRE))
     numero_movil = Column ( String (MAX_LONGITUD_TLF ) )
     
-class MiembroPerteneceGrupo(object):
+class MiembroPerteneceGrupo(Base):
     __tablename__=NOMBRE_TABLA_PERTENENCIA_GRUPO
     id_miembro=Column(Integer,
                       ForeignKey(NOMBRE_TABLA_MIEMBRO_GRUPO+".id"),
@@ -193,13 +199,13 @@ class MiembroPerteneceGrupo(object):
                       ForeignKey(NOMBRE_TABLA_GRUPOS_MENSAJERIA+".id"),
                       primary_key=True, nullable=False)
 
-class MensajeEnCola(object):
+class MensajeEnCola(Base):
     __tablename__=NOMBRE_TABLA_MENSAJES_EN_COLA
     id=Column(Integer, primary_key=True, nullable=False)
     numero_movil = Column ( String (MAX_LONGITUD_TLF ) )
     enviado_correctamente=Column(Boolean, default=False, unique=False)
     
-class UltimaActualizacion(object):
+class UltimaActualizacion(Base):
     __tablename__=NOMBRE_TABLA_ULTIMAS_ACTUALIZACIONES
     id=Column(Integer, primary_key=True, nullable=False)
     

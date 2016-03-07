@@ -165,6 +165,7 @@ class GestorFicheros(object):
             self.ejecutar_comando ( self.CONCAT, archivo_sql_resultado, "|", "sqlite3 " + bd_destinataria)
         if borrar_fichero_sql_intermedio:
             self.borrar_fichero ( archivo_sql_resultado )
+
     def exportar_lista_tablas (self, archivo_bd, lista_tablas, archivo_sql_resultado):
         self.borrar_fichero ( archivo_sql_resultado )
         for t in lista_tablas:

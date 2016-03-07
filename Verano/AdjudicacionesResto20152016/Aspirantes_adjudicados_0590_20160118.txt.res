@@ -24,115 +24,69 @@
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('18977780C','MARIN CAROT, MIGUEL ALVARO','2016-01-19','2016-02-22','Adjudicacion 18-01-2016','2016-01-18','0590001','13004791');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('18977780C','MARIN CAROT, MIGUEL ALVARO','2016-01-19','2016-02-22','Adjudicacion 18-01-2016','2016-01-18','0590001','13004791');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('48960178D','PEREZ GARCIA, JUANA','2016-01-19','2016-03-30','Adjudicacion 18-01-2016','2016-01-18','0590002','02004410');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('48960178D','PEREZ GARCIA, JUANA','2016-01-19','2016-03-30','Adjudicacion 18-01-2016','2016-01-18','0590002','02004410');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03895329A','REDONDO LOPEZ, MARIA','2016-01-19','2016-04-08','Adjudicacion 18-01-2016','2016-01-18','0590002','02004951');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03895329A','REDONDO LOPEZ, MARIA','2016-01-19','2016-04-08','Adjudicacion 18-01-2016','2016-01-18','0590002','02004951');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05150501L','MOLINA CALDERON, CARLOS','2016-01-19','2016-02-25','Adjudicacion 18-01-2016','2016-01-18','0590004','02008919');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05150501L','MOLINA CALDERON, CARLOS','2016-01-19','2016-02-25','Adjudicacion 18-01-2016','2016-01-18','0590004','02008919');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05668949R','MAESO CENAMOR, ELENA','2016-01-19','2016-02-29','Adjudicacion 18-01-2016','2016-01-18','0590004','13001339');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05668949R','MAESO CENAMOR, ELENA','2016-01-19','2016-02-29','Adjudicacion 18-01-2016','2016-01-18','0590004','13001339');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('76123940N','GARCIA GARCIA, MARIA','2016-01-19','2016-05-30','Adjudicacion 18-01-2016','2016-01-18','0590004','19003401');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('76123940N','GARCIA GARCIA, MARIA','2016-01-19','2016-05-30','Adjudicacion 18-01-2016','2016-01-18','0590004','19003401');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03130222Z','FERNANDEZ LARIOS, MARIA ISABEL','2016-01-19','2016-03-18','Adjudicacion 18-01-2016','2016-01-18','0590004','19002743');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03130222Z','FERNANDEZ LARIOS, MARIA ISABEL','2016-01-19','2016-03-18','Adjudicacion 18-01-2016','2016-01-18','0590004','19002743');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('48467067H','HERNANDEZ SANCHEZ, MARIA DOLORES','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590004','45005653');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('48467067H','HERNANDEZ SANCHEZ, MARIA DOLORES','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590004','45005653');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06555066C','MANCEBO MANCEBO, MERCEDES','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','P590004','45012131');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06555066C','MANCEBO MANCEBO, MERCEDES','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','P590004','45012131');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47058530R','RODRIGUEZ RUIZ, MARIA DEL MAR','2016-01-19','2016-02-26','Adjudicacion 18-01-2016','2016-01-18','0590005','02003120');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47058530R','RODRIGUEZ RUIZ, MARIA DEL MAR','2016-01-19','2016-02-26','Adjudicacion 18-01-2016','2016-01-18','0590005','02003120');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03103410C','LOPEZ JADRAQUE, SANTIAGO','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590006','19002597');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03103410C','LOPEZ JADRAQUE, SANTIAGO','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590006','19002597');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03915351S','LORENZO ALAMO, DIANA','2016-01-19','2016-02-27','Adjudicacion 18-01-2016','2016-01-18','B590006','45011872');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03915351S','LORENZO ALAMO, DIANA','2016-01-19','2016-02-27','Adjudicacion 18-01-2016','2016-01-18','B590006','45011872');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04602342L','SAIZ ORTEGA, MONICA','2016-01-19','2016-03-14','Adjudicacion 18-01-2016','2016-01-18','0590007','16004030');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04602342L','SAIZ ORTEGA, MONICA','2016-01-19','2016-03-14','Adjudicacion 18-01-2016','2016-01-18','0590007','16004030');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('53617988C','LATASA BLANCO, NEREA','2016-01-19','2016-02-19','Adjudicacion 18-01-2016','2016-01-18','0590815','02003673');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('53617988C','LATASA BLANCO, NEREA','2016-01-19','2016-02-19','Adjudicacion 18-01-2016','2016-01-18','0590815','02003673');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('32836075X','MONTES DIAZ, NOEMY','2016-01-19','2016-03-15','Adjudicacion 18-01-2016','2016-01-18','B590009','13003336');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('32836075X','MONTES DIAZ, NOEMY','2016-01-19','2016-03-15','Adjudicacion 18-01-2016','2016-01-18','B590009','13003336');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('70578188C','RODRIGUEZ DORADO, TERESA DE JESU','2016-01-19','2016-03-31','Adjudicacion 18-01-2016','2016-01-18','0590011','13000219');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('70578188C','RODRIGUEZ DORADO, TERESA DE JESU','2016-01-19','2016-03-31','Adjudicacion 18-01-2016','2016-01-18','0590011','13000219');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('52307909K','CALMAESTRA ALONSO, TATIANA','2016-01-19','2016-02-11','Adjudicacion 18-01-2016','2016-01-18','0590011','16000978');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('52307909K','CALMAESTRA ALONSO, TATIANA','2016-01-19','2016-02-11','Adjudicacion 18-01-2016','2016-01-18','0590011','16000978');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06237403X','ALFARO PEINADO, MARIA DEL SOL','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590011','16004510');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06237403X','ALFARO PEINADO, MARIA DEL SOL','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590011','16004510');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44395669B','PEÑA ALCANTUD, ANTONIO','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','P590811','02003880');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44395669B','PEÑA ALCANTUD, ANTONIO','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','P590811','02003880');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('50205844H','QUIRALTE CORONADO, MARIA SIRA','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590018','13003683');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('50205844H','QUIRALTE CORONADO, MARIA SIRA','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590018','13003683');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('28492060M','VIVAS DE LOS SANTOS, SANDRA','2016-01-19','2016-03-18','Adjudicacion 18-01-2016','2016-01-18','0590018','16009283');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('28492060M','VIVAS DE LOS SANTOS, SANDRA','2016-01-19','2016-03-18','Adjudicacion 18-01-2016','2016-01-18','0590018','16009283');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('70518110H','CANO MARIN, ANTONIO RUBEN','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590019','19002597');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('70518110H','CANO MARIN, ANTONIO RUBEN','2016-01-19','2016-06-24','Adjudicacion 18-01-2016','2016-01-18','0590019','19002597');
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03120265Q','BRIHUEGA AGUILAR, MARIA','2016-01-19','2016-05-20','Adjudicacion 18-01-2016','2016-01-18','0590107','19002858');
 --------------------
-Fallo la sentencia siguiente:
-insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03120265Q','BRIHUEGA AGUILAR, MARIA','2016-01-19','2016-05-20','Adjudicacion 18-01-2016','2016-01-18','0590107','19002858');

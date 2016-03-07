@@ -51,9 +51,73 @@
 <em class="property">class </em><code class="descclassname">utilidades.mensajeria.telegram.</code><code class="descname">GestorTelegram</code><span class="sig-paren">(</span><em>token</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#GestorTelegram"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.GestorTelegram" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Gestiona los mensajes de Telegram</p>
 <dl class="method">
+<dt id="utilidades.mensajeria.telegram.GestorTelegram.dar_de_alta">
+<code class="descname">dar_de_alta</code><span class="sig-paren">(</span><em>chat_id</em>, <em>resto_texto</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#GestorTelegram.dar_de_alta"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.GestorTelegram.dar_de_alta" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Da de alta a una persona</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utilidades.mensajeria.telegram.GestorTelegram.enviar_mensaje_alta_no_realizada">
+<code class="descname">enviar_mensaje_alta_no_realizada</code><span class="sig-paren">(</span><em>chat_id</em>, <em>dni</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#GestorTelegram.enviar_mensaje_alta_no_realizada"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.GestorTelegram.enviar_mensaje_alta_no_realizada" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envia el mensaje que indica que el alta no se ha hecho</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utilidades.mensajeria.telegram.GestorTelegram.enviar_mensaje_alta_realizada">
+<code class="descname">enviar_mensaje_alta_realizada</code><span class="sig-paren">(</span><em>chat_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#GestorTelegram.enviar_mensaje_alta_realizada"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.GestorTelegram.enviar_mensaje_alta_realizada" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envia el mensaje que indica que el alta no se ha hecho</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utilidades.mensajeria.telegram.GestorTelegram.enviar_mensaje_ayuda">
+<code class="descname">enviar_mensaje_ayuda</code><span class="sig-paren">(</span><em>chat_id</em>, <em>dni</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#GestorTelegram.enviar_mensaje_ayuda"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.GestorTelegram.enviar_mensaje_ayuda" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envia el mensaje de ayuda estándar</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="utilidades.mensajeria.telegram.GestorTelegram.getUpdates">
-<code class="descname">getUpdates</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#GestorTelegram.getUpdates"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.GestorTelegram.getUpdates" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Descarga las actualizaciones en forma de una lista de objetos Update</p>
+<code class="descname">getUpdates</code><span class="sig-paren">(</span><em>offset=-1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#GestorTelegram.getUpdates"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.GestorTelegram.getUpdates" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Descarga las actualizaciones en forma de una lista de objetos Update.</p>
+<p>Argumentos:</p>
+<blockquote>
+<div>offset &#8211; Identificador del primer update_id. Debería ser el último recogido +1</div></blockquote>
+<p>Devuelve</p>
+<blockquote>
+<div><p>Una lista de updates si todo va bien</p>
+<p>None si no funcionó</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="utilidades.mensajeria.telegram.GestorTelegram.sendMessage">
+<code class="descname">sendMessage</code><span class="sig-paren">(</span><em>chat_id</em>, <em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#GestorTelegram.sendMessage"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.GestorTelegram.sendMessage" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envia un mensaje</p>
+<p>Parametros:</p>
+<blockquote>
+<div><p>chat_id &#8211; id del chat al que enviar el texto</p>
+<p>text &#8211; texto a enviar</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="clase-updates">
+<h1>Clase Updates<a class="headerlink" href="#clase-updates" title="Enlazar permanentemente con este título">¶</a></h1>
+<dl class="class">
+<dt id="utilidades.mensajeria.telegram.Update">
+<em class="property">class </em><code class="descclassname">utilidades.mensajeria.telegram.</code><code class="descname">Update</code><span class="sig-paren">(</span><em>objeto_json</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#Update"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.Update" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Actualización recibida</p>
+<dl class="method">
+<dt id="utilidades.mensajeria.telegram.Update.es_alta">
+<code class="descname">es_alta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilidades/mensajeria/telegram.html#Update.es_alta"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#utilidades.mensajeria.telegram.Update.es_alta" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Nos dice si un mensaje recibido es un alta o no.</p>
+<dl class="docutils">
+<dt>Devuelve</dt>
+<dd><p class="first">(True, resto_mensaje) &#8211; Si es un mensaje de alta</p>
+<p class="last">(False, None) &#8211; Si no es un mensaje de alta</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

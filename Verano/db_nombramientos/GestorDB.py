@@ -23,7 +23,7 @@ CREATE TABLE if not exists nombramientos (
     fecha_fin character(20),
     especialidad character(150),
     auxiliar character(2048),
-    foreign key (especialidad) references especialidades(especialidad)
+    foreign key (especialidad) references especialidades(codigo_especialidad)
 );
 """
 
