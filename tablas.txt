@@ -1,0 +1,119 @@
+0. Tablas a proteger
+auth_group
+auth_group_permissions
+auth_permission
+auth_user
+auth_user_groups
+auth_user_user_permissions
+django_admin_log
+django_content_type
+django_migrations
+django_session
+gestioncursos_curso
+gestioncursos_inscripcion
+
+
+1. Tabla especialidades
+
+CREATE TABLE especialidades(
+    especialidad character(150) primary key,
+    descripcion character(250),
+    idioma character(30),
+    tiempo_parcial character(20)
+);
+
+2. Tabla provincias
+
+CREATE TABLE provincias(
+    nombre_provincia char(20) primary key
+);
+
+2. Tabla localidades
+
+CREATE TABLE localidades (
+    codigo_localidad char(10) primary key,
+    nombre_localidad char(100),
+    nombre_provincia char(20),
+    latitud real,
+    longitud real,
+    foreign key (nombre_provincia) references provincias(nombre_provincia)
+);
+
+Esta tabla podria tener claves ajenas sobre la 
+tabla localidades
+CREATE TABLE rutas (
+    origen char(30),
+    destino char(30),
+    distancia real,
+    minutos real,
+    sumario text
+);
+CREATE INDEX indice_origen on rutas(origen);
+CREATE INDEX indice_destino on rutas(destino);
+
+3. Tabla centros
+
+CREATE TABLE centros (
+    codigo_centro char(10) primary key,
+    nombre_centro char(120),
+    codigo_localidad char(10),
+    tipo_centro char(20),
+    foreign key (codigo_localidad) references localidades(codigo_localidad)
+);
+
+
+4. Tabla nombramientos
+
+CREATE TABLE nombramientos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nif character(12),
+    nombre_completo character(160),
+    codigo_centro character(14),
+    procedimiento character(40),
+    fecha_procedimiento date not null,
+    fecha_inicio character(20),
+    fecha_fin character(20),
+    especialidad character(150),
+    auxiliar character(2048),
+    foreign key (especialidad) references especialidades(especialidad)
+);
+
+
+Tabla ensenanzas
+CREATE TABLE ensenanzas (
+    codigo_centro char(10),
+    nombre_ensenanza char(150),
+    observaciones char(100),
+    foreign key (codigo_centro) references centros(codigo_centro)
+);
+
+Tabla Gaseosa
+
+CREATE TABLE gaseosa(
+        dni                 char( 10) primary key,
+        cuota               char(10),
+        apellido_1          char(100),
+        apellido_2          char(100),
+        nombre              char(60),
+        sexo                char(2),
+        direccion           char(100),
+        codigo_postal       char(6),
+        ciudad              char(100),
+        provincia           char(20),
+        email               char(100),
+        fecha_nacimiento    date,
+        especialidad        char(10),
+        tlf_casa            char(18),
+        tlf_movil           char(18),
+        fecha_alta          date,
+        fecha_baja          date,
+        cuerpo              char(10),
+        cod_centro_def      char(12),
+        cod_centro_actual   char(12),
+        auxiliar            char(2048),
+        iban                char(4),
+        ccc                 char(20)
+    );
+CREATE INDEX idx_dni on gaseosa(dni);
+CREATE INDEX idx_ap1 on gaseosa(apellido_1);
+CREATE INDEX idx_nombre on gaseosa(nombre);
