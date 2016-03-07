@@ -100,30 +100,50 @@ End Sub
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('70647741K','Barba Ruiz, Maria Prado','OBTIENE','45003930','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595507');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('70647741K','Barba Ruiz, Maria Prado','OBTIENE','45003930','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595507');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('52756416M','Garcia Palacios, Maria Del Carmen','OBTIENE','02007794','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595512');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('52756416M','Garcia Palacios, Maria Del Carmen','OBTIENE','02007794','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595512');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('04583252L','Jorge Blanco, Gemma Isabel','OBTIENE','19008101','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595509');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('04583252L','Jorge Blanco, Gemma Isabel','OBTIENE','19008101','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595509');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('05649036Y','Lozano Crespo, Margarita','DENEGADO','45003930','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595507');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('05649036Y','Lozano Crespo, Margarita','DENEGADO','45003930','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595507');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('52380593W','Manchado Gonzalez, Luis','OBTIENE','13001406','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595522');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('52380593W','Manchado Gonzalez, Luis','OBTIENE','13001406','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595522');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('70577340T','Martin De Bernardo Bellon, Jose M','OBTIENE','02007794','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595516');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('70577340T','Martin De Bernardo Bellon, Jose M','OBTIENE','02007794','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595516');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('71215056H','Navarro Lopez, Ana','OBTIENE','13004122','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595522');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('71215056H','Navarro Lopez, Ana','OBTIENE','13004122','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595522');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('07866434C','Salinero Garcia, Emilio Jose','DENEGADO','19008101','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595507');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('07866434C','Salinero Garcia, Emilio Jose','DENEGADO','19008101','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595507');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('05690045Y','Sanchez Romano, Gema Maria','DENEGADO','19008101','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595520');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('05690045Y','Sanchez Romano, Gema Maria','DENEGADO','19008101','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595520');
 --------------------
 insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('30662518E','Velasco Gonzalez, Amelia','OBTIENE','02007794','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595522');
 --------------------
+Fallo la sentencia siguiente:
+insert into nombramientos(nif,nombre_completo,auxiliar,codigo_centro,procedimiento,fecha_inicio,fecha_procedimiento,fecha_fin,especialidad) values ('30662518E','Velasco Gonzalez, Amelia','OBTIENE','02007794','Concursillo EEMM resuelto en Junio-15','2015_09-01','2015-07-28','2015-06-30','0595522');

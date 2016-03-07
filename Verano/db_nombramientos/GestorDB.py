@@ -30,7 +30,7 @@ CREATE TABLE if not exists nombramientos (
 SQL_CREACION_ESPECIALIDADES="""
 
 create table if not exists {0}(
-    especialidad character(150) primary key,
+    codigo_especialidad character(150) primary key,
     descripcion character(250),
     idioma character(30),
     tiempo_parcial character(20)
