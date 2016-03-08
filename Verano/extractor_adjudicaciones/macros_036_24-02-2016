@@ -12,6 +12,10 @@ On Error Resume Next
 On Error GoTo Proc_Err
   'Todas las actualizaciones se meten en una transaccion
   ws.BeginTrans
+	sql="update gaseosa set codcentrocursoactual='02004616' where dni='74514776C'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 25-02-2016 hasta 17-03-2016 (Adjudicacion 24-02-2016)' where dni='74514776C'"
+	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='13004687' where dni='20849429K'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='Desde 25-02-2016 hasta 18-04-2016 (Adjudicacion 24-02-2016)' where dni='20849429K'"
@@ -203,10 +207,6 @@ On Error GoTo Proc_Err
 	sql="update gaseosa set codcentrocursoactual='45004600' where dni='03873466J'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='Desde 25-02-2016 hasta 23-04-2016 (Adjudicacion 24-02-2016)' where dni='03873466J'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='02004616' where dni='74514776C'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 25-02-2016 hasta 17-03-2016 (Adjudicacion 24-02-2016)' where dni='74514776C'"
 	db.Execute sql, dbFailOnError
 
 		 'se hace el commit
