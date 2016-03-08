@@ -128,7 +128,7 @@ if (isset($_POST['nombre'])) {
     $pdf->SetFont('Arial','B',10);
     $pdf->SetXY(90,$y_nombre+10);
     $pdf->Write( 4,"Fecha y firma");
-    $pdf->Output();
+    $pdf->Output("D", "Inscripcion_Curso_Programacion.pdf");
 } 
 else {
 
