@@ -16,6 +16,9 @@ if (isset($_POST['nombre'])) {
     $pdf->Image('logo_jccm.png',155,3,40);
     $pdf->SetXY(10, 50);
     $pdf->Cell(190, 24,"I Jornadas sobre programaciones didácticas de ANPE-Ciudad Real", $SIN_BORDE);
+    $pdf->SetFont('Arial','B',12);
+    $pdf->SetXY(15, 60);
+    $pdf->Cell(190, 24,"Por favor, imprime este formulario y entrégalo en la sede de ANPE-Ciudad Real", $SIN_BORDE);
     $x_nombre=20;
     $x_valor=$x_nombre+42;
     $y_nombre=90;

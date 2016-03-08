@@ -1,6 +1,6 @@
 <?php
 // connect to db
-$link = mysql_connect('localhost', 'root', '1234');
+$link = mysql_connect('anpeclm.com', 'root', '1234');
 if (!$link) {
     die('Not connected : ' . mysql_error());
 }
