@@ -5,7 +5,8 @@ if (isset($_POST['nombre'])) {
     foreach($_POST AS $key => $value) {
         $_POST[$key] = mysql_real_escape_string($value);
     } 
-    $sql = "INSERT INTO `matriculas_jornadas` ( `nombre` ,  `apellido1` ,  `apellido2` ,  `email` ,  `telefono` ,  `anios_exp` ,  `afiliado` ,  `forma_pago`  ) VALUES(  '{$_POST['nombre']}' ,  '{$_POST['apellido1']}' ,  '{$_POST['apellido2']}' ,  '{$_POST['email']}' ,  '{$_POST['telefono']}' ,  '{$_POST['anios_exp']}' ,  '{$_POST['afiliado']}' ,  '{$_POST['forma_pago']}'  ) "; 
+    $sql = "INSERT INTO `matriculas_jornadas` ( `nombre` ,  `apellido1` ,  `apellido2` ,  `email` ,  `telefono` ,  `anios_exp` ,  `afiliado` ,  `forma_pago`  ,`especialidad`) VALUES(  '{$_POST['nombre']}' ,  '{$_POST['apellido1']}' ,  '{$_POST['apellido2']}' ,  '{$_POST['email']}' ,  '{$_POST['telefono']}' ,  '{$_POST['anios_exp']}' ,  '{$_POST['afiliado']}' ,  '{$_POST['forma_pago']}',
+	'{$_POST['especialidad`']}') "; 
     mysql_query($sql) or die(mysql_error());
     $pdf = new FPDF();
     $SIN_BORDE=0;
@@ -19,6 +20,11 @@ if (isset($_POST['nombre'])) {
     $pdf->SetFont('Arial','B',12);
     $pdf->SetXY(15, 60);
     $pdf->Cell(190, 24,"Por favor, imprime este formulario y entrégalo en la sede de ANPE-Ciudad Real", $SIN_BORDE);
+	$pdf->SetXY(15, 68);
+	$pdf->Cell(190, 24,"junto con el justificante de pago (si pagas mediante transferencia). Tambien puedes", $SIN_BORDE);
+	$pdf->SetXY(15, 76);
+	$pdf->Cell(190, 24,"enviar a anpecr@anpecr.com este impreso firmado junto al justificante de pago.");
+	
     $x_nombre=20;
     $x_valor=$x_nombre+42;
     $y_nombre=90;
@@ -86,7 +92,7 @@ if (isset($_POST['nombre'])) {
         $forma_pago="En efectivo en la sede de ANPE.";
     }
     if ($_POST['forma_pago']=='Transferencia'){
-        $forma_pago="Transferencia bancaria";
+        $forma_pago="Transferencia bancaria (3190-2082-22-2100855325)";
     }
 
     $pdf->SetFont('Arial','B',12);
@@ -173,6 +179,7 @@ $form=<<<FORMULARIO
                     <input type="tel" name="telefono" class="width-6">
                 </section>
                 <section>
+				<label>Experiencia</label>
                     <select class="select" name="anios_exp">
                         <option value="0">0 (Nunca he trabajado)</option>
                         <option value="1">1</option>
@@ -183,6 +190,18 @@ $form=<<<FORMULARIO
                         <option value="6">Tengo 6 años de experiencia o más</option>
                     </select>
                 </section>
+				<section>
+				<label>Especialidad</label>
+                    <select class="select" name="anios_exp">
+                         <option>Primaria</option>
+						<option value="Infantil">Infantil</option>
+						<option value="Ingles">Inglés</option>
+						<option value="Pedagogia Terapeutica">Pedagogía Terapéutica</option>
+						<option value="Audicion y lenguaje">Audición y Lenguaje</option>
+						<option value="Musica">Música</option>
+						<option value="Educacion Fisica">Educación Física</option>
+                    </select>
+                </section>
                 <section class="checkbox-list" class="width-6">
                     Afiliado<br/>
                         <label><input type="radio" name="afiliado" value="si" checked>Si</label>
@@ -191,7 +210,7 @@ $form=<<<FORMULARIO
                 <section class="checkbox-list" class="width-6">
                     Forma de pago<br/>
                         <label><input type="radio" name="forma_pago" value="Efectivo" checked>En efectivo en la sede de ANPE</label>
-                        <label><input type="radio" name="forma_pago" value="Transferencia">Por transferencia bancaria (el justificante de pago se enviará por email tras rellenar el formulario</label>
+                        <label><input type="radio" name="forma_pago" value="Transferencia">Por transferencia bancaria. Número de cuenta 3190-2082-22-2100855325</label>
                 </section>
                 <section class="checkbox-list">
                     <label><input type="checkbox" checked> <big>He leído y acepto la Política de Privacidad</big</label>

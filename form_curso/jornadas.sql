@@ -6,6 +6,7 @@ create table matriculas_jornadas(
     email       varchar(150),
     telefono    varchar(30),
     anios_exp   integer,
+	especialidad varchar(15),
     afiliado    varchar(20),
     forma_pago  varchar(20)
 );
