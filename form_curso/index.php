@@ -6,7 +6,7 @@ if (isset($_POST['nombre'])) {
         $_POST[$key] = mysql_real_escape_string($value);
     } 
     $sql = "INSERT INTO `matriculas_jornadas` ( `nombre` ,  `apellido1` ,  `apellido2` ,  `email` ,  `telefono` ,  `anios_exp` ,  `afiliado` ,  `forma_pago`  ,`especialidad`) VALUES(  '{$_POST['nombre']}' ,  '{$_POST['apellido1']}' ,  '{$_POST['apellido2']}' ,  '{$_POST['email']}' ,  '{$_POST['telefono']}' ,  '{$_POST['anios_exp']}' ,  '{$_POST['afiliado']}' ,  '{$_POST['forma_pago']}',
-	'{$_POST['especialidad`']}') "; 
+	'{$_POST['especialidad']}') "; 
     mysql_query($sql) or die(mysql_error());
     $pdf = new FPDF();
     $SIN_BORDE=0;
@@ -31,7 +31,7 @@ if (isset($_POST['nombre'])) {
     $altura_texto=24;
     $anchura_texto=50;
     
-    $separacion_vertical=20;
+    $separacion_vertical=18;
     $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
     $pdf->Cell($anchura_texto, $altura_texto, "Nombre: ");
@@ -72,6 +72,17 @@ if (isset($_POST['nombre'])) {
     $pdf->Cell($anchura_texto, $altura_texto,$antiguedad);
     $y_nombre+=$separacion_vertical;
     
+	
+    
+    
+    $pdf->SetFont('Arial','B',12);
+    $pdf->SetXY($x_nombre,$y_nombre);
+    $pdf->Cell($anchura_texto-10, $altura_texto,"Especialidad: ");
+    $pdf->SetXY($x_valor,$y_nombre);
+    $pdf->SetFont('Arial','',12);
+    $pdf->Cell($anchura_texto-10, $altura_texto,$_POST['especialidad']);
+	$y_nombre+=$separacion_vertical;
+	
     if ($_POST['afiliado']=='si'){
         $afiliacion="Afiliado";
     }
@@ -192,7 +203,7 @@ $form=<<<FORMULARIO
                 </section>
 				<section>
 				<label>Especialidad</label>
-                    <select class="select" name="anios_exp">
+                    <select class="select" name="especialidad">
                          <option>Primaria</option>
 						<option value="Infantil">Infantil</option>
 						<option value="Ingles">Inglés</option>
