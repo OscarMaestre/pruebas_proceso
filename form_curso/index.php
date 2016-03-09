@@ -5,8 +5,9 @@ if (isset($_POST['nombre'])) {
     foreach($_POST AS $key => $value) {
         $_POST[$key] = mysql_real_escape_string($value);
     } 
-    $sql = "INSERT INTO `matriculas_jornadas` ( `nombre` ,  `apellido1` ,  `apellido2` ,  `email` ,  `telefono` ,  `anios_exp` ,  `afiliado` ,  `forma_pago`  ,`especialidad`) VALUES(  '{$_POST['nombre']}' ,  '{$_POST['apellido1']}' ,  '{$_POST['apellido2']}' ,  '{$_POST['email']}' ,  '{$_POST['telefono']}' ,  '{$_POST['anios_exp']}' ,  '{$_POST['afiliado']}' ,  '{$_POST['forma_pago']}',
-	'{$_POST['especialidad']}') "; 
+    $sql = "INSERT INTO `matriculas_jornadas` ( `nombre` ,  `apellido1` ,  `apellido2` ,  `email` ,  `telefono` ,  `anios_exp` ,  `afiliado` ,  `forma_pago`  ,`especialidad`,
+	`nif`) VALUES(  '{$_POST['nombre']}' ,  '{$_POST['apellido1']}' ,  '{$_POST['apellido2']}' ,  '{$_POST['email']}' ,  '{$_POST['telefono']}' ,  '{$_POST['anios_exp']}' ,  '{$_POST['afiliado']}' ,  '{$_POST['forma_pago']}',
+	'{$_POST['especialidad']}', '{$_POST['nif']}') "; 
     mysql_query($sql) or die(mysql_error());
     $pdf = new FPDF();
     $SIN_BORDE=0;
@@ -16,7 +17,7 @@ if (isset($_POST['nombre'])) {
     $pdf->Image('logo_anpe.png',10,8,35);
     $pdf->Image('logo_jccm.png',155,3,40);
     $pdf->SetXY(10, 50);
-    $pdf->Cell(190, 24,"I Jornadas sobre programaciones didácticas de ANPE-Ciudad Real", $SIN_BORDE);
+    $pdf->Cell(190, 24,"Jornadas sobre programaciones didácticas de ANPE-Ciudad Real", $SIN_BORDE);
     $pdf->SetFont('Arial','B',12);
     $pdf->SetXY(15, 60);
     $pdf->Cell(190, 24,"Por favor, imprime este formulario y entrégalo en la sede de ANPE-Ciudad Real", $SIN_BORDE);
@@ -31,7 +32,18 @@ if (isset($_POST['nombre'])) {
     $altura_texto=24;
     $anchura_texto=50;
     
-    $separacion_vertical=18;
+    $separacion_vertical=14;
+	
+	
+    
+    $pdf->SetFont('Arial','B',12);
+    $pdf->SetXY($x_nombre,$y_nombre);
+    $pdf->Cell($anchura_texto, $altura_texto,"NIF: ");
+    $pdf->SetXY($x_valor,$y_nombre);
+    $pdf->SetFont('Arial','',12);
+    $pdf->Cell($anchura_texto, $altura_texto,$_POST['nif']);
+    $y_nombre+=$separacion_vertical;
+	
     $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
     $pdf->Cell($anchura_texto, $altura_texto, "Nombre: ");
@@ -40,6 +52,7 @@ if (isset($_POST['nombre'])) {
     $pdf->Cell($anchura_texto, $altura_texto, $_POST['nombre']);
     $y_nombre+=$separacion_vertical;
     
+	
     $pdf->SetFont('Arial','B',12);
     $pdf->SetXY($x_nombre,$y_nombre);
     $pdf->Cell($anchura_texto, $altura_texto,"Apellidos: ");
@@ -136,12 +149,14 @@ if (isset($_POST['nombre'])) {
     $PRIVACIDAD.=" C/ Estación Via Crucis, 3, CP 13003 ";
     $PRIVACIDAD.=" Ciudad Real, adjuntando fotocopia de su DNI.";
     
-    
+    $y_nombre+=$separacion_vertical;
+	
+
     $pdf->SetFont('Arial','',8);
     $pdf->SetXY($x_nombre-4,$y_nombre);
     $pdf->Write( 4,"Privacidad: ".$PRIVACIDAD);
-    $y_nombre+=$separacion_vertical*2;
-    
+    $y_nombre+=$separacion_vertical*2; 
+	$y_nombre+=8;
     $pdf->SetFont('Arial','B',10);
     $pdf->SetXY(90,$y_nombre+10);
     $pdf->Write( 4,"Fecha y firma");
@@ -165,11 +180,15 @@ $form=<<<FORMULARIO
 <row centered>
         <column cols="10">
             <h1>Formulario de inscripción</h1>
-            <p>Por favor, rellena los siguientes datos y pulsa el botón "Inscribirme" que encontrarás más abajo.
-            Si cometes algún error, por favor vuelve a rellenar la inscripción, solo tendremos en cuenta la
-            última inscripción hecha.</p>
+            <p>Por favor, rellena los siguientes datos y pulsa el botón "Inscribirme" que encontrarás más abajo.<br/>
+            Si cometes algún error, por favor vuelve a rellenar la inscripción (solo tendremos <br/>en cuenta la
+            última inscripción hecha).</p>
             <form class="forms" action="index.php" method="POST">
                 <section>
+                    <label>NIF</label>
+                    <input type="text" name="nif" class="width-6">
+                </section
+				<section>
                     <label>Nombre</label>
                     <input type="text" name="nombre" class="width-6">
                 </section>
