@@ -5,6 +5,13 @@ src/utilidades.egg-info/PKG-INFO
 src/utilidades.egg-info/SOURCES.txt
 src/utilidades.egg-info/dependency_links.txt
 src/utilidades.egg-info/top_level.txt
+src/utilidades/basedatos/Configurador.py
+src/utilidades/basedatos/ConstantesBaseDatosSQLite.py
+src/utilidades/basedatos/GestorBD.py
+src/utilidades/basedatos/GestorMySQL.py
+src/utilidades/basedatos/ListaCampos.py
+src/utilidades/basedatos/ParticipanteConDerechos.py
+src/utilidades/basedatos/__init__.py
 src/utilidades/email/GestorEmail.py
 src/utilidades/email/__init__.py
 src/utilidades/excel/GestorExcel.py

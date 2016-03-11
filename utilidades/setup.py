@@ -16,7 +16,8 @@ setup(name='utilidades',
                 'utilidades.excel',
                 'utilidades.ficheros',
                 'utilidades.modelos',
-                'utilidades.mensajeria'],
+                'utilidades.mensajeria',
+                'utilidades.basedatos'],
       package_data={'utilidades.modelos':ficheros_especialidades},
       include_package_data=True
 )
