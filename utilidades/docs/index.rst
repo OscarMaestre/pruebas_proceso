@@ -27,7 +27,10 @@ Clase Updates
    :members:
    
    
-
+Clase ProcesadorPDF
+========================
+.. autoclass:: utilidades.ficheros.ProcesadorPDF.ProcesadorPDF
+   :members:
 
 Clase GestorFicheros
 =====================

@@ -12,6 +12,8 @@ src/utilidades/basedatos/GestorMySQL.py
 src/utilidades/basedatos/ListaCampos.py
 src/utilidades/basedatos/ParticipanteConDerechos.py
 src/utilidades/basedatos/__init__.py
+src/utilidades/cadenas/__init__.py
+src/utilidades/cadenas/procesamientocadenas.py
 src/utilidades/email/GestorEmail.py
 src/utilidades/email/__init__.py
 src/utilidades/excel/GestorExcel.py
@@ -23,6 +25,8 @@ src/utilidades/ficheros/ExcepcionFinPDF.py
 src/utilidades/ficheros/GestorFicheros.py
 src/utilidades/ficheros/ProcesadorPDF.py
 src/utilidades/ficheros/__init__.py
+src/utilidades/internet/__init__.py
+src/utilidades/internet/internet.py
 src/utilidades/mensajeria/__init__.py
 src/utilidades/mensajeria/telegram.py
 src/utilidades/modelos/Especialidades0511.txt

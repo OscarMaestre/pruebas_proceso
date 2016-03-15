@@ -12,6 +12,14 @@ On Error Resume Next
 On Error GoTo Proc_Err
   'Todas las actualizaciones se meten en una transaccion
   ws.BeginTrans
+	sql="update gaseosa set codcentrocursoactual='9998' where dni='05674941J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 31-01-2016' where dni='05674941J'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='9998' where dni='48456761Q'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 22-12-2015' where dni='48456761Q'"
+	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='9998' where dni='44379780S'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 22-12-2015' where dni='44379780S'"
@@ -55,14 +63,6 @@ On Error GoTo Proc_Err
 	sql="update gaseosa set codcentrocursoactual='45003875' where dni='70986329A'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='Desde 03-12-2015 hasta 31-03-2016 (Adjudicacion 02-12-2015)' where dni='70986329A'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='9998' where dni='05674941J'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 31-01-2016' where dni='05674941J'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='9998' where dni='48456761Q'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 22-12-2015' where dni='48456761Q'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='9999' where dni='47075392G'"
 	db.Execute sql, dbFailOnError

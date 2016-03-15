@@ -131,7 +131,19 @@ class Especialidad(Base):
         sesion.add_all ( lista_especialidades_a_insertar )
         sesion.commit()
 
-
+def get_directorio_archivos_especialidades():
+    dir_instalacion=os.path.dirname(os.path.realpath(__file__) )
+    return dir_instalacion
+def extraer_tuplas_especialidades_de_fichero(nombre_fichero):
+        fichero=open(nombre_fichero, encoding="utf-8")
+        lineas=fichero.readlines()
+        tuplas=[]
+        for l in lineas:
+            codigo=l[0:3]
+            descripcion=l[4:].strip()
+            tuplas.append( ( codigo, descripcion ) )
+        fichero.close()
+        return tuplas
 
 class Correspondencia(Base):
      __tablename__ = NOMBRE_TABLA_CORRESPONDENCIAS

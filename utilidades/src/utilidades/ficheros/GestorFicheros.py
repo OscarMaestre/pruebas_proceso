@@ -68,7 +68,6 @@ class GestorFicheros(object):
         return temp
 
     def aplicar_comando (self, comando, fichero, *args):
-        
         cmd=comando + " "+fichero
         for a in args:
             cmd+=" " + a
@@ -76,6 +75,18 @@ class GestorFicheros(object):
         call(cmd, shell=True)
     
     def ejecutar_comando (self, comando, fichero, *args):
+        """
+        Ejecuta un comando
+        
+        Argumentos:
+        
+            comando -- nombre del comando a ejecutar (sin ./)
+            
+            fichero -- parametro obligatorio, poner "" si es necesario
+            
+            *args -- resto de parámetros
+            
+        """
         self.aplicar_comando(comando, fichero, *args)
         
     def escapar_fichero_con_espacios(self, nombre_fichero):
@@ -118,6 +129,21 @@ class GestorFicheros(object):
         self.mover_fichero (fichero, nuevo_nombre)
         return nuevo_nombre
     def existe_fichero(self, nombre_fichero):
+        """
+        
+        Nos dice si un fichero existe o no
+        
+        Argumentos:
+        
+            nombre_fichero -- Nombre del fichero a comprobar
+            
+        Devuelve
+        
+            True -- si el fichero existe
+            
+            False -- si el fichero no existe
+        """
+        
         if os.path.isfile(nombre_fichero):
             return True
         return False
