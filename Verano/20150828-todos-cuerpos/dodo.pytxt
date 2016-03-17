@@ -14,7 +14,7 @@ DIRECTORIO= RUTA_PAQUETE_BD + "db_nombramientos"
 sys.path.insert(0, DIRECTORIO)
 import GestorDB
 import utilidades
-
+import glob
 
 CONVERTIR="pdftotext -layout -nopgbrk "
 
@@ -36,20 +36,20 @@ def aplicar_comando (comando, fichero, *args):
     
     
 
-ficheros=["Convocadas_Interinos_0590", "Convocadas_Interinos_0591", 
-          "Convocadas_Interinos_0594", "Convocadas_Interinos_0595",
-          "NoConvocadas_Interinos_0590", "NoConvocadas_Interinos_0591", "NoConvocadas_Interinos_0592", 
-          "NoConvocadas_Interinos_0594", "NoConvocadas_Interinos_0595","NoConvocadas_Interinos_0596",
+ficheros=["Convocadas_Interinos590", "Convocadas_Interinos591", 
+          "Convocadas_Interinos594", "Convocadas_Interinos595",
+          "NoConvocadas_Interinos0590", "NoConvocadas_Interinos0591", "NoConvocadas_Interinos0592", 
+          "NoConvocadas_Interinos0594", "NoConvocadas_Interinos0595","NoConvocadas_Interinos0596",
           "ConvocadasMaestros", "NoConvocadasMaestros"]
 
-
+ficheros=glob.glob("*.pdf")
 
 for f in ficheros:
-    if not utilidades.existe_fichero(f+".txt"):
-        utilidades.aplicar_comando(CONVERTIR, f+".pdf")
+    if not utilidades.existe_fichero(f[:-4]+".txt"):
+        utilidades.aplicar_comando(CONVERTIR, f)
     
 for f in ficheros:
-    utilidades.aplicar_comando(PROCESAR, f+".txt", "> "+f+".res")
+    utilidades.aplicar_comando(PROCESAR, f[:-4]+".txt", "> "+f+".res")
     
 utilidades.borrar_fichero(FICH_RESULTADO)
 

@@ -16,6 +16,6 @@ update gaseosa set auxiliar='VACANTE TODO CURSO 15/16' where dni='52355257N';
 update gaseosa set cod_centro='9888' where dni='00656961N';
 update gaseosa set auxiliar='VACANTE TODO CURSO 15/16' where dni='00656961N';
 
-update gaseosa set cod_centro='13001406' where dni='03847517P';
-update gaseosa set auxiliar='VACANTE TODO CURSO 15/16' where dni='03847517P';
+update gaseosa set cod_centro='13001406' where dni='52975170Y';
+update gaseosa set auxiliar='VACANTE TODO CURSO 15/16' where dni='52975170Y';
 

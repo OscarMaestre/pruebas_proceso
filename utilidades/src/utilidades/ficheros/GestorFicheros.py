@@ -152,7 +152,7 @@ class GestorFicheros(object):
         if nombre_nuevo==nombre_viejo:
             #print("No hace falta renombrar:"+nombre_viejo)
             return 
-        aplicar_comando(self.MOVER, "\""+nombre_viejo+"\"", nombre_nuevo)
+        self.aplicar_comando(self.MOVER, "\""+nombre_viejo+"\"", nombre_nuevo)
         
     def enviar_texto_a_comando(self, texto, comando):
         if platform.system()=="Linux":
