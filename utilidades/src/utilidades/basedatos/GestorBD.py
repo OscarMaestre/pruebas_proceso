@@ -16,11 +16,13 @@ class GestorBD(object):
         self.conexion=sqlite3.connect(self.archivo_db)
         self.cursor=self.conexion.cursor()
         self.ejecutar_sentencias(["PRAGMA foreign_keys=ON"])
-        
-    def get_preludio_sql(self, nombre_funcion):
+
+    @staticmethod        
+    def get_preludio_sql(nombre_funcion):
         return PRELUDIO_SQL.format(nombre_funcion)
 
-    def crear_sentencia_update(self, sentencia):
+    @staticmethod
+    def crear_sentencia_update(sentencia):
         sql="\tsql=\""+sentencia+"\"\n"
         sql+="\tdb.Execute sql, dbFailOnError\n"
         return sql
@@ -31,11 +33,12 @@ class GestorBD(object):
                 SQL_CREACION_PLANTILLAS.format ( nombre_tabla )
             ]
         )
+    @staticmethod
     def get_procedimiento(nombre, sql_intermedio):
-        inicio=get_preludio_sql(nombre)
-        fin=get_fin_sql()
+        inicio=GestorBD.get_preludio_sql(nombre)
+        fin=GestorBD.get_fin_sql()
         return inicio+sql_intermedio+fin
-    
+    @staticmethod
     def get_fin_sql():
         return FIN_SQL_ACCESS
     
