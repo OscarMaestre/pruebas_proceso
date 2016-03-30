@@ -44,9 +44,9 @@ On Error GoTo Proc_Err
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='Desde 28-01-2016 hasta 31-05-2016 (Adjudicacion 27-01-2016)' where dni='03830274S'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='13000566' where dni='04194417E'"
+	sql="update gaseosa set codcentrocursoactual='9998' where dni='04194417E'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-01-2016 hasta 20-03-2016 (Adjudicacion 27-01-2016)' where dni='04194417E'"
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 20-03-2016' where dni='04194417E'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='13005291' where dni='05693622H'"
 	db.Execute sql, dbFailOnError
@@ -80,9 +80,9 @@ On Error GoTo Proc_Err
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 21-02-2016' where dni='44387245M'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='13005345' where dni='05641558A'"
+	sql="update gaseosa set codcentrocursoactual='9998' where dni='05641558A'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-01-2016 hasta 30-03-2016 (Adjudicacion 27-01-2016)' where dni='05641558A'"
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 30-03-2016' where dni='05641558A'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='45002470' where dni='06256851T'"
 	db.Execute sql, dbFailOnError
@@ -152,9 +152,9 @@ On Error GoTo Proc_Err
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 12-02-2016' where dni='52757318X'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='02000143' where dni='04615604X'"
+	sql="update gaseosa set codcentrocursoactual='9999' where dni='04615604X'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-01-2016 hasta 18-03-2016 (Adjudicacion 27-01-2016)' where dni='04615604X'"
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 18-03-2016' where dni='04615604X'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='9999' where dni='70986129X'"
 	db.Execute sql, dbFailOnError
@@ -196,17 +196,17 @@ On Error GoTo Proc_Err
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 14-03-2016' where dni='44397730W'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='02000106' where dni='47081427J'"
+	sql="update gaseosa set codcentrocursoactual='9999' where dni='47081427J'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-01-2016 hasta 18-03-2016 (Adjudicacion 27-01-2016)' where dni='47081427J'"
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 18-03-2016' where dni='47081427J'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='02004483' where dni='47080261C'"
+	sql="update gaseosa set codcentrocursoactual='9999' where dni='47080261C'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-01-2016 hasta 23-03-2016 (Adjudicacion 27-01-2016)' where dni='47080261C'"
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 23-03-2016' where dni='47080261C'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='02002450' where dni='47082710P'"
+	sql="update gaseosa set codcentrocursoactual='9999' where dni='47082710P'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-01-2016 hasta 23-03-2016 (Adjudicacion 27-01-2016)' where dni='47082710P'"
+	sql="update gaseosa set auxiliar='En paro, su ultimo contrato acabó el 23-03-2016' where dni='47082710P'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='9999' where dni='05671161M'"
 	db.Execute sql, dbFailOnError
