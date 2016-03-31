@@ -13,9 +13,11 @@ class ProcesadorPDF(object):
         self.DECIMAL_NO_ENCONTRADO="xxxxxxxxxxx"
         self.DECIMAL_NO_CONCORDANTE="zzzzzzzzzzzzz"
         self.gf=GestorFicheros()
-        
+            
         re_dni="X?[0-9]{7,8}[A-Z]"
+        
         self.expr_regular_dni=re.compile(re_dni)
+        """Expresion regular para el dni"""
         
         re_decimales_baremo="[0-9]{1,3}[\,|\.][0-9]{4}"
         self.expr_regular_decimales=re.compile(re_decimales_baremo)
@@ -201,20 +203,35 @@ class ProcesadorPDF(object):
         return self.linea_contiene_patron ( expr_regular, linea_actual )
     
     def linea_actual_contiene_codigo_centro(self, con_c=False):
+        """Indica si la linea actual contiene un codigo de centro
+        
+        Argumentos
+        
+            con_c -- Nos dice si hay que buscar con C al final o no
+        """
         if con_c:
             return self.linea_actual_contiene_patron ( self.expr_regular_codigo_centro_con_c )
         return self.linea_actual_contiene_patron ( self.expr_regular_codigo_centro_sin_c )
     
     def linea_actual_contiene_codigo_localidad(self):
+        """Indica si la linea actual contiene un codigo de localidad"""
         return self.linea_actual_contiene_patron ( self.expr_regular_codigo_localidad )
     
     def get_nombre_persona(self, linea):
+        """Indica si se encuentra un nombre de persona
+        
+        Argumentos
+        
+            linea -- Linea en la que se busca el nombre de persona
+        """
         return self.linea_contiene_patron ( self.expr_regular_nombre_persona, linea )
     
     def get_especialidades(self, linea):
+        """Devuelve la lista de posible especialidades de maestros"""
         return self.linea_contiene_patron ( self.expr_regular_especialidad_maestros_en_concurso_de_traslados, linea)
     
     def siguiente_linea(self):
+        """Devuelve la siguiente linea"""
         self.num_fila=self.num_fila+1
         self.num_columna=0
         if self.num_fila>=self.MAX_FILAS:
@@ -315,11 +332,13 @@ class ProcesadorPDF(object):
         return devolver
     
     def saltar_linea(self):
+        """Salta a la linea siguiente"""
         self.num_fila = self.num_fila + 1
         self.num_columna = 0
     
     
     def extraer_dni(self):
+        """Extrae el dni de la linea actual"""
         linea=self.get_linea_actual()
         return self.linea_contiene_patron( self.expr_regular_dni, linea)
     def extraer_todos_decimales(self):

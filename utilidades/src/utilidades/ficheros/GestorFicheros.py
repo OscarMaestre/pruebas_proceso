@@ -84,7 +84,7 @@ class GestorFicheros(object):
             
             fichero -- parametro obligatorio, poner "" si es necesario
             
-            *args -- resto de parámetros
+            args -- resto de parámetros
             
         """
         self.aplicar_comando(comando, fichero, *args)
