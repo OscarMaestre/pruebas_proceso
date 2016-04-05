@@ -116,7 +116,7 @@ if (isset($_POST['nombre'])) {
         $forma_pago="En efectivo en la sede de ANPE.";
     }
     if ($_POST['forma_pago']=='Transferencia'){
-        $forma_pago="Transferencia bancaria (3190-2082-22-2100855325)";
+        $forma_pago="Transferencia bancaria GlobalCaja (ES68-3190-2082-22-2100855325)";
     }
 
     $pdf->SetFont('Arial','B',12);
@@ -240,7 +240,7 @@ $form=<<<FORMULARIO
                 <section class="checkbox-list" class="width-6">
                     Forma de pago<br/>
                         <label><input type="radio" name="forma_pago" value="Efectivo" checked>En efectivo en la sede de ANPE</label>
-                        <label><input type="radio" name="forma_pago" value="Transferencia">Por transferencia bancaria. Número de cuenta 3190-2082-22-2100855325</label>
+                        <label><input type="radio" name="forma_pago" value="Transferencia">Por transferencia bancaria. Número de cuenta (GlobalCaja) ES68-3190-2082-22-2100855325</label>
                 </section>
                 <section class="checkbox-list">
                     <label><input type="checkbox" checked> <big>He leído y acepto la Política de Privacidad</big</label>
