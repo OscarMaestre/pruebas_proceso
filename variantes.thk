@@ -1,4 +1,5 @@
 update gaseosa set cod_centro_actual="13000360" where dni like "%1542P";
 insert or ignore into centros (codigo_centro, nombre_centro, codigo_localidad, tipo_centro) values('13010973C', 'EAEHD HOSPITAL SANTA BARBARA', '130710004', 'EAEHD');
 update gaseosa set cod_centro_actual="13010973C" where dni like "%71856X";
+update gaseosa set cod_centro_actual="13004080C" where dni like "%8774M";
 .quit

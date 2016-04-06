@@ -1826,6 +1826,10 @@ insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimien
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('71642777P','PRIDA CAMPO, MIGUEL ANGEL','2016-03-31','2016-05-15','Adjudicacion 30-03-2016','2016-03-30','0594412','13004717');
 --------------------
+05196734E:BELMONTE ALMENDROS, ANTONIO:0595512:13001406:EA PEDRO ALMODÓVAR:CIUDAD REAL:2016-04-05:2016-05-15:2016-04-04
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05196734E','BELMONTE ALMENDROS, ANTONIO','2016-04-05','2016-05-15','Adjudicacion 04-04-2016','2016-04-04','0595512','13001406');
+--------------------
 05683647W:FUENTE BLANCO, EDERITA DE LA:0590004:13003129:IES ELADIO CABAÑERO:TOMELLOSO:2016-01-14:2016-06-24:2016-01-13
 48356209C:VAILLO MATEOS, BEATRIZ:0590005:02003651:IES OCTAVIO CUARTERO:VILLARROBLEDO:2016-01-14:2016-06-24:2016-01-13
 06268415H:REGUILLO MORENO, MARIA DOLORES:P590005:45004880:CEPA CASTILLO DE CONSUEGRA:CONSUEGRA:2016-01-14:2016-06-24:2016-01-13
@@ -2302,6 +2306,262 @@ insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimien
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('18021721W','GIMENEZ SANCLEMENTE, ISABEL','2016-01-14','2016-06-24','Adjudicacion 13-01-2016','2016-01-13','0597038','45004831');
 --------------------
+44392869V:MARTINEZ TARRAGA, MARIA TERESA:0597031:02004392:CEIP JOSÉ LLORET TALENS:ALMANSA:2016-04-05:2016-06-24:2016-04-04
+07561094M:ABARCA USEROS, MARGARITA:0597031:02004628:CRA LOS ALMENDROS:CARCELEN:2016-04-05:2016-06-24:2016-04-04
+47086228F:INIESTA VERGARA, JUAN FRANCISCO:0597031:02004501:CRA RÍO TAIBILLA:NERPIO:2016-04-05:2016-05-15:2016-04-04
+05692103V:RICO BARATO, MARIA PILAR:0597031:13000293:CEIP TOMASA GALLARDO:LCOLEA DE CALATRAVA:2016-04-05:2016-05-05:2016-04-04
+74502847M:MARTINEZ PALACIOS, PILAR ENCARNACION:0597031:13003853:CEIP LA CANDELARIA:MANZANARES:2016-04-05:2016-05-30:2016-04-04
+04585073T:GARCIA MARTINEZ, MARIA JULIA:0597031:16003529:CEIP FUENTE DEL ORO:CUENCA:2016-04-05:2016-04-30:2016-04-04
+07552872V:MONASOR CASAS, ESTRELLA:0597031:16009362:CRA AIRÉN:HINOJOSOS (LOS):2016-04-05:2016-04-29:2016-04-04
+47059495T:BALLESTEROS JIMENEZ, MARIA:0597031:16004194:CRA GUADIELA:PRIEGO:2016-04-05:2016-04-20:2016-04-04
+09061533Q:CARRASCO FERNANDEZ, CRISTINA:W597031:16002151:CEIP RAFAEL LÓPEZ DE HARO:SAN CLEMENTE:2016-04-05:2016-06-24:2016-04-04
+03110857S:HITA FERNANDEZ, YOLANDA:0597031:19003541:CRA DE PASTRANA:PASTRANA:2016-04-05:2016-05-05:2016-04-04
+04142320C:MARTIN SUAREZ, ROSARIO:0597031:45000096:CEIP RUFINO MANSI:ALCAUDETE DE LA JARA:2016-04-05:2016-05-27:2016-04-04
+04197703L:DIAZ DEL FRESNO, EVA:0597031:45002056:CEIP VIRGEN DEL ROSARIO:ONTIGOLA:2016-04-05:2016-04-20:2016-04-04
+05932239X:ACEVEDO VALERO, MARIA:0597031:45002721:CEIP EDUARDO PALOMO RODRÍG:ANTA CRUZ DE LA ZARZA:2016-04-05:2016-06-24:2016-04-04
+03917349N:MARTIN RODRIGUEZ, KAREN:0597031:45011951:CEIP EL QUIÑÓN:SESEÑA NUEVO:2016-04-05:2016-05-05:2016-04-04
+49050030T:GARCIA ESCOBAR, ESTEFANIA:0597031:45003942:CEIP ALFONSO VI:TOLEDO:2016-04-05:2016-06-24:2016-04-04
+47069380H:SERRANO PINEDO, ANABEL:0597032:02001433:CEIP SAN AGUSTÍN:CASAS-IBAÑEZ:2016-04-05:2016-05-15:2016-04-04
+05674807V:CRESPO DIAZ-CANO, CRISTINA:0597032:13004869:CEIP MANUEL CLEMENTE:MORAL DE CALATRAVA:2016-04-05:2016-05-27:2016-04-04
+05698377N:HIERRO CARDENAS, LUISA MARIA DEL:0597032:13002371:CEIP SANTA QUITERIA:UELOS DE CALATRAVA (LOS):2016-04-05:2016-04-30:2016-04-04
+03856618R:JIMENEZ GABALDON, ALVARO:0597032:45004971:CEIP JUAN DE PADILLA:TOLEDO:2016-04-05:2016-05-05:2016-04-04
+05909801C:GONZALEZ SANCHEZ, MANUELA MONSER:0597034:13012258:ALAMILLO:ALAMILLO:2016-04-05:2016-05-15:2016-04-04
+70988895Q:SANCHEZ-MORENO MAROTO, VANESA:0597034:13004377:CEIP PASEO VIEJO DE LA FLO:ALMAGRO:2016-04-05:2016-05-05:2016-04-04
+05661105T:MORENO RUBIO, ANTONIO:0597034:13003415:CEIP INMACULADA CONCEPCIÓN:LLANUEVA DE LA FUENTE:2016-04-05:2016-05-20:2016-04-04
+47068319S:GOMEZ JIMENEZ, JOSE LUIS:B597034:19003565:CRA PIMAFAD:ALMOGUERA:2016-04-05:2016-05-05:2016-04-04
+47067410A:BARBA MOLINA, RAUL:P597034:19008034:CEIP PARQUE VALLEJO:ALOVERA:2016-04-05:2016-05-05:2016-04-04
+04594788D:LOPEZ MUÑOZ, MARIA LUISA:0597034:19003164:CEIP RÍO HENARES:GUADALAJARA:2016-04-05:2016-05-31:2016-04-04
+47495190Y:ARROYO PINILLA, LAURA:0597034:45001453:CEIP SEVERO OCHOA:MATA (LA):2016-04-05:2016-04-29:2016-04-04
+03915584H:BUSTOS CARBONELL, EMILIO:0597034:45001726:CEIP LA FUENTE:NAMBROCA:2016-04-05:2016-06-24:2016-04-04
+04207949F:ARENAS ARRIERO, MARIA CONCEPCION:P597034:45011835:CEIP LAZARILLO DE TORMES:TORRIJOS:2016-04-05:2016-05-05:2016-04-04
+05688780Y:TORIBIO PORTEROS, ELENA:0597035:13001480:CEIP INFANTE DON FELIPE:DAIMIEL:2016-04-05:2016-05-12:2016-04-04
+34015577A:GONZALEZ RUIZ-CANELA, ROCIO:0597035:13002162:CEIP MARÍA LUISA CAÑAS:PEDRO MUÑOZ:2016-04-05:2016-05-30:2016-04-04
+03880666Z:ARREDONDO FERMIN, ALVARO:0597035:45004171:CEIP ANDRÉS ARANGO:VELADA:2016-04-05:2016-05-20:2016-04-04
+44378252M:FERNANDEZ GARCIA, RAQUEL:P597036:02000131:CEIP PRÍNCIPE FELIPE:ALBACETE:2016-04-05:2016-06-24:2016-04-04
+03124101B:COSTERO NAVARRO, ALMUDENA:0597036:16004194:CRA GUADIELA:PRIEGO:2016-04-05:2016-06-24:2016-04-04
+03082645R:LUCAS MORATILLA, MARIA MONTSERRAT:0597036:19001556:CEIP VIRGEN DE LA HOZ:MOLINA:2016-04-05:2016-06-24:2016-04-04
+03884176M:CALVO FERNANDEZ, SARA:0597036:45010405:CEIP SANTA MARÍA LA BLANCA:BARCIENCE:2016-04-05:2016-06-07:2016-04-04
+53326217G:SANCHEZ LOPEZ, NURIA:0597036:45002044:CEIP PEDRO MELENDO GARCÍA:OLIAS DEL REY:2016-04-05:2016-05-27:2016-04-04
+06270077R:MAGRO MATILLA, BLANCA MARIA:0597036:45005574:CEE CIUDAD DE TOLEDO:TOLEDO:2016-04-05:2016-06-24:2016-04-04
+03913270G:MEDINA GOMEZ, CRISTINA:0597060:45005975:IES MONTES DE TOLEDO:GALVEZ:2016-04-05:2016-04-29:2016-04-04
+05689376G:GIL-ORTEGA CABRERA, MERCEDES:0597037:13003993:CEIP SAN ISIDRO:TOMELLOSO:2016-04-05:2016-05-30:2016-04-04
+74517836K:MARTINEZ BELMONTE, MARIA:0597037:45000023:CEIP NUESTRA SEÑORA DE LA:ALAMEDA DE LA SAGRA:2016-04-05:2016-06-24:2016-04-04
+47076117Q:ORTIZ HIDALGO, MARIANA CONCEPCION:0597038:02000088:CEIP DIEGO VELÁZQUEZ:ALBACETE:2016-04-05:2016-04-30:2016-04-04
+47079248L:FAJARDO CASTAÑO, MARIA VIRGINIA:0597038:02001159:CEIP PRÍNCIPE DE ASTURIAS:ALMANSA:2016-04-05:2016-04-30:2016-04-04
+44375074R:GARCIA MOTA HERREROS, ABEL:P597038:02003031:CEIP ILDEFONSO NAVARRO:VILLAMALEA:2016-04-05:2016-04-30:2016-04-04
+04588558N:LOPEZ SOLER, JULIA:0597038:02003132:CEIP VIRGEN DE LA CARIDAD:VILLARROBLEDO:2016-04-05:2016-04-30:2016-04-04
+25103316N:GODINEZ NAVAS, GRACIA:0597038:13000104:CEIP EL SANTO:ALCAZAR DE SAN JUAN:2016-04-05:2016-05-30:2016-04-04
+05687544N:VILLANUEVA ALAÑON, MARIA JOSE:0597038:13001480:CEIP INFANTE DON FELIPE:DAIMIEL:2016-04-05:2016-05-20:2016-04-04
+05679928D:HERRERA RIVERO, CRISTINA:0597038:13010766:CRA SAN ISIDRO:RCAJO DE LOS MONTES:2016-04-05:2016-05-05:2016-04-04
+05702614V:TAPIADOR SERRANO, MARIA:0597038:13003853:CEIP LA CANDELARIA:MANZANARES:2016-04-05:2016-05-05:2016-04-04
+06260240P:GONZALEZ MATEOS, ELISA ISABEL:0597038:13009478:CEIP FELIX GRANDE:TOMELLOSO:2016-04-05:2016-05-30:2016-04-04
+71218245X:TORRES CAÑADAS, ADORACION:0597038:13003211:CEIP JESÚS BAEZA:VALDEPEÑAS:2016-04-05:2016-04-27:2016-04-04
+47083484T:TARRAGA GARCIA, VERONICA:0597038:16001831:CEIP ADOLFO MARTÍNEZ CHICA:PEDROÑERAS (LAS):2016-04-05:2016-06-24:2016-04-04
+03111815F:SANZ DEL POZO, JAIME:0597038:19002858:CEPA RÍO SORBE:GUADALAJARA:2016-04-05:2016-06-24:2016-04-04
+05195482N:NAVARRO MARIN, MARIA MERCEDES:0597038:19002329:CEIP GARCÍA LORCA:UCEDA:2016-04-05:2016-06-24:2016-04-04
+71225723J:ROMERO RAMIREZ, MARIA ISABEL:B597038:45000278:CEIP TIRSO DE MOLINA:ARGES:2016-04-05:2016-05-05:2016-04-04
+12231508Q:ARENAS MARTIN, EVANGELINA:0597038:45000931:CEIP MIGUEL DE CERVANTES:ESQUIVIAS:2016-04-05:2016-06-24:2016-04-04
+47054783A:MARTINEZ MENDIETA, CONCEPCION:0597038:45002287:CEIP RAMÓN Y CAJAL:BLA DE ALMORADIEL (LA):2016-04-05:2016-06-24:2016-04-04
+10794815H:CIMENTADA GONZALEZ, CONSOLACION:0597038:45002330:CEIP FERNANDO DE ROJAS:EBLA DE MONTALBAN (LA):2016-04-05:2016-05-27:2016-04-04
+03898478R:MAESTRE VENTAS, ELENA:0597038:45002676:CEIP NUESTRA SEÑORA DE GRA:N PABLO DE LOS MONTES:2016-04-05:2016-06-24:2016-04-04
+53139345F:BEN-HAMID CORRAL, FERNANDO:0597038:45012190:CEIP EL GRECO:ÑORIO DE ILLESCAS (EL):2016-04-05:2016-05-07:2016-04-04
+03893430J:MORA MEDINA, VERONICA:0597038:45011951:CEIP EL QUIÑÓN:SESEÑA NUEVO:2016-04-05:2016-05-05:2016-04-04
+05348648K:OVEJERO HERAS, JULIA:0597038:45003139:CEIP NUESTRA SEÑORA DEL PR:TALAVERA DE LA REINA:2016-04-05:2016-04-29:2016-04-04
+04179167K:MUÑOZ SOBRINO, JOSE VICENTE:0597038:45004120:CEIP MIGUEL DE CERVANTES:UGENA:2016-04-05:2016-06-24:2016-04-04
+03821858V:FERNANDEZ GUERRERO, MARIA CARMEN:0597038:45004533:CEIP SAN ANTONIO:YELES:2016-04-05:2016-05-27:2016-04-04
+70497552E:TUREGANO MINGUEZ, MARIA DOLORES:0597022:16001004:IES PEDRO MERCEDES:CUENCA:2016-04-05:2016-05-02:2016-04-04
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44392869V','MARTINEZ TARRAGA, MARIA TERESA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597031','02004392');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('07561094M','ABARCA USEROS, MARGARITA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597031','02004628');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47086228F','INIESTA VERGARA, JUAN FRANCISCO','2016-04-05','2016-05-15','Adjudicacion 04-04-2016','2016-04-04','0597031','02004501');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05692103V','RICO BARATO, MARIA PILAR','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0597031','13000293');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('74502847M','MARTINEZ PALACIOS, PILAR ENCARNACION','2016-04-05','2016-05-30','Adjudicacion 04-04-2016','2016-04-04','0597031','13003853');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04585073T','GARCIA MARTINEZ, MARIA JULIA','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','0597031','16003529');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('07552872V','MONASOR CASAS, ESTRELLA','2016-04-05','2016-04-29','Adjudicacion 04-04-2016','2016-04-04','0597031','16009362');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47059495T','BALLESTEROS JIMENEZ, MARIA','2016-04-05','2016-04-20','Adjudicacion 04-04-2016','2016-04-04','0597031','16004194');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('09061533Q','CARRASCO FERNANDEZ, CRISTINA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','W597031','16002151');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03110857S','HITA FERNANDEZ, YOLANDA','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0597031','19003541');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04142320C','MARTIN SUAREZ, ROSARIO','2016-04-05','2016-05-27','Adjudicacion 04-04-2016','2016-04-04','0597031','45000096');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04197703L','DIAZ DEL FRESNO, EVA','2016-04-05','2016-04-20','Adjudicacion 04-04-2016','2016-04-04','0597031','45002056');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05932239X','ACEVEDO VALERO, MARIA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597031','45002721');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03917349N','MARTIN RODRIGUEZ, KAREN','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0597031','45011951');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('49050030T','GARCIA ESCOBAR, ESTEFANIA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597031','45003942');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47069380H','SERRANO PINEDO, ANABEL','2016-04-05','2016-05-15','Adjudicacion 04-04-2016','2016-04-04','0597032','02001433');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05674807V','CRESPO DIAZ-CANO, CRISTINA','2016-04-05','2016-05-27','Adjudicacion 04-04-2016','2016-04-04','0597032','13004869');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05698377N','HIERRO CARDENAS, LUISA MARIA DEL','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','0597032','13002371');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03856618R','JIMENEZ GABALDON, ALVARO','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0597032','45004971');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05909801C','GONZALEZ SANCHEZ, MANUELA MONSER','2016-04-05','2016-05-15','Adjudicacion 04-04-2016','2016-04-04','0597034','13012258');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('70988895Q','SANCHEZ-MORENO MAROTO, VANESA','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0597034','13004377');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05661105T','MORENO RUBIO, ANTONIO','2016-04-05','2016-05-20','Adjudicacion 04-04-2016','2016-04-04','0597034','13003415');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47068319S','GOMEZ JIMENEZ, JOSE LUIS','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','B597034','19003565');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47067410A','BARBA MOLINA, RAUL','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','P597034','19008034');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04594788D','LOPEZ MUÑOZ, MARIA LUISA','2016-04-05','2016-05-31','Adjudicacion 04-04-2016','2016-04-04','0597034','19003164');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47495190Y','ARROYO PINILLA, LAURA','2016-04-05','2016-04-29','Adjudicacion 04-04-2016','2016-04-04','0597034','45001453');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03915584H','BUSTOS CARBONELL, EMILIO','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597034','45001726');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04207949F','ARENAS ARRIERO, MARIA CONCEPCION','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','P597034','45011835');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05688780Y','TORIBIO PORTEROS, ELENA','2016-04-05','2016-05-12','Adjudicacion 04-04-2016','2016-04-04','0597035','13001480');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('34015577A','GONZALEZ RUIZ-CANELA, ROCIO','2016-04-05','2016-05-30','Adjudicacion 04-04-2016','2016-04-04','0597035','13002162');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03880666Z','ARREDONDO FERMIN, ALVARO','2016-04-05','2016-05-20','Adjudicacion 04-04-2016','2016-04-04','0597035','45004171');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44378252M','FERNANDEZ GARCIA, RAQUEL','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','P597036','02000131');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03124101B','COSTERO NAVARRO, ALMUDENA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597036','16004194');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03082645R','LUCAS MORATILLA, MARIA MONTSERRAT','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597036','19001556');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03884176M','CALVO FERNANDEZ, SARA','2016-04-05','2016-06-07','Adjudicacion 04-04-2016','2016-04-04','0597036','45010405');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('53326217G','SANCHEZ LOPEZ, NURIA','2016-04-05','2016-05-27','Adjudicacion 04-04-2016','2016-04-04','0597036','45002044');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06270077R','MAGRO MATILLA, BLANCA MARIA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597036','45005574');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03913270G','MEDINA GOMEZ, CRISTINA','2016-04-05','2016-04-29','Adjudicacion 04-04-2016','2016-04-04','0597060','45005975');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05689376G','GIL-ORTEGA CABRERA, MERCEDES','2016-04-05','2016-05-30','Adjudicacion 04-04-2016','2016-04-04','0597037','13003993');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('74517836K','MARTINEZ BELMONTE, MARIA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597037','45000023');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47076117Q','ORTIZ HIDALGO, MARIANA CONCEPCION','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','0597038','02000088');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47079248L','FAJARDO CASTAÑO, MARIA VIRGINIA','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','0597038','02001159');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44375074R','GARCIA MOTA HERREROS, ABEL','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','P597038','02003031');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04588558N','LOPEZ SOLER, JULIA','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','0597038','02003132');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('25103316N','GODINEZ NAVAS, GRACIA','2016-04-05','2016-05-30','Adjudicacion 04-04-2016','2016-04-04','0597038','13000104');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05687544N','VILLANUEVA ALAÑON, MARIA JOSE','2016-04-05','2016-05-20','Adjudicacion 04-04-2016','2016-04-04','0597038','13001480');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05679928D','HERRERA RIVERO, CRISTINA','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0597038','13010766');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05702614V','TAPIADOR SERRANO, MARIA','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0597038','13003853');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06260240P','GONZALEZ MATEOS, ELISA ISABEL','2016-04-05','2016-05-30','Adjudicacion 04-04-2016','2016-04-04','0597038','13009478');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('71218245X','TORRES CAÑADAS, ADORACION','2016-04-05','2016-04-27','Adjudicacion 04-04-2016','2016-04-04','0597038','13003211');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47083484T','TARRAGA GARCIA, VERONICA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597038','16001831');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03111815F','SANZ DEL POZO, JAIME','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597038','19002858');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05195482N','NAVARRO MARIN, MARIA MERCEDES','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597038','19002329');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('71225723J','ROMERO RAMIREZ, MARIA ISABEL','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','B597038','45000278');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('12231508Q','ARENAS MARTIN, EVANGELINA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597038','45000931');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47054783A','MARTINEZ MENDIETA, CONCEPCION','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597038','45002287');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('10794815H','CIMENTADA GONZALEZ, CONSOLACION','2016-04-05','2016-05-27','Adjudicacion 04-04-2016','2016-04-04','0597038','45002330');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03898478R','MAESTRE VENTAS, ELENA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597038','45002676');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('53139345F','BEN-HAMID CORRAL, FERNANDO','2016-04-05','2016-05-07','Adjudicacion 04-04-2016','2016-04-04','0597038','45012190');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03893430J','MORA MEDINA, VERONICA','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0597038','45011951');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05348648K','OVEJERO HERAS, JULIA','2016-04-05','2016-04-29','Adjudicacion 04-04-2016','2016-04-04','0597038','45003139');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04179167K','MUÑOZ SOBRINO, JOSE VICENTE','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0597038','45004120');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03821858V','FERNANDEZ GUERRERO, MARIA CARMEN','2016-04-05','2016-05-27','Adjudicacion 04-04-2016','2016-04-04','0597038','45004533');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('70497552E','TUREGANO MINGUEZ, MARIA DOLORES','2016-04-05','2016-05-02','Adjudicacion 04-04-2016','2016-04-04','0597022','16001004');
+--------------------
 44398649R:TARRAGA RIOS, ROSA MARIA:0597031:02004288:CEIP CRISTO DE LA ANTIGUA:TOBARRA:2015-10-27:2015-12-15:2015-10-26
 05103752Y:RUIZ SANCHEZ, M NIEVES:0597031:02010021:CRA DE YESTE:YESTE:2015-10-27:2015-11-20:2015-10-26
 44399494H:ORTIZ GONZALEZ, IRENE:F597031:13004882:CEIP ALCALDE JOSÉ MAESTRO:CIUDAD REAL:2015-10-27:2015-12-01:2015-10-26
@@ -2437,6 +2697,90 @@ insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimien
 --------------------
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03824105X','ROSA SANCHEZ, MARIA ELENA DE LA','2015-10-27','2015-12-22','Adjudicacion 26-10-2015','2015-10-26','0597021','45005321');
+--------------------
+77571652N:RODRIGUEZ TORRES, ELISA:0590004:02001202:IES JOSÉ CONDE GARCÍA:ALMANSA:2016-04-07:2016-06-24:2016-04-06
+23028909K:HERNANDEZ PEREZ, ANA MARIA:0590004:02005141:SES DE NERPIO:NERPIO:2016-04-07:2016-06-03:2016-04-06
+44396795X:LOPEZ SAIZ, MARIA:0590004:16003116:IES FERNANDO ZÓBEL:CUENCA:2016-04-07:2016-04-30:2016-04-06
+44790513Z:ARROYO COLLADO, TERESA:0590004:19002597:IES ANTONIO BUERO VALLEJO:GUADALAJARA:2016-04-11:2016-05-10:2016-04-06
+30960578W:RUIZ SERRANO, ANGELA MARIA:0590004:45005562:IES CARLOS III:TOLEDO:2016-04-07:2016-06-24:2016-04-06
+05927115S:CUBERO MOZOS, ESTEFANIA:0590005:13004018:IES RAMÓN GIRALDO:LANUEVA DE LOS INFANTES:2016-04-07:2016-05-16:2016-04-06
+47696550R:ECHEVARRIA BOTANCH, JANET:0590814:45005288:CEPA LUIS VIVES:UINTANAR DE LA ORDEN:2016-04-07:2016-05-31:2016-04-06
+04194417E:ALAMEDA MARTIN, GUSTAVO:0590006:13005308:IES MÓNICO SÁNCHEZ:PIEDRABUENA:2016-04-07:2016-05-16:2016-04-06
+47072628T:CORCOLES FERNANDEZ, MARIA:0590006:45005252:IES JUAN DE PADILLA:TORRIJOS:2016-04-07:2016-06-24:2016-04-06
+47059269G:ASENJO MARTINEZ, OLGA:0590008:02004011:IES ESCULTOR JOSÉ LUIS SÁN:ALMANSA:2016-04-07:2016-05-07:2016-04-06
+30836783Q:MELLADO ROMERA, LAURA:B590008:45004752:IES ALFONSO X EL SABIO:TOLEDO:2016-04-07:2016-06-24:2016-04-06
+05682867G:GIL FUERTES, FRANCISCO:0590009:19002615:IES ARCIPRESTE DE HITA:ZUQUECA DE HENARES:2016-04-07:2016-05-06:2016-04-06
+48858823S:PEREZ VARGAS, ANA BELEN:0590009:45005355:IES LA SISLA:SONSECA:2016-04-07:2016-06-24:2016-04-06
+47077372Y:UTIEL MARTINEZ, EVA:B590017:02003651:IES OCTAVIO CUARTERO:VILLARROBLEDO:2016-04-07:2016-05-10:2016-04-06
+05685771X:RODRIGUEZ MUÑOZ, DAVID:0590017:13000906:IES EDUARDO VALENCIA:ALZADA DE CALATRAVA:2016-04-07:2016-05-10:2016-04-06
+24279596Z:PINO SAEZ, ALMUDENA:0590017:13002976:IES MODESTO NAVARRO:SOLANA (LA):2016-04-07:2016-05-30:2016-04-06
+06253596B:GUIA DIAZ-PARREÑO, MARCOS DE LA:0590018:02000556:IES ALTO DE LOS MOLINOS:ALBACETE:2016-04-07:2016-05-31:2016-04-06
+44385730P:LOZANO CANO, YOLANDA:0590019:02000453:IES LOS OLMOS:ALBACETE:2016-04-07:2016-05-31:2016-04-06
+47065431W:GARCIA MARTINEZ, FRANCISCO JOSE:0590019:16004042:IES LOS SAUCES:VILLARES DEL SAZ:2016-04-07:2016-04-30:2016-04-06
+09021115D:ESCUDERO GIL, ANA:P590019:19008113:IES CARMEN BURGOS DE SEGUÍ:ALOVERA:2016-04-07:2016-04-29:2016-04-06
+44376123S:FERNANDEZ RUIZ, ANDRES:P590019:19008113:IES CARMEN BURGOS DE SEGUÍ:ALOVERA:2016-04-07:2016-04-29:2016-04-06
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('77571652N','RODRIGUEZ TORRES, ELISA','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','0590004','02001202');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('23028909K','HERNANDEZ PEREZ, ANA MARIA','2016-04-07','2016-06-03','Adjudicacion 06-04-2016','2016-04-06','0590004','02005141');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44396795X','LOPEZ SAIZ, MARIA','2016-04-07','2016-04-30','Adjudicacion 06-04-2016','2016-04-06','0590004','16003116');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44790513Z','ARROYO COLLADO, TERESA','2016-04-11','2016-05-10','Adjudicacion 06-04-2016','2016-04-06','0590004','19002597');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('30960578W','RUIZ SERRANO, ANGELA MARIA','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','0590004','45005562');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05927115S','CUBERO MOZOS, ESTEFANIA','2016-04-07','2016-05-16','Adjudicacion 06-04-2016','2016-04-06','0590005','13004018');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47696550R','ECHEVARRIA BOTANCH, JANET','2016-04-07','2016-05-31','Adjudicacion 06-04-2016','2016-04-06','0590814','45005288');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04194417E','ALAMEDA MARTIN, GUSTAVO','2016-04-07','2016-05-16','Adjudicacion 06-04-2016','2016-04-06','0590006','13005308');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47072628T','CORCOLES FERNANDEZ, MARIA','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','0590006','45005252');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47059269G','ASENJO MARTINEZ, OLGA','2016-04-07','2016-05-07','Adjudicacion 06-04-2016','2016-04-06','0590008','02004011');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('30836783Q','MELLADO ROMERA, LAURA','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','B590008','45004752');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05682867G','GIL FUERTES, FRANCISCO','2016-04-07','2016-05-06','Adjudicacion 06-04-2016','2016-04-06','0590009','19002615');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('48858823S','PEREZ VARGAS, ANA BELEN','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','0590009','45005355');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47077372Y','UTIEL MARTINEZ, EVA','2016-04-07','2016-05-10','Adjudicacion 06-04-2016','2016-04-06','B590017','02003651');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05685771X','RODRIGUEZ MUÑOZ, DAVID','2016-04-07','2016-05-10','Adjudicacion 06-04-2016','2016-04-06','0590017','13000906');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('24279596Z','PINO SAEZ, ALMUDENA','2016-04-07','2016-05-30','Adjudicacion 06-04-2016','2016-04-06','0590017','13002976');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06253596B','GUIA DIAZ-PARREÑO, MARCOS DE LA','2016-04-07','2016-05-31','Adjudicacion 06-04-2016','2016-04-06','0590018','02000556');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44385730P','LOZANO CANO, YOLANDA','2016-04-07','2016-05-31','Adjudicacion 06-04-2016','2016-04-06','0590019','02000453');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47065431W','GARCIA MARTINEZ, FRANCISCO JOSE','2016-04-07','2016-04-30','Adjudicacion 06-04-2016','2016-04-06','0590019','16004042');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('09021115D','ESCUDERO GIL, ANA','2016-04-07','2016-04-29','Adjudicacion 06-04-2016','2016-04-06','P590019','19008113');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44376123S','FERNANDEZ RUIZ, ANDRES','2016-04-07','2016-04-29','Adjudicacion 06-04-2016','2016-04-06','P590019','19008113');
 --------------------
 04194417E:ALAMEDA MARTIN, GUSTAVO:P595508:02007794:EA ALBACETE:ALBACETE:2015-10-08:2015-12-04:2015-10-07
 --------------------
@@ -3221,6 +3565,22 @@ insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimien
 78688797R:ARAQUE MARCOS, VICTOR:0595507:13001406:EA PEDRO ALMODÓVAR:CIUDAD REAL:2016-03-10:2016-03-30:2016-03-09
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('78688797R','ARAQUE MARCOS, VICTOR','2016-03-10','2016-03-30','Adjudicacion 09-03-2016','2016-03-09','0595507','13001406');
+--------------------
+06252352D:SANCHEZ TEBAR, MARTIN:0591202:45004727:IES ALONSO DE OROZCO:OROPESA:2016-04-05:2016-06-24:2016-04-04
+47066080F:MARTIN SALAS, NATALIA:P591225:02003673:CEPA LOS LLANOS:ALBACETE:2016-04-05:2016-06-17:2016-04-04
+02648757P:MARTINEZ RUIZ, MARIA NIEVES:0591225:02000726:IES TOMÁS NAVARRO TOMÁS:ALBACETE:2016-04-05:2016-05-02:2016-04-04
+50863000H:SERRANO SALVADOR, ALMUDENA:0591225:16003281:CEE INFANTA ELENA:CUENCA:2016-04-05:2016-04-30:2016-04-04
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06252352D','SANCHEZ TEBAR, MARTIN','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0591202','45004727');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47066080F','MARTIN SALAS, NATALIA','2016-04-05','2016-06-17','Adjudicacion 04-04-2016','2016-04-04','P591225','02003673');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('02648757P','MARTINEZ RUIZ, MARIA NIEVES','2016-04-05','2016-05-02','Adjudicacion 04-04-2016','2016-04-04','0591225','02000726');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('50863000H','SERRANO SALVADOR, ALMUDENA','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','0591225','16003281');
 --------------------
 47058530R:RODRIGUEZ RUIZ, MARIA DEL MAR:0590005:02003481:IES AMPARO SANZ:ALBACETE:2016-02-11:2016-06-24:2016-02-10
 05134307V:PARRAS CARREÑO, MARIA:0590005:02004331:IES JULIO REY PASTOR:ALBACETE:2016-02-11:2016-06-24:2016-02-10
@@ -5554,6 +5914,118 @@ insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimien
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05151519W','JATIVA VILLOLDO, JESUS A.','2015-11-17','2015-12-11','Adjudicacion 16-11-2015','2015-11-16','0591227','02003892');
 --------------------
+26246731M:CONSUEGRA MORENO, CRISTINA:B597031:13009466:CEIP DON QUIJOTE:CIUDAD REAL:2016-04-07:2016-06-05:2016-04-06
+45600483Q:SALMERON VELEZ, MARIA DEL MAR:B597031:13004407:CEIP ENRIQUE TIERNO GALVÁN:PUERTOLLANO:2016-04-07:2016-06-20:2016-04-06
+05668649T:GARCIA PEREZ, ALICIA MARIA:0597031:13003658:CEIP VIRGEN DE LA SIERRA:LLARRUBIA DE LOS OJOS:2016-04-07:2016-05-30:2016-04-06
+04604560Y:ROMERO GARCIA, SUSANA:0597031:16001624:CEIP VIRGEN DE MANJAVACAS:MOTA DEL CUERVO:2016-04-07:2016-05-02:2016-04-06
+03119945H:HERMOSILLA FERNANDEZ, MARIA GEMA:0597031:19008216:CEIP LA SENDA:ABANILLAS DEL CAMPO:2016-04-07:2016-05-05:2016-04-06
+05665535Z:ROMERO ORTIZ, MARIA ANGELES:0597031:19003620:CRA EL RINCÓN DE CASTILLA:VILLEL DE MESA:2016-04-07:2016-05-05:2016-04-06
+05923039X:FERREIRO MUÑOZ, ANA MARIA:0597031:45002056:CEIP VIRGEN DEL ROSARIO:ONTIGOLA:2016-04-07:2016-06-24:2016-04-06
+71952596V:LUIS MEDIAVILLA, MARTA:B597031:45011951:CEIP EL QUIÑÓN:SESEÑA NUEVO:2016-04-07:2016-04-20:2016-04-06
+03914702X:MERINO GOMEZ, RAQUEL:0597031:45003942:CEIP ALFONSO VI:TOLEDO:2016-04-07:2016-05-03:2016-04-06
+07564247F:TERCERO TERCERO, ROSA MARIA:0597031:45004338:CEIP SANTO DOMINGO DE SILO:VILLAMINAYA:2016-04-07:2016-05-05:2016-04-06
+03896176E:LOPEZ GOMEZ, PABLO:0597034:13004882:CEIP ALCALDE JOSÉ MAESTRO:CIUDAD REAL:2016-04-07:2016-05-05:2016-04-06
+03881436W:SERRANO CONDE, ENRIQUE:0597034:13009466:CEIP DON QUIJOTE:CIUDAD REAL:2016-04-07:2016-05-15:2016-04-06
+07564805J:FRESNEDA PEREZ, GLORIA:0597034:16009386:CRA SEGÓBRIGA:SAELICES:2016-04-07:2016-05-02:2016-04-06
+34835692F:BERNAL LLINARES, FRANCISCO JOSE:B597034:19003565:CRA PIMAFAD:ALMOGUERA:2016-04-07:2016-05-05:2016-04-06
+47066971R:GOMEZ TORRES, SERGIO:P597034:45010296:CEIP EUROPA:TOLEDO:2016-04-07:2016-06-24:2016-04-06
+03128943T:DIAZ VILA CORTES, IRENE:P597036:13004377:CEIP PASEO VIEJO DE LA FLO:ALMAGRO:2016-04-07:2016-05-15:2016-04-06
+53145620A:FERNANDEZ TOMAS, MARTA:0597036:45010405:CEIP SANTA MARÍA LA BLANCA:BARCIENCE:2016-04-07:2016-06-07:2016-04-06
+04607078V:CUENCA DEL RINCON, MARTA:P597060:45006050:IESO LA JARA:BELVIS DE LA JARA:2016-04-07:2016-06-24:2016-04-06
+03807063B:GALLEGO SANCHEZ, CARMEN:0597060:45005975:IES MONTES DE TOLEDO:GALVEZ:2016-04-07:2016-04-29:2016-04-06
+47067468S:CORCOLES CORCOLES, MERCEDES:P597038:02000039:CEIP SAN ISIDRO LABRADOR:AGUAS NUEVAS:2016-04-07:2016-04-25:2016-04-06
+03859330E:GARCIA SANCHEZ, MARI CRUZ:P597038:02004549:CRA LA MANCHUELA:ALBOREA:2016-04-07:2016-05-15:2016-04-06
+74497762A:PINAR MORENO, INMACULADA ANT:0597038:02003132:CEIP VIRGEN DE LA CARIDAD:VILLARROBLEDO:2016-04-07:2016-04-30:2016-04-06
+04593820F:LUCAS FERRER, ALFONSO E.:0597038:16003608:CEIP SAN FERNANDO:CUENCA:2016-04-07:2016-06-24:2016-04-06
+01119712A:ESCOBAR ALVAREZ, MARIA INMACULADA:0597038:45010375:CEIP CALYPO:CALYPO FADO:2016-04-07:2016-05-20:2016-04-06
+03918036D:ORTEGA ESTEBAN, MARIA DEL PILAR:0597038:45001234:CEIP RAMÓN Y CAJAL:LOMINCHAR:2016-04-07:2016-04-22:2016-04-06
+03871705T:ROJAS HERNANDEZ, OSCAR:0597038:45001453:CEIP SEVERO OCHOA:MATA (LA):2016-04-07:2016-05-07:2016-04-06
+03874929G:CERVERA SIERRA, ELISA:0597038:45002330:CEIP FERNANDO DE ROJAS:EBLA DE MONTALBAN (LA):2016-04-07:2016-05-27:2016-04-06
+44380691Y:GOMEZ TORRES, FCO. JAVIER:0597038:45011951:CEIP EL QUIÑÓN:SESEÑA NUEVO:2016-04-07:2016-04-20:2016-04-06
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('26246731M','CONSUEGRA MORENO, CRISTINA','2016-04-07','2016-06-05','Adjudicacion 06-04-2016','2016-04-06','B597031','13009466');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('45600483Q','SALMERON VELEZ, MARIA DEL MAR','2016-04-07','2016-06-20','Adjudicacion 06-04-2016','2016-04-06','B597031','13004407');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05668649T','GARCIA PEREZ, ALICIA MARIA','2016-04-07','2016-05-30','Adjudicacion 06-04-2016','2016-04-06','0597031','13003658');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04604560Y','ROMERO GARCIA, SUSANA','2016-04-07','2016-05-02','Adjudicacion 06-04-2016','2016-04-06','0597031','16001624');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03119945H','HERMOSILLA FERNANDEZ, MARIA GEMA','2016-04-07','2016-05-05','Adjudicacion 06-04-2016','2016-04-06','0597031','19008216');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05665535Z','ROMERO ORTIZ, MARIA ANGELES','2016-04-07','2016-05-05','Adjudicacion 06-04-2016','2016-04-06','0597031','19003620');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05923039X','FERREIRO MUÑOZ, ANA MARIA','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','0597031','45002056');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('71952596V','LUIS MEDIAVILLA, MARTA','2016-04-07','2016-04-20','Adjudicacion 06-04-2016','2016-04-06','B597031','45011951');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03914702X','MERINO GOMEZ, RAQUEL','2016-04-07','2016-05-03','Adjudicacion 06-04-2016','2016-04-06','0597031','45003942');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('07564247F','TERCERO TERCERO, ROSA MARIA','2016-04-07','2016-05-05','Adjudicacion 06-04-2016','2016-04-06','0597031','45004338');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03896176E','LOPEZ GOMEZ, PABLO','2016-04-07','2016-05-05','Adjudicacion 06-04-2016','2016-04-06','0597034','13004882');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03881436W','SERRANO CONDE, ENRIQUE','2016-04-07','2016-05-15','Adjudicacion 06-04-2016','2016-04-06','0597034','13009466');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('07564805J','FRESNEDA PEREZ, GLORIA','2016-04-07','2016-05-02','Adjudicacion 06-04-2016','2016-04-06','0597034','16009386');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('34835692F','BERNAL LLINARES, FRANCISCO JOSE','2016-04-07','2016-05-05','Adjudicacion 06-04-2016','2016-04-06','B597034','19003565');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47066971R','GOMEZ TORRES, SERGIO','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','P597034','45010296');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03128943T','DIAZ VILA CORTES, IRENE','2016-04-07','2016-05-15','Adjudicacion 06-04-2016','2016-04-06','P597036','13004377');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('53145620A','FERNANDEZ TOMAS, MARTA','2016-04-07','2016-06-07','Adjudicacion 06-04-2016','2016-04-06','0597036','45010405');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04607078V','CUENCA DEL RINCON, MARTA','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','P597060','45006050');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03807063B','GALLEGO SANCHEZ, CARMEN','2016-04-07','2016-04-29','Adjudicacion 06-04-2016','2016-04-06','0597060','45005975');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47067468S','CORCOLES CORCOLES, MERCEDES','2016-04-07','2016-04-25','Adjudicacion 06-04-2016','2016-04-06','P597038','02000039');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03859330E','GARCIA SANCHEZ, MARI CRUZ','2016-04-07','2016-05-15','Adjudicacion 06-04-2016','2016-04-06','P597038','02004549');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('74497762A','PINAR MORENO, INMACULADA ANT','2016-04-07','2016-04-30','Adjudicacion 06-04-2016','2016-04-06','0597038','02003132');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04593820F','LUCAS FERRER, ALFONSO E.','2016-04-07','2016-06-24','Adjudicacion 06-04-2016','2016-04-06','0597038','16003608');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('01119712A','ESCOBAR ALVAREZ, MARIA INMACULADA','2016-04-07','2016-05-20','Adjudicacion 06-04-2016','2016-04-06','0597038','45010375');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03918036D','ORTEGA ESTEBAN, MARIA DEL PILAR','2016-04-07','2016-04-22','Adjudicacion 06-04-2016','2016-04-06','0597038','45001234');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03871705T','ROJAS HERNANDEZ, OSCAR','2016-04-07','2016-05-07','Adjudicacion 06-04-2016','2016-04-06','0597038','45001453');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03874929G','CERVERA SIERRA, ELISA','2016-04-07','2016-05-27','Adjudicacion 06-04-2016','2016-04-06','0597038','45002330');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44380691Y','GOMEZ TORRES, FCO. JAVIER','2016-04-07','2016-04-20','Adjudicacion 06-04-2016','2016-04-06','0597038','45011951');
+--------------------
 47056350Y:NUÑEZ CALERO, ANA ISABEL:0597031:02000039:CEIP SAN ISIDRO LABRADOR:AGUAS NUEVAS:2016-02-18:2016-03-15:2016-02-17
 47341894M:MONTERO VIVO, MARIA LUISA:W597031:02000167:CEIP SAN FULGENCIO:ALBACETE:2016-02-18:2016-03-23:2016-02-17
 74507553L:CEBRIAN LOPEZ, MARIA MERCEDES:0597031:02001810:CEIP ISABEL LA CATÓLICA:HELLIN:2016-02-18:2016-03-18:2016-02-17
@@ -6429,6 +6901,146 @@ insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimien
 06251530S:TRONCO PERONA, ANA GLORIA:0595507:13001406:EA PEDRO ALMODÓVAR:CIUDAD REAL:2015-12-10:2015-12-17:2015-12-09
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06251530S','TRONCO PERONA, ANA GLORIA','2015-12-10','2015-12-17','Adjudicacion 09-12-2015','2015-12-09','0595507','13001406');
+--------------------
+22550332M:VALERO MUÑOZ, ANGELES:0590001:02000714:IES BACHILLER SABUCO:ALBACETE:2016-04-05:2016-05-10:2016-04-04
+32879775X:ALVAREZ VILLA, JUAN CARLOS:0590001:45003796:IES UNIVERSIDAD LABORAL:TOLEDO:2016-04-05:2016-05-15:2016-04-04
+73561930H:FERRANDO MANZANERA, BEGOÑA:0590004:02001202:IES JOSÉ CONDE GARCÍA:ALMANSA:2016-04-05:2016-06-24:2016-04-04
+52386889L:CIDFUENTES HURTADO, JUANA:0590004:13004687:IES MARÍA ZAMBRANO:ALCAZAR DE SAN JUAN:2016-04-05:2016-06-17:2016-04-04
+05903764D:TRUJILLO TRUJILLO, ELIA MARIA:0590004:13000372:IES PABLO RUIZ PICASSO:ALMADEN:2016-04-05:2016-06-17:2016-04-04
+47059331C:ROSELL ROLDAN, CARIDAD:0590004:16004418:IESO CAMINO ROMANO:SISANTE:2016-04-05:2016-04-30:2016-04-04
+44392499S:JATIVA BOTELLA, JUAN FRANCISCO:0590005:02000726:IES TOMÁS NAVARRO TOMÁS:ALBACETE:2016-04-05:2016-06-24:2016-04-04
+03926986N:FERNANDEZ GARCIA-ROCO, JORGE:0590005:45011859:IES LIBERTAD:CARRANQUE:2016-04-05:2016-04-15:2016-04-04
+47062422Y:HERNANDEZ PARRILLA, ALEJANDRO:0590005:45005461:IES PUERTA DE CUARTOS:TALAVERA DE LA REINA:2016-04-05:2016-04-15:2016-04-04
+05675889H:DOMINGUEZ PECO, CRISTINA:0590005:45006301:IES MARÍA PACHECO:TOLEDO:2016-04-05:2016-06-24:2016-04-04
+44872543A:LAZARO GARCIA, PABLO:W590005:45003796:IES UNIVERSIDAD LABORAL:TOLEDO:2016-04-05:2016-06-24:2016-04-04
+44392839X:MESAS MARTINEZ, CARMEN ISABEL:0590006:02000726:IES TOMÁS NAVARRO TOMÁS:ALBACETE:2016-04-05:2016-05-10:2016-04-04
+05690021M:SORIANO VALLE, RAQUEL:B590006:13003920:IES HERNÁN PÉREZ DEL PULGA:CIUDAD REAL:2016-04-05:2016-05-05:2016-04-04
+04586607Q:CHAFE MARTINEZ, MARIA SAGRARIO:0590006:19008113:IES CARMEN BURGOS DE SEGUÍ:ALOVERA:2016-04-05:2016-05-06:2016-04-04
+06248062C:CHACON GOMEZ, MARIA MILAGROS:0590006:45004752:IES ALFONSO X EL SABIO:TOLEDO:2016-04-05:2016-05-12:2016-04-04
+05672378A:PARDO ALAÑON, MARIA DEL VALLE:0590006:45005562:IES CARLOS III:TOLEDO:2016-04-05:2016-06-24:2016-04-04
+70579868K:LUNA DE LA CRUZ, MARIA GEMA:0590006:45004909:IES JUANELO TURRIANO:TOLEDO:2016-04-05:2016-04-17:2016-04-04
+52386709T:VALDEPEÑAS ESCOBAR, NURIA:0590007:02005116:IESO VÍA HERACLEA:BALAZOTE:2016-04-05:2016-05-05:2016-04-04
+20832917T:ALEIXANDRE MONT, ERICA:0590008:02000453:IES LOS OLMOS:ALBACETE:2016-04-05:2016-05-10:2016-04-04
+03873349B:CANDELAS BALLESTEROS, MARIA ELENA:0590008:13002681:IES FRAY ANDRÉS:PUERTOLLANO:2016-04-05:2016-05-28:2016-04-04
+47073043R:SERRANO MUÑOZ, JESUS:0590008:45005801:IES LA BESANA:CORRAL DE ALMAGUER:2016-04-05:2016-06-24:2016-04-04
+08034070D:CULEBRAS DE DIEGO, MARIA TERESA:B590008:45004752:IES ALFONSO X EL SABIO:TOLEDO:2016-04-05:2016-06-24:2016-04-04
+50732526T:TRIGUERO PEREZ, YOLANDA:0590009:16000966:IES ALFONSO VIII:CUENCA:2016-04-05:2016-06-24:2016-04-04
+27314258X:MARTINEZ FERNANDEZ, IVAN:0590009:19002615:IES ARCIPRESTE DE HITA:ZUQUECA DE HENARES:2016-04-05:2016-05-06:2016-04-04
+74909919T:CUENCA GARCIA, JOSE ANTONIO:0590009:19002743:IES CASTILLA:GUADALAJARA:2016-04-05:2016-06-03:2016-04-04
+05641558A:GOMEZ-LIMON VELAZQUEZ, JUAN ESTEBAN:0590016:13002681:IES FRAY ANDRÉS:PUERTOLLANO:2016-04-05:2016-05-05:2016-04-04
+05192726Q:PICAZO ABAD, JOSE RAFAEL:0590017:02004240:IES AL-BASIT:ALBACETE:2016-04-05:2016-05-10:2016-04-04
+44409933S:TALAVAN GRANDE, MARIA DEL PILAR:0590017:13001340:IES SANTA MARÍA DE ALARCOS:CIUDAD REAL:2016-04-05:2016-05-05:2016-04-04
+47089486E:LOPEZ PACHECO, ALVARO:0590017:13005412:IESO MENTESA ORETANA:LLANUEVA DE LA FUENTE:2016-04-05:2016-05-05:2016-04-04
+47087065Q:BAEZA SEGOVIA, PABLO:0590017:19003981:IES ANA MARÍA MATUTE:ABANILLAS DEL CAMPO:2016-04-05:2016-05-06:2016-04-04
+70518110H:CANO MARIN, ANTONIO RUBEN:0590019:13002903:IES FERNANDO DE MENA:SOCUELLAMOS:2016-04-05:2016-05-05:2016-04-04
+03866500Q:NAVARRO GUTIERREZ, SONIA MARIA:0590019:16004042:IES LOS SAUCES:VILLARES DEL SAZ:2016-04-05:2016-04-30:2016-04-04
+03123997E:GIL VEGUILLAS, MARIA:P590019:19008113:IES CARMEN BURGOS DE SEGUÍ:ALOVERA:2016-04-05:2016-04-29:2016-04-04
+06237779H:DIAZ PEÑA, ANGEL:0590019:45004788:IES JUAN DE PADILLA:ILLESCAS:2016-04-05:2016-06-24:2016-04-04
+76114829D:DIAZ MIRANDA, MIRIAM:0590019:45011860:IES ANTONIO JIMÉNEZ-LANDI:MENTRIDA:2016-04-05:2016-06-03:2016-04-04
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('22550332M','VALERO MUÑOZ, ANGELES','2016-04-05','2016-05-10','Adjudicacion 04-04-2016','2016-04-04','0590001','02000714');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('32879775X','ALVAREZ VILLA, JUAN CARLOS','2016-04-05','2016-05-15','Adjudicacion 04-04-2016','2016-04-04','0590001','45003796');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('73561930H','FERRANDO MANZANERA, BEGOÑA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0590004','02001202');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('52386889L','CIDFUENTES HURTADO, JUANA','2016-04-05','2016-06-17','Adjudicacion 04-04-2016','2016-04-04','0590004','13004687');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05903764D','TRUJILLO TRUJILLO, ELIA MARIA','2016-04-05','2016-06-17','Adjudicacion 04-04-2016','2016-04-04','0590004','13000372');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47059331C','ROSELL ROLDAN, CARIDAD','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','0590004','16004418');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44392499S','JATIVA BOTELLA, JUAN FRANCISCO','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0590005','02000726');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03926986N','FERNANDEZ GARCIA-ROCO, JORGE','2016-04-05','2016-04-15','Adjudicacion 04-04-2016','2016-04-04','0590005','45011859');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47062422Y','HERNANDEZ PARRILLA, ALEJANDRO','2016-04-05','2016-04-15','Adjudicacion 04-04-2016','2016-04-04','0590005','45005461');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05675889H','DOMINGUEZ PECO, CRISTINA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0590005','45006301');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44872543A','LAZARO GARCIA, PABLO','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','W590005','45003796');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44392839X','MESAS MARTINEZ, CARMEN ISABEL','2016-04-05','2016-05-10','Adjudicacion 04-04-2016','2016-04-04','0590006','02000726');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05690021M','SORIANO VALLE, RAQUEL','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','B590006','13003920');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('04586607Q','CHAFE MARTINEZ, MARIA SAGRARIO','2016-04-05','2016-05-06','Adjudicacion 04-04-2016','2016-04-04','0590006','19008113');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06248062C','CHACON GOMEZ, MARIA MILAGROS','2016-04-05','2016-05-12','Adjudicacion 04-04-2016','2016-04-04','0590006','45004752');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05672378A','PARDO ALAÑON, MARIA DEL VALLE','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0590006','45005562');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('70579868K','LUNA DE LA CRUZ, MARIA GEMA','2016-04-05','2016-04-17','Adjudicacion 04-04-2016','2016-04-04','0590006','45004909');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('52386709T','VALDEPEÑAS ESCOBAR, NURIA','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0590007','02005116');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('20832917T','ALEIXANDRE MONT, ERICA','2016-04-05','2016-05-10','Adjudicacion 04-04-2016','2016-04-04','0590008','02000453');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03873349B','CANDELAS BALLESTEROS, MARIA ELENA','2016-04-05','2016-05-28','Adjudicacion 04-04-2016','2016-04-04','0590008','13002681');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47073043R','SERRANO MUÑOZ, JESUS','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0590008','45005801');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('08034070D','CULEBRAS DE DIEGO, MARIA TERESA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','B590008','45004752');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('50732526T','TRIGUERO PEREZ, YOLANDA','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0590009','16000966');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('27314258X','MARTINEZ FERNANDEZ, IVAN','2016-04-05','2016-05-06','Adjudicacion 04-04-2016','2016-04-04','0590009','19002615');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('74909919T','CUENCA GARCIA, JOSE ANTONIO','2016-04-05','2016-06-03','Adjudicacion 04-04-2016','2016-04-04','0590009','19002743');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05641558A','GOMEZ-LIMON VELAZQUEZ, JUAN ESTEBAN','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0590016','13002681');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('05192726Q','PICAZO ABAD, JOSE RAFAEL','2016-04-05','2016-05-10','Adjudicacion 04-04-2016','2016-04-04','0590017','02004240');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('44409933S','TALAVAN GRANDE, MARIA DEL PILAR','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0590017','13001340');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47089486E','LOPEZ PACHECO, ALVARO','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0590017','13005412');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('47087065Q','BAEZA SEGOVIA, PABLO','2016-04-05','2016-05-06','Adjudicacion 04-04-2016','2016-04-04','0590017','19003981');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('70518110H','CANO MARIN, ANTONIO RUBEN','2016-04-05','2016-05-05','Adjudicacion 04-04-2016','2016-04-04','0590019','13002903');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03866500Q','NAVARRO GUTIERREZ, SONIA MARIA','2016-04-05','2016-04-30','Adjudicacion 04-04-2016','2016-04-04','0590019','16004042');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('03123997E','GIL VEGUILLAS, MARIA','2016-04-05','2016-04-29','Adjudicacion 04-04-2016','2016-04-04','P590019','19008113');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06237779H','DIAZ PEÑA, ANGEL','2016-04-05','2016-06-24','Adjudicacion 04-04-2016','2016-04-04','0590019','45004788');
+--------------------
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('76114829D','DIAZ MIRANDA, MIRIAM','2016-04-05','2016-06-03','Adjudicacion 04-04-2016','2016-04-04','0590019','45011860');
 --------------------
 05689429B:GARCIA CRUZ, ANGELES:0590004:13003324:IES BERNARDO DE BALBUENA:VALDEPEÑAS:2015-11-19:2016-06-24:2015-11-18
 70642994N:BELLON GARCIA, ANA MARIA:0590005:13001984:IES PEDRO ÁLVAREZ SOTOMAYO:MANZANARES:2015-11-19:2016-01-29:2015-11-18
@@ -7573,6 +8185,10 @@ insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimien
 74514776C:BERENGUER GARCIA, ANA BELEN:0594434:02004616:CPM TOMÁS DE TORREJÓN Y:ALBACETE:2016-02-25:2016-03-17:2016-02-24
 --------------------
 insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('74514776C','BERENGUER GARCIA, ANA BELEN','2016-02-25','2016-03-17','Adjudicacion 24-02-2016','2016-02-24','0594434','02004616');
+--------------------
+06263928Q:CALONGE FLORES, ISABEL:0591225:16003281:CEE INFANTA ELENA:CUENCA:2016-04-07:2016-04-30:2016-04-06
+--------------------
+insert into nombramientos(nif,nombre_completo,fecha_inicio,fecha_fin,procedimiento,fecha_procedimiento,especialidad,codigo_centro) values ('06263928Q','CALONGE FLORES, ISABEL','2016-04-07','2016-04-30','Adjudicacion 06-04-2016','2016-04-06','0591225','16003281');
 --------------------
 07555206M:FAJARDO BARBA, CARMEN:0591225:02008439:UO CP FRANCISCO GINER DE L:VILLARROBLEDO:2016-02-02:2016-04-08:2016-02-01
 70248166W:ORTEGA MUÑOZ, JORGE PASCUAL:0591225:16003281:CEE INFANTA ELENA:CUENCA:2016-02-02:2016-02-15:2016-02-01
