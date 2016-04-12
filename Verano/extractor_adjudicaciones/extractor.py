@@ -64,11 +64,7 @@ for fila in filas:
         sql_intermedio = ''
         
     especialidad=fila[6]
-    if fecha_hoy>fecha_final_contrato:
-        if especialidad.find("597")!=-1:
-            codigo_centro="9999"
-        else:
-            codigo_centro="9998"
+    
     lista_registros = []
     if fila[7] == None:
         registro = ';'.join([
@@ -106,7 +102,7 @@ for fila in filas:
         descripcion_fechas = 'Desde ' + fecha_inicio + ' hasta ' + fecha_fin \
         + ' (' + fila[3] + ')'
     else:
-        descripcion_fechas = 'En paro, su ultimo contrato acabó el ' + fecha_fin 
+        descripcion_fechas = 'Su centro actual podría estar equivocado. Su ultimo nombramiento acababa el ' + fecha_fin 
     temp = "update gaseosa set auxiliar='" + descripcion_fechas \
         + "' where dni='" + fila[0] + "'"
     sql_intermedio += GestorDB.crear_sentencia_update(temp)

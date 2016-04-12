@@ -69,6 +69,10 @@ class ProcesadorPDF(object):
         
         re_numero_orden_interinos="[0-9]{1,5}"
         self.expr_regular_numero_orden_interinos=re.compile ( re_numero_orden_interinos )
+        
+        re_nombre_completo=" [A-ZÁÉÍÓÚÜÑ ]+, [A-ZÁÉÍÓÚÜÑ ]"
+        self.expr_regular_nombre=re.compile ( re_nombre_completo )
+        """Expresion regular para el nombre de persona [A-ZÁÉÍÓÚÜÑ ]+,[A-ZÁÉÍÓÚÜÑ ]"""
         re_especialidades_maestros_en_concurso_traslados="( [0-9]{3})+"
         self.expr_regular_especialidad_maestros_en_concurso_de_traslados=re.compile(
             re_especialidades_maestros_en_concurso_traslados
