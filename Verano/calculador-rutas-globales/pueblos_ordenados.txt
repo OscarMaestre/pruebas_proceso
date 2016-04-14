@@ -1,4 +1,7 @@
 Garciotun|Toledo
+Carcelen|Albacete
+Carrascosa del Campo|Cuenca
+Herrera de la Mancha|Ciudad Real
 Valdemanco del Esteras|Ciudad Real
 Tomelloso|Ciudad Real
 Ciudad Real|Ciudad Real
