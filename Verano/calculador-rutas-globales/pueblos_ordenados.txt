@@ -1,3 +1,5 @@
+Garciotun|Toledo
+Valdemanco del Esteras|Ciudad Real
 Tomelloso|Ciudad Real
 Ciudad Real|Ciudad Real
 Alcazar de San Juan|Ciudad Real
@@ -116,7 +118,7 @@ Cerralbos (Los)|Toledo
 Checa|Guadalajara
 Chillon|Ciudad Real
 Chiloeches|Guadalajara
-Chinchilla de Monte-|Albacete
+Chinchilla de Monte-Aragon|Albacete
 Chozas de Canales|Toledo
 Cifuentes|Guadalajara
 Cinco Casas|Ciudad Real
