@@ -14,7 +14,7 @@ On Error GoTo Proc_Err
   ws.BeginTrans
 	sql="update gaseosa set codcentrocursoactual='13004687' where dni='20849429K'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 25-02-2016 hasta 18-04-2016 (Adjudicacion 24-02-2016)' where dni='20849429K'"
+	sql="update gaseosa set auxiliar='Su centro actual podría estar equivocado. Su ultimo nombramiento acababa el 18-04-2016' where dni='20849429K'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='45010341' where dni='71223605B'"
 	db.Execute sql, dbFailOnError

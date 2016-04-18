@@ -130,7 +130,7 @@ On Error GoTo Proc_Err
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='13004730' where dni='70647697T'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-01-2016 hasta 15-04-2016 (Adjudicacion 27-01-2016)' where dni='70647697T'"
+	sql="update gaseosa set auxiliar='Su centro actual podría estar equivocado. Su ultimo nombramiento acababa el 15-04-2016' where dni='70647697T'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='02000601' where dni='74500147L'"
 	db.Execute sql, dbFailOnError
