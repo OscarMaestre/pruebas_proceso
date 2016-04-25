@@ -1,8 +1,8 @@
-Garciotun|Toledo
+Garciotum|Toledo
 Abengibre|Albacete
 Carcelen|Albacete
 Carrascosa del Campo|Cuenca
-Centro Penitenciario Herrera de la Mancha|Ciudad Real
+Centro Penitenciario Herrera|Ciudad Real
 Valdemanco del Esteras|Ciudad Real
 Tomelloso|Ciudad Real
 Ciudad Real|Ciudad Real
