@@ -22,7 +22,43 @@ class GestorEmail(object):
             self.FICHERO_DESTINATARIOS_EMAIL="C:\\repos\\destinatarios.txt"
             self.FICHERO_CONFIGURACION_EMAIL_LOCAL="C:\\repos\\configuracion_envio_email_oscar.txt"
 
-
+    
+    def enviar_email_sin_configuracion(self, remitente, destinatario,
+                    asunto, mensaje, tupla_configuracion, ficheros):
+        usuario         =   tupla_configuracion[0].strip()
+        clave           =   tupla_configuracion[1].strip()
+        servidor_smtp   =   tupla_configuracion[2].strip()
+        puerto_smtp     =   tupla_configuracion[3].strip()
+        servidor_pop    =   tupla_configuracion[4].strip()
+        puerto_pop      =   tupla_configuracion[5].strip()
+        
+        msg = MIMEMultipart()
+        part = MIMEText('text', "html", _charset="utf-8")
+        msg['Subject'] = asunto
+        msg['To'] = destinatario
+        msg['From'] = remitente
+        print ("Enviando email desde {0} a {1}".format(usuario, destinatario))
+        files = ficheros
+        for filename in files:
+            fich=open(filename, "rb")
+    
+            adjunto=MIMEBase("application", "octet-stream")
+            adjunto.set_payload(fich.read(), charset="utf-8")
+            fich.close()
+            encode_base64(adjunto)
+            adjunto.add_header('Content-Disposition', 'attachment', filename=filename)
+            msg.attach(adjunto)
+    
+        part.set_payload(mensaje, charset="UTF-8")
+        msg.attach(part)
+    
+        session = smtplib.SMTP(servidor_smtp, puerto_smtp)
+        session.ehlo()
+        session.starttls()
+        session.ehlo
+        session.login(usuario, clave)
+        session.sendmail(remitente, destinatario, msg.as_string())
+        session.quit()
     #La configuración del remitente debe estar en un fichero
     #La primera línea es la dirección del servidor de correo como por ejemplo pepito@gmail.com
     #La segunda contiene la clave
