@@ -18,6 +18,13 @@ re_especialidad="[PWB0]59([0-9]{4})"
 re_codigo_centro="[0-9]{8}"
 re_codigo_centro_ciudad_real="^13[0-9]{6}$"
 re_fecha="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+re_cuerpo_plaza_no_maestros="CUE: (?P<cuerpo>059[0-9])[ ]+ PLZ:[ ]+(?P<plaza>[0-9]+)"
+expr_regular_cuerpo_no_maestros=re.compile(re_cuerpo_plaza_no_maestros)
+
+
+re_cuerpo_plaza_maestros="ESPEC\.:[ ]+(?P<especialidad>[0-9]{3})"
+expr_regular_cuerpo_maestros=re.compile(re_cuerpo_plaza_maestros)
+
 
 def linea_contiene_patron(patron, linea):
     expresion=re.compile(patron)
@@ -54,7 +61,41 @@ def extraer_nombre(linea):
     if pos==-1:
         return "Error:"+linea
     return linea[pos+2:].strip()
-    
+def get_cuerpo_y_plaza(linea,linea_siguiente,  cuerpo_pasado="EEMM"):
+    cuerpo=""
+    plaza=""
+    expr_regular=None
+    if cuerpo_pasado=="EEMM":
+        expr_regular=expr_regular_cuerpo_no_maestros
+        concordancia=expr_regular.search(linea)
+        if concordancia:
+            cuerpo=concordancia.group("cuerpo")
+            plaza=concordancia.group("plaza")
+            #print ("Plaza:"+plaza)
+        else:
+            return "SECUNDARIA"
+    else:
+        cuerpo="0597"
+        #print(linea)
+        expr_regular=expr_regular_cuerpo_maestros
+        concordancia=expr_regular.search(linea)
+        if concordancia:
+            plaza=concordancia.group("especialidad")
+            #print ("Plaza:"+plaza)
+        else:
+            return "PRIMARIA"
+    especialidad=cuerpo+plaza
+    #Plaza en castellano
+    if linea_siguiente.find("BIL: 0")!=-1:
+        pass
+    #Plaza bilingüe ingles
+    if linea_siguiente.find("BIL: 1")!=-1:
+        especialidad="B"+especialidad[1:]
+    #Plaza bilingüe frances
+    if linea_siguiente.find("BIL: 2")!=-1:
+        especialidad="F"+especialidad[1:]
+    return especialidad
+
     
 cadena_sql="""insert into asignaciones_18092015 values
                     (
@@ -130,78 +171,84 @@ def generar_linea_sql2(lista_campos):
     valores=":".join(lista_campos)
     return valores
 
+def imprimir_lista_campos(lista_campos):
+    print (":".join(lista_campos) )
 
-
-archivo=open(archivo,"r", encoding="utf-8")
-lineas=archivo.readlines()
-total_lineas=len(lineas)
-codigo_especialidad=""
-lista_inserts_sql3=[]
-print (preludio_sql)
-for i in range(0, total_lineas):
-    linea=lineas[i]
-    lista_campos=[]
-    especialidad="SECUNDARIA"
-    campos_sql=ListaCampos.ListaCampos()
-    if (linea_contiene_patron(re_dni, linea)):
-        dni=extraer_patron(re_dni, linea)
-        
-        nombre_persona=linea[:33].strip()
-        lista_campos.append(dni)
-        campos_sql.anadir('nif', dni, ListaCampos.ListaCampos.CADENA)
-        lista_campos.append(nombre_persona)
-        campos_sql.anadir('nombre_completo', nombre_persona, ListaCampos.ListaCampos.CADENA)
-        obtiene_plaza=False
-        if (linea_contiene_patron("DENEGADO", linea)):
-            lista_campos.append("DENEGADO")
-            campos_sql.anadir('auxiliar', "DENEGADO", ListaCampos.ListaCampos.CADENA)
-            especialidad=utilidades.get_cuerpo_y_plaza(lineas[i+3], lineas[i+4])
-        else:
-            lista_campos.append("OBTIENE PLAZA")
-            campos_sql.anadir('auxiliar', "OBTIENE", ListaCampos.ListaCampos.CADENA)
-            obtiene_plaza=True
-            especialidad=utilidades.get_cuerpo_y_plaza(lineas[i+5], lineas[i+7])
-        codigo_destino_anterior=extraer_codigo_centro(lineas[i+3])
-        lista_campos.append(codigo_destino_anterior)
-        
-        
-        pos_codigo_destino_anterior=get_pos_comienzo_cadena(lineas[i+3], codigo_destino_anterior)
-        nombre_destino_anterior=lineas[i+3][pos_codigo_destino_anterior+9:pos_codigo_destino_anterior+37].strip()
-        nombre_localidad_anterior=lineas[i+4][12:51].strip()
-        nombre_provincia_anterior=lineas[i+4][52:78].strip()
-        lista_campos.append(nombre_destino_anterior)
-        lista_campos.append(nombre_localidad_anterior)
-        lista_campos.append(nombre_provincia_anterior)
-        codigo_nuevo_destino=codigo_destino_anterior
-        nombre_nuevo_destino=nombre_destino_anterior
-        nombre_nueva_localidad=nombre_destino_anterior
-        nombre_nueva_provincia=nombre_provincia_anterior
-        if (obtiene_plaza):
-            linea_destino_actual=lineas[i+5]
-            codigo_nuevo_destino=extraer_codigo_centro(linea_destino_actual)
-            pos_codigo_nuevo_destino=get_pos_comienzo_cadena(lineas[i+5], codigo_nuevo_destino)
-            nombre_nuevo_destino=lineas[i+5][pos_codigo_nuevo_destino+9:pos_codigo_nuevo_destino+37].strip()
-            nombre_nueva_localidad=lineas[i+6][12:51].strip()
-            nombre_nueva_provincia=lineas[i+6][52:78].strip()
-        lista_campos.append(codigo_nuevo_destino)
-        campos_sql.anadir('codigo_centro', codigo_nuevo_destino, ListaCampos.ListaCampos.CADENA)
-        lista_campos.append(nombre_nuevo_destino)
-        lista_campos.append(nombre_nueva_localidad)
-        lista_campos.append(nombre_nueva_provincia)
-        campos_sql.anadir('procedimiento', "Concursillo EEMM resuelto en Junio-15", ListaCampos.ListaCampos.CADENA)
-        campos_sql.anadir('fecha_inicio', "2015_09-01", ListaCampos.ListaCampos.CADENA)
-        campos_sql.anadir("fecha_procedimiento", "2015-07-28")
-        campos_sql.anadir('fecha_fin', "2015-06-30", ListaCampos.ListaCampos.CADENA)
-        campos_sql.anadir('especialidad', especialidad, ListaCampos.ListaCampos.CADENA)
-        lista_inserts_sql3.append(campos_sql.generar_insert("nombramientos"))
-        sql=generar_linea_sql(lista_campos)
-        print(sql)
-        continue
+def procesar_archivo_traslados(archivo, cuerpo):
+    OBTIENE_PLAZA   =1
+    DENEGADO        =2
+    PEND_DESTINO    =3
     
-print(final_sql)
-archivo.close()
+    archivo=open(archivo,"r", encoding="utf-8")
+    lineas=archivo.readlines()
+    total_lineas=len(lineas)
+    codigo_especialidad=""
+    
+    for i in range(0, total_lineas):
+        linea=lineas[i]
+        lista_campos=[]
+        especialidad="SECUNDARIA"
+        
+        if (linea_contiene_patron(re_dni, linea)):
+            dni=extraer_patron(re_dni, linea)
+            
+            nombre_persona=linea[:33].strip()
+            lista_campos.append(dni)
+            
+            lista_campos.append(nombre_persona)
+            
+            
+            if (linea_contiene_patron("DENEGADO", linea)):
+                lista_campos.append("DENEGADO")
+                obtiene_plaza=DENEGADO
+                especialidad=get_cuerpo_y_plaza(lineas[i+3], lineas[i+4], cuerpo)
+                lista_campos.append(especialidad)
+            if (linea_contiene_patron("OBTIENE", linea)):
+                lista_campos.append("OBTIENE PLAZA")
+                obtiene_plaza=OBTIENE_PLAZA
+                especialidad=get_cuerpo_y_plaza(lineas[i+5], lineas[i+7], cuerpo)
+                lista_campos.append(especialidad)
+            if (linea_contiene_patron("PEND. DESTINO", linea)):
+                lista_campos.append("PEND. DESTINO")
+                obtiene_plaza=PEND_DESTINO
+                imprimir_lista_campos(lista_campos)
+                continue
+            codigo_destino_anterior=extraer_codigo_centro(lineas[i+3])
+            lista_campos.append(codigo_destino_anterior)
+            
+            
+            pos_codigo_destino_anterior=get_pos_comienzo_cadena(lineas[i+3], codigo_destino_anterior)
+            nombre_destino_anterior=lineas[i+3][pos_codigo_destino_anterior+9:pos_codigo_destino_anterior+37].strip()
+            nombre_localidad_anterior=lineas[i+4][12:51].strip()
+            nombre_provincia_anterior=lineas[i+4][52:78].strip()
+            lista_campos.append(nombre_destino_anterior)
+            lista_campos.append(nombre_localidad_anterior)
+            lista_campos.append(nombre_provincia_anterior)
+            codigo_nuevo_destino=codigo_destino_anterior
+            nombre_nuevo_destino=nombre_destino_anterior
+            nombre_nueva_localidad=nombre_destino_anterior
+            nombre_nueva_provincia=nombre_provincia_anterior
+            if (obtiene_plaza==DENEGADO):
+                imprimir_lista_campos(lista_campos)
+                continue
+            if (obtiene_plaza==OBTIENE_PLAZA):
+                linea_destino_actual=lineas[i+5]
+                codigo_nuevo_destino=extraer_codigo_centro(linea_destino_actual)
+                pos_codigo_nuevo_destino=get_pos_comienzo_cadena(lineas[i+5], codigo_nuevo_destino)
+                nombre_nuevo_destino=lineas[i+5][pos_codigo_nuevo_destino+9:pos_codigo_nuevo_destino+37].strip()
+                nombre_nueva_localidad=lineas[i+6][12:51].strip()
+                nombre_nueva_provincia=lineas[i+6][52:78].strip()
+            lista_campos.append(codigo_nuevo_destino)
+            lista_campos.append(nombre_nuevo_destino)
+            lista_campos.append(nombre_nueva_localidad)
+            lista_campos.append(nombre_nueva_provincia)
+            imprimir_lista_campos(lista_campos)
+            continue
+        
+    #print(final_sql)
+    archivo.close()
 
-
-#Ahora se hacen las inserciones
-GestorDB.BD_RESULTADOS.activar_depuracion()
-GestorDB.BD_RESULTADOS.ejecutar_sentencias(lista_inserts_sql3) 
+if __name__ == '__main__':
+    archivo=sys.argv[1]
+    cuerpo=sys.argv[2]
+    procesar_archivo_traslados(archivo, cuerpo)
