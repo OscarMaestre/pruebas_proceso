@@ -6,8 +6,8 @@ import glob
 
 
 FICHERO_RESULTADOS_TXT="concurso_2016.txt"
-comando_procesado_concursos_normales="./procesar_tabla.py"
-
+COMANDO_PROCESADO_CONCURSOS_NORMALES="./procesar_tabla.py"
+GENERADOR_BASIC="./procesar_concurso.py"
 
 procesador_pdf=ProcesadorPDF()
 gf=GestorFicheros()
@@ -22,5 +22,8 @@ for f in ficheros:
     
 ficheros_concursos=glob.glob("Alfa*.txt")
 for f in ficheros_concursos:
-    gf.ejecutar_comando ( comando_procesado_concursos_normales,
+    gf.ejecutar_comando ( COMANDO_PROCESADO_CONCURSOS_NORMALES,
         f, "EEMM", ">>", FICHERO_RESULTADOS_TXT)
+
+gf.ejecutar_comando ( GENERADOR_BASIC, FICHERO_RESULTADOS_TXT, "EEMM",
+                     ">", "CGT_EEMM.BAS")

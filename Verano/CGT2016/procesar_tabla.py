@@ -61,6 +61,8 @@ def extraer_nombre(linea):
     if pos==-1:
         return "Error:"+linea
     return linea[pos+2:].strip()
+
+
 def get_cuerpo_y_plaza(linea,linea_siguiente,  cuerpo_pasado="EEMM"):
     cuerpo=""
     plaza=""
@@ -213,13 +215,18 @@ def procesar_archivo_traslados(archivo, cuerpo):
                 imprimir_lista_campos(lista_campos)
                 continue
             codigo_destino_anterior=extraer_codigo_centro(lineas[i+3])
+            if codigo_destino_anterior=="No concordancia":
+                codigo_destino_anterior="x"
+                nombre_destino_anterior="x"
+                nombre_localidad_anterior="x"
+                nombre_provincia_anterior="x"
+            else:
+                pos_codigo_destino_anterior=get_pos_comienzo_cadena(lineas[i+3], codigo_destino_anterior)
+                nombre_destino_anterior=lineas[i+3][pos_codigo_destino_anterior+9:pos_codigo_destino_anterior+37].strip()
+                nombre_localidad_anterior=lineas[i+4][12:53].strip()
+                nombre_provincia_anterior=lineas[i+4][53:78].strip()
+            
             lista_campos.append(codigo_destino_anterior)
-            
-            
-            pos_codigo_destino_anterior=get_pos_comienzo_cadena(lineas[i+3], codigo_destino_anterior)
-            nombre_destino_anterior=lineas[i+3][pos_codigo_destino_anterior+9:pos_codigo_destino_anterior+37].strip()
-            nombre_localidad_anterior=lineas[i+4][12:51].strip()
-            nombre_provincia_anterior=lineas[i+4][52:78].strip()
             lista_campos.append(nombre_destino_anterior)
             lista_campos.append(nombre_localidad_anterior)
             lista_campos.append(nombre_provincia_anterior)
@@ -228,15 +235,19 @@ def procesar_archivo_traslados(archivo, cuerpo):
             nombre_nueva_localidad=nombre_destino_anterior
             nombre_nueva_provincia=nombre_provincia_anterior
             if (obtiene_plaza==DENEGADO):
+                lista_campos.append(codigo_nuevo_destino)
+                lista_campos.append(nombre_nuevo_destino)
+                lista_campos.append(nombre_nueva_localidad)
+                lista_campos.append(nombre_nueva_provincia)
                 imprimir_lista_campos(lista_campos)
                 continue
             if (obtiene_plaza==OBTIENE_PLAZA):
                 linea_destino_actual=lineas[i+5]
                 codigo_nuevo_destino=extraer_codigo_centro(linea_destino_actual)
                 pos_codigo_nuevo_destino=get_pos_comienzo_cadena(lineas[i+5], codigo_nuevo_destino)
-                nombre_nuevo_destino=lineas[i+5][pos_codigo_nuevo_destino+9:pos_codigo_nuevo_destino+37].strip()
-                nombre_nueva_localidad=lineas[i+6][12:51].strip()
-                nombre_nueva_provincia=lineas[i+6][52:78].strip()
+                nombre_nuevo_destino=lineas[i+5][pos_codigo_nuevo_destino+9:pos_codigo_nuevo_destino+38].strip()
+                nombre_nueva_localidad=lineas[i+6][12:52].strip()
+                nombre_nueva_provincia=lineas[i+6][53:78].strip()
             lista_campos.append(codigo_nuevo_destino)
             lista_campos.append(nombre_nuevo_destino)
             lista_campos.append(nombre_nueva_localidad)

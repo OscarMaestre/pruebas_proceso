@@ -107,6 +107,7 @@ for fila in filas:
         + "' where dni='" + fila[0] + "'"
     sql_intermedio += GestorDB.crear_sentencia_update(temp)
     i = i + 1
+    
 nombre_funcion = prefijo_funcion + str(num_funcion)
 imprimir = GestorDB.get_procedimiento(nombre_funcion, sql_intermedio)
 print (imprimir)
