@@ -43,15 +43,25 @@ class GestorFicheros(object):
         
             Argumentos:
             
-            num_linea -- Numero de línea a leer
-            
-            nombre_fichero -- Cadena con la ruta del fichero a leer
+                num_linea -- Numero de línea a leer
+                
+                nombre_fichero -- Cadena con la ruta del fichero a leer
         """
         with open (nombre_fichero, "r") as f:
             lineas=f.readlines()
             return lineas[num_linea].strip()
         
     def leer_fichero(self, nombre_fichero):
+        """Leer todo un fichero
+        
+            Argumentos:
+            
+                nombre_fichero -- nombre del fichero a leer
+            
+            Devuelve:
+            
+                cadena -- una cadena con todo el fichero completo
+        """
         with open (nombre_fichero, "r") as f:
             lineas=f.readlines()
         texto=""
@@ -111,6 +121,16 @@ class GestorFicheros(object):
         except FileExistsError:
             return 
     def get_lineas_fichero(self, nombre_fichero):
+        """Leer las lineas de un fichero
+        
+            Argumentos:
+            
+                nombre_fichero -- nombre del fichero a leer
+                
+            Devuelve:
+            
+                lista -- una lista con todas las lineas del fichero sin fin de linea (se usa strip)
+        """
         lineas_sin_fin_de_linea=[]
         with open(nombre_fichero, "r") as f:
             lineas=f.readlines()

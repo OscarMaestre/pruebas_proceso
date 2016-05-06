@@ -197,7 +197,6 @@ def procesar_archivo_traslados(archivo, cuerpo):
             
             lista_campos.append(nombre_persona)
             
-            
             if (linea_contiene_patron("DENEGADO", linea)):
                 lista_campos.append("DENEGADO")
                 obtiene_plaza=DENEGADO
