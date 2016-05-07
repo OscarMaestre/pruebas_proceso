@@ -72,7 +72,7 @@ for fila in registros:
     sql_intermedio += GestorBD.crear_sentencia_update(temp)
     
     if situacion=="OBTIENE PLAZA":
-        descripcion_situacion="OBTIENE DEFINITIVO EN CGT EN MAYO 2016"
+        descripcion_situacion="OBTIENE DEFINITIVO EN CGT MAYO 2016"
     else:
         descripcion_situacion="DENEGADO CGT EN MAYO 2016"
     temp = "update gaseosa set auxiliar='" + descripcion_situacion\

@@ -167,6 +167,13 @@ class ProcesadorPDF(object):
         if self.num_fila<0:
             self.num_fila=0
         self.num_columna=0
+        
+    def retroceder_linea(self):
+        """Retrocede a la fila anterior"""
+        self.num_fila-=1
+        if self.num_fila<0:
+            self.num_fila=0
+        self.num_columna=0
     
     def linea_contiene_patron(self, expr_regular, linea):
         """
@@ -202,6 +209,11 @@ class ProcesadorPDF(object):
         
             expr_regular -- expresión regular ya compilada
             
+        Devuelve:
+        
+            (inicio, fin, texto) -- Tupla con la posicion de inicio, la de final y el texto
+            encontrado. Si no aparece nada se devuelve la constante ProcesadorPDF.PATRON_NO_ENCONTRADO
+            
         """
         linea_actual=self.get_linea_actual()
         return self.linea_contiene_patron ( expr_regular, linea_actual )
@@ -212,13 +224,26 @@ class ProcesadorPDF(object):
         Argumentos
         
             con_c -- Nos dice si hay que buscar con C al final o no
+            
+        Devuelve:
+        
+            (inicio, fin, texto) -- Tupla con la posicion de inicio, la de final y el texto
+            encontrado. Si no aparece nada se devuelve la constante ProcesadorPDF.PATRON_NO_ENCONTRADO
+            
         """
         if con_c:
             return self.linea_actual_contiene_patron ( self.expr_regular_codigo_centro_con_c )
         return self.linea_actual_contiene_patron ( self.expr_regular_codigo_centro_sin_c )
     
     def linea_actual_contiene_codigo_localidad(self):
-        """Indica si la linea actual contiene un codigo de localidad"""
+        """
+            Indica si la linea actual contiene un codigo de localidad
+            
+        Devuelve:
+        
+            (inicio, fin, texto) -- Tupla con la posicion de inicio, la de final y el texto
+            encontrado. Si no aparece nada se devuelve la constante ProcesadorPDF.PATRON_NO_ENCONTRADO    
+        """
         return self.linea_actual_contiene_patron ( self.expr_regular_codigo_localidad )
     
     def get_nombre_persona(self, linea):

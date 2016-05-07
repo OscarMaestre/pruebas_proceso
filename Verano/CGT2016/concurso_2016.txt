@@ -2780,3 +2780,560 @@
 03901846B:Sanchez Tejeda, Rodrigo:PEND. DESTINO
 04195638R:Valero Jimenez, Jose Carlos:PEND. DESTINO
 45432358K:Velasco Suarez, Pedro:OBTIENE PLAZA:0596608:x:x:x:x:02007794:EA ALBACETE:ALBACETE:ALBACETE
+44388884B:Sanchez Martinez, Francisco:OBTIENE PLAZA:0597038:x:x:x:x:02000040:x:x:x
+47052030X:Lopez Quintanilla, Julia:OBTIENE PLAZA:0597031:x:x:x:x:02000052:x:x:x
+47060439R:Serrano Laullon, Beatriz:OBTIENE PLAZA:0597032:x:x:x:x:02000052:x:x:x
+44375661J:Martinez Valera, Santiago Jose:OBTIENE PLAZA:0597038:x:x:x:x:02000052:x:x:x
+47056005Y:Ruiz Morcillo, Diego:OBTIENE PLAZA:0597038:x:x:x:x:02000052:x:x:x
+07552274V:Lazaro Moya, Maria Juana:OBTIENE PLAZA:0597031:x:x:x:x:02000064:x:x:x
+47053636Y:Moreno Sanchez, Sonia:OBTIENE PLAZA:0597031:x:x:x:x:02000064:x:x:x
+44377626T:Gomez Sanchez, Maria Carmen:OBTIENE PLAZA:0597038:x:x:x:x:02000076:x:x:x
+07537987J:Martinez Ruiz, Juana Maria:OBTIENE PLAZA:0597038:x:x:x:x:02000076:x:x:x
+52750725H:Garcia Martinez, Basilio Alberto:OBTIENE PLAZA:0597034:x:x:x:x:02000088:x:x:x
+07566631E:Ruiz Gonzalez, Leonor:OBTIENE PLAZA:0597035:x:x:x:x:02000091:x:x:x
+52750567K:Moreno Ruiz, Margarita:OBTIENE PLAZA:0597038:x:x:x:x:02000091:x:x:x
+47067097N:Moreno Devesa, Maria Victoria:OBTIENE PLAZA:0597032:x:x:x:x:02000118:x:x:x
+47052887Q:Larios De La Rosa, Marta:OBTIENE PLAZA:0597031:x:x:x:x:02000131:x:x:x
+05152678B:Diaz Diaz, Pilar:OBTIENE PLAZA:0597036:x:x:x:x:02000131:x:x:x
+07543738Z:Garcia Palacios, Carlos:OBTIENE PLAZA:0597038:x:x:x:x:02000131:x:x:x
+47058021K:Imbroda Ferre, Amparo:OBTIENE PLAZA:0597038:x:x:x:x:02000131:x:x:x
+07543395Q:Puñal Lucendo, Victoria:OBTIENE PLAZA:0597038:x:x:x:x:02000131:x:x:x
+44381948K:Catalan Fuentes, Moises:OBTIENE PLAZA:0597038:x:x:x:x:02000143:x:x:x
+05164753B:Ramirez Soriano, Sagrario:OBTIENE PLAZA:0597038:x:x:x:x:02000143:x:x:x
+44385395H:Garcia Rodriguez, Juan David:OBTIENE PLAZA:0597038:x:x:x:x:02000155:x:x:x
+52753041B:Gomez Gonzalez, Maria:OBTIENE PLAZA:0597031:x:x:x:x:02000167:x:x:x
+07558173M:Ortega Bautista, Ana Victoria:OBTIENE PLAZA:0597038:x:x:x:x:02000167:x:x:x
+05197445C:Sanchez Gabaldon, Isabel:OBTIENE PLAZA:0597031:x:x:x:x:02000180:x:x:x
+47052614L:Cortes Oliver, Eladio:OBTIENE PLAZA:0597037:x:x:x:x:02000805:x:x:x
+44387060G:Calero Gonzalez, Antonio Jose:OBTIENE PLAZA:0597038:x:x:x:x:02000805:x:x:x
+07552264F:Alfaro Gonzalez, Maria Del:OBTIENE PLAZA:0597038:x:x:x:x:02000830:x:x:x
+07566983Y:Bautista Sahuquillo, Diego:OBTIENE PLAZA:0597038:x:x:x:x:02000830:x:x:x
+05200571H:Cebrian Martinez, Luis:OBTIENE PLAZA:0597038:x:x:x:x:02000842:x:x:x
+47061378C:Manquillo Segura, Vanesa:OBTIENE PLAZA:0597099:x:x:x:x:02000842:x:x:x
+05197391N:Martinez Lopez, Francisca:OBTIENE PLAZA:0597036:x:x:x:x:02000854:x:x:x
+44381330R:Carcelen Marin, Eugenio Luis:OBTIENE PLAZA:0597038:x:x:x:x:02000854:x:x:x
+07562714S:Clemente Gabaldon, Laura:OBTIENE PLAZA:0597031:x:x:x:x:02000878:x:x:x
+44379133N:Aguilar Molina, Oscar:OBTIENE PLAZA:0597034:x:x:x:x:02000878:x:x:x
+44387582C:Lopez Lopez, Isaac:OBTIENE PLAZA:0597034:x:x:x:x:02000878:x:x:x
+47055216E:Lopez Martinez, Marta:OBTIENE PLAZA:0597035:x:x:x:x:02000878:x:x:x
+05165367G:Garcia Lopez, Maria Jose:OBTIENE PLAZA:0597038:x:x:x:x:02000878:x:x:x
+53140633F:Miranda Martinez, Fabiola:OBTIENE PLAZA:0597038:x:x:x:x:02000878:x:x:x
+05159843T:Tevar Igarza, Maria Angeles:OBTIENE PLAZA:0597060:x:x:x:x:02003481:x:x:x
+07542523H:Toledo Tevar, Maria Salome:OBTIENE PLAZA:0597031:x:x:x:x:02003879:x:x:x
+44394855W:Masip Navarro, Eduardo:OBTIENE PLAZA:0597038:x:x:x:x:02003879:x:x:x
+44391226F:Zamora Martinez, Alicia:OBTIENE PLAZA:0597060:x:x:x:x:02003892:x:x:x
+44394060N:Davia Serrano, Maria:OBTIENE PLAZA:0597032:x:x:x:x:02003909:x:x:x
+07563832Y:Garcia Rubio, Conrado:OBTIENE PLAZA:0597035:x:x:x:x:02003909:x:x:x
+05192412R:Rey Callejas, Miguel Del:OBTIENE PLAZA:0597021:x:x:x:x:02004008:x:x:x
+05171663K:Garrido Armero, Francisco J:OBTIENE PLAZA:0597023:x:x:x:x:02004410:x:x:x
+05144422N:Lopez Cebrian, Sabina:OBTIENE PLAZA:0597031:x:x:x:x:02004033:x:x:x
+44397975V:Navarro Lopez, Alicia:OBTIENE PLAZA:0597031:x:x:x:x:02004033:x:x:x
+47080202F:Rodenas Sanchez, Cristina:OBTIENE PLAZA:0597031:x:x:x:x:02004033:x:x:x
+44388188M:Gomez Gonzalez, Jose Juan:OBTIENE PLAZA:0597038:x:x:x:x:02004033:x:x:x
+48289349K:Frances Ariño, Maria Rosario:OBTIENE PLAZA:0597036:x:x:x:x:02004392:x:x:x
+74510004D:Martinez Cano, Jose:OBTIENE PLAZA:0597038:x:x:x:x:02004392:x:x:x
+47058705S:Gomez Martinez, Aurora:OBTIENE PLAZA:0597038:x:x:x:x:02001241:x:x:x
+53141376Z:Rodriguez Rodriguez,:OBTIENE PLAZA:0597038:x:x:x:x:02001241:x:x:x
+07567773Z:Castillejos Garcia, Jaime:OBTIENE PLAZA:0597034:x:x:x:x:02001275:x:x:x
+44381031R:Hernandez Fernandez, Maria:OBTIENE PLAZA:0597038:x:x:x:x:02001275:x:x:x
+44375597H:Plaza Orozco, Maria Pilar:OBTIENE PLAZA:0597031:x:x:x:x:02004689:x:x:x
+07557451L:Corcoles Trigueros, Jose:OBTIENE PLAZA:0597038:x:x:x:x:02001378:x:x:x
+44380616T:Alfaro Gallego, Maria Dolores:OBTIENE PLAZA:0597031:x:x:x:x:02001408:x:x:x
+47055639P:Garcia Gonzalez, Maria Adelina:OBTIENE PLAZA:0597032:x:x:x:x:02001408:x:x:x
+47062557A:Gonzalez Carrion, Alberto:OBTIENE PLAZA:0597034:x:x:x:x:02001408:x:x:x
+07561100B:Salmeron Minguez, Ana:OBTIENE PLAZA:0597038:x:x:x:x:02001408:x:x:x
+47083711C:Garcia Melendez, Ana Isabel:OBTIENE PLAZA:0597032:x:x:x:x:02001433:x:x:x
+47088042G:Palencia Jimenez, Ana Isabel:OBTIENE PLAZA:0597032:x:x:x:x:02001433:x:x:x
+53144407D:Navarro Vega, Josefina:OBTIENE PLAZA:0597038:x:x:x:x:02001433:x:x:x
+07540808M:Cordoba Cuesta, Maria Carmen:OBTIENE PLAZA:0597031:x:x:x:x:02001494:x:x:x
+74513050L:Sajardo Lopez, Josefina:OBTIENE PLAZA:0597031:x:x:x:x:02001494:x:x:x
+47054707L:Rodriguez Lopez, Ana Maria:OBTIENE PLAZA:0597032:x:x:x:x:02004631:x:x:x
+07538211F:Serrano Oliva, Juan Antonio:OBTIENE PLAZA:0597036:x:x:x:x:02004631:x:x:x
+74509498D:Perez Herrero, Gloria:OBTIENE PLAZA:0597038:x:x:x:x:02004631:x:x:x
+47051123T:Diaz Leal, Vanessa:OBTIENE PLAZA:0597031:x:x:x:x:02001573:x:x:x
+47056550E:Galdon Sanchez, Maria Llanos:OBTIENE PLAZA:0597031:x:x:x:x:02001573:x:x:x
+07560410B:Guillen Flores, Maria Dolores:OBTIENE PLAZA:0597031:x:x:x:x:02001573:x:x:x
+05195208Z:Marcos Escribano, Ana Maria:OBTIENE PLAZA:0597038:x:x:x:x:02001573:x:x:x
+07559130L:Molina Orzaez, Natividad:OBTIENE PLAZA:0597038:x:x:x:x:02001573:x:x:x
+47073017K:Rodriguez Jimenez, Ana Maria:OBTIENE PLAZA:0597032:x:x:x:x:02001615:x:x:x
+53141109T:Muñoz Moreno, Maria Bibiana:OBTIENE PLAZA:0597037:x:x:x:x:02001615:x:x:x
+53144600H:Alarcon Peñas, Maria Angeles:OBTIENE PLAZA:0597038:x:x:x:x:02001615:x:x:x
+44383041X:Sanchez Cañadas, Maria:OBTIENE PLAZA:0597038:x:x:x:x:02001615:x:x:x
+21996070C:Gonzalez Rubio, Rosario:OBTIENE PLAZA:0597031:x:x:x:x:02001688:x:x:x
+47054329D:Artuñedo Garcia, Maria:OBTIENE PLAZA:0597032:x:x:x:x:02001743:x:x:x
+07564738S:Garcia Martinez, Juan Pedro:OBTIENE PLAZA:0597034:x:x:x:x:02001743:x:x:x
+76009744B:Escobar Labrador, Monica:OBTIENE PLAZA:0597036:x:x:x:x:02001743:x:x:x
+48471413V:Frances Ubeda, Isabel:OBTIENE PLAZA:0597032:x:x:x:x:02004525:x:x:x
+53146713S:Lafuente Amorrortu, Ainhoa:OBTIENE PLAZA:0597036:x:x:x:x:02004525:x:x:x
+47050470Z:Garcia Jimenez, Maria Jose:OBTIENE PLAZA:0597031:x:x:x:x:02001810:x:x:x
+47054610Z:Molina Martinez, Maria Fe:OBTIENE PLAZA:0597038:x:x:x:x:02001810:x:x:x
+53141982E:Cuesta Lopez, Encarnacion:OBTIENE PLAZA:0597036:x:x:x:x:02001834:x:x:x
+53145678S:Bleda Martinez, Maria Josefa:OBTIENE PLAZA:0597038:x:x:x:x:02001834:x:x:x
+74496422C:Rodenas Alfaro, Jose:OBTIENE PLAZA:0597021:x:x:x:x:02001974:x:x:x
+53142418K:Martinez Vela, Maria Josefa:OBTIENE PLAZA:0597038:x:x:x:x:02007770:x:x:x
+47078917X:Cano Gonzalez, Nuria:OBTIENE PLAZA:0597035:x:x:x:x:02007851:x:x:x
+44384564S:Moreno Blazquez, Maria Mar:OBTIENE PLAZA:0597038:x:x:x:x:02007851:x:x:x
+47075043T:Garcia Balmaseda, Beatriz:OBTIENE PLAZA:0597031:x:x:x:x:02002206:x:x:x
+47062628M:Mondejar Gonzalez, Ana Isabel:OBTIENE PLAZA:0597036:x:x:x:x:02002206:x:x:x
+07567058N:Sahuquillo Jara, Marceliano:OBTIENE PLAZA:0597038:x:x:x:x:02002218:x:x:x
+47088728T:Marin Saavedra, Monica:OBTIENE PLAZA:0597032:x:x:x:x:02002309:x:x:x
+52755446R:Hellin Cuesta, Bernarda:OBTIENE PLAZA:0597038:x:x:x:x:02002309:x:x:x
+07556298Q:Hernandez Toledo, Maria Jose:OBTIENE PLAZA:0597032:x:x:x:x:02002334:x:x:x
+44382025Y:Navarro Fernandez, Juana:OBTIENE PLAZA:0597034:x:x:x:x:02002334:x:x:x
+47098383H:Munera Gutierrez, Marta:OBTIENE PLAZA:0597032:x:x:x:x:02004501:x:x:x
+47066872V:Lopez Peña, Esther:OBTIENE PLAZA:0597032:x:x:x:x:02002450:x:x:x
+07562230Z:Marquez Moreno, Maria Isabel:OBTIENE PLAZA:0597031:x:x:x:x:02004690:x:x:x
+44385610A:Monge Jimenez, Maria Isabel:OBTIENE PLAZA:0597035:x:x:x:x:02004690:x:x:x
+47062980N:Chacon Cifuentes, Vanessa:OBTIENE PLAZA:0597032:x:x:x:x:02004513:x:x:x
+52819211X:Ruiz Puche, Antonio:OBTIENE PLAZA:0597038:x:x:x:x:02004744:x:x:x
+53148853Q:Gonzalez Navarro, Maria De:OBTIENE PLAZA:0597032:x:x:x:x:02004707:x:x:x
+53144589F:Ruiz Molina, Antonio Manuel:OBTIENE PLAZA:0597034:x:x:x:x:02004707:x:x:x
+44385463V:Azaña Cifuentes, Silvia:OBTIENE PLAZA:0597031:x:x:x:x:02004574:x:x:x
+74506954H:Salto Martinez, Juana Maria:OBTIENE PLAZA:0597031:x:x:x:x:02004574:x:x:x
+44378859Z:Simarro Lopez, Elvira Maria:OBTIENE PLAZA:0597035:x:x:x:x:02002711:x:x:x
+47062746P:Armero Gonzalez, Maria Jose:OBTIENE PLAZA:0597031:x:x:x:x:02002796:x:x:x
+33978912T:Garcia Gallego, Emilio:OBTIENE PLAZA:0597034:x:x:x:x:02002796:x:x:x
+74509114Q:Plaza Navarro, Eva Maria:OBTIENE PLAZA:0597038:x:x:x:x:02002796:x:x:x
+74515200F:Ruiz Lopez, Leticia:OBTIENE PLAZA:0597035:x:x:x:x:02004124:x:x:x
+44390780K:Garcia Ortuño, Violeta:OBTIENE PLAZA:0597038:x:x:x:x:02004124:x:x:x
+47056875W:Lopez Moreno, Isabel:OBTIENE PLAZA:0597038:x:x:x:x:02002887:x:x:x
+07555421J:Morcillo Sierra, Jesus:OBTIENE PLAZA:0597031:x:x:x:x:02005219:x:x:x
+07565695Y:Simarro Herraez, Maria Piedad:OBTIENE PLAZA:0597034:x:x:x:x:02005219:x:x:x
+02200397X:Minguez Castellanos, Rosa:OBTIENE PLAZA:0597036:x:x:x:x:02003016:x:x:x
+44381483Q:Molina Alfaro, Constancio:OBTIENE PLAZA:0597038:x:x:x:x:02003016:x:x:x
+47084342F:Pajares Linares, Ada Maria:OBTIENE PLAZA:0597038:x:x:x:x:02004677:x:x:x
+47063686M:Mateo Martinez, Nuria:OBTIENE PLAZA:0597038:x:x:x:x:02003065:x:x:x
+47071630Z:Lopez Iniesta, Ana Belen:OBTIENE PLAZA:0597031:x:x:x:x:02003077:x:x:x
+05136316W:Lopez Garcia, Domingo:OBTIENE PLAZA:0597034:x:x:x:x:02003077:x:x:x
+44382031N:Martinez Garcia, Maria Trinidad:OBTIENE PLAZA:0597038:x:x:x:x:02003077:x:x:x
+47053478D:Romero Sotoca, Carlos:OBTIENE PLAZA:0597038:x:x:x:x:02003077:x:x:x
+07562088X:Hergueta Ortiz, Luisa:OBTIENE PLAZA:0597034:x:x:x:x:02003090:x:x:x
+06259284H:Delgado Leon, Rosa Maria:OBTIENE PLAZA:0597038:x:x:x:x:02003132:x:x:x
+53145246C:Gonzalez Parra, Maria Jose:OBTIENE PLAZA:0597038:x:x:x:x:02003132:x:x:x
+47087416E:Nogueron Martinez, Maria:OBTIENE PLAZA:0597038:x:x:x:x:02003132:x:x:x
+47073492J:Martinez Fernandez, Ana Maria:OBTIENE PLAZA:0597032:x:x:x:x:02004291:x:x:x
+44378517V:Montero Garcia, Alicia:OBTIENE PLAZA:0597038:x:x:x:x:02008968:x:x:x
+05164155B:Saez Piqueras, Maria Agustina:OBTIENE PLAZA:0597060:x:x:x:x:02004458:x:x:x
+47051156X:Charcos Mata, Gonzalo:OBTIENE PLAZA:0597034:x:x:x:x:02000982:x:x:x
+44381967V:Campillo Nieto, Maria Jose:OBTIENE PLAZA:0597038:x:x:x:x:02000982:x:x:x
+44399331Q:Nieto Iñiguez, Francisco Jose:OBTIENE PLAZA:0597038:x:x:x:x:02000982:x:x:x
+70577287Q:Campos Garrido, Eva Maria:OBTIENE PLAZA:0597031:x:x:x:x:13012258:x:x:x
+05917981N:Casado Martinez, Maria Del:OBTIENE PLAZA:0597035:x:x:x:x:13012258:x:x:x
+25390009X:Villamayor Jimenez, Pilar:OBTIENE PLAZA:0597036:x:x:x:x:13012192:x:x:x
+05899315E:Diez España, Nilda Maria:OBTIENE PLAZA:0597038:x:x:x:x:13012192:x:x:x
+07545037W:Resta Velez, Silvino:OBTIENE PLAZA:0597038:x:x:x:x:13012192:x:x:x
+50196138H:Moya Aparicio, Ana Isabel:OBTIENE PLAZA:0597032:x:x:x:x:13000104:x:x:x
+06262566B:Muñoz-Quiros Garcia-:OBTIENE PLAZA:0597038:x:x:x:x:13000104:x:x:x
+06250903D:Requena Rivas, Francisco:OBTIENE PLAZA:0597032:x:x:x:x:13000131:x:x:x
+06228604C:Romero Moya, Belen:OBTIENE PLAZA:0597038:x:x:x:x:13000131:x:x:x
+47017548M:Reguillo Villena, Alfonso:OBTIENE PLAZA:0597038:x:x:x:x:13000131:x:x:x
+06264735H:Infantes Serrano, Cristina:OBTIENE PLAZA:0597038:x:x:x:x:13003828:x:x:x
+06246252G:Ibañez Perez, Gemma:OBTIENE PLAZA:0597060:x:x:x:x:13004687:x:x:x
+06248276G:Zaragoza Diaz, Gemma:OBTIENE PLAZA:0597032:x:x:x:x:13004870:x:x:x
+06260571V:Mejia Soria, Maria Llanos:OBTIENE PLAZA:0597036:x:x:x:x:13012052:x:x:x
+03865675L:Portillo Lopez, Maria Isabel:OBTIENE PLAZA:0597031:x:x:x:x:13000301:x:x:x
+71217366M:Martinez Leon, Maria Teresa:OBTIENE PLAZA:0597032:x:x:x:x:13000311:x:x:x
+05126265W:Soler Gomez, Paula Isabel:OBTIENE PLAZA:0597038:x:x:x:x:13000360:x:x:x
+05677890H:Roldan Gonzalez, Maria De Las:OBTIENE PLAZA:0597038:x:x:x:x:13000402:x:x:x
+05676659Y:Baos Valverde, Eva Maria:OBTIENE PLAZA:0597038:x:x:x:x:13000414:x:x:x
+74518501L:Amo Lozoya, Virginia Del:OBTIENE PLAZA:0597038:x:x:x:x:13000414:x:x:x
+07565793N:Maroto Villar, Angela:OBTIENE PLAZA:0597060:x:x:x:x:13000475:x:x:x
+05912202Y:Valle Pareja, Lucia:OBTIENE PLAZA:0597032:x:x:x:x:13000505:x:x:x
+05897596M:Burgo Sanchez, Jose Luis:OBTIENE PLAZA:0597038:x:x:x:x:13000505:x:x:x
+05922526A:Gregorio Acero, Carmen Maria:OBTIENE PLAZA:0597038:x:x:x:x:13000505:x:x:x
+05925953A:Risco Sanchez, Maria Soledad:OBTIENE PLAZA:0597031:x:x:x:x:13000517:x:x:x
+05892340Q:Illan Vera, Cristina:OBTIENE PLAZA:0597038:x:x:x:x:13000517:x:x:x
+05694011Q:Gomez Garcia, Angela Maria:OBTIENE PLAZA:0597032:x:x:x:x:13000633:x:x:x
+05678093Z:Serna Ruiz, Maria Isabel:OBTIENE PLAZA:0597038:x:x:x:x:13000633:x:x:x
+06253897J:Cano Muñoz, Lucia:OBTIENE PLAZA:0597031:x:x:x:x:13000712:x:x:x
+70580328K:Jareño Lopez, Luis Miguel:OBTIENE PLAZA:0597038:x:x:x:x:13000712:x:x:x
+05663316A:Cañamero Barahona, Rosa:OBTIENE PLAZA:0597031:x:x:x:x:13000773:x:x:x
+05689432Z:Sanchez Lozano, Irene:OBTIENE PLAZA:0597031:x:x:x:x:13000803:x:x:x
+38834216G:Garcia Arribas, Judit:OBTIENE PLAZA:0597038:x:x:x:x:13000803:x:x:x
+05678663D:Lopez-Pastor Fernandez De:OBTIENE PLAZA:0597038:x:x:x:x:13000803:x:x:x
+74638675H:Ripoll Curiel, Alicia:OBTIENE PLAZA:0597038:x:x:x:x:13000803:x:x:x
+44377718T:Torres Martinez, Jose Javier:OBTIENE PLAZA:0597034:x:x:x:x:13003786:x:x:x
+05677957Q:Martin Merino, Gema:OBTIENE PLAZA:0597038:x:x:x:x:13004936:x:x:x
+05691609Y:Barba Ciudad, Felix:OBTIENE PLAZA:0597038:x:x:x:x:13000888:x:x:x
+05662774J:Muñoz Donoso, Maria Del Pilar:OBTIENE PLAZA:0597031:x:x:x:x:13000891:x:x:x
+05696148Z:Diaz Valle, Ana Maria:OBTIENE PLAZA:0597037:x:x:x:x:13000891:x:x:x
+05642362W:Ruiz Caballero, Antonia:OBTIENE PLAZA:0597038:x:x:x:x:13000891:x:x:x
+70354681G:Morcillo Nuñez, Amelia:OBTIENE PLAZA:0597038:x:x:x:x:13000955:x:x:x
+06215619F:Lopez Alberca, Gracia Maria:OBTIENE PLAZA:0597060:x:x:x:x:13001005:x:x:x
+05676753P:Dotor Sanchez, Esther:OBTIENE PLAZA:0597032:x:x:x:x:13003968:x:x:x
+06253575J:Flores Jimenez, Carmen:OBTIENE PLAZA:0597032:x:x:x:x:13003968:x:x:x
+52388649P:Orellana Fernandez, Maria:OBTIENE PLAZA:0597031:x:x:x:x:13001066:x:x:x
+71216819X:Gonzalez Ruperto, Jose Ignacio:OBTIENE PLAZA:0597035:x:x:x:x:13001066:x:x:x
+52139857F:Cavadas Melero, Anastasia Petr:OBTIENE PLAZA:0597038:x:x:x:x:13001066:x:x:x
+05643139C:Novalbos Cardenas, Maria:OBTIENE PLAZA:0597038:x:x:x:x:13001091:x:x:x
+73649858V:Rubia Calero, Domingo De La:OBTIENE PLAZA:0597038:x:x:x:x:13001091:x:x:x
+70730036E:Gonzalez-Calero Labian,:OBTIENE PLAZA:0597038:x:x:x:x:13001121:x:x:x
+05633803E:Ruiz Rojas, Maria Mercedes:OBTIENE PLAZA:0597038:x:x:x:x:13001121:x:x:x
+05657713N:Gomez Villegas, Maria Del:OBTIENE PLAZA:0597099:x:x:x:x:13001157:x:x:x
+05643274V:Barrera Soto, Mara:OBTIENE PLAZA:0597036:x:x:x:x:13001224:x:x:x
+06221162F:Rodriguez Parrilla, Gloria Maria:OBTIENE PLAZA:0597024:x:x:x:x:13001340:x:x:x
+05897377Q:Leon Cabañero, Maria Pilar:OBTIENE PLAZA:0597038:x:x:x:x:13001391:x:x:x
+07950960K:Galache Sanchez, Ines Maria:OBTIENE PLAZA:0597060:x:x:x:x:13003920:x:x:x
+06218374W:Ordoñez Jareño, Antonia:OBTIENE PLAZA:0597038:x:x:x:x:13004389:x:x:x
+05902086X:Serrano Solis, Alicia:OBTIENE PLAZA:0597037:x:x:x:x:13004444:x:x:x
+05631129Q:Camargo Sanchez, Francisco J:OBTIENE PLAZA:0597038:x:x:x:x:13004444:x:x:x
+05667891R:Rodriguez Garcia, Nuria:OBTIENE PLAZA:0597038:x:x:x:x:13004882:x:x:x
+52131053N:Simon Fernandez, Rosario:OBTIENE PLAZA:0597036:x:x:x:x:13001455:x:x:x
+70647502N:Rubio Lopez-Ibarra, Pablo:OBTIENE PLAZA:0597038:x:x:x:x:13001467:x:x:x
+05653085F:Carretero Rico, Saturnina:OBTIENE PLAZA:0597038:x:x:x:x:13004572:x:x:x
+05638315A:Arenas Mora, Bienvenida:OBTIENE PLAZA:0597038:x:x:x:x:13001650:x:x:x
+26239993Y:Adan Nieto, Miguel:OBTIENE PLAZA:0597032:x:x:x:x:13001698:x:x:x
+05149536C:Arenas Olivares, Ramon:OBTIENE PLAZA:0597038:x:x:x:x:13010766:x:x:x
+05636622N:Piqueras Jimenez, Antonia:OBTIENE PLAZA:0597038:x:x:x:x:13010766:x:x:x
+00823312G:Romero Vega, Amalia:OBTIENE PLAZA:0597031:x:x:x:x:13001790:x:x:x
+07839962K:Rodriguez Serrano, Ascension:OBTIENE PLAZA:0597038:x:x:x:x:13001790:x:x:x
+05645683B:Santos Jimenez, Maria Sol:OBTIENE PLAZA:0597038:x:x:x:x:13001790:x:x:x
+53142075T:Martinez Alcantara, Lidia:OBTIENE PLAZA:0597038:x:x:x:x:13001790:x:x:x
+12398710P:Gil Rivero, Ricardo:OBTIENE PLAZA:0597031:x:x:x:x:13001819:x:x:x
+70580233H:Gomez-Rico Diaz Del Campo,:OBTIENE PLAZA:0597038:x:x:x:x:13001923:x:x:x
+05622610F:Arroyo Serrano-Cruz, Luisa:OBTIENE PLAZA:0597038:x:x:x:x:13001935:x:x:x
+52136646Q:Quevedo Muñoz, Encarnacion:OBTIENE PLAZA:0597038:x:x:x:x:13003853:x:x:x
+70581387E:Pozuelo Vazquez De Agredos,:OBTIENE PLAZA:0597032:x:x:x:x:13001996:x:x:x
+71218868N:Marquez Villahermosa, Maria:OBTIENE PLAZA:0597032:x:x:x:x:13002009:x:x:x
+05680743L:Gonzalez Martin, Laura:OBTIENE PLAZA:0597038:x:x:x:x:13004973:x:x:x
+05685616Q:Imedio Baladron, Maria Pilar:OBTIENE PLAZA:0597032:x:x:x:x:13002113:x:x:x
+05664082X:Vidal Rodriguez, Francisco Jose:OBTIENE PLAZA:0597038:x:x:x:x:13002113:x:x:x
+71221601P:Imedio Moreno, Veronica:OBTIENE PLAZA:0597038:x:x:x:x:13002113:x:x:x
+06263185D:Villaescusa Zarco, Mariel:OBTIENE PLAZA:0597031:x:x:x:x:13002162:x:x:x
+06236796R:Hidalgo Mayoral, Marina:OBTIENE PLAZA:0597038:x:x:x:x:13002162:x:x:x
+06262584Y:Lafuente Sanchez, Maria Luisa:OBTIENE PLAZA:0597038:x:x:x:x:13002162:x:x:x
+74518994Y:Munera Gento, Maria Isabel:OBTIENE PLAZA:0597037:x:x:x:x:13004331:x:x:x
+05433612T:Fraile Mena, Santiago:OBTIENE PLAZA:0597038:x:x:x:x:13004331:x:x:x
+05664563P:Plaza Moreno, Rodrigo:OBTIENE PLAZA:0597038:x:x:x:x:13002228:x:x:x
+05634425T:Zamora Soria, Francisco:OBTIENE PLAZA:0597038:x:x:x:x:13003971:x:x:x
+05689884Y:Ruiz Ciudad, Belinda Maria:OBTIENE PLAZA:0597032:x:x:x:x:13002290:x:x:x
+05643623K:Pallares Sobrino, Felix:OBTIENE PLAZA:0597038:x:x:x:x:13002290:x:x:x
+05640795E:Sanchez Caminero, Carmen:OBTIENE PLAZA:0597038:x:x:x:x:13002368:x:x:x
+71216316J:Fernandez Pacheco Sanchez:OBTIENE PLAZA:0597031:x:x:x:x:13002401:x:x:x
+05922578D:Luengo Alarcon, Sara:OBTIENE PLAZA:0597038:x:x:x:x:13002459:x:x:x
+05669219H:Rico Fernandez, Ana Isabel:OBTIENE PLAZA:0597031:x:x:x:x:13002484:x:x:x
+05921838M:Pasamontes Martin, Nuria:OBTIENE PLAZA:0597038:x:x:x:x:13002484:x:x:x
+05907556Y:Amaro Zamora, Maria De La:OBTIENE PLAZA:0597038:x:x:x:x:13002538:x:x:x
+05915149D:Morente Perez, Noemi:OBTIENE PLAZA:0597038:x:x:x:x:13002538:x:x:x
+05898271J:Ruiz Peña, Angela Maria:OBTIENE PLAZA:0597031:x:x:x:x:13002551:x:x:x
+30813455X:Alvarez Martinez, Virginia:OBTIENE PLAZA:0597038:x:x:x:x:13002551:x:x:x
+05897283Z:Garcia-Cuevas Pardo, Maria:OBTIENE PLAZA:0597031:x:x:x:x:13002563:x:x:x
+05903028D:Perez Ruiz, Angela Maria:OBTIENE PLAZA:0597038:x:x:x:x:13002563:x:x:x
+05918910K:Becerra Carrasco, Maria Jose:OBTIENE PLAZA:0597032:x:x:x:x:13002599:x:x:x
+05891838C:Moreno Cuadra, Julian:OBTIENE PLAZA:0597021:x:x:x:x:13002681:x:x:x
+05927942Z:Mora Valle, Esther:OBTIENE PLAZA:0597035:x:x:x:x:13003646:x:x:x
+05913668T:Fernandez Calero, Fernando:OBTIENE PLAZA:0597038:x:x:x:x:13003646:x:x:x
+05920241H:Ciudad Vicente, Silvia:OBTIENE PLAZA:0597032:x:x:x:x:13004274:x:x:x
+05885425R:Toledo Gasque, Enrique Pablo:OBTIENE PLAZA:0597038:x:x:x:x:13004407:x:x:x
+52383246X:Caro Sanchez, Julia:OBTIENE PLAZA:0597038:x:x:x:x:13002824:x:x:x
+05699636Y:Calvillo Zamora, Veronica:OBTIENE PLAZA:0597031:x:x:x:x:13002851:x:x:x
+05692612C:Mora Espinosa, Santos Salvador:OBTIENE PLAZA:0597034:x:x:x:x:13002851:x:x:x
+06236241K:Tejeda Somoza, Jose Alberto:OBTIENE PLAZA:0597038:x:x:x:x:13002873:x:x:x
+47065249G:Fernandez Montejano,:OBTIENE PLAZA:0597031:x:x:x:x:13004316:x:x:x
+70583184W:Bonilla Ruiz, Marina Isabel:OBTIENE PLAZA:0597032:x:x:x:x:13004316:x:x:x
+06259728W:Lopez Alarcon, Elena Maria:OBTIENE PLAZA:0597038:x:x:x:x:13004316:x:x:x
+06234475A:Moral Plaza, Evelio:OBTIENE PLAZA:0597038:x:x:x:x:13004316:x:x:x
+47074547X:Navarro Gonzalez, Leonardo:OBTIENE PLAZA:0597034:x:x:x:x:13004833:x:x:x
+71216882G:Arias Trujillo, Vicenta:OBTIENE PLAZA:0597035:x:x:x:x:13004894:x:x:x
+71221296W:Garcia Abadillo Gomez:OBTIENE PLAZA:0597032:x:x:x:x:13010912:x:x:x
+08843974Z:Gonzalez Gonzalez, Isabel:OBTIENE PLAZA:0597036:x:x:x:x:13011001:x:x:x
+71225822C:Diaz-Merino Rodriguez,:OBTIENE PLAZA:0597031:x:x:x:x:13003014:x:x:x
+06264360B:Lopez Rosado, Maria Jose:OBTIENE PLAZA:0597031:x:x:x:x:13003041:x:x:x
+70740004P:Espinar Paton, Alicia:OBTIENE PLAZA:0597031:x:x:x:x:13003087:x:x:x
+70738917W:Moreno Garcia, Maria Dolores:OBTIENE PLAZA:0597031:x:x:x:x:13003993:x:x:x
+09007991H:Ruiz Becerra, Ana Belen:OBTIENE PLAZA:0597036:x:x:x:x:13004080:x:x:x
+44396229L:Mañas Gomez, Maria Consuelo:OBTIENE PLAZA:0597035:x:x:x:x:13009478:x:x:x
+70642523R:Rosillo Ruiz, Maria Concepcion:OBTIENE PLAZA:0597038:x:x:x:x:13003211:x:x:x
+52387438Q:Sanchez Molero, Gloria:OBTIENE PLAZA:0597038:x:x:x:x:13003233:x:x:x
+71221158W:Yebenes Canuto, Jose Ramon:OBTIENE PLAZA:0597038:x:x:x:x:13003233:x:x:x
+52385092Q:Castaño Simon, Petra:OBTIENE PLAZA:0597031:x:x:x:x:13003257:x:x:x
+52138257V:Hernandez Pines, Maria Nieves:OBTIENE PLAZA:0597038:x:x:x:x:13003257:x:x:x
+52137496S:Galan Sanchez-Ballesteros, Sira:OBTIENE PLAZA:0597038:x:x:x:x:13003348:x:x:x
+05648421N:Matute Rodero, Isabel:OBTIENE PLAZA:0597038:x:x:x:x:13003361:x:x:x
+06263610C:Calcerrada Cano, Carlos Javier:OBTIENE PLAZA:0597038:x:x:x:x:13003521:x:x:x
+05682204P:Garcia Moreno, Luis Javier:OBTIENE PLAZA:0597038:x:x:x:x:13003521:x:x:x
+05645458Q:Crespo Fernandez, Encarnacion:OBTIENE PLAZA:0597035:x:x:x:x:13003658:x:x:x
+06253690J:Avendaño Lara, Santiago:OBTIENE PLAZA:0597038:x:x:x:x:13003658:x:x:x
+05675802T:Dondarza Manzano, Pablo:OBTIENE PLAZA:0597038:x:x:x:x:13003658:x:x:x
+70578484V:Moreno Jimenez, Maria Gracia:OBTIENE PLAZA:0597031:x:x:x:x:13003555:x:x:x
+04191727T:Jimenez Peña, Heliodoro:OBTIENE PLAZA:0597038:x:x:x:x:13003555:x:x:x
+71219920Y:Nieto-Sandoval Rodriguez De:OBTIENE PLAZA:0597038:x:x:x:x:13003749:x:x:x
+04611548W:Martinez Castellanos, Ana:OBTIENE PLAZA:0597037:x:x:x:x:16004248:x:x:x
+04612062X:Chumillas Moreno, Esther:OBTIENE PLAZA:0597038:x:x:x:x:16000280:x:x:x
+70520387H:Casamayor Cantero, Josefina:OBTIENE PLAZA:0597038:x:x:x:x:16000280:x:x:x
+47071767J:Jara Vizcaino, Gregorio Jose:OBTIENE PLAZA:0597034:x:x:x:x:16009349:x:x:x
+44382865H:Calderon Iniesta, Ines:OBTIENE PLAZA:0597038:x:x:x:x:16009349:x:x:x
+04593815W:Fuero Serna, Maria Yolanda:OBTIENE PLAZA:0597037:x:x:x:x:16000802:x:x:x
+04599422C:Muñoz Martinez, Marta:OBTIENE PLAZA:0597032:x:x:x:x:16000838:x:x:x
+04599199G:Garcia Hidalgo, Maria Asuncion:OBTIENE PLAZA:0597038:x:x:x:x:16000838:x:x:x
+04556366C:Ramirez Ovejero, Maria Del:OBTIENE PLAZA:0597038:x:x:x:x:16000838:x:x:x
+04595057W:Gonzalez Huerta, Rosa Ana:OBTIENE PLAZA:0597031:x:x:x:x:16000841:x:x:x
+04581771X:Villalba Juste, Jose Vicente:OBTIENE PLAZA:0597038:x:x:x:x:16000841:x:x:x
+04584523W:Martinez Domingo, Luis Angel:OBTIENE PLAZA:0597032:x:x:x:x:16000863:x:x:x
+04607756M:Alonso Julian, Carolina:OBTIENE PLAZA:0597038:x:x:x:x:16000863:x:x:x
+04606390L:Cañas Belmar, Montserrat:OBTIENE PLAZA:0597038:x:x:x:x:16000863:x:x:x
+04594386K:Torre De La Vega, Sara De La:OBTIENE PLAZA:0597032:x:x:x:x:16003074:x:x:x
+04585849V:Gonzalez De La Hoz, Sonia:OBTIENE PLAZA:0597038:x:x:x:x:16003074:x:x:x
+04584259Z:Mora Escutia, Ana Isabel:OBTIENE PLAZA:0597038:x:x:x:x:16003256:x:x:x
+04593808H:Zarzuela Duque, Maria Isabel:OBTIENE PLAZA:0597038:x:x:x:x:16003256:x:x:x
+04596514X:Lazaro Lopez, Maria Jesus:OBTIENE PLAZA:0597036:x:x:x:x:16003281:x:x:x
+04601822M:Belmar Argudo, Alberto:OBTIENE PLAZA:0597035:x:x:x:x:16003487:x:x:x
+04611298M:Moreno Muñoz, Vanesa:OBTIENE PLAZA:0597031:x:x:x:x:16003529:x:x:x
+04573663K:Campos Agudo, Ana Maria:OBTIENE PLAZA:0597031:x:x:x:x:16003608:x:x:x
+04605863K:Muñoz Elche, Maria Luisa:OBTIENE PLAZA:0597031:x:x:x:x:16003608:x:x:x
+04605502M:Mantecon Contreras, Cristina:OBTIENE PLAZA:0597032:x:x:x:x:16003608:x:x:x
+04557340M:Martinez Martinez, Juan Pedro:OBTIENE PLAZA:0597034:x:x:x:x:16003608:x:x:x
+04571723J:Bonilla Herraiz, Adoracion:OBTIENE PLAZA:0597038:x:x:x:x:16003608:x:x:x
+04591554H:Fernandez Benito, Sonia:OBTIENE PLAZA:0597038:x:x:x:x:16003608:x:x:x
+04596973D:Garcia Serrano, Jose David:OBTIENE PLAZA:0597035:x:x:x:x:16008722:x:x:x
+01823628G:Mateo Santamaria, Carmen:OBTIENE PLAZA:0597037:x:x:x:x:16008722:x:x:x
+04596657S:Martinez Martinez, Raul:OBTIENE PLAZA:0597038:x:x:x:x:16008722:x:x:x
+04582871Y:Sierra Romero, Jose:OBTIENE PLAZA:0597038:x:x:x:x:16008722:x:x:x
+47082243R:Tarin Merino, Yolanda:OBTIENE PLAZA:0597032:x:x:x:x:16004595:x:x:x
+04614953A:Carrasco Martinez, Raquel:OBTIENE PLAZA:0597036:x:x:x:x:16004595:x:x:x
+04594284B:Arribas Rodriguez, Gema:OBTIENE PLAZA:0597038:x:x:x:x:16004595:x:x:x
+14311373Z:Collado Garcia, Elena:OBTIENE PLAZA:0597032:x:x:x:x:16004561:x:x:x
+04615236X:Martinez Gomez, Maria Esther:OBTIENE PLAZA:0597036:x:x:x:x:16004561:x:x:x
+04622329L:Mota Megia, Inmaculada:OBTIENE PLAZA:0597038:x:x:x:x:16001314:x:x:x
+29167924Z:Amor Arocas, Maria Amparo:OBTIENE PLAZA:0597038:x:x:x:x:16004571:x:x:x
+04590697N:Garcia Pradana, Maria Del Mar:OBTIENE PLAZA:0597038:x:x:x:x:16004571:x:x:x
+47087191G:Lucas Griñan, Vanesa:OBTIENE PLAZA:0597038:x:x:x:x:16004583:x:x:x
+44394515F:Marchante Garcia, Maria:OBTIENE PLAZA:0597038:x:x:x:x:16009374:x:x:x
+06271081Q:Martinez Bascuñan Ramirez,:OBTIENE PLAZA:0597032:x:x:x:x:16001624:x:x:x
+70505291X:Moreno Cano, Esperanza:OBTIENE PLAZA:0597038:x:x:x:x:16001624:x:x:x
+70521752A:Crespo Ramirez, Tatiana:OBTIENE PLAZA:0597032:x:x:x:x:16009945:x:x:x
+74518045T:Merino Valiente, Ivan:OBTIENE PLAZA:0597031:x:x:x:x:16001831:x:x:x
+74516360V:Ruiz Quintanilla, Alberto:OBTIENE PLAZA:0597032:x:x:x:x:16001831:x:x:x
+04602597K:Osma Marchante, Emilio Jose:OBTIENE PLAZA:0597034:x:x:x:x:16001831:x:x:x
+06251263R:Becerra Morales, Miguel Angel:OBTIENE PLAZA:0597038:x:x:x:x:16001831:x:x:x
+74517241R:Martinez Sanchez, Victor:OBTIENE PLAZA:0597038:x:x:x:x:16001831:x:x:x
+47076440V:Lozano Palencia, Angel:OBTIENE PLAZA:0597038:x:x:x:x:16001831:x:x:x
+04619258F:Cordente Mesas, David:OBTIENE PLAZA:0597032:x:x:x:x:16004194:x:x:x
+24863165G:Lopez Trujillo, Francisca:OBTIENE PLAZA:0597036:x:x:x:x:16004194:x:x:x
+20160385B:Estevan Cebrian, Estela:OBTIENE PLAZA:0597038:x:x:x:x:16004194:x:x:x
+74517345J:Toboso Martinez, Francisca:OBTIENE PLAZA:0597032:x:x:x:x:16001995:x:x:x
+04613873G:Cerrillo Patiño, Inmaculada:OBTIENE PLAZA:0597038:x:x:x:x:16001995:x:x:x
+44376764N:Carretero Carretero, Ana Lucia:OBTIENE PLAZA:0597038:x:x:x:x:16002033:x:x:x
+44383967Q:Cifo Garcia, Juan Luis:OBTIENE PLAZA:0597038:x:x:x:x:16002033:x:x:x
+05130678E:Martinez Carrillo, Ana Maria:OBTIENE PLAZA:0597038:x:x:x:x:16002033:x:x:x
+47072281K:Onate Lopez, Consuelo:OBTIENE PLAZA:0597038:x:x:x:x:16002033:x:x:x
+47084201G:Barco Sanchez, David:OBTIENE PLAZA:0597032:x:x:x:x:16002151:x:x:x
+04607540L:Gallardo Zafra, Laura:OBTIENE PLAZA:0597035:x:x:x:x:16004455:x:x:x
+04581718A:Lujan Berenguel, Maria Carmen:OBTIENE PLAZA:0597038:x:x:x:x:16004455:x:x:x
+04610756S:Valverde De Las Heras, Cristina:OBTIENE PLAZA:0597038:x:x:x:x:16004455:x:x:x
+74499556A:Saez Perez, Felisa:OBTIENE PLAZA:0597031:x:x:x:x:16002264:x:x:x
+04586504M:Garcia Saiz, Isabel:OBTIENE PLAZA:0597031:x:x:x:x:16004443:x:x:x
+04594554M:Villavieja Escribano, Eva Maria:OBTIENE PLAZA:0597031:x:x:x:x:16004443:x:x:x
+04610570J:Alvarez Martinez, Alberto:OBTIENE PLAZA:0597032:x:x:x:x:16004443:x:x:x
+74668898L:Tallon Arco, Raquel:OBTIENE PLAZA:0597036:x:x:x:x:16004443:x:x:x
+04554577W:Clemente Rodriguez, Maria:OBTIENE PLAZA:0597038:x:x:x:x:16004443:x:x:x
+04605967X:Fernandez Lopez, Antonio:OBTIENE PLAZA:0597038:x:x:x:x:16004443:x:x:x
+04574452M:Martinez Valenciano,:OBTIENE PLAZA:0597038:x:x:x:x:16004443:x:x:x
+70519221W:Rubio Del Burgo, Laura:OBTIENE PLAZA:0597038:x:x:x:x:16004443:x:x:x
+04595676T:Martinez Panadero, Maria:OBTIENE PLAZA:0597038:x:x:x:x:16004625:x:x:x
+04564526S:Duque Lopez, Jesus Daniel:OBTIENE PLAZA:0597034:x:x:x:x:16009398:x:x:x
+06238728R:Rodriguez-Rey Rodriguez-:OBTIENE PLAZA:0597034:x:x:x:x:16009398:x:x:x
+44399408R:Martinez Lopez, Teresa:OBTIENE PLAZA:0597036:x:x:x:x:16002823:x:x:x
+04601865W:Peñalver Garrote, Nuria:OBTIENE PLAZA:0597037:x:x:x:x:16004236:x:x:x
+03866158L:Cuerda Garrido, Gema De La:OBTIENE PLAZA:0597038:x:x:x:x:19008186:x:x:x
+03105654X:Esteban Fernandez, Maria Del:OBTIENE PLAZA:0597038:x:x:x:x:19008186:x:x:x
+03110456M:Ramiro Hernandez, Maria Del:OBTIENE PLAZA:0597038:x:x:x:x:19008186:x:x:x
+03110166Z:Castro Esteban, Miriam De:OBTIENE PLAZA:0597038:x:x:x:x:19000333:x:x:x
+03114488N:Rincon Garcia, Patricia:OBTIENE PLAZA:0597038:x:x:x:x:19000333:x:x:x
+51927952R:Jimenez Alvarez, Gema:OBTIENE PLAZA:0597038:x:x:x:x:19008745:x:x:x
+05381216K:Quemada Vives, Esther:OBTIENE PLAZA:0597038:x:x:x:x:19008745:x:x:x
+03120885S:Fuentes De Lucas, Beatriz:OBTIENE PLAZA:0597038:x:x:x:x:19000394:x:x:x
+50861093C:Armada Espino, Belen:OBTIENE PLAZA:0597036:x:x:x:x:19008046:x:x:x
+33413247C:Bahon Pedraz, Ingrid:OBTIENE PLAZA:0597038:x:x:x:x:19008216:x:x:x
+03109106N:Santiago Garcia, Esther:OBTIENE PLAZA:0597038:x:x:x:x:19008216:x:x:x
+03108524M:Gonzalez Raso, Luis Miguel:OBTIENE PLAZA:0597038:x:x:x:x:19000710:x:x:x
+03121905T:Sopeña Palancar, Raquel:OBTIENE PLAZA:0597036:x:x:x:x:19000795:x:x:x
+03095711A:Blanco Sanchez, Maria:OBTIENE PLAZA:0597038:x:x:x:x:19000989:x:x:x
+03108648Z:Martinez Martinez, Sonia:OBTIENE PLAZA:0597031:x:x:x:x:19001015:x:x:x
+03120375B:Vicente Vicente, Esther:OBTIENE PLAZA:0597031:x:x:x:x:19001015:x:x:x
+70416854P:Martin Garcia, Carmen:OBTIENE PLAZA:0597031:x:x:x:x:19001015:x:x:x
+03123455D:Vicenti Castillo, Cristina:OBTIENE PLAZA:0597031:x:x:x:x:19001015:x:x:x
+03104552N:Blanco Jimenez, Maria Del Pilar:OBTIENE PLAZA:0597032:x:x:x:x:19001015:x:x:x
+03095746S:Sanz De La Fuente, Angeles:OBTIENE PLAZA:0597036:x:x:x:x:19001015:x:x:x
+03447530Z:Otero Rincon, Clementina:OBTIENE PLAZA:0597038:x:x:x:x:19001015:x:x:x
+50848723R:Burguillo Cuesta, Carlos:OBTIENE PLAZA:0597038:x:x:x:x:19001027:x:x:x
+03116835J:Fogue Vela, Juan:OBTIENE PLAZA:0597036:x:x:x:x:19001039:x:x:x
+03078455C:Francisco Romanillos, Modesto:OBTIENE PLAZA:0597038:x:x:x:x:19001039:x:x:x
+03101344R:Lopez Calvo, Daniel:OBTIENE PLAZA:0597038:x:x:x:x:19001039:x:x:x
+03083271Y:Muñoz Ventosa, Alfonso:OBTIENE PLAZA:0597038:x:x:x:x:19001039:x:x:x
+50702033M:Cano Vindel, Maria Luz:OBTIENE PLAZA:0597061:x:x:x:x:19001076:x:x:x
+03094946C:Miguel Anton, Antonio De:OBTIENE PLAZA:0597022:x:x:x:x:19002597:x:x:x
+03079354E:Perucha Gonzalo, Lucia:OBTIENE PLAZA:0597036:x:x:x:x:19002603:x:x:x
+03090853K:Estables Aguado, Maria Isabel:OBTIENE PLAZA:0597038:x:x:x:x:19002639:x:x:x
+03105789F:Muñoz Sancho, Yolanda:OBTIENE PLAZA:0597038:x:x:x:x:19002639:x:x:x
+76014849X:Barrado Muñoz, Marta:OBTIENE PLAZA:0597038:x:x:x:x:19002718:x:x:x
+03101345W:Lopez Calvo, Ismael:OBTIENE PLAZA:0597038:x:x:x:x:19002718:x:x:x
+03105395G:Minchillo Bris, Felix Vicente:OBTIENE PLAZA:0597038:x:x:x:x:19002718:x:x:x
+03123446T:Motiño Calvo, Maria Rosa:OBTIENE PLAZA:0597038:x:x:x:x:19002718:x:x:x
+03075665J:Ruiz Fernandez, Sagrario:OBTIENE PLAZA:0597060:x:x:x:x:19002743:x:x:x
+03110556J:Olmo Robledillo, Susana Del:OBTIENE PLAZA:0597032:x:x:x:x:19002767:x:x:x
+03106576N:Piña Sarmiento, Ricardo:OBTIENE PLAZA:0597036:x:x:x:x:19002767:x:x:x
+12392295X:Gonzalez Sanchez, Maria Del:OBTIENE PLAZA:0597099:x:x:x:x:19002822:x:x:x
+03095492Z:Moratilla Trijueque, Maria Jesus:OBTIENE PLAZA:0597031:x:x:x:x:19008058:x:x:x
+03092284A:Carrero Torrecilla, Raul:OBTIENE PLAZA:0597032:x:x:x:x:19008058:x:x:x
+03087963Y:Matey Garcia, Maria Elvira:OBTIENE PLAZA:0597038:x:x:x:x:19008058:x:x:x
+03102301S:Hernandez Corral, Maria Jesus:OBTIENE PLAZA:0597038:x:x:x:x:19008794:x:x:x
+53561182R:Iglesias Calderon, Rosalina:OBTIENE PLAZA:0597038:x:x:x:x:19008757:x:x:x
+03119311M:Andres Casas, Laura:OBTIENE PLAZA:0597038:x:x:x:x:19001441:x:x:x
+03128680J:Gregorio Puebla, Ana:OBTIENE PLAZA:0597038:x:x:x:x:19001441:x:x:x
+04568277V:Valencia Calleja, Maria Jesus:OBTIENE PLAZA:0597023:x:x:x:x:19003553:x:x:x
+03076740F:Muñoz Ablanque, Maria:OBTIENE PLAZA:0597038:x:x:x:x:19008061:x:x:x
+50806543A:Gutierrez Gutierrez, Maria Luz:OBTIENE PLAZA:0597031:x:x:x:x:19001556:x:x:x
+03098445T:Calvo Ocaña, Brigida:OBTIENE PLAZA:0597038:x:x:x:x:19001556:x:x:x
+03117219Y:Gumiel Jabonero, Maria Jose:OBTIENE PLAZA:0597038:x:x:x:x:19003541:x:x:x
+03101856F:Sanchez Olivares, Maria Isabel:OBTIENE PLAZA:0597038:x:x:x:x:19008691:x:x:x
+04598116W:Cruz Llandres, Gustavo:OBTIENE PLAZA:0597032:x:x:x:x:19001933:x:x:x
+05929276Z:Pomar Buitrago, Daniel:OBTIENE PLAZA:0597038:x:x:x:x:19008198:x:x:x
+70062419A:Arnay Fernandez, Leyre:OBTIENE PLAZA:0597038:x:x:x:x:19002500:x:x:x
+03119227J:Sierra Lopez, Alberto:OBTIENE PLAZA:0597038:x:x:x:x:19002500:x:x:x
+03892281Z:Corroto Garcia, Maria Del:OBTIENE PLAZA:0597032:x:x:x:x:45000035:x:x:x
+03872738K:Gutierrez Cortazar, Alicia:OBTIENE PLAZA:0597036:x:x:x:x:45000096:x:x:x
+04191945B:Macias Diaz, Maria Pilar:OBTIENE PLAZA:0597031:x:x:x:x:45000187:x:x:x
+70346216A:Hernandez Romero, Belen:OBTIENE PLAZA:0597038:x:x:x:x:45000187:x:x:x
+03857498F:Correas Irazola, Julen:OBTIENE PLAZA:0597038:x:x:x:x:45000230:x:x:x
+04610724Y:Tirado Garcia, Javier:OBTIENE PLAZA:0597034:x:x:x:x:45000308:x:x:x
+04146859M:Sanchez Braojos, Maria Nieves:OBTIENE PLAZA:0597038:x:x:x:x:45011771:x:x:x
+04201131C:Fernandez Granados, David:OBTIENE PLAZA:0597032:x:x:x:x:45000311:x:x:x
+04211372A:Serrano Rodriguez, Sonia:OBTIENE PLAZA:0597038:x:x:x:x:45000311:x:x:x
+06272656G:Olmedo Ruiz, Estefania:OBTIENE PLAZA:0597031:x:x:x:x:45000321:x:x:x
+70806869N:Ramirez Pindado, Gentzane:OBTIENE PLAZA:0597037:x:x:x:x:45000357:x:x:x
+04193129E:Rodriguez Montealegre, Daniel:OBTIENE PLAZA:0597038:x:x:x:x:45000412:x:x:x
+03110030Q:Martin Sanchez, Laura:OBTIENE PLAZA:0597038:x:x:x:x:45010375:x:x:x
+11829580J:Enero Iniesta, Maria Caridad:OBTIENE PLAZA:0597032:x:x:x:x:45000710:x:x:x
+06249641N:Sanchez-Tembleque Cañadilla,:OBTIENE PLAZA:0597038:x:x:x:x:45000710:x:x:x
+03889237Y:Morcillo Nuñez, Almudena:OBTIENE PLAZA:0597038:x:x:x:x:45000710:x:x:x
+03867485N:Torres Ramos, Ana Maria:OBTIENE PLAZA:0597032:x:x:x:x:45000722:x:x:x
+04142047T:Rodriguez Gallego, Julian:OBTIENE PLAZA:0597036:x:x:x:x:45011756:x:x:x
+48470198K:Garcia Serrano, Maria Consuelo:OBTIENE PLAZA:0597032:x:x:x:x:45001040:x:x:x
+06240651S:Moreno Suarez, Montserrat:OBTIENE PLAZA:0597038:x:x:x:x:45001052:x:x:x
+06275645A:Trello Corrales, Elena:OBTIENE PLAZA:0597038:x:x:x:x:45001052:x:x:x
+05142337C:Lopez Arenas, Pedro Marino:OBTIENE PLAZA:0597038:x:x:x:x:45005343:x:x:x
+07248518E:Plaza Medrano, Maria Antonia:OBTIENE PLAZA:0597038:x:x:x:x:45005343:x:x:x
+47061391X:Redondo Perez, Maria Teresa:OBTIENE PLAZA:0597038:x:x:x:x:45005343:x:x:x
+06251558C:Rodriguez-Palancas Vidal,:OBTIENE PLAZA:0597038:x:x:x:x:45005343:x:x:x
+53134263P:Duran Valladolid, Ana Belen:OBTIENE PLAZA:0597038:x:x:x:x:45005343:x:x:x
+44398428X:Garcia Fernandez, Francisca:OBTIENE PLAZA:0597032:x:x:x:x:45010454:x:x:x
+04209955N:Abellan Rubio, Blanca:OBTIENE PLAZA:0597037:x:x:x:x:45011999:x:x:x
+03887728S:Sanchez Matamoros, Vilberto:OBTIENE PLAZA:0597036:x:x:x:x:45012190:x:x:x
+06262991E:Sanchez Bustos, Sandra:OBTIENE PLAZA:0597035:x:x:x:x:45005185:x:x:x
+47064987H:Garcia Calero, Maria:OBTIENE PLAZA:0597036:x:x:x:x:45012062:x:x:x
+71218291X:Ortiz Garcia, Angela:OBTIENE PLAZA:0597036:x:x:x:x:45012062:x:x:x
+03878697T:Salado Garcia De La Parra, Ana:OBTIENE PLAZA:0597032:x:x:x:x:45001349:x:x:x
+04198210C:Rojo Garcia, Monica:OBTIENE PLAZA:0597035:x:x:x:x:45010429:x:x:x
+04186221Z:Rodriguez Pinto, Pedro Antonio:OBTIENE PLAZA:0597038:x:x:x:x:45010429:x:x:x
+06252879F:Cano Sierra, Piedad Maria:OBTIENE PLAZA:0597032:x:x:x:x:45001544:x:x:x
+03865773W:Ruiz Andrade, Sonia:OBTIENE PLAZA:0597038:x:x:x:x:45001544:x:x:x
+70350773Y:Bejar Del Castillo, Maria Oliva:OBTIENE PLAZA:0597038:x:x:x:x:45001623:x:x:x
+03877371P:Rodriguez Ceca, Maria:OBTIENE PLAZA:0597031:x:x:x:x:45001726:x:x:x
+03822716R:Martin Rodriguez, Cecilio:OBTIENE PLAZA:0597038:x:x:x:x:45001726:x:x:x
+07974350C:Santos Torres, Ricardo:OBTIENE PLAZA:0597038:x:x:x:x:45001726:x:x:x
+03873053Z:Martin Pantoja, Rodrigo:OBTIENE PLAZA:0597034:x:x:x:x:45001763:x:x:x
+05682376L:Santamaria Baza, Alberto:OBTIENE PLAZA:0597034:x:x:x:x:45001969:x:x:x
+03819160X:Garcia Garcia, Maria Sagrario:OBTIENE PLAZA:0597038:x:x:x:x:45002044:x:x:x
+51643410S:Isidro Lapuerta, Rosario:OBTIENE PLAZA:0597038:x:x:x:x:45002044:x:x:x
+04160224F:Juarez Gomez, Guillermo:OBTIENE PLAZA:0597038:x:x:x:x:45002044:x:x:x
+03843468F:Salinas Fernandez, Lourdes:OBTIENE PLAZA:0597038:x:x:x:x:45002044:x:x:x
+03849935B:Ramirez Del Cerro, Rebeca:OBTIENE PLAZA:0597038:x:x:x:x:45002196:x:x:x
+03901293X:Rodriguez Garcia, Elena:OBTIENE PLAZA:0597034:x:x:x:x:45002287:x:x:x
+71221379Q:Garcia Moya, Laura:OBTIENE PLAZA:0597031:x:x:x:x:45002421:x:x:x
+06250745N:Chacon Madrid, Virginia:OBTIENE PLAZA:0597038:x:x:x:x:45002421:x:x:x
+04211946W:Cacereño Gil, Maria:OBTIENE PLAZA:0597036:x:x:x:x:45002779:x:x:x
+04609586H:Alvarez Cortes, Cristina:OBTIENE PLAZA:0597037:x:x:x:x:45002809:x:x:x
+14258368R:Kintana Morales, Nerea:OBTIENE PLAZA:0597038:x:x:x:x:45011823:x:x:x
+48530741M:Gras Madrigal, Maria:OBTIENE PLAZA:0597031:x:x:x:x:45010363:x:x:x
+70350991V:Sanchez De Rojas Gomez,:OBTIENE PLAZA:0597038:x:x:x:x:45012074:x:x:x
+04214147H:Herencias Velasco, Raquel:OBTIENE PLAZA:0597031:x:x:x:x:45003139:x:x:x
+04202681Y:Rodriguez Guerro, Noelia:OBTIENE PLAZA:0597031:x:x:x:x:45003152:x:x:x
+04156048V:Colilla Perez, Victoria:OBTIENE PLAZA:0597038:x:x:x:x:45003152:x:x:x
+04191069D:Fernandez Muñoz, Francisco:OBTIENE PLAZA:0597034:x:x:x:x:45004624:x:x:x
+70416479R:Sanchez-Escalonilla Martin-:OBTIENE PLAZA:0597038:x:x:x:x:45004831:x:x:x
+04197519L:Diaz Ayguavives, Elisa:OBTIENE PLAZA:0597035:x:x:x:x:45005811:x:x:x
+03887112C:Sabadias Toribio, Maria Belen:OBTIENE PLAZA:0597038:x:x:x:x:45003361:x:x:x
+03825175E:Diaz-Davila Navas, Soledad:OBTIENE PLAZA:0597038:x:x:x:x:45003383:x:x:x
+04157764P:Rodriguez Garcia, Maria:OBTIENE PLAZA:0597036:x:x:x:x:45003644:x:x:x
+03883499H:Carrasco Garcia, Maria Del:OBTIENE PLAZA:0597031:x:x:x:x:45003929:x:x:x
+03874944L:Duran Medina, Sergio:OBTIENE PLAZA:0597032:x:x:x:x:45003929:x:x:x
+03878328E:Galan Carmena, Miguel:OBTIENE PLAZA:0597038:x:x:x:x:45003942:x:x:x
+03892256N:Garrido Jimenez, Inmaculada:OBTIENE PLAZA:0597032:x:x:x:x:45004818:x:x:x
+03887328Y:Garcia Ruiperez, Angela:OBTIENE PLAZA:0597038:x:x:x:x:45004818:x:x:x
+03867551D:Mencia Gutierrez, Ana Belen:OBTIENE PLAZA:0597038:x:x:x:x:45004818:x:x:x
+02255923Z:Barco Garcia, Leticia:OBTIENE PLAZA:0597031:x:x:x:x:45004843:x:x:x
+03846546A:Martin Gomez, Maria De La:OBTIENE PLAZA:0597032:x:x:x:x:45004843:x:x:x
+03880989S:Pino Pazos, Clara Del:OBTIENE PLAZA:0597034:x:x:x:x:45004843:x:x:x
+04169452N:Hormigos Cuesta, Maria:OBTIENE PLAZA:0597038:x:x:x:x:45004843:x:x:x
+06254487M:Torrillas Torrillas, Vicente:OBTIENE PLAZA:0597034:x:x:x:x:45004971:x:x:x
+03859495A:Martin Galan, Raquel:OBTIENE PLAZA:0597035:x:x:x:x:45004971:x:x:x
+53214241S:Ivars Catala, Soledad:OBTIENE PLAZA:0597031:x:x:x:x:45005203:x:x:x
+04151936E:Casa Hormigos, Maria:OBTIENE PLAZA:0597037:x:x:x:x:45005203:x:x:x
+03864761W:Buitrago Napoles, Elena Maria:OBTIENE PLAZA:0597038:x:x:x:x:45005203:x:x:x
+70348233L:Verbo Garcia, Maria De La Cruz:OBTIENE PLAZA:0597099:x:x:x:x:45005239:x:x:x
+11917065Y:Rua Santos, Maria Soledad De:OBTIENE PLAZA:0597060:x:x:x:x:45005240:x:x:x
+03893473X:Gomez Ruiz, Ana Belen:OBTIENE PLAZA:0597036:x:x:x:x:45005574:x:x:x
+03799241D:Canton Martin, Luis Jesus:OBTIENE PLAZA:0597038:x:x:x:x:45010296:x:x:x
+03876917Z:Plata Segoviano, Maria Victoria:OBTIENE PLAZA:0597036:x:x:x:x:45010302:x:x:x
+04209836P:Alvarez Garcia, Marta:OBTIENE PLAZA:0597037:x:x:x:x:45010302:x:x:x
+03887613S:Ezquerra Escobar, Quetura:OBTIENE PLAZA:0597031:x:x:x:x:45004053:x:x:x
+03891061J:Ramiro Rodriguez, Julio Jesus:OBTIENE PLAZA:0597035:x:x:x:x:45004168:x:x:x
+04206159B:Rossi Lopez, Marta Vanesa:OBTIENE PLAZA:0597037:x:x:x:x:45004171:x:x:x
+46864957L:Covacho Cuesta, Maria:OBTIENE PLAZA:0597031:x:x:x:x:45004201:x:x:x
+06260332P:Santos Sierra, Sara Maria:OBTIENE PLAZA:0597035:x:x:x:x:45004284:x:x:x
+06252098P:Garcia-Vaquero Collado, Ana:OBTIENE PLAZA:0597038:x:x:x:x:45004284:x:x:x
+06260071T:Cabañas Bielsa, Sonia:OBTIENE PLAZA:0597036:x:x:x:x:45004296:x:x:x
+06224262W:Sanchez Moreno, Jesus:OBTIENE PLAZA:0597038:x:x:x:x:45004296:x:x:x
+05928896W:Martin Maeso, Maria Belen:OBTIENE PLAZA:0597038:x:x:x:x:45004302:x:x:x
+24199136P:Romero Puente, Cristina:OBTIENE PLAZA:0597031:x:x:x:x:45004429:x:x:x
+03868165W:Espina Rubio, Maria Gloria:OBTIENE PLAZA:0597038:x:x:x:x:45004429:x:x:x
+03846011C:Perez Perez, Maria Manuela:OBTIENE PLAZA:0597038:x:x:x:x:45004429:x:x:x
+03875924X:Perez Carralero, Miguel Angel:OBTIENE PLAZA:0597034:x:x:x:x:45004454:x:x:x
+03898639R:Martin Fernandez, Maria Del:OBTIENE PLAZA:0597037:x:x:x:x:45004478:x:x:x
+70519661M:Valero Martinez, Sagrario:OBTIENE PLAZA:0597036:x:x:x:x:45004533:x:x:x
+03886065P:Cerro Martin, Beatriz Del:OBTIENE PLAZA:0597038:x:x:x:x:45004557:x:x:x
+71222098E:Garcia Ruiz Peinado, Juan:OBTIENE PLAZA:0597038:x:x:x:x:45004557:x:x:x
+03867322X:Martin Esteban, Sandra:OBTIENE PLAZA:0597038:x:x:x:x:45004594:x:x:x
+52389212L:Garcia Perez, Maria Elena:OBTIENE PLAZA:0597038:x:x:x:x:45004600:x:x:x
+03859380A:Redondo Lopez, Rosario:OBTIENE PLAZA:0597038:x:x:x:x:45004600:x:x:x
+02268580K:Gomez Herrero, Laura:OBTIENE PLAZA:0597032:x:x:x:x:45010511:x:x:x
+03894059K:Ballesteros Garcia, Rocio:OBTIENE PLAZA:0597031:x:x:x:x:45012104:x:x:x
+44385520M:Jorda Gonzalez, Francisca:OBTIENE PLAZA:0597038:x:x:x:x:02001214:x:x:x
+07538534P:Torres Navarro, Francisco Jose:OBTIENE PLAZA:0597034:x:x:x:x:02004574:x:x:x
+47052332J:Cuerda Marin, Adela Jesus:OBTIENE PLAZA:0597038:x:x:x:x:02000982:x:x:x
+30972777B:Castillo Lopez, Rosa Maria:OBTIENE PLAZA:0597038:x:x:x:x:13000359:x:x:x
+25455789X:Alasanz Lopez, Carmen P:OBTIENE PLAZA:0597038:x:x:x:x:13002061:x:x:x
+07537223P:Fresneda Ortiz, Celia:OBTIENE PLAZA:0597038:x:x:x:x:13003415:x:x:x
+04603277B:Esquivias Temprado, Jorge:OBTIENE PLAZA:0597038:x:x:x:x:16004157:x:x:x
+47051431D:Gonzalez Castillo, Maria:OBTIENE PLAZA:0597031:x:x:x:x:16000693:x:x:x
+04593673K:Mora Saiz, Maria Isabel:OBTIENE PLAZA:0597034:x:x:x:x:16009362:x:x:x
+03826605A:Almodovar Tendero, Maria:OBTIENE PLAZA:0597038:x:x:x:x:45000722:x:x:x
+04208089D:Ana Davila, Olga De:OBTIENE PLAZA:0597037:x:x:x:x:45011756:x:x:x
+04205750Q:Herranz Diaz, Ruben:OBTIENE PLAZA:0597034:x:x:x:x:45010417:x:x:x
+03878438V:Molina Diez-Canseco, Beatriz:OBTIENE PLAZA:0597038:x:x:x:x:45004053:x:x:x
+06243381P:Loarces Ubeda, Maria Teresa:OBTIENE PLAZA:0597038:x:x:x:x:45004296:x:x:x
+05153389D:Lopez Cañete, Agustina:OBTIENE PLAZA:0597032:x:x:x:x:02004288:x:x:x
+44393542T:Almansa Patiño, Rus Remedios:OBTIENE PLAZA:0597031:x:x:x:x:02003090:x:x:x
+52760823L:Collado Martinez, Mariana:OBTIENE PLAZA:0597036:x:x:x:x:02003132:x:x:x
+06249478X:Castellanos Barrilero, Maria Del:OBTIENE PLAZA:0597038:x:x:x:x:13003828:x:x:x
+07542552R:Valero Garcia, Purificacion:OBTIENE PLAZA:0597038:x:x:x:x:13010900:x:x:x
+05626462H:Ramirez Rodriguez, Isabel:OBTIENE PLAZA:0597038:x:x:x:x:13001091:x:x:x
+05669304B:Toro Lopez, Fidela De:OBTIENE PLAZA:0597038:x:x:x:x:13001157:x:x:x
+05676502X:Lledo Calcerrada, Juan Jose:OBTIENE PLAZA:0597038:x:x:x:x:13004754:x:x:x
+05665995Z:Morena Naranjo, Maria Angeles:OBTIENE PLAZA:0597038:x:x:x:x:13004754:x:x:x
+05663346X:Garcia Hurtado, Fatima:OBTIENE PLAZA:0597031:x:x:x:x:13004882:x:x:x
+23798735Z:Barea Gonzalez, Jesus Ignacio:OBTIENE PLAZA:0597038:x:x:x:x:13004882:x:x:x
+05915401P:Romero Funez, Nuria:OBTIENE PLAZA:0597038:x:x:x:x:13004882:x:x:x
+05660136C:Gonzalez Lopez, Maria Del:OBTIENE PLAZA:0597038:x:x:x:x:13009466:x:x:x
+05651796Y:Millan Lobillo, Carlos:OBTIENE PLAZA:0597038:x:x:x:x:13009466:x:x:x
+05677627P:Serrano Balbuena, Laura:OBTIENE PLAZA:0597038:x:x:x:x:13001455:x:x:x
+05674561R:Maldonado Gomez, Maria:OBTIENE PLAZA:0597038:x:x:x:x:13001480:x:x:x
+05663960A:Manrique Romo, Cesar Aurelio:OBTIENE PLAZA:0597038:x:x:x:x:13001819:x:x:x
+44389933W:Navas Gomez, Maria Jose:OBTIENE PLAZA:0597038:x:x:x:x:13003385:x:x:x
+04600091E:Aroca Meaños, Paula Maria:OBTIENE PLAZA:0597031:x:x:x:x:16001405:x:x:x
+04558130J:Saiz Santos, German:OBTIENE PLAZA:0597038:x:x:x:x:16004236:x:x:x
+03801370E:Jimenez Garcia, Pilar:OBTIENE PLAZA:0597038:x:x:x:x:45000011:x:x:x
+03853769G:Pedroche Celemin, Jose Luis:OBTIENE PLAZA:0597038:x:x:x:x:45000783:x:x:x
+05675316C:Soriano Perez, Delfina:OBTIENE PLAZA:0597038:x:x:x:x:45013984:x:x:x
+03809511K:Avila Corrales, Maria Sagrario:OBTIENE PLAZA:0597031:x:x:x:x:45012001:x:x:x
