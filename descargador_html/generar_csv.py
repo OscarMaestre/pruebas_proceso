@@ -16,6 +16,7 @@ COMANDO_ECHO="echo"
 comandos="""
 .mode csv
 .headers ON
+.separator :
 select * from centros_region;
 .quit
 """
