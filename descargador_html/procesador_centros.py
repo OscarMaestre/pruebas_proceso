@@ -161,9 +161,9 @@ for i in range ( 0, TOTAL_PAGINAS):
         if gf.existe_fichero ( fichero_mas_informacion ):
             lista_ensenanzas=procesar_archivo_centro ( fichero_mas_informacion )
         
-        c=Centro(naturaleza, codigo_centro, nombre_centro, direccion_postal,
-                 codigo_postal, nombre_localidad, codigo_localidad,
-                 nombre_provincia, tlf, fax, email, web, lista_ensenanzas)
+        c=Centro(naturaleza, codigo_centro, nombre_centro.upper(), direccion_postal,
+                 codigo_postal, nombre_localidad.upper(), codigo_localidad,
+                 nombre_provincia.upper(), tlf, fax, email, web, lista_ensenanzas)
         
         lista_centros.append ( c )
         
