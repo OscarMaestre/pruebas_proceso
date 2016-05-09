@@ -47,10 +47,15 @@ def get_datos_personas_para_mostrar(personas):
         diccionario['especialidad']=especialidades.descripcion
         lista_personas.append ( diccionario )
     return lista_personas
+
+
 def ver_datos(peticion, localidad_id):
     localidad_asociada=Localidades.objects.get(pk=localidad_id)
-    qs=Q(codigo_localidad=localidad_id, naturaleza="Público")
+    qs_publicos= Q( tipo_centro="CEIP") |  Q( tipo_centro="IES") |  Q( tipo_centro="CPM")
+    qs_publicos= qs_publicos |  Q( tipo_centro="CEE") |  Q( tipo_centro="EOI") | Q( tipo_centro="CEPA")
+    qs=Q(codigo_localidad=localidad_id, naturaleza="Público")  # & ( qs_publicos )
     centros=CentrosRegion.objects.filter(qs).order_by("nombre_centro")
+    print (centros)
     resultado=""
     for c in centros:
         #Esto sirve para quitar la C que hay al final de los codigos de centro
