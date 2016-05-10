@@ -98,7 +98,7 @@ On Error GoTo Proc_Err
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='45003942' where dni='06269691Y'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Su centro actual podrÃ­a estar equivocado. Su ultimo nombramiento acababa el 06-05-2016' where dni='06269691Y'"
+	sql="update gaseosa set auxiliar='Su centro actual podría estar equivocado. Su ultimo nombramiento acababa el 06-05-2016' where dni='06269691Y'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='13000694' where dni='03911319P'"
 	db.Execute sql, dbFailOnError
@@ -187,7 +187,7 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_25042016_3()
-	fun_25042016_1
-End Function
+Public Function fun_25042016_3()
+	fun_25042016_1
+End Function
 
