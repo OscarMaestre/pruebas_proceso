@@ -12,6 +12,14 @@ On Error Resume Next
 On Error GoTo Proc_Err
   'Todas las actualizaciones se meten en una transaccion
   ws.BeginTrans
+	sql="update gaseosa set codcentrocursoactual='13010641' where dni='06261312E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 28-04-2016 hasta 06-06-2016 (Adjudicacion 27-04-2016)' where dni='06261312E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set codcentrocursoactual='13010641' where dni='06261312E'"
+	db.Execute sql, dbFailOnError
+	sql="update gaseosa set auxiliar='Desde 28-04-2016 hasta 06-06-2016 (Adjudicacion 27-04-2016)' where dni='06261312E'"
+	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='45010387' where dni='70166210H'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='Desde 28-04-2016 hasta 24-06-2016 (Adjudicacion 27-04-2016)' where dni='70166210H'"
@@ -132,14 +140,6 @@ On Error GoTo Proc_Err
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set auxiliar='Desde 28-04-2016 hasta 24-06-2016 (Adjudicacion 27-04-2016)' where dni='70343786B'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='13010641' where dni='06261312E'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-04-2016 hasta 06-06-2016 (Adjudicacion 27-04-2016)' where dni='06261312E'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set codcentrocursoactual='13010641' where dni='06261312E'"
-	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 28-04-2016 hasta 06-06-2016 (Adjudicacion 27-04-2016)' where dni='06261312E'"
-	db.Execute sql, dbFailOnError
 
 		 'se hace el commit
   ws.CommitTrans
@@ -155,7 +155,7 @@ Proc_Err:
   Resume Proc_Exit
 End Function
 	
-Public Function fun_27042016_3()
-	fun_27042016_1
-End Function
+Public Function fun_27042016_3()
+	fun_27042016_1
+End Function
 
