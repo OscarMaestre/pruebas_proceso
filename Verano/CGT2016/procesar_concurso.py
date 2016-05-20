@@ -21,6 +21,7 @@ POS_PROVINCIA_DESTINO       =   11
 gf=GestorFicheros()
 
 lineas_concurso=gf.get_lineas_fichero( sys.argv[1] )
+print ("Option Explicit")    
 #print (lineas_concurso)
 registros=[]
 for l in lineas_concurso:
@@ -63,9 +64,9 @@ for fila in registros:
         sql_intermedio = ''
         
     
-    #temp = "update gaseosa set codcentrocursoactual='" + cod_centro_definitivo\
-    #    + "' where dni='" + dni + "'"
-    #sql_intermedio += GestorBD.crear_sentencia_update(temp)
+    temp = "update gaseosa set codcentrocursoactual='" + cod_centro_definitivo\
+        + "' where dni='" + dni + "'"
+    sql_intermedio += GestorBD.crear_sentencia_update(temp)
     
     temp = "update gaseosa set codcentrodefinitivo='" + cod_centro_definitivo\
         + "' where dni='" + dni + "'"
@@ -79,7 +80,8 @@ for fila in registros:
         + "' where dni='" + dni + "'"
     sql_intermedio += GestorBD.crear_sentencia_update(temp)
     i = i + 1
-    
+
+
 nombre_funcion = prefijo_funcion + str(num_funcion)
 imprimir = GestorBD.get_procedimiento(nombre_funcion, sql_intermedio)
 print (imprimir)
