@@ -64,9 +64,9 @@ for fila in registros:
         sql_intermedio = ''
         
     
-    temp = "update gaseosa set codcentrocursoactual='" + cod_centro_definitivo\
-        + "' where dni='" + dni + "'"
-    sql_intermedio += GestorBD.crear_sentencia_update(temp)
+    #temp = "update gaseosa set codcentrocursoactual='" + cod_centro_definitivo\
+    #    + "' where dni='" + dni + "'"
+    #sql_intermedio += GestorBD.crear_sentencia_update(temp)
     
     temp = "update gaseosa set codcentrodefinitivo='" + cod_centro_definitivo\
         + "' where dni='" + dni + "'"

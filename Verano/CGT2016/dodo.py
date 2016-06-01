@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
 from utilidades.ficheros.ProcesadorPDF import ProcesadorPDF
 from utilidades.ficheros.GestorFicheros import GestorFicheros
-import glob
+import glob, platform
 
 
 
 FICHERO_RESULTADOS_TXT="concurso_2016.txt"
-COMANDO_PROCESADO_CONCURSOS_NORMALES="./procesar_tabla.py"
-COMANDO_PROCESADO_CONCURSOS_MAESTROS="./procesar_maestros.py"
-GENERADOR_BASIC="./procesar_concurso.py"
+if platform.system()=="Linux":
+	COMANDO_PROCESADO_CONCURSOS_NORMALES="./procesar_tabla.py"
+else:
+	COMANDO_PROCESADO_CONCURSOS_NORMALES="procesar_tabla.py"
+	
+if platform.system()=="Linux":
+	COMANDO_PROCESADO_CONCURSOS_MAESTROS="./procesar_maestros.py"
+else:
+	COMANDO_PROCESADO_CONCURSOS_MAESTROS="procesar_maestros.py"
+if platform.system()=="Linux":
+	GENERADOR_BASIC="./procesar_concurso.py"
+else:
+	GENERADOR_BASIC="procesar_concurso.py"
 
 procesador_pdf=ProcesadorPDF()
 gf=GestorFicheros()
