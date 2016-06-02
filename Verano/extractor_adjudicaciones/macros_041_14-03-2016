@@ -14,11 +14,11 @@ On Error GoTo Proc_Err
   ws.BeginTrans
 	sql="update gaseosa set codcentrocursoactual='13000128' where dni='70572429B'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 15-03-2016 hasta 31-05-2016 (Adjudicacion 14-03-2016)' where dni='70572429B'"
+	sql="update gaseosa set auxiliar='Su centro actual podría estar equivocado. Su ultimo nombramiento acababa el 31-05-2016' where dni='70572429B'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='13004973' where dni='05696265Q'"
 	db.Execute sql, dbFailOnError
-	sql="update gaseosa set auxiliar='Desde 15-03-2016 hasta 30-05-2016 (Adjudicacion 14-03-2016)' where dni='05696265Q'"
+	sql="update gaseosa set auxiliar='Su centro actual podría estar equivocado. Su ultimo nombramiento acababa el 30-05-2016' where dni='05696265Q'"
 	db.Execute sql, dbFailOnError
 	sql="update gaseosa set codcentrocursoactual='16001624' where dni='47059495T'"
 	db.Execute sql, dbFailOnError
