@@ -5,7 +5,7 @@ from utilidades.basedatos.CalculadorIBAN import CalculadorIBAN
 
 import unittest
 
-class TeinstIban(unittest.TestCase):
+class TestIban(unittest.TestCase):
     
     def test_digito_control_correcto(self):
         #El digito de control de esto es 06
