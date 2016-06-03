@@ -12,7 +12,7 @@ gf.crear_directorio ( SUBDIRECTORIO_HTML )
 
 for i in range(0, TOTAL_PAGINAS):
     num = i*3
-    url_descarga        = URL_BASE.format ( num )
-    fichero_destino     = FICHERO_BASE.format ( i )
+    url_descarga        = URL_PAGINAS_AL.format ( num )
+    fichero_destino     = FICHERO_BASE_AL.format ( i )
     if not gf.existe_fichero( fichero_destino ):
         gf.descargar_fichero(url_descarga, fichero_destino)
