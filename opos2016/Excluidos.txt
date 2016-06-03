@@ -1,269 +1,117 @@
-08963541G:ACERA CRESPO, MARIA AURORA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03902005D:AGUA (DEL) RODRIGUEZ DE AMBROSIO, JOSE MANUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-20037923R:AGUD MIRALLES, MARIA DE LOS ANGELES:Excluido:Libre:No acreditar la titulaci髇 requerida
-05668813A:ALCAIDE AZCONA, LUIS FERNANDO:Excluido:Libre:No acreditar la titulaci髇 requerida
-71529593F:ALVAREZ GARCIA, ANDREA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-77354445V:ANGUITA SUSI, JUAN ALBERTO:Excluido:Libre:No acreditar la titulaci髇 requerida
-44913686E:ARAGON MARTIN, ALVARO:Excluido:Libre:No acreditar la titulaci髇 requerida
-03246012E:ASPRILLA MEJIA, AURA YARILENY:Excluido:Libre:No pertenecer al 醡bito de gesti髇 de la Consejer韆 de Educaci髇, Cultura y Deportes-JCCM o no ser funcionario de carrera
-50857821Z:BALLESTER GOMEZ, MONICA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03930768E:BALLESTEROS VILLARRUBIA, ALBERTO:Excluido:Libre:No acreditar la titulaci髇 requerida
-03930769T:BALLESTEROS VILLARRUBIA, JAVIER:Excluido:Libre:No acreditar la titulaci髇 requerida
-21003244N:BARBERA MORENO, MARTA GEMA:Excluido:Libre:No acreditar la titulaci髇 requerida
-X2708612V:BARGACH NICO, ESTHER NOEMI:Excluido:Libre:No acreditar suficientemente los requisitos relacionados con la nacionalidad exigidos en la convocatoria
-03111585F:BARRA FLORIAN, AFRICA MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-11832987Q:BIRLANGA MEJIAS, LARA MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-74224340M:BLANCO GARCES, MARIA DOLORES:Excluido:Libre:No acreditar la titulaci髇 requerida
-05331354T:BLANCO MACARRO, MARTA:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-38831876X:BLANCO RODRIGUEZ, RAQUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-02311799T:BLAS MORENO, ANA MARIA DE:Excluido:Libre:No acreditar la titulaci髇 requerida
-47230824W:BRAVO BARROS, MARINA:Excluido:Libre:No estar en posesi髇 de la titulaci髇 exigida en la convocatoria
-52965670M:BUENO SANCHEZ, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-08028925Q:BURGOS MORENO, ALMUDENA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-08028925Q:BURGOS MORENO, ALMUDENA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-08028925Q:BURGOS MORENO, ALMUDENA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-02300122F:CABEZAS TALAVERA, ESTELA:Excluido:Libre:No acreditar la titulaci髇 requerida
-53627712S:CABRERA PEREZ, MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-04610896V:CAMPILLO REQUENA, SORAYA NATALIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-74730485N:CANO LINARES, JUAN CARLOS:Excluido:Libre:No acreditar la titulaci髇 requerida
-47093655M:CA袮VATE LOPEZ, ANIBAL:Excluido:Libre:No acreditar la titulaci髇 requerida
-03916793P:CARBONELL DIAZ, BORJA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03110469H:CARRERO DE LA ROJA, SILVIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-45886662Y:CARVAJAL CASADO, MARIA DOLORES:Excluido:Libre:No acreditar la titulaci髇 requerida
-04558008Y:CASADO GARCIA, CONCEPCION:Excluido:Libre:No acreditar la titulaci髇 requerida
-47098826R:CASTA袿 MOLINA, DIEGO:Excluido:Libre:No acreditar la titulaci髇 requerida
-50895306D:CASTELLANO CAPELLAN, LAURA:Excluido:Libre:No acreditar la titulaci髇 requerida
-53465646F:CASTRO PELAEZ, IRENE:Excluido:Libre:No acreditar la titulaci髇 requerida
-05677577G:CESPEDES DIEGO, MARIA JOSE:Excluido:Libre:No acreditar la titulaci髇 requerida
-02652020M:CHACON NIETO, DIEGO:Excluido:Libre:No acreditar la titulaci髇 requerida
-72311856V:COLORADO DIEZ, VIRGINIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-47066407N:COPETE PIQUERAS, ANGEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-70353299W:CRIADO GALLEGO, JULIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-70905667W:CUADRADO HERNANDEZ, INES:Excluido:Libre:No acreditar la titulaci髇 requerida
-75105704D:CUADROS HEREDIA, PATRICIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-05701420L:CUESTA SANCHEZ, JUAN FERNANDO:Excluido:Libre:No acreditar la titulaci髇 requerida
-06280676C:CUEVAS CALERO, ISABEL MARIA:Excluido:Libre:No estar en posesi髇 de la titulaci髇 exigida en la convocatoria
-08830441M:CUEVAS PI袳RO, JOSE FELICIANO:Excluido:Libre:No acreditar la titulaci髇 requerida
-80078695D:CUEVAS PI袳RO, MARIA GUADALUPE:Excluido:Libre:No acreditar la titulaci髇 requerida
-75140232Z:DIAZ CHICA, LORENA:Excluido:Libre:No acreditar la titulaci髇 requerida
-76134234W:DIAZ LLORENTE, CRISTINA:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-33524838S:ESPUELA BARREIRA, MARGARITA:Excluido:Libre:No acreditar la titulaci髇 requerida
-47087075A:ESTEBAN ELBAL, CARLOS:Excluido:Libre:No acreditar la titulaci髇 requerida
-47087032Y:FAJARDO TORTOLA, LIDIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-77347068T:FERNANDEZ BARES, JOSE MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03143636L:FERNANDEZ FERNANDEZ, MARIA DEL CARMEN:Excluido:Libre:Presentarse a la misma especialidad simult醤eamente en las convocatorias de distintos turnos de acceso
-28978195N:FERNANDEZ FRANCO, LARA:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-76644194Y:FERNANDEZ ROMAN, ALVARO:Excluido:Libre:No acreditar la titulaci髇 requerida
-73101051J:FERNANDEZ ROMERO, VICTORIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03128245S:FERNANDEZ CENDEJAS RODRIGUEZ, NEREA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-03128245S:FERNANDEZ CENDEJAS RODRIGUEZ, NEREA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-03128245S:FERNANDEZ CENDEJAS RODRIGUEZ, NEREA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-03128245S:FERNANDEZ CENDEJAS RODRIGUEZ, NEREA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-05673089R:FERNANDEZ-BRAVO PINTO, MARIA CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-05287888G:FRANCO ORDO袳Z, JOSE MANUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-47492398C:FRANZE FERREIRA, NICOLAS:Excluido:Libre:No acreditar la titulaci髇 requerida
-71030793P:FREIRE CASTRILLO, ALBERTO:Excluido:Libre:No acreditar la titulaci髇 requerida
-71222822X:FUENTES MARTINEZ, ESTHER MARIA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-71222822X:FUENTES MARTINEZ, ESTHER MARIA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-04618720K:GARCIA BUENDIA, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-04212216L:GARCIA CACERES, MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-53469190D:GARCIA CAMACHO, YOLANDA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03913468H:GARCIA COBO, ISRAEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-23064060M:GARCIA GARCIA, MERITXELL:Excluido:Libre:No acreditar la titulaci髇 requerida
-04610462C:GARCIA GONZALEZ, NAZARET:Excluido:Libre:No pertenecer al 醡bito de gesti髇 de la Consejer韆 de Educaci髇, Cultura y Deportes-JCCM o no ser funcionario de carrera
-03113068H:GARCIA GREGORIO, ROSA MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-02287548Z:GARCIA GUTIERREZ, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-04852110F:GARCIA JIMENEZ, ANA:Excluido:Libre:No acreditar la titulaci髇 requerida
-04605244T:GARCIA RUIZ, MARGARITA:Excluido:Libre:No acreditar la titulaci髇 requerida
-80094067V:GARCIA SANCHEZ, ADRIANA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-80158299X:GARCIA SIMANCAS, FELIX:Excluido:Libre:No acreditar la titulaci髇 requerida
-05930854M:GARCIA DE LAS BAYONA GORMAZ, GEMA GRACIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-07486219H:GARCIA DEL PINO MEGIA, MARIA REMEDIOS:Excluido:Libre:No acreditar la titulaci髇 requerida
-04622950L:GARCIA-MARQUINA DIAZ, NATALIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-50553685F:GIL MATOS, ENRIQUE:Excluido:Libre:No acreditar la titulaci髇 requerida
-51945591E:GOMEZ CRUCES, JUAN PABLO:Excluido:Libre:No acreditar la titulaci髇 requerida
-06578515D:GOMEZ GARCIA, ALICIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-01186303D:GOMEZ MANCEBO, CRISTINA MARIA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-02290970D:GOMEZ SUSMOZAS, ESTEFANIA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-71220197F:GOMEZ VERA, MARIA DOLORES:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-11814804A:GONSALVES DIEZ, SONIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-49067327R:GONZALEZ ALVAREZ, ISABEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-05460562V:GONZALEZ ESQUINAS, SANDRA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03927001G:GONZALEZ FERNANDEZ, DAVID:Excluido:Libre:No acreditar la titulaci髇 requerida
-03146674K:GONZALEZ GARCIA, ANA ISABEL:Excluido:Libre:No pertenecer al 醡bito de gesti髇 de la Consejer韆 de Educaci髇, Cultura y Deportes-JCCM o no ser funcionario de carrera
-03146674K:GONZALEZ GARCIA, ANA ISABEL:Excluido:Libre:Presentarse a la misma especialidad simult醤eamente en las convocatorias de distintos turnos de acceso
-76132755H:GONZALEZ HERNANDEZ, SARAY:Excluido:Libre:No acreditar la titulaci髇 requerida
-05929679A:GONZALEZ ORME袿, ANGEL:Excluido:Libre:No estar en posesi髇 de la titulaci髇 exigida en la convocatoria
-47026035M:GONZALEZ PEZZI, ELENA:Excluido:Libre:No estar en posesi髇 de la titulaci髇 exigida en la convocatoria
-70577881N:GONZALEZ PONCE, ANTONIA:Excluido:Libre:No estar en posesi髇 de la titulaci髇 exigida en la convocatoria
-04579064V:GONZALO CATALAN, MONTSERRAT:Excluido:Libre:No acreditar la titulaci髇 requerida
-06253596B:GUIA DIAZ-PARRE袿, MARCOS DE LA:Excluido:Libre:No estar en posesi髇 de la titulaci髇 exigida en la convocatoria
-70166154P:GUILLEN LOPEZ, SONIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-71452985N:GUTIERREZ OREJAS, BEATRIZ:Excluido:Libre:No acreditar la titulaci髇 requerida
-75743137C:GUTIERREZ ORTEGA, ANTONIA MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-77335232D:HERMOSO MONTES, ANTONIO JAVIER:Excluido:Libre:No acreditar la titulaci髇 requerida
-52826353E:HERNANDEZ NAVARRETE, ROSA DEL CARMEN:Excluido:Libre:No acreditar la titulaci髇 requerida
-08996203Y:HERRAIZ VERA, VICTORIA EUGENIA:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-70869357D:HERRERA RAMIREZ, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-05936175J:HOYO GIL, MIRIAM DEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-70817943T:IGLESIAS SIMON, SONIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03131066F:ILLANA BENITO, AMPARO:Excluido:Libre:No acreditar la titulaci髇 requerida
-71525900V:JIMENEZ JIMENEZ, LUCIA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-14626730H:JIMENEZ PADILLA, FRANCISCO IGNACIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-05308772G:KAYALI LUCENA, YASMINE:Excluido:Libre:No acreditar la titulaci髇 requerida
-30991973W:LEIVA PLEGUEZUELOS, JOSE ANTONIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-71422845W:LLAMAZARES GONZALEZ, EVA:Excluido:Libre:No acreditar la titulaci髇 requerida
-04206477F:LLAVE NOVILLO, FATIMA DE LA:Excluido:Libre:No acreditar la titulaci髇 requerida
-18450870V:LOPEZ MARTINEZ, MARTA:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-47076419L:LUCENA LOPEZ, ROSA MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-14308132Q:LUNAR DE ANDRES, NELIDA OLGA:Excluido:Libre:No acreditar la titulaci髇 requerida
-26968307W:MALAGON MORENO, JUAN DAVID:Excluido:Libre:No acreditar la titulaci髇 requerida
-75139561X:MANCEBO CALLEJA, MARIA DEL CARMEN:Excluido:Libre:No acreditar la titulaci髇 requerida
-02653361N:MARTIN DIAZ, LOURDES:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-02653361N:MARTIN DIAZ, LOURDES:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-03128596K:MARTIN MARCO, IVAN:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-03128596K:MARTIN MARCO, IVAN:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-46861545B:MARTIN TORRES, MARIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-03916715E:MARTIN VILLARREAL, MARTA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03868134V:MARTIN DE EUGENIO GOMEZ-ESPINOSA, MONICA:Excluido:Libre:No acreditar la titulaci髇 requerida
-14311173K:MARTINEZ ARENAS, ANGEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-52756931Z:MARTINEZ JIMENEZ, VERONICA:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-03812186M:MARTINEZ LOZANO, MARIA JERONIMA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-47541589Z:MARTINEZ MOYA, MARIA ELENA:Excluido:Libre:No acreditar la titulaci髇 requerida
-77709524E:MARTINEZ TOLEDO, ADRIAN:Excluido:Libre:No acreditar la titulaci髇 requerida
-04628981R:MARTINEZ DE MARCO, ANTONIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-50485617L:MARTINEZ DE LA TORRE, SARA:Excluido:Libre:No acreditar la titulaci髇 requerida
-75961042T:MATA AG蹺RA, ROCIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-05674555H:MESAS MARTINO, INMACULADA:Excluido:Libre:No acreditar la titulaci髇 requerida
-30210620M:MOLERO ROMERO, MARIA JOSE:Excluido:Libre:No acreditar la titulaci髇 requerida
-05708646T:MOLINA CA袸ZARES, ESTER:Excluido:Libre:No acreditar la titulaci髇 requerida
-22562995H:MOLINA GINES, LORENZO:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-47056153Q:MOLINA LOPEZ, RAQUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-30942685A:MORENO ALOST, MONICA:Excluido:Libre:No acreditar la titulaci髇 requerida
-74519198A:MORENO CHACON, MARIA TERESA:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-11413920D:MORENO FERNANDEZ, MARIA JESUS:Excluido:Libre:No acreditar la titulaci髇 requerida
-04222134R:MORENO GALLEGOS, OLGA:Excluido:Libre:No pertenecer al 醡bito de gesti髇 de la Consejer韆 de Educaci髇, Cultura y Deportes-JCCM o no ser funcionario de carrera
-09068152B:MORENO MALDONADO, LAURA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03921014C:MORENO PEDRAZA, BELEN:Excluido:Libre:No acreditar la titulaci髇 requerida
-06257333E:MORENO RODRIGUEZ, OLIVIA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-06257333E:MORENO RODRIGUEZ, OLIVIA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-20087054G:MORERA MORERA, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-20027041K:MOSCARDO SABATER, EMILI:Excluido:Libre:No acreditar la titulaci髇 requerida
-71441488S:MU袸Z MARTINEZ, DIANA:Excluido:Libre:No acreditar la titulaci髇 requerida
-05927332W:MU袿Z CAMINERO, ANGELA:Excluido:Libre:No acreditar la titulaci髇 requerida
-47520391E:MU袿Z GALLEGO, GEMA:Excluido:Libre:No acreditar la titulaci髇 requerida
-02291117H:MU袿Z RODRIGUEZ, BORJA:Excluido:Libre:No acreditar la titulaci髇 requerida
-71423877E:NAVA GONZALEZ, SANDRA:Excluido:Libre:No acreditar la titulaci髇 requerida
-29211763S:NAVARRO BONO, EMILIO:Excluido:Libre:No estar en posesi髇 de la titulaci髇 exigida en la convocatoria
-47447029F:NAVARRO MOLINA, MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-48518301P:NAVARRO NAVARRO, MIGUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-03873035L:NOMBELA TENORIO, RUBEN:Excluido:Libre:No acreditar la titulaci髇 requerida
-43128076V:OROSTIVAR LLOMPART, SONIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-04608512W:ORTEGA MEDINA, DANIEL MANUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-48552357R:ORTU袿 HERNANDEZ, ALBERTO:Excluido:Libre:No acreditar la titulaci髇 requerida
-04618702A:PAGE CRESPO, SILVIA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-03145281P:PALANCAR VARELA, LETICIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03883436R:PANTOJA DIAZ, KAREN:Excluido:Libre:No acreditar la titulaci髇 requerida
-26760765N:PARENT SANCHEZ, LAURA:Excluido:Libre:No acreditar la titulaci髇 requerida
-05707068D:PARRA JAIME, JOSE ANTONIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-08932520X:PASTOR HERNANDEZ, DAVID:Excluido:Libre:No acreditar la titulaci髇 requerida
-26042765A:PEINADO AGUAYO, INMACULADA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-26042765A:PEINADO AGUAYO, INMACULADA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-14313736P:PERALES GARRIDO, MARIA JOSE:Excluido:Libre:No acreditar la titulaci髇 requerida
-53468936P:PEREZ CRISPIN, CAROLINA:Excluido:Libre:Presentarse a la misma especialidad simult醤eamente en las convocatorias de distintos turnos de acceso
-76752978T:PEREZ LEON, ANA MARIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-46892024S:PEREZ ROMERO, ANA ISABEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-70355536P:PEREZAGUA FUENTES, ANGELA:Excluido:Libre:No acreditar la titulaci髇 requerida
-05698123B:PINILLA FERNANDEZ DE MERA, MARIA ISABEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-27343704Q:PINO ROJAS, JUAN JOSE:Excluido:Libre:No acreditar la titulaci髇 requerida
-23300382W:PORTERO CEGARRA, MARIA JESUS:Excluido:Libre:No acreditar la titulaci髇 requerida
-70641319Q:QUINTANA DELGADO, GLORIA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-48660460G:RABADAN MENDOZA, ALMUDENA:Excluido:Libre:No acreditar la titulaci髇 requerida
-05253753R:RAMIREZ BUSTAMANTE, AURORA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03925459A:RAMOS MANZANARES, GABRIELA:Excluido:Libre:No acreditar la titulaci髇 requerida
-53431314Z:RICO ZAMORANO, ALICIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-74851285Q:RIOS BARRIONUEVO, JOSE MIGUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-50885460F:RIVAS IZQUIERDO, JOSE MANUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-03914682J:RODRIGUEZ CABA袮S, LUIS ENRIQUE:Excluido:Libre:No acreditar la titulaci髇 requerida
-05635283F:RODRIGUEZ CASTELLANOS, CECILIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-31001608T:RODRIGUEZ CHAVEZ, MARIA ISABEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-47073375B:RODRIGUEZ GARCIA, IRENE:Excluido:Libre:No acreditar la titulaci髇 requerida
-14623922Q:RODRIGUEZ JIMENEZ, SARA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-53109694A:RODRIGUEZ OLMEDILLA, RUBEN:Excluido:Libre:No acreditar la titulaci髇 requerida
-03911255J:RODRIGUEZ SANCHEZ, GRACIELA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-03911255J:RODRIGUEZ SANCHEZ, GRACIELA:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-14631506X:ROMERO RUIZ, MARIA JOSE:Excluido:Libre:No acreditar la titulaci髇 requerida
-04591712S:ROMON MARTINEZ, RAQUEL:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-04591712S:ROMON MARTINEZ, RAQUEL:Excluido:Libre:Presentarse a varias especialidades simult醤eamente
-06277410C:ROPERO ROPERO, VIRGINIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-28971131D:ROSADO GONZALEZ, ANTONIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-04622362Y:ROVIRA CA袸ZARES, LAURA:Excluido:Libre:No acreditar la titulaci髇 requerida
-31010291N:RUBIO AGUILAR, ANA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-04622978R:RUBIO MAINEZ, LUIS JAVIER:Excluido:Libre:No acreditar la titulaci髇 requerida
-05695167E:RUIZ ALBA, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-28647359P:RUIZ GARCIA, PABLO:Excluido:Libre:No acreditar la titulaci髇 requerida
-26227221E:RUS RASCON, MANUEL ANGEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-30991262G:RUZ LUQUE, FRANCISCA:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-09066175N:SAEZ MARTINEZ, ANDREA:Excluido:Libre:No acreditar la titulaci髇 requerida
-02664224L:SAEZ PERRINO, MARIA JOSE:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-47085533W:SAEZ RISUE袿, MIGUEL ANGEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-23317893X:SAHUQUILLO TORTOSA SAHUQUILLO TORTOSA, NOELIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-47492281H:SALCES LOPEZ, SERGIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-70807872A:SAN JUAN ALDUDO, LUCIA DE:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-52889667V:SAN PABLO ALMAZAN, EVA CRISTINA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-03920477N:SANCHEZ DORADO, ANGEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-23302797W:SANCHEZ GONZALEZ, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-75722352G:SANCHEZ MARTINEZ, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-07796223M:SANCHEZ PEREZ, FRANCISCO E:Excluido:Libre:No acreditar la titulaci髇 requerida
-04205469B:SANCHEZ RODRIGUEZ, VANESA:Excluido:Libre:No acreditar la titulaci髇 requerida
-26238322Z:SANMARTIN MELIA, ALBERT:Excluido:Libre:No acreditar la titulaci髇 requerida
-51987808B:SANMILLA LORENTE, SONIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-51940054M:SANTOS HUMANES, LUIS:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-73994114D:SARRIO BALLESTER, MARIA DEL CARMEN:Excluido:Libre:No acreditar la titulaci髇 requerida
-X3561993Y:SAS MORARIU, DORA:Excluido:Libre:No acreditar suficientemente los requisitos relacionados con la nacionalidad exigidos en la convocatoria
-23308588C:SEGURA LOPEZ, MARIA DE LA SOLEDAD:Excluido:Libre:No acreditar la titulaci髇 requerida
-45890033L:SIMON SANCHEZ CRESPO, LEIRE:Excluido:Libre:No acreditar la titulaci髇 requerida
-05680281V:SORIANO DOTOR, FRANCISCO MIGUEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-15481856G:SOTO DIAZ, AURORA:Excluido:Libre:No acreditar la titulaci髇 requerida
-26035722K:SOTO MERINO, SACRAMENTO:Excluido:Libre:No acreditar la titulaci髇 requerida
-52762865Z:TALAVERA RUANO, JUAN:Excluido:Libre:No acreditar la titulaci髇 requerida
-52521572Z:TALLON VELASCO, MARIA CARMEN:Excluido:Libre:No acreditar la titulaci髇 requerida
-20855674X:TARRAGO JORQUES, ANNA:Excluido:Libre:No acreditar la titulaci髇 requerida
-50908697Z:TELLO MARTINEZ, INES:Excluido:Libre:No acreditar la titulaci髇 requerida
-30234526Z:TORRECILLAS BAENA, JOSE:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-X9031084L:VALENTINOVA, TEODORA:Excluido:Libre:No acreditar la titulaci髇 requerida
-70585750S:VALLE GOMEZ, SONIA DEL:Excluido:Libre:No abonar derechos de examen seg鷑 convocatoria
-44380650B:VALLE SANCHEZ, MARIA JOSE:Excluido:Libre:No acreditar la titulaci髇 requerida
-49095634H:VALLEZ VALBUENA, ALICIA ISABEL:Excluido:Libre:No acreditar la titulaci髇 requerida
-05917023C:VALVERDE MENDEZ, ARTURO:Excluido:Libre:No acreditar la titulaci髇 requerida
-47308672H:VASCO RAMOS, PATRICIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-04617553G:VELAZQUEZ LEON, MARIA DEL CARMEN:Excluido:Libre:No acreditar la titulaci髇 requerida
-03128366K:VIEJO IBARRA, JULIO:Excluido:Libre:No acreditar la titulaci髇 requerida
-48601978B:VILA PARDO, MIREIA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03117235E:VILLASE袿R GANDASEGUI, MARINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-03899622H:VISO CHACON, FERNANDO DEL:Excluido:Libre:Pertenecer (como funcionario de carrera o en pr醕ticas) al mismo cuerpo que se desea ingresar
-05260243M:VLLLAR RUIZ, ASCENSION:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-X2473900C:YAKOUBI, FEDERICA:Excluido:Libre:No acreditar la titulaci髇 requerida
-51114657D:YUSTE VILLA, AINHOA:Excluido:Libre:No firmar la instancia de participaci髇 (registro presencial)
-47050131C:ZAMORA GOMEZ, CRISTINA:Excluido:Libre:No acreditar la titulaci髇 requerida
-14311896P:ZOROA TOMAS, JAVIER:Excluido:Libre:No acreditar la titulaci髇 requerida
-14311897D:ZOROA TOMAS, VICENTE:Excluido:Libre:No acreditar la titulaci髇 requerida
-23289704L:ARTIGAO PAJARON, GUILLERMO:Excluido:Discapacitados:No acreditar la titulaci髇 requerida
+20037923R:AGUD MIRALLES, MARIA DE LOS ANGELES:Excluido:Libre:No acreditar la titulaci贸n requerida
+70986124M:ARCOS MORENO, FRANCISCO JAVIER:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+03930768E:BALLESTEROS VILLARRUBIA, ALBERTO:Excluido:Libre:No acreditar la titulaci贸n requerida
+03930769T:BALLESTEROS VILLARRUBIA, JAVIER:Excluido:Libre:No acreditar la titulaci贸n requerida
+21003244N:BARBERA MORENO, MARTA GEMA:Excluido:Libre:No acreditar la titulaci贸n requerida
+77723908P:BELMONTE RUZAFA, NATALIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+11863502X:BENITO VILLAR, MARIA ISABEL:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+11832987Q:BIRLANGA MEJIAS, LARA MARIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+05331354T:BLANCO MACARRO, MARTA:Excluido:Libre:No abonar derechos de examen seg煤n convocatoria
+02311799T:BLAS MORENO, ANA MARIA DE:Excluido:Libre:No acreditar la titulaci贸n requerida
+47230824W:BRAVO BARROS, MARINA:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+02300122F:CABEZAS TALAVERA, ESTELA:Excluido:Libre:No acreditar la titulaci贸n requerida
+53627712S:CABRERA PEREZ, MARIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+50895306D:CASTELLANO CAPELLAN, LAURA:Excluido:Libre:No acreditar la titulaci贸n requerida
+70354923Q:CEPEDA MARTIN, MARIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+70353299W:CRIADO GALLEGO, JULIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+70905667W:CUADRADO HERNANDEZ, INES:Excluido:Libre:No acreditar la titulaci贸n requerida
+75105704D:CUADROS HEREDIA, PATRICIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+05701420L:CUESTA SANCHEZ, JUAN FERNANDO:Excluido:Libre:No acreditar la titulaci贸n requerida
+06280676C:CUEVAS CALERO, ISABEL MARIA:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+08830441M:CUEVAS PI脩ERO, JOSE FELICIANO:Excluido:Libre:No acreditar la titulaci贸n requerida
+80078695D:CUEVAS PI脩ERO, MARIA GUADALUPE:Excluido:Libre:No acreditar la titulaci贸n requerida
+76134234W:DIAZ LLORENTE, CRISTINA:Excluido:Libre:No abonar derechos de examen seg煤n convocatoria
+28978195N:FERNANDEZ FRANCO, LARA:Excluido:Libre:No abonar derechos de examen seg煤n convocatoria
+73101051J:FERNANDEZ ROMERO, VICTORIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+03128245S:FERNANDEZ CENDEJAS RODRIGUEZ, NEREA:Excluido:Libre:Presentarse a varias especialidades simult谩neamente
+03128245S:FERNANDEZ CENDEJAS RODRIGUEZ, NEREA:Excluido:Libre:Presentarse a varias especialidades simult谩neamente
+03128245S:FERNANDEZ CENDEJAS RODRIGUEZ, NEREA:Excluido:Libre:Presentarse a varias especialidades simult谩neamente
+47492398C:FRANZE FERREIRA, NICOLAS:Excluido:Libre:No acreditar la titulaci贸n requerida
+71030793P:FREIRE CASTRILLO, ALBERTO:Excluido:Libre:No acreditar la titulaci贸n requerida
+04212216L:GARCIA CACERES, MARIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+80094067V:GARCIA SANCHEZ, ADRIANA:Excluido:Libre:No firmar la instancia de participaci贸n (registro presencial)
+50553685F:GIL MATOS, ENRIQUE:Excluido:Libre:No acreditar la titulaci贸n requerida
+51945591E:GOMEZ CRUCES, JUAN PABLO:Excluido:Libre:No acreditar la titulaci贸n requerida
+76132755H:GONZALEZ HERNANDEZ, SARAY:Excluido:Libre:No acreditar la titulaci贸n requerida
+05929679A:GONZALEZ ORME脩O, ANGEL:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+47026035M:GONZALEZ PEZZI, ELENA:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+70577881N:GONZALEZ PONCE, ANTONIA:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+14626273K:GUERRERO FERNANDEZ, BERTA DOLORES:Excluido:Libre:No acreditar la titulaci贸n requerida
+06253596B:GUIA DIAZ-PARRE脩O, MARCOS DE LA:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+70166154P:GUILLEN LOPEZ, SONIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+71452985N:GUTIERREZ OREJAS, BEATRIZ:Excluido:Libre:No acreditar la titulaci贸n requerida
+05936175J:HOYO GIL, MIRIAM DEL:Excluido:Libre:No acreditar la titulaci贸n requerida
+70817943T:IGLESIAS SIMON, SONIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+03131066F:ILLANA BENITO, AMPARO:Excluido:Libre:No acreditar la titulaci贸n requerida
+71525900V:JIMENEZ JIMENEZ, LUCIA:Excluido:Libre:No firmar la instancia de participaci贸n (registro presencial)
+14626730H:JIMENEZ PADILLA, FRANCISCO IGNACIO:Excluido:Libre:No acreditar la titulaci贸n requerida
+71422845W:LLAMAZARES GONZALEZ, EVA:Excluido:Libre:No acreditar la titulaci贸n requerida
+04212772T:LLAVE GOMEZ ESCALONILLA, JESUS DE LA:Excluido:Libre:No acreditar la titulaci贸n requerida
+18450870V:LOPEZ MARTINEZ, MARTA:Excluido:Libre:No abonar derechos de examen seg煤n convocatoria
+14308132Q:LUNAR DE ANDRES, NELIDA OLGA:Excluido:Libre:No acreditar la titulaci贸n requerida
+26968307W:MALAGON MORENO, JUAN DAVID:Excluido:Libre:No acreditar la titulaci贸n requerida
+75139561X:MANCEBO CALLEJA, MARIA DEL CARMEN:Excluido:Libre:No acreditar la titulaci贸n requerida
+03916715E:MARTIN VILLARREAL, MARTA:Excluido:Libre:No acreditar la titulaci贸n requerida
+52756931Z:MARTINEZ JIMENEZ, VERONICA:Excluido:Libre:No abonar derechos de examen seg煤n convocatoria
+77709524E:MARTINEZ TOLEDO, ADRIAN:Excluido:Libre:No acreditar la titulaci贸n requerida
+50485617L:MARTINEZ DE LA TORRE, SARA:Excluido:Libre:No acreditar la titulaci贸n requerida
+30942685A:MORENO ALOST, MONICA:Excluido:Libre:No acreditar la titulaci贸n requerida
+04222134R:MORENO GALLEGOS, OLGA:Excluido:Libre:No pertenecer al 谩mbito de gesti贸n de la Consejer铆a de Educaci贸n, Cultura y Deportes-JCCM o no ser funcionario de carrera
+20087054G:MORERA MORERA, CRISTINA:Excluido:Libre:No acreditar la titulaci贸n requerida
+20027041K:MOSCARDO SABATER, EMILI:Excluido:Libre:No acreditar la titulaci贸n requerida
+05927332W:MU脩OZ CAMINERO, ANGELA:Excluido:Libre:No acreditar la titulaci贸n requerida
+02291117H:MU脩OZ RODRIGUEZ, BORJA:Excluido:Libre:No acreditar la titulaci贸n requerida
+29211763S:NAVARRO BONO, EMILIO:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+47447029F:NAVARRO MOLINA, MARIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+14312661Z:NOVA RUIZ, ISABEL MARIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+48552357R:ORTU脩O HERNANDEZ, ALBERTO:Excluido:Libre:No acreditar la titulaci贸n requerida
+08932520X:PASTOR HERNANDEZ, DAVID:Excluido:Libre:No acreditar la titulaci贸n requerida
+26042765A:PEINADO AGUAYO, INMACULADA:Excluido:Libre:Presentarse a varias especialidades simult谩neamente
+27343704Q:PINO ROJAS, JUAN JOSE:Excluido:Libre:No acreditar la titulaci贸n requerida
+23300382W:PORTERO CEGARRA, MARIA JESUS:Excluido:Libre:No acreditar la titulaci贸n requerida
+48660460G:RABADAN MENDOZA, ALMUDENA:Excluido:Libre:No acreditar la titulaci贸n requerida
+03925459A:RAMOS MANZANARES, GABRIELA:Excluido:Libre:No acreditar la titulaci贸n requerida
+74851285Q:RIOS BARRIONUEVO, JOSE MIGUEL:Excluido:Libre:No acreditar la titulaci贸n requerida
+50885460F:RIVAS IZQUIERDO, JOSE MANUEL:Excluido:Libre:No acreditar la titulaci贸n requerida
+53109694A:RODRIGUEZ OLMEDILLA, RUBEN:Excluido:Libre:No acreditar la titulaci贸n requerida
+03911255J:RODRIGUEZ SANCHEZ, GRACIELA:Excluido:Libre:Presentarse a varias especialidades simult谩neamente
+50419414X:ROLDAN ROLDAN, MARIA JESUS:Excluido:Libre:No estar en posesi贸n de la titulaci贸n exigida en la convocatoria
+14631506X:ROMERO RUIZ, MARIA JOSE:Excluido:Libre:No acreditar la titulaci贸n requerida
+02664224L:SAEZ PERRINO, MARIA JOSE:Excluido:Libre:No abonar derechos de examen seg煤n convocatoria
+23317893X:SAHUQUILLO TORTOSA SAHUQUILLO TORTOSA, NOELIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+52889667V:SAN PABLO ALMAZAN, EVA CRISTINA:Excluido:Libre:No firmar la instancia de participaci贸n (registro presencial)
+23302797W:SANCHEZ GONZALEZ, CRISTINA:Excluido:Libre:No acreditar la titulaci贸n requerida
+51940054M:SANTOS HUMANES, LUIS:Excluido:Libre:No abonar derechos de examen seg煤n convocatoria
+73994114D:SARRIO BALLESTER, MARIA DEL CARMEN:Excluido:Libre:No acreditar la titulaci贸n requerida
+23308588C:SEGURA LOPEZ, MARIA DE LA SOLEDAD:Excluido:Libre:No acreditar la titulaci贸n requerida
+45602038F:SIMON MARQUEZ, MARIA DEL MAR:Excluido:Libre:No acreditar la titulaci贸n requerida
+05680281V:SORIANO DOTOR, FRANCISCO MIGUEL:Excluido:Libre:No acreditar la titulaci贸n requerida
+15481856G:SOTO DIAZ, AURORA:Excluido:Libre:No acreditar la titulaci贸n requerida
+52521572Z:TALLON VELASCO, MARIA CARMEN:Excluido:Libre:No acreditar la titulaci贸n requerida
+20855674X:TARRAGO JORQUES, ANNA:Excluido:Libre:No acreditar la titulaci贸n requerida
+30234526Z:TORRECILLAS BAENA, JOSE:Excluido:Libre:No abonar derechos de examen seg煤n convocatoria
+X9031084L:VALENTINOVA, TEODORA:Excluido:Libre:No acreditar la titulaci贸n requerida
+49095634H:VALLEZ VALBUENA, ALICIA ISABEL:Excluido:Libre:No acreditar la titulaci贸n requerida
+05917023C:VALVERDE MENDEZ, ARTURO:Excluido:Libre:No acreditar la titulaci贸n requerida
+48601978B:VILA PARDO, MIREIA:Excluido:Libre:No acreditar la titulaci贸n requerida
+03899622H:VISO CHACON, FERNANDO DEL:Excluido:Libre:Pertenecer (como funcionario de carrera o en pr谩cticas) al mismo cuerpo que se desea ingresar
+X2473900C:YAKOUBI, FEDERICA:Excluido:Libre:No acreditar la titulaci贸n requerida
+23289704L:ARTIGAO PAJARON, GUILLERMO:Excluido:Discapacitados:No acreditar la titulaci贸n requerida
 44393015W:BEJAR MARTINEZ, MARIA:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 04611296A:CARRASCO ALCALA, YOBANA:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 50629243X:CORTIJO SALOR, CLAUDIA MARIA DEL ROCIO:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 03143636L:FERNANDEZ FERNANDEZ, MARIA DEL CARMEN:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 70072100R:GALLEGOS PITA, MARIA PALOMA:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
-X1263653X:GILLILAND, FRANCESCA BEATRICE:Excluido:Discapacitados:No acreditar la titulaci髇 requerida
-04606526V:GONZALEZ MENDOZA DE LA FUENTE, MARIA TERESA:Excluido:Discapacitados:No acreditar la titulaci髇 requerida
+X1263653X:GILLILAND, FRANCESCA BEATRICE:Excluido:Discapacitados:No acreditar la titulaci贸n requerida
+04606526V:GONZALEZ MENDOZA DE LA FUENTE, MARIA TERESA:Excluido:Discapacitados:No acreditar la titulaci贸n requerida
 70520550C:JIMENEZ CUENCA, VICTOR MANUEL:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 11790960X:LAIN ESCOBAR, ANDRES:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
-45598500B:LOPEZ VIUDEZ, MARIA:Excluido:Discapacitados:No acreditar la titulaci髇 requerida
+45598500B:LOPEZ VIUDEZ, MARIA:Excluido:Discapacitados:No acreditar la titulaci贸n requerida
 07541616P:MARTINEZ GARCIA, CONCEPCION:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 44516585Q:MARTINEZ LOPEZ, JULIA:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
-53468936P:PEREZ CRISPIN, CAROLINA:Excluido:Discapacitados:No acreditar la titulaci髇 requerida
+53468936P:PEREZ CRISPIN, CAROLINA:Excluido:Discapacitados:No acreditar la titulaci贸n requerida
 04208234Q:PINO CAMACHO, SONIA DEL:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
-05197065P:PI袳RO CIFUENTES, MARIA ELISA:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
+05197065P:PI脩ERO CIFUENTES, MARIA ELISA:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 04166000X:SANCHEZ GONZALEZ, MARIA LEONOR:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 20060080D:SEGUI SIMO, CLAUDIA:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
 70352512C:SEVILLA ALCOBENDAS, MARIA JESUS:Excluido:Discapacitados:No justificar requisitos para participar en la convocatoria de personas con discapacidad
