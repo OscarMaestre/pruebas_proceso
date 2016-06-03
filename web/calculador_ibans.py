@@ -16,13 +16,13 @@ for g in gaseosa:
         continue
     para_actualizar=(iban_calculado, g.dni)
     if g.iban=="":
-        print ("{0} no tiene IBAN".format(g.dni) )
+        #print ("{0} no tiene IBAN".format(g.dni) )
         tuplas_resultado.append(para_actualizar)
         continue
     if iban_calculado!=g.iban:
         tuplas_resultado.append(para_actualizar)
-        print ("**** Error en {0}. IBAN Calculado {1}, iban leido {2}***".format(
-            g.dni, iban_calculado, g.iban) )
+        #print ("**** Error en {0}. IBAN Calculado {1}, iban leido {2}***".format(
+        #    g.dni, iban_calculado, g.iban) )
     else:
         #print ("Iban correcto en {0}".format ( g.dni) )
         pass

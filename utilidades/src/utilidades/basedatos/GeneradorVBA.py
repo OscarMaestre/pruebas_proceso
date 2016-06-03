@@ -34,7 +34,7 @@ class GeneradorVBA(object):
     @staticmethod
     def get_sql_update(nombre_tabla, campo_a_actualizar, valor_a_escribir,
                        campo_condicion,valor_campo_condicion):
-        cad_sql="update {0} set {1}='{2}' where {3}='{4}'\r\n";
+        cad_sql="update {0} set {1}='{2}' where {3}='{4}'";
         resultado=cad_sql.format (
             nombre_tabla, campo_a_actualizar, valor_a_escribir,
             campo_condicion, valor_campo_condicion
@@ -67,34 +67,41 @@ class GeneradorVBA(object):
         return sql
     
     @staticmethod
+    def generar_funcion (vector_tuplas, nombre_funcion, nombre_tabla,
+                           nombre_campo_actualizar, nombre_campo_condicion):
+        vba=GeneradorVBA.get_preludio_sql(nombre_funcion)
+        for t in vector_tuplas:
+            valor_a_escribir=t[0]
+            valor_campo_condicion=t[1]
+            sentencia_update=GeneradorVBA.get_sql_update(nombre_tabla, nombre_campo_actualizar, valor_a_escribir,
+                       nombre_campo_condicion,valor_campo_condicion)
+            vba+=GeneradorVBA.crear_sentencia_update(sentencia_update)
+        vba+=GeneradorVBA.get_fin_sql()
+        return vba
+    
+    @staticmethod
     def generar_modulo_vba(vector_tuplas, nombre_tabla,
                            nombre_campo_actualizar, nombre_campo_condicion,
                            nombre_modulo):
         gf=GestorFicheros()
         vba=""
         prefijo_funcion="f_{0}"
-        funcion_global="Public Function f_global()\r\n{0}\r\nEnd Function"
+        funcion_global="\r\nPublic Function f_global()\r\n{0}\r\nEnd Function"
         funcion_parcial="Public Function {0}(){1}\r\nEnd Function"
         max=100 #Se generan funciones con este maximo de sentencias
         contador=0
         num_funcion=1
         vba_parcial=""
-        lista_funciones=[]
-        funcion_actual=prefijo_funcion.format(num_funcion)
-        lista_funciones.append(funcion_actual)
-        for t in vector_tuplas:
-            if contador>max:
-                contador=0
-                
-                funcion_actual=prefijo_funcion.format(num_funcion)
-                vba_parcial+=funcion_parcial.format(funcion_actual, vba_parcial)+"\r\n"
-                num_funcion+=1
-            else:
-                vba_parcial=vba_parcial+GeneradorVBA.get_sql_update ( nombre_tabla,
-                                             nombre_campo_actualizar, t[0],
-                                             nombre_campo_condicion, t[1])+"\r\n"
-                contador+=1
-        print (len(vector_tuplas))
-        vba_parcial+=funcion_global.format("\r\n".join(lista_funciones))
-        return vba_parcial
-        gf.anadir_a_fichero(nombre_modulo, vba_resultado)
+        funciones=[]
+        while len(vector_tuplas)!=0:
+            trozo=vector_tuplas[0:max]
+            nombre_funcion="f_"+str(num_funcion)
+            vba_parcial+=GeneradorVBA.generar_funcion (trozo, nombre_funcion,
+                nombre_tabla,nombre_campo_actualizar, nombre_campo_condicion)
+            vector_tuplas=vector_tuplas[max:]
+            funciones.append(nombre_funcion)
+            num_funcion+=1
+        vba_global="\r\n".join ( funciones )
+        vba_resultado=vba_parcial+funcion_global.format ( vba_global )
+        return vba_resultado
+        #gf.anadir_a_fichero(nombre_modulo,vba_resultado)
