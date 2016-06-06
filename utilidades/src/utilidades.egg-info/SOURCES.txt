@@ -8,6 +8,7 @@ src/utilidades.egg-info/top_level.txt
 src/utilidades/basedatos/CalculadorIBAN.py
 src/utilidades/basedatos/Configurador.py
 src/utilidades/basedatos/ConstantesBaseDatosSQLite.py
+src/utilidades/basedatos/GeneradorVBA.py
 src/utilidades/basedatos/GestorBD.py
 src/utilidades/basedatos/GestorMySQL.py
 src/utilidades/basedatos/ListaCampos.py
