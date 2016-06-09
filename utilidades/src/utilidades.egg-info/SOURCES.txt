@@ -6,6 +6,7 @@ src/utilidades.egg-info/SOURCES.txt
 src/utilidades.egg-info/dependency_links.txt
 src/utilidades.egg-info/top_level.txt
 src/utilidades/basedatos/CalculadorIBAN.py
+src/utilidades/basedatos/CalculadorLetraDNI.py
 src/utilidades/basedatos/Configurador.py
 src/utilidades/basedatos/ConstantesBaseDatosSQLite.py
 src/utilidades/basedatos/GeneradorVBA.py
