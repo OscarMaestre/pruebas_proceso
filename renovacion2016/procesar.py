@@ -17,6 +17,6 @@ while not procesador.eof():
         if nombre=="":
             linea_anterior=procesador.get_linea_anterior()
             nombre=linea_anterior[fin_dni:fin_dni+36].strip()
-        print (dni+":"+nombre)
+        print (dni+":"+nombre+":Admitido:Admitido")
     procesador.siguiente_linea()
     linea_actual=procesador.get_linea_actual().strip()
