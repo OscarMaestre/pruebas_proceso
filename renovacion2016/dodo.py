@@ -5,8 +5,14 @@ import glob, platform
 
 
 
-PROCESAR="procesar.py"
-PROCESAR_EXCLUIDOS="procesar_excluidos.py"
+if platform.system()=="Linux":
+    PROCESAR="./procesar.py"
+else:
+    PROCESAR="procesar.py"
+if platform.system()=="Linux":
+    PROCESAR_EXCLUIDOS="./procesar_excluidos.py"
+else:
+    PROCESAR_EXCLUIDOS="procesar_excluidos.py"
 RESULTADOS="Resultados.txt"
 
 procesador_pdf=ProcesadorPDF()
