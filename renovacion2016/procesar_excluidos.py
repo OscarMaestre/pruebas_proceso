@@ -32,7 +32,7 @@ while not procesador.eof():
             causa1=causas[codigo_exclusion]
             causa2="No hay segunda causa"
         else:
-            print(codigo_exclusion)
+            #print(codigo_exclusion)
             causa1=causas[codigo_exclusion[0:3]]
             causa2=causas[codigo_exclusion[5:8]]
         
