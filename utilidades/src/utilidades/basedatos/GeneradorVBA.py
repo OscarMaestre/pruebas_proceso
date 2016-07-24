@@ -50,7 +50,7 @@ class GeneradorVBA(object):
     @staticmethod    
     def get_fin_sql():
         sql="""
-             'se hace el commit
+     'se hace el commit
       ws.CommitTrans
     
     Proc_Exit:
@@ -68,7 +68,8 @@ class GeneradorVBA(object):
     
     @staticmethod
     def generar_funcion (vector_tuplas, nombre_funcion, nombre_tabla,
-                           nombre_campo_actualizar, nombre_campo_condicion):
+                           nombre_campo_actualizar, nombre_campo_condicion,
+                           nombre_campo_auxiliar=None):
         vba=GeneradorVBA.get_preludio_sql(nombre_funcion)
         for t in vector_tuplas:
             valor_a_escribir=t[0]
@@ -76,13 +77,20 @@ class GeneradorVBA(object):
             sentencia_update=GeneradorVBA.get_sql_update(nombre_tabla, nombre_campo_actualizar, valor_a_escribir,
                        nombre_campo_condicion,valor_campo_condicion)
             vba+=GeneradorVBA.crear_sentencia_update(sentencia_update)
+            if nombre_campo_auxiliar!=None:
+                valor_campo_auxiliar=t[2]
+                sentencia_update=GeneradorVBA.get_sql_update(nombre_tabla,
+                        nombre_campo_auxiliar, valor_campo_auxiliar,
+                       nombre_campo_condicion,valor_campo_condicion)
+                vba+=GeneradorVBA.crear_sentencia_update(sentencia_update)
+                
         vba+=GeneradorVBA.get_fin_sql()
         return vba
     
     @staticmethod
     def generar_modulo_vba(vector_tuplas, nombre_tabla,
                            nombre_campo_actualizar, nombre_campo_condicion,
-                           nombre_modulo):
+                           nombre_modulo, campo_auxiliar=None):
         gf=GestorFicheros()
         vba=""
         prefijo_funcion="f_{0}"
@@ -97,7 +105,7 @@ class GeneradorVBA(object):
             trozo=vector_tuplas[0:max]
             nombre_funcion="f_"+str(num_funcion)
             vba_parcial+=GeneradorVBA.generar_funcion (trozo, nombre_funcion,
-                nombre_tabla,nombre_campo_actualizar, nombre_campo_condicion)
+                nombre_tabla,nombre_campo_actualizar, nombre_campo_condicion, campo_auxiliar)
             vector_tuplas=vector_tuplas[max:]
             funciones.append(nombre_funcion)
             num_funcion+=1
