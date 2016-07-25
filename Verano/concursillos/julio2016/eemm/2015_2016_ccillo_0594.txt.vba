@@ -1,4 +1,4 @@
-[('02004252', '05432067L', 'DENEGADO en concursillo Julio 2016'), ('13004353', '50750285A', 'DENEGADO en concursillo Julio 2016'), ('19003140', '02612257D', 'OBTIENE en concursillo Julio 2016'), ('13004717', '05639777Q', 'DENEGADO en concursillo Julio 2016'), ('13004717', '20006562N', 'DENEGADO en concursillo Julio 2016'), ('13004341', '01177499Z', 'DENEGADO en concursillo Julio 2016'), ('19003140', '04606127D', 'OBTIENE en concursillo Julio 2016')]
+Option Explicit
 Public Function f_1()
     
     On Error Resume Next
@@ -14,33 +14,33 @@ Public Function f_1()
       'Todas las actualizaciones se meten en una transaccion
       ws.BeginTrans
     	strSQL="update gaseosa set codcentrocursoactual='02004252' where dni='05432067L'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set auxiliar='DENEGADO en concursillo Julio 2016' where dni='05432067L'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set codcentrocursoactual='13004353' where dni='50750285A'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set auxiliar='DENEGADO en concursillo Julio 2016' where dni='50750285A'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set codcentrocursoactual='19003140' where dni='02612257D'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set auxiliar='OBTIENE en concursillo Julio 2016' where dni='02612257D'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set codcentrocursoactual='13004717' where dni='05639777Q'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set auxiliar='DENEGADO en concursillo Julio 2016' where dni='05639777Q'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set codcentrocursoactual='13004717' where dni='20006562N'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set auxiliar='DENEGADO en concursillo Julio 2016' where dni='20006562N'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set codcentrocursoactual='13004341' where dni='01177499Z'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set auxiliar='DENEGADO en concursillo Julio 2016' where dni='01177499Z'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set codcentrocursoactual='19003140' where dni='04606127D'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 	strSQL="update gaseosa set auxiliar='OBTIENE en concursillo Julio 2016' where dni='04606127D'"
-	db.Execute sql, dbFailOnError
+	db.Execute strSQL, dbFailOnError
 
      'se hace el commit
       ws.CommitTrans
@@ -55,7 +55,7 @@ Public Function f_1()
       MsgBox "Error actualizando: " & Err.Description
       Resume Proc_Exit
     End Function
-        
-Public Function f_global()
-f_1
+        
+Public Function f_global()
+f_1
 End Function

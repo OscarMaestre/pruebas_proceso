@@ -15,8 +15,8 @@ for f in ficheros_eemm:
 ficheros_convertidos=glob.glob("*.txt")
 for f in ficheros_convertidos:
     if platform.system()=="Linux":
-        gf.ejecutar_comando ( "./procesar_concursillo_eemm.py",
-                         f, ">", f+".vba")
+        gf.ejecutar_comando ( "./procesar_seleccionados.py",
+                         f, ">", f+".sel")
     else:
-        gf.ejecutar_comando ( "procesar_concursillo_eemm.py",
-                         f, ">", f+".vba")
+        gf.ejecutar_comando ( "procesar_seleccionados.py",
+                         f, ">", f+".sel")

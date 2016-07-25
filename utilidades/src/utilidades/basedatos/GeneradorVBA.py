@@ -28,7 +28,7 @@ class GeneradorVBA(object):
     @staticmethod
     def crear_sentencia_update(sentencia):
         sql="\tstrSQL=\""+sentencia+"\"\n"
-        sql+="\tdb.Execute sql, dbFailOnError\n"
+        sql+="\tdb.Execute strSQL, dbFailOnError\n"
         return sql
         
     @staticmethod
@@ -111,5 +111,5 @@ class GeneradorVBA(object):
             num_funcion+=1
         vba_global="\r\n".join ( funciones )
         vba_resultado=vba_parcial+funcion_global.format ( vba_global )
-        return vba_resultado
+        return "Option Explicit\r\n"+vba_resultado
         #gf.anadir_a_fichero(nombre_modulo,vba_resultado)
