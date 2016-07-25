@@ -20,3 +20,10 @@ for f in ficheros_convertidos:
     else:
         gf.ejecutar_comando ( "procesar_seleccionados.py",
                          f, ">", f+".sel")
+        
+seleccionados=glob.glob("*.sel")
+
+SELECCIONADOS="seleccionados.txt"
+gf.borrar_fichero(SELECCIONADOS)
+for f in seleccionados:
+    gf.concatenar_fichero(f, SELECCIONADOS)
