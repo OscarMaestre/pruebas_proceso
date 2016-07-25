@@ -135,7 +135,7 @@ for i in range(0, total_lineas):
                                      "DENEGADO en concursillo Julio 2016"))
         continue
     
-print (tuplas_para_vba)
+#print (tuplas_para_vba)
 codigo_vba=GeneradorVBA.generar_modulo_vba(
     tuplas_para_vba, "gaseosa", "codcentrocursoactual","dni", "mod.bas","auxiliar"
 )

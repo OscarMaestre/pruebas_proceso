@@ -3,7 +3,7 @@
 from utilidades.ficheros.ProcesadorPDF import ProcesadorPDF
 from utilidades.ficheros.GestorFicheros import GestorFicheros
 
-import glob
+import glob, platform
 
 ficheros_maestros=glob.glob("*.pdf")
 procesador_pdf=ProcesadorPDF()
@@ -14,5 +14,9 @@ for f in ficheros_maestros:
     
 ficheros_convertidos=glob.glob("*.txt")
 for f in ficheros_convertidos:
-    gf.ejecutar_comando ( "./procesar_concursillo_maestros.py",
+    if platform.system()=="Linux":
+        gf.ejecutar_comando ( "./procesar_concursillo_maestros.py",
+                         f, "> concursillo_maestros_julio_2016.vba")
+    else:
+        gf.ejecutar_comando ( "procesar_concursillo_maestros.py",
                          f, "> concursillo_maestros_julio_2016.vba")
