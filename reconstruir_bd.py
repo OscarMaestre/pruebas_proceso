@@ -16,7 +16,10 @@ import utilidades
 BD_RESULTADO=".." + SEPARADOR + "docencia.db"
 BD_CENTROS = "Verano" + SEPARADOR + "extractor-centros" + SEPARADOR + "centros.db"
 BD_RUTAS = "Verano" + SEPARADOR + "calculador-rutas-globales" + SEPARADOR + "rutas.db"
-utilidades.borrar_fichero ( BD_RESULTADO )
+try:
+    utilidades.borrar_fichero ( BD_RESULTADO )
+except:
+    print (BD_RESULTADO + "no existía, ignorando...")
 
 #Ojo, el orden de extracción de estas tablas es importante
 utilidades.sacar_tabla_de_una_bd_a_otra (

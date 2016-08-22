@@ -175,6 +175,10 @@ for i in range ( 0, TOTAL_PAGINAS):
 #except:
 #    pass
 
+arenas=Localidad()
+cra_arenas=Centro(naturaleza, codigo_centro, nombre_centro.upper(), direccion_postal,
+                 codigo_postal, nombre_localidad.upper(), codigo_localidad,
+                 nombre_provincia.upper(), tlf, fax, email, web, lista_ensenanzas)
 print ("BEGIN TRANSACTION;")
 creacion_centros=Centro.get_sql_creacion_sqlite("centros_region")
 for c in creacion_centros:

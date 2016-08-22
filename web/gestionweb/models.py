@@ -22,22 +22,7 @@ class Centros(models.Model):
         ordering=['nombre_centro']
         db_table = 'centros'
 
-class CentrosRegion(models.Model):
-    codigo_centro = models.CharField(primary_key=True, max_length=10)
-    nombre_centro = models.CharField(max_length=120, blank=True, null=True)
-    codigo_localidad = models.CharField(max_length=10, blank=True, null=True)
-    direccion_postal = models.CharField(max_length=120, blank=True, null=True)
-    codigo_postal = models.CharField(max_length=6, blank=True, null=True)
-    tlf = models.CharField(max_length=20, blank=True, null=True)
-    fax = models.CharField(max_length=20, blank=True, null=True)
-    email = models.CharField(max_length=140, blank=True, null=True)
-    web = models.CharField(max_length=140, blank=True, null=True)
-    naturaleza = models.CharField(max_length=20, blank=True, null=True)
-    tipo_centro = models.CharField(max_length=20, blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'centros_region'
         
 class DificilDesempeno(models.Model):
     codigo_centro = models.CharField(primary_key=True, max_length=10, blank=True, null=False)
@@ -56,18 +41,6 @@ class Ensenanzas(models.Model):
         db_table = 'ensenanzas'
 
 
-class EnsenanzasRegion(models.Model):
-    nombre = models.CharField(max_length=120, blank=True, null=True)
-    regimen = models.CharField(max_length=25, blank=True, null=True)
-    unidades = models.IntegerField(blank=True, null=True)
-    puestos = models.IntegerField(blank=True, null=True)
-    uds_concertadas = models.IntegerField(blank=True, null=True)
-    fecha = models.DateField(blank=True, null=True)
-    codigo_centro = models.ForeignKey(CentrosRegion, on_delete=models.CASCADE)
-
-    class Meta:
-        managed = False
-        db_table = 'ensenanzas_region'
 
 
 class Especialidades(models.Model):
@@ -126,7 +99,7 @@ class Gaseosa(models.Model):
         db_table = 'gaseosa'
 
 
-class Localidades(models.Model):
+class Localidad(models.Model):
     codigo_localidad = models.CharField(primary_key=True, max_length=10, blank=True, null=False)
     nombre_localidad = models.CharField(max_length=100, blank=True, null=True)
     nombre_provincia = models.CharField(max_length=20, blank=True, null=True)
@@ -137,12 +110,44 @@ class Localidades(models.Model):
         managed = False
         db_table = 'localidades'
 
+class CentrosRegion(models.Model):
+    codigo_centro = models.CharField(primary_key=True, max_length=10)
+    nombre_centro = models.CharField(max_length=120, blank=True, null=True)
+    codigo_localidad = models.ForeignKey(Localidad)
+    direccion_postal = models.CharField(max_length=120, blank=True, null=True)
+    codigo_postal = models.CharField(max_length=6, blank=True, null=True)
+    tlf = models.CharField(max_length=20, blank=True, null=True)
+    fax = models.CharField(max_length=20, blank=True, null=True)
+    email = models.CharField(max_length=140, blank=True, null=True)
+    web = models.CharField(max_length=140, blank=True, null=True)
+    naturaleza = models.CharField(max_length=20, blank=True, null=True)
+    tipo_centro = models.CharField(max_length=20, blank=True, null=True)
 
-class Nombramientos(models.Model):
+    class Meta:
+        managed = False
+        db_table = 'centros_region'
+
+
+class EnsenanzasRegion(models.Model):
+    nombre = models.CharField(max_length=120, blank=True, null=True)
+    regimen = models.CharField(max_length=25, blank=True, null=True)
+    unidades = models.IntegerField(blank=True, null=True)
+    puestos = models.IntegerField(blank=True, null=True)
+    uds_concertadas = models.IntegerField(blank=True, null=True)
+    fecha = models.DateField(blank=True, null=True)
+    codigo_centro = models.ForeignKey(CentrosRegion, on_delete=models.CASCADE)
+
+    class Meta:
+        managed = False
+        db_table = 'ensenanzas_region'
+
+
+
+class Nombramiento(models.Model):
     id = models.IntegerField( blank=True, null=True)  # AutoField?
     nif = models.TextField(primary_key=True,blank=True, null=False)  # This field type is a guess.
     nombre_completo = models.TextField(blank=True, null=True)  # This field type is a guess.
-    codigo_centro = models.TextField(blank=True, null=True)  # This field type is a guess.
+    codigo_centro = models.ForeignKey(CentrosRegion)
     procedimiento = models.TextField(blank=True, null=True)  # This field type is a guess.
     fecha_procedimiento = models.DateField()
     fecha_inicio = models.TextField(blank=True, null=True)  # This field type is a guess.

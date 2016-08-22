@@ -1,1 +1,0 @@
-La plataforma es Linux
