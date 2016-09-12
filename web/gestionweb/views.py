@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.db import connection
 from django.template.loader import  render_to_string
 from django.http import HttpResponse, FileResponse
-from .models import Gaseosa, Centros, Localidad, CentrosRegion, Especialidades
+from .models import Gaseosa, Centros, Localidad, CentroRegion, Especialidades
 from .plantillas import enviar_plantilla_texto
 from django.db.models import Q
 from .formularios import PosiblesCentrosCR

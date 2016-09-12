@@ -175,7 +175,7 @@ for i in range ( 0, TOTAL_PAGINAS):
 #except:
 #    pass
 
-arenas=Localidad()
+arenas=Localidad.objects.get(codigo_localidad="130180001")
 cra_arenas=Centro(naturaleza, codigo_centro, nombre_centro.upper(), direccion_postal,
                  codigo_postal, nombre_localidad.upper(), codigo_localidad,
                  nombre_provincia.upper(), tlf, fax, email, web, lista_ensenanzas)

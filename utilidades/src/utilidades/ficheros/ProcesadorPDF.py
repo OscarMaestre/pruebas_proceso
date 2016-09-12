@@ -38,6 +38,8 @@ class ProcesadorPDF(object):
         re_resulta="[0-9]{8} [0-9]{3}"
         self.expr_regular_resulta=re.compile(re_resulta)
         
+        
+        
         re_cifras_en_plantillas="(\-|[0-9]+)"
         self.expr_regular_cifras_en_plantillas=re.compile(re_cifras_en_plantillas)
         
@@ -47,7 +49,7 @@ class ProcesadorPDF(object):
         re_cuerpo_plaza_maestros="ESPEC\.:[ ]+(?P<especialidad>[0-9]{3})"
         self.expr_regular_cuerpo_maestros=re.compile(re_cuerpo_plaza_maestros)
         
-        re_cuerpo_con_especialidad="[0BFR]59[0-7][0-9]{3}"
+        re_cuerpo_con_especialidad="[0PWBFR]59[0-7][0-9]{3}"
         self.expr_regular_cuerpo_con_especialidad=re.compile(re_cuerpo_con_especialidad)
         
         re_codigo_localidad="[0-9]{9}"
@@ -69,6 +71,7 @@ class ProcesadorPDF(object):
         
         re_numero_orden_interinos="[0-9]{1,5}"
         self.expr_regular_numero_orden_interinos=re.compile ( re_numero_orden_interinos )
+        """Expresion regular para número de orden de interino"""
         
         re_nombre_completo=" [A-ZÁÉÍÓÚÜÑ ]+, [A-ZÁÉÍÓÚÜÑ ]"
         self.expr_regular_nombre=re.compile ( re_nombre_completo )

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys
+import sys, os
 
 from utilidades.ficheros.ProcesadorPDF import ProcesadorPDF
 from utilidades.ficheros.GestorFicheros import GestorFicheros
@@ -8,10 +8,9 @@ from utilidades.basedatos.Configurador import Configurador
 
 procesador_pdf=ProcesadorPDF()
 gf=GestorFicheros()
-configurador=Configurador("../web")
-
+configurador=Configurador(".." + os.sep + ".." + os.sep+"web")
 configurador.activar_configuracion("web.settings")
-from gestionweb.models import Nombramiento, CentrosRegion
+from gestionweb.models import Nombramiento, CentroRegion
 
 procesador_pdf.abrir_fichero_txt ( sys.argv[1])
 
@@ -35,7 +34,7 @@ while not procesador_pdf.eof():
         campos.append(cod_centro)
         campos.append(nombre)
         print (":".join(campos))
-        centro_asociado=CentrosRegion.objects.get(pk=cod_centro)
+        centro_asociado=CentroRegion.objects.get(codigo_centro=cod_centro)
         print (centro_asociado)
         nomb=Nombramiento(
             codigo_centro=centro_asociado, nif=dni, especialidad=codigo_espe,
@@ -43,6 +42,4 @@ while not procesador_pdf.eof():
         #procesador_pdf.siguiente_fila()
         
     linea=procesador_pdf.siguiente_fila()
-    
-    
     

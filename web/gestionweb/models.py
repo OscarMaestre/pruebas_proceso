@@ -10,35 +10,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-class Centros(models.Model):
-    codigo_centro = models.CharField(primary_key=True, max_length=10, blank=True, null=False)
-    nombre_centro = models.CharField(max_length=120, blank=True, null=True)
-    codigo_localidad = models.CharField(max_length=10, blank=True, null=True)
-    tipo_centro = models.CharField(max_length=20, blank=True, null=True)
-    def __str__(self):
-        return self.nombre_centro
-    class Meta:
-        managed = False
-        ordering=['nombre_centro']
-        db_table = 'centros'
 
-
-        
-class DificilDesempeno(models.Model):
-    codigo_centro = models.CharField(primary_key=True, max_length=10, blank=True, null=False)
-
-    class Meta:
-        managed = False
-        db_table="dificil_desempeno"
-
-class Ensenanzas(models.Model):
-    codigo_centro = models.CharField(max_length=10, blank=True, null=False)
-    nombre_ensenanza = models.CharField(max_length=150, blank=True, null=True)
-    observaciones = models.CharField(max_length=100, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'ensenanzas'
 
 
 
@@ -50,7 +22,6 @@ class Especialidades(models.Model):
     tiempo_parcial = models.TextField(blank=True, null=True)  # This field type is a guess.
 
     class Meta:
-        managed = False
         db_table = 'especialidades'
 
 class Correspondencias(models.Model):
@@ -58,7 +29,6 @@ class Correspondencias(models.Model):
     codigo_real = models.TextField(primary_key=True)  # This field type is a guess.
 
     class Meta:
-        managed = False
         db_table = 'correspondencias'
         unique_together = (('codigo_gaseosa', 'codigo_real'),)
 
@@ -94,23 +64,30 @@ class Gaseosa(models.Model):
         else:
             return "{0} {1}, {2}".format (self.nombre, self.apellido_1, self.apellido_2)
     class Meta:
-        managed = False
         ordering=['apellido_1', 'apellido_2']
         db_table = 'gaseosa'
+
+
+
+class Provincia(models.Model):
+    nombre_provincia = models.CharField(primary_key=True, max_length=20, blank=True, null=False)
+
+    class Meta:
+        db_table = 'provincias'
+
 
 
 class Localidad(models.Model):
     codigo_localidad = models.CharField(primary_key=True, max_length=10, blank=True, null=False)
     nombre_localidad = models.CharField(max_length=100, blank=True, null=True)
-    nombre_provincia = models.CharField(max_length=20, blank=True, null=True)
+    provincia = models.ForeignKey ( Provincia )
     latitud = models.FloatField(blank=True, null=True)
     longitud = models.FloatField(blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'localidades'
 
-class CentrosRegion(models.Model):
+class Centro(models.Model):
     codigo_centro = models.CharField(primary_key=True, max_length=10)
     nombre_centro = models.CharField(max_length=120, blank=True, null=True)
     codigo_localidad = models.ForeignKey(Localidad)
@@ -124,57 +101,34 @@ class CentrosRegion(models.Model):
     tipo_centro = models.CharField(max_length=20, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'centros_region'
 
 
-class EnsenanzasRegion(models.Model):
-    nombre = models.CharField(max_length=120, blank=True, null=True)
-    regimen = models.CharField(max_length=25, blank=True, null=True)
-    unidades = models.IntegerField(blank=True, null=True)
-    puestos = models.IntegerField(blank=True, null=True)
-    uds_concertadas = models.IntegerField(blank=True, null=True)
-    fecha = models.DateField(blank=True, null=True)
-    codigo_centro = models.ForeignKey(CentrosRegion, on_delete=models.CASCADE)
-
-    class Meta:
-        managed = False
-        db_table = 'ensenanzas_region'
 
 
 
 class Nombramiento(models.Model):
-    id = models.IntegerField( blank=True, null=True)  # AutoField?
-    nif = models.TextField(primary_key=True,blank=True, null=False)  # This field type is a guess.
-    nombre_completo = models.TextField(blank=True, null=True)  # This field type is a guess.
-    codigo_centro = models.ForeignKey(CentrosRegion)
-    procedimiento = models.TextField(blank=True, null=True)  # This field type is a guess.
+    nif = models.TextField(primary_key=True,max_length=20)  
+    nombre_completo = models.TextField(max_length=110)
+    codigo_centro = models.ForeignKey(Centro)
+    procedimiento = models.TextField(max_length=60)  
     fecha_procedimiento = models.DateField()
-    fecha_inicio = models.TextField(blank=True, null=True)  # This field type is a guess.
-    fecha_fin = models.TextField(blank=True, null=True)  # This field type is a guess.
-    especialidad = models.TextField(blank=True, null=True)  # This field type is a guess.
-    auxiliar = models.TextField(blank=True, null=True)  # This field type is a guess.
+    fecha_inicio = models.DateField()
+    fecha_fin = models.DateField()
+    especialidad = models.ForeignKey(Especialidad)
+    auxiliar = models.TextField(max_length=4096)  
 
     class Meta:
-        managed = False
         db_table = 'nombramientos'
 
 
-class Provincias(models.Model):
-    nombre_provincia = models.CharField(primary_key=True, max_length=20, blank=True, null=False)
 
-    class Meta:
-        managed = False
-        db_table = 'provincias'
-
-
-class Rutas(models.Model):
-    origen = models.CharField(max_length=30, blank=True, null=True)
-    destino = models.CharField(max_length=30, blank=True, null=True)
+class Ruta(models.Model):
+    origen = models.ForeignKey(Localidad)
+    destino = models.ForeignKey(Localidad)
     distancia = models.FloatField(blank=True, null=True)
     minutos = models.FloatField(blank=True, null=True)
     sumario = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'rutas'
