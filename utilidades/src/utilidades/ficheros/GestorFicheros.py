@@ -119,7 +119,9 @@ class GestorFicheros(object):
         try:
             os.mkdir(ruta_completa)
         except FileExistsError:
-            return 
+            return
+        
+        
     def get_lineas_fichero(self, nombre_fichero):
         """Leer las lineas de un fichero
         
@@ -225,6 +227,8 @@ class GestorFicheros(object):
         descriptor=open (nombre_fichero_destino, "w")
         descriptor.write ( peticion.text )
         descriptor.close()
+        
+        
     def rellenar_fichero_plantilla(self, fichero_plantilla, diccionario,  fichero_salida=None):
         
         texto_plantilla=self.leer_fichero(fichero_plantilla)
