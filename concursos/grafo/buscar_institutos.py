@@ -4,8 +4,11 @@ from utilidades.ficheros.GestorFicheros import GestorFicheros
 from utilidades.ficheros.ProcesadorPDF import ProcesadorPDF
 import itertools, collections
 import sys
+from utilidades.basedatos.Configurador import Configurador
 
-
+configurador=Configurador("..")
+configurador.activar_configuracion("concursos.settings")
+from  grafo.models import Centro, Poblacion, Provincia
 
 POS_FIN_LOCALIDAD=30
 
@@ -112,9 +115,25 @@ def buscar_centros(fichero):
     #Fin del for que recorre lineas
     return centros
                 
-                
-            
+
+def borrar_provincias():
+    print("Borrando provincias")
+    Provincia.objects.all().delete()
+
+def crear_provincias():
+    provincias=["Albacete", "Ciudad Real", "Toledo", "Cuenca", "Guadalajara"]
+    for p in provincias:
+        prov=Provincia(nombre=p)
+        prov.save()
+        
+    
+    
 if __name__ == '__main__':
+    
+    
+    borrar_provincias()
+    crear_provincias()
+    
     fichero_cgt=sys.argv[1]
     centros=buscar_centros(fichero_cgt)
     #sys.exit()
