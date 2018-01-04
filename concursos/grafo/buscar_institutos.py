@@ -9,8 +9,9 @@ from utilidades.basedatos.Configurador import Configurador
 configurador=Configurador("..")
 configurador.activar_configuracion("concursos.settings")
 from  grafo.models import Centro, Poblacion, Provincia
+from django.db import transaction
 
-POS_FIN_LOCALIDAD=30
+POS_FIN_LOCALIDAD=36
 
 
 def consumir(iterator, n):
@@ -74,10 +75,17 @@ def extraer_posible_centro(procesador_pdf, linea, linea_siguiente):
     return None
 
     
+    
+def get_provincia_correcta(provincia, lista_provincias):
+    for p in lista_provincia:
+        if p.capitalize()==provincia.capitalize():
+            return p
+    return None
+
 def buscar_centros(fichero):
     gf=GestorFicheros()
     centros=[]
-    lineas=gf.get_lineas_fichero(fichero_cgt)
+    lineas=gf.get_lineas_fichero(fichero)
     procesador_pdf=ProcesadorPDF()
     pos_linea=0
     total_lineas=len(lineas)
@@ -114,28 +122,35 @@ def buscar_centros(fichero):
                 
     #Fin del for que recorre lineas
     return centros
-                
-
-def borrar_provincias():
-    print("Borrando provincias")
-    Provincia.objects.all().delete()
-
-def crear_provincias():
-    provincias=["Albacete", "Ciudad Real", "Toledo", "Cuenca", "Guadalajara"]
-    for p in provincias:
-        prov=Provincia(nombre=p)
-        prov.save()
-        
     
+def crear_objetos(lista_asignaciones):
+    POS_CODIGO_CENTRO               =   2
+    POS_CODIGO_NOMBRE_CENTRO        =   3
+    for asignacion in lista_asignaciones:
+        print(asignacion)
+        codigo_centro=asignacion[POS_CODIGO_CENTRO]
+        nombre_centro=asignacion[POS_CODIGO_NOMBRE_CENTRO]
+        print(codigo_centro, nombre_centro)
+        
+def procesar_fichero(fichero):
+    
+    asignaciones=buscar_centros(fichero)
+    #sys.exit()
+    with transaction.atomic():
+        crear_objetos(asignaciones)
+    
+
+
     
 if __name__ == '__main__':
     
-    
+    borrar_centros()
     borrar_provincias()
+    
     crear_provincias()
     
     fichero_cgt=sys.argv[1]
-    centros=buscar_centros(fichero_cgt)
+    asignaciones=buscar_centros(fichero_cgt)
     #sys.exit()
-    for c in centros:
-        print(c)
+    crear_objetos(asignaciones)
+    print("OK")
