@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
 
 import sys,re
+import sqlite3
 from utilidades.ficheros.GestorFicheros import GestorFicheros
 from utilidades.ficheros.ProcesadorPDF import ProcesadorPDF
 
-re_patron_nombre="[A-Z ]+, [A-Z]+"
+re_patron_nombre="[A-ZÑ ]+, [A-ZÑ]+"
 
+FICHERO_DB  =   "baremados.db"
+TABLA       =   "baremados"
 
 class Persona(object):
     
     def set_nombre(self, nombre):
         self.nombre=nombre
     def set_especialidad(self, nombre_especialidad):
-        self.nombre_especialidad=nombre_especialidad
+        self.especialidad=nombre_especialidad
+    def set_cuerpo(self, cuerpo):
+        self.cuerpo=cuerpo
     def asignar_puntuaciones_linea_1(self, linea_1):
         self.ap1    = linea_1[0]
         self.ap11   = linea_1[1]
@@ -48,7 +53,7 @@ class Persona(object):
         self.ap42   = linea_2[13]
         self.ap43   = linea_2[14]
         self.ap5    = linea_2[15]
-    def asignar_puntuaciones_linea_2(self, linea_3):
+    def asignar_puntuaciones_linea_3(self, linea_3):
         self.ap51   = linea_3[0]
         self.ap52   = linea_3[1]
         self.ap53   = linea_3[2]
@@ -61,26 +66,54 @@ class Persona(object):
         self.ap66   = linea_3[9]
         self.total  = linea_3[10]
         
+    def to_sql(self, nombre_tabla):
+        sql="insert into {0} ".format(nombre_tabla)
+        
+        #Extraemos los atributos
+        atributos=",".join(self.__dict__.keys())
+        sql = sql + "(" + atributos +" )"
+        #Extraemos los valores
+        lista_valores=[]
+        atributos=self.__dict__.keys()
+        for clave in atributos:
+            if clave=="nombre" or clave=="especialidad":
+                lista_valores.append("'"+self.__getattribute__(clave)+"'")
+            else :
+                lista_valores.append(str(self.__getattribute__(clave)))
+        
+        
+        valores_con_comas=",".join(lista_valores)
+        sql = sql + " values ( "  +valores_con_comas +")"
+        return sql;
+        
+    def __str__(self):
+        atributos=self.__dict__.keys()
+        cad=""
+        for clave in atributos:
+            cad+="\n\t" + clave + "->" + str(self.__getattribute__(clave))
+        return cad+"\n"
+            
         
 def convertir_cadena_en_lista_floats(linea):
     linea=linea.replace(",", ".")
     lista_numeros=linea.split(" ")
     lista_numeros=list(filter(lambda cad: cad!="", lista_numeros))
     lista_numeros_float=list(map(float , lista_numeros))
-    print (lista_numeros_float)
+    #print(lista_numeros_float)
     return lista_numeros_float
     
-def convertir_txt_en_excel(fichero_txt):
+def convertir_txt_en_excel(fichero_txt, cuerpo):
     lista_personas=[]
     especialidad_actual=""
     patron_nombre=re.compile(re_patron_nombre)
-    print (fichero_txt)
+    
     gf=GestorFicheros()
     procesador_pdf=ProcesadorPDF()
     lineas_fichero=gf.get_lineas_fichero(fichero_txt)
     num_linea=0
     cad_especialidad="Especialidad:"
     longitud_especialidad=len(cad_especialidad)
+    
     while num_linea < len(lineas_fichero):
         linea_actual=lineas_fichero[num_linea]
         #print(linea_actual)
@@ -89,7 +122,7 @@ def convertir_txt_en_excel(fichero_txt):
         pos_especialidad=linea_actual.find(cad_especialidad)
         if pos_especialidad!=-1:
             especialidad_actual=linea_actual[longitud_especialidad:].strip()
-            print(especialidad_actual)
+            #print(especialidad_actual)
             num_linea+=1
             continue
         (inicio_patron, fin_patron, nombre_persona)=procesador_pdf.linea_contiene_patron(patron_nombre, linea_actual)
@@ -97,24 +130,35 @@ def convertir_txt_en_excel(fichero_txt):
             persona=Persona()
             persona.set_nombre(nombre_persona)
             persona.set_especialidad(especialidad_actual)
+            persona.set_cuerpo(cuerpo)
             #print (nombre_persona)
             linea_puntuacion_1=lineas_fichero[num_linea+1]
             linea_puntuacion_2=lineas_fichero[num_linea+2]
             linea_puntuacion_3=lineas_fichero[num_linea+3]
-            num_linea=num_linea+4
+            num_linea=num_linea+3
             lista_puntuacion_1=convertir_cadena_en_lista_floats(linea_puntuacion_1)
             lista_puntuacion_2=convertir_cadena_en_lista_floats(linea_puntuacion_2)
             lista_puntuacion_3=convertir_cadena_en_lista_floats(linea_puntuacion_3)
-            persona.asignar_puntuaciones_linea_1(linea_puntuacion_1)
-            persona.asignar_puntuaciones_linea_2(linea_puntuacion_2)
-            persona.asignar_puntuaciones_linea_3(linea_puntuacion_3)
+            persona.asignar_puntuaciones_linea_1(lista_puntuacion_1)
+            persona.asignar_puntuaciones_linea_2(lista_puntuacion_2)
+            persona.asignar_puntuaciones_linea_3(lista_puntuacion_3)
+            #print(persona.to_sql(TABLA))
             lista_personas.append(persona)
         #Fin del if que procesa una persona
         num_linea+=1
     #Fin del while
+    #Ahora metemos la lista de personas en el fichero de base de datos
+    conexion=sqlite3.connect(FICHERO_DB)
+    cursor=conexion.cursor()
+    for persona in lista_personas:
+        sql=persona.to_sql(TABLA)
+        cursor.execute(sql)
+    conexion.commit()
+    conexion.close()
 #Fin de convertir_txt_en_excel
 
 
 if __name__ == '__main__':
     fichero_txt=sys.argv[1]
-    convertir_txt_en_excel(fichero_txt)
+    codigo_cuerpo=sys.argv[2]
+    convertir_txt_en_excel(fichero_txt, codigo_cuerpo)
