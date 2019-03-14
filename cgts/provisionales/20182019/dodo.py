@@ -10,6 +10,8 @@ COMANDO_PROCESADO_CONCURSOS_NORMALES="procesar_tabla.py"
 COMANDO_PROCESADO_CONCURSOS_MAESTROS="procesar_maestros.py"
 GENERADOR_BASIC="procesar_concurso.py"
 
+
+
 if platform.system()!="Windows":
     COMANDO_PROCESADO_CONCURSOS_MAESTROS="./procesar_maestros.py"
     COMANDO_PROCESADO_CONCURSOS_NORMALES="./procesar_tabla.py"
@@ -20,6 +22,8 @@ gf=GestorFicheros()
 
 gf.borrar_fichero ( FICHERO_RESULTADOS_TXT )
 
+if platform.system!="Windows":
+    gf.ejecutar_comando("cat", "tabla.sql", "|", "sqlite3", "resultados.db")
 
 ficheros=glob.glob("*.pdf")
 for f in ficheros:
@@ -33,5 +37,9 @@ for f in ficheros:
 ficheros_concursos=glob.glob("5*.txt")
 for f in ficheros_concursos:
     gf.ejecutar_comando ( COMANDO_PROCESADO_CONCURSOS_NORMALES,
-        f, "EEMM", ">>", FICHERO_RESULTADOS_TXT)
+        f, "EEMM")
+
+cuerpos=["0590", "0591", "0594", "0595", "0596"]
+for c in cuerpos:
+    gf.ejecutar_comando("./generar_hoja_calculo.py", c)
 

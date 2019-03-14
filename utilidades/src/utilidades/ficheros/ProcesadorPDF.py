@@ -3,6 +3,7 @@
 from .GestorFicheros import GestorFicheros
 import re
 
+
 class ProcesadorPDF(object):
     """ Procesa archivos PDF convertidos a texto"""
     
