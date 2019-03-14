@@ -24,7 +24,7 @@ gf.borrar_fichero ( FICHERO_RESULTADOS_TXT )
 ficheros=glob.glob("*.pdf")
 for f in ficheros:
     if platform.system()=="Windows":
-        gf.ejecutar_comando("pdftotext.exe", "-enc UTF-8", "-layout", "-nopgbrk", f)
+        gf.ejecutar_comando("pdftotext.exe", "-enc UTF-8", "-table", "-nopgbrk", f)
     else:
         procesador_pdf.convertir_a_txt(f)
     
